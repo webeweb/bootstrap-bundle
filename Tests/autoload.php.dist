@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * This file is part of the bootstrap-bundle package.
+ *
+ * (c) 2017 NdC/WBW
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+// Symfony autoloader.
+$symfonyAutoloader = __DIR__ . "/../../../../app/autoload.php";
+
+// Composer autoloader.
+$composerAutoloader = __DIR__ . "/../vendor/autoload.php";
+
+// Check if the bundle is in a Symfony project.
+if (is_file($symfonyAutoloader)) {
+	include $symfonyAutoloader;
+} else if (is_file($composerAutoloader)) {
+	include $composerAutoloader;
+} else {
+	die("Unable to find autoload.php. Please run:
+
+wget http://getcomposer.org/composer.phar
+php composer.phar install");
+}
