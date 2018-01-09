@@ -1,0 +1,27 @@
+# Resources/config/services.yml
+services:
+
+    webeweb.bundle.bootstrapbundle.twig.extension.component.alert:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.component.badge:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.component.label:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.component.progress-bar:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension
+        tags:
+            - { name: twig.extension }
