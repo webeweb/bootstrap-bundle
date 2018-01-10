@@ -46,6 +46,12 @@ in the `app/AppKernel.php` file of your project:
     }
 ```
 
+Once the bundle is added then do:
+
+```bash
+$ php bin/console assets:install
+```
+
 ---
 
 ## Testing
