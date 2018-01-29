@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigEx
 /**
  * Glyphicon component Twig extension test.
  *
- *  @author NdC/WBW <https://github.com/webeweb/>
+ * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
