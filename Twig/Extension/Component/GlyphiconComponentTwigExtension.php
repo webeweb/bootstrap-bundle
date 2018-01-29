@@ -37,7 +37,7 @@ final class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtensi
 	 * @return string Returns the Bootstrap glyphicon.
 	 */
 	public function bootstrapGlyphiconFunction(array $args = []) {
-		return $this->bootstrapGlyphicon(ArrayUtility::get($args, "name", "home"));
+		return $this->bootstrapGlyphicon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "style"));
 	}
 
 	/**
