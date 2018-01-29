@@ -11,6 +11,11 @@ services:
         tags:
             - { name: twig.extension }
 
+    webeweb.bundle.bootstrapbundle.twig.extension.component.button:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension
+        tags:
+            - { name: twig.extension }
+
     webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension
         tags:

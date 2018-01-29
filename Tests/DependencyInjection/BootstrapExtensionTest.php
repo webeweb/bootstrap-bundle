@@ -20,6 +20,7 @@ use Twig_LoaderInterface;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
@@ -55,6 +56,7 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
 		$obj->load([], $container);
 		$this->assertInstanceOf(AlertComponentTwigExtension::class, $container->get(AlertComponentTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(BadgeComponentTwigExtension::class, $container->get(BadgeComponentTwigExtension::SERVICE_NAME));
+		$this->assertInstanceOf(ButtonComponentTwigExtension::class, $container->get(ButtonComponentTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $container->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(LabelComponentTwigExtension::class, $container->get(LabelComponentTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $container->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
