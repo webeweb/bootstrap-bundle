@@ -25,102 +25,102 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtens
  */
 final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the getFunctions() method.
-	 *
-	 * @return void
-	 */
-	public function testGetFunctions() {
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
 
-		$obj = new AlertComponentTwigExtension();
+        $obj = new AlertComponentTwigExtension();
 
-		$res = $obj->getFunctions();
+        $res = $obj->getFunctions();
 
-		$this->assertCount(4, $res);
+        $this->assertCount(4, $res);
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-		$this->assertEquals("bootstrapAlertDanger", $res[0]->getName());
-		$this->assertEquals([$obj, "bootstrapAlertDangerFunction"], $res[0]->getCallable());
-		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapAlertDanger", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertDangerFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-		$this->assertEquals("bootstrapAlertInfo", $res[1]->getName());
-		$this->assertEquals([$obj, "bootstrapAlertInfoFunction"], $res[1]->getCallable());
-		$this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bootstrapAlertInfo", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertInfoFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-		$this->assertEquals("bootstrapAlertSuccess", $res[2]->getName());
-		$this->assertEquals([$obj, "bootstrapAlertSuccessFunction"], $res[2]->getCallable());
-		$this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("bootstrapAlertSuccess", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertSuccessFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-		$this->assertEquals("bootstrapAlertWarning", $res[3]->getName());
-		$this->assertEquals([$obj, "bootstrapAlertWarningFunction"], $res[3]->getCallable());
-		$this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
-	}
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertEquals("bootstrapAlertWarning", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertWarningFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+    }
 
-	/**
-	 * Tests the bootstrapAlertDangerFunction() method.
-	 *
-	 * @return void
-	 * @depends testGetFunctions
-	 */
-	public function testBootstrapAlertDangerFunction() {
+    /**
+     * Tests the bootstrapAlertDangerFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapAlertDangerFunction() {
 
-		$obj = new AlertComponentTwigExtension();
+        $obj = new AlertComponentTwigExtension();
 
-		$arg0	 = [];
-		$res0	 = '<div class="alert alert-danger" role="alert">&nbsp;</div>';
-		$this->assertEquals($res0, $obj->bootstrapAlertDangerFunction($arg0));
+        $arg0 = [];
+        $res0 = '<div class="alert alert-danger" role="alert">&nbsp;</div>';
+        $this->assertEquals($res0, $obj->bootstrapAlertDangerFunction($arg0));
 
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<div class="alert alert-danger" role="alert">content</div>';
-		$this->assertEquals($res1, $obj->bootstrapAlertDangerFunction($arg1));
-	}
+        $arg1 = ["content" => "content"];
+        $res1 = '<div class="alert alert-danger" role="alert">content</div>';
+        $this->assertEquals($res1, $obj->bootstrapAlertDangerFunction($arg1));
+    }
 
-	/**
-	 * Tests the bootstrapAlertInfoFunction() method.
-	 *
-	 * @return void
-	 * @depends testGetFunctions
-	 */
-	public function testBootstrapAlertInfoFunction() {
+    /**
+     * Tests the bootstrapAlertInfoFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapAlertInfoFunction() {
 
-		$obj = new AlertComponentTwigExtension();
+        $obj = new AlertComponentTwigExtension();
 
-		$arg = [];
-		$res = '<div class="alert alert-info" role="alert">&nbsp;</div>';
-		$this->assertEquals($res, $obj->bootstrapAlertInfoFunction($arg));
-	}
+        $arg = [];
+        $res = '<div class="alert alert-info" role="alert">&nbsp;</div>';
+        $this->assertEquals($res, $obj->bootstrapAlertInfoFunction($arg));
+    }
 
-	/**
-	 * Tests the bootstrapAlertSuccessFunction() method.
-	 *
-	 * @return void
-	 * @depends testGetFunctions
-	 */
-	public function testBootstrapAlertSuccessFunction() {
+    /**
+     * Tests the bootstrapAlertSuccessFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapAlertSuccessFunction() {
 
-		$obj = new AlertComponentTwigExtension();
+        $obj = new AlertComponentTwigExtension();
 
-		$arg = [];
-		$res = '<div class="alert alert-success" role="alert">&nbsp;</div>';
-		$this->assertEquals($res, $obj->bootstrapAlertSuccessFunction($arg));
-	}
+        $arg = [];
+        $res = '<div class="alert alert-success" role="alert">&nbsp;</div>';
+        $this->assertEquals($res, $obj->bootstrapAlertSuccessFunction($arg));
+    }
 
-	/**
-	 * Tests the bootstrapAlertWarningFunction() method.
-	 *
-	 * @return void
-	 * @depends testGetFunctions
-	 */
-	public function testBootstrapAlertWarningFunction() {
+    /**
+     * Tests the bootstrapAlertWarningFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapAlertWarningFunction() {
 
-		$obj = new AlertComponentTwigExtension();
+        $obj = new AlertComponentTwigExtension();
 
-		$arg = [];
-		$res = '<div class="alert alert-warning" role="alert">&nbsp;</div>';
-		$this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
-	}
+        $arg = [];
+        $res = '<div class="alert alert-warning" role="alert">&nbsp;</div>';
+        $this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
+    }
 
 }

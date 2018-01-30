@@ -22,11 +22,11 @@ use Twig_Extension;
  */
 abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
 
-	/**
-	 * Default content.
-	 *
-	 * @var string
-	 */
-	const DEFAULT_CONTENT = "&nbsp;";
+    /**
+     * Default content.
+     *
+     * @var string
+     */
+    const DEFAULT_CONTENT = "&nbsp;";
 
 }

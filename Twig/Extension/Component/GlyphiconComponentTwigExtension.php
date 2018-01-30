@@ -23,32 +23,32 @@ use WBW\Library\Core\Utility\ArrayUtility;
  */
 final class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtension {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon";
 
-	/**
-	 * Displays a Bootstrap glyphicon.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the Bootstrap glyphicon.
-	 */
-	public function bootstrapGlyphiconFunction(array $args = []) {
-		return $this->bootstrapGlyphicon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "style"));
-	}
+    /**
+     * Displays a Bootstrap glyphicon.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap glyphicon.
+     */
+    public function bootstrapGlyphiconFunction(array $args = []) {
+        return $this->bootstrapGlyphicon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "style"));
+    }
 
-	/**
-	 * Get the Twig functions.
-	 *
-	 * @return array Returns the Twig functions.
-	 */
-	public function getFunctions() {
-		return [
-			new Twig_SimpleFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
-		];
-	}
+    /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
 }

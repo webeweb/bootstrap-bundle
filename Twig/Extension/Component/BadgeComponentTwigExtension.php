@@ -23,32 +23,32 @@ use WBW\Library\Core\Utility\ArrayUtility;
  */
 final class BadgeComponentTwigExtension extends AbstractComponentTwigExtension {
 
-	/**
-	 * Service name.
-	 *
-	 * @var string
-	 */
-	const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.badge";
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.badge";
 
-	/**
-	 * Displays a Bootstrap badge.
-	 *
-	 * @param array $args The arguments.
-	 * @return string Returns the Bootstrap badge.
-	 */
-	public function bootstrapBadgeFunction(array $args = []) {
-		return $this->bootstrapBadge(ArrayUtility::get($args, "content"));
-	}
+    /**
+     * Displays a Bootstrap badge.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap badge.
+     */
+    public function bootstrapBadgeFunction(array $args = []) {
+        return $this->bootstrapBadge(ArrayUtility::get($args, "content"));
+    }
 
-	/**
-	 * Get the Twig functions.
-	 *
-	 * @return array Returns the Twig functions.
-	 */
-	public function getFunctions() {
-		return [
-			new Twig_SimpleFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
-		];
-	}
+    /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
 }

@@ -25,42 +25,42 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigEx
  */
 final class GlyphiconComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the getFunctions() method.
-	 *
-	 * @return void
-	 */
-	public function testGetFunctions() {
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
 
-		$obj = new GlyphiconComponentTwigExtension();
+        $obj = new GlyphiconComponentTwigExtension();
 
-		$res = $obj->getFunctions();
+        $res = $obj->getFunctions();
 
-		$this->assertCount(1, $res);
+        $this->assertCount(1, $res);
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-		$this->assertEquals("bootstrapGlyphicon", $res[0]->getName());
-		$this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[0]->getCallable());
-		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-	}
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapGlyphicon", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
 
-	/**
-	 * Tests the bootstrapGlyphiconFunction() method.
-	 *
-	 * @return void
-	 * @depends testGetFunctions
-	 */
-	public function testBootstrapGlyphiconFunction() {
+    /**
+     * Tests the bootstrapGlyphiconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapGlyphiconFunction() {
 
-		$obj = new GlyphiconComponentTwigExtension();
+        $obj = new GlyphiconComponentTwigExtension();
 
-		$arg0	 = [];
-		$res0	 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
-		$this->assertEquals($res0, $obj->bootstrapGlyphiconFunction($arg0));
+        $arg0 = [];
+        $res0 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+        $this->assertEquals($res0, $obj->bootstrapGlyphiconFunction($arg0));
 
-		$arg1	 = ["name" => "asterisk"];
-		$res1	 = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
-		$this->assertEquals($res1, $obj->bootstrapGlyphiconFunction($arg1));
-	}
+        $arg1 = ["name" => "asterisk"];
+        $res1 = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
+        $this->assertEquals($res1, $obj->bootstrapGlyphiconFunction($arg1));
+    }
 
 }

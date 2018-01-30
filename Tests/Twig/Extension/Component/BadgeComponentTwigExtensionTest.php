@@ -25,42 +25,42 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtens
  */
 final class BadgeComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the getFunctions() method.
-	 *
-	 * @return void
-	 */
-	public function testGetFunctions() {
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
 
-		$obj = new BadgeComponentTwigExtension();
+        $obj = new BadgeComponentTwigExtension();
 
-		$res = $obj->getFunctions();
+        $res = $obj->getFunctions();
 
-		$this->assertCount(1, $res);
+        $this->assertCount(1, $res);
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-		$this->assertEquals("bootstrapBadge", $res[0]->getName());
-		$this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[0]->getCallable());
-		$this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-	}
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapBadge", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
 
-	/**
-	 * Tests the bootstrapBadgeFunction() method.
-	 *
-	 * @return void
-	 * @depends testGetFunctions
-	 */
-	public function testBootstrapBadgeFunction() {
+    /**
+     * Tests the bootstrapBadgeFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapBadgeFunction() {
 
-		$obj = new BadgeComponentTwigExtension();
+        $obj = new BadgeComponentTwigExtension();
 
-		$arg0	 = [];
-		$res0	 = '<span class="badge">&nbsp;</span>';
-		$this->assertEquals($res0, $obj->bootstrapBadgeFunction($arg0));
+        $arg0 = [];
+        $res0 = '<span class="badge">&nbsp;</span>';
+        $this->assertEquals($res0, $obj->bootstrapBadgeFunction($arg0));
 
-		$arg1	 = ["content" => "content"];
-		$res1	 = '<span class="badge">content</span>';
-		$this->assertEquals($res1, $obj->bootstrapBadgeFunction($arg1));
-	}
+        $arg1 = ["content" => "content"];
+        $res1 = '<span class="badge">content</span>';
+        $this->assertEquals($res1, $obj->bootstrapBadgeFunction($arg1));
+    }
 
 }

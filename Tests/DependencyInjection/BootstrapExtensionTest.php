@@ -34,32 +34,32 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwig
  */
 final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the load() method.
-	 *
-	 * @return void
-	 */
-	public function testLoad() {
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoad() {
 
-		// Set the mocks.
-		$kernel			 = $this->getMockBuilder(KernelInterface::class)->getMock();
-		$twigLoader		 = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
-		$twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
+        // Set the mocks.
+        $kernel          = $this->getMockBuilder(KernelInterface::class)->getMock();
+        $twigLoader      = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
+        $twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
 
-		// We set a container builder with only the necessary.
-		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-		$container->set("kernel", $kernel);
-		$container->set("twig", $twigEnvironment);
+        // We set a container builder with only the necessary.
+        $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
+        $container->set("kernel", $kernel);
+        $container->set("twig", $twigEnvironment);
 
-		$obj = new BootstrapExtension();
+        $obj = new BootstrapExtension();
 
-		$obj->load([], $container);
-		$this->assertInstanceOf(AlertComponentTwigExtension::class, $container->get(AlertComponentTwigExtension::SERVICE_NAME));
-		$this->assertInstanceOf(BadgeComponentTwigExtension::class, $container->get(BadgeComponentTwigExtension::SERVICE_NAME));
-		$this->assertInstanceOf(ButtonComponentTwigExtension::class, $container->get(ButtonComponentTwigExtension::SERVICE_NAME));
-		$this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $container->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
-		$this->assertInstanceOf(LabelComponentTwigExtension::class, $container->get(LabelComponentTwigExtension::SERVICE_NAME));
-		$this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $container->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
-	}
+        $obj->load([], $container);
+        $this->assertInstanceOf(AlertComponentTwigExtension::class, $container->get(AlertComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(BadgeComponentTwigExtension::class, $container->get(BadgeComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ButtonComponentTwigExtension::class, $container->get(ButtonComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $container->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(LabelComponentTwigExtension::class, $container->get(LabelComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $container->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
+    }
 
 }
