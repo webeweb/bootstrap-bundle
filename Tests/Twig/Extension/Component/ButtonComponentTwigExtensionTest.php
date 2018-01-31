@@ -37,12 +37,17 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
 
         $res = $obj->getFilters();
 
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
         $this->assertEquals("bootstrapButtonLink", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapButtonLinkFilter"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[1]);
+        $this->assertEquals("bootstrapButtonSubmit", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSubmitFilter"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -112,7 +117,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $this->assertEquals($res1, $obj->bootstrapButtonDangerFunction($arg1));
 
         $arg2 = ["title" => "title"];
-        $res2 = '<button class="btn btn-danger" title="title" type="button" data-toggle="tooltip">&nbsp;</button>';
+        $res2 = '<button class="btn btn-danger" title="title" type="button" data-toggle="tooltip" data-placement="top">&nbsp;</button>';
         $this->assertEquals($res2, $obj->bootstrapButtonDangerFunction($arg2));
 
         $arg3 = ["size" => "lg"];
@@ -132,11 +137,11 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $this->assertEquals($res6, $obj->bootstrapButtonDangerFunction($arg6));
 
         $arg7 = ["icon" => "home"];
-        $res7 = '<button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;</button>';
+        $res7 = '<button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> &nbsp;</button>';
         $this->assertEquals($res7, $obj->bootstrapButtonDangerFunction($arg7));
 
         $arg9 = ["content" => "content", "title" => "title", "size" => "lg", "block" => true, "active" => true, "disable" => true, "icon" => "home", "color" => "black"];
-        $res9 = '<button class="btn btn-danger btn-block btn-lg active" title="title" type="button" data-toggle="tooltip" disabled="disabled"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>content</button>';
+        $res9 = '<button class="btn btn-danger btn-block btn-lg active" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> content</button>';
         $this->assertEquals($res9, $obj->bootstrapButtonDangerFunction($arg9));
     }
 
@@ -181,8 +186,8 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<a class="btn btn-link" href="javascript: void(0);">&nbsp;</a>';
-        $this->assertEquals($res0, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonLinkFunction($arg0)));
+        $res0 = '<a class="btn btn-danger" href="javascript: void(0);">&nbsp;</a>';
+        $this->assertEquals($res0, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg0)));
     }
 
     /**
@@ -213,6 +218,21 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $arg0 = [];
         $res0 = '<button class="btn btn-primary" type="button">&nbsp;</button>';
         $this->assertEquals($res0, $obj->bootstrapButtonPrimaryFunction($arg0));
+    }
+
+    /**
+     * Tests the bootstrapButtonSubmitFilter() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testButtonSubmitFilter() {
+
+        $obj = new ButtonComponentTwigExtension();
+
+        $arg0 = [];
+        $res0 = '<button class="btn btn-danger" type="submit">&nbsp;</button>';
+        $this->assertEquals($res0, $obj->bootstrapButtonSubmitFilter($obj->bootstrapButtonDangerFunction($arg0)));
     }
 
     /**

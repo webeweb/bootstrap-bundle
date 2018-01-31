@@ -64,7 +64,7 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
     /**
      * Transforms a Bootstrap button into an anchor.
      *
-     * @param string $bootstrapButton
+     * @param string $bootstrapButton The bootstrap button.
      * @param string $href The href attribute.
      * @return string Returns the Bootstrap button transformed into an anchor.
      */
@@ -90,6 +90,16 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
      */
     public function bootstrapButtonPrimaryFunction(array $args = []) {
         return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-primary", ArrayUtility::get($args, "icon"));
+    }
+
+    /**
+     * Transforms a Bootstrap button into a submit button.
+     *
+     * @param string $bootstrapButton The bootstrap button.
+     * @return string Returns the Bootstrap button transformed into a submit button.
+     */
+    public function bootstrapButtonSubmitFilter($bootstrapButton) {
+        return StringUtility::replace($bootstrapButton, ["type=\"button\""], ["type=\"submit\""]);
     }
 
     /**
@@ -120,6 +130,7 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
     public function getFilters() {
         return [
             new Twig_SimpleFilter("bootstrapButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("bootstrapButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
