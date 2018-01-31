@@ -136,7 +136,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $this->assertEquals($res7, $obj->bootstrapButtonDangerFunction($arg7));
 
         $arg9 = ["content" => "content", "title" => "title", "size" => "lg", "block" => true, "active" => true, "disable" => true, "icon" => "home", "color" => "black"];
-        $res9 = '<button class="btn btn-danger btn-block btn-lg active" title="title" type="button" data-toggle="tooltip" disabled="disabled"><span class="glyphicon glyphicon-home" aria-hidden="true" style="margin: -4px 2px 0; vertical-align: sub;"></span>content</button>';
+        $res9 = '<button class="btn btn-danger btn-block btn-lg active" title="title" type="button" data-toggle="tooltip" disabled="disabled"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>content</button>';
         $this->assertEquals($res9, $obj->bootstrapButtonDangerFunction($arg9));
     }
 

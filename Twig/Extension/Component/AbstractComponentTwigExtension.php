@@ -105,8 +105,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["disabled"]    = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $iconStyle = null !== $content ? "margin: -4px 2px 0; vertical-align: sub;" : "";
-        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, $iconStyle) : "";
+        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon) : "";
         $innerHTML = null !== $content ? $content : self::DEFAULT_CONTENT;
 
         // Return the HTML.
