@@ -105,7 +105,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonDangerFunction() {
+    public function testBootstrapButtonDangerFunction() {
 
         $obj  = new ButtonComponentTwigExtension();
         $arg0 = [];
@@ -151,7 +151,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonDefaultFunction() {
+    public function testBootstrapButtonDefaultFunction() {
 
         $obj = new ButtonComponentTwigExtension();
 
@@ -166,7 +166,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonInfoFunction() {
+    public function testBootstrapButtonInfoFunction() {
 
         $obj = new ButtonComponentTwigExtension();
 
@@ -181,7 +181,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonLinkFilter() {
+    public function testBootstrapButtonLinkFilter() {
 
         $obj = new ButtonComponentTwigExtension();
 
@@ -196,7 +196,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonLinkFunction() {
+    public function testBootstrapButtonLinkFunction() {
 
         $obj = new ButtonComponentTwigExtension();
 
@@ -211,7 +211,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonPrimaryFunction() {
+    public function testBootstrapButtonPrimaryFunction() {
 
         $obj = new ButtonComponentTwigExtension();
 
@@ -226,7 +226,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonSubmitFilter() {
+    public function testBootstrapButtonSubmitFilter() {
 
         $obj = new ButtonComponentTwigExtension();
 
@@ -241,7 +241,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonSuccessFunction() {
+    public function testBootstrapButtonSuccessFunction() {
 
         $obj = new ButtonComponentTwigExtension();
 
@@ -256,7 +256,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
      * @return void
      * @depends testGetFunctions
      */
-    public function testButtonWarningFunction() {
+    public function testBootstrapButtonWarningFunction() {
 
         $obj = new ButtonComponentTwigExtension();
 
