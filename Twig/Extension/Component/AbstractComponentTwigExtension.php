@@ -95,17 +95,18 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"]       = ["btn", $class];
-        $attributes["class"][]     = true === $block ? "btn-block" : null;
-        $attributes["class"][]     = true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
-        $attributes["class"][]     = true === $active ? "active" : null;
-        $attributes["title"]       = $title;
-        $attributes["type"]        = "button";
-        $attributes["data-toggle"] = null !== $title ? "tooltip" : null;
-        $attributes["disabled"]    = true === $disable ? "disabled" : null;
+        $attributes["class"]          = ["btn", $class];
+        $attributes["class"][]        = true === $block ? "btn-block" : null;
+        $attributes["class"][]        = true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
+        $attributes["class"][]        = true === $active ? "active" : null;
+        $attributes["title"]          = $title;
+        $attributes["type"]           = "button";
+        $attributes["data-toggle"]    = null !== $title ? "tooltip" : null;
+        $attributes["data-placement"] = null !== $title ? "top" : null;
+        $attributes["disabled"]       = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, null) : "";
+        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, null) . " " : "";
         $innerHTML = null !== $content ? $content : self::DEFAULT_CONTENT;
 
         // Return the HTML.
