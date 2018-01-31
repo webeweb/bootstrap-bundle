@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig_Extension;
+use WBW\Library\Core\Navigation\NavigationInterface;
 
 /**
  * Abstract Bootstrap Twig extension.
@@ -28,5 +29,12 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
      * @var string
      */
     const DEFAULT_CONTENT = "&nbsp;";
+
+    /**
+     * Default href.
+     *
+     * @var string
+     */
+    const DEFAULT_HREF = NavigationInterface::DEFAULT_HREF;
 
 }

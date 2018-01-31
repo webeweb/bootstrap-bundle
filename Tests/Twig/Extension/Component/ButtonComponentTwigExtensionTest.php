@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
+use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
 
@@ -26,6 +27,25 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExten
 final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new ButtonComponentTwigExtension();
+
+        $res = $obj->getFilters();
+
+        $this->assertCount(1, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
+        $this->assertEquals("bootstrapButtonLink", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFilter"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -36,7 +56,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
 
         $res = $obj->getFunctions();
 
-        $this->assertCount(6, $res);
+        $this->assertCount(7, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapButtonDanger", $res[0]->getName());
@@ -54,19 +74,24 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("bootstrapButtonPrimary", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[3]->getCallable());
+        $this->assertEquals("bootstrapButtonLink", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("bootstrapButtonSuccess", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[4]->getCallable());
+        $this->assertEquals("bootstrapButtonPrimary", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("bootstrapButtonWarning", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[5]->getCallable());
+        $this->assertEquals("bootstrapButtonSuccess", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertEquals("bootstrapButtonWarning", $res[6]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[6]->getCallable());
+        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -143,6 +168,36 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $arg0 = [];
         $res0 = '<button class="btn btn-info" type="button">&nbsp;</button>';
         $this->assertEquals($res0, $obj->bootstrapButtonInfoFunction($arg0));
+    }
+
+    /**
+     * Tests the bootstrapButtonLinkFilter() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testButtonLinkFilter() {
+
+        $obj = new ButtonComponentTwigExtension();
+
+        $arg0 = [];
+        $res0 = '<a class="btn btn-link" href="javascript: void(0);">&nbsp;</a>';
+        $this->assertEquals($res0, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonLinkFunction($arg0)));
+    }
+
+    /**
+     * Tests the bootstrapButtonLinkFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testButtonLinkFunction() {
+
+        $obj = new ButtonComponentTwigExtension();
+
+        $arg0 = [];
+        $res0 = '<button class="btn btn-link" type="button">&nbsp;</button>';
+        $this->assertEquals($res0, $obj->bootstrapButtonLinkFunction($arg0));
     }
 
     /**
