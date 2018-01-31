@@ -26,7 +26,7 @@ services:
         tags:
             - { name: twig.extension }
 
-    webeweb.bundle.bootstrapbundle.twig.extension.component.progress-bar:
+    webeweb.bundle.bootstrapbundle.twig.extension.component.progressbar:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension
         tags:
             - { name: twig.extension }
