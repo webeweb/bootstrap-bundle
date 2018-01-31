@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="{{ asset('bundles/edm/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-        {% block bootstrapHeadLinks %}
+        <link href="{{ asset('bundles/edm/bootstrap-3.3.7/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        {% block bootstrapHeadStyles %}
         {% endblock %}
         <title>{% block bootstrapHeadTitle %}{% endblock %}</title>
     </head>
     <body>
         {% block bootstrapBodyContent %}
         {% endblock %}
-        <script src="{{ asset('bundles/edm/jquery/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('bundles/edm/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/edm/jquery-3.2.1/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/edm/bootstrap-3.3.7/js/bootstrap.min.js') }}" type="text/javascript"></script>
         {% block bootstrapBodyScripts %}
         {% endblock %}
     </body>
