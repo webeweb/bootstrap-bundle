@@ -80,7 +80,7 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new LabelComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<span class="label label-danger">&nbsp;</span>';
+        $res0 = '<span class="label label-danger"></span>';
         $this->assertEquals($res0, $obj->bootstrapLabelDangerFunction($arg0));
 
         $arg1 = ["content" => "content"];
@@ -99,7 +99,7 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new LabelComponentTwigExtension();
 
         $arg = [];
-        $res = '<span class="label label-default">&nbsp;</span>';
+        $res = '<span class="label label-default"></span>';
         $this->assertEquals($res, $obj->bootstrapLabelDefaultFunction($arg));
     }
 
@@ -114,7 +114,7 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new LabelComponentTwigExtension();
 
         $arg = [];
-        $res = '<span class="label label-info">&nbsp;</span>';
+        $res = '<span class="label label-info"></span>';
         $this->assertEquals($res, $obj->bootstrapLabelInfoFunction($arg));
     }
 
@@ -129,7 +129,7 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new LabelComponentTwigExtension();
 
         $arg = [];
-        $res = '<span class="label label-primary">&nbsp;</span>';
+        $res = '<span class="label label-primary"></span>';
         $this->assertEquals($res, $obj->bootstrapLabelPrimaryFunction($arg));
     }
 
@@ -144,7 +144,7 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new LabelComponentTwigExtension();
 
         $arg = [];
-        $res = '<span class="label label-success">&nbsp;</span>';
+        $res = '<span class="label label-success"></span>';
         $this->assertEquals($res, $obj->bootstrapLabelSuccessFunction($arg));
     }
 
@@ -159,7 +159,7 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new LabelComponentTwigExtension();
 
         $arg = [];
-        $res = '<span class="label label-warning">&nbsp;</span>';
+        $res = '<span class="label label-warning"></span>';
         $this->assertEquals($res, $obj->bootstrapLabelWarningFunction($arg));
     }
 

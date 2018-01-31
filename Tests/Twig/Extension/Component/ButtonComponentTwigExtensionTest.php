@@ -109,7 +109,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
 
         $obj  = new ButtonComponentTwigExtension();
         $arg0 = [];
-        $res0 = '<button class="btn btn-danger" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-danger" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonDangerFunction($arg0));
 
         $arg1 = ["content" => "content"];
@@ -117,27 +117,27 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $this->assertEquals($res1, $obj->bootstrapButtonDangerFunction($arg1));
 
         $arg2 = ["title" => "title"];
-        $res2 = '<button class="btn btn-danger" title="title" type="button" data-toggle="tooltip" data-placement="top">&nbsp;</button>';
+        $res2 = '<button class="btn btn-danger" title="title" type="button" data-toggle="tooltip" data-placement="top"></button>';
         $this->assertEquals($res2, $obj->bootstrapButtonDangerFunction($arg2));
 
         $arg3 = ["size" => "lg"];
-        $res3 = '<button class="btn btn-danger btn-lg" type="button">&nbsp;</button>';
+        $res3 = '<button class="btn btn-danger btn-lg" type="button"></button>';
         $this->assertEquals($res3, $obj->bootstrapButtonDangerFunction($arg3));
 
         $arg4 = ["block" => true];
-        $res4 = '<button class="btn btn-danger btn-block" type="button">&nbsp;</button>';
+        $res4 = '<button class="btn btn-danger btn-block" type="button"></button>';
         $this->assertEquals($res4, $obj->bootstrapButtonDangerFunction($arg4));
 
         $arg5 = ["active" => true];
-        $res5 = '<button class="btn btn-danger active" type="button">&nbsp;</button>';
+        $res5 = '<button class="btn btn-danger active" type="button"></button>';
         $this->assertEquals($res5, $obj->bootstrapButtonDangerFunction($arg5));
 
         $arg6 = ["disable" => true];
-        $res6 = '<button class="btn btn-danger" type="button" disabled="disabled">&nbsp;</button>';
+        $res6 = '<button class="btn btn-danger" type="button" disabled="disabled"></button>';
         $this->assertEquals($res6, $obj->bootstrapButtonDangerFunction($arg6));
 
         $arg7 = ["icon" => "home"];
-        $res7 = '<button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> &nbsp;</button>';
+        $res7 = '<button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>';
         $this->assertEquals($res7, $obj->bootstrapButtonDangerFunction($arg7));
 
         $arg9 = ["content" => "content", "title" => "title", "size" => "lg", "block" => true, "active" => true, "disable" => true, "icon" => "home", "color" => "black"];
@@ -156,7 +156,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-default" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-default" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonDefaultFunction($arg0));
     }
 
@@ -171,7 +171,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-info" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-info" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonInfoFunction($arg0));
     }
 
@@ -186,7 +186,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<a class="btn btn-danger" href="javascript: void(0);">&nbsp;</a>';
+        $res0 = '<a class="btn btn-danger" href="javascript: void(0);"></a>';
         $this->assertEquals($res0, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg0)));
     }
 
@@ -201,7 +201,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-link" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-link" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonLinkFunction($arg0));
     }
 
@@ -216,7 +216,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-primary" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-primary" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonPrimaryFunction($arg0));
     }
 
@@ -231,7 +231,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-danger" type="submit">&nbsp;</button>';
+        $res0 = '<button class="btn btn-danger" type="submit"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonSubmitFilter($obj->bootstrapButtonDangerFunction($arg0)));
     }
 
@@ -246,7 +246,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-success" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-success" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonSuccessFunction($arg0));
     }
 
@@ -261,7 +261,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<button class="btn btn-warning" type="button">&nbsp;</button>';
+        $res0 = '<button class="btn btn-warning" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonWarningFunction($arg0));
     }
 

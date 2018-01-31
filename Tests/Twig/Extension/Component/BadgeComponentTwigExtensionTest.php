@@ -55,7 +55,7 @@ final class BadgeComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new BadgeComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<span class="badge">&nbsp;</span>';
+        $res0 = '<span class="badge"></span>';
         $this->assertEquals($res0, $obj->bootstrapBadgeFunction($arg0));
 
         $arg1 = ["content" => "content"];

@@ -45,7 +45,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["role"]    = ["alert"];
 
         // Initialize the parameters.
-        $innerHTML = (true === $dismissible ? $button : "") . (null !== $content ? $content : self::DEFAULT_CONTENT);
+        $innerHTML = (true === $dismissible ? $button : "") . (null !== $content ? $content : "");
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
@@ -68,7 +68,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["class"] = ["badge"];
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : self::DEFAULT_CONTENT;
+        $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
@@ -106,8 +106,8 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["disabled"]       = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, null) . " " : "";
-        $innerHTML = null !== $content ? $content : self::DEFAULT_CONTENT;
+        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, null) : "";
+        $innerHTML = null !== $content ? ("" !== $glyphicon ? " " . $content : $content) : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%glyphicon%", "%innerHTML%"], [StringUtility::parseArray($attributes), $glyphicon, $innerHTML]);
@@ -154,7 +154,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["class"] = ["label", $class];
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : self::DEFAULT_CONTENT;
+        $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
@@ -190,7 +190,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["aria-valuemax"] = $max . "%";
 
         // Initialize the parameters.
-        $innerHTML = !is_null($content) ? $content . '<span class="sr-only">' . $value . ' %</span>' : self::DEFAULT_CONTENT;
+        $innerHTML = null !== $content ? $content : '<span class="sr-only">' . $value . "%</span>";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);

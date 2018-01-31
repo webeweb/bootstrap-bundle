@@ -79,35 +79,35 @@ final class ProgressBarComponentTwigExtensionTest extends PHPUnit_Framework_Test
         $obj = new ProgressBarComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res0 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res0, $obj->bootstrapBasicProgressBarFunction($arg0));
 
         $arg1 = ["content" => "content"];
-        $res1 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">content<span class="sr-only">50 %</span></div></div>';
+        $res1 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">content</div></div>';
         $this->assertEquals($res1, $obj->bootstrapBasicProgressBarFunction($arg1));
 
         $arg2 = ["value" => 75];
-        $res2 = '<div class="progress"><div class="progress-bar" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res2 = '<div class="progress"><div class="progress-bar" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">75%</span></div></div>';
         $this->assertEquals($res2, $obj->bootstrapBasicProgressBarFunction($arg2));
 
         $arg3 = ["min" => 1];
-        $res3 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="1" aria-valuemax="100%">&nbsp;</div></div>';
+        $res3 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="1" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res3, $obj->bootstrapBasicProgressBarFunction($arg3));
 
         $arg4 = ["max" => 200];
-        $res4 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="200%">&nbsp;</div></div>';
+        $res4 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="200%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res4, $obj->bootstrapBasicProgressBarFunction($arg4));
 
         $arg5 = ["striped" => true];
-        $res5 = '<div class="progress"><div class="progress-bar progress-bar-striped" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res5 = '<div class="progress"><div class="progress-bar progress-bar-striped" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res5, $obj->bootstrapBasicProgressBarFunction($arg5));
 
         $arg6 = ["animated" => true];
-        $res6 = '<div class="progress"><div class="progress-bar active" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res6 = '<div class="progress"><div class="progress-bar active" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res6, $obj->bootstrapBasicProgressBarFunction($arg6));
 
         $arg9 = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true];
-        $res9 = '<div class="progress"><div class="progress-bar progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content<span class="sr-only">75 %</span></div></div>';
+        $res9 = '<div class="progress"><div class="progress-bar progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
         $this->assertEquals($res9, $obj->bootstrapBasicProgressBarFunction($arg9));
     }
 
@@ -122,7 +122,7 @@ final class ProgressBarComponentTwigExtensionTest extends PHPUnit_Framework_Test
         $obj = new ProgressBarComponentTwigExtension();
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarDangerFunction($arg));
     }
 
@@ -137,7 +137,7 @@ final class ProgressBarComponentTwigExtensionTest extends PHPUnit_Framework_Test
         $obj = new ProgressBarComponentTwigExtension();
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-info" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-info" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarInfoFunction($arg));
     }
 
@@ -152,7 +152,7 @@ final class ProgressBarComponentTwigExtensionTest extends PHPUnit_Framework_Test
         $obj = new ProgressBarComponentTwigExtension();
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-success" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-success" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarSuccessFunction($arg));
     }
 
@@ -167,7 +167,7 @@ final class ProgressBarComponentTwigExtensionTest extends PHPUnit_Framework_Test
         $obj = new ProgressBarComponentTwigExtension();
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%">&nbsp;</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarWarningFunction($arg));
     }
 

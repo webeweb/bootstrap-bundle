@@ -70,7 +70,7 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new AlertComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<div class="alert alert-danger" role="alert">&nbsp;</div>';
+        $res0 = '<div class="alert alert-danger" role="alert"></div>';
         $this->assertEquals($res0, $obj->bootstrapAlertDangerFunction($arg0));
 
         $arg1 = ["content" => "content"];
@@ -89,7 +89,7 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new AlertComponentTwigExtension();
 
         $arg = [];
-        $res = '<div class="alert alert-info" role="alert">&nbsp;</div>';
+        $res = '<div class="alert alert-info" role="alert"></div>';
         $this->assertEquals($res, $obj->bootstrapAlertInfoFunction($arg));
     }
 
@@ -104,7 +104,7 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new AlertComponentTwigExtension();
 
         $arg = [];
-        $res = '<div class="alert alert-success" role="alert">&nbsp;</div>';
+        $res = '<div class="alert alert-success" role="alert"></div>';
         $this->assertEquals($res, $obj->bootstrapAlertSuccessFunction($arg));
     }
 
@@ -119,7 +119,7 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new AlertComponentTwigExtension();
 
         $arg = [];
-        $res = '<div class="alert alert-warning" role="alert">&nbsp;</div>';
+        $res = '<div class="alert alert-warning" role="alert"></div>';
         $this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
     }
 
