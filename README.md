@@ -9,6 +9,15 @@ Integrate Bootstrap theme with Symfony2.
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
 
+Provides :
+
+- [jQuery 3.2.1](http://jquery.com/)
+- [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
+- [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker)
+- [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify)
+- [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/)
+- [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput)
+
 ---
 
 ## Compatibility
@@ -72,17 +81,6 @@ Once all required libraries are installed then do:
 ```bash
 $ vendor/bin/phpunit
 ```
-
----
-
-## Provides
-
-- [jQuery 3.2.1](http://jquery.com/)
-- [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
-- [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker)
-- [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify)
-- [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/)
-- [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput)
 
 ---
 
