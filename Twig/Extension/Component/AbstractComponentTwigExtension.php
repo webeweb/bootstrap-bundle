@@ -176,6 +176,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
 
         // Initialize the template.
         $template = '<div class="progress"><div %attributes%>%innerHTML%</div></div>';
+        $span     = '<span class="sr-only">%value%%</span>';
 
         // Initialize the attributes.
         $attributes = [];
@@ -190,7 +191,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["aria-valuemax"] = $max . "%";
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : '<span class="sr-only">' . $value . "%</span>";
+        $innerHTML = null !== $content ? $content : StringUtility::replace($span, ["%value%"], [$value]);
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
