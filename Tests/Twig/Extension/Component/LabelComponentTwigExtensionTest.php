@@ -83,9 +83,9 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $res0 = '<span class="label label-danger"></span>';
         $this->assertEquals($res0, $obj->bootstrapLabelDangerFunction($arg0));
 
-        $arg1 = ["content" => "content"];
-        $res1 = '<span class="label label-danger">content</span>';
-        $this->assertEquals($res1, $obj->bootstrapLabelDangerFunction($arg1));
+        $arg9 = ["content" => "content"];
+        $res9 = '<span class="label label-danger">content</span>';
+        $this->assertEquals($res9, $obj->bootstrapLabelDangerFunction($arg9));
     }
 
     /**

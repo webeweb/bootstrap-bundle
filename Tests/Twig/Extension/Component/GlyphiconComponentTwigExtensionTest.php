@@ -58,9 +58,9 @@ final class GlyphiconComponentTwigExtensionTest extends PHPUnit_Framework_TestCa
         $res0 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
         $this->assertEquals($res0, $obj->bootstrapGlyphiconFunction($arg0));
 
-        $arg1 = ["name" => "asterisk"];
-        $res1 = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
-        $this->assertEquals($res1, $obj->bootstrapGlyphiconFunction($arg1));
+        $arg9 = ["name" => "asterisk"];
+        $res9 = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
+        $this->assertEquals($res9, $obj->bootstrapGlyphiconFunction($arg9));
     }
 
 }

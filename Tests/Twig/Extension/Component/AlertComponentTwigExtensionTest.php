@@ -73,9 +73,9 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $res0 = '<div class="alert alert-danger" role="alert"></div>';
         $this->assertEquals($res0, $obj->bootstrapAlertDangerFunction($arg0));
 
-        $arg1 = ["content" => "content"];
-        $res1 = '<div class="alert alert-danger" role="alert">content</div>';
-        $this->assertEquals($res1, $obj->bootstrapAlertDangerFunction($arg1));
+        $arg9 = ["content" => "content"];
+        $res9 = '<div class="alert alert-danger" role="alert">content</div>';
+        $this->assertEquals($res9, $obj->bootstrapAlertDangerFunction($arg9));
     }
 
     /**
