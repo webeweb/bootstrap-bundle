@@ -24,6 +24,43 @@ use WBW\Library\Core\Utility\StringUtility;
 abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
+     * Displays a Bootstrap deleted text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap deleted text.
+     */
+    final protected function bootstrapDel($content) {
+
+        // Initialize the template.
+        $template = "<del>%innerHTML%</del>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
+      /**
+     * Displays a Bootstrap italic text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap italic text.
+     */
+    final protected function bootstrapEm($content) {
+
+        // Initialize the template.
+        $template = "<em>%innerHTML%</em>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
      * Displays a Bootstrap heading.
      *
      * @param integer $size The heading size.
@@ -32,7 +69,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @param string $class The heading class.
      * @return string Returns the Bootstrap heading.
      */
-    protected final function bootstrapH($size, $content, $description, $class) {
+    final protected function bootstrapH($size, $content, $description, $class) {
 
         // Initialize the template.
         $template = "<h%size%%attributes%>%innerHTML%</h%size%>";
@@ -49,6 +86,115 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
 
         // Return the HTML.
         return StringUtility::replace($template, ["%size%", "%attributes%", "%innerHTML%"], [$innerSize, StringUtility::parseArray($attributes), trim($innerHTML)]);
+    }
+
+    /**
+     * Displays a Bootstrap inserted text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap inserted text.
+     */
+    final protected function bootstrapIns($content) {
+
+        // Initialize the template.
+        $template = "<ins>%innerHTML%</ins>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
+      /**
+     * Displays a Bootstrap marked text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap marked text.
+     */
+    final protected function bootstrapMark($content) {
+
+        // Initialize the template.
+        $template = "<mark>%innerHTML%</mark>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
+     * Displays a Bootstrap strike through text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap strike through text.
+     */
+    final protected function bootstrapS($content) {
+
+        // Initialize the template.
+        $template = "<s>%innerHTML%</s>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
+     * Displays a Bootstrap small text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap small text.
+     */
+    final protected function bootstrapSmall($content) {
+
+        // Initialize the template.
+        $template = "<small>%innerHTML%</small>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
+     * Displays a Bootstrap bold text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap bold text.
+     */
+    final protected function bootstrapStrong($content) {
+
+        // Initialize the template.
+        $template = "<strong>%innerHTML%</strong>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
+     * Displays a Bootstrap underlined text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap underlined text.
+     */
+    final protected function bootstrapU($content) {
+
+        // Initialize the template.
+        $template = "<u>%innerHTML%</u>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
     }
 
 }
