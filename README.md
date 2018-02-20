@@ -17,6 +17,7 @@ Includes :
 - [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify)
 - [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/)
 - [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput)
+- [Bootstrap WYSIWYG 0.3.3](https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg)
 
 ---
 
