@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\ArrayUtility;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  * @final
  */
-final class DelTypographyTwigExtension extends AbstractTypographyTwigExtension {
+final class DeletedTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -36,8 +36,8 @@ final class DelTypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap deleted text.
      */
-    public function bootstrapDelFunction(array $args = []) {
-        return $this->bootstrapDel(ArrayUtility::get($args, "content"));
+    public function bootstrapDeletedFunction(array $args = []) {
+        return $this->bootstrapDeleted(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -47,7 +47,7 @@ final class DelTypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapDel", [$this, "bootstrapDelFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DelTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
 
 /**
  * Deleted typography Twig extension test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DelTypographyTwigExtens
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class DelTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class DeletedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,35 +32,35 @@ final class DelTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new DelTypographyTwigExtension();
+        $obj = new DeletedTypographyTwigExtension();
 
         $res = $obj->getFunctions();
 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapDel", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapDelFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapDeleted", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapDeletedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapDelFunction() method.
+     * Tests the bootstrapDeletedFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapDelFunction() {
+    public function testBootstrapDeletedFunction() {
 
-        $obj = new DelTypographyTwigExtension();
+        $obj = new DeletedTypographyTwigExtension();
 
         $arg0 = [];
         $res0 = "<del></del>";
-        $this->assertEquals($res0, $obj->bootstrapDelFunction($arg0));
+        $this->assertEquals($res0, $obj->bootstrapDeletedFunction($arg0));
 
         $arg9 = ["content" => "content"];
         $res9 = "<del>content</del>";
-        $this->assertEquals($res9, $obj->bootstrapDelFunction($arg9));
+        $this->assertEquals($res9, $obj->bootstrapDeletedFunction($arg9));
     }
 
 }
