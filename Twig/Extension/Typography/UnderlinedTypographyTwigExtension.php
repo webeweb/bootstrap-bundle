@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\ArrayUtility;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  * @final
  */
-final class UTypographyTwigExtension extends AbstractTypographyTwigExtension {
+final class UnderlinedTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -36,8 +36,8 @@ final class UTypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap underlined text.
      */
-    public function bootstrapUFunction(array $args = []) {
-        return $this->bootstrapU(ArrayUtility::get($args, "content"));
+    public function bootstrapUnderlinedFunction(array $args = []) {
+        return $this->bootstrapUnderlined(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -47,7 +47,7 @@ final class UTypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapU", [$this, "bootstrapUFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

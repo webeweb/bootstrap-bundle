@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
 
 /**
  * Underlined typography Twig extension test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UTypographyTwigExtensio
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class UTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class UnderlinedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,35 +32,35 @@ final class UTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new UTypographyTwigExtension();
+        $obj = new UnderlinedTypographyTwigExtension();
 
         $res = $obj->getFunctions();
 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapU", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapUFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapUnderlined", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapUnderlinedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapUFunction() method.
+     * Tests the bootstrapUnderlinedFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
     public function testBootstrapUFunction() {
 
-        $obj = new UTypographyTwigExtension();
+        $obj = new UnderlinedTypographyTwigExtension();
 
         $arg0 = [];
         $res0 = "<u></u>";
-        $this->assertEquals($res0, $obj->bootstrapUFunction($arg0));
+        $this->assertEquals($res0, $obj->bootstrapUnderlinedFunction($arg0));
 
         $arg9 = ["content" => "content"];
         $res9 = "<u>content</u>";
-        $this->assertEquals($res9, $obj->bootstrapUFunction($arg9));
+        $this->assertEquals($res9, $obj->bootstrapUnderlinedFunction($arg9));
     }
 
 }
