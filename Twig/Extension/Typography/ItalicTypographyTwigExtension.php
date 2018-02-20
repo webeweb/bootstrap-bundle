@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\ArrayUtility;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  * @final
  */
-final class EmTypographyTwigExtension extends AbstractTypographyTwigExtension {
+final class ItalicTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -36,8 +36,8 @@ final class EmTypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap italic text.
      */
-    public function bootstrapEmFunction(array $args = []) {
-        return $this->bootstrapEm(ArrayUtility::get($args, "content"));
+    public function bootstrapItalicFunction(array $args = []) {
+        return $this->bootstrapItalic(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -47,7 +47,7 @@ final class EmTypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapEm", [$this, "bootstrapEmFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

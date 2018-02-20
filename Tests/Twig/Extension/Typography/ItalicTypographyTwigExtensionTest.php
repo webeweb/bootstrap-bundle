@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\EmTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension;
 
 /**
  * Italic typography Twig extension test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\EmTypographyTwigExtensi
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class EmTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class ItalicTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,35 +32,35 @@ final class EmTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new EmTypographyTwigExtension();
+        $obj = new ItalicTypographyTwigExtension();
 
         $res = $obj->getFunctions();
 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapEm", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapEmFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapItalic", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapItalicFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapEmFunction() method.
+     * Tests the bootstrapItalicFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
     public function testBootstrapEmFunction() {
 
-        $obj = new EmTypographyTwigExtension();
+        $obj = new ItalicTypographyTwigExtension();
 
         $arg0 = [];
         $res0 = "<em></em>";
-        $this->assertEquals($res0, $obj->bootstrapEmFunction($arg0));
+        $this->assertEquals($res0, $obj->bootstrapItalicFunction($arg0));
 
         $arg9 = ["content" => "content"];
         $res9 = "<em>content</em>";
-        $this->assertEquals($res9, $obj->bootstrapEmFunction($arg9));
+        $this->assertEquals($res9, $obj->bootstrapItalicFunction($arg9));
     }
 
 }
