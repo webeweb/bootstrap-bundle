@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\ArrayUtility;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  * @final
  */
-final class STypographyTwigExtension extends AbstractTypographyTwigExtension {
+final class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -36,8 +36,8 @@ final class STypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap strike through text.
      */
-    public function bootstrapSFunction(array $args = []) {
-        return $this->bootstrapS(ArrayUtility::get($args, "content"));
+    public function bootstrapStrikeThroughFunction(array $args = []) {
+        return $this->bootstrapStrikeThrough(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -47,7 +47,7 @@ final class STypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapS", [$this, "bootstrapSFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapStrikeThrough", [$this, "bootstrapStrikeThroughFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
