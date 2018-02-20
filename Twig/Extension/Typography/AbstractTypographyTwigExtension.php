@@ -29,29 +29,10 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @param string $content The mark content.
      * @return string  Returns the Bootstrap deleted text.
      */
-    final protected function bootstrapDel($content) {
+    final protected function bootstrapDeleted($content) {
 
         // Initialize the template.
         $template = "<del>%innerHTML%</del>";
-
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
-    }
-
-    /**
-      /**
-     * Displays a Bootstrap italic text.
-     *
-     * @param string $content The mark content.
-     * @return string  Returns the Bootstrap italic text.
-     */
-    final protected function bootstrapEm($content) {
-
-        // Initialize the template.
-        $template = "<em>%innerHTML%</em>";
 
         // Initialize the parameters.
         $innerHTML = null !== $content ? $content : "";
@@ -69,7 +50,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @param string $class The heading class.
      * @return string Returns the Bootstrap heading.
      */
-    final protected function bootstrapH($size, $content, $description, $class) {
+    final protected function bootstrapHeading($size, $content, $description, $class) {
 
         // Initialize the template.
         $template = "<h%size%%attributes%>%innerHTML%</h%size%>";
@@ -94,10 +75,29 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @param string $content The mark content.
      * @return string  Returns the Bootstrap inserted text.
      */
-    final protected function bootstrapIns($content) {
+    final protected function bootstrapInserted($content) {
 
         // Initialize the template.
         $template = "<ins>%innerHTML%</ins>";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
+
+    /**
+      /**
+     * Displays a Bootstrap italic text.
+     *
+     * @param string $content The mark content.
+     * @return string  Returns the Bootstrap italic text.
+     */
+    final protected function bootstrapItalic($content) {
+
+        // Initialize the template.
+        $template = "<em>%innerHTML%</em>";
 
         // Initialize the parameters.
         $innerHTML = null !== $content ? $content : "";
@@ -113,7 +113,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @param string $content The mark content.
      * @return string  Returns the Bootstrap marked text.
      */
-    final protected function bootstrapMark($content) {
+    final protected function bootstrapMarked($content) {
 
         // Initialize the template.
         $template = "<mark>%innerHTML%</mark>";
@@ -131,7 +131,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @param string $content The mark content.
      * @return string  Returns the Bootstrap strike through text.
      */
-    final protected function bootstrapS($content) {
+    final protected function bootstrapStrikeThrough($content) {
 
         // Initialize the template.
         $template = "<s>%innerHTML%</s>";
@@ -185,7 +185,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @param string $content The mark content.
      * @return string  Returns the Bootstrap underlined text.
      */
-    final protected function bootstrapU($content) {
+    final protected function bootstrapUnderlined($content) {
 
         // Initialize the template.
         $template = "<u>%innerHTML%</u>";
