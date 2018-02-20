@@ -30,3 +30,48 @@ services:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension
         tags:
             - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.deleted:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.heading:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.inserted:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.italic:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.marked:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkedTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.small:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.strikethrough:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.strong:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrongTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.underlined:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension
+        tags:
+            - { name: twig.extension }
