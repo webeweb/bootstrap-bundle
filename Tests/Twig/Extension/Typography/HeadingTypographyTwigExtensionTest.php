@@ -39,38 +39,38 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
         $this->assertCount(6, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapH1", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapH1Function"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapHeading1", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading1Function"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapH2", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapH2Function"], $res[1]->getCallable());
+        $this->assertEquals("bootstrapHeading2", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading2Function"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
 
-        $this->assertEquals("bootstrapH3", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapH3Function"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapHeading3", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading3Function"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
 
-        $this->assertEquals("bootstrapH4", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapH4Function"], $res[3]->getCallable());
+        $this->assertEquals("bootstrapHeading4", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading4Function"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
 
-        $this->assertEquals("bootstrapH5", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapH5Function"], $res[4]->getCallable());
+        $this->assertEquals("bootstrapHeading5", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading5Function"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
 
-        $this->assertEquals("bootstrapH6", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapH6Function"], $res[5]->getCallable());
+        $this->assertEquals("bootstrapHeading6", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapHeading6Function"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapH1Function() method.
+     * Tests the bootstrapHeading1Function() method.
      *
      * @return void
      * @depends testGetFunctions
@@ -81,27 +81,27 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $arg0 = [];
         $res0 = "<h1></h1>";
-        $this->assertEquals($res0, $obj->bootstrapH1Function($arg0));
+        $this->assertEquals($res0, $obj->bootstrapHeading1Function($arg0));
 
         $arg1 = ["content" => "content"];
         $res1 = "<h1>content</h1>";
-        $this->assertEquals($res1, $obj->bootstrapH1Function($arg1));
+        $this->assertEquals($res1, $obj->bootstrapHeading1Function($arg1));
 
         $arg2 = ["description" => "description"];
         $res2 = "<h1><small>description</small></h1>";
-        $this->assertEquals($res2, $obj->bootstrapH1Function($arg2));
+        $this->assertEquals($res2, $obj->bootstrapHeading1Function($arg2));
 
         $arg3 = ["class" => "class"];
         $res3 = '<h1 class="class"></h1>';
-        $this->assertEquals($res3, $obj->bootstrapH1Function($arg3));
+        $this->assertEquals($res3, $obj->bootstrapHeading1Function($arg3));
 
         $arg9 = ["content" => "content", "description" => "description", "class" => "class"];
         $res9 = '<h1 class="class">content <small>description</small></h1>';
-        $this->assertEquals($res9, $obj->bootstrapH1Function($arg9));
+        $this->assertEquals($res9, $obj->bootstrapHeading1Function($arg9));
     }
 
     /**
-     * Tests the bootstrapH2Function() method.
+     * Tests the bootstrapHeading2Function() method.
      *
      * @return void
      */
@@ -111,11 +111,11 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $arg = [];
         $res = "<h2></h2>";
-        $this->assertEquals($res, $obj->bootstrapH2Function($arg));
+        $this->assertEquals($res, $obj->bootstrapHeading2Function($arg));
     }
 
     /**
-     * Tests the bootstrapH3Function() method.
+     * Tests the bootstrapHeading3Function() method.
      *
      * @return void
      */
@@ -125,11 +125,11 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $arg = [];
         $res = "<h3></h3>";
-        $this->assertEquals($res, $obj->bootstrapH3Function($arg));
+        $this->assertEquals($res, $obj->bootstrapHeading3Function($arg));
     }
 
     /**
-     * Tests the bootstrapH4Function() method.
+     * Tests the bootstrapHeading4Function() method.
      *
      * @return void
      */
@@ -139,11 +139,11 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $arg = [];
         $res = "<h4></h4>";
-        $this->assertEquals($res, $obj->bootstrapH4Function($arg));
+        $this->assertEquals($res, $obj->bootstrapHeading4Function($arg));
     }
 
     /**
-     * Tests the bootstrapH5Function() method.
+     * Tests the bootstrapHeading5Function() method.
      *
      * @return void
      */
@@ -153,11 +153,11 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $arg = [];
         $res = "<h5></h5>";
-        $this->assertEquals($res, $obj->bootstrapH5Function($arg));
+        $this->assertEquals($res, $obj->bootstrapHeading5Function($arg));
     }
 
     /**
-     * Tests the bootstrapH6Function() method.
+     * Tests the bootstrapHeading6Function() method.
      *
      * @return void
      */
@@ -167,7 +167,7 @@ final class HeadingTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
 
         $arg = [];
         $res = "<h6></h6>";
-        $this->assertEquals($res, $obj->bootstrapH6Function($arg));
+        $this->assertEquals($res, $obj->bootstrapHeading6Function($arg));
     }
 
 }

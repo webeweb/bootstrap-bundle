@@ -36,8 +36,8 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 1.
      */
-    public function bootstrapH1Function(array $args = []) {
-        return $this->bootstrapH(1, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+    public function bootstrapHeading1Function(array $args = []) {
+        return $this->bootstrapHeading(1, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -46,8 +46,8 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 2.
      */
-    public function bootstrapH2Function(array $args = []) {
-        return $this->bootstrapH(2, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+    public function bootstrapHeading2Function(array $args = []) {
+        return $this->bootstrapHeading(2, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -56,8 +56,8 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 3.
      */
-    public function bootstrapH3Function(array $args = []) {
-        return $this->bootstrapH(3, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+    public function bootstrapHeading3Function(array $args = []) {
+        return $this->bootstrapHeading(3, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -66,8 +66,8 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 4.
      */
-    public function bootstrapH4Function(array $args = []) {
-        return $this->bootstrapH(4, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+    public function bootstrapHeading4Function(array $args = []) {
+        return $this->bootstrapHeading(4, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -76,8 +76,8 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 5.
      */
-    public function bootstrapH5Function(array $args = []) {
-        return $this->bootstrapH(5, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+    public function bootstrapHeading5Function(array $args = []) {
+        return $this->bootstrapHeading(5, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -86,8 +86,8 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 6.
      */
-    public function bootstrapH6Function(array $args = []) {
-        return $this->bootstrapH(6, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+    public function bootstrapHeading6Function(array $args = []) {
+        return $this->bootstrapHeading(6, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -97,12 +97,12 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapH1", [$this, "bootstrapH1Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapH2", [$this, "bootstrapH2Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapH3", [$this, "bootstrapH3Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapH4", [$this, "bootstrapH4Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapH5", [$this, "bootstrapH5Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapH6", [$this, "bootstrapH6Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
         ];
     }
 
