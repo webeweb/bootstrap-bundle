@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\ArrayUtility;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  * @final
  */
-final class InsTypographyTwigExtension extends AbstractTypographyTwigExtension {
+final class InsertedTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -36,8 +36,8 @@ final class InsTypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap inserted text.
      */
-    public function bootstrapInsFunction(array $args = []) {
-        return $this->bootstrapIns(ArrayUtility::get($args, "content"));
+    public function bootstrapInsertedFunction(array $args = []) {
+        return $this->bootstrapInserted(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -47,7 +47,7 @@ final class InsTypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapIns", [$this, "bootstrapInsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

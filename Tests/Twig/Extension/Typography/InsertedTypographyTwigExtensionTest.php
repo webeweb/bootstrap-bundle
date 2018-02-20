@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension;
 
 /**
  * Inserted typography Twig extension test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsTypographyTwigExtens
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class InsTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class InsertedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,35 +32,35 @@ final class InsTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new InsTypographyTwigExtension();
+        $obj = new InsertedTypographyTwigExtension();
 
         $res = $obj->getFunctions();
 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapIns", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapInsFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapInserted", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapInsertedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapInsFunction() method.
+     * Tests the bootstrapInsertedFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
     public function testBootstrapInsFunction() {
 
-        $obj = new InsTypographyTwigExtension();
+        $obj = new InsertedTypographyTwigExtension();
 
         $arg0 = [];
         $res0 = "<ins></ins>";
-        $this->assertEquals($res0, $obj->bootstrapInsFunction($arg0));
+        $this->assertEquals($res0, $obj->bootstrapInsertedFunction($arg0));
 
         $arg9 = ["content" => "content"];
         $res9 = "<ins>content</ins>";
-        $this->assertEquals($res9, $obj->bootstrapInsFunction($arg9));
+        $this->assertEquals($res9, $obj->bootstrapInsertedFunction($arg9));
     }
 
 }
