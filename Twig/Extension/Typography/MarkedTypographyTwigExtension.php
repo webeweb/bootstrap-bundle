@@ -21,7 +21,7 @@ use WBW\Library\Core\Utility\ArrayUtility;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  * @final
  */
-final class MarkTypographyTwigExtension extends AbstractTypographyTwigExtension {
+final class MarkedTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -36,8 +36,8 @@ final class MarkTypographyTwigExtension extends AbstractTypographyTwigExtension 
      * @param array $args The arguments.
      * @return string Returns the Bootstrap marked text.
      */
-    public function bootstrapMarkFunction(array $args = []) {
-        return $this->bootstrapMark(ArrayUtility::get($args, "content"));
+    public function bootstrapMarkedFunction(array $args = []) {
+        return $this->bootstrapMarked(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -47,7 +47,7 @@ final class MarkTypographyTwigExtension extends AbstractTypographyTwigExtension 
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapMark", [$this, "bootstrapMarkFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkedTypographyTwigExtension;
 
 /**
  * Marked typography Twig extension test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkTypographyTwigExten
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class MarkTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class MarkedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,35 +32,35 @@ final class MarkTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new MarkTypographyTwigExtension();
+        $obj = new MarkedTypographyTwigExtension();
 
         $res = $obj->getFunctions();
 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapMark", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapMarkFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapMarked", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapMarkedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapMarkFunction() method.
+     * Tests the bootstrapMarkedFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
     public function testBootstrapMarkFunction() {
 
-        $obj = new MarkTypographyTwigExtension();
+        $obj = new MarkedTypographyTwigExtension();
 
         $arg0 = [];
         $res0 = "<mark></mark>";
-        $this->assertEquals($res0, $obj->bootstrapMarkFunction($arg0));
+        $this->assertEquals($res0, $obj->bootstrapMarkedFunction($arg0));
 
         $arg9 = ["content" => "content"];
         $res9 = "<mark>content</mark>";
-        $this->assertEquals($res9, $obj->bootstrapMarkFunction($arg9));
+        $this->assertEquals($res9, $obj->bootstrapMarkedFunction($arg9));
     }
 
 }
