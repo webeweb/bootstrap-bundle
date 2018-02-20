@@ -17,10 +17,11 @@ use WBW\Library\Core\Utility\ArrayUtility;
 use WBW\Library\Core\Utility\StringUtility;
 
 /**
- * ButtonComponentTwigExtension.
+ * Button component Twig extension.
  *
- * @author Camille A. <camille@ingeneo.eu>
+ * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
+ * @final
  */
 final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension {
 
