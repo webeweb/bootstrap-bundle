@@ -11,7 +11,6 @@ Integrate Bootstrap theme with Symfony2.
 
 Includes :
 
-- [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
 - [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
 - [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker/)
 - [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify)
@@ -19,6 +18,7 @@ Includes :
 - [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/)
 - [Bootstrap WYSIWYG 0.3.3](https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/)
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
+- [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
 - [WYSIHTML 0.4.15](https://github.com/Edicy/wysihtml5/) (Bootstrap WYSIWYG dependency)
 
 ---
