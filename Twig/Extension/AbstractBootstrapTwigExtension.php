@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig_Extension;
 use WBW\Library\Core\Navigation\NavigationInterface;
+use WBW\Library\Core\Utility\StringUtility;
 
 /**
  * Abstract Bootstrap Twig extension.
@@ -36,5 +37,24 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
      * @var string
      */
     const DEFAULT_HREF = NavigationInterface::DEFAULT_HREF;
+
+    /**
+     * Displays a Bootstrap simple tag.
+     *
+     * @param string $name The tag name.
+     * @param string $content The tag contant
+     * @return string Returns the Bootstrap tag.
+     */
+    final protected function bootstrapTag($name, $content) {
+
+        // Initialize the template.
+        $template = "<" . $name . ">%innerHTML%</" . $name . ">";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+    }
 
 }
