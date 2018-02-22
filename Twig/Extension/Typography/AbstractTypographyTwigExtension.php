@@ -26,7 +26,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap deleted text.
      *
-     * @param string $content The mark content.
+     * @param string $content The deleted text content.
      * @return string  Returns the Bootstrap deleted text.
      */
     final protected function bootstrapDeleted($content) {
@@ -72,7 +72,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap inserted text.
      *
-     * @param string $content The mark content.
+     * @param string $content The inserted text content.
      * @return string  Returns the Bootstrap inserted text.
      */
     final protected function bootstrapInserted($content) {
@@ -91,7 +91,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
       /**
      * Displays a Bootstrap italic text.
      *
-     * @param string $content The mark content.
+     * @param string $content The italic text content.
      * @return string  Returns the Bootstrap italic text.
      */
     final protected function bootstrapItalic($content) {
@@ -110,7 +110,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
       /**
      * Displays a Bootstrap marked text.
      *
-     * @param string $content The mark content.
+     * @param string $content The marked text content.
      * @return string  Returns the Bootstrap marked text.
      */
     final protected function bootstrapMarked($content) {
@@ -128,7 +128,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap strike through text.
      *
-     * @param string $content The mark content.
+     * @param string $content The strike through content.
      * @return string  Returns the Bootstrap strike through text.
      */
     final protected function bootstrapStrikeThrough($content) {
@@ -146,7 +146,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap small text.
      *
-     * @param string $content The mark content.
+     * @param string $content The small text content.
      * @return string  Returns the Bootstrap small text.
      */
     final protected function bootstrapSmall($content) {
@@ -164,7 +164,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap bold text.
      *
-     * @param string $content The mark content.
+     * @param string $content The bold text content.
      * @return string  Returns the Bootstrap bold text.
      */
     final protected function bootstrapStrong($content) {
@@ -182,7 +182,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap underlined text.
      *
-     * @param string $content The mark content.
+     * @param string $content The underlined text content.
      * @return string  Returns the Bootstrap underlined text.
      */
     final protected function bootstrapUnderlined($content) {
