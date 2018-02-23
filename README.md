@@ -15,6 +15,7 @@ Includes :
 - [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker/) (Bootstrap plugin)
 - [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify) (Bootstrap plugin)
 - [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/) (Bootstrap plugin)
+- [Bootstrap Slider 10.0.0](https://github.com/seiyria/bootstrap-slider/) (Bootstrap plugin)
 - [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/) (Bootstrap plugin)
 - [Bootstrap WYSIWYG 0.3.3](https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/) (Bootstrap plugin)
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
