@@ -13,7 +13,8 @@ Includes :
 
 - [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
 - [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker/) (Bootstrap plugin)
-- [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify) (Bootstrap plugin)
+- [Bootstrap Datepicker 1.7.1](https://github.com/uxsolutions/bootstrap-datepicker/) (Bootstrap plugin)
+- [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify/) (Bootstrap plugin)
 - [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/) (Bootstrap plugin)
 - [Bootstrap Slider 10.0.0](https://github.com/seiyria/bootstrap-slider/) (Bootstrap plugin)
 - [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/) (Bootstrap plugin)
