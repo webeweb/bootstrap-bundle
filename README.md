@@ -14,6 +14,7 @@ Includes :
 - [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
 - [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker/) (Bootstrap plugin)
 - [Bootstrap Datepicker 1.7.1](https://github.com/uxsolutions/bootstrap-datepicker/) (Bootstrap plugin)
+- [Bootstrap Daterangepicker 2.1.27](http://www.daterangepicker.com/) (Bootstrap plugin)
 - [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify/) (Bootstrap plugin)
 - [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/) (Bootstrap plugin)
 - [Bootstrap Slider 10.0.0](https://github.com/seiyria/bootstrap-slider/) (Bootstrap plugin)
@@ -22,6 +23,7 @@ Includes :
 - [Bootstrap WYSIWYG 0.3.3](https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/) (Bootstrap plugin)
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
 - [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
+- [Moment 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
 - [WYSIHTML 0.4.15](https://github.com/Edicy/wysihtml5/) (Bootstrap WYSIWYG dependency)
 
 ---
