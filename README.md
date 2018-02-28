@@ -3,7 +3,7 @@ bootstrap-bundle
 
 [![Build Status](https://travis-ci.org/webeweb/bootstrap-bundle.svg?branch=master)](https://travis-ci.org/webeweb/bootstrap-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/bootstrap-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/bootstrap-bundle?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/bootstrap-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/bootstrap-bundle/?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/bootstrap-bundle/v/stable)](https://packagist.org/packages/webeweb/bootstrap-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/bootstrap-bundle/v/unstable)](https://packagist.org/packages/webeweb/bootstrap-bundle) [![License](https://poser.pugx.org/webeweb/bootstrap-bundle/license)](https://packagist.org/packages/webeweb/bootstrap-bundle) [![composer.lock](https://poser.pugx.org/webeweb/bootstrap-bundle/composerlock)](https://packagist.org/packages/webeweb/bootstrap-bundle)
 
-Integrate Bootstrap theme with Symfony2.
+Integrate Bootstrap theme with Symfony 2.
 
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
