@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Bootstrap -->
-        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/bootstrap/bootstrap-3.3.7/css/bootstrap.min.css') }}">
+        {% include '@Bootstrap/styles/bootstrap.html.twig' %}
         <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         {% block bootstrapHeadStyles %}
@@ -13,10 +12,8 @@
     <body>
         {% block bootstrapBodyContent %}
         {% endblock %}
-        <!-- jQuery -->
-        <script type="text/javascript" src="{{ asset('bundles/bootstrap/jquery-3.2.1/jquery-3.2.1.min.js') }}"></script>
-        <!-- Bootstrap -->
-        <script type="text/javascript" src="{{ asset('bundles/bootstrap/bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
+        {% include '@Bootstrap/scripts/jquery.html.twig' %}
+        {% include '@Bootstrap/scripts/bootstrap.html.twig' %}
         {% block bootstrapBodyScripts %}
         {% endblock %}
     </body>
