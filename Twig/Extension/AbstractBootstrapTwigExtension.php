@@ -42,10 +42,10 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
      * Displays a Bootstrap simple tag.
      *
      * @param string $name The tag name.
-     * @param string $content The tag contant
+     * @param string $content The tag content
      * @return string Returns the Bootstrap tag.
      */
-    final protected function bootstrapTag($name, $content) {
+    final protected function bootstrapSimpleTag($name, $content) {
 
         // Initialize the template.
         $template = "<" . $name . ">%innerHTML%</" . $name . ">";
