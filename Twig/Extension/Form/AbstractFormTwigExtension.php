@@ -34,9 +34,7 @@ abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension 
     final protected function bootstrapInputMask($selector, $scriptTag, array $arguments) {
 
         // Initialize the template.
-        $template = [];
-
-        $template[] = "$('%selector%').inputmask(%arguments%);";
+        $template = ["$('%selector%').inputmask(%arguments%);"];
         if (true === $scriptTag) {
             array_unshift($template, "<script type=\"text/javascript\">");
             array_push($template, "</script>");
