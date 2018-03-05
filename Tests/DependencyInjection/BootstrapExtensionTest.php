@@ -18,6 +18,11 @@ use Symfony\Component\HttpKernel\KernelInterface;
 use Twig_Environment;
 use Twig_LoaderInterface;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\UserInputCodeTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\VariableCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
@@ -63,6 +68,12 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new BootstrapExtension();
 
         $obj->load([], $container);
+        // Code
+        $this->assertInstanceOf(BasicBlockCodeTwigExtension::class, $container->get(BasicBlockCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(InlineCodeTwigExtension::class, $container->get(InlineCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(SampleOutputCodeTwigExtension::class, $container->get(SampleOutputCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(UserInputCodeTwigExtension::class, $container->get(UserInputCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(VariableCodeTwigExtension::class, $container->get(VariableCodeTwigExtension::SERVICE_NAME));
         // Component
         $this->assertInstanceOf(AlertComponentTwigExtension::class, $container->get(AlertComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(BadgeComponentTwigExtension::class, $container->get(BadgeComponentTwigExtension::SERVICE_NAME));

@@ -1,6 +1,31 @@
 # Resources/config/services.yml
 services:
 
+    webeweb.bundle.bootstrapbundle.twig.extension.code.basicblock:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.code.inline:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.code.sampleoutput:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.code.userinput:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\UserInputCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.code.variable:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\VariableCodeTwigExtension
+        tags:
+            - { name: twig.extension }
+
     webeweb.bundle.bootstrapbundle.twig.extension.component.alert:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension
         tags:
@@ -28,6 +53,11 @@ services:
 
     webeweb.bundle.bootstrapbundle.twig.extension.component.progressbar:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.form.inputmask:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension
         tags:
             - { name: twig.extension }
 
