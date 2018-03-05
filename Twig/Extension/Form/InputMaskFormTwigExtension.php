@@ -37,7 +37,7 @@ final class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the phone number input mask.
      */
     public function bootstrapPhoneNumberInputMaskFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "99 99 99 99 99", "placeholder" => "__ __ __ __ __"]);
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "99 99 99 99 99", "placeholder" => "__ __ __ __ __"]);
     }
 
     /**
@@ -47,7 +47,7 @@ final class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the SIRET number input mask.
      */
     public function bootstrapSIRETNumberInputMaskFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "999 999 999 99999", "placeholder" => "___ ___ ___ ___"]);
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "999 999 999 99999", "placeholder" => "___ ___ ___ ___"]);
     }
 
     /**
@@ -57,7 +57,7 @@ final class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the social security number input mask.
      */
     public function bootstrapSocialSecurityNumberInputMaskFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "9 99 99 99 999 999 99", "placeholder" => "_ __ __ __ ___ ___ __"]);
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "9 99 99 99 999 999 99", "placeholder" => "_ __ __ __ ___ ___ __"]);
     }
 
     /**
@@ -67,7 +67,7 @@ final class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the VAT number input mask.
      */
     public function bootstrapVATNumberInputMaskFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "**999 999 999 99", "placeholder" => "_____ ___ ___ ___ __"]);
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), ["autoUnmask" => true, "removeMaskOnSubmit" => true, "mask" => "**999 999 999 99", "placeholder" => "_____ ___ ___ ___ __"]);
     }
 
     /**

@@ -69,9 +69,13 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $obj = new InputMaskFormTwigExtension();
 
-        $arg = ["selector" => "#selector"];
-        $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});";
-        $this->assertEquals($res, $obj->bootstrapPhoneNumberInputMaskFunction($arg));
+        $arg0 = ["selector" => "#selector"];
+        $res0 = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});";
+        $this->assertEquals($res0, $obj->bootstrapPhoneNumberInputMaskFunction($arg0));
+
+        $arg9 = ["selector" => "#selector", "scriptTag" => true];
+        $res9 = "<script type=\"text/javascript\">\n$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});\n</script>";
+        $this->assertEquals($res9, $obj->bootstrapPhoneNumberInputMaskFunction($arg9));
     }
 
     /**
