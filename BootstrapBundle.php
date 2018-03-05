@@ -3,7 +3,7 @@
 /**
  * This file is part of the bootstrap-bundle package.
  *
- * (c) 2018 NdC/WBW
+ * (c) 2018 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -16,7 +16,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 /**
  * Bootstrap bundle.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle
  * @final
  */
