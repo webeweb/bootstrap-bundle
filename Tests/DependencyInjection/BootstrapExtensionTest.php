@@ -29,6 +29,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExten
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension;
@@ -68,12 +69,14 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new BootstrapExtension();
 
         $obj->load([], $container);
+
         // Code
         $this->assertInstanceOf(BasicBlockCodeTwigExtension::class, $container->get(BasicBlockCodeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(InlineCodeTwigExtension::class, $container->get(InlineCodeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SampleOutputCodeTwigExtension::class, $container->get(SampleOutputCodeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UserInputCodeTwigExtension::class, $container->get(UserInputCodeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(VariableCodeTwigExtension::class, $container->get(VariableCodeTwigExtension::SERVICE_NAME));
+
         // Component
         $this->assertInstanceOf(AlertComponentTwigExtension::class, $container->get(AlertComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(BadgeComponentTwigExtension::class, $container->get(BadgeComponentTwigExtension::SERVICE_NAME));
@@ -81,6 +84,10 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $container->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(LabelComponentTwigExtension::class, $container->get(LabelComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $container->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
+
+        // Form
+        $this->assertInstanceOf(InputMaskFormTwigExtension::class, $container->get(InputMaskFormTwigExtension::SERVICE_NAME));
+
         // Typography
         $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $container->get(DeletedTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(HeadingTypographyTwigExtension::class, $container->get(HeadingTypographyTwigExtension::SERVICE_NAME));
