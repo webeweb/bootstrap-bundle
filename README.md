@@ -23,6 +23,7 @@ Includes :
 - [Bootstrap WYSIWYG 0.3.3](https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/) (Bootstrap plugin)
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
 - [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
+- [jQuery InputMask 3.3.11](https://github.com/RobinHerbots/Inputmask/) (jQuery Plugin)
 - [Moment 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
 - [WYSIHTML 0.4.15](https://github.com/Edicy/wysihtml5/) (Bootstrap WYSIWYG dependency)
 
