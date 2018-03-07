@@ -15,9 +15,12 @@ use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Twig_Environment;
 use Twig_LoaderInterface;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
+use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
+use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension;
@@ -60,15 +63,21 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
         $kernel          = $this->getMockBuilder(KernelInterface::class)->getMock();
         $twigLoader      = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
         $twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
+        $tokenStorage    = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
 
         // We set a container builder with only the necessary.
         $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
         $container->set("kernel", $kernel);
+        $container->set("security.token_storage", $tokenStorage);
         $container->set("twig", $twigEnvironment);
 
         $obj = new BootstrapExtension();
 
         $obj->load([], $container);
+
+        // Services
+        $this->assertInstanceOf(KernelEventListener::class, $container->get(KernelEventListener::SERVICE_NAME));
+        $this->assertInstanceOf(ProvidersManager::class, $container->get(ProvidersManager::SERVICE_NAME));
 
         // Code
         $this->assertInstanceOf(BasicBlockCodeTwigExtension::class, $container->get(BasicBlockCodeTwigExtension::SERVICE_NAME));

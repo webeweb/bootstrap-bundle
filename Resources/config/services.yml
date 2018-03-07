@@ -1,6 +1,26 @@
 # Resources/config/services.yml
 services:
 
+    webeweb.bundle.bootstrapbundle.eventlistener.kernel:
+        class: WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener
+        arguments: ["@security.token_storage", "@webeweb.bundle.bootstrapbundle.provider.manager"]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+    webeweb.bundle.bootstrapbundle.provider.manager:
+        class:     WBW\Bundle\BootstrapBundle\Provider\ProvidersManager
+        arguments: ["@twig"]
+        calls:
+            - [setApplicationProvider, ["@?webeweb.bundle.bootstrapbundle.provider.application"]]
+            - [setBreadcrumbsProvider, ["@?webeweb.bundle.bootstrapbundle.provider.breadcrumbs"]]
+            - [setDropDownHookProvider, ["@?webeweb.bundle.bootstrapbundle.provider.dropdownhook"]]
+            - [setDropDownNotificationsProvider, ["@?webeweb.bundle.bootstrapbundle.provider.dropdownnotifications"]]
+            - [setDropDownTasksProvider, ["@?webeweb.bundle.bootstrapbundle.provider.dropdowntasks"]]
+            - [setFooterProvider, ["@?webeweb.bundle.bootstrapbundle.provider.footer"]]
+            - [setNavigationProvider, ["@?webeweb.bundle.bootstrapbundle.provider.navigation"]]
+            - [setSearchProvider, ["@?webeweb.bundle.bootstrapbundle.provider.search"]]
+            - [setUserInfoProvider, ["@?webeweb.bundle.bootstrapbundle.provider.userinfo"]]
+
     webeweb.bundle.bootstrapbundle.twig.extension.code.basicblock:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension
         tags:
