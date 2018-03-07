@@ -38,7 +38,7 @@ before_install:
 
 install:
     - composer update
-    - wget -c -nc --retry-connrefused --tries=0 https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+    - wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.0.0/php-coveralls.phar -O coveralls.phar
     - chmod +x coveralls.phar
     - php coveralls.phar --version
 
