@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Navigation\Node\Action;
 
-use WBW\Library\Core\Navigation\Node\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
 
 /**
  * Breadcrumb node "Export" action.

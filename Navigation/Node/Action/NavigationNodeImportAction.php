@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Navigation\Node\Action;
 
-use WBW\Library\Core\Navigation\Node\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
 
 /**
  * Navigation node "Import" action.
