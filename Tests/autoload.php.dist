@@ -16,9 +16,9 @@ $symfonyAutoloader = __DIR__ . "/../../../../app/autoload.php";
 $composerAutoloader = __DIR__ . "/../vendor/autoload.php";
 
 // Check if the bundle is in a Symfony project.
-if (is_file($symfonyAutoloader)) {
+if (true === is_file($symfonyAutoloader)) {
 	include $symfonyAutoloader;
-} else if (is_file($composerAutoloader)) {
+} else if (true === is_file($composerAutoloader)) {
 	include $composerAutoloader;
 } else {
 	die("Unable to find autoload.php. Please run:
