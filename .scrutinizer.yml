@@ -6,6 +6,7 @@ checks:
 
 filter:
     excluded_paths:
+        - Resources/public/*
         - Tests/*
         - vendor/*
 
