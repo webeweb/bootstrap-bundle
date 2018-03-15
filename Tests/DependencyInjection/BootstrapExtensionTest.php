@@ -33,6 +33,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigEx
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension;
@@ -96,6 +97,9 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
 
         // Form
         $this->assertInstanceOf(InputMaskFormTwigExtension::class, $container->get(InputMaskFormTwigExtension::SERVICE_NAME));
+
+        // Image
+        $this->assertInstanceOf(Base64ImageTwigExtension::class, $container->get(Base64ImageTwigExtension::SERVICE_NAME));
 
         // Typography
         $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $container->get(DeletedTypographyTwigExtension::SERVICE_NAME));
