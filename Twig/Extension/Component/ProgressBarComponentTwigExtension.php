@@ -31,6 +31,13 @@ final class ProgressBarComponentTwigExtension extends AbstractComponentTwigExten
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.progressbar";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap basic progress bar.
      *
      * @param array $args The arguments.

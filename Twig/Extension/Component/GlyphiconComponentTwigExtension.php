@@ -31,6 +31,13 @@ final class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtensi
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap glyphicon.
      *
      * @param array $args The arguments.

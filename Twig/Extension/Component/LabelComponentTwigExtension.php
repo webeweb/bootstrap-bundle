@@ -31,6 +31,13 @@ final class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.label";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap label "Danger".
      *
      * @param array $args The arguments.

@@ -33,6 +33,13 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.button";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap button "Danger".
      *
      * @param array $args The arguments.

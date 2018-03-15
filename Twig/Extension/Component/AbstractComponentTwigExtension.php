@@ -24,6 +24,13 @@ use WBW\Library\Core\Utility\StringUtility;
 abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
+     * Constructor.
+     */
+    protected function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap alert.
      *
      * @param string $content The alert content.

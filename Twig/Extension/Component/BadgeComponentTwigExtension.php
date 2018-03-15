@@ -31,6 +31,13 @@ final class BadgeComponentTwigExtension extends AbstractComponentTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.badge";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap badge.
      *
      * @param array $args The arguments.

@@ -31,6 +31,13 @@ final class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.alert";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap alert "Danger".
      *
      * @param array $args The arguments.
