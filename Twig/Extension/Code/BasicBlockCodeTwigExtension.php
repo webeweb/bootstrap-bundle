@@ -31,6 +31,13 @@ final class BasicBlockCodeTwigExtension extends AbstractCodeTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.basicblock";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap basic block.
      *
      * @param array $args The arguments.

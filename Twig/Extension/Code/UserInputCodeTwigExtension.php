@@ -31,6 +31,13 @@ final class UserInputCodeTwigExtension extends AbstractCodeTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.userinput";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap user input.
      *
      * @param array $args The arguments.

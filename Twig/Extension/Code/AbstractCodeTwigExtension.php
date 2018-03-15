@@ -23,6 +23,13 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
 abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
+     * Constructor.
+     */
+    protected function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap basic block.
      *
      * @param string $content The basic block content.

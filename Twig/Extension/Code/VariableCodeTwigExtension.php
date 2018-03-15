@@ -31,6 +31,13 @@ final class VariableCodeTwigExtension extends AbstractCodeTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.variable";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap variable.
      *
      * @param array $args The arguments.

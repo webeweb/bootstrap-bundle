@@ -31,6 +31,13 @@ final class InlineCodeTwigExtension extends AbstractCodeTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.inline";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap inline.
      *
      * @param array $args The arguments.
