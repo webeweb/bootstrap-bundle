@@ -31,6 +31,13 @@ final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtensi
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.heading";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Boostrap heading 1.
      *
      * @param array $args The arguments.

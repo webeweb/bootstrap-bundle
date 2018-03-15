@@ -31,6 +31,13 @@ final class MarkedTypographyTwigExtension extends AbstractTypographyTwigExtensio
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.marked";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap marked text.
      *
      * @param array $args The arguments.

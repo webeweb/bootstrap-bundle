@@ -31,6 +31,13 @@ final class SmallTypographyTwigExtension extends AbstractTypographyTwigExtension
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.small";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap small text.
      *
      * @param array $args The arguments.

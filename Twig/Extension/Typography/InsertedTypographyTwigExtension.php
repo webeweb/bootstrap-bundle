@@ -31,6 +31,13 @@ final class InsertedTypographyTwigExtension extends AbstractTypographyTwigExtens
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.inserted";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap inserted text.
      *
      * @param array $args The arguments.

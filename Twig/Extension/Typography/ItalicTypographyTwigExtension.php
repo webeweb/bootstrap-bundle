@@ -31,6 +31,13 @@ final class ItalicTypographyTwigExtension extends AbstractTypographyTwigExtensio
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.italic";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap italic text.
      *
      * @param array $args The arguments.

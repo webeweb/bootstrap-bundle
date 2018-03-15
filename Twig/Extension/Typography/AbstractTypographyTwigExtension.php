@@ -24,6 +24,13 @@ use WBW\Library\Core\Utility\StringUtility;
 abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
+     * Constructor.
+     */
+    protected function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap deleted text.
      *
      * @param string $content The deleted text content.

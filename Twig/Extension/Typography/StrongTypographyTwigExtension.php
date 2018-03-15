@@ -31,6 +31,13 @@ final class StrongTypographyTwigExtension extends AbstractTypographyTwigExtensio
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.strong";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap strong text.
      *
      * @param array $args The arguments.

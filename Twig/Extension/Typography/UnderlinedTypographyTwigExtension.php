@@ -31,6 +31,13 @@ final class UnderlinedTypographyTwigExtension extends AbstractTypographyTwigExte
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.underlined";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap underlined text.
      *
      * @param array $args The arguments.

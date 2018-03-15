@@ -31,6 +31,13 @@ final class DeletedTypographyTwigExtension extends AbstractTypographyTwigExtensi
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.deleted";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap deleted text.
      *
      * @param array $args The arguments.
