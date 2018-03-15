@@ -51,7 +51,7 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
         $uri = ArrayUtility::get($args, "src");
 
         // Initialize the src.
-        $src = [];
+        $src = null;
         if (null !== $uri) {
             $src = (new DataUriNormalizer())->normalize(new SplFileObject($uri));
         }
