@@ -74,10 +74,13 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
      *
      * @param string $bootstrapButton The bootstrap button.
      * @param string $href The href attribute.
+     * @param string $target The target attribute.
      * @return string Returns the Bootstrap button transformed into an anchor.
      */
-    public function bootstrapButtonLinkFilter($bootstrapButton, $href = self::DEFAULT_HREF) {
-        return StringUtility::replace($bootstrapButton, ["<button", "type=\"button\"", "</button>"], ["<a", "href=\"" . $href . "\"", "</a>"]);
+    public function bootstrapButtonLinkFilter($bootstrapButton, $href = self::DEFAULT_HREF, $target = null) {
+        $searches = ["<button", "type=\"button\"", "</button>"];
+        $replaces = ["<a", "href=\"" . $href . "\"" . (null !== $target ? " target=\"" . $target . "\"" : ""), "</a>"];
+        return StringUtility::replace($bootstrapButton, $searches, $replaces);
     }
 
     /**
