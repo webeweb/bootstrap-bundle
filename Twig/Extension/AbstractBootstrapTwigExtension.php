@@ -39,6 +39,13 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
     const DEFAULT_HREF = NavigationInterface::DEFAULT_HREF;
 
     /**
+     * Constructor.
+     */
+    protected function __construct() {
+        // NOTHING TO DO.
+    }
+
+    /**
      * Displays a Bootstrap simple tag.
      *
      * @param string $name The tag name.
