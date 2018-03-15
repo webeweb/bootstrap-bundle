@@ -28,7 +28,7 @@ final class MarkedTypographyTwigExtension extends AbstractTypographyTwigExtensio
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.marked";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.marked';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class MarkedTypographyTwigExtension extends AbstractTypographyTwigExtensio
      * @return string Returns the Bootstrap marked text.
      */
     public function bootstrapMarkedFunction(array $args = []) {
-        return $this->bootstrapMarked(ArrayUtility::get($args, "content"));
+        return $this->bootstrapMarked(ArrayUtility::get($args, 'content'));
     }
 
     /**
@@ -54,7 +54,7 @@ final class MarkedTypographyTwigExtension extends AbstractTypographyTwigExtensio
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction('bootstrapMarked', [$this, 'bootstrapMarkedFunction'], ['is_safe' => ['html']]),
         ];
     }
 

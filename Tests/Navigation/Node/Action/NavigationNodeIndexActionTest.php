@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\NavigationNodeIndexAction;
 
 /**
- * Navigation node "Index" action test.
+ * Navigation node 'Index' action test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
@@ -30,11 +30,11 @@ final class NavigationNodeIndexActionTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeIndexAction("route");
+        $obj = new NavigationNodeIndexAction('route');
 
-        $this->assertEquals("navigation.node.action.index", $obj->getId());
-        $this->assertEquals("list", $obj->getIcon());
-        $this->assertEquals("route", $obj->getRoute());
+        $this->assertEquals('navigation.node.action.index', $obj->getId());
+        $this->assertEquals('list', $obj->getIcon());
+        $this->assertEquals('route', $obj->getRoute());
     }
 
 }

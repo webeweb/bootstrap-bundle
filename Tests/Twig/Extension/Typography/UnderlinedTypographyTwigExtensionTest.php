@@ -39,9 +39,9 @@ final class UnderlinedTypographyTwigExtensionTest extends PHPUnit_Framework_Test
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapUnderlined", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapUnderlinedFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapUnderlined', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapUnderlinedFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class UnderlinedTypographyTwigExtensionTest extends PHPUnit_Framework_Test
         $obj = new UnderlinedTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = "<u></u>";
+        $res0 = '<u></u>';
         $this->assertEquals($res0, $obj->bootstrapUnderlinedFunction($arg0));
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<u>content</u>";
+        $arg9 = ['content' => 'content'];
+        $res9 = '<u>content</u>';
         $this->assertEquals($res9, $obj->bootstrapUnderlinedFunction($arg9));
     }
 

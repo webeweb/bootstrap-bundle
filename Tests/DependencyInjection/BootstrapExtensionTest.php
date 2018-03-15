@@ -67,10 +67,10 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
         $tokenStorage    = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
 
         // We set a container builder with only the necessary.
-        $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-        $container->set("kernel", $kernel);
-        $container->set("security.token_storage", $tokenStorage);
-        $container->set("twig", $twigEnvironment);
+        $container = new ContainerBuilder(new ParameterBag(['kernel.environment' => 'dev']));
+        $container->set('kernel', $kernel);
+        $container->set('security.token_storage', $tokenStorage);
+        $container->set('twig', $twigEnvironment);
 
         $obj = new BootstrapExtension();
 

@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeDashboard;
 
 /**
- * Navigation node "Dashboard" test.
+ * Navigation node 'Dashboard' test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
@@ -30,11 +30,11 @@ final class NavigationNodeDashboardTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeDashboard("route");
+        $obj = new NavigationNodeDashboard('route');
 
-        $this->assertEquals("navigation.node.dashboard", $obj->getId());
-        $this->assertEquals("dashboard", $obj->getIcon());
-        $this->assertEquals("route", $obj->getRoute());
+        $this->assertEquals('navigation.node.dashboard', $obj->getId());
+        $this->assertEquals('dashboard', $obj->getIcon());
+        $this->assertEquals('route', $obj->getRoute());
     }
 
 }

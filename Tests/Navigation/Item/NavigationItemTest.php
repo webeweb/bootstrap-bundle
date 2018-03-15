@@ -32,7 +32,7 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationItem("id");
+        $obj = new NavigationItem('id');
 
         $this->assertEquals(NavigationInterface::DEFAULT_HREF, $obj->getHref());
         $this->assertEquals(null, $obj->getIcon());
@@ -45,10 +45,10 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
      */
     public function testSetHref() {
 
-        $obj = new NavigationItem("id");
-        $obj->setHref("href");
+        $obj = new NavigationItem('id');
+        $obj->setHref('href');
 
-        $this->assertEquals("href", $obj->getHref());
+        $this->assertEquals('href', $obj->getHref());
     }
 
     /**
@@ -58,10 +58,10 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
      */
     public function testSetIcon() {
 
-        $obj = new NavigationItem("id");
-        $obj->setIcon("icon");
+        $obj = new NavigationItem('id');
+        $obj->setIcon('icon');
 
-        $this->assertEquals("icon", $obj->getIcon());
+        $this->assertEquals('icon', $obj->getIcon());
     }
 
     /**
@@ -71,22 +71,22 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new NavigationItem("id");
+        $obj = new NavigationItem('id');
 
-        $res1 = ["span" => "id", "href" => "javascript: void(0);"];
+        $res1 = ['span' => 'id', 'href' => 'javascript: void(0);'];
         $this->assertEquals($res1, $obj->toArray());
 
-        $obj->setHref("href");
-        $res2 = ["span" => "id", "href" => "href"];
+        $obj->setHref('href');
+        $res2 = ['span' => 'id', 'href' => 'href'];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setIcon("icon");
-        $res3 = ["span" => "id", "href" => "href", "icon" => "icon"];
+        $obj->setIcon('icon');
+        $res3 = ['span' => 'id', 'href' => 'href', 'icon' => 'icon'];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->addNode(new NavigationNode("id1"));
-        $obj->addNode(new NavigationItem("id2"));
-        $res4 = ["span" => "id", "href" => "href", "icon" => "icon", "subitems" => [["span" => "id2", "href" => "javascript: void(0);"]]];
+        $obj->addNode(new NavigationNode('id1'));
+        $obj->addNode(new NavigationItem('id2'));
+        $res4 = ['span' => 'id', 'href' => 'href', 'icon' => 'icon', 'subitems' => [['span' => 'id2', 'href' => 'javascript: void(0);']]];
         $this->assertEquals($res4, $obj->toArray());
     }
 

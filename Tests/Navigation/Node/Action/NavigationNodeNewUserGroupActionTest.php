@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\NavigationNodeNewUserGroupAction;
 
 /**
- * Navigation node "New user group" action test.
+ * Navigation node 'New user group' action test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
@@ -30,11 +30,11 @@ final class NavigationNodeNewUserGroupActionTest extends PHPUnit_Framework_TestC
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeNewUserGroupAction("route");
+        $obj = new NavigationNodeNewUserGroupAction('route');
 
-        $this->assertEquals("navigation.node.action.new", $obj->getId());
-        $this->assertEquals("plus", $obj->getIcon());
-        $this->assertEquals("route", $obj->getRoute());
+        $this->assertEquals('navigation.node.action.new', $obj->getId());
+        $this->assertEquals('plus', $obj->getIcon());
+        $this->assertEquals('route', $obj->getRoute());
     }
 
 }

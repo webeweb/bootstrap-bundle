@@ -103,27 +103,27 @@ final class NavigationItem extends AbstractNode implements NavigationInterface {
 
         // Check the href.
         if (null !== $this->href) {
-            $output["href"] = $this->href;
+            $output['href'] = $this->href;
         }
 
         // Check the icon.
         if (null !== $this->icon) {
-            $output["icon"] = $this->icon;
+            $output['icon'] = $this->icon;
         }
 
         // Check the span.
         if (null !== $this->getId()) {
-            $output["span"] = $this->getId();
+            $output['span'] = $this->getId();
         }
 
         // Check the nodes.
         if (0 < $this->size()) {
-            $output["subitems"] = [];
+            $output['subitems'] = [];
             foreach ($this->getNodes() as $current) {
                 if (false === ($current instanceof NavigationItem)) {
                     continue;
                 }
-                $output["subitems"][] = $current->toArray();
+                $output['subitems'][] = $current->toArray();
             }
         }
 

@@ -28,7 +28,7 @@ final class SmallTypographyTwigExtension extends AbstractTypographyTwigExtension
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.small";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.small';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class SmallTypographyTwigExtension extends AbstractTypographyTwigExtension
      * @return string Returns the Bootstrap small text.
      */
     public function bootstrapSmallFunction(array $args = []) {
-        return $this->bootstrapSmall(ArrayUtility::get($args, "content"));
+        return $this->bootstrapSmall(ArrayUtility::get($args, 'content'));
     }
 
     /**
@@ -54,7 +54,7 @@ final class SmallTypographyTwigExtension extends AbstractTypographyTwigExtension
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction('bootstrapSmall', [$this, 'bootstrapSmallFunction'], ['is_safe' => ['html']]),
         ];
     }
 

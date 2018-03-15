@@ -34,11 +34,11 @@ final class NavigationTreeTest extends PHPUnit_Framework_TestCase {
 
         $obj = new NavigationTree();
 
-        $obj->addNode(new NavigationNode("main level"));
+        $obj->addNode(new NavigationNode('main level'));
         $obj->getLastNode()->setActive(true);
-        $obj->getLastNode()->addNode(new NavigationNode("sub-level1"));
+        $obj->getLastNode()->addNode(new NavigationNode('sub-level1'));
         $obj->getLastNode()->getLastNode()->setActive(true);
-        $obj->getLastNode()->addNode(new NavigationItem("sub-level2"));
+        $obj->getLastNode()->addNode(new NavigationItem('sub-level2'));
 
         $res = $obj->getBreadcrumbs();
         $this->assertCount(2, $res);

@@ -28,7 +28,7 @@ final class DeletedTypographyTwigExtension extends AbstractTypographyTwigExtensi
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.deleted";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.deleted';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class DeletedTypographyTwigExtension extends AbstractTypographyTwigExtensi
      * @return string Returns the Bootstrap deleted text.
      */
     public function bootstrapDeletedFunction(array $args = []) {
-        return $this->bootstrapDeleted(ArrayUtility::get($args, "content"));
+        return $this->bootstrapDeleted(ArrayUtility::get($args, 'content'));
     }
 
     /**
@@ -54,7 +54,7 @@ final class DeletedTypographyTwigExtension extends AbstractTypographyTwigExtensi
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction('bootstrapDeleted', [$this, 'bootstrapDeletedFunction'], ['is_safe' => ['html']]),
         ];
     }
 

@@ -28,7 +28,7 @@ final class UserInputCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.userinput";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.code.userinput';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class UserInputCodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap user input.
      */
     public function bootstrapUserInputFunction(array $args = []) {
-        return $this->bootstrapUserInput(ArrayUtility::get($args, "content"));
+        return $this->bootstrapUserInput(ArrayUtility::get($args, 'content'));
     }
 
     /**
@@ -54,7 +54,7 @@ final class UserInputCodeTwigExtension extends AbstractCodeTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapUserInput", [$this, "bootstrapUserInputFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction('bootstrapUserInput', [$this, 'bootstrapUserInputFunction'], ['is_safe' => ['html']]),
         ];
     }
 

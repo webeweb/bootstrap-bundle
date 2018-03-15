@@ -36,7 +36,7 @@ final class ProvidersManager {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.manager";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.provider.manager';
 
     /**
      * Application provider.
@@ -204,15 +204,15 @@ final class ProvidersManager {
      * @return void
      */
     public function register() {
-        $this->twig->addGlobal("ApplicationProvider", $this->applicationProvider);
-        $this->twig->addGlobal("BreadcrumbsProvider", $this->breadcrumbsProvider);
-        $this->twig->addGlobal("DropDownHookProvider", $this->dropDownHookProvider);
-        $this->twig->addGlobal("DropDownNotificationsProvider", $this->dropDownNotificationsProvider);
-        $this->twig->addGlobal("DropDownTasksProvider", $this->dropDownTasksProvider);
-        $this->twig->addGlobal("FooterProvider", $this->footerProvider);
-        $this->twig->addGlobal("NavigationProvider", $this->navigationProvider);
-        $this->twig->addGlobal("SearchProvider", $this->searchProvider);
-        $this->twig->addGlobal("UserInfoProvider", $this->userInfoProvider);
+        $this->twig->addGlobal('ApplicationProvider', $this->applicationProvider);
+        $this->twig->addGlobal('BreadcrumbsProvider', $this->breadcrumbsProvider);
+        $this->twig->addGlobal('DropDownHookProvider', $this->dropDownHookProvider);
+        $this->twig->addGlobal('DropDownNotificationsProvider', $this->dropDownNotificationsProvider);
+        $this->twig->addGlobal('DropDownTasksProvider', $this->dropDownTasksProvider);
+        $this->twig->addGlobal('FooterProvider', $this->footerProvider);
+        $this->twig->addGlobal('NavigationProvider', $this->navigationProvider);
+        $this->twig->addGlobal('SearchProvider', $this->searchProvider);
+        $this->twig->addGlobal('UserInfoProvider', $this->userInfoProvider);
     }
 
     /**

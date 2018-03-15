@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeUser;
 
 /**
- * Navigation node "User" test.
+ * Navigation node 'User' test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
@@ -30,11 +30,11 @@ final class NavigationNodeUserTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeUser("route");
+        $obj = new NavigationNodeUser('route');
 
-        $this->assertEquals("navigation.node.user", $obj->getId());
-        $this->assertEquals("user", $obj->getIcon());
-        $this->assertEquals("route", $obj->getRoute());
+        $this->assertEquals('navigation.node.user', $obj->getId());
+        $this->assertEquals('user', $obj->getIcon());
+        $this->assertEquals('route', $obj->getRoute());
     }
 
 }

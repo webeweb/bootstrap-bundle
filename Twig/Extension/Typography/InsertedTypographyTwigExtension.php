@@ -28,7 +28,7 @@ final class InsertedTypographyTwigExtension extends AbstractTypographyTwigExtens
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.inserted";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.inserted';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class InsertedTypographyTwigExtension extends AbstractTypographyTwigExtens
      * @return string Returns the Bootstrap inserted text.
      */
     public function bootstrapInsertedFunction(array $args = []) {
-        return $this->bootstrapInserted(ArrayUtility::get($args, "content"));
+        return $this->bootstrapInserted(ArrayUtility::get($args, 'content'));
     }
 
     /**
@@ -54,7 +54,7 @@ final class InsertedTypographyTwigExtension extends AbstractTypographyTwigExtens
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction('bootstrapInserted', [$this, 'bootstrapInsertedFunction'], ['is_safe' => ['html']]),
         ];
     }
 

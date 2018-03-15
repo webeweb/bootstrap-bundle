@@ -37,7 +37,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap deleted text.
      */
     final protected function bootstrapDeleted($content) {
-        return $this->bootstrapSimpleTag("del", $content);
+        return $this->bootstrapSimpleTag('del', $content);
     }
 
     /**
@@ -52,20 +52,20 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     final protected function bootstrapHeading($size, $content, $description, $class) {
 
         // Initialize the template.
-        $template = "<h%size%%attributes%>%innerHTML%</h%size%>";
+        $template = '<h%size%%attributes%>%innerHTML%</h%size%>';
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes[" class"] = [$class];
+        $attributes[' class'] = [$class];
 
         // Initialize the parameters.
-        $secondary = null !== $description ? " <small>" . $description . "</small>" : "";
+        $secondary = null !== $description ? ' <small>' . $description . '</small>' : '';
         $innerSize = true === in_array($size, [1, 2, 3, 4, 5, 6]) ? $size : 1;
-        $innerHTML = (null !== $content ? $content : "") . $secondary;
+        $innerHTML = (null !== $content ? $content : '') . $secondary;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%size%", "%attributes%", "%innerHTML%"], [$innerSize, StringUtility::parseArray($attributes), trim($innerHTML)]);
+        return StringUtility::replace($template, ['%size%', '%attributes%', '%innerHTML%'], [$innerSize, StringUtility::parseArray($attributes), trim($innerHTML)]);
     }
 
     /**
@@ -75,7 +75,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap inserted text.
      */
     final protected function bootstrapInserted($content) {
-        return $this->bootstrapSimpleTag("ins", $content);
+        return $this->bootstrapSimpleTag('ins', $content);
     }
 
     /**
@@ -86,7 +86,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap italic text.
      */
     final protected function bootstrapItalic($content) {
-        return $this->bootstrapSimpleTag("em", $content);
+        return $this->bootstrapSimpleTag('em', $content);
     }
 
     /**
@@ -97,7 +97,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap marked text.
      */
     final protected function bootstrapMarked($content) {
-        return $this->bootstrapSimpleTag("mark", $content);
+        return $this->bootstrapSimpleTag('mark', $content);
     }
 
     /**
@@ -107,7 +107,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap strike through text.
      */
     final protected function bootstrapStrikeThrough($content) {
-        return $this->bootstrapSimpleTag("s", $content);
+        return $this->bootstrapSimpleTag('s', $content);
     }
 
     /**
@@ -117,7 +117,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap small text.
      */
     final protected function bootstrapSmall($content) {
-        return $this->bootstrapSimpleTag("small", $content);
+        return $this->bootstrapSimpleTag('small', $content);
     }
 
     /**
@@ -127,7 +127,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap bold text.
      */
     final protected function bootstrapStrong($content) {
-        return $this->bootstrapSimpleTag("strong", $content);
+        return $this->bootstrapSimpleTag('strong', $content);
     }
 
     /**
@@ -137,7 +137,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap underlined text.
      */
     final protected function bootstrapUnderlined($content) {
-        return $this->bootstrapSimpleTag("u", $content);
+        return $this->bootstrapSimpleTag('u', $content);
     }
 
 }

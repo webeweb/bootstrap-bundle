@@ -39,34 +39,34 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(6, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapLabelDanger", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelDangerFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapLabelDanger', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapLabelDangerFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapLabelDefault", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelDefaultFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapLabelDefault', $res[1]->getName());
+        $this->assertEquals([$obj, 'bootstrapLabelDefaultFunction'], $res[1]->getCallable());
+        $this->assertEquals(['html'], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapLabelInfo", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelInfoFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapLabelInfo', $res[2]->getName());
+        $this->assertEquals([$obj, 'bootstrapLabelInfoFunction'], $res[2]->getCallable());
+        $this->assertEquals(['html'], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("bootstrapLabelPrimary", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelPrimaryFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapLabelPrimary', $res[3]->getName());
+        $this->assertEquals([$obj, 'bootstrapLabelPrimaryFunction'], $res[3]->getCallable());
+        $this->assertEquals(['html'], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("bootstrapLabelSuccess", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelSuccessFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapLabelSuccess', $res[4]->getName());
+        $this->assertEquals([$obj, 'bootstrapLabelSuccessFunction'], $res[4]->getCallable());
+        $this->assertEquals(['html'], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("bootstrapLabelWarning", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelWarningFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapLabelWarning', $res[5]->getName());
+        $this->assertEquals([$obj, 'bootstrapLabelWarningFunction'], $res[5]->getCallable());
+        $this->assertEquals(['html'], $res[5]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -83,7 +83,7 @@ final class LabelComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $res0 = '<span class="label label-danger"></span>';
         $this->assertEquals($res0, $obj->bootstrapLabelDangerFunction($arg0));
 
-        $arg9 = ["content" => "content"];
+        $arg9 = ['content' => 'content'];
         $res9 = '<span class="label label-danger">content</span>';
         $this->assertEquals($res9, $obj->bootstrapLabelDangerFunction($arg9));
     }

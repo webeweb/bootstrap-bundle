@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\BreadcrumbNodeEditAction;
 
 /**
- * Breadcrumb node "Edit" action test.
+ * Breadcrumb node 'Edit' action test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
@@ -30,11 +30,11 @@ final class BreadcrumbNodeEditActionTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new BreadcrumbNodeEditAction("route");
+        $obj = new BreadcrumbNodeEditAction('route');
 
-        $this->assertEquals("navigation.node.action.edit", $obj->getId());
-        $this->assertEquals("pencil", $obj->getIcon());
-        $this->assertEquals("route", $obj->getRoute());
+        $this->assertEquals('navigation.node.action.edit', $obj->getId());
+        $this->assertEquals('pencil', $obj->getIcon());
+        $this->assertEquals('route', $obj->getRoute());
     }
 
 }

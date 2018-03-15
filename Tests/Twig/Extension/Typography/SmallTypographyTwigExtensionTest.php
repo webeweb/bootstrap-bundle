@@ -39,9 +39,9 @@ final class SmallTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapSmall", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapSmallFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapSmall', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapSmallFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class SmallTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new SmallTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = "<small></small>";
+        $res0 = '<small></small>';
         $this->assertEquals($res0, $obj->bootstrapSmallFunction($arg0));
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<small>content</small>";
+        $arg9 = ['content' => 'content'];
+        $res9 = '<small>content</small>';
         $this->assertEquals($res9, $obj->bootstrapSmallFunction($arg9));
     }
 

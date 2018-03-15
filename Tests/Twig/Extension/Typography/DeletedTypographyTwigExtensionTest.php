@@ -39,9 +39,9 @@ final class DeletedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapDeleted", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapDeletedFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapDeleted', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapDeletedFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class DeletedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCas
         $obj = new DeletedTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = "<del></del>";
+        $res0 = '<del></del>';
         $this->assertEquals($res0, $obj->bootstrapDeletedFunction($arg0));
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<del>content</del>";
+        $arg9 = ['content' => 'content'];
+        $res9 = '<del>content</del>';
         $this->assertEquals($res9, $obj->bootstrapDeletedFunction($arg9));
     }
 

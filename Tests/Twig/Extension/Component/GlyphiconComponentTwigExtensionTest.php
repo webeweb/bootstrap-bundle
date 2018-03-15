@@ -39,9 +39,9 @@ final class GlyphiconComponentTwigExtensionTest extends PHPUnit_Framework_TestCa
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapGlyphicon", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapGlyphicon', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapGlyphiconFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -58,7 +58,7 @@ final class GlyphiconComponentTwigExtensionTest extends PHPUnit_Framework_TestCa
         $res0 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
         $this->assertEquals($res0, $obj->bootstrapGlyphiconFunction($arg0));
 
-        $arg9 = ["name" => "asterisk"];
+        $arg9 = ['name' => 'asterisk'];
         $res9 = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
         $this->assertEquals($res9, $obj->bootstrapGlyphiconFunction($arg9));
     }

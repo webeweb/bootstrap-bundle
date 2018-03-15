@@ -39,9 +39,9 @@ final class VariableCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapVariable", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapVariableFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapVariable', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapVariableFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class VariableCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new VariableCodeTwigExtension();
 
         $arg0 = [];
-        $res0 = "<var></var>";
+        $res0 = '<var></var>';
         $this->assertEquals($res0, $obj->bootstrapVariableFunction($arg0));
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<var>content</var>";
+        $arg9 = ['content' => 'content'];
+        $res9 = '<var>content</var>';
         $this->assertEquals($res9, $obj->bootstrapVariableFunction($arg9));
     }
 

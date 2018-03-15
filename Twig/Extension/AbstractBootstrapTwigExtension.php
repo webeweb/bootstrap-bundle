@@ -29,7 +29,7 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
      *
      * @var string
      */
-    const DEFAULT_CONTENT = "&nbsp;";
+    const DEFAULT_CONTENT = '&nbsp;';
 
     /**
      * Default href.
@@ -55,13 +55,13 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
     final protected function bootstrapSimpleTag($name, $content) {
 
         // Initialize the template.
-        $template = "<" . $name . ">%innerHTML%</" . $name . ">";
+        $template = '<' . $name . '>%innerHTML%</' . $name . '>';
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = null !== $content ? $content : '';
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+        return StringUtility::replace($template, ['%innerHTML%'], [$innerHTML]);
     }
 
 }

@@ -39,9 +39,9 @@ final class UserInputCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapUserInput", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapUserInputFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapUserInput', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapUserInputFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class UserInputCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new UserInputCodeTwigExtension();
 
         $arg0 = [];
-        $res0 = "<kbd></kbd>";
+        $res0 = '<kbd></kbd>';
         $this->assertEquals($res0, $obj->bootstrapUserInputFunction($arg0));
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<kbd>content</kbd>";
+        $arg9 = ['content' => 'content'];
+        $res9 = '<kbd>content</kbd>';
         $this->assertEquals($res9, $obj->bootstrapUserInputFunction($arg9));
     }
 

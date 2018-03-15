@@ -41,21 +41,21 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     final protected function bootstrapAlert($content, $dismissible, $class) {
 
         // Initialize the templates.
-        $template = "<div %attributes%>%innerHTML%</div>";
+        $template = '<div %attributes%>%innerHTML%</div>';
         $button   = '<button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"]   = ["alert", $class];
-        $attributes["class"][] = true === $dismissible ? "alert-dismissible" : null;
-        $attributes["role"]    = ["alert"];
+        $attributes['class']   = ['alert', $class];
+        $attributes['class'][] = true === $dismissible ? 'alert-dismissible' : null;
+        $attributes['role']    = ['alert'];
 
         // Initialize the parameters.
-        $innerHTML = (true === $dismissible ? $button : "") . (null !== $content ? $content : "");
+        $innerHTML = (true === $dismissible ? $button : '') . (null !== $content ? $content : '');
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return StringUtility::replace($template, ['%attributes%', '%innerHTML%'], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
     /**
@@ -72,13 +72,13 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"] = ["badge"];
+        $attributes['class'] = ['badge'];
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = null !== $content ? $content : '';
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return StringUtility::replace($template, ['%attributes%', '%innerHTML%'], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
     /**
@@ -97,27 +97,27 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     final protected function bootstrapButton($content, $title, $size, $block, $active, $disable, $class, $icon) {
 
         // Initialize the template.
-        $template = "<button %attributes%>%glyphicon%%innerHTML%</button>";
+        $template = '<button %attributes%>%glyphicon%%innerHTML%</button>';
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"]          = ["btn", $class];
-        $attributes["class"][]        = true === $block ? "btn-block" : null;
-        $attributes["class"][]        = true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
-        $attributes["class"][]        = true === $active ? "active" : null;
-        $attributes["title"]          = $title;
-        $attributes["type"]           = "button";
-        $attributes["data-toggle"]    = null !== $title ? "tooltip" : null;
-        $attributes["data-placement"] = null !== $title ? "top" : null;
-        $attributes["disabled"]       = true === $disable ? "disabled" : null;
+        $attributes['class']          = ['btn', $class];
+        $attributes['class'][]        = true === $block ? 'btn-block' : null;
+        $attributes['class'][]        = true === in_array($size, ['lg', 'sm', 'xs']) ? 'btn-' . $size : null;
+        $attributes['class'][]        = true === $active ? 'active' : null;
+        $attributes['title']          = $title;
+        $attributes['type']           = 'button';
+        $attributes['data-toggle']    = null !== $title ? 'tooltip' : null;
+        $attributes['data-placement'] = null !== $title ? 'top' : null;
+        $attributes['disabled']       = true === $disable ? 'disabled' : null;
 
         // Handle the parameters.
-        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, null) : "";
-        $innerHTML = null !== $content ? ("" !== $glyphicon ? " " . $content : $content) : "";
+        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, null) : '';
+        $innerHTML = null !== $content ? ('' !== $glyphicon ? ' ' . $content : $content) : '';
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%glyphicon%", "%innerHTML%"], [StringUtility::parseArray($attributes), $glyphicon, $innerHTML]);
+        return StringUtility::replace($template, ['%attributes%', '%glyphicon%', '%innerHTML%'], [StringUtility::parseArray($attributes), $glyphicon, $innerHTML]);
     }
 
     /**
@@ -129,18 +129,18 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     final protected function bootstrapGlyphicon($name, $style) {
 
         // Initialize the template.
-        $template = "<span %attributes%></span>";
+        $template = '<span %attributes%></span>';
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"]       = ["glyphicon"];
-        $attributes["class"][]     = null !== $name ? "glyphicon-" . $name : null;
-        $attributes["aria-hidden"] = "true";
-        $attributes["style"]       = $style;
+        $attributes['class']       = ['glyphicon'];
+        $attributes['class'][]     = null !== $name ? 'glyphicon-' . $name : null;
+        $attributes['aria-hidden'] = 'true';
+        $attributes['style']       = $style;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return StringUtility::replace($template, ['%attributes%'], [StringUtility::parseArray($attributes)]);
     }
 
     /**
@@ -153,18 +153,18 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     final protected function bootstrapLabel($content, $class) {
 
         // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
+        $template = '<span %attributes%>%innerHTML%</span>';
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"] = ["label", $class];
+        $attributes['class'] = ['label', $class];
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = null !== $content ? $content : '';
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return StringUtility::replace($template, ['%attributes%', '%innerHTML%'], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
     /**
@@ -188,20 +188,20 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"]         = ["progress-bar", $class];
-        $attributes["class"][]       = true === $striped ? "progress-bar-striped" : null;
-        $attributes["class"][]       = true === $animated ? "active" : null;
-        $attributes["style"]         = "width: " . $value . "%;";
-        $attributes["role"]          = "progressbar";
-        $attributes["aria-valuenow"] = $value;
-        $attributes["aria-valuemin"] = $min;
-        $attributes["aria-valuemax"] = $max . "%";
+        $attributes['class']         = ['progress-bar', $class];
+        $attributes['class'][]       = true === $striped ? 'progress-bar-striped' : null;
+        $attributes['class'][]       = true === $animated ? 'active' : null;
+        $attributes['style']         = 'width: ' . $value . '%;';
+        $attributes['role']          = 'progressbar';
+        $attributes['aria-valuenow'] = $value;
+        $attributes['aria-valuemin'] = $min;
+        $attributes['aria-valuemax'] = $max . '%';
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : StringUtility::replace($span, ["%value%"], [$value]);
+        $innerHTML = null !== $content ? $content : StringUtility::replace($span, ['%value%'], [$value]);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return StringUtility::replace($template, ['%attributes%', '%innerHTML%'], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
 }

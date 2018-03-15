@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Node\Action;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
 
 /**
- * Breadcrumb node "Import" action.
+ * Breadcrumb node 'Import' action.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node\Action
@@ -28,7 +28,7 @@ final class BreadcrumbNodeImportAction extends BreadcrumbNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.action.import", "save", $route);
+        parent::__construct('navigation.node.action.import', 'save', $route);
     }
 
 }

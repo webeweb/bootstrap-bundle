@@ -39,9 +39,9 @@ final class InsertedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCa
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapInserted", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapInsertedFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals('bootstrapInserted', $res[0]->getName());
+        $this->assertEquals([$obj, 'bootstrapInsertedFunction'], $res[0]->getCallable());
+        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class InsertedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCa
         $obj = new InsertedTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = "<ins></ins>";
+        $res0 = '<ins></ins>';
         $this->assertEquals($res0, $obj->bootstrapInsertedFunction($arg0));
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<ins>content</ins>";
+        $arg9 = ['content' => 'content'];
+        $res9 = '<ins>content</ins>';
         $this->assertEquals($res9, $obj->bootstrapInsertedFunction($arg9));
     }
 

@@ -28,7 +28,7 @@ final class BadgeComponentTwigExtension extends AbstractComponentTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.badge";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.component.badge';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class BadgeComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap badge.
      */
     public function bootstrapBadgeFunction(array $args = []) {
-        return $this->bootstrapBadge(ArrayUtility::get($args, "content"));
+        return $this->bootstrapBadge(ArrayUtility::get($args, 'content'));
     }
 
     /**
@@ -54,7 +54,7 @@ final class BadgeComponentTwigExtension extends AbstractComponentTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction('bootstrapBadge', [$this, 'bootstrapBadgeFunction'], ['is_safe' => ['html']]),
         ];
     }
 

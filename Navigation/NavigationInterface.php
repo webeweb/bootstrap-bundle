@@ -24,6 +24,6 @@ interface NavigationInterface {
      *
      * @var string
      */
-    const DEFAULT_HREF = "javascript: void(0);";
+    const DEFAULT_HREF = 'javascript: void(0);';
 
 }

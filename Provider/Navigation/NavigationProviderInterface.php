@@ -26,7 +26,7 @@ interface NavigationProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.navigation";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.provider.navigation';
 
     /**
      * Get the template.

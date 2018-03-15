@@ -28,7 +28,7 @@ final class InlineCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.inline";
+    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.code.inline';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class InlineCodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap inline.
      */
     public function bootstrapInlineFunction(array $args = []) {
-        return $this->bootstrapInline(ArrayUtility::get($args, "content"));
+        return $this->bootstrapInline(ArrayUtility::get($args, 'content'));
     }
 
     /**
@@ -54,7 +54,7 @@ final class InlineCodeTwigExtension extends AbstractCodeTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapInline", [$this, "bootstrapInlineFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction('bootstrapInline', [$this, 'bootstrapInlineFunction'], ['is_safe' => ['html']]),
         ];
     }
 

@@ -28,7 +28,7 @@ final class NavigationTree extends AbstractNavigationNode {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct("tree");
+        parent::__construct('tree');
     }
 
     /**
