@@ -24,6 +24,13 @@ use WBW\Library\Core\Utility\StringUtility;
 abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
+     * Constructor.
+     */
+    protected function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a Bootstrap input mask.
      *
      * @param string $selector The input mask selector.

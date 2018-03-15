@@ -31,6 +31,13 @@ final class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.form.inputmask";
 
     /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
      * Displays a phone number input mask.
      *
      * @param array $args The arguments.
