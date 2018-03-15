@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Image;
 
 use SplFileObject;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\ArrayUtility;
@@ -40,6 +41,39 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
     }
 
     /**
+     * Encode an URI into base 64.
+     *
+     * @param string $uri The URI.
+     * @return string Returns the URI encoded into base 64.
+     */
+    private function base64Encode($uri) {
+
+        // Check the URI.
+        if (null === $uri) {
+            return null;
+        }
+
+        // Initialize a SPL file object.
+        $splFileObject = new SplFileObject($uri);
+
+        // Check the Kernel version.
+        if (30100 < Kernel::VERSION_ID) {
+
+            // Use a Data URI normalizer.
+            return (new DataUriNormalizer())->normalize($splFileObject);
+        }
+
+        // Read the SPL file object.
+        $data = "";
+        while (false === $splFileObject->eof()) {
+            $data .= $splFileObject->fgets();
+        }
+
+        // Encode into base 64.
+        return sprintf("data:%s;base64,%s", mime_content_type($uri), base64_encode($data));
+    }
+
+    /**
      * Displays a Bootstrap base 64 image.
      *
      * @param array $args The arguments.
@@ -47,14 +81,8 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
      */
     public function bootstrapBase64ImageFunction(array $args = []) {
 
-        // Initialize the URI.
-        $uri = ArrayUtility::get($args, "src");
-
         // Initialize the src.
-        $src = null;
-        if (null !== $uri) {
-            $src = (new DataUriNormalizer())->normalize(new SplFileObject($uri));
-        }
+        $src = $this->base64Encode(ArrayUtility::get($args, "src"));
 
         // Return the Bootstrap image.
         return $this->bootstrapImage($src, ArrayUtility::get($args, "alt"), ArrayUtility::get($args, "width"), ArrayUtility::get($args, "height"), ArrayUtility::get($args, "class"));
