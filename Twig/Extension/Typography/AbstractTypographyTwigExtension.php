@@ -79,7 +79,6 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     }
 
     /**
-      /**
      * Displays a Bootstrap italic text.
      *
      * @param string $content The italic text content.
@@ -90,7 +89,6 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     }
 
     /**
-      /**
      * Displays a Bootstrap marked text.
      *
      * @param string $content The marked text content.
