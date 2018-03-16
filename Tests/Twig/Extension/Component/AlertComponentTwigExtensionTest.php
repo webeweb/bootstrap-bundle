@@ -36,7 +36,7 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $res = $obj->getFunctions();
 
-        $this->assertCount(4, $res);
+        $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapAlertDanger", $res[0]->getName());
@@ -57,6 +57,11 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals("bootstrapAlertWarning", $res[3]->getName());
         $this->assertEquals([$obj, "bootstrapAlertWarningFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("bootstrapLinkAlert", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapLinkAlertFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -121,6 +126,33 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $arg = [];
         $res = '<div class="alert alert-warning" role="alert"></div>';
         $this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapLinkAlertFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapLinkAlertFunction() {
+
+        $obj = new AlertComponentTwigExtension();
+
+        $arg0 = [];
+        $res0 = '<a href="javascript: void(0);"></a>';
+        $this->assertEquals($res0, $obj->bootstrapLinkAlertFunction($arg0));
+
+        $arg1 = ["href" => "https://github.com/"];
+        $res1 = '<a href="https://github.com/"></a>';
+        $this->assertEquals($res1, $obj->bootstrapLinkAlertFunction($arg1));
+
+        $arg2 = ["content" => "content"];
+        $res2 = '<a href="javascript: void(0);">content</a>';
+        $this->assertEquals($res2, $obj->bootstrapLinkAlertFunction($arg2));
+
+        $arg9 = ["href" => "https://github.com/", "content" => "content"];
+        $res9 = '<a href="https://github.com/">content</a>';
+        $this->assertEquals($res9, $obj->bootstrapLinkAlertFunction($arg9));
     }
 
 }
