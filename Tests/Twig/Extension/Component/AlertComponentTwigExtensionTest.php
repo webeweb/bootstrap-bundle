@@ -139,7 +139,7 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new AlertComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<a href="javascript: void(0);"></a>';
+        $res0 = '<a href="javascript:void(0);"></a>';
         $this->assertEquals($res0, $obj->bootstrapLinkAlertFunction($arg0));
 
         $arg1 = ["href" => "https://github.com/"];
@@ -147,7 +147,7 @@ final class AlertComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($res1, $obj->bootstrapLinkAlertFunction($arg1));
 
         $arg2 = ["content" => "content"];
-        $res2 = '<a href="javascript: void(0);">content</a>';
+        $res2 = '<a href="javascript:void(0);">content</a>';
         $this->assertEquals($res2, $obj->bootstrapLinkAlertFunction($arg2));
 
         $arg9 = ["href" => "https://github.com/", "content" => "content"];

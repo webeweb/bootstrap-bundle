@@ -73,7 +73,7 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
 
         $obj = new NavigationItem("id");
 
-        $res1 = ["span" => "id", "href" => "javascript: void(0);"];
+        $res1 = ["span" => "id", "href" => "javascript:void(0);"];
         $this->assertEquals($res1, $obj->toArray());
 
         $obj->setHref("href");
@@ -86,7 +86,7 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
 
         $obj->addNode(new NavigationNode("id1"));
         $obj->addNode(new NavigationItem("id2"));
-        $res4 = ["span" => "id", "href" => "href", "icon" => "icon", "subitems" => [["span" => "id2", "href" => "javascript: void(0);"]]];
+        $res4 = ["span" => "id", "href" => "href", "icon" => "icon", "subitems" => [["span" => "id2", "href" => "javascript:void(0);"]]];
         $this->assertEquals($res4, $obj->toArray());
     }
 

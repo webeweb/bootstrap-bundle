@@ -186,7 +186,7 @@ final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase 
         $obj = new ButtonComponentTwigExtension();
 
         $arg0 = [];
-        $res0 = '<a class="btn btn-danger" href="javascript: void(0);"></a>';
+        $res0 = '<a class="btn btn-danger" href="javascript:void(0);"></a>';
         $this->assertEquals($res0, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg0)));
 
         $arg1 = [];
