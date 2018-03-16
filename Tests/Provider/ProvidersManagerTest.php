@@ -57,12 +57,12 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 
         $this->twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
         $this->twigEnvironment->expects($this->any())
-            ->method('addGlobal')
+            ->method("addGlobal")
             ->willReturnCallback(function($name, $value) {
                 $this->twigGlobals[$name] = $value;
             });
         $this->twigEnvironment->expects($this->any())
-            ->method('getGlobals')
+            ->method("getGlobals")
             ->willReturnCallback(function() {
                 return $this->twigGlobals;
             });
@@ -113,32 +113,32 @@ final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
 
         $this->assertCount(9, $res);
 
-        $this->assertArrayHasKey('ApplicationProvider', $res);
-        $this->assertInstanceOf(ApplicationProviderInterface::class, $res['ApplicationProvider']);
+        $this->assertArrayHasKey("ApplicationProvider", $res);
+        $this->assertInstanceOf(ApplicationProviderInterface::class, $res["ApplicationProvider"]);
 
-        $this->assertArrayHasKey('BreadcrumbsProvider', $res);
-        $this->assertInstanceOf(BreadcrumbsProviderInterface::class, $res['BreadcrumbsProvider']);
+        $this->assertArrayHasKey("BreadcrumbsProvider", $res);
+        $this->assertInstanceOf(BreadcrumbsProviderInterface::class, $res["BreadcrumbsProvider"]);
 
-        $this->assertArrayHasKey('DropDownHookProvider', $res);
-        $this->assertInstanceOf(DropDownHookProviderInterface::class, $res['DropDownHookProvider']);
+        $this->assertArrayHasKey("DropDownHookProvider", $res);
+        $this->assertInstanceOf(DropDownHookProviderInterface::class, $res["DropDownHookProvider"]);
 
-        $this->assertArrayHasKey('DropDownNotificationsProvider', $res);
-        $this->assertInstanceOf(DropDownNotificationsProviderInterface::class, $res['DropDownNotificationsProvider']);
+        $this->assertArrayHasKey("DropDownNotificationsProvider", $res);
+        $this->assertInstanceOf(DropDownNotificationsProviderInterface::class, $res["DropDownNotificationsProvider"]);
 
-        $this->assertArrayHasKey('DropDownTasksProvider', $res);
-        $this->assertInstanceOf(DropDownTasksProviderInterface::class, $res['DropDownTasksProvider']);
+        $this->assertArrayHasKey("DropDownTasksProvider", $res);
+        $this->assertInstanceOf(DropDownTasksProviderInterface::class, $res["DropDownTasksProvider"]);
 
-        $this->assertArrayHasKey('FooterProvider', $res);
-        $this->assertInstanceOf(FooterProviderInterface::class, $res['FooterProvider']);
+        $this->assertArrayHasKey("FooterProvider", $res);
+        $this->assertInstanceOf(FooterProviderInterface::class, $res["FooterProvider"]);
 
-        $this->assertArrayHasKey('NavigationProvider', $res);
-        $this->assertInstanceOf(NavigationProviderInterface::class, $res['NavigationProvider']);
+        $this->assertArrayHasKey("NavigationProvider", $res);
+        $this->assertInstanceOf(NavigationProviderInterface::class, $res["NavigationProvider"]);
 
-        $this->assertArrayHasKey('SearchProvider', $res);
-        $this->assertInstanceOf(SearchProviderInterface::class, $res['SearchProvider']);
+        $this->assertArrayHasKey("SearchProvider", $res);
+        $this->assertInstanceOf(SearchProviderInterface::class, $res["SearchProvider"]);
 
-        $this->assertArrayHasKey('UserInfoProvider', $res);
-        $this->assertInstanceOf(UserInfoProviderInterface::class, $res['UserInfoProvider']);
+        $this->assertArrayHasKey("UserInfoProvider", $res);
+        $this->assertInstanceOf(UserInfoProviderInterface::class, $res["UserInfoProvider"]);
     }
 
     /**

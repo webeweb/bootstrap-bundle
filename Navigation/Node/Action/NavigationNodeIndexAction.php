@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Node\Action;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
 
 /**
- * Navigation node 'Index' action.
+ * Navigation node "Index" action.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node\Action
@@ -28,7 +28,7 @@ final class NavigationNodeIndexAction extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct('navigation.node.action.index', 'list', $route);
+        parent::__construct("navigation.node.action.index", "list", $route);
     }
 
 }

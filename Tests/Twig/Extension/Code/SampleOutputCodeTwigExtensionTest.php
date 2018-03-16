@@ -39,9 +39,9 @@ final class SampleOutputCodeTwigExtensionTest extends PHPUnit_Framework_TestCase
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapSampleOutput', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapSampleOutputFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapSampleOutput", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapSampleOutputFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class SampleOutputCodeTwigExtensionTest extends PHPUnit_Framework_TestCase
         $obj = new SampleOutputCodeTwigExtension();
 
         $arg0 = [];
-        $res0 = '<samp></samp>';
+        $res0 = "<samp></samp>";
         $this->assertEquals($res0, $obj->bootstrapSampleOutputFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
-        $res9 = '<samp>content</samp>';
+        $arg9 = ["content" => "content"];
+        $res9 = "<samp>content</samp>";
         $this->assertEquals($res9, $obj->bootstrapSampleOutputFunction($arg9));
     }
 

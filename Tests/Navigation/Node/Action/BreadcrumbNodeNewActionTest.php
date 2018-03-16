@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\BreadcrumbNodeNewAction;
 
 /**
- * Breadcrumb node 'New' action test.
+ * Breadcrumb node "New" action test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
@@ -30,11 +30,11 @@ final class BreadcrumbNodeNewActionTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new BreadcrumbNodeNewAction('route');
+        $obj = new BreadcrumbNodeNewAction("route");
 
-        $this->assertEquals('navigation.node.action.new', $obj->getId());
-        $this->assertEquals('plus', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
+        $this->assertEquals("navigation.node.action.new", $obj->getId());
+        $this->assertEquals("plus", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
     }
 
 }

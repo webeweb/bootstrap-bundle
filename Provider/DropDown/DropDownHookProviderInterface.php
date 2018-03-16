@@ -24,7 +24,7 @@ interface DropDownHookProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.provider.dropdownhook';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.dropdownhook";
 
     /**
      * Get the items.

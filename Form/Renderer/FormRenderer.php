@@ -35,7 +35,7 @@ final class FormRenderer {
 
         // Check the option.
         if (null === $option) {
-            return null !== $translator ? $translator->trans('label.empty_selection') : 'Empty selection';
+            return null !== $translator ? $translator->trans("label.empty_selection") : "Empty selection";
         }
 
         // Check the implementation.
@@ -44,14 +44,14 @@ final class FormRenderer {
         } else if (true === ($option instanceof TranslatedChoiceRendererInterface)) {
             $output = $option->getTranslatedChoiceLabel($translator);
         } else {
-            $output = 'FormRendererInterface not implemented by this object';
+            $output = "FormRendererInterface not implemented by this object";
         }
 
         if (true === ($option instanceof AlphabeticalTreeSortInterface)) {
             $multiplier = AlphabeticalTreeSort::getLevel($option);
-            $nbsp       = html_entity_decode('&nbsp;');
-            $symbol     = html_entity_decode(0 === $multiplier ? '&#9472;' : '&#9492;');
-            $output     = implode('', [str_repeat($nbsp, $multiplier * 3), $symbol, $nbsp, $output]);
+            $nbsp       = html_entity_decode("&nbsp;");
+            $symbol     = html_entity_decode(0 === $multiplier ? "&#9472;" : "&#9492;");
+            $output     = implode("", [str_repeat($nbsp, $multiplier * 3), $symbol, $nbsp, $output]);
         }
 
         // Return the output.

@@ -28,7 +28,7 @@ final class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigE
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.strikethrough';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.strikethrough";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigE
      * @return string Returns the Bootstrap strike through text.
      */
     public function bootstrapStrikeThroughFunction(array $args = []) {
-        return $this->bootstrapStrikeThrough(ArrayUtility::get($args, 'content'));
+        return $this->bootstrapStrikeThrough(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigE
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapStrikeThrough', [$this, 'bootstrapStrikeThroughFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapStrikeThrough", [$this, "bootstrapStrikeThroughFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

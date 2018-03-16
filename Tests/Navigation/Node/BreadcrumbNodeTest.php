@@ -30,7 +30,7 @@ final class BreadcrumbNodeTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new BreadcrumbNode('id');
+        $obj = new BreadcrumbNode("id");
 
         $this->assertEquals(false, $obj->getActive());
         $this->assertEquals(false, $obj->getEnable());
@@ -41,15 +41,15 @@ final class BreadcrumbNodeTest extends PHPUnit_Framework_TestCase {
 
         $obj->setActive(true);
         $obj->setEnable(true);
-        $obj->setIcon('icon');
-        $obj->setRoute('route');
-        $obj->setUrl('url');
+        $obj->setIcon("icon");
+        $obj->setRoute("route");
+        $obj->setUrl("url");
 
         $this->assertEquals(true, $obj->getActive());
         $this->assertEquals(true, $obj->getEnable());
-        $this->assertEquals('icon', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
-        $this->assertEquals('url', $obj->getUrl());
+        $this->assertEquals("icon", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+        $this->assertEquals("url", $obj->getUrl());
     }
 
 }

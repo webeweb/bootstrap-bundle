@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Node;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
 
 /**
- * Navigation node 'Settings'.
+ * Navigation node "Settings".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node
@@ -28,7 +28,7 @@ final class NavigationNodeSettings extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct('navigation.node.settings', 'cog', $route);
+        parent::__construct("navigation.node.settings", "cog", $route);
     }
 
 }

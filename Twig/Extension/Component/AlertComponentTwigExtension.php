@@ -28,7 +28,7 @@ final class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.component.alert';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.alert";
 
     /**
      * Constructor.
@@ -38,43 +38,43 @@ final class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap alert 'Danger'.
+     * Displays a Bootstrap alert "Danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert 'Danger'.
+     * @return string Returns the Bootstrap alert "Danger".
      */
     public function bootstrapAlertDangerFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'dismissible'), 'alert-danger');
+        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-danger");
     }
 
     /**
-     * Displays a Bootstrap alert 'Info'.
+     * Displays a Bootstrap alert "Info".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert 'Info'.
+     * @return string Returns the Bootstrap alert "Info".
      */
     public function bootstrapAlertInfoFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'dismissible'), 'alert-info');
+        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-info");
     }
 
     /**
-     * Displays a Bootstrap alert 'Success'.
+     * Displays a Bootstrap alert "Success".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert 'Success'.
+     * @return string Returns the Bootstrap alert "Success".
      */
     public function bootstrapAlertSuccessFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'dismissible'), 'alert-success');
+        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-success");
     }
 
     /**
-     * Displays a Bootstrap alert 'Warning'.
+     * Displays a Bootstrap alert "Warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert 'Warning'.
+     * @return string Returns the Bootstrap alert "Warning".
      */
     public function bootstrapAlertWarningFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'dismissible'), 'alert-warning');
+        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-warning");
     }
 
     /**
@@ -84,10 +84,10 @@ final class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapAlertDanger', [$this, 'bootstrapAlertDangerFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapAlertInfo', [$this, 'bootstrapAlertInfoFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapAlertSuccess', [$this, 'bootstrapAlertSuccessFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapAlertWarning', [$this, 'bootstrapAlertWarningFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

@@ -27,7 +27,7 @@ final class FormFactory {
      *
      * @var string
      */
-    const DATE_FORMAT = 'dd/MM/yyyy';
+    const DATE_FORMAT = "dd/MM/yyyy";
 
     /**
      * Create a choice type.
@@ -36,7 +36,7 @@ final class FormFactory {
      * @return array Returns the choice type.
      */
     public static function createChoiceType(array $choices = []) {
-        return ['choices' => array_flip($choices)];
+        return ["choices" => array_flip($choices)];
     }
 
     /**
@@ -50,29 +50,29 @@ final class FormFactory {
     public static function createEntityType($class, array $choices = [], array $options = []) {
 
         // Check the options.
-        if (false === array_key_exists('empty', $options)) {
-            $options['empty'] = false;
+        if (false === array_key_exists("empty", $options)) {
+            $options["empty"] = false;
         }
-        if (false === array_key_exists('translator', $options)) {
-            $options['translator'] = null;
+        if (false === array_key_exists("translator", $options)) {
+            $options["translator"] = null;
         }
 
         // Initialize the output.
         $output = [
-            'class'        => $class,
-            'choices'      => [],
-            'choice_label' => function($entity) use($options) {
-                return FormRenderer::render($entity, $options['translator']);
+            "class"        => $class,
+            "choices"      => [],
+            "choice_label" => function($entity) use($options) {
+                return FormRenderer::render($entity, $options["translator"]);
             },
         ];
 
         // Add an empty choice.
-        if (true === $options['empty']) {
-            $output['choices'][] = null;
+        if (true === $options["empty"]) {
+            $output["choices"][] = null;
         }
 
         // Add all choices.
-        $output['choices'] = array_merge($output['choices'], $choices);
+        $output["choices"] = array_merge($output["choices"], $choices);
 
         // Return the output.
         return $output;

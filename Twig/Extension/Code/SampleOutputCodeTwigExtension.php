@@ -28,7 +28,7 @@ final class SampleOutputCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.code.sampleoutput';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.sampleoutput";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class SampleOutputCodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap inline.
      */
     public function bootstrapSampleOutputFunction(array $args = []) {
-        return $this->bootstrapSampleOutput(ArrayUtility::get($args, 'content'));
+        return $this->bootstrapSampleOutput(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class SampleOutputCodeTwigExtension extends AbstractCodeTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapSampleOutput', [$this, 'bootstrapSampleOutputFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapSampleOutput", [$this, "bootstrapSampleOutputFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

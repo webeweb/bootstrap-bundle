@@ -39,9 +39,9 @@ final class BasicBlockCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapBasicBlock', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapBasicBlockFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapBasicBlock", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapBasicBlockFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class BasicBlockCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new BasicBlockCodeTwigExtension();
 
         $arg0 = [];
-        $res0 = '<pre></pre>';
+        $res0 = "<pre></pre>";
         $this->assertEquals($res0, $obj->bootstrapBasicBlockFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
-        $res9 = '<pre>content</pre>';
+        $arg9 = ["content" => "content"];
+        $res9 = "<pre>content</pre>";
         $this->assertEquals($res9, $obj->bootstrapBasicBlockFunction($arg9));
     }
 

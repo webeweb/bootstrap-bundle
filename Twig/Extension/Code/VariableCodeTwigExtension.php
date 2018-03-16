@@ -28,7 +28,7 @@ final class VariableCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.code.variable';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.variable";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class VariableCodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap variable.
      */
     public function bootstrapVariableFunction(array $args = []) {
-        return $this->bootstrapVariable(ArrayUtility::get($args, 'content'));
+        return $this->bootstrapVariable(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class VariableCodeTwigExtension extends AbstractCodeTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapVariable', [$this, 'bootstrapVariableFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapVariable", [$this, "bootstrapVariableFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

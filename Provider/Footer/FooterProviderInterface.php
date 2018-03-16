@@ -24,7 +24,7 @@ interface FooterProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.provider.footer';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.footer";
 
     /**
      * Get the template.

@@ -28,7 +28,7 @@ final class UnderlinedTypographyTwigExtension extends AbstractTypographyTwigExte
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.underlined';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.underlined";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class UnderlinedTypographyTwigExtension extends AbstractTypographyTwigExte
      * @return string Returns the Bootstrap underlined text.
      */
     public function bootstrapUnderlinedFunction(array $args = []) {
-        return $this->bootstrapUnderlined(ArrayUtility::get($args, 'content'));
+        return $this->bootstrapUnderlined(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class UnderlinedTypographyTwigExtension extends AbstractTypographyTwigExte
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapUnderlined', [$this, 'bootstrapUnderlinedFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

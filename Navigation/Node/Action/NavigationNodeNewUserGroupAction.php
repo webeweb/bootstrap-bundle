@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Node\Action;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
 
 /**
- * Navigation node 'New user group' action.
+ * Navigation node "New user group" action.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node\Action
@@ -28,7 +28,7 @@ final class NavigationNodeNewUserGroupAction extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct('navigation.node.action.new', 'plus', $route);
+        parent::__construct("navigation.node.action.new", "plus", $route);
     }
 
 }

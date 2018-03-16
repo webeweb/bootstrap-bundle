@@ -10,10 +10,10 @@
  */
 
 // Symfony autoloader.
-$symfonyAutoloader = __DIR__ . '/../../../../app/autoload.php';
+$symfonyAutoloader = __DIR__ . "/../../../../app/autoload.php";
 
 // Composer autoloader.
-$composerAutoloader = __DIR__ . '/../vendor/autoload.php';
+$composerAutoloader = __DIR__ . "/../vendor/autoload.php";
 
 // Check if the bundle is in a Symfony project.
 if (true === is_file($symfonyAutoloader)) {
@@ -21,8 +21,8 @@ if (true === is_file($symfonyAutoloader)) {
 } else if (true === is_file($composerAutoloader)) {
 	include $composerAutoloader;
 } else {
-	die('Unable to find autoload.php. Please run:
+	die("Unable to find autoload.php. Please run:
 
 wget http://getcomposer.org/composer.phar
-php composer.phar install');
+php composer.phar install");
 }

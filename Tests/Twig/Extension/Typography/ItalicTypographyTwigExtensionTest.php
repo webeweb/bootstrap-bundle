@@ -39,9 +39,9 @@ final class ItalicTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapItalic', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapItalicFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapItalic", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapItalicFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class ItalicTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $obj = new ItalicTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = '<em></em>';
+        $res0 = "<em></em>";
         $this->assertEquals($res0, $obj->bootstrapItalicFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
-        $res9 = '<em>content</em>';
+        $arg9 = ["content" => "content"];
+        $res9 = "<em>content</em>";
         $this->assertEquals($res9, $obj->bootstrapItalicFunction($arg9));
     }
 

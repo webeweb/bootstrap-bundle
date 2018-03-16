@@ -31,7 +31,7 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.image.base64';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.image.base64";
 
     /**
      * Constructor.
@@ -64,13 +64,13 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
         }
 
         // Read the SPL file object.
-        $data = '';
+        $data = "";
         while (false === $splFileObject->eof()) {
             $data .= $splFileObject->fgets();
         }
 
         // Encode into base 64.
-        return sprintf('data:%s;base64,%s', mime_content_type($uri), base64_encode($data));
+        return sprintf("data:%s;base64,%s", mime_content_type($uri), base64_encode($data));
     }
 
     /**
@@ -82,10 +82,10 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
     public function bootstrapBase64ImageFunction(array $args = []) {
 
         // Initialize the src.
-        $src = $this->base64Encode(ArrayUtility::get($args, 'src'));
+        $src = $this->base64Encode(ArrayUtility::get($args, "src"));
 
         // Return the Bootstrap image.
-        return $this->bootstrapImage($src, ArrayUtility::get($args, 'alt'), ArrayUtility::get($args, 'width'), ArrayUtility::get($args, 'height'), ArrayUtility::get($args, 'class'));
+        return $this->bootstrapImage($src, ArrayUtility::get($args, "alt"), ArrayUtility::get($args, "width"), ArrayUtility::get($args, "height"), ArrayUtility::get($args, "class"));
     }
 
     /**
@@ -95,7 +95,7 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapBase64Image', [$this, 'bootstrapBase64ImageFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapBase64Image", [$this, "bootstrapBase64ImageFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

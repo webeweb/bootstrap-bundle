@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Provider\DropDown;
 
 /**
- * Drop down 'Tasks' provider interface.
+ * Drop down "Tasks" provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\DropDown
@@ -24,7 +24,7 @@ interface DropDownTasksProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.provider.dropdowntasks';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.dropdowntasks";
 
     /**
      * Get the tasks.

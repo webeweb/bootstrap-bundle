@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\BreadcrumbNodeImportAction;
 
 /**
- * Breadcrumb node 'Import' action test.
+ * Breadcrumb node "Import" action test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
@@ -30,11 +30,11 @@ final class BreadcrumbNodeImportActionTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new BreadcrumbNodeImportAction('route');
+        $obj = new BreadcrumbNodeImportAction("route");
 
-        $this->assertEquals('navigation.node.action.import', $obj->getId());
-        $this->assertEquals('save', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
+        $this->assertEquals("navigation.node.action.import", $obj->getId());
+        $this->assertEquals("save", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
     }
 
 }

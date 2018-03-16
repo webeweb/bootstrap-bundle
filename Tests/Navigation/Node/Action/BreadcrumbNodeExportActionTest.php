@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\BreadcrumbNodeExportAction;
 
 /**
- * Breadcrumb node 'Export' action test.
+ * Breadcrumb node "Export" action test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
@@ -30,11 +30,11 @@ final class BreadcrumbNodeExportActionTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new BreadcrumbNodeExportAction('route');
+        $obj = new BreadcrumbNodeExportAction("route");
 
-        $this->assertEquals('navigation.node.action.export', $obj->getId());
-        $this->assertEquals('open', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
+        $this->assertEquals("navigation.node.action.export", $obj->getId());
+        $this->assertEquals("open", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
     }
 
 }

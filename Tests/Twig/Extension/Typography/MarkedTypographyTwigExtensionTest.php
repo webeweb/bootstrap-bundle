@@ -39,9 +39,9 @@ final class MarkedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapMarked', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapMarkedFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapMarked", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapMarkedFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class MarkedTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $obj = new MarkedTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = '<mark></mark>';
+        $res0 = "<mark></mark>";
         $this->assertEquals($res0, $obj->bootstrapMarkedFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
-        $res9 = '<mark>content</mark>';
+        $arg9 = ["content" => "content"];
+        $res9 = "<mark>content</mark>";
         $this->assertEquals($res9, $obj->bootstrapMarkedFunction($arg9));
     }
 

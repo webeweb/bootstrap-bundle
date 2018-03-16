@@ -30,7 +30,7 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.component.button';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.button";
 
     /**
      * Constructor.
@@ -40,33 +40,33 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
     }
 
     /**
-     * Displays a Bootstrap button 'Danger'.
+     * Displays a Bootstrap button "Danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button 'Danger'.
+     * @return string Returns the Bootstrap button "Danger".
      */
     public function bootstrapButtonDangerFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'title'), ArrayUtility::get($args, 'size', false), ArrayUtility::get($args, 'block', false), ArrayUtility::get($args, 'active', false), ArrayUtility::get($args, 'disable', false), 'btn-danger', ArrayUtility::get($args, 'icon'));
+        return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-danger", ArrayUtility::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button 'Default'.
+     * Displays a Bootstrap button "Default".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button 'Default'.
+     * @return string Returns the Bootstrap button "Default".
      */
     public function bootstrapButtonDefaultFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'title'), ArrayUtility::get($args, 'size', false), ArrayUtility::get($args, 'block', false), ArrayUtility::get($args, 'active', false), ArrayUtility::get($args, 'disable', false), 'btn-default', ArrayUtility::get($args, 'icon'));
+        return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-default", ArrayUtility::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button 'Info'.
+     * Displays a Bootstrap button "Info".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button 'Info'.
+     * @return string Returns the Bootstrap button "Info".
      */
     public function bootstrapButtonInfoFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'title'), ArrayUtility::get($args, 'size', false), ArrayUtility::get($args, 'block', false), ArrayUtility::get($args, 'active', false), ArrayUtility::get($args, 'disable', false), 'btn-info', ArrayUtility::get($args, 'icon'));
+        return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-info", ArrayUtility::get($args, "icon"));
     }
 
     /**
@@ -78,29 +78,29 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
      * @return string Returns the Bootstrap button transformed into an anchor.
      */
     public function bootstrapButtonLinkFilter($bootstrapButton, $href = self::DEFAULT_HREF, $target = null) {
-        $searches = ['<button', 'type="button"', '</button>'];
-        $replaces = ['<a', 'href="' . $href . '"' . (null !== $target ? ' target="' . $target . '"' : ''), '</a>'];
+        $searches = ["<button", "type=\"button\"", "</button>"];
+        $replaces = ["<a", "href=\"" . $href . "\"" . (null !== $target ? " target=\"" . $target . "\"" : ""), "</a>"];
         return StringUtility::replace($bootstrapButton, $searches, $replaces);
     }
 
     /**
-     * Displays a Bootstrap button 'Link'.
+     * Displays a Bootstrap button "Link".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button 'Link'.
+     * @return string Returns the Bootstrap button "Link".
      */
     public function bootstrapButtonLinkFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'title'), ArrayUtility::get($args, 'size', false), ArrayUtility::get($args, 'block', false), ArrayUtility::get($args, 'active', false), ArrayUtility::get($args, 'disable', false), 'btn-link', ArrayUtility::get($args, 'icon'));
+        return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-link", ArrayUtility::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button 'Primary'.
+     * Displays a Bootstrap button "Primary".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button 'Primary'.
+     * @return string Returns the Bootstrap button "Primary".
      */
     public function bootstrapButtonPrimaryFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'title'), ArrayUtility::get($args, 'size', false), ArrayUtility::get($args, 'block', false), ArrayUtility::get($args, 'active', false), ArrayUtility::get($args, 'disable', false), 'btn-primary', ArrayUtility::get($args, 'icon'));
+        return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-primary", ArrayUtility::get($args, "icon"));
     }
 
     /**
@@ -110,27 +110,27 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
      * @return string Returns the Bootstrap button transformed into a submit button.
      */
     public function bootstrapButtonSubmitFilter($bootstrapButton) {
-        return StringUtility::replace($bootstrapButton, ['type="button"'], ['type="submit"']);
+        return StringUtility::replace($bootstrapButton, ["type=\"button\""], ["type=\"submit\""]);
     }
 
     /**
-     * Displays a Bootstrap button 'Success'.
+     * Displays a Bootstrap button "Success".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button 'Success'.
+     * @return string Returns the Bootstrap button "Success".
      */
     public function bootstrapButtonSuccessFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'title'), ArrayUtility::get($args, 'size', false), ArrayUtility::get($args, 'block', false), ArrayUtility::get($args, 'active', false), ArrayUtility::get($args, 'disable', false), 'btn-success', ArrayUtility::get($args, 'icon'));
+        return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-success", ArrayUtility::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button 'Warning'.
+     * Displays a Bootstrap button "Warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button 'Warning'.
+     * @return string Returns the Bootstrap button "Warning".
      */
     public function bootstrapButtonWarningFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayUtility::get($args, 'content'), ArrayUtility::get($args, 'title'), ArrayUtility::get($args, 'size', false), ArrayUtility::get($args, 'block', false), ArrayUtility::get($args, 'active', false), ArrayUtility::get($args, 'disable', false), 'btn-warning', ArrayUtility::get($args, 'icon'));
+        return $this->bootstrapButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "title"), ArrayUtility::get($args, "size", false), ArrayUtility::get($args, "block", false), ArrayUtility::get($args, "active", false), ArrayUtility::get($args, "disable", false), "btn-warning", ArrayUtility::get($args, "icon"));
     }
 
     /**
@@ -140,8 +140,8 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter('bootstrapButtonLink', [$this, 'bootstrapButtonLinkFilter'], ['is_safe' => ['html']]),
-            new Twig_SimpleFilter('bootstrapButtonSubmit', [$this, 'bootstrapButtonSubmitFilter'], ['is_safe' => ['html']]),
+            new Twig_SimpleFilter("bootstrapButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("bootstrapButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -152,13 +152,13 @@ final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension 
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapButtonDanger', [$this, 'bootstrapButtonDangerFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapButtonDefault', [$this, 'bootstrapButtonDefaultFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapButtonInfo', [$this, 'bootstrapButtonInfoFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapButtonLink', [$this, 'bootstrapButtonLinkFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapButtonPrimary', [$this, 'bootstrapButtonPrimaryFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapButtonSuccess', [$this, 'bootstrapButtonSuccessFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapButtonWarning', [$this, 'bootstrapButtonWarningFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonSuccess", [$this, "bootstrapButtonSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonWarning", [$this, "bootstrapButtonWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

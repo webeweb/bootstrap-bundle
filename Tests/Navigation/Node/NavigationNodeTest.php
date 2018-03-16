@@ -31,7 +31,7 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNode('id');
+        $obj = new NavigationNode("id");
 
         $this->assertEquals(false, $obj->getActive());
         $this->assertEquals(false, $obj->getEnable());
@@ -43,17 +43,17 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
 
         $obj->setActive(true);
         $obj->setEnable(true);
-        $obj->setIcon('icon');
-        $obj->setRoute('route');
-        $obj->setTarget('_blank');
-        $obj->setUrl('url');
+        $obj->setIcon("icon");
+        $obj->setRoute("route");
+        $obj->setTarget("_blank");
+        $obj->setUrl("url");
 
         $this->assertEquals(true, $obj->getActive());
         $this->assertEquals(true, $obj->getEnable());
-        $this->assertEquals('icon', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
-        $this->assertEquals('_blank', $obj->getTarget());
-        $this->assertEquals('url', $obj->getUrl());
+        $this->assertEquals("icon", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
+        $this->assertEquals("_blank", $obj->getTarget());
+        $this->assertEquals("url", $obj->getUrl());
     }
 
     /**
@@ -63,10 +63,10 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
      */
     public function testIsDisplayable() {
 
-        $obj = new NavigationNode('id');
+        $obj = new NavigationNode("id");
 
-        $obj->addNode(new NavigationItem('id1'));
-        $obj->addNode(new NavigationNode('id2'));
+        $obj->addNode(new NavigationItem("id1"));
+        $obj->addNode(new NavigationNode("id2"));
 
         $this->assertEquals(false, $obj->isDisplayable());
 

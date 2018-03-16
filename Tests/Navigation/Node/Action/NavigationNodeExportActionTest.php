@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\NavigationNodeExportAction;
 
 /**
- * Navigation node 'Export' action test.
+ * Navigation node "Export" action test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
@@ -30,11 +30,11 @@ final class NavigationNodeExportActionTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeExportAction('route');
+        $obj = new NavigationNodeExportAction("route");
 
-        $this->assertEquals('navigation.node.action.export', $obj->getId());
-        $this->assertEquals('open', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
+        $this->assertEquals("navigation.node.action.export", $obj->getId());
+        $this->assertEquals("open", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
     }
 
 }

@@ -28,7 +28,7 @@ final class ItalicTypographyTwigExtension extends AbstractTypographyTwigExtensio
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.italic';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.italic";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class ItalicTypographyTwigExtension extends AbstractTypographyTwigExtensio
      * @return string Returns the Bootstrap italic text.
      */
     public function bootstrapItalicFunction(array $args = []) {
-        return $this->bootstrapItalic(ArrayUtility::get($args, 'content'));
+        return $this->bootstrapItalic(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class ItalicTypographyTwigExtension extends AbstractTypographyTwigExtensio
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapItalic', [$this, 'bootstrapItalicFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

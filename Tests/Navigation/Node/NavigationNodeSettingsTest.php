@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeSettings;
 
 /**
- * Navigation node 'Settings' test.
+ * Navigation node "Settings" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
@@ -30,11 +30,11 @@ final class NavigationNodeSettingsTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeSettings('route');
+        $obj = new NavigationNodeSettings("route");
 
-        $this->assertEquals('navigation.node.settings', $obj->getId());
-        $this->assertEquals('cog', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
+        $this->assertEquals("navigation.node.settings", $obj->getId());
+        $this->assertEquals("cog", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
     }
 
 }

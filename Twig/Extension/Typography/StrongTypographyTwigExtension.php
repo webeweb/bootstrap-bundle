@@ -28,7 +28,7 @@ final class StrongTypographyTwigExtension extends AbstractTypographyTwigExtensio
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.typography.strong';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.strong";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class StrongTypographyTwigExtension extends AbstractTypographyTwigExtensio
      * @return string Returns the Bootstrap strong text.
      */
     public function bootstrapStrongFunction(array $args = []) {
-        return $this->bootstrapStrong(ArrayUtility::get($args, 'content'));
+        return $this->bootstrapStrong(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class StrongTypographyTwigExtension extends AbstractTypographyTwigExtensio
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapStrong', [$this, 'bootstrapStrongFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapStrong", [$this, "bootstrapStrongFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

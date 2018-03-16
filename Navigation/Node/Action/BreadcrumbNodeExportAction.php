@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Node\Action;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
 
 /**
- * Breadcrumb node 'Export' action.
+ * Breadcrumb node "Export" action.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node\Action
@@ -28,7 +28,7 @@ final class BreadcrumbNodeExportAction extends BreadcrumbNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct('navigation.node.action.export', 'open', $route);
+        parent::__construct("navigation.node.action.export", "open", $route);
     }
 
 }

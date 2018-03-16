@@ -43,19 +43,19 @@ abstract class AbstractImageTwigExtension extends AbstractBootstrapTwigExtension
     protected function bootstrapImage($src, $alt, $width, $height, $class) {
 
         // Initialize the template.
-        $template = '<img %attributes%/>';
+        $template = "<img %attributes%/>";
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes['src']    = $src;
-        $attributes['alt']    = $alt;
-        $attributes['width']  = $width;
-        $attributes['height'] = $height;
-        $attributes['class']  = $class;
+        $attributes["src"]    = $src;
+        $attributes["alt"]    = $alt;
+        $attributes["width"]  = $width;
+        $attributes["height"] = $height;
+        $attributes["class"]  = $class;
 
         // Return the HTML.
-        return StringUtility::replace($template, ['%attributes%'], [StringUtility::parseArray($attributes)]);
+        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
     }
 
 }

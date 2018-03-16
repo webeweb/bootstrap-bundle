@@ -39,9 +39,9 @@ final class InlineCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapInline', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapInlineFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapInline", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapInlineFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class InlineCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new InlineCodeTwigExtension();
 
         $arg0 = [];
-        $res0 = '<code></code>';
+        $res0 = "<code></code>";
         $this->assertEquals($res0, $obj->bootstrapInlineFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
-        $res9 = '<code>content</code>';
+        $arg9 = ["content" => "content"];
+        $res9 = "<code>content</code>";
         $this->assertEquals($res9, $obj->bootstrapInlineFunction($arg9));
     }
 

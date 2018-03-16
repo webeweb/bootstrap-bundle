@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeEvent;
 
 /**
- * Navigation node 'Event' test.
+ * Navigation node "Event" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
@@ -30,11 +30,11 @@ final class NavigationNodeEventTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeEvent('route');
+        $obj = new NavigationNodeEvent("route");
 
-        $this->assertEquals('navigation.node.event', $obj->getId());
-        $this->assertEquals('calendar', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
+        $this->assertEquals("navigation.node.event", $obj->getId());
+        $this->assertEquals("calendar", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
     }
 
 }

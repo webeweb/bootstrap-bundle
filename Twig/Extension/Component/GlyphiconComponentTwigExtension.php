@@ -28,7 +28,7 @@ final class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtensi
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtensi
      * @return string Returns the Bootstrap glyphicon.
      */
     public function bootstrapGlyphiconFunction(array $args = []) {
-        return $this->bootstrapGlyphicon(ArrayUtility::get($args, 'name', 'home'), ArrayUtility::get($args, 'style'));
+        return $this->bootstrapGlyphicon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "style"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtensi
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapGlyphicon', [$this, 'bootstrapGlyphiconFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

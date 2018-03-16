@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeParameters;
 
 /**
- * Navigation node 'Parameters' test.
+ * Navigation node "Parameters" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
@@ -30,11 +30,11 @@ final class NavigationNodeParametersTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeParameters('route');
+        $obj = new NavigationNodeParameters("route");
 
-        $this->assertEquals('navigation.node.parameters', $obj->getId());
-        $this->assertEquals('wrench', $obj->getIcon());
-        $this->assertEquals('route', $obj->getRoute());
+        $this->assertEquals("navigation.node.parameters", $obj->getId());
+        $this->assertEquals("wrench", $obj->getIcon());
+        $this->assertEquals("route", $obj->getRoute());
     }
 
 }

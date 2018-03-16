@@ -39,9 +39,9 @@ final class StrikeThroughTypographyTwigExtensionTest extends PHPUnit_Framework_T
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapStrikeThrough', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapStrikeThroughFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapStrikeThrough", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapStrikeThroughFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class StrikeThroughTypographyTwigExtensionTest extends PHPUnit_Framework_T
         $obj = new StrikeThroughTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = '<s></s>';
+        $res0 = "<s></s>";
         $this->assertEquals($res0, $obj->bootstrapStrikeThroughFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
-        $res9 = '<s>content</s>';
+        $arg9 = ["content" => "content"];
+        $res9 = "<s>content</s>";
         $this->assertEquals($res9, $obj->bootstrapStrikeThroughFunction($arg9));
     }
 

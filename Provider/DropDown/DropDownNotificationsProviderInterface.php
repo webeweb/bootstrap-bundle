@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Provider\DropDown;
 
 /**
- * Drop down 'Notifications' provider interface.
+ * Drop down "Notifications" provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\DropDown
@@ -24,7 +24,7 @@ interface DropDownNotificationsProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.provider.dropdownnotifications';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.dropdownnotifications";
 
     /**
      * Get the notifications.

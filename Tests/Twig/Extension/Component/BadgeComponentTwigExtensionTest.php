@@ -39,9 +39,9 @@ final class BadgeComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapBadge', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapBadgeFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapBadge", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -58,7 +58,7 @@ final class BadgeComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $res0 = '<span class="badge"></span>';
         $this->assertEquals($res0, $obj->bootstrapBadgeFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
+        $arg9 = ["content" => "content"];
         $res9 = '<span class="badge">content</span>';
         $this->assertEquals($res9, $obj->bootstrapBadgeFunction($arg9));
     }

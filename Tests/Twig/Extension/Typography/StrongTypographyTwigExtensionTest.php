@@ -39,9 +39,9 @@ final class StrongTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals('bootstrapStrong', $res[0]->getName());
-        $this->assertEquals([$obj, 'bootstrapStrongFunction'], $res[0]->getCallable());
-        $this->assertEquals(['html'], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals("bootstrapStrong", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapStrongFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -55,11 +55,11 @@ final class StrongTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase
         $obj = new StrongTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = '<strong></strong>';
+        $res0 = "<strong></strong>";
         $this->assertEquals($res0, $obj->bootstrapStrongFunction($arg0));
 
-        $arg9 = ['content' => 'content'];
-        $res9 = '<strong>content</strong>';
+        $arg9 = ["content" => "content"];
+        $res9 = "<strong>content</strong>";
         $this->assertEquals($res9, $obj->bootstrapStrongFunction($arg9));
     }
 

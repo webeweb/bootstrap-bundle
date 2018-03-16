@@ -31,7 +31,7 @@ final class KernelEventListener {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.eventlistener.kernel';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.eventlistener.kernel";
 
     /**
      * Providers manager.

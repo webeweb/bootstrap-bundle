@@ -28,7 +28,7 @@ final class BasicBlockCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = 'webeweb.bundle.bootstrapbundle.twig.extension.code.basicblock';
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.basicblock";
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ final class BasicBlockCodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap basic block.
      */
     public function bootstrapBasicBlockFunction(array $args = []) {
-        return $this->bootstrapBasicBlock(ArrayUtility::get($args, 'content'));
+        return $this->bootstrapBasicBlock(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ final class BasicBlockCodeTwigExtension extends AbstractCodeTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapBasicBlock', [$this, 'bootstrapBasicBlockFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapBasicBlock", [$this, "bootstrapBasicBlockFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
