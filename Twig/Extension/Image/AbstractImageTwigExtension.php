@@ -38,9 +38,10 @@ abstract class AbstractImageTwigExtension extends AbstractBootstrapTwigExtension
      * @param string $width The image width.
      * @param string $height The image height.
      * @param string $class The image class.
+     * @param string $usemap The image usemap.
      * @return string Returns the Bootstrap image.
      */
-    protected function bootstrapImage($src, $alt, $width, $height, $class) {
+    protected function bootstrapImage($src, $alt, $width, $height, $class, $usemap) {
 
         // Initialize the template.
         $template = "<img %attributes%/>";
@@ -53,6 +54,7 @@ abstract class AbstractImageTwigExtension extends AbstractBootstrapTwigExtension
         $attributes["width"]  = $width;
         $attributes["height"] = $height;
         $attributes["class"]  = $class;
+        $attributes["usemap"] = $usemap;
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);

@@ -82,8 +82,12 @@ final class Base64ImageTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $res5 = "<img class=\"class\"/>";
         $this->assertEquals($res5, $obj->bootstrapBase64ImageFunction($arg5));
 
-        $arg9 = ["src" => $src, "alt" => "Bootstrap stack", "width" => 1024, "height" => 860, "class" => "class"];
-        $res9 = "<img src=\"" . $ref . "\" alt=\"Bootstrap stack\" width=\"1024\" height=\"860\" class=\"class\"/>";
+        $arg6 = ["usemap" => "#usemap"];
+        $res6 = "<img usemap=\"#usemap\"/>";
+        $this->assertEquals($res6, $obj->bootstrapBase64ImageFunction($arg6));
+
+        $arg9 = ["src" => $src, "alt" => "Bootstrap stack", "width" => 1024, "height" => 860, "class" => "class", "usemap" => "#usemap"];
+        $res9 = "<img src=\"" . $ref . "\" alt=\"Bootstrap stack\" width=\"1024\" height=\"860\" class=\"class\" usemap=\"#usemap\"/>";
         $this->assertEquals($res9, $obj->bootstrapBase64ImageFunction($arg9));
     }
 

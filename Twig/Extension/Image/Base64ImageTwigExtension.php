@@ -85,7 +85,7 @@ final class Base64ImageTwigExtension extends AbstractImageTwigExtension {
         $src = $this->base64Encode(ArrayUtility::get($args, "src"));
 
         // Return the Bootstrap image.
-        return $this->bootstrapImage($src, ArrayUtility::get($args, "alt"), ArrayUtility::get($args, "width"), ArrayUtility::get($args, "height"), ArrayUtility::get($args, "class"));
+        return $this->bootstrapImage($src, ArrayUtility::get($args, "alt"), ArrayUtility::get($args, "width"), ArrayUtility::get($args, "height"), ArrayUtility::get($args, "class"), ArrayUtility::get($args, "usemap"));
     }
 
     /**
