@@ -24,7 +24,7 @@ use Twig_LoaderInterface;
  * Abstract Bootstrap test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Provider
+ * @package WBW\Bundle\BootstrapBundle\Tests
  * @final
  */
 abstract class AbstractBootstrapTest extends PHPUnit_Framework_TestCase {
@@ -34,7 +34,7 @@ abstract class AbstractBootstrapTest extends PHPUnit_Framework_TestCase {
      *
      * @var ContainerBuilder
      */
-    protected $containerBuiler;
+    protected $containerBuilder;
 
     /**
      * Kernel.
