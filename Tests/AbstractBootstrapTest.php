@@ -15,8 +15,11 @@ use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
+use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Translation\TranslatorInterface;
 use Twig_Environment;
 use Twig_LoaderInterface;
 
@@ -44,11 +47,25 @@ abstract class AbstractBootstrapTest extends PHPUnit_Framework_TestCase {
     protected $kernel;
 
     /**
+     * Router.
+     *
+     * @var RouterInterface
+     */
+    protected $router;
+
+    /**
      * Token
      *
      * @var TokenInterface
      */
     protected $token;
+
+    /**
+     * Translator.
+     *
+     * @var TranslatorInterface
+     */
+    protected $translator;
 
     /**
      * Twig environment.
@@ -92,6 +109,12 @@ abstract class AbstractBootstrapTest extends PHPUnit_Framework_TestCase {
 
         // Set a Kernel mock.
         $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
+
+        // Set a Router mock.
+        $this->router = $this->getMockBuilder(RouterInterface::class)->getMock();
+
+        // Set a Translator mock.
+        $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
 
         // Set a Token mock.
         $this->token = $this->getMockBuilder(TokenInterface::class)->getMock();
