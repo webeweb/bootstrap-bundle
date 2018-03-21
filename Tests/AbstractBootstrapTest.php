@@ -141,7 +141,9 @@ abstract class AbstractBootstrapTest extends PHPUnit_Framework_TestCase {
         // We set a container builder with only the necessary.
         $this->containerBuilder = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
         $this->containerBuilder->set("kernel", $this->kernel);
+        $this->containerBuilder->set("router", $this->router);
         $this->containerBuilder->set("security.token_storage", $this->tokenStorage);
+        $this->containerBuilder->set("translator", $this->translator);
         $this->containerBuilder->set("twig", $this->twigEnvironment);
     }
 
