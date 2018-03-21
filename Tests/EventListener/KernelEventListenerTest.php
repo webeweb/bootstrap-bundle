@@ -11,17 +11,13 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\EventListener;
 
-use PHPUnit_Framework_TestCase;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Twig_Environment;
-use Twig_LoaderInterface;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapTest;
 
 /**
  * Kernel event listener test.
@@ -30,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
  * @package WBW\Bundle\BootstrapBundle\Tests\EventListener
  * @final
  */
-final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
+final class KernelEventListenerTest extends AbstractBootstrapTest {
 
     /**
      * Providers manager.
@@ -40,50 +36,13 @@ final class KernelEventListenerTest extends PHPUnit_Framework_TestCase {
     private $providersManager;
 
     /**
-     * Token storage.
-     *
-     * @var TokenStorageInterface
-     */
-    private $tokenStorage;
-
-    /**
-     * Twig globals.
-     *
-     * @var array
-     */
-    private $twigGlobals = [];
-
-    /**
-     * User.
-     *
-     * @var UserInterface
-     */
-    private $user;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp() {
+        parent::setUp();
 
-        $twigLoader = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
-
-        $twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
-        $twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback(function($name, $value) {
-            $this->twigGlobals[$name] = $value;
-        });
-        $twigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback(function() {
-            return $this->twigGlobals;
-        });
-
-        $this->providersManager = new ProvidersManager($twigEnvironment);
-
-        $token = $this->getMockBuilder(TokenInterface::class)->getMock();
-        $token->expects($this->any())->method("getUser")->willReturnCallback(function() {
-            return $this->user;
-        });
-
-        $this->tokenStorage = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
-        $this->tokenStorage->expects($this->any())->method("getToken")->willReturn($token);
+        // Set a Provider manager mock.
+        $this->providersManager = new ProvidersManager($this->twigEnvironment);
     }
 
     /**

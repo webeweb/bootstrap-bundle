@@ -11,9 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Provider;
 
-use PHPUnit_Framework_TestCase;
-use Twig_Environment;
-use Twig_LoaderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
@@ -24,6 +21,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
 use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapTest;
 
 /**
  * Providers manager test.
@@ -32,40 +30,13 @@ use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
  * @package WBW\Bundle\BootstrapBundle\Tests\Provider
  * @final
  */
-final class ProvidersManagerTest extends PHPUnit_Framework_TestCase {
-
-    /**
-     * Twig environment.
-     *
-     * @var Twig_Environment
-     */
-    private $twigEnvironment;
-
-    /**
-     * Twig globals.
-     *
-     * @var array
-     */
-    private $twigGlobals = [];
+final class ProvidersManagerTest extends AbstractBootstrapTest {
 
     /**
      * {@inheritdoc}
      */
     protected function setUp() {
-
-        $twigLoader = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
-
-        $this->twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
-        $this->twigEnvironment->expects($this->any())
-            ->method("addGlobal")
-            ->willReturnCallback(function($name, $value) {
-                $this->twigGlobals[$name] = $value;
-            });
-        $this->twigEnvironment->expects($this->any())
-            ->method("getGlobals")
-            ->willReturnCallback(function() {
-                return $this->twigGlobals;
-            });
+        parent::setUp();
     }
 
     /**

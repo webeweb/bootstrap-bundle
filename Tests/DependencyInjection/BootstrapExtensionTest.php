@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
-use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -21,6 +20,7 @@ use Twig_LoaderInterface;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapTest;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension;
@@ -51,7 +51,14 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwi
  * @package WBW\Bundle\BootstrapBundle\Tests\DependencyInjection
  * @final
  */
-final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
+final class BootstrapExtensionTest extends AbstractBootstrapTest {
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+    }
 
     /**
      * Tests the load() method.
@@ -60,57 +67,45 @@ final class BootstrapExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testLoad() {
 
-        // Set the mocks.
-        $kernel          = $this->getMockBuilder(KernelInterface::class)->getMock();
-        $twigLoader      = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
-        $twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$twigLoader, []])->getMock();
-        $tokenStorage    = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
-
-        // We set a container builder with only the necessary.
-        $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-        $container->set("kernel", $kernel);
-        $container->set("security.token_storage", $tokenStorage);
-        $container->set("twig", $twigEnvironment);
-
         $obj = new BootstrapExtension();
 
-        $obj->load([], $container);
+        $obj->load([], $this->containerBuilder);
 
         // Services
-        $this->assertInstanceOf(KernelEventListener::class, $container->get(KernelEventListener::SERVICE_NAME));
-        $this->assertInstanceOf(ProvidersManager::class, $container->get(ProvidersManager::SERVICE_NAME));
+        $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));
+        $this->assertInstanceOf(ProvidersManager::class, $this->containerBuilder->get(ProvidersManager::SERVICE_NAME));
 
         // Code
-        $this->assertInstanceOf(BasicBlockCodeTwigExtension::class, $container->get(BasicBlockCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(InlineCodeTwigExtension::class, $container->get(InlineCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(SampleOutputCodeTwigExtension::class, $container->get(SampleOutputCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(UserInputCodeTwigExtension::class, $container->get(UserInputCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(VariableCodeTwigExtension::class, $container->get(VariableCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(BasicBlockCodeTwigExtension::class, $this->containerBuilder->get(BasicBlockCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(InlineCodeTwigExtension::class, $this->containerBuilder->get(InlineCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(SampleOutputCodeTwigExtension::class, $this->containerBuilder->get(SampleOutputCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(UserInputCodeTwigExtension::class, $this->containerBuilder->get(UserInputCodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(VariableCodeTwigExtension::class, $this->containerBuilder->get(VariableCodeTwigExtension::SERVICE_NAME));
 
         // Component
-        $this->assertInstanceOf(AlertComponentTwigExtension::class, $container->get(AlertComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(BadgeComponentTwigExtension::class, $container->get(BadgeComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ButtonComponentTwigExtension::class, $container->get(ButtonComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $container->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(LabelComponentTwigExtension::class, $container->get(LabelComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $container->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(AlertComponentTwigExtension::class, $this->containerBuilder->get(AlertComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(BadgeComponentTwigExtension::class, $this->containerBuilder->get(BadgeComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ButtonComponentTwigExtension::class, $this->containerBuilder->get(ButtonComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $this->containerBuilder->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(LabelComponentTwigExtension::class, $this->containerBuilder->get(LabelComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $this->containerBuilder->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
 
         // Form
-        $this->assertInstanceOf(InputMaskFormTwigExtension::class, $container->get(InputMaskFormTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(InputMaskFormTwigExtension::class, $this->containerBuilder->get(InputMaskFormTwigExtension::SERVICE_NAME));
 
         // Image
-        $this->assertInstanceOf(Base64ImageTwigExtension::class, $container->get(Base64ImageTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(Base64ImageTwigExtension::class, $this->containerBuilder->get(Base64ImageTwigExtension::SERVICE_NAME));
 
         // Typography
-        $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $container->get(DeletedTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(HeadingTypographyTwigExtension::class, $container->get(HeadingTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(InsertedTypographyTwigExtension::class, $container->get(InsertedTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ItalicTypographyTwigExtension::class, $container->get(ItalicTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(MarkedTypographyTwigExtension::class, $container->get(MarkedTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(SmallTypographyTwigExtension::class, $container->get(SmallTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrikeThroughTypographyTwigExtension::class, $container->get(StrikeThroughTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrongTypographyTwigExtension::class, $container->get(StrongTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $container->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $this->containerBuilder->get(DeletedTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(HeadingTypographyTwigExtension::class, $this->containerBuilder->get(HeadingTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(InsertedTypographyTwigExtension::class, $this->containerBuilder->get(InsertedTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ItalicTypographyTwigExtension::class, $this->containerBuilder->get(ItalicTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(MarkedTypographyTwigExtension::class, $this->containerBuilder->get(MarkedTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(SmallTypographyTwigExtension::class, $this->containerBuilder->get(SmallTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(StrikeThroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikeThroughTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(StrongTypographyTwigExtension::class, $this->containerBuilder->get(StrongTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $this->containerBuilder->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
     }
 
 }
