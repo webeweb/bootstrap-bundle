@@ -67,7 +67,7 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
     /**
      * Tests the toArray() method.
      *
-     * @return void.
+     * @return void
      */
     public function testToArray() {
 

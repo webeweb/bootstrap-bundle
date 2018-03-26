@@ -61,7 +61,7 @@ final class KernelEventListenerTest extends AbstractBootstrapTest {
     /**
      * Tests the getUser() method.
      *
-     * @return void.
+     * @return void
      * @depends testConstructor
      */
     public function testGetUser() {
