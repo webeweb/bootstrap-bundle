@@ -105,7 +105,9 @@ final class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
         // Initialize the template.
         $template = "<a %attributes%>%innerHTML%</a>";
 
-        // Initialiize the attributes.
+        // Initialize the attributes.
+        $attributes = [];
+
         $attributes["href"] = ArrayUtility::get($args, "href", NavigationInterface::DEFAULT_HREF);
 
         // Initialize the parameters.
