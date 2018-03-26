@@ -33,13 +33,13 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
 
         $obj = new NavigationNode("id");
 
-        $this->assertEquals(false, $obj->getActive());
-        $this->assertEquals(false, $obj->getEnable());
-        $this->assertEquals(null, $obj->getIcon());
-        $this->assertEquals(null, $obj->getRoute());
-        $this->assertEquals(null, $obj->getTarget());
-        $this->assertEquals(null, $obj->getUrl());
-        $this->assertEquals(true, $obj->getVisible());
+        $this->assertFalse($obj->getActive());
+        $this->assertFalse($obj->getEnable());
+        $this->assertNull($obj->getIcon());
+        $this->assertNull($obj->getRoute());
+        $this->assertNull($obj->getTarget());
+        $this->assertNull($obj->getUrl());
+        $this->assertTrue($obj->getVisible());
 
         $obj->setActive(true);
         $obj->setEnable(true);
@@ -48,8 +48,8 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
         $obj->setTarget("_blank");
         $obj->setUrl("url");
 
-        $this->assertEquals(true, $obj->getActive());
-        $this->assertEquals(true, $obj->getEnable());
+        $this->assertTrue($obj->getActive());
+        $this->assertTrue($obj->getEnable());
         $this->assertEquals("icon", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
         $this->assertEquals("_blank", $obj->getTarget());
@@ -68,11 +68,11 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
         $obj->addNode(new NavigationItem("id1"));
         $obj->addNode(new NavigationNode("id2"));
 
-        $this->assertEquals(false, $obj->isDisplayable());
+        $this->assertFalse($obj->isDisplayable());
 
         $obj->getLastNode()->setActive(true);
         $obj->getLastNode()->setEnable(true);
-        $this->assertEquals(true, $obj->isDisplayable());
+        $this->assertTrue($obj->isDisplayable());
     }
 
 }

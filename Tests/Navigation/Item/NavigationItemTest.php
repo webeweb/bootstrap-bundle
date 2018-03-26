@@ -35,7 +35,7 @@ final class NavigationItemTest extends PHPUnit_Framework_TestCase {
         $obj = new NavigationItem("id");
 
         $this->assertEquals(NavigationInterface::DEFAULT_HREF, $obj->getHref());
-        $this->assertEquals(null, $obj->getIcon());
+        $this->assertNull($obj->getIcon());
     }
 
     /**

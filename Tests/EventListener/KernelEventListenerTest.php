@@ -54,8 +54,8 @@ final class KernelEventListenerTest extends AbstractBootstrapTest {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
-        $this->assertEquals(null, $obj->getRequest());
-        $this->assertEquals(null, $obj->getUser());
+        $this->assertNull($obj->getRequest());
+        $this->assertNull($obj->getUser());
     }
 
     /**
@@ -69,7 +69,7 @@ final class KernelEventListenerTest extends AbstractBootstrapTest {
         $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
         $this->user = null;
-        $this->assertNull(null, $obj->getUser());
+        $this->assertNull($obj->getUser());
 
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
         $this->assertNotNull($obj->getUser());

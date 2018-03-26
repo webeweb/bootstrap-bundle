@@ -48,15 +48,15 @@ final class ProvidersManagerTest extends AbstractBootstrapTest {
 
         $obj = new ProvidersManager($this->twigEnvironment);
 
-        $this->assertEquals(null, $obj->getApplicationProvider());
-        $this->assertEquals(null, $obj->getBreadcrumbsProvider());
-        $this->assertEquals(null, $obj->getDropDownHookProvider());
-        $this->assertEquals(null, $obj->getDropDownNotificationsProvider());
-        $this->assertEquals(null, $obj->getDropDownTasksProvider());
-        $this->assertEquals(null, $obj->getFooterProvider());
-        $this->assertEquals(null, $obj->getNavigationProvider());
-        $this->assertEquals(null, $obj->getSearchProvider());
-        $this->assertEquals(null, $obj->getUserInfoProvider());
+        $this->assertNull($obj->getApplicationProvider());
+        $this->assertNull($obj->getBreadcrumbsProvider());
+        $this->assertNull($obj->getDropDownHookProvider());
+        $this->assertNull($obj->getDropDownNotificationsProvider());
+        $this->assertNull($obj->getDropDownTasksProvider());
+        $this->assertNull($obj->getFooterProvider());
+        $this->assertNull($obj->getNavigationProvider());
+        $this->assertNull($obj->getSearchProvider());
+        $this->assertNull($obj->getUserInfoProvider());
     }
 
     /**

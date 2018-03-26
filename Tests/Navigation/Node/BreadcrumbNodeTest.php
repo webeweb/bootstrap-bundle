@@ -32,12 +32,12 @@ final class BreadcrumbNodeTest extends PHPUnit_Framework_TestCase {
 
         $obj = new BreadcrumbNode("id");
 
-        $this->assertEquals(false, $obj->getActive());
-        $this->assertEquals(false, $obj->getEnable());
-        $this->assertEquals(null, $obj->getIcon());
-        $this->assertEquals(null, $obj->getRoute());
-        $this->assertEquals(null, $obj->getUrl());
-        $this->assertEquals(false, $obj->getVisible());
+        $this->assertFalse($obj->getActive());
+        $this->assertFalse($obj->getEnable());
+        $this->assertNull($obj->getIcon());
+        $this->assertNull($obj->getRoute());
+        $this->assertNull($obj->getUrl());
+        $this->assertFalse($obj->getVisible());
 
         $obj->setActive(true);
         $obj->setEnable(true);
@@ -45,8 +45,8 @@ final class BreadcrumbNodeTest extends PHPUnit_Framework_TestCase {
         $obj->setRoute("route");
         $obj->setUrl("url");
 
-        $this->assertEquals(true, $obj->getActive());
-        $this->assertEquals(true, $obj->getEnable());
+        $this->assertTrue($obj->getActive());
+        $this->assertTrue($obj->getEnable());
         $this->assertEquals("icon", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
         $this->assertEquals("url", $obj->getUrl());
