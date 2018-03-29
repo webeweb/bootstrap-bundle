@@ -36,30 +36,55 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $res = $obj->getFunctions();
 
-        $this->assertCount(4, $res);
+        $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapPhoneNumberInputMask", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapPhoneNumberInputMaskFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapInputMask", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapInputMaskFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapSIRETNumberInputMask", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapSIRETNumberInputMaskFunction"], $res[1]->getCallable());
+        $this->assertEquals("bootstrapPhoneNumberInputMask", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapPhoneNumberInputMaskFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapSocialSecurityNumberInputMask", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapSocialSecurityNumberInputMaskFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapSIRETNumberInputMask", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapSIRETNumberInputMaskFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("bootstrapVATNumberInputMask", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapVATNumberInputMaskFunction"], $res[3]->getCallable());
+        $this->assertEquals("bootstrapSocialSecurityNumberInputMask", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapSocialSecurityNumberInputMaskFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("bootstrapVATNumberInputMask", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapVATNumberInputMaskFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
 
     /**
+     * Tests the bootstrapInputMaskFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapInputMaskFunction() {
+
+        $obj = new InputMaskFormTwigExtension();
+
+        $arg0 = ["selector" => "#selector"];
+        $res0 = "$('#selector').inputmask([]);";
+        $this->assertEquals($res0, $obj->bootstrapInputMaskFunction($arg0));
+
+        $arg9 = ["selector" => "#selector", "scriptTag" => true, "opts" => ["mask" => "+33 9 99 99 99 99", "placeholder" => "+__ _ __ __ __ __"]];
+        $res9 = "<script type=\"text/javascript\">\n$('#selector').inputmask({\"mask\":\"+33 9 99 99 99 99\",\"placeholder\":\"+__ _ __ __ __ __\"});\n</script>";
+        $this->assertEquals($res9, $obj->bootstrapInputMaskFunction($arg9));
+    }
+
+    /**
+      /**
      * Tests the bootstrapPhoneNumberInputMaskFunction() method.
      *
      * @return void
@@ -69,13 +94,9 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $obj = new InputMaskFormTwigExtension();
 
-        $arg0 = ["selector" => "#selector"];
-        $res0 = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});";
-        $this->assertEquals($res0, $obj->bootstrapPhoneNumberInputMaskFunction($arg0));
-
-        $arg9 = ["selector" => "#selector", "scriptTag" => true];
-        $res9 = "<script type=\"text/javascript\">\n$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});\n</script>";
-        $this->assertEquals($res9, $obj->bootstrapPhoneNumberInputMaskFunction($arg9));
+        $arg = ["selector" => "#selector"];
+        $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});";
+        $this->assertEquals($res, $obj->bootstrapPhoneNumberInputMaskFunction($arg));
     }
 
     /**
@@ -89,7 +110,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new InputMaskFormTwigExtension();
 
         $arg = ["selector" => "#selector"];
-        $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"999 999 999 99999\",\"placeholder\":\"___ ___ ___ ___\"});";
+        $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"999 999 999 99999\",\"placeholder\":\"___ ___ ___ _____\"});";
         $this->assertEquals($res, $obj->bootstrapSIRETNumberInputMaskFunction($arg));
     }
 
@@ -119,7 +140,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new InputMaskFormTwigExtension();
 
         $arg = ["selector" => "#selector"];
-        $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"**999 999 999 99\",\"placeholder\":\"_____ ___ ___ ___ __\"});";
+        $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"**999 999 999 99\",\"placeholder\":\"_____ ___ ___ __\"});";
         $this->assertEquals($res, $obj->bootstrapVATNumberInputMaskFunction($arg));
     }
 

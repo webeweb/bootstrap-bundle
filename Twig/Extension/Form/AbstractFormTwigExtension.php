@@ -35,10 +35,10 @@ abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension 
      *
      * @param string $selector The input mask selector.
      * @param boolean $scriptTag Script tag ?
-     * @param array $arguments The input mask arguments.
+     * @param array $options The input mask options.
      * @return string Returns the Bootstrap input mask.
      */
-    final protected function bootstrapInputMask($selector, $scriptTag, array $arguments) {
+    final protected function bootstrapInputMask($selector, $scriptTag, array $options) {
 
         // Initialize the template.
         $template = ["$('%selector%').inputmask(%arguments%);"];
@@ -48,7 +48,7 @@ abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension 
         }
 
         // Return the HTML.
-        return StringUtility::replace(implode("\n", $template), ["%selector%", "%arguments%"], [$selector, json_encode($arguments)]);
+        return StringUtility::replace(implode("\n", $template), ["%selector%", "%arguments%"], [$selector, json_encode($options)]);
     }
 
 }
