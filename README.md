@@ -9,7 +9,7 @@ Integrate Bootstrap theme with Symfony 2.
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
 
-<img src="https://raw.githubusercontent.com/webeweb/bootstrap-bundle/master/Resources/doc/images/bootstrap-stack.png" alt="Bootstrap bundle" align="right" width="380"/>
+<img src="https://raw.githubusercontent.com/webeweb/bootstrap-bundle/master/Resources/doc/images/bootstrap-stack_1024x860.png" alt="Bootstrap bundle" align="right" width="380"/>
 
 Includes :
 
