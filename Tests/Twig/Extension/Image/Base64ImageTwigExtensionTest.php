@@ -56,7 +56,7 @@ final class Base64ImageTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $obj = new Base64ImageTwigExtension();
 
         $ref = FileUtility::getContents(getcwd() . "/Tests/Twig/Extension/Image/Base64ImageTwigExtensionTest.txt");
-        $src = getcwd() . "/Resources/doc/images/bootstrap-stack.png";
+        $src = getcwd() . "/Resources/doc/images/bootstrap-stack_1024x860.png";
 
         $arg0 = [];
         $res0 = "<img />";
