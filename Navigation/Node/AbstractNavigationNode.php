@@ -159,15 +159,15 @@ abstract class AbstractNavigationNode extends AbstractNode {
      */
     final public function isDisplayable() {
         $displayable = $this->enable && $this->visible;
-        if (false === $displayable) {
-            foreach ($this->getNodes() as $current) {
-                if (false === ($current instanceof AbstractNavigationNode)) {
-                    continue;
-                }
-                $displayable = $current->isDisplayable();
-                if (true === $displayable) {
-                    break;
-                }
+        if (true === $displayable) {
+            return true;
+        }
+        foreach ($this->getNodes() as $current) {
+            if (false === ($current instanceof AbstractNavigationNode)) {
+                continue;
+            }
+            if (true === $current->isDisplayable()) {
+                return true;
             }
         }
         return $displayable;
