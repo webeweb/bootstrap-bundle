@@ -18,8 +18,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle
- * @final
  */
-final class BootstrapBundle extends Bundle {
+class BootstrapBundle extends Bundle {
 
 }
