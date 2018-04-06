@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Item;
 
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Node\AbstractNode;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Navigation item.
@@ -101,20 +102,9 @@ final class NavigationItem extends AbstractNode implements NavigationInterface {
         // Initialize the output.
         $output = [];
 
-        // Check the href.
-        if (null !== $this->href) {
-            $output["href"] = $this->href;
-        }
-
-        // Check the icon.
-        if (null !== $this->icon) {
-            $output["icon"] = $this->icon;
-        }
-
-        // Check the span.
-        if (null !== $this->getId()) {
-            $output["span"] = $this->getId();
-        }
+        ArrayUtility::set($output, "href", $this->href, [null]);
+        ArrayUtility::set($output, "icon", $this->icon, [null]);
+        ArrayUtility::set($output, "span", $this->getId(), [null]);
 
         // Check the nodes.
         if (0 < $this->size()) {
