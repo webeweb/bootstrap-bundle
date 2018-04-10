@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapTest;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Kernel event listener test.
@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapTest;
  * @package WBW\Bundle\BootstrapBundle\Tests\EventListener
  * @final
  */
-final class KernelEventListenerTest extends AbstractBootstrapTest {
+final class KernelEventListenerTest extends AbstractFrameworkTestCase {
 
     /**
      * Providers manager.

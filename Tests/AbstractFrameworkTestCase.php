@@ -24,13 +24,13 @@ use Twig_Environment;
 use Twig_LoaderInterface;
 
 /**
- * Abstract Bootstrap test.
+ * Abstract framework test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @final
  */
-abstract class AbstractBootstrapTest extends PHPUnit_Framework_TestCase {
+abstract class AbstractFrameworkTestCase extends PHPUnit_Framework_TestCase {
 
     /**
      * Container builder.

@@ -11,16 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use Symfony\Component\HttpKernel\KernelInterface;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Twig_Environment;
-use Twig_LoaderInterface;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapTest;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension;
@@ -51,7 +45,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwi
  * @package WBW\Bundle\BootstrapBundle\Tests\DependencyInjection
  * @final
  */
-final class BootstrapExtensionTest extends AbstractBootstrapTest {
+final class BootstrapExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}
