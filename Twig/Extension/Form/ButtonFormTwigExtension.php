@@ -59,7 +59,7 @@ final class ButtonFormTwigExtension extends AbstractFormTwigExtension {
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
-        $but = $ext->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "close"]);
+        $but = $ext->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "remove"]);
 
         // Return the HTML.
         return $ext->bootstrapButtonLinkFilter($but, $url);

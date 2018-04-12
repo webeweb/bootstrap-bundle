@@ -83,7 +83,7 @@ final class ButtonFormTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new ButtonFormTwigExtension($this->router, $this->translator);
 
         $arg = ["route" => "route", "arguments" => []];
-        $res = '<a class="btn btn-default" title="label.cancel" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-close" aria-hidden="true"></span> label.cancel</a>';
+        $res = '<a class="btn btn-default" title="label.cancel" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
         $this->assertEquals($res, $obj->bootstrapCancelFormButtonFunction($arg));
     }
 
@@ -97,7 +97,7 @@ final class ButtonFormTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new ButtonFormTwigExtension($this->router, $this->translator);
 
-        $cnl = '<a class="btn btn-default" title="label.cancel" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-close" aria-hidden="true"></span> label.cancel</a>';
+        $cnl = '<a class="btn btn-default" title="label.cancel" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
         $sbt = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> label.submit</button>';
 
         $arg = ["cancel_route" => "route", "cancel_arguments" => []];
