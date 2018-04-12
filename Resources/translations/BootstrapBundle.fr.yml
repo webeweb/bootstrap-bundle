@@ -1,0 +1,7 @@
+# Resources/translations/BootstrapBundle.en.yml
+
+label:
+    cancel: "Annuler"
+    delete: "Supprimer"
+    edit: Editer"
+    submit: "Valider"
