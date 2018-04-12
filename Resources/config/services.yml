@@ -93,6 +93,12 @@ services:
         tags:
             - { name: twig.extension }
 
+    webeweb.bundle.bootstrapbundle.twig.extension.table.button:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension
+        arguments: ["@router", "@translator"]
+        tags:
+            - { name: twig.extension }
+
     webeweb.bundle.bootstrapbundle.twig.extension.typography.deleted:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension
         tags:

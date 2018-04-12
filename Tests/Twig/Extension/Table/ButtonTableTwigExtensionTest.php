@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * This file is part of the bootstrap-bundle package.
+ *
+ * (c) 2018 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
+
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Twig_Node;
+use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
+
+/**
+ * Button table Twig extension test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
+ * @final
+ */
+final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set the Router mock.
+        $this->router->expects($this->any())->method("generate")->willReturnCallback(function($name, $parameters = [], $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH) {
+            return $name;
+        });
+
+        // Set the Translator mock.
+        $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
+            return $id;
+        });
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+
+        $res = $obj->getFunctions();
+
+        $this->assertCount(3, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapDefaultRowButtons", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapDefaultRowButtonsFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bootstrapDeleteRowButton", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapDeleteRowButtonFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("bootstrapEditRowButton", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapEditRowButtonFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+    }
+
+    /**
+     * Tests the bootstrapDefaultRowButtonsFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapDefaultRowButtonsFunction() {
+
+        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+
+        $edt = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>';
+        $dlt = '<a class="btn btn-danger" title="label.delete" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+
+        $arg = ["edit_route" => "route", "edit_arguments" => [], "delete_route" => "route", "delete_arguments" => []];
+        $res = $edt . " " . $dlt;
+        $this->assertEquals($res, $obj->bootstrapDefaultRowButtonsFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapDeleteRowButtonFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapDeleteRowButtonFunction() {
+
+        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+
+        $arg = ["route" => "route", "arguments" => []];
+        $res = '<a class="btn btn-danger" title="label.delete" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+        $this->assertEquals($res, $obj->bootstrapDeleteRowButtonFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapEditRowButtonFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testBootstrapEditRowButtonFunction() {
+
+
+        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+
+        $arg = ["route" => "route", "arguments" => []];
+        $res = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>';
+        $this->assertEquals($res, $obj->bootstrapEditRowButtonFunction($arg));
+    }
+
+}
