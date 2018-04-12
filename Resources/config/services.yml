@@ -76,6 +76,12 @@ services:
         tags:
             - { name: twig.extension }
 
+    webeweb.bundle.bootstrapbundle.twig.extension.form.button:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension
+        arguments: ["@router", "@translator"]
+        tags:
+            - { name: twig.extension }
+
     webeweb.bundle.bootstrapbundle.twig.extension.form.inputmask:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension
         arguments: ["@router", "@translator"]

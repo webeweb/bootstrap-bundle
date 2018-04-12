@@ -26,6 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExten
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
@@ -85,6 +86,7 @@ final class BootstrapExtensionTest extends AbstractFrameworkTestCase {
         $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $this->containerBuilder->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
 
         // Form
+        $this->assertInstanceOf(ButtonFormTwigExtension::class, $this->containerBuilder->get(ButtonFormTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(InputMaskFormTwigExtension::class, $this->containerBuilder->get(InputMaskFormTwigExtension::SERVICE_NAME));
 
         // Image
