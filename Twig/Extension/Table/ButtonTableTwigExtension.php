@@ -115,7 +115,7 @@ final class ButtonTableTwigExtension extends AbstractTableTwigExtension {
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
-        $but = $ext->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "edit"]);
+        $but = $ext->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "pencil"]);
 
         // Return the HTML.
         return $ext->bootstrapButtonLinkFilter($but, $url);

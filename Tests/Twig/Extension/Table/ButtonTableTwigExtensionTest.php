@@ -82,7 +82,7 @@ final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new ButtonTableTwigExtension($this->router, $this->translator);
 
-        $edt = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>';
+        $edt = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
         $dlt = '<a class="btn btn-danger" title="label.delete" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
 
         $arg = ["edit_route" => "route", "edit_arguments" => [], "delete_route" => "route", "delete_arguments" => []];
@@ -117,7 +117,7 @@ final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new ButtonTableTwigExtension($this->router, $this->translator);
 
         $arg = ["route" => "route", "arguments" => []];
-        $res = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>';
+        $res = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
         $this->assertEquals($res, $obj->bootstrapEditRowButtonFunction($arg));
     }
 
