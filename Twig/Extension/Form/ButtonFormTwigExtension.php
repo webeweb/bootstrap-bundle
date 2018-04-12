@@ -61,7 +61,7 @@ final class ButtonFormTwigExtension extends AbstractFormTwigExtension {
         $ext = new ButtonComponentTwigExtension();
         $but = $ext->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "close"]);
 
-        // Return the cancel form button.
+        // Return the HTML.
         return $ext->bootstrapButtonLinkFilter($but, $url);
     }
 
@@ -72,8 +72,12 @@ final class ButtonFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap default form buttons.
      */
     public function bootstrapDefaultFormButtonsFunction(array $args = []) {
+
+        // Initialize the buttons.
         $cancelButton = $this->bootstrapCancelFormButtonFunction(["route" => ArrayUtility::get($args, "cancel_route"), "cancel_arguments" => ArrayUtility::get($args, "cancel_arguments")]);
         $submitButton = $this->bootstrapSubmitFormButtonFunction();
+
+        // Return the HTML.
         return implode(" ", [$cancelButton, $submitButton]);
     }
 
@@ -91,7 +95,7 @@ final class ButtonFormTwigExtension extends AbstractFormTwigExtension {
         $ext = new ButtonComponentTwigExtension();
         $but = $ext->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "ok"]);
 
-        // Return the submit form button.
+        // Return the HTML.
         return $ext->bootstrapButtonSubmitFilter($but);
     }
 
