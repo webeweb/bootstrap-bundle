@@ -11,7 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Form;
 
+use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
 use WBW\Library\Core\Utility\StringUtility;
 
 /**
@@ -24,10 +27,29 @@ use WBW\Library\Core\Utility\StringUtility;
 abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
-     * Constructor.
+     * Router.
+     *
+     * @var RouterInterface
      */
-    protected function __construct() {
+    protected $router;
+
+    /**
+     * Translator.
+     *
+     * @var TranslatorInterface
+     */
+    protected $translator;
+
+    /**
+     * Constructor.
+     *
+     * @param RouterInterface $router The router.
+     * @param TranslatorInterface $translator The translator.
+     */
+    protected function __construct(RouterInterface $router, TranslatorInterface $translator) {
         parent::__construct();
+        $this->router     = $router;
+        $this->translator = $translator;
     }
 
     /**

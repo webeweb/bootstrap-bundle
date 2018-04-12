@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new InputMaskFormTwigExtension();
+        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $res = $obj->getFunctions();
 
@@ -72,7 +72,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testBootstrapInputMaskFunction() {
 
-        $obj = new InputMaskFormTwigExtension();
+        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg0 = ["selector" => "#selector"];
         $res0 = "$('#selector').inputmask([]);";
@@ -92,7 +92,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testBootstrapPhoneNumberInputMaskFunction() {
 
-        $obj = new InputMaskFormTwigExtension();
+        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});";
@@ -107,7 +107,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testBootstrapSIRETNumberInputMaskFunction() {
 
-        $obj = new InputMaskFormTwigExtension();
+        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"999 999 999 99999\",\"placeholder\":\"___ ___ ___ _____\"});";
@@ -122,7 +122,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testBootstrapSocialSecurityNumberInputMaskFunction() {
 
-        $obj = new InputMaskFormTwigExtension();
+        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"9 99 99 99 999 999 99\",\"placeholder\":\"_ __ __ __ ___ ___ __\"});";
@@ -137,7 +137,7 @@ final class InputMaskFormTwigExtensionTest extends PHPUnit_Framework_TestCase {
      */
     public function testBootstrapVATNumberInputMaskFunction() {
 
-        $obj = new InputMaskFormTwigExtension();
+        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"**999 999 999 99\",\"placeholder\":\"_____ ___ ___ __\"});";
