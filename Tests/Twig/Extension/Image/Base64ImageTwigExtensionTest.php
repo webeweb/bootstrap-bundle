@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
-use WBW\Library\Core\Utility\FileUtility;
+use WBW\Library\Core\Utility\IO\FileUtility;
 
 /**
  * Base64 image Twig extension.

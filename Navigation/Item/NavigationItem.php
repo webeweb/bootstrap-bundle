@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Item;
 
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Node\AbstractNode;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Navigation item.

@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Form;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Abstract form Twig extension.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig_Extension;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Abstract Bootstrap Twig extension.

@@ -18,7 +18,7 @@
         "symfony/serializer": "^2.6|^3.0",
         "symfony/translation": "^2.6|^3.0",
         "twig/twig": "^1.0||^2.0",
-        "webeweb/core-library": "^1.1"
+        "webeweb/core-library": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "5.7.*"

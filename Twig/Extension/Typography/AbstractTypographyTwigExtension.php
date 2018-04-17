@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Typography;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Abstract typography Twig extension.

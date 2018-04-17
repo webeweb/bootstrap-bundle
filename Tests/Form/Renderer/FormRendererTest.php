@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\ChoiceRendererInterface;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\FormRenderer;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\TranslatedChoiceRendererInterface;
-use WBW\Library\Core\Sort\Tree\Alphabetical\AlphabeticalTreeSortInterface;
+use WBW\Library\Core\Algorithm\Sorting\AlphabeticalTreeSortInterface;
 
 /**
  * Form renderer test.

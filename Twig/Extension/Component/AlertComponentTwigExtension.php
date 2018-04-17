@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
-use WBW\Library\Core\Utility\ArrayUtility;
-use WBW\Library\Core\Utility\StringUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Alert component Twig extension.
