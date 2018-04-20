@@ -72,7 +72,7 @@ final class KernelEventListenerTest extends AbstractFrameworkTestCase {
         $this->assertNull($obj->getUser());
 
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
-        $this->assertEquals($this->user, $obj->getUser());
+        $this->assertSame($this->user, $obj->getUser());
     }
 
     /**

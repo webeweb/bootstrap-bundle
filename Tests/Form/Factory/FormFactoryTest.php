@@ -57,9 +57,9 @@ final class FormFactoryTest extends PHPUnit_Framework_TestCase {
         $res0 = FormFactory::createEntityType(NavigationNode::class, $obj);
         $this->assertEquals(NavigationNode::class, $res0["class"]);
         $this->assertCount(3, $res0["choices"]);
-        $this->assertEquals($obj[0], $res0["choices"][0]);
-        $this->assertEquals($obj[1], $res0["choices"][1]);
-        $this->assertEquals($obj[2], $res0["choices"][2]);
+        $this->assertSame($obj[0], $res0["choices"][0]);
+        $this->assertSame($obj[1], $res0["choices"][1]);
+        $this->assertSame($obj[2], $res0["choices"][2]);
         $this->assertTrue(is_callable($res0["choice_label"]));
         $this->assertEquals("─ FormRendererInterface not implemented by this object", $res0["choice_label"]($res0["choices"][0]));
         $this->assertEquals("─ FormRendererInterface not implemented by this object", $res0["choice_label"]($res0["choices"][1]));
@@ -69,9 +69,9 @@ final class FormFactoryTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(NavigationNode::class, $res1["class"]);
         $this->assertCount(4, $res1["choices"]);
         $this->assertNull($res1["choices"][0]);
-        $this->assertEquals($obj[0], $res1["choices"][1]);
-        $this->assertEquals($obj[1], $res1["choices"][2]);
-        $this->assertEquals($obj[2], $res1["choices"][3]);
+        $this->assertSame($obj[0], $res1["choices"][1]);
+        $this->assertSame($obj[1], $res1["choices"][2]);
+        $this->assertSame($obj[2], $res1["choices"][3]);
         $this->assertTrue(is_callable($res1["choice_label"]));
         $this->assertEquals("Empty selection", $res1["choice_label"]($res1["choices"][0]));
         $this->assertEquals("─ FormRendererInterface not implemented by this object", $res1["choice_label"]($res1["choices"][1]));

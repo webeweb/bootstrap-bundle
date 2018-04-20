@@ -126,7 +126,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setApplicationProvider($provider);
-        $this->assertEquals($provider, $obj->getApplicationProvider());
+        $this->assertSame($provider, $obj->getApplicationProvider());
     }
 
     /**
@@ -143,7 +143,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setBreadcrumbsProvider($provider);
-        $this->assertEquals($provider, $obj->getBreadcrumbsProvider());
+        $this->assertSame($provider, $obj->getBreadcrumbsProvider());
     }
 
     /**
@@ -160,7 +160,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setDropDownHookProvider($provider);
-        $this->assertEquals($provider, $obj->getDropDownHookProvider());
+        $this->assertSame($provider, $obj->getDropDownHookProvider());
     }
 
     /**
@@ -177,7 +177,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setDropDownNotificationsProvider($provider);
-        $this->assertEquals($provider, $obj->getDropDownNotificationsProvider());
+        $this->assertSame($provider, $obj->getDropDownNotificationsProvider());
     }
 
     /**
@@ -194,7 +194,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setDropDownTasksProvider($provider);
-        $this->assertEquals($provider, $obj->getDropDownTasksProvider());
+        $this->assertSame($provider, $obj->getDropDownTasksProvider());
     }
 
     /**
@@ -211,7 +211,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setFooterProvider($provider);
-        $this->assertEquals($provider, $obj->getFooterProvider());
+        $this->assertSame($provider, $obj->getFooterProvider());
     }
 
     /**
@@ -228,7 +228,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setNavigationProvider($provider);
-        $this->assertEquals($provider, $obj->getNavigationProvider());
+        $this->assertSame($provider, $obj->getNavigationProvider());
     }
 
     /**
@@ -245,7 +245,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setSearchProvider($provider);
-        $this->assertEquals($provider, $obj->getSearchProvider());
+        $this->assertSame($provider, $obj->getSearchProvider());
     }
 
     /**
@@ -262,7 +262,7 @@ final class ProvidersManagerTest extends AbstractFrameworkTestCase {
         $obj = new ProvidersManager($this->twigEnvironment);
 
         $obj->setUserInfoProvider($provider);
-        $this->assertEquals($provider, $obj->getUserInfoProvider());
+        $this->assertSame($provider, $obj->getUserInfoProvider());
     }
 
 }
