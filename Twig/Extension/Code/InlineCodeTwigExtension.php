@@ -19,9 +19,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Code
- * @final
  */
-final class InlineCodeTwigExtension extends AbstractCodeTwigExtension {
+class InlineCodeTwigExtension extends AbstractCodeTwigExtension {
 
     /**
      * Service name.
