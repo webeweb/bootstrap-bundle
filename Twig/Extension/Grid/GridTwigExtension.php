@@ -19,9 +19,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Grid
- * @final
  */
-final class GridTwigExtension extends AbstractGridTwigExtension {
+class GridTwigExtension extends AbstractGridTwigExtension {
 
     /**
      * Service name.
