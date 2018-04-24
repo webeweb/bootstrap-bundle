@@ -20,10 +20,9 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Item
- * @final
  * @deprecated
  */
-final class NavigationItem extends AbstractNode implements NavigationInterface {
+class NavigationItem extends AbstractNode implements NavigationInterface {
 
     /**
      * Href.
