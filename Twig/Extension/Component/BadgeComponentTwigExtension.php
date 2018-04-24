@@ -19,9 +19,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
- * @final
  */
-final class BadgeComponentTwigExtension extends AbstractComponentTwigExtension {
+class BadgeComponentTwigExtension extends AbstractComponentTwigExtension {
 
     /**
      * Service name.
