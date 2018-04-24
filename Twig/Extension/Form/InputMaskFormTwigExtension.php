@@ -21,9 +21,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Form
- * @final
  */
-final class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
+class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
 
     /**
      * Service name.
