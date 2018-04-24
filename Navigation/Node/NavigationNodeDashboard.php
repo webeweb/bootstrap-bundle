@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node
- * @final
  */
-final class NavigationNodeDashboard extends NavigationNode {
+class NavigationNodeDashboard extends NavigationNode {
 
     /**
      * Constructor.
