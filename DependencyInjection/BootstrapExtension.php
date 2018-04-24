@@ -21,9 +21,8 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\DependencyInjection
- * @final
  */
-final class BootstrapExtension extends Extension {
+class BootstrapExtension extends Extension {
 
     /**
      * {@inheritdoc}
