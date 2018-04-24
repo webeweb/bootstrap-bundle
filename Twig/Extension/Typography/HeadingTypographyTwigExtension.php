@@ -19,9 +19,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
- * @final
  */
-final class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtension {
+class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
