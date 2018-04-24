@@ -22,9 +22,8 @@ use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\EventListener
- * @final
  */
-final class KernelEventListener {
+class KernelEventListener {
 
     /**
      * Service name.
