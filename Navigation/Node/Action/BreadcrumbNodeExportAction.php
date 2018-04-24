@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node\Action
- * @final
  */
-final class BreadcrumbNodeExportAction extends BreadcrumbNode {
+class BreadcrumbNodeExportAction extends BreadcrumbNode {
 
     /**
      * Constructor.
