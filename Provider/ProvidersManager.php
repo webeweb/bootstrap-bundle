@@ -27,7 +27,6 @@ use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider
- * @final
  */
 final class ProvidersManager {
 
