@@ -22,9 +22,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Form
- * @final
  */
-final class ButtonFormTwigExtension extends AbstractFormTwigExtension {
+class ButtonFormTwigExtension extends AbstractFormTwigExtension {
 
     /**
      * Service name.
