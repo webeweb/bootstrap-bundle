@@ -21,9 +21,8 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
- * @final
  */
-final class ButtonComponentTwigExtension extends AbstractComponentTwigExtension {
+class ButtonComponentTwigExtension extends AbstractComponentTwigExtension {
 
     /**
      * Service name.
