@@ -19,9 +19,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
- * @final
  */
-final class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigExtension {
+class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
