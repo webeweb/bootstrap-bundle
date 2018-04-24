@@ -20,9 +20,8 @@ use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Tree
- * @final
  */
-final class NavigationTree extends AbstractNavigationNode {
+class NavigationTree extends AbstractNavigationNode {
 
     /**
      * Constructor.
