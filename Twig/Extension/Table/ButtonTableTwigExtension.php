@@ -22,9 +22,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Table
- * @final
  */
-final class ButtonTableTwigExtension extends AbstractTableTwigExtension {
+class ButtonTableTwigExtension extends AbstractTableTwigExtension {
 
     /**
      * Service name.
