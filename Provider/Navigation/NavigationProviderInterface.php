@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Navigation;
 
-use WBW\Library\Core\Navigation\Tree\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Navigation\Tree\NavigationTree;
 
 /**
  * Navigation provider interface.
