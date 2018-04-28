@@ -88,6 +88,11 @@ services:
         tags:
             - { name: twig.extension }
 
+    webeweb.bundle.bootstrapbundle.twig.extension.grid.grid:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension
+        tags:
+            - { name: twig.extension }
+
     webeweb.bundle.bootstrapbundle.twig.extension.image.base64:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension
         tags:
