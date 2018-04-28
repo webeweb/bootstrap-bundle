@@ -127,9 +127,9 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapDefaultRowButtons', [$this, 'bootstrapDefaultRowButtonsFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapDeleteRowButton', [$this, 'bootstrapDeleteRowButtonFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapEditRowButton', [$this, 'bootstrapEditRowButtonFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapDefaultRowButtons", [$this, "bootstrapDefaultRowButtonsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapDeleteRowButton", [$this, "bootstrapDeleteRowButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapEditRowButton", [$this, "bootstrapEditRowButtonFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
