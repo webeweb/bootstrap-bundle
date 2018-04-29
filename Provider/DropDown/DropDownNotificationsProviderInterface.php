@@ -38,5 +38,5 @@ interface DropDownNotificationsProviderInterface {
      *
      * @return string Returns the view.
      */
-    public function getViews();
+    public function getView();
 }
