@@ -16,7 +16,7 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
-use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**

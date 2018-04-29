@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
 
 /**
  * Kernel event listener.

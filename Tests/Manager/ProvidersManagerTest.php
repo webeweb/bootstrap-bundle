@@ -9,8 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Provider;
+namespace WBW\Bundle\BootstrapBundle\Tests\Manager;
 
+use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
 use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
@@ -18,7 +19,6 @@ use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownNotificationsProviderIn
 use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownTasksProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Footer\FooterProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
 use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
@@ -27,7 +27,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  * Providers manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Provider
+ * @package WBW\Bundle\BootstrapBundle\Tests\Manager
  * @final
  */
 final class ProvidersManagerTest extends AbstractFrameworkTestCase {

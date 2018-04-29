@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
-use WBW\Bundle\BootstrapBundle\Provider\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
