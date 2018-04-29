@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Form\Factory;
 
 use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Form\Factory\FormFactory;
-use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 
 /**
  * FormFactoryTest

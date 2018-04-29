@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Navigation\Node;
 
-use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 
 /**
  * Navigation node "Event".

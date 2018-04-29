@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Tree;
+namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 
 use PHPUnit_Framework_TestCase;
-use WBW\Bundle\BootstrapBundle\Navigation\Item\NavigationItem;
-use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Navigation\Tree\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 
 /**
  * Navigation tree test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
+ * @package WBW\Bundle\BootstrapBundle\Tests\Navigation
  * @final
  */
 final class NavigationTreeTest extends PHPUnit_Framework_TestCase {

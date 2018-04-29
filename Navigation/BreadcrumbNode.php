@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Navigation\Node;
+namespace WBW\Bundle\BootstrapBundle\Navigation;
 
 /**
- * BreadcrumbNode
+ * Breadcrumb node.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Navigation\Node
+ * @package WBW\Bundle\BootstrapBundle\Navigation
  */
 class BreadcrumbNode extends AbstractNavigationNode {
 

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Navigation\Node;
+namespace WBW\Bundle\BootstrapBundle\Navigation;
 
 use WBW\Library\Core\Node\AbstractNode;
 
@@ -17,7 +17,7 @@ use WBW\Library\Core\Node\AbstractNode;
  * Abstract navigation node.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Navigation\Node
+ * @package WBW\Bundle\BootstrapBundle\Navigation
  * @abstract
  */
 abstract class AbstractNavigationNode extends AbstractNode {

@@ -9,17 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Navigation\Tree;
-
-use WBW\Bundle\BootstrapBundle\Navigation\Node\AbstractNavigationNode;
-use WBW\Bundle\BootstrapBundle\Navigation\Node\BreadcrumbNode;
-use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNode;
+namespace WBW\Bundle\BootstrapBundle\Navigation;
 
 /**
  * Navigation tree.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Navigation\Tree
+ * @package WBW\Bundle\BootstrapBundle\Navigation
  */
 class NavigationTree extends AbstractNavigationNode {
 

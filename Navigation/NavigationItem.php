@@ -9,9 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Navigation\Item;
+namespace WBW\Bundle\BootstrapBundle\Navigation;
 
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Node\AbstractNode;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
@@ -19,7 +18,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * Navigation item.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Navigation\Item
+ * @package WBW\Bundle\BootstrapBundle\Navigation
  * @deprecated
  */
 class NavigationItem extends AbstractNode implements NavigationInterface {
