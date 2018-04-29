@@ -2,36 +2,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "@Bootstrap/styles/bootstrap.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-colorpicker.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-datepicker.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-daterangepicker.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-select.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-slider.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-tagsinput.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-timepicker.html.twig" %}
-        {% include "@Bootstrap/styles/bootstrap-wysiwyg.html.twig" %}
+        {% include "@Bootstrap/scripts.html.twig" %}
         <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         {% block bootstrapHeadStyles %}
         {% endblock %}
         <title>{% block bootstrapHeadTitle %}{% endblock %}</title>
     </head>
-    <body>
+    <body{% block bootstrapBodyAttrs %}{% endblock %}>
         {% block bootstrapBodyContent %}
         {% endblock %}
-        {% include "@Bootstrap/scripts/jquery.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-colorpicker.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-datepicker.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-daterangepicker.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-notify.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-select.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-slider.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-tagsinput.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-timepicker.html.twig" %}
-        {% include "@Bootstrap/scripts/bootstrap-wysiwyg.html.twig" %}
-        {% include "@Bootstrap/scripts/jquery-inputmask.html.twig" %}
+        {% include "@Bootstrap/scripts.html.twig" %}
         {% block bootstrapBodyScripts %}
         {% endblock %}
     </body>
