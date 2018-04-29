@@ -27,13 +27,6 @@ interface UserInfoProviderInterface {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.userinfo";
 
     /**
-     * Get the template.
-     *
-     * @return string Returns the template.
-     */
-    public function getTemplate();
-
-    /**
      * Provides a register link.
      *
      * @return boolean Returns true in case of success, false otherwise.
@@ -46,4 +39,11 @@ interface UserInfoProviderInterface {
      * @return boolean Returns true in case of success, false otherwise.
      */
     public function provideResettingLink();
+
+    /**
+     * Get the view.
+     *
+     * @return string Returns the view.
+     */
+    public function getView();
 }

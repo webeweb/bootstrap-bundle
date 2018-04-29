@@ -29,16 +29,16 @@ interface NavigationProviderInterface {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.navigation";
 
     /**
-     * Get the template.
-     *
-     * @return string Returns the template.
-     */
-    public function getTemplate();
-
-    /**
      * Get the tree.
      *
      * @return NavigationTree Returns the tree.
      */
     public function getTree();
+
+    /**
+     * Get the view.
+     *
+     * @return string Returns the view.
+     */
+    public function getView();
 }

@@ -34,9 +34,9 @@ interface DropDownHookProviderInterface {
     public function getItems();
 
     /**
-     * Get the template.
+     * Get the view.
      *
-     * @return string Returns the template.
+     * @return string Returns the view.
      */
-    public function getTemplate();
+    public function getViews();
 }

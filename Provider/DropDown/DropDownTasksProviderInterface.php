@@ -34,9 +34,9 @@ interface DropDownTasksProviderInterface {
     public function getTasks();
 
     /**
-     * Get the template.
+     * Get the view.
      *
-     * @return string Returns the template.
+     * @return string Returns the view.
      */
-    public function getTemplate();
+    public function getView();
 }

@@ -27,9 +27,9 @@ interface BreadcrumbsProviderInterface {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.breadcrumbs";
 
     /**
-     * Get the template.
+     * Get the view.
      *
-     * @return string Returns the template.
+     * @return string Returns the view.
      */
-    public function getTemplate();
+    public function getView();
 }
