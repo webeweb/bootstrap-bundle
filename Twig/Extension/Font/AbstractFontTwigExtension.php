@@ -14,13 +14,13 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Font;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
 
 /**
- * Asbtract font Twig extension.
+ * Abstract font Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Font
  * @abstract
  */
-abstract class AsbtractFontTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractFontTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
      * Constructor.
