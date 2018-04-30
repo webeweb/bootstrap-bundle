@@ -87,7 +87,7 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
         $txt = $this->translator->trans("label.delete", [], "BootstrapBundle");
 
         // Generate the URL.
-        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments"));
+        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments", []));
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
@@ -110,7 +110,7 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
         $txt = $this->translator->trans("label.edit", [], "BootstrapBundle");
 
         // Generate the URL.
-        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments"));
+        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments", []));
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();

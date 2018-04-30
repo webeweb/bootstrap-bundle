@@ -54,7 +54,7 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
         $txt = $this->translator->trans("label.cancel", [], "BootstrapBundle");
 
         // Generate the URL.
-        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments"));
+        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments", []));
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
