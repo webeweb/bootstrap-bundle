@@ -38,7 +38,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * @param string $class The alert class.
      * @return string Returns the Bootstrap alert.
      */
-    final protected function bootstrapAlert($content, $dismissible, $class) {
+    protected function bootstrapAlert($content, $dismissible, $class) {
 
         // Initialize the templates.
         $template = "<div %attributes%>%innerHTML%</div>";
@@ -64,7 +64,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * @param string $content The badge content.
      * @return string Returns the Bootstrap badge.
      */
-    final protected function bootstrapBadge($content) {
+    protected function bootstrapBadge($content) {
 
         // Initialize the template.
         $template = '<span %attributes%>%innerHTML%</span>';
@@ -94,7 +94,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * @param string $icon The button icon.
      * @return string Returns the Bootstrap button.
      */
-    final protected function bootstrapButton($content, $title, $size, $block, $active, $disable, $class, $icon) {
+    protected function bootstrapButton($content, $title, $size, $block, $active, $disable, $class, $icon) {
 
         // Initialize the template.
         $template = "<button %attributes%>%glyphicon%%innerHTML%</button>";
@@ -126,7 +126,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * @param string $name The glyphicon name.
      * @return string Returns the Bootstrap glyphicon.
      */
-    final protected function bootstrapGlyphicon($name, $style) {
+    protected function bootstrapGlyphicon($name, $style) {
 
         // Initialize the template.
         $template = "<span %attributes%></span>";
@@ -150,7 +150,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * @param string $class The label class.
      * @return string Returns the Bootstrap label.
      */
-    final protected function bootstrapLabel($content, $class) {
+    protected function bootstrapLabel($content, $class) {
 
         // Initialize the template.
         $template = "<span %attributes%>%innerHTML%</span>";
@@ -179,7 +179,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * @param string $class The progress bar class.
      * @return string Returns the Bootstrap progress bar.
      */
-    final protected function bootstrapProgressBar($content, $value, $min, $max, $striped, $animated, $class = null) {
+    protected function bootstrapProgressBar($content, $value, $min, $max, $striped, $animated, $class = null) {
 
         // Initialize the template.
         $template = '<div class="progress"><div %attributes%>%innerHTML%</div></div>';

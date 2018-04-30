@@ -59,7 +59,7 @@ abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension 
      * @param array $options The input mask options.
      * @return string Returns the Bootstrap input mask.
      */
-    final protected function bootstrapInputMask($selector, $scriptTag, array $options) {
+    protected function bootstrapInputMask($selector, $scriptTag, array $options) {
 
         // Initialize the template.
         $template = ["$('%selector%').inputmask(%arguments%);"];
