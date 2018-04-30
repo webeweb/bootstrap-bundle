@@ -42,13 +42,16 @@ abstract class AbstractGridTwigExtension extends AbstractBootstrapTwigExtension 
      */
     protected function bootstrapGrid($lg, $md, $sm, $xs, $recopy, $prefix) {
 
-        // Recopy.
+        // Initialize the values.
+        $found  = null;
         $values = [&$lg, &$md, &$sm, &$xs];
+
+        // Handle each value.
         foreach ($values as &$current) {
             if (1 <= $current && $current <= 12) {
                 $found = $current;
             }
-            if (null === $current && true === $recopy && true === (isset($found))) {
+            if (null === $current && true === $recopy && null !== $found) {
                 $current = $found;
             }
         }
