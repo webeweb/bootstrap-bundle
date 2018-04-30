@@ -40,10 +40,11 @@ abstract class AbstractGridTwigExtension extends AbstractBootstrapTwigExtension 
      * @param string $prefix The column prefix.
      * @return string Returns the Bootstrap grid.
      */
-    final protected function bootstrapGrid($lg, $md, $sm, $xs, $recopy, $prefix) {
+    protected function bootstrapGrid($lg, $md, $sm, $xs, $recopy, $prefix) {
 
         // Recopy.
-        foreach ([&$lg, &$md, &$sm, &$xs] as &$current) {
+        $values = [&$lg, &$md, &$sm, &$xs];
+        foreach ($values as &$current) {
             if (1 <= $current && $current <= 12) {
                 $found = $current;
             }
