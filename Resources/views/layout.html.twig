@@ -9,7 +9,7 @@
         {% endblock %}
         <title>{% block bootstrapHeadTitle %}{% endblock %}</title>
     </head>
-    <body{% block bootstrapBodyAttrs %}{% endblock %}>
+    <body{% block bootstrapBodyClasses %}{% endblock %}>
         {% block bootstrapBodyContent %}
         {% endblock %}
         {% include "@Bootstrap/scripts.html.twig" %}
