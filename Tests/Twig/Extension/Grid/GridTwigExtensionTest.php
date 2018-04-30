@@ -74,60 +74,82 @@ final class GridTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $obj = new GridTwigExtension();
 
+        // Nothing
         $arg0 = [];
         $res0 = "";
         $this->assertEquals($res0, $obj->bootstrapOffsetGridFunction($arg0));
 
-        $arg1 = ["lgOffset" => 1];
-        $res1 = "col-lg-offset-1";
-        $this->assertEquals($res1, $obj->bootstrapOffsetGridFunction($arg1));
+        // LG
+        $argLG = ["lgOffset" => 1];
+        $resLG = "col-lg-offset-1";
+        $this->assertEquals($resLG, $obj->bootstrapOffsetGridFunction($argLG));
 
-        $arg1min = ["lgOffset" => 0];
-        $res1min = "";
-        $this->assertEquals($res1min, $obj->bootstrapOffsetGridFunction($arg1min));
+        $argLGcpy = ["lgOffset" => 2, "recopyOffset" => true];
+        $resLGcpy = "col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2";
+        $this->assertEquals($resLGcpy, $obj->bootstrapOffsetGridFunction($argLGcpy));
 
-        $arg1max = ["lgOffset" => 13];
-        $res1max = "";
-        $this->assertEquals($res1max, $obj->bootstrapOffsetGridFunction($arg1max));
+        $argLGmin = ["lgOffset" => 0];
+        $resLGmin = "";
+        $this->assertEquals($resLGmin, $obj->bootstrapOffsetGridFunction($argLGmin));
 
-        $arg2 = ["mdOffset" => 2];
-        $res2 = "col-md-offset-2";
-        $this->assertEquals($res2, $obj->bootstrapOffsetGridFunction($arg2));
+        $argLGmax = ["lgOffset" => 13];
+        $resLGmax = "";
+        $this->assertEquals($resLGmax, $obj->bootstrapOffsetGridFunction($argLGmax));
 
-        $arg2min = ["mdOffset" => 0];
-        $res2min = "";
-        $this->assertEquals($res2min, $obj->bootstrapOffsetGridFunction($arg2min));
+        // MD
+        $argMD = ["mdOffset" => 2];
+        $resMD = "col-md-offset-2";
+        $this->assertEquals($resMD, $obj->bootstrapOffsetGridFunction($argMD));
 
-        $arg2max = ["lgOffset" => 13];
-        $res2max = "";
-        $this->assertEquals($res2max, $obj->bootstrapOffsetGridFunction($arg2max));
+        $argMDcpy = ["mdOffset" => 2, "recopyOffset" => true];
+        $resMDcpy = "col-md-offset-2 col-sm-offset-2 col-xs-offset-2";
+        $this->assertEquals($resMDcpy, $obj->bootstrapOffsetGridFunction($argMDcpy));
 
-        $arg3 = ["smOffset" => 3];
-        $res3 = "col-sm-offset-3";
-        $this->assertEquals($res3, $obj->bootstrapOffsetGridFunction($arg3));
+        $argMDmin = ["mdOffset" => 0];
+        $resMDmin = "";
+        $this->assertEquals($resMDmin, $obj->bootstrapOffsetGridFunction($argMDmin));
 
-        $arg3min = ["smOffset" => 0];
-        $res3min = "";
-        $this->assertEquals($res3min, $obj->bootstrapOffsetGridFunction($arg3min));
+        $argMDmax = ["mgOffset" => 13];
+        $resMDmax = "";
+        $this->assertEquals($resMDmax, $obj->bootstrapOffsetGridFunction($argMDmax));
 
-        $arg3max = ["smOffset" => 13];
-        $res3max = "";
-        $this->assertEquals($res3max, $obj->bootstrapOffsetGridFunction($arg3max));
+        // SM
+        $argSM = ["smOffset" => 3];
+        $resSM = "col-sm-offset-3";
+        $this->assertEquals($resSM, $obj->bootstrapOffsetGridFunction($argSM));
 
-        $arg4 = ["xsOffset" => 4];
-        $res4 = "col-xs-offset-4";
-        $this->assertEquals($res4, $obj->bootstrapOffsetGridFunction($arg4));
+        $argSMcpy = ["smOffset" => 2, "recopyOffset" => true];
+        $resSMcpy = "col-sm-offset-2 col-xs-offset-2";
+        $this->assertEquals($resSMcpy, $obj->bootstrapOffsetGridFunction($argSMcpy));
 
-        $arg4min = ["xsOffset" => 0];
-        $res4min = "";
-        $this->assertEquals($res4min, $obj->bootstrapOffsetGridFunction($arg4min));
+        $argSMmin = ["smOffset" => 0];
+        $resSMmin = "";
+        $this->assertEquals($resSMmin, $obj->bootstrapOffsetGridFunction($argSMmin));
 
-        $arg4max = ["xsOffset" => 13];
-        $res4max = "";
-        $this->assertEquals($res4max, $obj->bootstrapOffsetGridFunction($arg4max));
+        $argSMmax = ["smOffset" => 13];
+        $resSMmax = "";
+        $this->assertEquals($resSMmax, $obj->bootstrapOffsetGridFunction($argSMmax));
 
-        $arg9 = ["lgOffset" => 12, "mdOffset" => 12, "smOffset" => 12, "xsOffset" => 12];
-        $res9 = "col-lg-offset-12 col-md-offset-12 col-sm-offset-12 col-xs-offset-12";
+        // XS
+        $argXS = ["xsOffset" => 4];
+        $resXS = "col-xs-offset-4";
+        $this->assertEquals($resXS, $obj->bootstrapOffsetGridFunction($argXS));
+
+        $argXScpy = ["xsOffset" => 2, "recopyOffset" => true];
+        $resXScpy = "col-xs-offset-2";
+        $this->assertEquals($resXScpy, $obj->bootstrapOffsetGridFunction($argXScpy));
+
+        $argXSmin = ["xsOffset" => 0];
+        $resXSmin = "";
+        $this->assertEquals($resXSmin, $obj->bootstrapOffsetGridFunction($argXSmin));
+
+        $argXSmax = ["xsOffset" => 13];
+        $resXSmax = "";
+        $this->assertEquals($resXSmax, $obj->bootstrapOffsetGridFunction($argXSmax));
+
+        //
+        $arg9 = ["lgOffset" => 6, "mdOffset" => 12, "recopyOffset" => true];
+        $res9 = "col-lg-offset-6 col-md-offset-12 col-sm-offset-12 col-xs-offset-12";
         $this->assertEquals($res9, $obj->bootstrapOffsetGridFunction($arg9));
     }
 
@@ -141,60 +163,82 @@ final class GridTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $obj = new GridTwigExtension();
 
+        // Nothing
         $arg0 = [];
         $res0 = "";
         $this->assertEquals($res0, $obj->bootstrapPullGridFunction($arg0));
 
-        $arg1 = ["lgPull" => 1];
-        $res1 = "col-lg-pull-1";
-        $this->assertEquals($res1, $obj->bootstrapPullGridFunction($arg1));
+        // LG
+        $argLG = ["lgPull" => 1];
+        $resLG = "col-lg-pull-1";
+        $this->assertEquals($resLG, $obj->bootstrapPullGridFunction($argLG));
 
-        $arg1min = ["lgPull" => 0];
-        $res1min = "";
-        $this->assertEquals($res1min, $obj->bootstrapPullGridFunction($arg1min));
+        $argLGcpy = ["lgPull" => 2, "recopyPull" => true];
+        $resLGcpy = "col-lg-pull-2 col-md-pull-2 col-sm-pull-2 col-xs-pull-2";
+        $this->assertEquals($resLGcpy, $obj->bootstrapPullGridFunction($argLGcpy));
 
-        $arg1max = ["lgPull" => 13];
-        $res1max = "";
-        $this->assertEquals($res1max, $obj->bootstrapPullGridFunction($arg1max));
+        $argLGmin = ["lgPull" => 0];
+        $resLGmin = "";
+        $this->assertEquals($resLGmin, $obj->bootstrapPullGridFunction($argLGmin));
 
-        $arg2 = ["mdPull" => 2];
-        $res2 = "col-md-pull-2";
-        $this->assertEquals($res2, $obj->bootstrapPullGridFunction($arg2));
+        $argLGmax = ["lgPull" => 13];
+        $resLGmax = "";
+        $this->assertEquals($resLGmax, $obj->bootstrapPullGridFunction($argLGmax));
 
-        $arg2min = ["mdPull" => 0];
-        $res2min = "";
-        $this->assertEquals($res2min, $obj->bootstrapPullGridFunction($arg2min));
+        // MD
+        $argMD = ["mdPull" => 2];
+        $resMD = "col-md-pull-2";
+        $this->assertEquals($resMD, $obj->bootstrapPullGridFunction($argMD));
 
-        $arg2max = ["lgPull" => 13];
-        $res2max = "";
-        $this->assertEquals($res2max, $obj->bootstrapPullGridFunction($arg2max));
+        $argMDcpy = ["mdPull" => 2, "recopyPull" => true];
+        $resMDcpy = "col-md-pull-2 col-sm-pull-2 col-xs-pull-2";
+        $this->assertEquals($resMDcpy, $obj->bootstrapPullGridFunction($argMDcpy));
 
-        $arg3 = ["smPull" => 3];
-        $res3 = "col-sm-pull-3";
-        $this->assertEquals($res3, $obj->bootstrapPullGridFunction($arg3));
+        $argMDmin = ["mdPull" => 0];
+        $resMDmin = "";
+        $this->assertEquals($resMDmin, $obj->bootstrapPullGridFunction($argMDmin));
 
-        $arg3min = ["smPull" => 0];
-        $res3min = "";
-        $this->assertEquals($res3min, $obj->bootstrapPullGridFunction($arg3min));
+        $argMDmax = ["mgPull" => 13];
+        $resMDmax = "";
+        $this->assertEquals($resMDmax, $obj->bootstrapPullGridFunction($argMDmax));
 
-        $arg3max = ["smPull" => 13];
-        $res3max = "";
-        $this->assertEquals($res3max, $obj->bootstrapPullGridFunction($arg3max));
+        // SM
+        $argSM = ["smPull" => 3];
+        $resSM = "col-sm-pull-3";
+        $this->assertEquals($resSM, $obj->bootstrapPullGridFunction($argSM));
 
-        $arg4 = ["xsPull" => 4];
-        $res4 = "col-xs-pull-4";
-        $this->assertEquals($res4, $obj->bootstrapPullGridFunction($arg4));
+        $argSMcpy = ["smPull" => 2, "recopyPull" => true];
+        $resSMcpy = "col-sm-pull-2 col-xs-pull-2";
+        $this->assertEquals($resSMcpy, $obj->bootstrapPullGridFunction($argSMcpy));
 
-        $arg4min = ["xsPull" => 0];
-        $res4min = "";
-        $this->assertEquals($res4min, $obj->bootstrapPullGridFunction($arg4min));
+        $argSMmin = ["smPull" => 0];
+        $resSMmin = "";
+        $this->assertEquals($resSMmin, $obj->bootstrapPullGridFunction($argSMmin));
 
-        $arg4max = ["xsPull" => 13];
-        $res4max = "";
-        $this->assertEquals($res4max, $obj->bootstrapPullGridFunction($arg4max));
+        $argSMmax = ["smPull" => 13];
+        $resSMmax = "";
+        $this->assertEquals($resSMmax, $obj->bootstrapPullGridFunction($argSMmax));
 
-        $arg9 = ["lgPull" => 12, "mdPull" => 12, "smPull" => 12, "xsPull" => 12];
-        $res9 = "col-lg-pull-12 col-md-pull-12 col-sm-pull-12 col-xs-pull-12";
+        // XS
+        $argXS = ["xsPull" => 4];
+        $resXS = "col-xs-pull-4";
+        $this->assertEquals($resXS, $obj->bootstrapPullGridFunction($argXS));
+
+        $argXScpy = ["xsPull" => 2, "recopyPull" => true];
+        $resXScpy = "col-xs-pull-2";
+        $this->assertEquals($resXScpy, $obj->bootstrapPullGridFunction($argXScpy));
+
+        $argXSmin = ["xsPull" => 0];
+        $resXSmin = "";
+        $this->assertEquals($resXSmin, $obj->bootstrapPullGridFunction($argXSmin));
+
+        $argXSmax = ["xsPull" => 13];
+        $resXSmax = "";
+        $this->assertEquals($resXSmax, $obj->bootstrapPullGridFunction($argXSmax));
+
+        //
+        $arg9 = ["lgPull" => 6, "mdPull" => 12, "recopyPull" => true];
+        $res9 = "col-lg-pull-6 col-md-pull-12 col-sm-pull-12 col-xs-pull-12";
         $this->assertEquals($res9, $obj->bootstrapPullGridFunction($arg9));
     }
 
@@ -208,60 +252,82 @@ final class GridTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $obj = new GridTwigExtension();
 
+        // Nothing
         $arg0 = [];
         $res0 = "";
         $this->assertEquals($res0, $obj->bootstrapPushGridFunction($arg0));
 
-        $arg1 = ["lgPush" => 1];
-        $res1 = "col-lg-push-1";
-        $this->assertEquals($res1, $obj->bootstrapPushGridFunction($arg1));
+        // LG
+        $argLG = ["lgPush" => 1];
+        $resLG = "col-lg-push-1";
+        $this->assertEquals($resLG, $obj->bootstrapPushGridFunction($argLG));
 
-        $arg1min = ["lgPush" => 0];
-        $res1min = "";
-        $this->assertEquals($res1min, $obj->bootstrapPushGridFunction($arg1min));
+        $argLGcpy = ["lgPush" => 2, "recopyPush" => true];
+        $resLGcpy = "col-lg-push-2 col-md-push-2 col-sm-push-2 col-xs-push-2";
+        $this->assertEquals($resLGcpy, $obj->bootstrapPushGridFunction($argLGcpy));
 
-        $arg1max = ["lgPush" => 13];
-        $res1max = "";
-        $this->assertEquals($res1max, $obj->bootstrapPushGridFunction($arg1max));
+        $argLGmin = ["lgPush" => 0];
+        $resLGmin = "";
+        $this->assertEquals($resLGmin, $obj->bootstrapPushGridFunction($argLGmin));
 
-        $arg2 = ["mdPush" => 2];
-        $res2 = "col-md-push-2";
-        $this->assertEquals($res2, $obj->bootstrapPushGridFunction($arg2));
+        $argLGmax = ["lgPush" => 13];
+        $resLGmax = "";
+        $this->assertEquals($resLGmax, $obj->bootstrapPushGridFunction($argLGmax));
 
-        $arg2min = ["mdPush" => 0];
-        $res2min = "";
-        $this->assertEquals($res2min, $obj->bootstrapPushGridFunction($arg2min));
+        // MD
+        $argMD = ["mdPush" => 2];
+        $resMD = "col-md-push-2";
+        $this->assertEquals($resMD, $obj->bootstrapPushGridFunction($argMD));
 
-        $arg2max = ["lgPush" => 13];
-        $res2max = "";
-        $this->assertEquals($res2max, $obj->bootstrapPushGridFunction($arg2max));
+        $argMDcpy = ["mdPush" => 2, "recopyPush" => true];
+        $resMDcpy = "col-md-push-2 col-sm-push-2 col-xs-push-2";
+        $this->assertEquals($resMDcpy, $obj->bootstrapPushGridFunction($argMDcpy));
 
-        $arg3 = ["smPush" => 3];
-        $res3 = "col-sm-push-3";
-        $this->assertEquals($res3, $obj->bootstrapPushGridFunction($arg3));
+        $argMDmin = ["mdPush" => 0];
+        $resMDmin = "";
+        $this->assertEquals($resMDmin, $obj->bootstrapPushGridFunction($argMDmin));
 
-        $arg3min = ["smPush" => 0];
-        $res3min = "";
-        $this->assertEquals($res3min, $obj->bootstrapPushGridFunction($arg3min));
+        $argMDmax = ["mgPush" => 13];
+        $resMDmax = "";
+        $this->assertEquals($resMDmax, $obj->bootstrapPushGridFunction($argMDmax));
 
-        $arg3max = ["smPush" => 13];
-        $res3max = "";
-        $this->assertEquals($res3max, $obj->bootstrapPushGridFunction($arg3max));
+        // SM
+        $argSM = ["smPush" => 3];
+        $resSM = "col-sm-push-3";
+        $this->assertEquals($resSM, $obj->bootstrapPushGridFunction($argSM));
 
-        $arg4 = ["xsPush" => 4];
-        $res4 = "col-xs-push-4";
-        $this->assertEquals($res4, $obj->bootstrapPushGridFunction($arg4));
+        $argSMcpy = ["smPush" => 2, "recopyPush" => true];
+        $resSMcpy = "col-sm-push-2 col-xs-push-2";
+        $this->assertEquals($resSMcpy, $obj->bootstrapPushGridFunction($argSMcpy));
 
-        $arg4min = ["xsPush" => 0];
-        $res4min = "";
-        $this->assertEquals($res4min, $obj->bootstrapPushGridFunction($arg4min));
+        $argSMmin = ["smPush" => 0];
+        $resSMmin = "";
+        $this->assertEquals($resSMmin, $obj->bootstrapPushGridFunction($argSMmin));
 
-        $arg4max = ["xsPush" => 13];
-        $res4max = "";
-        $this->assertEquals($res4max, $obj->bootstrapPushGridFunction($arg4max));
+        $argSMmax = ["smPush" => 13];
+        $resSMmax = "";
+        $this->assertEquals($resSMmax, $obj->bootstrapPushGridFunction($argSMmax));
 
-        $arg9 = ["lgPush" => 12, "mdPush" => 12, "smPush" => 12, "xsPush" => 12];
-        $res9 = "col-lg-push-12 col-md-push-12 col-sm-push-12 col-xs-push-12";
+        // XS
+        $argXS = ["xsPush" => 4];
+        $resXS = "col-xs-push-4";
+        $this->assertEquals($resXS, $obj->bootstrapPushGridFunction($argXS));
+
+        $argXScpy = ["xsPush" => 2, "recopyPush" => true];
+        $resXScpy = "col-xs-push-2";
+        $this->assertEquals($resXScpy, $obj->bootstrapPushGridFunction($argXScpy));
+
+        $argXSmin = ["xsPush" => 0];
+        $resXSmin = "";
+        $this->assertEquals($resXSmin, $obj->bootstrapPushGridFunction($argXSmin));
+
+        $argXSmax = ["xsPush" => 13];
+        $resXSmax = "";
+        $this->assertEquals($resXSmax, $obj->bootstrapPushGridFunction($argXSmax));
+
+        //
+        $arg9 = ["lgPush" => 6, "mdPush" => 12, "recopyPush" => true];
+        $res9 = "col-lg-push-6 col-md-push-12 col-sm-push-12 col-xs-push-12";
         $this->assertEquals($res9, $obj->bootstrapPushGridFunction($arg9));
     }
 
@@ -275,60 +341,82 @@ final class GridTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
         $obj = new GridTwigExtension();
 
+        // Nothing
         $arg0 = [];
         $res0 = "";
         $this->assertEquals($res0, $obj->bootstrapStackedGridFunction($arg0));
 
-        $arg1 = ["lg" => 1];
-        $res1 = "col-lg-1";
-        $this->assertEquals($res1, $obj->bootstrapStackedGridFunction($arg1));
+        // LG
+        $argLG = ["lg" => 1];
+        $resLG = "col-lg-1";
+        $this->assertEquals($resLG, $obj->bootstrapStackedGridFunction($argLG));
 
-        $arg1min = ["lg" => 0];
-        $res1min = "";
-        $this->assertEquals($res1min, $obj->bootstrapStackedGridFunction($arg1min));
+        $argLGcpy = ["lg" => 2, "recopy" => true];
+        $resLGcpy = "col-lg-2 col-md-2 col-sm-2 col-xs-2";
+        $this->assertEquals($resLGcpy, $obj->bootstrapStackedGridFunction($argLGcpy));
 
-        $arg1max = ["lg" => 13];
-        $res1max = "";
-        $this->assertEquals($res1max, $obj->bootstrapStackedGridFunction($arg1max));
+        $argLGmin = ["lg" => 0];
+        $resLGmin = "";
+        $this->assertEquals($resLGmin, $obj->bootstrapStackedGridFunction($argLGmin));
 
-        $arg2 = ["md" => 2];
-        $res2 = "col-md-2";
-        $this->assertEquals($res2, $obj->bootstrapStackedGridFunction($arg2));
+        $argLGmax = ["lg" => 13];
+        $resLGmax = "";
+        $this->assertEquals($resLGmax, $obj->bootstrapStackedGridFunction($argLGmax));
 
-        $arg2min = ["md" => 0];
-        $res2min = "";
-        $this->assertEquals($res2min, $obj->bootstrapStackedGridFunction($arg2min));
+        // MD
+        $argMD = ["md" => 2];
+        $resMD = "col-md-2";
+        $this->assertEquals($resMD, $obj->bootstrapStackedGridFunction($argMD));
 
-        $arg2max = ["lg" => 13];
-        $res2max = "";
-        $this->assertEquals($res2max, $obj->bootstrapStackedGridFunction($arg2max));
+        $argMDcpy = ["md" => 2, "recopy" => true];
+        $resMDcpy = "col-md-2 col-sm-2 col-xs-2";
+        $this->assertEquals($resMDcpy, $obj->bootstrapStackedGridFunction($argMDcpy));
 
-        $arg3 = ["sm" => 3];
-        $res3 = "col-sm-3";
-        $this->assertEquals($res3, $obj->bootstrapStackedGridFunction($arg3));
+        $argMDmin = ["md" => 0];
+        $resMDmin = "";
+        $this->assertEquals($resMDmin, $obj->bootstrapStackedGridFunction($argMDmin));
 
-        $arg3min = ["sm" => 0];
-        $res3min = "";
-        $this->assertEquals($res3min, $obj->bootstrapStackedGridFunction($arg3min));
+        $argMDmax = ["mg" => 13];
+        $resMDmax = "";
+        $this->assertEquals($resMDmax, $obj->bootstrapStackedGridFunction($argMDmax));
 
-        $arg3max = ["sm" => 13];
-        $res3max = "";
-        $this->assertEquals($res3max, $obj->bootstrapStackedGridFunction($arg3max));
+        // SM
+        $argSM = ["sm" => 3];
+        $resSM = "col-sm-3";
+        $this->assertEquals($resSM, $obj->bootstrapStackedGridFunction($argSM));
 
-        $arg4 = ["xs" => 4];
-        $res4 = "col-xs-4";
-        $this->assertEquals($res4, $obj->bootstrapStackedGridFunction($arg4));
+        $argSMcpy = ["sm" => 2, "recopy" => true];
+        $resSMcpy = "col-sm-2 col-xs-2";
+        $this->assertEquals($resSMcpy, $obj->bootstrapStackedGridFunction($argSMcpy));
 
-        $arg4min = ["xs" => 0];
-        $res4min = "";
-        $this->assertEquals($res4min, $obj->bootstrapStackedGridFunction($arg4min));
+        $argSMmin = ["sm" => 0];
+        $resSMmin = "";
+        $this->assertEquals($resSMmin, $obj->bootstrapStackedGridFunction($argSMmin));
 
-        $arg4max = ["xs" => 13];
-        $res4max = "";
-        $this->assertEquals($res4max, $obj->bootstrapStackedGridFunction($arg4max));
+        $argSMmax = ["sm" => 13];
+        $resSMmax = "";
+        $this->assertEquals($resSMmax, $obj->bootstrapStackedGridFunction($argSMmax));
 
-        $arg9 = ["lg" => 12, "md" => 12, "sm" => 12, "xs" => 12];
-        $res9 = "col-lg-12 col-md-12 col-sm-12 col-xs-12";
+        // XS
+        $argXS = ["xs" => 4];
+        $resXS = "col-xs-4";
+        $this->assertEquals($resXS, $obj->bootstrapStackedGridFunction($argXS));
+
+        $argXScpy = ["xs" => 2, "recopy" => true];
+        $resXScpy = "col-xs-2";
+        $this->assertEquals($resXScpy, $obj->bootstrapStackedGridFunction($argXScpy));
+
+        $argXSmin = ["xs" => 0];
+        $resXSmin = "";
+        $this->assertEquals($resXSmin, $obj->bootstrapStackedGridFunction($argXSmin));
+
+        $argXSmax = ["xs" => 13];
+        $resXSmax = "";
+        $this->assertEquals($resXSmax, $obj->bootstrapStackedGridFunction($argXSmax));
+
+        //
+        $arg9 = ["lg" => 6, "md" => 12, "recopy" => true];
+        $res9 = "col-lg-6 col-md-12 col-sm-12 col-xs-12";
         $this->assertEquals($res9, $obj->bootstrapStackedGridFunction($arg9));
     }
 
@@ -346,8 +434,8 @@ final class GridTwigExtensionTest extends PHPUnit_Framework_TestCase {
         $res0 = "";
         $this->assertEquals($res0, $obj->bootstrapGridFunction($arg0));
 
-        $arg9 = ["lg" => 12, "mdOffset" => 12, "smPull" => 12, "xsPush" => 12];
-        $res9 = "col-lg-12 col-md-offset-12 col-xs-push-12 col-sm-pull-12";
+        $arg9 = ["lg" => 12, "recopy" => true, "mdOffset" => 12, "recopyOffset" => true, "smPull" => 12, "recopyPull" => true, "xsPush" => 12, "recopyPush" => true];
+        $res9 = "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-md-offset-12 col-sm-offset-12 col-xs-offset-12 col-xs-push-12 col-sm-pull-12 col-xs-pull-12";
         $this->assertEquals($res9, $obj->bootstrapGridFunction($arg9));
     }
 

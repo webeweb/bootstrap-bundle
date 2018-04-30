@@ -30,21 +30,31 @@ abstract class AbstractGridTwigExtension extends AbstractBootstrapTwigExtension 
     }
 
     /**
-     * Displays a Bootstrap column.
+     * Displays a Bootstrap grid.
      *
      * @param string $lg The large column size.
      * @param string $md The medium column size.
      * @param string $sm The small column size.
      * @param string $xs The extra-small column size.
+     * @param string $recopy Recopy ?
      * @param string $prefix The column prefix.
      * @return string Returns the Bootstrap grid.
      */
-    final protected function bootstrapGrid($lg, $md, $sm, $xs, $prefix = "") {
+    final protected function bootstrapGrid($lg, $md, $sm, $xs, $recopy, $prefix) {
+
+        // Recopy.
+        foreach ([&$lg, &$md, &$sm, &$xs] as &$current) {
+            if (1 <= $current && $current <= 12) {
+                $found = $current;
+            }
+            if (null === $current && true === $recopy && true === (isset($found))) {
+                $current = $found;
+            }
+        }
 
         // Initialize the columns.
         $columns = [];
 
-        // Stacked.
         $columns[] = 1 <= $lg && $lg <= 12 ? "col-lg-" . $prefix . $lg : null;
         $columns[] = 1 <= $md && $md <= 12 ? "col-md-" . $prefix . $md : null;
         $columns[] = 1 <= $sm && $sm <= 12 ? "col-sm-" . $prefix . $sm : null;
