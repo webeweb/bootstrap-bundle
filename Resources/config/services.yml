@@ -104,6 +104,11 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bundle.bootstrapbundle.twig.extension.typography.bold:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bundle.bootstrapbundle.twig.extension.typography.deleted:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension
         tags:
@@ -135,12 +140,7 @@ services:
             - { name: "twig.extension" }
 
     webeweb.bundle.bootstrapbundle.twig.extension.typography.strikethrough:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bundle.bootstrapbundle.twig.extension.typography.strong:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrongTypographyTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 

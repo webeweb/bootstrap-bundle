@@ -15,19 +15,19 @@ use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Strong typography Twig extension.
+ * Bold typography Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  */
-class StrongTypographyTwigExtension extends AbstractTypographyTwigExtension {
+class BoldTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.strong";
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.bold";
 
     /**
      * Constructor.
@@ -37,13 +37,13 @@ class StrongTypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap strong text.
+     * Displays a Bootstrap bold text.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap strong text.
+     * @return string Returns the Bootstrap bold text.
      */
-    public function bootstrapStrongFunction(array $args = []) {
-        return $this->bootstrapStrong(ArrayUtility::get($args, "content"));
+    public function bootstrapBoldFunction(array $args = []) {
+        return $this->bootstrapBold(ArrayUtility::get($args, "content"));
     }
 
     /**
@@ -53,7 +53,7 @@ class StrongTypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapStrong", [$this, "bootstrapStrongFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapBold", [$this, "bootstrapBoldFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

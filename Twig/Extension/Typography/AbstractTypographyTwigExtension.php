@@ -31,6 +31,16 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     }
 
     /**
+     * Displays a Bootstrap bold text.
+     *
+     * @param string $content The bold text content.
+     * @return string  Returns the Bootstrap bold text.
+     */
+    protected function bootstrapBold($content) {
+        return $this->bootstrapSimpleTag("strong", $content);
+    }
+
+    /**
      * Displays a Bootstrap deleted text.
      *
      * @param string $content The deleted text content.
@@ -116,16 +126,6 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      */
     protected function bootstrapSmall($content) {
         return $this->bootstrapSimpleTag("small", $content);
-    }
-
-    /**
-     * Displays a Bootstrap bold text.
-     *
-     * @param string $content The bold text content.
-     * @return string  Returns the Bootstrap bold text.
-     */
-    protected function bootstrapStrong($content) {
-        return $this->bootstrapSimpleTag("strong", $content);
     }
 
     /**

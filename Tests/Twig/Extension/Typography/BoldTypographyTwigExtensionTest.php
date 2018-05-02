@@ -14,16 +14,16 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 
 /**
- * Strike through typography Twig extension test.
+ * Bold typography Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class StrikeThroughTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class BoldTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,35 +32,35 @@ final class StrikeThroughTypographyTwigExtensionTest extends PHPUnit_Framework_T
      */
     public function testGetFunctions() {
 
-        $obj = new StrikeThroughTypographyTwigExtension();
+        $obj = new BoldTypographyTwigExtension();
 
         $res = $obj->getFunctions();
 
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapStrikeThrough", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapStrikeThroughFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapBold", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapBoldFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapStrikeThroughFunction() method.
+     * Tests the bootstrapBoldFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapSFunction() {
+    public function testBootstrapBoldFunction() {
 
-        $obj = new StrikeThroughTypographyTwigExtension();
+        $obj = new BoldTypographyTwigExtension();
 
         $arg0 = [];
-        $res0 = "<s></s>";
-        $this->assertEquals($res0, $obj->bootstrapStrikeThroughFunction($arg0));
+        $res0 = "<strong></strong>";
+        $this->assertEquals($res0, $obj->bootstrapBoldFunction($arg0));
 
         $arg9 = ["content" => "content"];
-        $res9 = "<s>content</s>";
-        $this->assertEquals($res9, $obj->bootstrapStrikeThroughFunction($arg9));
+        $res9 = "<strong>content</strong>";
+        $this->assertEquals($res9, $obj->bootstrapBoldFunction($arg9));
     }
 
 }

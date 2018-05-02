@@ -15,12 +15,12 @@ use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Strike through typography Twig extension.
+ * Strikethrough typography Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Typography
  */
-class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigExtension {
+class StrikethroughTypographyTwigExtension extends AbstractTypographyTwigExtension {
 
     /**
      * Service name.
@@ -53,7 +53,7 @@ class StrikeThroughTypographyTwigExtension extends AbstractTypographyTwigExtensi
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapStrikeThrough", [$this, "bootstrapStrikeThroughFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapStrikethrough", [$this, "bootstrapStrikethroughFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

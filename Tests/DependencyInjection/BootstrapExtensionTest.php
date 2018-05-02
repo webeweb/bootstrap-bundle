@@ -31,14 +31,14 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikeThroughTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrongTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
 
 /**
@@ -101,14 +101,14 @@ final class BootstrapExtensionTest extends AbstractFrameworkTestCase {
         $this->assertInstanceOf(ButtonTableTwigExtension::class, $this->containerBuilder->get(ButtonTableTwigExtension::SERVICE_NAME));
 
         // Typography
+        $this->assertInstanceOf(BoldTypographyTwigExtension::class, $this->containerBuilder->get(BoldTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $this->containerBuilder->get(DeletedTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(HeadingTypographyTwigExtension::class, $this->containerBuilder->get(HeadingTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(InsertedTypographyTwigExtension::class, $this->containerBuilder->get(InsertedTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ItalicTypographyTwigExtension::class, $this->containerBuilder->get(ItalicTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MarkedTypographyTwigExtension::class, $this->containerBuilder->get(MarkedTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SmallTypographyTwigExtension::class, $this->containerBuilder->get(SmallTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrikeThroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikeThroughTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrongTypographyTwigExtension::class, $this->containerBuilder->get(StrongTypographyTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(StrikethroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikethroughTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $this->containerBuilder->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
     }
 
