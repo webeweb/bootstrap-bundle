@@ -9,31 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\Navigation;
-
-use WBW\Bundle\BootstrapBundle\Navigation\Tree\NavigationTree;
+namespace WBW\Bundle\BootstrapBundle\Provider;
 
 /**
- * Navigation provider interface.
+ * Breadcrumbs provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\Navigation
+ * @package WBW\Bundle\BootstrapBundle\Provider
  */
-interface NavigationProviderInterface {
+interface BreadcrumbsProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.navigation";
-
-    /**
-     * Get the tree.
-     *
-     * @return NavigationTree Returns the tree.
-     */
-    public function getTree();
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.breadcrumbs";
 
     /**
      * Get the view.

@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\User;
+namespace WBW\Bundle\BootstrapBundle\Provider;
 
 /**
  * User info provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\User
+ * @package WBW\Bundle\BootstrapBundle\Provider
  */
 interface UserInfoProviderInterface {
 

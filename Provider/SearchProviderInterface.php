@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\Search;
+namespace WBW\Bundle\BootstrapBundle\Provider;
 
 /**
  * Search provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\Search
+ * @package WBW\Bundle\BootstrapBundle\Provider
  */
 interface SearchProviderInterface {
 

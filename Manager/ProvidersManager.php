@@ -12,15 +12,15 @@
 namespace WBW\Bundle\BootstrapBundle\Manager;
 
 use Twig_Environment;
-use WBW\Bundle\BootstrapBundle\Provider\Application\ApplicationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Breadcrumbs\BreadcrumbsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownHookProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownNotificationsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDown\DropDownTasksProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Footer\FooterProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Navigation\NavigationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Search\SearchProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\User\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ApplicationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\BreadcrumbsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\DropDownHookProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\DropDownNotificationsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\DropDownTasksProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\FooterProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\NavigationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\SearchProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\UserInfoProviderInterface;
 
 /**
  * Providers manager.

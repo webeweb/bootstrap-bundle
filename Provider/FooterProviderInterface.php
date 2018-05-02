@@ -9,29 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\DropDown;
+namespace WBW\Bundle\BootstrapBundle\Provider;
 
 /**
- * Drop down "Notifications" provider interface.
+ * Footer provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\DropDown
+ * @package WBW\Bundle\BootstrapBundle\Provider
  */
-interface DropDownNotificationsProviderInterface {
+interface FooterProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.dropdownnotifications";
-
-    /**
-     * Get the notifications.
-     *
-     * @return array Returns the notifications.
-     */
-    public function getNotifications();
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.footer";
 
     /**
      * Get the view.
