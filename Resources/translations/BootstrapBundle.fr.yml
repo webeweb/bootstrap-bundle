@@ -4,3 +4,18 @@ label:
     delete: "Supprimer"
     edit:   "Editer"
     submit: "Valider"
+
+navigation:
+    node:
+        action:
+            edit:   "Editer"
+            export: "Exporter"
+            import: "Importer"
+            index:  "Lister"
+            new:    "Nouveau"
+        dashboard:  "Tableau de bord"
+        event:      "Evènements"
+        parameters: "Paramètres"
+        settings:   "Réglages"
+        user:       "Utilisateur"
+        usersGroup: "Groupe d'utilisateurs"
