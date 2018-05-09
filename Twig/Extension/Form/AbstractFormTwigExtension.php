@@ -55,21 +55,22 @@ abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension 
      * Displays a Bootstrap input mask.
      *
      * @param string $selector The input mask selector.
+     * @param string $mask The input mask.
      * @param boolean $scriptTag Script tag ?
      * @param array $options The input mask options.
      * @return string Returns the Bootstrap input mask.
      */
-    protected function bootstrapInputMask($selector, $scriptTag, array $options) {
+    protected function bootstrapInputMask($selector, $mask, $scriptTag, array $options) {
 
         // Initialize the template.
-        $template = ["$('%selector%').inputmask(%arguments%);"];
+        $template = ["$('%selector%').inputmask(\"%mask%\",%arguments%);"];
         if (true === $scriptTag) {
             array_unshift($template, "<script type=\"text/javascript\">");
             array_push($template, "</script>");
         }
 
         // Return the HTML.
-        return StringUtility::replace(implode("\n", $template), ["%selector%", "%arguments%"], [$selector, json_encode($options)]);
+        return StringUtility::replace(implode("\n", $template), ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
     }
 
 }

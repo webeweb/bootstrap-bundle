@@ -48,7 +48,7 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap input mask.
      */
     public function bootstrapInputMaskFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), ArrayUtility::get($args, "opts", []));
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "mask", ""), ArrayUtility::get($args, "scriptTag", false), ArrayUtility::get($args, "opts", []));
     }
 
     /**
@@ -58,7 +58,8 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap input mask "Phone number".
      */
     public function bootstrapInputMaskPhoneNumberFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, "99 99 99 99 99"));
+        $defaultMask = "99 99 99 99 99";
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
@@ -68,7 +69,8 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap input mask "SIRET number".
      */
     public function bootstrapInputMaskSIRETNumberFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, "999 999 999 99999"));
+        $defaultMask = "999 999 999 99999";
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
@@ -78,7 +80,8 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap input mask "Social security number".
      */
     public function bootstrapInputMaskSocialSecurityNumberFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, "9 99 99 99 999 999 99"));
+        $defaultMask = "9 99 99 99 999 999 99";
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
@@ -88,7 +91,8 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap input mask "Time 12 hour".
      */
     public function bootstrapInputMaskTime12Function(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, "hh:mm t"), ["alias" => "time12", "hourFormat" => "12", "placeholder" => "__:__ _m"]));
+        $defaultMask = "hh:mm t";
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, null), ["hourFormat" => "12", "placeholder" => "__:__ _m"]));
     }
 
     /**
@@ -98,7 +102,8 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap input mask "Time 24 hour".
      */
     public function bootstrapInputMaskTime24Function(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, "hh:mm"), ["alias" => "time24", "hourFormat" => "24", "placeholder" => "__:__ _m"]));
+        $defaultMask = "hh:mm";
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, null), ["hourFormat" => "24", "placeholder" => "__:__"]));
     }
 
     /**
@@ -108,7 +113,8 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
      * @return string Returns the Bootstrap input mask "VAT number".
      */
     public function bootstrapInputMaskVATNumberFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, "**999 999 999 99"));
+        $defaultMask = "**999 999 999 99";
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
@@ -142,7 +148,6 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
 
         $options["autoUnmask"]         = ArrayUtility::get($options, "autoUnmask", true);
         $options["removeMaskOnSubmit"] = ArrayUtility::get($options, "removeMaskOnSubmit", true);
-        $options["mask"]               = ArrayUtility::get($options, "mask", $defaultMask);
         if (null !== $defaultMask) {
             $options["placeholder"] = preg_replace("/[^\ ][.]*/", "_", $defaultMask);
         }
