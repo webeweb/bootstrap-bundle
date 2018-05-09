@@ -44,33 +44,33 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapPhoneNumberInputMask", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapPhoneNumberInputMaskFunction"], $res[1]->getCallable());
+        $this->assertEquals("bootstrapInputMaskPhoneNumber", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapInputMaskPhoneNumberFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapSIRETNumberInputMask", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapSIRETNumberInputMaskFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapInputMaskSIRETNumber", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapInputMaskSIRETNumberFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("bootstrapSocialSecurityNumberInputMask", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapSocialSecurityNumberInputMaskFunction"], $res[3]->getCallable());
+        $this->assertEquals("bootstrapInputMaskSocialSecurityNumber", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapInputMaskSocialSecurityNumberFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("bootstrapTime12InputMask", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapTime12InputMaskFunction"], $res[4]->getCallable());
+        $this->assertEquals("bootstrapInputMaskTime12", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapInputMaskTime12Function"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("bootstrapTime24InputMask", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapTime24InputMaskFunction"], $res[5]->getCallable());
+        $this->assertEquals("bootstrapInputMaskTime24", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapInputMaskTime24Function"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
-        $this->assertEquals("bootstrapVATNumberInputMask", $res[6]->getName());
-        $this->assertEquals([$obj, "bootstrapVATNumberInputMaskFunction"], $res[6]->getCallable());
+        $this->assertEquals("bootstrapInputMaskVATNumber", $res[6]->getName());
+        $this->assertEquals([$obj, "bootstrapInputMaskVATNumberFunction"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
     }
 
@@ -95,93 +95,93 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
       /**
-     * Tests the bootstrapPhoneNumberInputMaskFunction() method.
+     * Tests the bootstrapInputMaskPhoneNumberFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapPhoneNumberInputMaskFunction() {
+    public function testBootstrapInputMaskPhoneNumberFunction() {
 
         $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"99 99 99 99 99\",\"placeholder\":\"__ __ __ __ __\"});";
-        $this->assertEquals($res, $obj->bootstrapPhoneNumberInputMaskFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapInputMaskPhoneNumberFunction($arg));
     }
 
     /**
-     * Tests the bootstrapSIRETNumberInputMaskFunction() method.
+     * Tests the bootstrapInputMaskSIRETNumberFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapSIRETNumberInputMaskFunction() {
+    public function testBootstrapInputMaskSIRETNumberFunction() {
 
         $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"999 999 999 99999\",\"placeholder\":\"___ ___ ___ _____\"});";
-        $this->assertEquals($res, $obj->bootstrapSIRETNumberInputMaskFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapInputMaskSIRETNumberFunction($arg));
     }
 
     /**
-     * Tests the bootstrapTime12InputMaskFunction() method.
+     * Tests the bootstrapInputMaskTime12Function() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapTime12InputMaskFunction() {
+    public function testBootstrapInputMaskTime12Function() {
 
         $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"hh:mm t\",\"placeholder\":\"__:__ _m\",\"alias\":\"time12\",\"hourFormat\":\"12\"});";
-        $this->assertEquals($res, $obj->bootstrapTime12InputMaskFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapInputMaskTime12Function($arg));
     }
 
     /**
-     * Tests the bootstrapTime24InputMaskFunction() method.
+     * Tests the bootstrapInputMaskTime24Function() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapTime24InputMaskFunction() {
+    public function testBootstrapInputMaskTime24Function() {
 
         $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"hh:mm\",\"placeholder\":\"__:__ _m\",\"alias\":\"time24\",\"hourFormat\":\"24\"});";
-        $this->assertEquals($res, $obj->bootstrapTime24InputMaskFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapInputMaskTime24Function($arg));
     }
 
     /**
-     * Tests the bootstrapSocialSecurityNumberInputMaskFunction() method.
+     * Tests the bootstrapInputMaskSocialSecurityNumberFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapSocialSecurityNumberInputMaskFunction() {
+    public function testBootstrapInputMaskSocialSecurityNumberFunction() {
 
         $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"9 99 99 99 999 999 99\",\"placeholder\":\"_ __ __ __ ___ ___ __\"});";
-        $this->assertEquals($res, $obj->bootstrapSocialSecurityNumberInputMaskFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapInputMaskSocialSecurityNumberFunction($arg));
     }
 
     /**
-     * Tests the bootstrapVATNumberInputMaskFunction() method.
+     * Tests the bootstrapInputMaskVATNumberFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapVATNumberInputMaskFunction() {
+    public function testBootstrapInputMaskVATNumberFunction() {
 
         $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask({\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"mask\":\"**999 999 999 99\",\"placeholder\":\"_____ ___ ___ __\"});";
-        $this->assertEquals($res, $obj->bootstrapVATNumberInputMaskFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapInputMaskVATNumberFunction($arg));
     }
 
 }
