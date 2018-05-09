@@ -82,10 +82,30 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
     }
 
     /**
+     * Displays a Bootstrap Time 12 hour input mask.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap time 12 hour input mask.
+     */
+    public function bootstrapTime12InputMaskFunction(array $args = []) {
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, "hh:mm t"), ["alias" => "time12", "hourFormat" => "12", "placeholder" => "__:__ _m"]));
+    }
+
+    /**
+     * Displays a Bootstrap Time 24 hour input mask.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap time 24 hour input mask.
+     */
+    public function bootstrapTime24InputMaskFunction(array $args = []) {
+        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, "hh:mm"), ["alias" => "time24", "hourFormat" => "24", "placeholder" => "__:__ _m"]));
+    }
+
+    /**
      * Displays a Bootstrap VAT number input mask.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap AT number input mask.
+     * @return string Returns the Bootstrap VAT number input mask.
      */
     public function bootstrapVATNumberInputMaskFunction(array $args = []) {
         return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, "**999 999 999 99"));
@@ -102,6 +122,8 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
             new Twig_SimpleFunction("bootstrapPhoneNumberInputMask", [$this, "bootstrapPhoneNumberInputMaskFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapSIRETNumberInputMask", [$this, "bootstrapSIRETNumberInputMaskFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapSocialSecurityNumberInputMask", [$this, "bootstrapSocialSecurityNumberInputMaskFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapTime12InputMask", [$this, "bootstrapTime12InputMaskFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapTime24InputMask", [$this, "bootstrapTime24InputMaskFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapVATNumberInputMask", [$this, "bootstrapVATNumberInputMaskFunction"], ["is_safe" => ["html"]]),
         ];
     }
