@@ -78,13 +78,13 @@ services:
 
     webeweb.bundle.bootstrapbundle.twig.extension.form.button:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension
-        arguments: ["@router", "@translator"]
+        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 
     webeweb.bundle.bootstrapbundle.twig.extension.form.inputmask:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension
-        arguments: ["@router", "@translator"]
+        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 
@@ -100,7 +100,7 @@ services:
 
     webeweb.bundle.bootstrapbundle.twig.extension.table.button:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension
-        arguments: ["@router", "@translator"]
+        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 
