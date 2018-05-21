@@ -34,11 +34,10 @@ class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
     /**
      * Constructor.
      *
-     * @param RouterInterface $router The router.
      * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(RouterInterface $router, TranslatorInterface $translator) {
-        parent::__construct($router, $translator);
+    public function __construct(TranslatorInterface $translator) {
+        parent::__construct($translator);
     }
 
     /**

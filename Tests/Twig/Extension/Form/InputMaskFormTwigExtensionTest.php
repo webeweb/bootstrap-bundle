@@ -32,7 +32,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $res = $obj->getFunctions();
 
@@ -82,7 +82,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapInputMaskFunction() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $arg0 = ["selector" => "#selector"];
         $res0 = "$('#selector').inputmask(\"\",[]);";
@@ -102,7 +102,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapInputMaskPhoneNumberFunction() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"99 99 99 99 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"__ __ __ __ __\"});";
@@ -117,7 +117,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapInputMaskSIRETNumberFunction() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"999 999 999 99999\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"___ ___ ___ _____\"});";
@@ -132,7 +132,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapInputMaskTime12Function() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"hh:mm t\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"hourFormat\":\"12\",\"placeholder\":\"__:__ _m\"});";
@@ -147,7 +147,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapInputMaskTime24Function() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"hh:mm\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"hourFormat\":\"24\",\"placeholder\":\"__:__\"});";
@@ -162,7 +162,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapInputMaskSocialSecurityNumberFunction() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"9 99 99 99 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_ __ __ __ ___ ___ __\"});";
@@ -177,7 +177,7 @@ final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapInputMaskVATNumberFunction() {
 
-        $obj = new InputMaskFormTwigExtension($this->router, $this->translator);
+        $obj = new InputMaskFormTwigExtension($this->translator);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"**999 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_____ ___ ___ __\"});";
