@@ -35,11 +35,10 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
     /**
      * Constructor.
      *
-     * @param RouterInterface $router The router.
      * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(RouterInterface $router, TranslatorInterface $translator) {
-        parent::__construct($router, $translator);
+    public function __construct(TranslatorInterface $translator) {
+        parent::__construct($translator);
     }
 
     /**
@@ -53,15 +52,12 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
         // Translate the label.
         $txt = $this->translator->trans("label.cancel", [], "BootstrapBundle");
 
-        // Generate the URL.
-        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments", []));
-
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
         $but = $ext->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "remove"]);
 
         // Return the HTML.
-        return $ext->bootstrapButtonLinkFilter($but, $url);
+        return $ext->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -73,7 +69,7 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
     public function bootstrapDefaultFormButtonsFunction(array $args = []) {
 
         // Initialize the buttons.
-        $cancelButton = $this->bootstrapCancelFormButtonFunction(["route" => ArrayUtility::get($args, "cancel_route"), "cancel_arguments" => ArrayUtility::get($args, "cancel_arguments")]);
+        $cancelButton = $this->bootstrapCancelFormButtonFunction(["href" => ArrayUtility::get($args, "cancel_href")]);
         $submitButton = $this->bootstrapSubmitFormButtonFunction();
 
         // Return the HTML.

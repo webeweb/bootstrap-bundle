@@ -26,13 +26,6 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
 abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
-     * Router.
-     *
-     * @var RouterInterface
-     */
-    protected $router;
-
-    /**
      * Translator.
      *
      * @var TranslatorInterface
@@ -42,12 +35,10 @@ abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension 
     /**
      * Constructor.
      *
-     * @param RouterInterface $router The router.
      * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(RouterInterface $router, TranslatorInterface $translator) {
+    protected function __construct(TranslatorInterface $translator) {
         parent::__construct();
-        $this->router     = $router;
         $this->translator = $translator;
     }
 
