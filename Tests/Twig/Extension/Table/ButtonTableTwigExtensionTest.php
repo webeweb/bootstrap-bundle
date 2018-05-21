@@ -32,11 +32,6 @@ final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
     protected function setUp() {
         parent::setUp();
 
-        // Set the Router mock.
-        $this->router->expects($this->any())->method("generate")->willReturnCallback(function($name, $parameters = [], $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH) {
-            return $name;
-        });
-
         // Set the Translator mock.
         $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
             return $id;
@@ -50,7 +45,7 @@ final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+        $obj = new ButtonTableTwigExtension($this->translator);
 
         $res = $obj->getFunctions();
 
@@ -80,12 +75,12 @@ final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapDefaultRowButtonsFunction() {
 
-        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+        $obj = new ButtonTableTwigExtension($this->translator);
 
-        $edt = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
-        $dlt = '<a class="btn btn-danger" title="label.delete" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+        $edt = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
+        $dlt = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
 
-        $arg = ["edit_route" => "route", "edit_arguments" => [], "delete_route" => "route", "delete_arguments" => []];
+        $arg = ["edit_href" => "https://github.com/", "delete_href" => "https://github.com/"];
         $res = $edt . " " . $dlt;
         $this->assertEquals($res, $obj->bootstrapDefaultRowButtonsFunction($arg));
     }
@@ -98,10 +93,10 @@ final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapDeleteRowButtonFunction() {
 
-        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+        $obj = new ButtonTableTwigExtension($this->translator);
 
-        $arg = ["route" => "route", "arguments" => []];
-        $res = '<a class="btn btn-danger" title="label.delete" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+        $arg = ["href" => "https://github.com/"];
+        $res = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
         $this->assertEquals($res, $obj->bootstrapDeleteRowButtonFunction($arg));
     }
 
@@ -114,10 +109,10 @@ final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
     public function testBootstrapEditRowButtonFunction() {
 
 
-        $obj = new ButtonTableTwigExtension($this->router, $this->translator);
+        $obj = new ButtonTableTwigExtension($this->translator);
 
-        $arg = ["route" => "route", "arguments" => []];
-        $res = '<a class="btn btn-default" title="label.edit" href="route" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
+        $arg = ["href" => "https://github.com/"];
+        $res = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
         $this->assertEquals($res, $obj->bootstrapEditRowButtonFunction($arg));
     }
 

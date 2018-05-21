@@ -33,13 +33,6 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
     const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.table.button";
 
     /**
-     * Router.
-     *
-     * @var RouterInterface
-     */
-    private $router;
-
-    /**
      * Translator.
      *
      * @var TranslatorInterface
@@ -49,12 +42,10 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
     /**
      * Constructor.
      *
-     * @param RouterInterface $router The router service.
      * @param TranslatorInterface $translator The translator service.
      */
-    public function __construct(RouterInterface $router, TranslatorInterface $translator) {
+    public function __construct(TranslatorInterface $translator) {
         parent::__construct();
-        $this->router     = $router;
         $this->translator = $translator;
     }
 
@@ -67,8 +58,8 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
     public function bootstrapDefaultRowButtonsFunction(array $args = []) {
 
         // Initialize the buttons.
-        $editButton   = $this->bootstrapEditRowButtonFunction(["route" => ArrayUtility::get($args, "edit_route"), "route_arguments" => ArrayUtility::get($args, "edit_arguments")]);
-        $deleteButton = $this->bootstrapDeleteRowButtonFunction(["route" => ArrayUtility::get($args, "delete_route"), "route_arguments" => ArrayUtility::get($args, "delete_arguments")]);
+        $editButton   = $this->bootstrapEditRowButtonFunction(["href" => ArrayUtility::get($args, "edit_href")]);
+        $deleteButton = $this->bootstrapDeleteRowButtonFunction(["href" => ArrayUtility::get($args, "delete_href")]);
 
         // Return the HTML.
         return implode(" ", [$editButton, $deleteButton]);
@@ -86,15 +77,12 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
         // Translate the label.
         $txt = $this->translator->trans("label.delete", [], "BootstrapBundle");
 
-        // Generate the URL.
-        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments", []));
-
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
         $but = $ext->bootstrapButtonDangerFunction(["title" => $txt, "icon" => "trash"]);
 
         // Return the HTML.
-        return $ext->bootstrapButtonLinkFilter($but, $url);
+        return $ext->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -109,15 +97,12 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
         // Translate the label.
         $txt = $this->translator->trans("label.edit", [], "BootstrapBundle");
 
-        // Generate the URL.
-        $url = $this->router->generate(ArrayUtility::get($args, "route"), ArrayUtility::get($args, "arguments", []));
-
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
         $but = $ext->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "pencil"]);
 
         // Return the HTML.
-        return $ext->bootstrapButtonLinkFilter($but, $url);
+        return $ext->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
