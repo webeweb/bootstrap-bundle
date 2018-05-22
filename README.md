@@ -20,6 +20,7 @@ Includes :
 - [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify/) (Bootstrap plugin)
 - [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/) (Bootstrap plugin)
 - [Bootstrap Slider 10.0.0](https://github.com/seiyria/bootstrap-slider/) (Bootstrap plugin)
+- [Bootstrap Social 5.1.1](https://github.com/lipis/bootstrap-social/) (Bootstrap plugin)
 - [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/) (Bootstrap plugin)
 - [Bootstrap Timepicker 0.5.2](https://github.com/jdewit/bootstrap-timepicker/) (Bootstrap plugin)
 - [Bootstrap WYSIWYG 0.3.3](https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/) (Bootstrap plugin)
