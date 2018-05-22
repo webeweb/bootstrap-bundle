@@ -2,7 +2,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "@Bootstrap/styles.html.twig" %}
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-3.3.7/css/bootstrap.min.css") }}">
+        <!-- Bootstrap Colorpicker plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-colorpicker-2.5.1/css/bootstrap-colorpicker.min.css") }}">
+        <!-- Bootstrap Datepicker plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-datepicker-1.7.1/css/bootstrap-datepicker.min.css") }}">
+        <!-- Bootstrap Daterangepicker plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-daterangepicker-2.1.27/daterangepicker.css") }}">
+        <!-- Bootstrap Select plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-select-1.12.4/css/bootstrap-select.min.css") }}">
+        <!-- Bootstrap Slider plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-slider-10.0.0/css/bootstrap-slider.min.css") }}">
+        <!-- Bootstrap Social plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-social-5.1.1/bootstrap-social.css") }}">
+        <!-- Bootstrap Tagsinput plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-tagsinput-0.8.0/bootstrap-tagsinput.css") }}">
+        <!-- Bootstrap Timepicker plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-timepicker-0.5.2/css/bootstrap-timepicker.min.css") }}">
+        <!-- Bootstrap WYSIWIG plugin -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-wysiwyg-0.3.3/bootstrap3-wysihtml5.min.css") }}">
+        <!-- Font Awesome -->
+        <link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/fontawesome-5.0.10/css/fontawesome-all.min.css") }}">
         <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         {% block bootstrapHeadStyles %}
@@ -12,7 +33,33 @@
     <body{% block bootstrapBodyClasses %}{% endblock %}>
         {% block bootstrapBodyContent %}
         {% endblock %}
-        {% include "@Bootstrap/scripts.html.twig" %}
+        <!-- jQuery -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/jquery-3.2.1/jquery-3.2.1.min.js") }}"></script>
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-3.3.7/js/bootstrap.min.js") }}"></script>
+        <!-- Bootstrap Colorpicker plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-colorpicker-2.5.1/js/bootstrap-colorpicker.min.js") }}"></script>
+        <!-- Bootstrap Datepicker plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-datepicker-1.7.1/js/bootstrap-datepicker.min.js") }}"></script>
+        <!-- Bootstrap Daterangepicker plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/moment-2.20.1/moment-with-locales.min.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-daterangepicker-2.1.27/daterangepicker.js") }}"></script>
+        <!-- Bootstrap Notify plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-notify-3.1.3/bootstrap-notify.min.js") }}"></script>
+        <!-- Bootstrap Select plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-select-1.12.4/js/bootstrap-select.min.js") }}"></script>
+        <!-- Bootstrap Slider plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-slider-10.0.0/bootstrap-slider.min.js") }}"></script>
+        <!-- Bootstrap Tagsinput plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-tagsinput-0.8.0/bootstrap-tagsinput.min.js") }}"></script>
+        <!-- Bootstrap Timepicker plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-timepicker-0.5.2/js/bootstrap-timepicker.min.js") }}"></script>
+        <!-- Bootstrap WYSIWYG plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/wysihtml-0.4.15/wysihtml5x-toolbar.min.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/handlebars-1.3.0/handlebars.runtime.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-wysiwyg-0.3.3/bootstrap3-wysihtml5.min.js") }}"></script>
+        <!-- jQuery InputMask Plugin -->
+        <script type="text/javascript" src="{{ asset("bundles/bootstrap/jquery-inputmask-3.3.11/min/jquery.inputmask.bundle.min.js") }}"></script>
         {% block bootstrapBodyScripts %}
         {% endblock %}
     </body>
