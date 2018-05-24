@@ -20,7 +20,7 @@ use WBW\Library\Core\Node\AbstractNode;
  * @package WBW\Bundle\BootstrapBundle\Navigation
  * @abstract
  */
-abstract class AbstractNavigationNode extends AbstractNode {
+abstract class AbstractNavigationNode extends AbstractNode implements NavigationInterface {
 
     /**
      * Active ?
@@ -58,13 +58,6 @@ abstract class AbstractNavigationNode extends AbstractNode {
     private $target;
 
     /**
-     * URL.
-     *
-     * @var string
-     */
-    private $url;
-
-    /**
      * Visible ?
      *
      * @var boolean
@@ -78,14 +71,13 @@ abstract class AbstractNavigationNode extends AbstractNode {
      * @param string $icon The icon.
      * @param string $route The route.
      */
-    protected function __construct($name, $icon = null, $route = null) {
+    protected function __construct($name, $icon = null, $route = self::DEFAULT_HREF) {
         parent::__construct($name);
         $this->active  = false;
         $this->enable  = false;
         $this->icon    = $icon;
         $this->route   = $route;
         $this->target  = null;
-        $this->url     = null;
         $this->visible = true;
     }
 
@@ -132,15 +124,6 @@ abstract class AbstractNavigationNode extends AbstractNode {
      */
     final public function getTarget() {
         return $this->target;
-    }
-
-    /**
-     * Get the URL.
-     *
-     * @return string Returns the URL.
-     */
-    final public function getUrl() {
-        return $this->url;
     }
 
     /**
@@ -225,17 +208,6 @@ abstract class AbstractNavigationNode extends AbstractNode {
      */
     final public function setTarget($target) {
         $this->target = $target;
-        return $this;
-    }
-
-    /**
-     * Set the URL.
-     *
-     * @param string $url The URL.
-     * @return NavigationNode Returns the navigation node.
-     */
-    final public function setUrl($url) {
-        $this->url = $url;
         return $this;
     }
 
