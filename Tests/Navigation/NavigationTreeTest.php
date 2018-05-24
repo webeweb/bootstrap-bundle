@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 
 use PHPUnit_Framework_TestCase;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
@@ -26,13 +27,29 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 final class NavigationTreeTest extends PHPUnit_Framework_TestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
+
+        $obj = new NavigationTree("tree");
+
+        $this->assertFalse($obj->getActive());
+        $this->assertFalse($obj->getEnable());
+        $this->assertNull($obj->getIcon());
+        $this->assertEquals(NavigationInterface::DEFAULT_HREF, $obj->getRoute());
+        $this->assertTrue($obj->getVisible());
+    }
+
+    /**
      * Tests the getBreadcrumbs() method.
      *
      * @return void
      */
     public function testGetBreadcrumbs() {
 
-        $obj = new NavigationTree();
+        $obj = new NavigationTree("tree");
 
         $obj->addNode(new NavigationNode("main level"));
         $obj->getLastNode()->setActive(true);

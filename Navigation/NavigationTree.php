@@ -21,9 +21,11 @@ class NavigationTree extends AbstractNavigationNode {
 
     /**
      * Constructor.
+     *
+     * @param $name The name.
      */
-    public function __construct() {
-        parent::__construct("tree");
+    public function __construct($name) {
+        parent::__construct($name);
     }
 
     /**
