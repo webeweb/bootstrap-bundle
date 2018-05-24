@@ -38,22 +38,7 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($obj->getIcon());
         $this->assertNull($obj->getRoute());
         $this->assertNull($obj->getTarget());
-        $this->assertNull($obj->getUrl());
         $this->assertTrue($obj->getVisible());
-
-        $obj->setActive(true);
-        $obj->setEnable(true);
-        $obj->setIcon("icon");
-        $obj->setRoute("route");
-        $obj->setTarget("_blank");
-        $obj->setUrl("url");
-
-        $this->assertTrue($obj->getActive());
-        $this->assertTrue($obj->getEnable());
-        $this->assertEquals("icon", $obj->getIcon());
-        $this->assertEquals("route", $obj->getRoute());
-        $this->assertEquals("_blank", $obj->getTarget());
-        $this->assertEquals("url", $obj->getUrl());
     }
 
     /**
@@ -73,6 +58,71 @@ final class NavigationNodeTest extends PHPUnit_Framework_TestCase {
         $obj->getLastNode()->setActive(true);
         $obj->getLastNode()->setEnable(true);
         $this->assertTrue($obj->isDisplayable());
+    }
+
+    /**
+     * Tests the setActive() method.
+     *
+     * @return void
+     */
+    public function testSetActive() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setActive(true);
+        $this->assertTrue($obj->getActive());
+    }
+
+    /**
+     * Tests the setEnable() method.
+     *
+     * @return void
+     */
+    public function testSetEnable() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setEnable(true);
+        $this->assertTrue($obj->getEnable());
+    }
+
+    /**
+     * Tests the setIcon() method.
+     *
+     * @return void
+     */
+    public function testSetIcon() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setIcon("icon");
+        $this->assertEquals("icon", $obj->getIcon());
+    }
+
+    /**
+     * Tests the setRoute() method.
+     *
+     * @return void
+     */
+    public function testSetRoute() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setRoute("route");
+        $this->assertEquals("route", $obj->getRoute());
+    }
+
+    /**
+     * Tests the setTarget() method.
+     *
+     * @return void
+     */
+    public function testSetTarget() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setTarget("_blank");
+        $this->assertEquals("_blank", $obj->getTarget());
     }
 
 }
