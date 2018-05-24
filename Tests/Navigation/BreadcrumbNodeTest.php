@@ -36,20 +36,7 @@ final class BreadcrumbNodeTest extends PHPUnit_Framework_TestCase {
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
         $this->assertNull($obj->getRoute());
-        $this->assertNull($obj->getUrl());
         $this->assertFalse($obj->getVisible());
-
-        $obj->setActive(true);
-        $obj->setEnable(true);
-        $obj->setIcon("icon");
-        $obj->setRoute("route");
-        $obj->setUrl("url");
-
-        $this->assertTrue($obj->getActive());
-        $this->assertTrue($obj->getEnable());
-        $this->assertEquals("icon", $obj->getIcon());
-        $this->assertEquals("route", $obj->getRoute());
-        $this->assertEquals("url", $obj->getUrl());
     }
 
 }
