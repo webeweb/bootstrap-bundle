@@ -82,12 +82,6 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bundle.bootstrapbundle.twig.extension.form.inputmask:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension
-        arguments: ["@translator"]
-        tags:
-            - { name: "twig.extension" }
-
     webeweb.bundle.bootstrapbundle.twig.extension.grid.grid:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension
         tags:
@@ -95,6 +89,12 @@ services:
 
     webeweb.bundle.bootstrapbundle.twig.extension.image.base64:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.plugin.inputmask:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension
+        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 

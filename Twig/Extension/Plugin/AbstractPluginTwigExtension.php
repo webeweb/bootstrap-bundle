@@ -9,36 +9,25 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Form;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
-use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
- * Abstract form Twig extension.
+ * Abstract plugin Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Form
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  * @abstract
  */
-abstract class AbstractFormTwigExtension extends AbstractBootstrapTwigExtension {
-
-    /**
-     * Translator.
-     *
-     * @var TranslatorInterface
-     */
-    protected $translator;
+abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
      * Constructor.
-     *
-     * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(TranslatorInterface $translator) {
-        parent::__construct();
-        $this->translator = $translator;
+    protected function __construct() {
+        // NOTHING TO DO.
     }
 
     /**

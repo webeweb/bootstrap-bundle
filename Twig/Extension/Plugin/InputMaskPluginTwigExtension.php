@@ -9,35 +9,31 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Form;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
-use Symfony\Component\Routing\RouterInterface;
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Input mask form Twig Extension.
+ * Input mask plugin Twig Extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Form
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class InputMaskFormTwigExtension extends AbstractFormTwigExtension {
+class InputMaskPluginTwigExtension extends AbstractPluginTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.form.inputmask";
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.plugin.inputmask";
 
     /**
      * Constructor.
-     *
-     * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(TranslatorInterface $translator) {
-        parent::__construct($translator);
+    public function __construct() {
+        parent::__construct();
     }
 
     /**

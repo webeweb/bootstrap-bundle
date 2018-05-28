@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Form;
 
-use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;

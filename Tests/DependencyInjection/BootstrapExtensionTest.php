@@ -27,9 +27,9 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigEx
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\InputMaskFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
@@ -89,13 +89,15 @@ final class BootstrapExtensionTest extends AbstractFrameworkTestCase {
 
         // Form
         $this->assertInstanceOf(ButtonFormTwigExtension::class, $this->containerBuilder->get(ButtonFormTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(InputMaskFormTwigExtension::class, $this->containerBuilder->get(InputMaskFormTwigExtension::SERVICE_NAME));
 
         // Grid
         $this->assertInstanceOf(GridTwigExtension::class, $this->containerBuilder->get(GridTwigExtension::SERVICE_NAME));
 
         // Image
         $this->assertInstanceOf(Base64ImageTwigExtension::class, $this->containerBuilder->get(Base64ImageTwigExtension::SERVICE_NAME));
+
+        // Plugin
+        $this->assertInstanceOf(InputMaskPluginTwigExtension::class, $this->containerBuilder->get(InputMaskPluginTwigExtension::SERVICE_NAME));
 
         // Table
         $this->assertInstanceOf(ButtonTableTwigExtension::class, $this->containerBuilder->get(ButtonTableTwigExtension::SERVICE_NAME));
