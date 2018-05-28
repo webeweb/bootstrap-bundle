@@ -18,9 +18,9 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtens
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
- * RoleLabelUtilityTwigExtension.
+ * Role label utility Twig extension.
  *
- * @author Camille A. <camille@ingeneo.eu>
+ * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  */
 class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
