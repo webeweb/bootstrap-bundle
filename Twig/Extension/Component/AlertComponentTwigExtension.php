@@ -59,6 +59,29 @@ class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
     }
 
     /**
+     * Displays a Bootstrap alert "Link".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap alert "Link".
+     */
+    public function bootstrapAlertLinkFunction(array $args = []) {
+
+        // Initialize the template.
+        $template = "<a %attributes%>%innerHTML%</a>";
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["href"] = ArrayUtility::get($args, "href", NavigationInterface::DEFAULT_HREF);
+
+        // Initialize the parameters.
+        $innerHTML = ArrayUtility::get($args, "content");
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+    }
+
+    /**
      * Displays a Bootstrap alert "Success".
      *
      * @param array $args The arguments.
@@ -87,33 +110,10 @@ class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
         return [
             new Twig_SimpleFunction("bootstrapAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapAlertLink", [$this, "bootstrapAlertLinkFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapLinkAlert", [$this, "bootstrapLinkAlertFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Displays a Bootstrap link alert.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the Bootstrap link alert.
-     */
-    public function bootstrapLinkAlertFunction(array $args = []) {
-
-        // Initialize the template.
-        $template = "<a %attributes%>%innerHTML%</a>";
-
-        // Initialize the attributes.
-        $attributes = [];
-
-        $attributes["href"] = ArrayUtility::get($args, "href", NavigationInterface::DEFAULT_HREF);
-
-        // Initialize the parameters.
-        $innerHTML = ArrayUtility::get($args, "content");
-
-        // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
     }
 
 }
