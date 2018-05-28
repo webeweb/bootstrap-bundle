@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension;
 
 /**
- * Input mask form Twig extension eest.
+ * Input mask form Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
