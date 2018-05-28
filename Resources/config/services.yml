@@ -148,3 +148,9 @@ services:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension
         tags:
             - { name: "twig.extension" }
+
+    webeweb.bundle.bootstrapbundle.twig.extension.utility.rolelabel:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtension
+        arguments: ["@translator", "@webeweb.bundle.bootstrapbundle.twig.extension.component.label"]
+        tags:
+            - { name: "twig.extension" }

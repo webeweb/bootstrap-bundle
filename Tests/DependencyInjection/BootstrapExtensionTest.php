@@ -40,6 +40,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkedTypographyTwigExt
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtension;
 
 /**
  * Bootstrap extension test.
@@ -112,6 +113,9 @@ final class BootstrapExtensionTest extends AbstractFrameworkTestCase {
         $this->assertInstanceOf(SmallTypographyTwigExtension::class, $this->containerBuilder->get(SmallTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StrikethroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikethroughTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $this->containerBuilder->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
+
+        // Utility
+        $this->assertInstanceOf(RoleLabelUtilityTwigExtension::class, $this->containerBuilder->get(RoleLabelUtilityTwigExtension::SERVICE_NAME));
     }
 
 }
