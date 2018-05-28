@@ -37,12 +37,12 @@ class ProgressBarComponentTwigExtension extends AbstractComponentTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap basic progress bar.
+     * Displays a Bootstrap progress bar "Basic".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap basic progress bar.
+     * @return string Returns the Bootstrap progress bar "Basic".
      */
-    public function bootstrapBasicProgressBarFunction(array $args = []) {
+    public function bootstrapProgressBarBasicFunction(array $args = []) {
         return $this->bootstrapProgressBar(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "value", 50), ArrayUtility::get($args, "min", 0), ArrayUtility::get($args, "max", 100), ArrayUtility::get($args, "striped", false), ArrayUtility::get($args, "animated", false));
     }
 
@@ -93,7 +93,7 @@ class ProgressBarComponentTwigExtension extends AbstractComponentTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapBasicProgressBar", [$this, "bootstrapBasicProgressBarFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapProgressBarDanger", [$this, "bootstrapProgressBarDangerFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapProgressBarInfo", [$this, "bootstrapProgressBarInfoFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapProgressBarSuccess", [$this, "bootstrapProgressBarSuccessFunction"], ["is_safe" => ["html"]]),
