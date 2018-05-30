@@ -24,6 +24,7 @@ Includes :
 - [Bootstrap Tagsinput 0.8.0](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/) (Bootstrap plugin)
 - [Bootstrap Timepicker 0.5.2](https://github.com/jdewit/bootstrap-timepicker/) (Bootstrap plugin)
 - [Bootstrap WYSIWYG 0.3.3](https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/) (Bootstrap plugin)
+- [Font Awesome 5.0.10](https://fontawesome.com/)
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
 - [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
 - [jQuery InputMask 3.3.11](https://github.com/RobinHerbots/Inputmask/) (jQuery Plugin)
