@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "@Bootstrap/layout/style.html.twig" %}
+        {%- include "@Bootstrap/layout/style.html.twig" %}
         <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         {% block bootstrapHeadStyles %}
@@ -12,7 +12,7 @@
     <body{% block bootstrapBodyClasses %}{% endblock %}>
         {% block bootstrapBodyContent %}
         {% endblock %}
-        {% include "@Bootstrap/layout/script.html.twig" %}
+        {%- include "@Bootstrap/layout/script.html.twig" %}
         {% block bootstrapBodyScripts %}
         {% endblock %}
     </body>
