@@ -20,15 +20,15 @@ services:
         class:     WBW\Bundle\BootstrapBundle\Manager\ProvidersManager
         arguments: ["@twig"]
         calls:
-            - ["setApplicationProvider", ["@?webeweb.bundle.bootstrapbundle.provider.application"]]
-            - ["setBreadcrumbsProvider", ["@?webeweb.bundle.bootstrapbundle.provider.breadcrumbs"]]
-            - ["setDropDownHookProvider", ["@?webeweb.bundle.bootstrapbundle.provider.dropdownhook"]]
+            - ["setApplicationProvider",           ["@?webeweb.bundle.bootstrapbundle.provider.application"]]
+            - ["setBreadcrumbsProvider",           ["@?webeweb.bundle.bootstrapbundle.provider.breadcrumbs"]]
+            - ["setDropDownHookProvider",          ["@?webeweb.bundle.bootstrapbundle.provider.dropdownhook"]]
             - ["setDropDownNotificationsProvider", ["@?webeweb.bundle.bootstrapbundle.provider.dropdownnotifications"]]
-            - ["setDropDownTasksProvider", ["@?webeweb.bundle.bootstrapbundle.provider.dropdowntasks"]]
-            - ["setFooterProvider", ["@?webeweb.bundle.bootstrapbundle.provider.footer"]]
-            - ["setNavigationProvider", ["@?webeweb.bundle.bootstrapbundle.provider.navigation"]]
-            - ["setSearchProvider", ["@?webeweb.bundle.bootstrapbundle.provider.search"]]
-            - ["setUserInfoProvider", ["@?webeweb.bundle.bootstrapbundle.provider.userinfo"]]
+            - ["setDropDownTasksProvider",         ["@?webeweb.bundle.bootstrapbundle.provider.dropdowntasks"]]
+            - ["setFooterProvider",                ["@?webeweb.bundle.bootstrapbundle.provider.footer"]]
+            - ["setNavigationProvider",            ["@?webeweb.bundle.bootstrapbundle.provider.navigation"]]
+            - ["setSearchProvider",                ["@?webeweb.bundle.bootstrapbundle.provider.search"]]
+            - ["setUserInfoProvider",              ["@?webeweb.bundle.bootstrapbundle.provider.userinfo"]]
 
     webeweb.bundle.bootstrapbundle.twig.extension.code.basicblock:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension
