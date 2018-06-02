@@ -21,4 +21,46 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class BootstrapBundle extends Bundle {
 
+    /**
+     * Bootstrap "Danger".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_DANGER = "danger";
+
+    /**
+     * Bootstrap "Default".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_DEFAULT = "default";
+
+    /**
+     * Bootstrap "Info".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_INFO = "info";
+
+    /**
+     * Bootstrap "Primary".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_PRIMARY = "primary";
+
+    /**
+     * Bootstrap "Success".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_SUCCESS = "success";
+
+    /**
+     * Bootstrap "Warning".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_WARNING = "warning";
+
 }
