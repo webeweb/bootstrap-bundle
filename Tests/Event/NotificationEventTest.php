@@ -30,10 +30,11 @@ final class NotificationEventTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj = new NotificationEvent("name", "notification");
+        $obj = new NotificationEvent("name", "notification", "type");
 
         $this->assertEquals("name", $obj->getEventName());
         $this->assertEquals("notification", $obj->getNotification());
+        $this->assertEquals("type", $obj->getType());
     }
 
 }
