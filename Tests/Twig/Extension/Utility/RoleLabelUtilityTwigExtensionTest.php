@@ -84,8 +84,11 @@ final class RoleLabelUtilityTwigExtensionTest extends AbstractFrameworkTestCase 
             "ROLE_USER"        => "label.role.user",
         ];
 
-        $res = '<span class="label label-default" style="background-color:#D9534F;">label.role.root</span> <span class="label label-default" style="background-color:#337AB7;">label.role.admin</span> <span class="label label-default">label.role.user</span>';
-        $this->assertEquals($res, $obj->bootstrapRoleLabelFunction($this->user, $colors, $trans));
+        $res0 = "";
+        $this->assertEquals($res0, $obj->bootstrapRoleLabelFunction(null, $colors, $trans));
+
+        $res9 = '<span class="label label-default" style="background-color:#D9534F;">label.role.root</span> <span class="label label-default" style="background-color:#337AB7;">label.role.admin</span> <span class="label label-default">label.role.user</span>';
+        $this->assertEquals($res9, $obj->bootstrapRoleLabelFunction($this->user, $colors, $trans));
     }
 
 }
