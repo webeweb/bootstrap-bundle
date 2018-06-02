@@ -13,8 +13,8 @@
     ],
     "require": {
         "php": "^5.6|^7.0",
-        "symfony/asset": "^2.8|^3.0",
-        "symfony/form": "^2.8|^3.0",
+        "symfony/asset": "^2.6|^3.0",
+        "symfony/form": "^2.6|^3.0",
         "symfony/framework-bundle": "^2.6|^3.0",
         "symfony/security-core": "^2.6|^3.0",
         "symfony/serializer": "^2.6|^3.0",
