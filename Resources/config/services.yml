@@ -7,6 +7,15 @@ services:
         tags:
             - { name: "kernel.event_listener", event: "kernel.request", method: "onKernelRequest" }
 
+    webeweb.bundle.bootstrapbundle.eventlistener.notification:
+        class: WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener
+        arguments: ["@webeweb.bundle.bootstrapbundle.eventlistener.kernel"]
+        tags:
+            - { name: "kernel.event_listener", event: "notify.danger",  method: "onNotify" }
+            - { name: "kernel.event_listener", event: "notify.info",    method: "onNotify" }
+            - { name: "kernel.event_listener", event: "notify.success", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "notify.warning", method: "onNotify" }
+
     webeweb.bundle.bootstrapbundle.manager.providers:
         class:     WBW\Bundle\BootstrapBundle\Manager\ProvidersManager
         arguments: ["@twig"]
