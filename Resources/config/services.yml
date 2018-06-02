@@ -11,10 +11,10 @@ services:
         class: WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener
         arguments: ["@webeweb.bundle.bootstrapbundle.eventlistener.kernel"]
         tags:
-            - { name: "kernel.event_listener", event: "notify.danger",  method: "onNotify" }
-            - { name: "kernel.event_listener", event: "notify.info",    method: "onNotify" }
-            - { name: "kernel.event_listener", event: "notify.success", method: "onNotify" }
-            - { name: "kernel.event_listener", event: "notify.warning", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bundle.bootstrapbundle.event.notification.danger",  method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bundle.bootstrapbundle.event.notification.info",    method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bundle.bootstrapbundle.event.notification.success", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bundle.bootstrapbundle.event.notification.warning", method: "onNotify" }
 
     webeweb.bundle.bootstrapbundle.manager.providers:
         class:     WBW\Bundle\BootstrapBundle\Manager\ProvidersManager
