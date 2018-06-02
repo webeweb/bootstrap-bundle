@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -43,7 +44,7 @@ class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap label "Danger".
      */
     public function bootstrapLabelDangerFunction(array $args = []) {
-        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-danger");
+        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-" . BootstrapBundle::BOOTSTRAP_DANGER);
     }
 
     /**
@@ -53,7 +54,7 @@ class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap label "Default".
      */
     public function bootstrapLabelDefaultFunction(array $args = []) {
-        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-default");
+        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-" . BootstrapBundle::BOOTSTRAP_DEFAULT);
     }
 
     /**
@@ -63,7 +64,7 @@ class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap label "Info".
      */
     public function bootstrapLabelInfoFunction(array $args = []) {
-        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-info");
+        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-" . BootstrapBundle::BOOTSTRAP_INFO);
     }
 
     /**
@@ -73,7 +74,7 @@ class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap label "Primary".
      */
     public function bootstrapLabelPrimaryFunction(array $args = []) {
-        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-primary");
+        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-" . BootstrapBundle::BOOTSTRAP_PRIMARY);
     }
 
     /**
@@ -83,7 +84,7 @@ class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap label "Success".
      */
     public function bootstrapLabelSuccessFunction(array $args = []) {
-        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-success");
+        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-" . BootstrapBundle::BOOTSTRAP_SUCCESS);
     }
 
     /**
@@ -93,7 +94,7 @@ class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap label "Warning".
      */
     public function bootstrapLabelWarningFunction(array $args = []) {
-        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-warning");
+        return $this->bootstrapLabel(ArrayUtility::get($args, "content"), "label-" . BootstrapBundle::BOOTSTRAP_WARNING);
     }
 
     /**
