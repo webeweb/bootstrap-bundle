@@ -95,16 +95,19 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
         // Handle each role.
         foreach ($user->getRoles() as $current) {
 
+            // Get the role.
+            $role = true === $current instanceof Role ? $current->getRole() : $current;
+
             // Initialize the translation.
-            $trans = true === $current instanceof Role ? $current->getRole() : $current;
-            if (true === array_key_exists($current, $roleTrans)) {
-                $trans = $this->getTranslator()->trans($roleTrans[$current]);
+            $trans = $role;
+            if (true === array_key_exists($role, $roleTrans)) {
+                $trans = $this->getTranslator()->trans($roleTrans[$role]);
             }
 
             // Initialize the label.
             $label = $this->getExtension()->bootstrapLabelDefaultFunction(["content" => $trans]);
-            if (true === array_key_exists($current, $roleColors)) {
-                $label = $this->applyColor($label, $trans, $roleColors[$current]);
+            if (true === array_key_exists($role, $roleColors)) {
+                $label = $this->applyColor($label, $trans, $roleColors[$role]);
             }
 
             // Add the label.
