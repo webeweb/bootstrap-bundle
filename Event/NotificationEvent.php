@@ -42,8 +42,8 @@ class NotificationEvent extends AbstractBootstrapEvent {
      */
     public function __construct($eventName, $notification, $type) {
         parent::__construct($eventName);
-        $this->notification = $notification;
-        $this->type         = $type;
+        $this->setNotification($notification);
+        $this->setType($type);
     }
 
     /**
@@ -62,6 +62,28 @@ class NotificationEvent extends AbstractBootstrapEvent {
      */
     public function getType() {
         return $this->type;
+    }
+
+    /**
+     * Set the notification.
+     *
+     * @param string $notification The notification.
+     * @return NotificationEvent Returns this notification event.
+     */
+    protected function setNotification($notification) {
+        $this->notification = $notification;
+        return $this;
+    }
+
+    /**
+     * Set the type.
+     *
+     * @param string $type The type.
+     * @return NotificationEvent Returns this notification event.
+     */
+    protected function setType($type) {
+        $this->type = $type;
+        return $this;
     }
 
 }
