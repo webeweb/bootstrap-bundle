@@ -35,7 +35,7 @@ abstract class AbstractBootstrapEvent extends Event {
      * @param string $eventName The event name.
      */
     protected function __construct($eventName) {
-        $this->eventName = $eventName;
+        $this->setEventName($eventName);
     }
 
     /**
@@ -45,6 +45,17 @@ abstract class AbstractBootstrapEvent extends Event {
      */
     public function getEventName() {
         return $this->eventName;
+    }
+
+    /**
+     * Set the event name.
+     *
+     * @param type $eventName The event name.
+     * @return AbstractBootstrapEvent Returns this Bootstrap event.
+     */
+    protected function setEventName($eventName) {
+        $this->eventName = $eventName;
+        return $this;
     }
 
 }
