@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtensio
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
  * @final
  */
-final class InputMaskFormTwigExtensionTest extends AbstractFrameworkTestCase {
+final class InputMaskFormTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

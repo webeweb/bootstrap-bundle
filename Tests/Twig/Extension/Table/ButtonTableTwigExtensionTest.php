@@ -11,10 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
 
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
 
 /**
@@ -24,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class ButtonTableTwigExtensionTest extends AbstractFrameworkTestCase {
+final class ButtonTableTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}

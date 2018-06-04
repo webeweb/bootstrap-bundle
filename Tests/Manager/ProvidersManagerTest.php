@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Provider\FooterProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\NavigationProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\SearchProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\UserInfoProviderInterface;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Providers manager test.
@@ -30,7 +30,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Manager
  * @final
  */
-final class ProvidersManagerTest extends AbstractFrameworkTestCase {
+final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}

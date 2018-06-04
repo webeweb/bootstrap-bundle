@@ -15,7 +15,7 @@ use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension;
@@ -50,7 +50,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtens
  * @package WBW\Bundle\BootstrapBundle\Tests\DependencyInjection
  * @final
  */
-final class BootstrapExtensionTest extends AbstractFrameworkTestCase {
+final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}
