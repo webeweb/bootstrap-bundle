@@ -53,8 +53,8 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function __construct(TranslatorInterface $translator, LabelComponentTwigExtension $extension) {
         parent::__construct();
-        $this->extension  = $extension;
-        $this->translator = $translator;
+        $this->setExtension($extension);
+        $this->setTranslator($translator);
     }
 
     /**
@@ -97,11 +97,11 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
             // Initialize the translation.
             $trans = $current;
             if (true === array_key_exists($current, $roleTrans)) {
-                $trans = $this->translator->trans($roleTrans[$current]);
+                $trans = $this->getTranslator()->trans($roleTrans[$current]);
             }
 
             // Initialize the label.
-            $label = $this->extension->bootstrapLabelDefaultFunction(["content" => $trans]);
+            $label = $this->getExtension()->bootstrapLabelDefaultFunction(["content" => $trans]);
             if (true === array_key_exists($current, $roleColors)) {
                 $label = $this->applyColor($label, $trans, $roleColors[$current]);
             }
@@ -123,6 +123,46 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
         return [
             new Twig_SimpleFunction("bootstrapRoleLabel", [$this, "bootstrapRoleLabelFunction"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * Get the extension.
+     *
+     * @return LabelComponentTwigExtension Returns the extension.
+     */
+    public function getExtension() {
+        return $this->extension;
+    }
+
+    /**
+     * Get the translator.
+     *
+     * @return TranslatorInterface Returns the translator.
+     */
+    public function getTranslator() {
+        return $this->translator;
+    }
+
+    /**
+     * Set the extension.
+     *
+     * @param LabelComponentTwigExtension $extension The extension.
+     * @return RoleLabelUtilityTwigExtension Returns this role label utility Twig extension.
+     */
+    protected function setExtension(LabelComponentTwigExtension $extension) {
+        $this->extension = $extension;
+        return $this;
+    }
+
+    /**
+     * Set the translator.
+     *
+     * @param TranslatorInterface $translator The translator.
+     * @return RoleLabelUtilityTwigExtension Returns this role label utility Twig extension.
+     */
+    protected function setTranslator(TranslatorInterface $translator) {
+        $this->translator = $translator;
+        return $this;
     }
 
 }
