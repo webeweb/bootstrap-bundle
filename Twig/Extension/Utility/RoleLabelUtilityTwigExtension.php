@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
+use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
@@ -95,7 +96,7 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
         foreach ($user->getRoles() as $current) {
 
             // Initialize the translation.
-            $trans = $current;
+            $trans = true === $current instanceof Role ? $current->getRole() : $current;
             if (true === array_key_exists($current, $roleTrans)) {
                 $trans = $this->getTranslator()->trans($roleTrans[$current]);
             }
