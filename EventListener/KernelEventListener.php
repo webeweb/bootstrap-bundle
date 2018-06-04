@@ -63,12 +63,21 @@ class KernelEventListener {
     /**
      * Constructor.
      *
-     * @param type $tokenStorage The token storage service.
-     * @param ProvidersManager The providers manager service.
+     * @param TokenStorageInterface $tokenStorage The token storage service.
+     * @param ProvidersManager $providersManager The providers manager service.
      */
     public function __construct(TokenStorageInterface $tokenStorage, ProvidersManager $providersManager) {
-        $this->providersManager = $providersManager;
-        $this->tokenStorage     = $tokenStorage;
+        $this->setProvidersManager($providersManager);
+        $this->setTokenStorage($tokenStorage);
+    }
+
+    /**
+     * Get the providers manager.
+     *
+     * @return ProvidersManager Returns the providers manager.
+     */
+    public function getProvidersManager() {
+        return $this->providersManager;
     }
 
     /**
@@ -81,13 +90,22 @@ class KernelEventListener {
     }
 
     /**
+     * Get the token storage.
+     *
+     * @return TokenStorageInterface Returns the token storage.
+     */
+    public function getTokenStorage() {
+        return $this->tokenStorage;
+    }
+
+    /**
      * Get the current user.
      *
      * @return UserInterface Returns the current user in case of success, null otherwise.
      */
     public function getUser() {
         if (null === $this->user) {
-            $token = $this->tokenStorage->getToken();
+            $token = $this->getTokenStorage()->getToken();
             if (null !== $token) {
                 $this->user = $token->getUser();
             }
@@ -107,10 +125,43 @@ class KernelEventListener {
     public function onKernelRequest(GetResponseEvent $event) {
 
         // Initialize the request.
-        self::$request = $event->getRequest();
+        $this->setRequest($event->getRequest());
 
         // Register the providers.
-        $this->providersManager->register();
+        $this->getProvidersManager()->register();
+    }
+
+    /**
+     * Set the providers manager.
+     *
+     * @param ProvidersManager $providersManager The providers manager.
+     * @return KernelEventListener Returns this kernel event listener.
+     */
+    protected function setProvidersManager(ProvidersManager $providersManager) {
+        $this->providersManager = $providersManager;
+        return $this;
+    }
+
+    /**
+     * Set the request.
+     *
+     * @param Request $request The request.
+     * @return KernelEventListener Returns this kernel event listener.
+     */
+    protected function setRequest(Request $request) {
+        self::$request = $request;
+        return $this;
+    }
+
+    /**
+     * Set the token storage.
+     *
+     * @param TokenStorageInterface $tokenStorage The token storage.
+     * @return KernelEventListener Returns this kernel event listener.
+     */
+    protected function setTokenStorage(TokenStorageInterface $tokenStorage) {
+        $this->tokenStorage = $tokenStorage;
+        return $this;
     }
 
 }
