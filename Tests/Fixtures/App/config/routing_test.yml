@@ -1,0 +1,5 @@
+# Tests/Fixtures/App/config/routing_test.yml
+bundle:
+    path:     "/"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::blankAction" }
+    methods: ["GET"]
