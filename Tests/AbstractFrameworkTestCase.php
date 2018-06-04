@@ -28,7 +28,7 @@ use Twig_LoaderInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests
- * @final
+ * @abstract
  */
 abstract class AbstractFrameworkTestCase extends PHPUnit_Framework_TestCase {
 
