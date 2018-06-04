@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Table;
 
-use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
@@ -46,7 +45,7 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
      */
     public function __construct(TranslatorInterface $translator) {
         parent::__construct();
-        $this->translator = $translator;
+        $this->setTranslator($translator);
     }
 
     /**
@@ -73,9 +72,8 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
      */
     public function bootstrapDeleteRowButtonFunction(array $args = []) {
 
-
         // Translate the label.
-        $txt = $this->translator->trans("label.delete", [], "BootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.delete", [], "BootstrapBundle");
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
@@ -93,9 +91,8 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
      */
     public function bootstrapEditRowButtonFunction(array $args = []) {
 
-
         // Translate the label.
-        $txt = $this->translator->trans("label.edit", [], "BootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.edit", [], "BootstrapBundle");
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
@@ -116,6 +113,26 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
             new Twig_SimpleFunction("bootstrapDeleteRowButton", [$this, "bootstrapDeleteRowButtonFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapEditRowButton", [$this, "bootstrapEditRowButtonFunction"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * Get the translator.
+     *
+     * @return TranslatorInterface Returns the translator.
+     */
+    public function getTranslator() {
+        return $this->translator;
+    }
+
+    /**
+     * Set the translator.
+     *
+     * @param TranslatorInterface $translator The translator.
+     * @return ButtonTableTwigExtension Returns this button table Twig extension.
+     */
+    protected function setTranslator(TranslatorInterface $translator) {
+        $this->translator = $translator;
+        return $this;
     }
 
 }
