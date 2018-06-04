@@ -41,7 +41,16 @@ class NotificationEventListener {
      * @param KernelEventListener $kernelEventListener The kernel event listener.
      */
     public function __construct(KernelEventListener $kernelEventListener) {
-        $this->kernelEventListener = $kernelEventListener;
+        $this->setKernelEventListener($kernelEventListener);
+    }
+
+    /**
+     * Get the kernel event listener.
+     *
+     * @return KernelEventListener Returns the kernel event listener.
+     */
+    public function getKernelEventListener() {
+        return $this->kernelEventListener;
     }
 
     /**
@@ -51,7 +60,18 @@ class NotificationEventListener {
      * @return void
      */
     public function onNotify(NotificationEvent $event) {
-        $this->kernelEventListener->getRequest()->getSession()->getFlashBag()->add($event->getType(), $event->getNotification());
+        $this->getKernelEventListener()->getRequest()->getSession()->getFlashBag()->add($event->getType(), $event->getNotification());
+    }
+
+    /**
+     * Set the kernel event listener.
+     *
+     * @param KernelEventListener $kernelEventListener The kernel event listener.
+     * @return NotificationEventListener Returns this notification event listener.
+     */
+    protected function setKernelEventListener(KernelEventListener $kernelEventListener) {
+        $this->kernelEventListener = $kernelEventListener;
+        return $this;
     }
 
 }
