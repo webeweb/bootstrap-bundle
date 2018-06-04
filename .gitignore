@@ -1,3 +1,7 @@
 # Composer
 /composer.lock
 /vendor/*
+
+# Fixtures
+/Tests/Fixtures/App/var/*
+!/Tests/Fixtures/App/var/.gitkeep
