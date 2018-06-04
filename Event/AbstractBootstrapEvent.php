@@ -50,7 +50,7 @@ abstract class AbstractBootstrapEvent extends Event {
     /**
      * Set the event name.
      *
-     * @param type $eventName The event name.
+     * @param string $eventName The event name.
      * @return AbstractBootstrapEvent Returns this Bootstrap event.
      */
     protected function setEventName($eventName) {
