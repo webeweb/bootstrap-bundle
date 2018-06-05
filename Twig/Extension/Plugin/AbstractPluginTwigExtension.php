@@ -31,28 +31,6 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
     }
 
     /**
-     * Displays a Bootstrap input mask.
-     *
-     * @param string $selector The input mask selector.
-     * @param string $mask The input mask.
-     * @param boolean $scriptTag Script tag ?
-     * @param array $options The input mask options.
-     * @return string Returns the Bootstrap input mask.
-     */
-    protected function bootstrapInputMask($selector, $mask, $scriptTag, array $options) {
-
-        // Initialize the template.
-        $template = ["$('%selector%').inputmask(\"%mask%\",%arguments%);"];
-        if (true === $scriptTag) {
-            array_unshift($template, "<script type=\"text/javascript\">");
-            array_push($template, "</script>");
-        }
-
-        // Return the HTML.
-        return StringUtility::replace(implode("\n", $template), ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
-    }
-
-    /**
      * Displays a Font Awesome.
      *
      * @param string $style The Font Awesome style.
@@ -88,6 +66,28 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+    }
+
+    /**
+     * Displays a jQuery input mask.
+     *
+     * @param string $selector The input mask selector.
+     * @param string $mask The input mask.
+     * @param boolean $scriptTag Script tag ?
+     * @param array $options The input mask options.
+     * @return string Returns the jQuery input mask.
+     */
+    protected function jQueryInputMask($selector, $mask, $scriptTag, array $options) {
+
+        // Initialize the template.
+        $template = ["$('%selector%').inputmask(\"%mask%\",%arguments%);"];
+        if (true === $scriptTag) {
+            array_unshift($template, "<script type=\"text/javascript\">");
+            array_push($template, "</script>");
+        }
+
+        // Return the HTML.
+        return StringUtility::replace(implode("\n", $template), ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
     }
 
 }

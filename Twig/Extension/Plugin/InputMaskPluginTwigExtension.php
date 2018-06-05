@@ -37,79 +37,79 @@ class InputMaskPluginTwigExtension extends AbstractPluginTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap input mask.
+     * Displays a jQuery input mask.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap input mask.
+     * @return string Returns the jQuery input mask.
      */
-    public function bootstrapInputMaskFunction(array $args = []) {
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "mask", ""), ArrayUtility::get($args, "scriptTag", false), ArrayUtility::get($args, "opts", []));
+    public function jQueryInputMaskFunction(array $args = []) {
+        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "mask", ""), ArrayUtility::get($args, "scriptTag", false), ArrayUtility::get($args, "opts", []));
     }
 
     /**
-     * Displays a Bootstrap input mask "Phone number".
+     * Displays a jQuery input mask "Phone number".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap input mask "Phone number".
+     * @return string Returns the jQuery input mask "Phone number".
      */
-    public function bootstrapInputMaskPhoneNumberFunction(array $args = []) {
+    public function jQueryInputMaskPhoneNumberFunction(array $args = []) {
         $defaultMask = "99 99 99 99 99";
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
+        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
-     * Displays a Bootstrap input mask "SIRET number".
+     * Displays a jQuery input mask "SIRET number".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap input mask "SIRET number".
+     * @return string Returns the jQuery input mask "SIRET number".
      */
-    public function bootstrapInputMaskSIRETNumberFunction(array $args = []) {
+    public function jQueryInputMaskSIRETNumberFunction(array $args = []) {
         $defaultMask = "999 999 999 99999";
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
+        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
-     * Displays a Bootstrap input mask "Social security number".
+     * Displays a jQuery input mask "Social security number".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap input mask "Social security number".
+     * @return string Returns the jQuery input mask "Social security number".
      */
-    public function bootstrapInputMaskSocialSecurityNumberFunction(array $args = []) {
+    public function jQueryInputMaskSocialSecurityNumberFunction(array $args = []) {
         $defaultMask = "9 99 99 99 999 999 99";
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
+        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
-     * Displays a Bootstrap input mask "Time 12 hour".
+     * Displays a jQuery input mask "Time 12 hour".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap input mask "Time 12 hour".
+     * @return string Returns the jQuery input mask "Time 12 hour".
      */
-    public function bootstrapInputMaskTime12Function(array $args = []) {
+    public function jQueryInputMaskTime12Function(array $args = []) {
         $defaultMask = "hh:mm t";
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, null), ["hourFormat" => "12", "placeholder" => "__:__ _m"]));
+        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, null), ["hourFormat" => "12", "placeholder" => "__:__ _m"]));
     }
 
     /**
-     * Displays a Bootstrap input mask "Time 24 hour".
+     * Displays a jQuery input mask "Time 24 hour".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap input mask "Time 24 hour".
+     * @return string Returns the jQuery input mask "Time 24 hour".
      */
-    public function bootstrapInputMaskTime24Function(array $args = []) {
+    public function jQueryInputMaskTime24Function(array $args = []) {
         $defaultMask = "hh:mm";
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, null), ["hourFormat" => "24", "placeholder" => "__:__"]));
+        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), array_merge($this->prepareOptions($args, null), ["hourFormat" => "24", "placeholder" => "__:__"]));
     }
 
     /**
-     * Displays a Bootstrap input mask "VAT number".
+     * Displays a jQuery input mask "VAT number".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap input mask "VAT number".
+     * @return string Returns the jQuery input mask "VAT number".
      */
-    public function bootstrapInputMaskVATNumberFunction(array $args = []) {
+    public function jQueryInputMaskVATNumberFunction(array $args = []) {
         $defaultMask = "**999 999 999 99";
-        return $this->bootstrapInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
+        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, ArrayUtility::get($args, "scriptTag", false), $this->prepareOptions($args, $defaultMask));
     }
 
     /**
@@ -119,13 +119,13 @@ class InputMaskPluginTwigExtension extends AbstractPluginTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapInputMask", [$this, "bootstrapInputMaskFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapInputMaskPhoneNumber", [$this, "bootstrapInputMaskPhoneNumberFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapInputMaskSIRETNumber", [$this, "bootstrapInputMaskSIRETNumberFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapInputMaskSocialSecurityNumber", [$this, "bootstrapInputMaskSocialSecurityNumberFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapInputMaskTime12", [$this, "bootstrapInputMaskTime12Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapInputMaskTime24", [$this, "bootstrapInputMaskTime24Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapInputMaskVATNumber", [$this, "bootstrapInputMaskVATNumberFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMask", [$this, "jQueryInputMaskFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskPhoneNumber", [$this, "jQueryInputMaskPhoneNumberFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskSIRETNumber", [$this, "jQueryInputMaskSIRETNumberFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskSocialSecurityNumber", [$this, "jQueryInputMaskSocialSecurityNumberFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskTime12", [$this, "jQueryInputMaskTime12Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskTime24", [$this, "jQueryInputMaskTime24Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskVATNumber", [$this, "jQueryInputMaskVATNumberFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
