@@ -10,7 +10,7 @@ framework:
     #assets:          ~
     #csrf_protection: true
     default_locale:  "%locale%"
-    form:            false
+    form:            true
     router:
         resource:            "%kernel.root_dir%/config/routing_test.yml"
         strict_requirements: true
