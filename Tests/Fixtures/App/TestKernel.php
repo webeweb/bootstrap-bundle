@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the edm-bundle package.
+ * This file is part of the jquery-datatables-bundle package.
  *
  * (c) 2017 WEBEWEB
  *
