@@ -52,4 +52,42 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         return StringUtility::replace(implode("\n", $template), ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
     }
 
+    /**
+     * Displays a Font Awesome.
+     *
+     * @param string $style The Font Awesome style.
+     * @param string $name The Font Awesome name.
+     * @param string $size The Font Awesome size.
+     * @param boolean $fixedWidth Fixed width ?
+     * @param boolean $bordered Bordered ?
+     * @param string $pull The Font Awesome pull.
+     * @param string $animated The Font Awesome animation.
+     * @return string Returns the Font Awesome.
+     */
+    protected function fontAwesome($style, $name, $size, $fixedWidth, $bordered, $pull, $animated) {
+
+        // Initialize the values.
+        $styles   = ["", "s", "r", "l", "b"];
+        $sizes    = ["xs", "sm", "lg", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"];
+        $pulls    = ["left", "right"];
+        $animates = ["spin", "pulse"];
+
+        // Initialize the template.
+        $template = "<i %attributes%></i>";
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["class"][] = true === in_array($style, $styles) ? "fa" . $style : "fa";
+        $attributes["class"][] = null !== $name ? "fa-" . $name : null;
+        $attributes["class"][] = true === in_array($size, $sizes) ? "fa-" . $size : null;
+        $attributes["class"][] = true === $fixedWidth ? "fa-fw" : null;
+        $attributes["class"][] = true === $bordered ? "fa-border" : null;
+        $attributes["class"][] = true === in_array($pull, $pulls) ? "fa-pull-" . $pull : null;
+        $attributes["class"][] = true === in_array($animated, $animates) ? "fa-" . $animated : null;
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+    }
+
 }
