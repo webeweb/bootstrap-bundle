@@ -94,7 +94,7 @@ final class ButtonFormTwigExtensionTest extends AbstractBootstrapFrameworkTestCa
         $cnl = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
         $sbt = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> label.submit</button>';
 
-        $arg = ["cancel-href" => "https://github.com/"];
+        $arg = ["cancel_href" => "https://github.com/"];
         $res = $cnl . " " . $sbt;
         $this->assertEquals($res, $obj->bootstrapDefaultFormButtonsFunction($arg));
     }
