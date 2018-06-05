@@ -1,5 +1,10 @@
 # Tests/Fixtures/App/config/routing_test.yml
-bundle:
-    path:     "/"
+bootstrap_blank_action:
+    path:     "/blank"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::blankAction" }
-    methods: ["GET"]
+    methods:  ["GET"]
+
+bootstrap_flashbag_action:
+    path:     "/flashbag"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::flashbagAction" }
+    methods:  ["GET"]

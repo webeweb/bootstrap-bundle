@@ -36,4 +36,22 @@ final class LayoutController extends AbstractBootstrapController {
         return $this->render("@Bootstrap/layout/blank.html.twig");
     }
 
+    /**
+     * Displays a flashbag page.
+     *
+     * @param Request $request The request.
+     * @return Response Returns the response.
+     */
+    public function flashbagAction(Request $request) {
+
+        // Notifiy
+        $this->notifyDanger("Danger");
+        $this->notifyInfo("Info");
+        $this->notifySuccess("Success");
+        $this->notifyWarning("Warning");
+
+        // Return th response.
+        return $this->render("@Bootstrap/layout/flashbag.html.twig");
+    }
+
 }
