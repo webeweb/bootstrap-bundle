@@ -47,52 +47,52 @@ class GridTwigExtension extends AbstractGridTwigExtension {
         // Initialize the output.
         $output = [];
 
-        $output[] = $this->bootstrapStackedGridFunction($args);
-        $output[] = $this->bootstrapOffsetGridFunction($args);
-        $output[] = $this->bootstrapPushGridFunction($args);
-        $output[] = $this->bootstrapPullGridFunction($args);
+        $output[] = $this->bootstrapGridStackedFunction($args);
+        $output[] = $this->bootstrapGridOffsetFunction($args);
+        $output[] = $this->bootstrapGridPushFunction($args);
+        $output[] = $this->bootstrapGridPullFunction($args);
 
         // Return the output.
         return trim(implode(" ", $output));
     }
 
     /**
-     * Displays a Bootstrap offset grid.
+     * Displays a Bootstrap grid with offset.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap offset grid.
+     * @return string Returns the Bootstrap grid with offset.
      */
-    public function bootstrapOffsetGridFunction(array $args = []) {
+    public function bootstrapGridOffsetFunction(array $args = []) {
         return $this->bootstrapGrid(ArrayUtility::get($args, "lgOffset"), ArrayUtility::get($args, "mdOffset"), ArrayUtility::get($args, "smOffset"), ArrayUtility::get($args, "xsOffset"), ArrayUtility::get($args, "recopyOffset", false), "offset-");
     }
 
     /**
-     * Displays a Bootstrap pull grid.
+     * Displays a Bootstrap grid with pull.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap pull grid.
+     * @return string Returns the Bootstrap grid with pull.
      */
-    public function bootstrapPullGridFunction(array $args = []) {
+    public function bootstrapGridPullFunction(array $args = []) {
         return $this->bootstrapGrid(ArrayUtility::get($args, "lgPull"), ArrayUtility::get($args, "mdPull"), ArrayUtility::get($args, "smPull"), ArrayUtility::get($args, "xsPull"), ArrayUtility::get($args, "recopyPull", false), "pull-");
     }
 
     /**
-     * Displays a Bootstrap push grid.
+     * Displays a Bootstrap grid with push.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap push grid.
+     * @return string Returns the Bootstrap grid with push.
      */
-    public function bootstrapPushGridFunction(array $args = []) {
+    public function bootstrapGridPushFunction(array $args = []) {
         return $this->bootstrapGrid(ArrayUtility::get($args, "lgPush"), ArrayUtility::get($args, "mdPush"), ArrayUtility::get($args, "smPush"), ArrayUtility::get($args, "xsPush"), ArrayUtility::get($args, "recopyPush", false), "push-");
     }
 
     /**
-     * Displays a Bootstrap stacked-to-horizontal grid.
+     * Displays a Bootstrap grid with stacked-to-horizontal.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap stacked-to-horizontal grid.
+     * @return string Returns the Bootstrap grid with stacked-to-horizontal.
      */
-    public function bootstrapStackedGridFunction(array $args = []) {
+    public function bootstrapGridStackedFunction(array $args = []) {
         return $this->bootstrapGrid(ArrayUtility::get($args, "lg"), ArrayUtility::get($args, "md"), ArrayUtility::get($args, "sm"), ArrayUtility::get($args, "xs"), ArrayUtility::get($args, "recopy", false), "");
     }
 
@@ -104,10 +104,10 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapOffsetGrid", [$this, "bootstrapOffsetGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapPullGrid", [$this, "bootstrapPullGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapPushGrid", [$this, "bootstrapPushGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapStackedGrid", [$this, "bootstrapStackedGridFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapGridOffset", [$this, "bootstrapGridOffsetFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapGridPull", [$this, "bootstrapGridPullFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapGridPush", [$this, "bootstrapGridPushFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapGridStacked", [$this, "bootstrapGridStackedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
