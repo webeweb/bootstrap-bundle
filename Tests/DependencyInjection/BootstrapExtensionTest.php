@@ -30,6 +30,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwig
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
@@ -100,6 +101,7 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(Base64ImageTwigExtension::class, $this->containerBuilder->get(Base64ImageTwigExtension::SERVICE_NAME));
 
         // Plugin
+        $this->assertInstanceOf(FontAwesomePluginTwigExtension::class, $this->containerBuilder->get(FontAwesomePluginTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(InputMaskPluginTwigExtension::class, $this->containerBuilder->get(InputMaskPluginTwigExtension::SERVICE_NAME));
 
         // Table

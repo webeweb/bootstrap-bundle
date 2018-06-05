@@ -101,6 +101,12 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bundle.bootstrapbundle.twig.extension.plugin.fontawesome:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension
+        arguments: ["@translator"]
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bundle.bootstrapbundle.twig.extension.plugin.inputmask:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension
         arguments: ["@translator"]
