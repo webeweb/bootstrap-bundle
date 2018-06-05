@@ -23,18 +23,54 @@ use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapWebTestCase;
 final class LayoutControllerTest extends AbstractBootstrapWebTestCase {
 
     /**
-     * Tests the indexAction() method.
+     * Tests the blankAction() method.
      *
      * @return void
      */
-    public function testIndexAction() {
+    public function testBlankAction() {
 
         // Create a client.
         $client = static::createClient();
 
         // Make a GET request.
-        $client->request("GET", "/");
+        $client->request("GET", "/blank");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * Tests the flashbagAction() method.
+     *
+     * @return void
+     */
+    public function testFlashbagAction() {
+
+        $res = <<< 'EOTXT'
+            <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            Danger
+        </div>
+                <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            Info
+        </div>
+                <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            Success
+        </div>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            Warning
+        </div>
+    
+EOTXT;
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/flashbag");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals($res, $client->getResponse()->getContent());
     }
 
 }
