@@ -1,6 +1,7 @@
 # Resources/translations/BootstrapBundle.en.yml
 label:
     cancel: "Cancel"
+    close:  "Close"
     delete: "Delete"
     edit:   "Edit"
     submit: "Submit"
