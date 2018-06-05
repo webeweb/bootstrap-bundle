@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapKernel;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapKernel;
 
 /**
  * Test kernel.

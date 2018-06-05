@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests;
+namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
 
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -27,7 +27,7 @@ use Twig_LoaderInterface;
  * Abstract Bootstrap framework test case.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests
+ * @package WBW\Bundle\BootstrapBundle\Tests\Cases
  * @abstract
  */
 abstract class AbstractBootstrapFrameworkTestCase extends PHPUnit_Framework_TestCase {

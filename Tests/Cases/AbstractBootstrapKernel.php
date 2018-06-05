@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests;
+namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Kernel;
  * Abstract Bootstrap kernel.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests
+ * @package WBW\Bundle\BootstrapBundle\Tests\Cases
  * @abstract
  */
 abstract class AbstractBootstrapKernel extends Kernel {
@@ -27,21 +27,21 @@ abstract class AbstractBootstrapKernel extends Kernel {
      * {@inheritdoc}
      */
     public function registerContainerConfiguration(LoaderInterface $loader) {
-        $loader->load(__DIR__ . "/Fixtures/App/config/config_test.yml");
+        $loader->load(__DIR__ . "/../Fixtures/App/config/config_test.yml");
     }
 
     /**
      * {@inheritdoc}
      */
     public function getCacheDir() {
-        return __DIR__ . "/Fixtures/App/var/cache";
+        return __DIR__ . "/../Fixtures/App/var/cache";
     }
 
     /**
      * {@inheritdoc}
      */
     public function getLogDir() {
-        return __DIR__ . "/Fixtures/App/var/logs";
+        return __DIR__ . "/../Fixtures/App/var/logs";
     }
 
 }

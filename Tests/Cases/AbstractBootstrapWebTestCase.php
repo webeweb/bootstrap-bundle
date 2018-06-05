@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests;
+namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -17,7 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  * Abstract Bootstrap web test case.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests
+ * @package WBW\Bundle\BootstrapBundle\Tests\Cases
  * @abstract
  */
 abstract class AbstractBootstrapWebTestCase extends WebTestCase {
