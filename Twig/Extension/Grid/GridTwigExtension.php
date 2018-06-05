@@ -63,7 +63,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @return string Returns the Bootstrap offset grid.
      */
     public function bootstrapOffsetGridFunction(array $args = []) {
-        return $this->bootstrapGrid(ArrayUtility::get($args, "lg-offset"), ArrayUtility::get($args, "md-offset"), ArrayUtility::get($args, "sm-offset"), ArrayUtility::get($args, "xs-offset"), ArrayUtility::get($args, "recopy-offset", false), "offset-");
+        return $this->bootstrapGrid(ArrayUtility::get($args, "lgOffset"), ArrayUtility::get($args, "mdOffset"), ArrayUtility::get($args, "smOffset"), ArrayUtility::get($args, "xsOffset"), ArrayUtility::get($args, "recopyOffset", false), "offset-");
     }
 
     /**
@@ -73,7 +73,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @return string Returns the Bootstrap pull grid.
      */
     public function bootstrapPullGridFunction(array $args = []) {
-        return $this->bootstrapGrid(ArrayUtility::get($args, "lg-pull"), ArrayUtility::get($args, "md-pull"), ArrayUtility::get($args, "sm-pull"), ArrayUtility::get($args, "xs-pull"), ArrayUtility::get($args, "recopy-pull", false), "pull-");
+        return $this->bootstrapGrid(ArrayUtility::get($args, "lgPull"), ArrayUtility::get($args, "mdPull"), ArrayUtility::get($args, "smPull"), ArrayUtility::get($args, "xsPull"), ArrayUtility::get($args, "recopyPull", false), "pull-");
     }
 
     /**
@@ -83,7 +83,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @return string Returns the Bootstrap push grid.
      */
     public function bootstrapPushGridFunction(array $args = []) {
-        return $this->bootstrapGrid(ArrayUtility::get($args, "lg-push"), ArrayUtility::get($args, "md-push"), ArrayUtility::get($args, "sm-push"), ArrayUtility::get($args, "xs-push"), ArrayUtility::get($args, "recopy-push", false), "push-");
+        return $this->bootstrapGrid(ArrayUtility::get($args, "lgPush"), ArrayUtility::get($args, "mdPush"), ArrayUtility::get($args, "smPush"), ArrayUtility::get($args, "xsPush"), ArrayUtility::get($args, "recopyPush", false), "push-");
     }
 
     /**
