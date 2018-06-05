@@ -68,7 +68,7 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
     public function bootstrapDefaultFormButtonsFunction(array $args = []) {
 
         // Initialize the buttons.
-        $cancelButton = $this->bootstrapCancelFormButtonFunction(["href" => ArrayUtility::get($args, "cancel_href")]);
+        $cancelButton = $this->bootstrapCancelFormButtonFunction(["href" => ArrayUtility::get($args, "cancel-href")]);
         $submitButton = $this->bootstrapSubmitFormButtonFunction();
 
         // Return the HTML.
