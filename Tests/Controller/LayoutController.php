@@ -51,7 +51,7 @@ final class LayoutController extends AbstractBootstrapController {
         $this->notifyWarning("Warning");
 
         // Return th response.
-        return $this->render("@Bootstrap/layout/flashbag.html.twig");
+        return $this->render("@Bootstrap/include/flashbag.html.twig");
     }
 
 }
