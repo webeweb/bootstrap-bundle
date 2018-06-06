@@ -1,0 +1,15 @@
+{# Resources/views/include/twig-console.html.twig #}
+{% if ("dev" == app.environment) %}
+    <div class="row clearfix" id="twig-console">
+        <div class="{{ bootstrapGrid({'lg': 12}) }}">
+            <div class="panel" style="background-color: #9E9E9E;">
+                <div class="panel-heading" style="background-color: #000000; color: #FFFFFF;">
+                    <h3 class="panel-title">{{ bootstrapGlyphicon({"name": "log-out"}) }} TWIG CONSOLE</h3>
+                </div>
+                <div class="panel body" id="dump-context" style="background-color: #9E9E9E; margin: 10px 10px 0px 10px; display: none; ">
+                    {{ dump(_context) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

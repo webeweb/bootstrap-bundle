@@ -1,0 +1,8 @@
+{# Resources/include/style/twig-console.html.twig #}
+{% if ("dev" == app.environment) %}
+    <style type="text/css">
+        div#twig-console h3.panel-title span.glyphicon:hover {
+            cursor: pointer;
+        }
+    </style>
+{% endif%}

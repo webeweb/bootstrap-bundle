@@ -1,0 +1,15 @@
+{# Resources/views/include/dump-context.html.twig #}
+{% if ("dev" == app.environment) %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div#twig-console h3.panel-title span.glyphicon").on("click", function () {
+                var dumpContext = $("div#dump-context");
+                var displayProperty = "none";
+                if ("none" === dumpContext.css("display")) {
+                    displayProperty = "block";
+                }
+                dumpContext.css("display", displayProperty);
+            });
+        });
+    </script>
+{% endif %}
