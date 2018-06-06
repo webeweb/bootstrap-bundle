@@ -1,4 +1,4 @@
-{# Resources/views/layout/flashbag.html.twig #}
+{# Resources/views/include/flashbag.html.twig #}
 {% for key, messages in app.session.flashbag.all() %}
     {% for message in messages %}
         <div class="alert alert-{{ key }} alert-dismissible" role="alert">
