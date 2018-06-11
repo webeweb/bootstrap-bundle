@@ -107,8 +107,8 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bundle.bootstrapbundle.twig.extension.plugin.inputmask:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension
+    webeweb.bundle.bootstrapbundle.twig.extension.plugin.jqueryinputmask:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskPluginTwigExtension
         arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }

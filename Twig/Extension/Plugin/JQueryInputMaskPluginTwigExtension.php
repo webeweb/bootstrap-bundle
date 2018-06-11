@@ -15,19 +15,19 @@ use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Input mask plugin Twig Extension.
+ * jQuery Input mask plugin Twig Extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class InputMaskPluginTwigExtension extends AbstractPluginTwigExtension {
+class JQueryInputMaskPluginTwigExtension extends AbstractPluginTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.plugin.inputmask";
+    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.plugin.jqueryinputmask";
 
     /**
      * Constructor.

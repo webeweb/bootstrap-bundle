@@ -31,7 +31,7 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
     }
 
     /**
-     * Displays a Font Awesome.
+     * Displays a Font Awesome icon.
      *
      * @param string $style The Font Awesome style.
      * @param string $name The Font Awesome name.
@@ -39,10 +39,10 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
      * @param boolean $fixedWidth Fixed width ?
      * @param boolean $bordered Bordered ?
      * @param string $pull The Font Awesome pull.
-     * @param string $animated The Font Awesome animation.
-     * @return string Returns the Font Awesome.
+     * @param string $anime The Font Awesome animation.
+     * @return string Returns the Font Awesome icon.
      */
-    protected function fontAwesome($style, $name, $size, $fixedWidth, $bordered, $pull, $animated) {
+    protected function fontAwesomeIcon($style, $name, $size, $fixedWidth, $bordered, $pull, $anime) {
 
         // Initialize the values.
         $styles   = ["", "s", "r", "l", "b"];
@@ -62,7 +62,7 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         $attributes["class"][] = true === $fixedWidth ? "fa-fw" : null;
         $attributes["class"][] = true === $bordered ? "fa-border" : null;
         $attributes["class"][] = true === in_array($pull, $pulls) ? "fa-pull-" . $pull : null;
-        $attributes["class"][] = true === in_array($animated, $animates) ? "fa-" . $animated : null;
+        $attributes["class"][] = true === in_array($anime, $animates) ? "fa-" . $anime : null;
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);

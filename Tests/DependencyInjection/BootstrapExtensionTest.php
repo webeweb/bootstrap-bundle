@@ -31,7 +31,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\InputMaskPluginTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
@@ -102,7 +102,7 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
         // Plugin
         $this->assertInstanceOf(FontAwesomePluginTwigExtension::class, $this->containerBuilder->get(FontAwesomePluginTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(InputMaskPluginTwigExtension::class, $this->containerBuilder->get(InputMaskPluginTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(JQueryInputMaskPluginTwigExtension::class, $this->containerBuilder->get(JQueryInputMaskPluginTwigExtension::SERVICE_NAME));
 
         // Table
         $this->assertInstanceOf(ButtonTableTwigExtension::class, $this->containerBuilder->get(ButtonTableTwigExtension::SERVICE_NAME));
