@@ -113,6 +113,12 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bundle.bootstrapbundle.twig.extension.plugin.materialdesigniconicfont:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension
+        arguments: ["@translator"]
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bundle.bootstrapbundle.twig.extension.table.button:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension
         arguments: ["@translator"]
