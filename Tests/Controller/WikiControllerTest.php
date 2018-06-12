@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
+use WBW\Bundle\BootstrapBundle\Controller\WikiController;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapWebTestCase;
 
 /**
