@@ -1,0 +1,110 @@
+{# Resources/views/Wiki/twig-extension/component/button.html.twig #}
+{% extends "@Bootstrap/Wiki/layout.html.twig" %}
+{% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
+{% block bootstrapWikiContent %}
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "bootstrapAlertDanger",
+        "bootstrapAlertDefault",
+        "bootstrapAlertInfo",
+        "bootstrapAlertPrimary",
+        "bootstrapAlertSuccess",
+        "bootstrapAlertWarning",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapButtonDanger") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["string", "title", "the title"],
+                ["string", "size", "the size"],
+                ["boolean", "block", "block? (false by default)"],
+                ["boolean", "active", "active? (false by default)"],
+                ["boolean", "disable", "disable? (false by default)"],
+                ["string", "icon", "the icon"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapButtonDanger({"content": "content", "title": "title", "size": "lg", "block": true, "active": true, "disable": true, "icon": "asterisk"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonDanger({"content": "content", "title": "title", "size": "lg", "block": true, "active": true, "disable": true, "icon": "asterisk"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapButtonDefault") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["string", "title", "the title"],
+                ["string", "size", "the size"],
+                ["boolean", "block", "block? (false by default)"],
+                ["boolean", "active", "active? (false by default)"],
+                ["boolean", "disable", "disable? (false by default)"],
+                ["string", "icon", "the icon"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapButtonDefault({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonDefault({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapButtonInfo") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["string", "title", "the title"],
+                ["string", "size", "the size"],
+                ["boolean", "block", "block? (false by default)"],
+                ["boolean", "active", "active? (false by default)"],
+                ["boolean", "disable", "disable? (false by default)"],
+                ["string", "icon", "the icon"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapButtonInfo({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonInfo({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapButtonPrimary") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["string", "title", "the title"],
+                ["string", "size", "the size"],
+                ["boolean", "block", "block? (false by default)"],
+                ["boolean", "active", "active? (false by default)"],
+                ["boolean", "disable", "disable? (false by default)"],
+                ["string", "icon", "the icon"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapButtonPrimary({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonPrimary({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapButtonSuccess") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["string", "title", "the title"],
+                ["string", "size", "the size"],
+                ["boolean", "block", "block? (false by default)"],
+                ["boolean", "active", "active? (false by default)"],
+                ["boolean", "disable", "disable? (false by default)"],
+                ["string", "icon", "the icon"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapButtonSuccess({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonSuccess({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapButtonWarning") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["string", "title", "the title"],
+                ["string", "size", "the size"],
+                ["boolean", "block", "block? (false by default)"],
+                ["boolean", "active", "active? (false by default)"],
+                ["boolean", "disable", "disable? (false by default)"],
+                ["string", "icon", "the icon"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapButtonWarning({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonWarning({"content": "content"})) }}
+        </div>
+    </div>
+{% endblock %}
