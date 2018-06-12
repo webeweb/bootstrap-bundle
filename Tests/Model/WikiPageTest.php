@@ -32,7 +32,7 @@ final class WikiPageTest extends PHPUnit_Framework_TestCase {
 
         $obj = new WikiPage("category", "package", "page", "title");
 
-        $this->assertEquals("Bootstrap", $obj->getBootstrap());
+        $this->assertEquals("Bootstrap", $obj->getBundle());
         $this->assertEquals("category", $obj->getCategory());
         $this->assertEquals("package", $obj->getPackage());
         $this->assertEquals("page", $obj->getPage());
