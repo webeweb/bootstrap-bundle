@@ -46,6 +46,13 @@ final class WikiControllerTest extends AbstractBootstrapWebTestCase {
             $client->request("GET", $url);
             $this->assertEquals(200, $client->getResponse()->getStatusCode());
         }
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/wiki/category/package/page");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
 }
