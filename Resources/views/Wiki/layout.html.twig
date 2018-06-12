@@ -55,6 +55,9 @@
                     </div>
                 </div>
             </div>
+            {% if ("dev" == app.environment) %}
+                {% include "@Bootstrap/include/twig-console.html.twig" %}
+            {% endif %}
         </div>
     </section>
 {% endblock %}
