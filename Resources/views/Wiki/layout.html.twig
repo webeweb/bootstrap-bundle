@@ -1,0 +1,60 @@
+{# Resources/views/Wiki/layout.html.twig #}
+{% extends "@Bootstrap/layout.html.twig" %}
+{% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
+{% block bootstrapHeadStyles %}
+    {{ parent() }}
+    <style type="text/css">
+        .content {
+            margin: 70px 0 0;
+        }
+    </style>
+{% endblock %}
+{% block bootstrapHeadTitle %}webeweb/bootstrap-bundle{% endblock %}
+{% block bootstrapBodyContent %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-target="#bootstrapbundle-navbar-collapse" data-toggle="collapse" aria-expanded="false">
+                    <span class="sr-only">{{ "label.toggle_navigation"|trans({}, "EDMBundle") }}</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Bootstrap bundle</a>
+            </div>
+        </div>
+    </nav>
+    <section class="content">
+        <div class="container-fluid">
+            {% if (0 < app.session.flashbag.peekAll()|length) %}
+                <div class="row clearfix">
+                    <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
+                        {% include "@Bootstrap/include/flashbag.html.twig" %}
+                    </div>
+                </div>
+            {% endif %}
+            <div class="row clearfix">
+                <div class="{{ bootstrapGrid({"lg": 9, "md": 8, "sm": 8, "xs": 12}) }}">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            {{ wiki.wikiTitle(wikiPage) }}
+                        </div>
+                        <div class="panel-body">
+                            {% block bootstrapWikiContent %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+                <div class="{{ bootstrapGrid({"lg": 3, "md": 4, "sm": 4, "xs": 12}) }}">
+                    <div class="list-group">
+                        {% for wikiPage in wikiPages %}
+                            {% set _url = path("bootstrap_wiki_index", {"category": wikiPage.category, "package": wikiPage.package, "page": wikiPage.page}) %}
+                            {% set _act = _url == app.request.requestUri %}
+                            <a class="list-group-item{{ _act ? " active" : "" }}" href="{{ _url }}">{{ bootstrapBadge({"content": wikiPage.package}) }}{{ wikiPage.title }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
