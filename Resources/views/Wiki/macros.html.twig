@@ -1,0 +1,91 @@
+{# Resources/views/Wiki/layout.html.twig #}
+
+{##
+ # Displays an arguments list.
+ #
+ # @param array arguments The arguments.
+ # @return string Returns the arguments list.
+ #}
+{% macro argumentsList(arguments) %}
+    <h4>{{ bootstrapGlyphicon({"name": "log-in"}) }} Arguments list</h4>
+    <blockquote style="font-size: 14px;">
+        {% for argument in arguments %}
+            <p>
+                <strong style="display: inline-block; width: 64px;">{{ argument[0] }}</strong>
+                <em style="display: inline-block; width: 80px;">{{ argument[1] }}</em> {{ argument[2] }}
+            </p>
+        {% endfor %}
+    </blockquote>
+{% endmacro %}
+
+{##
+ # Displays a function example.
+ #
+ # @param string command The function command.
+ # @return string Returns the functions arguments.
+ #}
+{% macro functionExample(command) %}
+    <h4>{{ bootstrapGlyphicon({"name": "console"}) }} Example</h4>
+    {{ bootstrapUserInput({"content": command})}}
+    <div style="margin-bottom: 20px;"></div>
+{% endmacro %}
+
+{##
+ # Displays a function output.
+ #
+ # @param string output The function output.
+ # @return string Returns the functions output.
+ #}
+{% macro functionOutput(output) %}
+    <h4>{{ bootstrapGlyphicon({"name": "log-out"}) }} Output</h4>
+    {{ output|raw }}
+{% endmacro %}
+
+{##
+ # Displays a function title.
+ #
+ # @param string name The function name.
+ # @return string Returns the functions title.
+ #}
+{% macro functionTitle(name) %}
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ bootstrapGlyphicon({"name": "bookmark"}) }} {{ name }}()</h3>
+    </div>
+{% endmacro %}
+
+{##
+ # Displays a functions list.
+ #
+ # @param array functions The functions.
+ # @return string Returns the functions list.
+ #}
+{% macro functionsList(functions) %}
+    <ul class="list-group">
+        {% for function in functions %}
+            <li class="list-group-item">{{ bootstrapGlyphicon({"name": "bookmark"}) }} {{ function }}()</li>
+            {% endfor %}
+    </ul>
+{% endmacro %}
+
+{##
+ # Displays a functions title.
+ #
+ # @return string Returns the functions title.
+ #}
+{% macro functionsTitle() %}
+    <div class="panel">
+        <div class="panel-heading panel-primary">
+            <h3 class="panel-title">{{ bootstrapGlyphicon({"name": "list"}) }} Functions list</h3>
+        </div>
+    </div>
+{% endmacro %}
+
+{##
+ # Displays a wiki title.
+ #
+ # @param object wikiPage The wiki page.
+ # @return string Returns the wiki title.
+ #}
+{% macro wikiTitle(wikiPage) %}
+    <h3 class="panel-title panel-primary">{{ bootstrapGlyphicon({"name": "book"}) }} {{ wikiPage.category|capitalize|replace({"-": " "}) }} {{ bootstrapGlyphicon({"name": "chevron-right"}) }} {{ wikiPage.package|capitalize }} {{ bootstrapGlyphicon({"name": "chevron-right"}) }} {{ wikiPage.title }}</h3>
+{% endmacro %}
