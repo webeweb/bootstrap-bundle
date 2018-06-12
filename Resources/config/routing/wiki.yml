@@ -1,0 +1,5 @@
+# Resources/config/routing/doc.yml
+bootstrap_wiki_index:
+    path:     "/wiki/{category}/{package}/{page}"
+    defaults: { _controller: "BootstrapBundle:Wiki:index" }
+    methods: ["GET"]
