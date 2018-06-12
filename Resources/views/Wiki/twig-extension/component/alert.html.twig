@@ -1,0 +1,57 @@
+{# Resources/views/Wiki/twig-extension/component/alert.html.twig #}
+{% extends "@Bootstrap/Wiki/layout.html.twig" %}
+{% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
+{% block bootstrapWikiContent %}
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "bootstrapAlertDanger",
+        "bootstrapAlertInfo",
+        "bootstrapAlertLink",
+        "bootstrapAlertSuccess",
+        "bootstrapAlertWarning",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapAlertDanger") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["boolean", "dismissible", "dismissible? (false by default)"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapAlertDanger({"content": "content", "dismissible": true}) }}') }}
+            {{ wiki.functionOutput(bootstrapAlertDanger({"content": "content", "dismissible": true})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapAlertInfo") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["boolean", "dismissible", "dismissible? (false by default)"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapAlertInfo({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapAlertInfo({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapAlertSuccess") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["boolean", "dismissible", "dismissible? (false by default)"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapAlertSuccess({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapAlertSuccess({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapAlertWarning") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["boolean", "dismissible", "dismissible? (false by default)"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapAlertWarning({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapAlertWarning({"content": "content"})) }}
+        </div>
+    </div>
+{% endblock %}
