@@ -100,9 +100,9 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('bootstrapCancelFormButton', [$this, 'bootstrapCancelFormButtonFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapDefaultFormButtons', [$this, 'bootstrapDefaultFormButtonsFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('bootstrapSubmitFormButton', [$this, 'bootstrapSubmitFormButtonFunction'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction("bootstrapCancelFormButton", [$this, "bootstrapCancelFormButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapDefaultFormButtons", [$this, "bootstrapDefaultFormButtonsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapSubmitFormButton", [$this, "bootstrapSubmitFormButtonFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

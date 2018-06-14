@@ -80,7 +80,7 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
     public function materialDesignIconicFontListFilter($items) {
 
         // Initialize the template.
-        $template = '<ul class="zmdi-hc-ul">%innerHTML%</ul>';
+        $template = "<ul class=\"zmdi-hc-ul\">%innerHTML%</ul>";
 
         // Initialize the parameters.
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
@@ -99,7 +99,7 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
     public function materialDesignIconicFontListIconFilter($icon, $content) {
 
         // Initialize the template.
-        $template = '<li>%glyphicon%%innerHTML%</li>';
+        $template = "<li>%glyphicon%%innerHTML%</li>";
 
         // Initialize the parameters.
         $glyphicon = null !== $icon ? StringUtility::replace($icon, ["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"]) : "";

@@ -57,7 +57,7 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension {
     public function fontAwesomeListFilter($items) {
 
         // Initialize the template.
-        $template = '<ul class="fa-ul">%innerHTML%</ul>';
+        $template = "<ul class=\"fa-ul\">%innerHTML%</ul>";
 
         // Initialize the parameters.
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
@@ -76,7 +76,7 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension {
     public function fontAwesomeListIconFilter($icon, $content) {
 
         // Initialize the template.
-        $template = '<li><span class="fa-li">%glyphicon%</span>%innerHTML%</li>';
+        $template = "<li><span class=\"fa-li\">%glyphicon%</span>%innerHTML%</li>";
 
         // Initialize the parameters.
         $glyphicon = null !== $icon ? $icon : "";

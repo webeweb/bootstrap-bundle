@@ -42,7 +42,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
 
         // Initialize the templates.
         $template = "<div %attributes%>%innerHTML%</div>";
-        $button   = '<button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+        $button   = "<button class=\"close\" type=\"button\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>";
 
         // Initialize the attributes.
         $attributes = [];
@@ -67,7 +67,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     protected function bootstrapBadge($content) {
 
         // Initialize the template.
-        $template = '<span %attributes%>%innerHTML%</span>';
+        $template = "<span %attributes%>%innerHTML%</span>";
 
         // Initialize the attributes.
         $attributes = [];
@@ -182,8 +182,8 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     protected function bootstrapProgressBar($content, $value, $min, $max, $striped, $animated, $class = null) {
 
         // Initialize the template.
-        $template = '<div class="progress"><div %attributes%>%innerHTML%</div></div>';
-        $span     = '<span class="sr-only">%value%%</span>';
+        $template = "<div class=\"progress\"><div %attributes%>%innerHTML%</div></div>";
+        $span     = "<span class=\"sr-only\">%value%%</span>";
 
         // Initialize the attributes.
         $attributes = [];
