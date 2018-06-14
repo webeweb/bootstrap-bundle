@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\FactoryBootstrapTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
@@ -113,7 +114,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["disabled"]       = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $glyphicon = null !== $icon ? $this->bootstrapGlyphicon($icon, null) : "";
+        $glyphicon = null !== $icon ? FactoryBootstrapTwigExtension::bootstrapIcon($icon) : "";
         $innerHTML = null !== $content ? ("" !== $glyphicon ? " " . $content : $content) : "";
 
         // Return the HTML.
