@@ -55,13 +55,13 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
     protected function bootstrapSimpleTag($name, $content) {
 
         // Initialize the template.
-        $template = "<" . $name . ">%innerHTML%</" . $name . ">";
+        $template = "<%tag%>%innerHTML%</%tag%>";
 
         // Initialize the parameters.
         $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+        return StringUtility::replace($template, ["%tag%", "%innerHTML%"], [$name, $innerHTML]);
     }
 
 }
