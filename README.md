@@ -13,6 +13,7 @@ Integrate Bootstrap theme with Symfony 2.
 
 Includes:
 
+- [Animate.css 3.5.2](https://github.com/daneden/animate.css/)
 - [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
 - [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker/) (Bootstrap plug-in)
 - [Bootstrap Datepicker 1.7.1](https://github.com/uxsolutions/bootstrap-datepicker/) (Bootstrap plug-in)
