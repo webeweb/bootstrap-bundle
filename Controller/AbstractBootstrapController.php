@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Event\NotificationEvent;
@@ -44,6 +45,15 @@ abstract class AbstractBootstrapController extends Controller {
      */
     protected function getLogger() {
         return $this->get("logger");
+    }
+
+    /**
+     * Get the router.
+     *
+     * @return RouterInterface Returns the router.
+     */
+    protected function getRouter() {
+        return $this->get("router");
     }
 
     /**
