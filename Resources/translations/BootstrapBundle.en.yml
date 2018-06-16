@@ -1,10 +1,11 @@
 # Resources/translations/BootstrapBundle.en.yml
 label:
-    cancel: "Cancel"
-    close:  "Close"
-    delete: "Delete"
-    edit:   "Edit"
-    submit: "Submit"
+    cancel:            "Cancel"
+    close:             "Close"
+    delete:            "Delete"
+    edit:              "Edit"
+    submit:            "Submit"
+    toggle_navigation: "Toggle navigation"
 
 navigation:
     node:
