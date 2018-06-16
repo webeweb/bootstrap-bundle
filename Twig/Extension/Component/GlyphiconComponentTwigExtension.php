@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
@@ -20,7 +21,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  */
-class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtension {
+class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
@@ -55,6 +56,13 @@ class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtension {
         return [
             new Twig_SimpleFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function renderIcon($name, $style) {
+        return $this->bootstrapGlyphiconFunction(["name" => $name, "style" => $style]);
     }
 
 }

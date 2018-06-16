@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -22,7 +23,7 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExtension {
+class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
@@ -107,6 +108,13 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
 
         // Return the HTML.
         return StringUtility::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function renderIcon($name, $style) {
+        return $this->materialDesignIconicFontIconFunction(["name" => $name, "style" => $style]);
     }
 
 }

@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
@@ -22,7 +23,7 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension {
+class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
@@ -107,6 +108,13 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension {
         return [
             new Twig_SimpleFunction("fontAwesomeIcon", [$this, "fontAwesomeIconFunction"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function renderIcon($name, $style) {
+        return $this->fontAwesomeIconFunction(["name" => $name, "style" => $style]);
     }
 
 }
