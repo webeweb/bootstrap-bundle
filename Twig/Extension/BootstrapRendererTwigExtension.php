@@ -16,21 +16,17 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtens
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension;
 
 /**
- * Factory Bootstrap Twig extension.
+ * Bootstrap renderer Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension
  */
-class FactoryBootstrapTwigExtension {
+class BootstrapRendererTwigExtension {
 
     /**
-     * Displays a Bootstrap icon.
-     *
-     * @param string $name The icon name.
-     * @param string $style The icon style.
-     * @return string Returns the Bootstrap icon.
+     * {@inheritdoc}
      */
-    public static function bootstrapIcon($name, $style = null) {
+    public static function renderIcon($name, $style = null) {
 
         // Determines the handler.
         $handler = explode(":", $name);
@@ -52,15 +48,15 @@ class FactoryBootstrapTwigExtension {
 
             case "b": // Bootstrap
             case "g": // Glyphicon
-                $output = (new GlyphiconComponentTwigExtension())->bootstrapGlyphiconFunction(["name" => $handler[1], "style" => $style]);
+                $output = (new GlyphiconComponentTwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             case "fa": // Font Awesome
-                $output = (new FontAwesomePluginTwigExtension())->fontAwesomeIconFunction(["name" => $handler[1], "style" => $style]);
+                $output = (new FontAwesomePluginTwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             case "zmdi": // Material Design Iconic Font
-                $output = (new MaterialDesignIconicFontPluginTwigExtension())->materialDesignIconicFontIconFunction(["name" => $handler[1], "style" => $style]);
+                $output = (new MaterialDesignIconicFontPluginTwigExtension())->renderIcon($handler[1], $style);
                 break;
         }
 
