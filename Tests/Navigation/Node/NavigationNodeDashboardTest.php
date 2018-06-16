@@ -33,7 +33,7 @@ final class NavigationNodeDashboardTest extends PHPUnit_Framework_TestCase {
         $obj = new NavigationNodeDashboard("route");
 
         $this->assertEquals("navigation.node.dashboard", $obj->getId());
-        $this->assertEquals("dashboard", $obj->getIcon());
+        $this->assertEquals("g:dashboard", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

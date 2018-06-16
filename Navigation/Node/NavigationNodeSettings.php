@@ -27,7 +27,7 @@ class NavigationNodeSettings extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.settings", "cog", $route);
+        parent::__construct("navigation.node.settings", "g:cog", $route);
     }
 
 }

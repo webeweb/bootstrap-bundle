@@ -33,7 +33,7 @@ final class NavigationNodeEditActionTest extends PHPUnit_Framework_TestCase {
         $obj = new NavigationNodeEditAction("route");
 
         $this->assertEquals("navigation.node.action.edit", $obj->getId());
-        $this->assertEquals("pencil", $obj->getIcon());
+        $this->assertEquals("g:pencil", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

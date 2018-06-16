@@ -33,7 +33,7 @@ final class BreadcrumbNodeExportActionTest extends PHPUnit_Framework_TestCase {
         $obj = new BreadcrumbNodeExportAction("route");
 
         $this->assertEquals("navigation.node.action.export", $obj->getId());
-        $this->assertEquals("open", $obj->getIcon());
+        $this->assertEquals("g:open", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

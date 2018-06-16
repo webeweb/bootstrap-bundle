@@ -27,7 +27,7 @@ class NavigationNodeParameters extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.parameters", "wrench", $route);
+        parent::__construct("navigation.node.parameters", "g:wrench", $route);
     }
 
 }

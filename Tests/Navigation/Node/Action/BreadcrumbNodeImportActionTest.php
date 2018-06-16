@@ -33,7 +33,7 @@ final class BreadcrumbNodeImportActionTest extends PHPUnit_Framework_TestCase {
         $obj = new BreadcrumbNodeImportAction("route");
 
         $this->assertEquals("navigation.node.action.import", $obj->getId());
-        $this->assertEquals("save", $obj->getIcon());
+        $this->assertEquals("g:save", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

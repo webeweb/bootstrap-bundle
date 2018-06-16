@@ -33,7 +33,7 @@ final class NavigationNodeUserTest extends PHPUnit_Framework_TestCase {
         $obj = new NavigationNodeUser("route");
 
         $this->assertEquals("navigation.node.user", $obj->getId());
-        $this->assertEquals("user", $obj->getIcon());
+        $this->assertEquals("g:user", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

@@ -27,7 +27,7 @@ class NavigationNodeIndexAction extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.action.index", "list", $route);
+        parent::__construct("navigation.node.action.index", "g:list", $route);
     }
 
 }

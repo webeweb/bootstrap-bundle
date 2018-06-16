@@ -33,7 +33,7 @@ final class NavigationNodeEventTest extends PHPUnit_Framework_TestCase {
         $obj = new NavigationNodeEvent("route");
 
         $this->assertEquals("navigation.node.event", $obj->getId());
-        $this->assertEquals("calendar", $obj->getIcon());
+        $this->assertEquals("g:calendar", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

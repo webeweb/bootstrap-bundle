@@ -33,7 +33,7 @@ final class BreadcrumbNodeNewActionTest extends PHPUnit_Framework_TestCase {
         $obj = new BreadcrumbNodeNewAction("route");
 
         $this->assertEquals("navigation.node.action.new", $obj->getId());
-        $this->assertEquals("plus", $obj->getIcon());
+        $this->assertEquals("g:plus", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

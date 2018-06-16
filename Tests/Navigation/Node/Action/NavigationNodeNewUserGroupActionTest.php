@@ -33,7 +33,7 @@ final class NavigationNodeNewUserGroupActionTest extends PHPUnit_Framework_TestC
         $obj = new NavigationNodeNewUserGroupAction("route");
 
         $this->assertEquals("navigation.node.action.new", $obj->getId());
-        $this->assertEquals("plus", $obj->getIcon());
+        $this->assertEquals("g:plus", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

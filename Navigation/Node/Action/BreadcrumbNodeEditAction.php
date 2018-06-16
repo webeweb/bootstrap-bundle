@@ -27,7 +27,7 @@ class BreadcrumbNodeEditAction extends BreadcrumbNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.action.edit", "pencil", $route);
+        parent::__construct("navigation.node.action.edit", "g:pencil", $route);
     }
 
 }

@@ -27,7 +27,7 @@ class NavigationNodeUser extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.user", "user", $route);
+        parent::__construct("navigation.node.user", "g:user", $route);
     }
 
 }

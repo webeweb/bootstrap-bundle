@@ -33,7 +33,7 @@ final class NavigationNodeSettingsTest extends PHPUnit_Framework_TestCase {
         $obj = new NavigationNodeSettings("route");
 
         $this->assertEquals("navigation.node.settings", $obj->getId());
-        $this->assertEquals("cog", $obj->getIcon());
+        $this->assertEquals("g:cog", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 

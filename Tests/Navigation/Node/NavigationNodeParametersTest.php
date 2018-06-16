@@ -33,7 +33,7 @@ final class NavigationNodeParametersTest extends PHPUnit_Framework_TestCase {
         $obj = new NavigationNodeParameters("route");
 
         $this->assertEquals("navigation.node.parameters", $obj->getId());
-        $this->assertEquals("wrench", $obj->getIcon());
+        $this->assertEquals("g:wrench", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
 
