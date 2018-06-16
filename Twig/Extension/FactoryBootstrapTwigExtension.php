@@ -49,7 +49,7 @@ class FactoryBootstrapTwigExtension {
         // Swith into handler.
         switch ($handler[0]) {
 
-            case "b":
+            case "b": // Bootstrap
             case "g": // Glyphicon
                 $output = (new GlyphiconComponentTwigExtension())->bootstrapGlyphiconFunction(["name" => $handler[1]]);
                 break;
@@ -58,7 +58,7 @@ class FactoryBootstrapTwigExtension {
                 $output = (new FontAwesomePluginTwigExtension())->fontAwesomeIconFunction(["name" => $handler[1]]);
                 break;
 
-            case "mdi": // Material Design Iconic Font
+            case "zmdi": // Material Design Iconic Font
                 $output = (new MaterialDesignIconicFontPluginTwigExtension())->materialDesignIconicFontIconFunction(["name" => $handler[1]]);
                 break;
         }

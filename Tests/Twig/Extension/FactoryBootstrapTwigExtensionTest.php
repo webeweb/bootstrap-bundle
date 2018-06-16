@@ -34,7 +34,7 @@ final class FactoryBootstrapTwigExtensionTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($res0, FactoryBootstrapTwigExtension::bootstrapIcon("::"));
 
         $res1 = '<i class="zmdi zmdi-home"></i>';
-        $this->assertEquals($res1, FactoryBootstrapTwigExtension::bootstrapIcon("mdi:home"));
+        $this->assertEquals($res1, FactoryBootstrapTwigExtension::bootstrapIcon("zmdi:home"));
 
         $res2 = '<i class="fa fa-home"></i>';
         $this->assertEquals($res2, FactoryBootstrapTwigExtension::bootstrapIcon("fa:home"));
