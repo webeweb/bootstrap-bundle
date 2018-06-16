@@ -48,6 +48,7 @@ abstract class AbstractBootstrapKernel extends Kernel {
      * Get the Tests directory.
      *
      * @return string Returns the Tests directory.
+     * @abstract
      */
     abstract public function getTestsDir();
 }
