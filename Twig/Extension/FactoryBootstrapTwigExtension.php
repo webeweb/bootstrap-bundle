@@ -27,9 +27,10 @@ class FactoryBootstrapTwigExtension {
      * Displays a Bootstrap icon.
      *
      * @param string $name The icon name.
+     * @param string $style The icon style.
      * @return string Returns the Bootstrap icon.
      */
-    public static function bootstrapIcon($name) {
+    public static function bootstrapIcon($name, $style = null) {
 
         // Determines the handler.
         $handler = explode(":", $name);
@@ -51,15 +52,15 @@ class FactoryBootstrapTwigExtension {
 
             case "b": // Bootstrap
             case "g": // Glyphicon
-                $output = (new GlyphiconComponentTwigExtension())->bootstrapGlyphiconFunction(["name" => $handler[1]]);
+                $output = (new GlyphiconComponentTwigExtension())->bootstrapGlyphiconFunction(["name" => $handler[1], "style" => $style]);
                 break;
 
             case "fa": // Font Awesome
-                $output = (new FontAwesomePluginTwigExtension())->fontAwesomeIconFunction(["name" => $handler[1]]);
+                $output = (new FontAwesomePluginTwigExtension())->fontAwesomeIconFunction(["name" => $handler[1], "style" => $style]);
                 break;
 
             case "zmdi": // Material Design Iconic Font
-                $output = (new MaterialDesignIconicFontPluginTwigExtension())->materialDesignIconicFontIconFunction(["name" => $handler[1]]);
+                $output = (new MaterialDesignIconicFontPluginTwigExtension())->materialDesignIconicFontIconFunction(["name" => $handler[1], "style" => $style]);
                 break;
         }
 

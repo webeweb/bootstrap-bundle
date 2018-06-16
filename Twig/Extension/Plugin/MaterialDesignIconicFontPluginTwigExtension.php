@@ -68,7 +68,7 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
      * @return Returns a Font Awesome.
      */
     public function materialDesignIconicFontIconFunction(array $args = []) {
-        return $this->materialDesignIconicFontIcon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "size"), ArrayUtility::get($args, "fixedWidth", false), ArrayUtility::get($args, "border", false), ArrayUtility::get($args, "pull"), ArrayUtility::get($args, "spin"), ArrayUtility::get($args, "rotate"), ArrayUtility::get($args, "flip"));
+        return $this->materialDesignIconicFontIcon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "size"), ArrayUtility::get($args, "fixedWidth", false), ArrayUtility::get($args, "border", false), ArrayUtility::get($args, "pull"), ArrayUtility::get($args, "spin"), ArrayUtility::get($args, "rotate"), ArrayUtility::get($args, "flip"), ArrayUtility::get($args, "style"));
     }
 
     /**

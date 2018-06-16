@@ -33,19 +33,20 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
     /**
      * Displays a Font Awesome icon.
      *
-     * @param string $style The Font Awesome style.
+     * @param string $font The Font Awesome font.
      * @param string $name The Font Awesome name.
      * @param string $size The Font Awesome size.
      * @param boolean $fixedWidth Fixed width ?
      * @param boolean $bordered Bordered ?
      * @param string $pull The Font Awesome pull.
      * @param string $anime The Font Awesome animation.
+     * @param string $style The Font Awesome style.
      * @return string Returns the Font Awesome icon.
      */
-    protected function fontAwesomeIcon($style, $name, $size, $fixedWidth, $bordered, $pull, $anime) {
+    protected function fontAwesomeIcon($font, $name, $size, $fixedWidth, $bordered, $pull, $anime, $style) {
 
         // Initialize the values.
-        $styles   = ["", "s", "r", "l", "b"];
+        $fonts    = ["", "s", "r", "l", "b"];
         $sizes    = ["xs", "sm", "lg", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"];
         $pulls    = ["left", "right"];
         $animates = ["spin", "pulse"];
@@ -56,13 +57,15 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"][] = true === in_array($style, $styles) ? "fa" . $style : "fa";
+        $attributes["class"][] = true === in_array($font, $fonts) ? "fa" . $font : "fa";
         $attributes["class"][] = null !== $name ? "fa-" . $name : null;
         $attributes["class"][] = true === in_array($size, $sizes) ? "fa-" . $size : null;
         $attributes["class"][] = true === $fixedWidth ? "fa-fw" : null;
         $attributes["class"][] = true === $bordered ? "fa-border" : null;
         $attributes["class"][] = true === in_array($pull, $pulls) ? "fa-pull-" . $pull : null;
         $attributes["class"][] = true === in_array($anime, $animates) ? "fa-" . $anime : null;
+
+        $attributes["style"] = $style;
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
@@ -101,9 +104,10 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
      * @param string $spin The Material Design Iconic Font spin.
      * @param string $rotate The Material Design Iconic Font rotate.
      * @param string $flip The Material Design Iconic Font flip.
+     * @param string $style The Material Design Iconic Font style.
      * @return string Returns the Material Design Iconic Font icon.
      */
-    protected function materialDesignIconicFontIcon($name, $size, $fixedWidth, $border, $pull, $spin, $rotate, $flip) {
+    protected function materialDesignIconicFontIcon($name, $size, $fixedWidth, $border, $pull, $spin, $rotate, $flip, $style) {
 
         // Initialize the values.
         $sizes   = ["lg", "2x", "3x", "4x", "5x"];
@@ -128,6 +132,8 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         $attributes["class"][] = true === in_array($spin, $spins) ? "zmdi-hc-" . $spin : null;
         $attributes["class"][] = true === in_array($rotate, $rotates) ? "zmdi-hc-rotate-" . $rotate : null;
         $attributes["class"][] = true === in_array($flip, $flips) ? "zmdi-hc-flip-" . $flip : null;
+
+        $attributes["style"] = $style;
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);

@@ -118,7 +118,7 @@ final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFramewor
         $res0 = '<i class="fa fa-home"></i>';
         $this->assertEquals($res0, $obj->fontAwesomeIconFunction($arg0));
 
-        $arg1 = ["style" => "s"];
+        $arg1 = ["font" => "s"];
         $res1 = '<i class="fas fa-home"></i>';
         $this->assertEquals($res1, $obj->fontAwesomeIconFunction($arg1));
 
@@ -146,7 +146,7 @@ final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFramewor
         $res7 = '<i class="fa fa-home fa-pulse"></i>';
         $this->assertEquals($res7, $obj->fontAwesomeIconFunction($arg7));
 
-        $arg9 = ["style" => "s", "name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "bordered" => true, "pull" => "left", "animated" => "spin"];
+        $arg9 = ["font" => "s", "name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "bordered" => true, "pull" => "left", "animated" => "spin"];
         $res9 = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin"></i>';
         $this->assertEquals($res9, $obj->fontAwesomeIconFunction($arg9));
     }
