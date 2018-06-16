@@ -24,7 +24,11 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPlu
 class BootstrapRendererTwigExtension {
 
     /**
-     * {@inheritdoc}
+     * Render an icon.
+     *
+     * @param string $name The icon name.
+     * @param string $style The icon style.
+     * @return string Returns a rendered icon.
      */
     public static function renderIcon($name, $style = null) {
 
