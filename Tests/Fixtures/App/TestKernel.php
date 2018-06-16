@@ -33,4 +33,11 @@ final class TestKernel extends AbstractBootstrapKernel {
         return $bundles;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getTestsDir() {
+        return __DIR__ . "/../..";
+    }
+
 }

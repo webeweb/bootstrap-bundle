@@ -27,21 +27,27 @@ abstract class AbstractBootstrapKernel extends Kernel {
      * {@inheritdoc}
      */
     public function registerContainerConfiguration(LoaderInterface $loader) {
-        $loader->load(__DIR__ . "/../Fixtures/App/config/config_test.yml");
+        $loader->load($this->getTestsDir() . "/Fixtures/App/config/config_test.yml");
     }
 
     /**
      * {@inheritdoc}
      */
     public function getCacheDir() {
-        return __DIR__ . "/../Fixtures/App/var/cache";
+        return $this->getTestsDir() . "/Fixtures/App/var/cache";
     }
 
     /**
      * {@inheritdoc}
      */
     public function getLogDir() {
-        return __DIR__ . "/../Fixtures/App/var/logs";
+        return $this->getTestsDir() . "/Fixtures/App/var/logs";
     }
 
+    /**
+     * Get the Tests directory.
+     *
+     * @return string Returns the Tests directory.
+     */
+    abstract public function getTestsDir();
 }
