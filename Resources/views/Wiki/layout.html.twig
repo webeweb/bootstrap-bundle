@@ -3,7 +3,7 @@
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapHeadStyles %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/include/styles.html.twig" %}
+    {% include "@SyntaxHighlighter/include/styles.html.twig" with {"theme": "eclipse"} %}
     <style type="text/css">
         .content {
             margin: 70px 0 0;
@@ -65,4 +65,7 @@
 {% block bootstrapBodyScripts %}
     {{ parent() }}
     {% include "@SyntaxHighlighter/include/scripts.html.twig" %}
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
 {% endblock %}
