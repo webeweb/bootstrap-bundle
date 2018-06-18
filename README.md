@@ -18,6 +18,7 @@ Includes:
 - [Bootstrap Colorpicker 2.5.1](https://github.com/farbelous/bootstrap-colorpicker/) (Bootstrap plug-in)
 - [Bootstrap Datepicker 1.7.1](https://github.com/uxsolutions/bootstrap-datepicker/) (Bootstrap plug-in)
 - [Bootstrap Daterangepicker 2.1.27](http://www.daterangepicker.com/) (Bootstrap plug-in)
+- [Bootstrap Markdown 2.10.0](https://github.com/toopay/bootstrap-markdown/) (Bootstrap plug-in)
 - [Bootstrap Notify 3.1.3](https://github.com/mouse0270/bootstrap-notify/) (Bootstrap plug-in)
 - [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select/) (Bootstrap plug-in)
 - [Bootstrap Slider 10.0.0](https://github.com/seiyria/bootstrap-slider/) (Bootstrap plug-in)
@@ -32,6 +33,7 @@ Includes:
 - [Material Design Color Palette 1.1.0](https://github.com/zavoloklom/material-design-color-palette/)
 - [Material Design Iconic Font 2.2.0](https://github.com/zavoloklom/material-design-iconic-font/)
 - [Moment.js 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
+- [waitMe 1.19](https://github.com/vadimsva/waitMe/)
 - [WYSIHTML 0.4.15](https://github.com/Edicy/wysihtml5/) (Bootstrap WYSIWYG dependency)
 
 ---
