@@ -3,6 +3,7 @@
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapHeadStyles %}
     {{ parent() }}
+    {% include "@SyntaxHighlighter/include/styles.html.twig" %}
     <style type="text/css">
         .content {
             margin: 70px 0 0;
@@ -60,4 +61,8 @@
             {% endif %}
         </div>
     </section>
+{% endblock %}
+{% block bootstrapBodyScripts %}
+    {{ parent() }}
+    {% include "@SyntaxHighlighter/include/scripts.html.twig" %}
 {% endblock %}

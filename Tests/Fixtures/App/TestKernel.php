@@ -29,6 +29,7 @@ final class TestKernel extends AbstractBootstrapKernel {
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
+            new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
         ];
         return $bundles;
     }
