@@ -65,7 +65,7 @@
 {% block bootstrapBodyScripts %}
     {{ parent() }}
     {% include "@SyntaxHighlighter/include/scripts.html.twig" %}
-    <script type="text/javascript">
-        SyntaxHighlighter.all();
-    </script>
+    {{ (syntaxHighlighterConfig(syntaxHighlighterConfig) ~ "\n" ~
+        syntaxHighlighterDefaults(syntaxHighlighterDefaults) ~ "\n" ~
+        "SyntaxHighlighter.all();")|syntaxHighlighterScript() }}
 {% endblock %}
