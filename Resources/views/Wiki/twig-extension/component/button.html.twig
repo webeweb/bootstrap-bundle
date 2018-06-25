@@ -4,12 +4,12 @@
 {% block bootstrapWikiContent %}
     {{ wiki.functionsTitle() }}
     {{ wiki.functionsList([
-        "bootstrapAlertDanger",
-        "bootstrapAlertDefault",
-        "bootstrapAlertInfo",
-        "bootstrapAlertPrimary",
-        "bootstrapAlertSuccess",
-        "bootstrapAlertWarning",
+        "bootstrapButtonDanger",
+        "bootstrapButtonDefault",
+        "bootstrapButtonInfo",
+        "bootstrapButtonPrimary",
+        "bootstrapButtonSuccess",
+        "bootstrapButtonWarning",
     ]) }}
     <div class="panel panel-default">
         {{ wiki.functionTitle("bootstrapButtonDanger") }}
@@ -21,10 +21,16 @@
                 ["boolean", "block", "block? (false by default)"],
                 ["boolean", "active", "active? (false by default)"],
                 ["boolean", "disable", "disable? (false by default)"],
-                ["string", "icon", "the icon"],
+                ["string", "icon", "the icon (Glyphicon by default|Font Awesome|Material Design Iconic Font)"],
             ])}}
             {{ wiki.functionExample('{{ bootstrapButtonDanger({"content": "content", "title": "title", "size": "lg", "block": true, "active": true, "disable": true, "icon": "asterisk"}) }}') }}
             {{ wiki.functionOutput(bootstrapButtonDanger({"content": "content", "title": "title", "size": "lg", "block": true, "active": true, "disable": true, "icon": "asterisk"})) }}
+            {{ wiki.functionExample('{{ bootstrapButtonDanger({"content": "content", "icon": "g:asterisk"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonDanger({"content": "content", "icon": "g:asterisk"})) }}
+            {{ wiki.functionExample('{{ bootstrapButtonDanger({"content": "content", "icon": "fa:address-book"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonDanger({"content": "content", "icon": "fa:address-book"})) }}
+            {{ wiki.functionExample('{{ bootstrapButtonDanger({"content": "content", "icon": "zmdi:8tracks"}) }}') }}
+            {{ wiki.functionOutput(bootstrapButtonDanger({"content": "content", "icon": "zmdi:8tracks"})) }}
         </div>
     </div>
     <div class="panel panel-default">
