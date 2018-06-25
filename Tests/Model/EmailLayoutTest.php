@@ -52,7 +52,7 @@ final class EmailPageTest extends PHPUnit_Framework_TestCase {
 
         $obj = new EmailLayout();
 
-        $obj->setAccountSettingsURL("accountSettings");
+        $obj->setAccountSettingsURL("accountSettingsURL");
         $this->assertEquals("accountSettingsURL", $obj->getAccountSettingsURL());
     }
 
