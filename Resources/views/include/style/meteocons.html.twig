@@ -1,0 +1,10 @@
+{# Resources/views/include/style/meteocons.html.twig #}
+<!-- Meteocons -->
+<link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/meteocons/stylesheet.css") }}">
+<style type="text/css">
+    .meteocons:before {
+        content: attr(data-meteocons);
+        font-family: "MeteoconsRegular";
+        font-style: normal;
+    }
+</style>
