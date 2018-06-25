@@ -2,5 +2,73 @@
 {% extends "@Bootstrap/Wiki/layout.html.twig" %}
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapWikiContent %}
-
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "bootstrapLabelDanger",
+        "bootstrapLabelDefault",
+        "bootstrapLabelInfo",
+        "bootstrapLabelPrimary",
+        "bootstrapLabelSuccess",
+        "bootstrapLabelWarning",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapLabelDanger") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapLabelDanger({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapLabelDanger({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapLabelDefault") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapLabelDefault({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapLabelDefault({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapLabelInfo") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapLabelInfo({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapLabelInfo({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapLabelPrimary") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapLabelPrimary({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapLabelPrimary({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapLabelSuccess") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapLabelSuccess({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapLabelSuccess({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapLabelWarning") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapLabelWarning({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapLabelWarning({"content": "content"})) }}
+        </div>
+    </div>
 {% endblock %}
