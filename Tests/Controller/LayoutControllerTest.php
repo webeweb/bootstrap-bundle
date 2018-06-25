@@ -38,6 +38,21 @@ final class LayoutControllerTest extends AbstractBootstrapWebTestCase {
     }
 
     /**
+     * Tests the emailAction() method.
+     *
+     * @return void
+     */
+    public function testEmailAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/email");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
      * Tests the flashbagAction() method.
      *
      * @return void

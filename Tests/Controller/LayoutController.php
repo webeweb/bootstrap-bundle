@@ -37,6 +37,18 @@ final class LayoutController extends AbstractBootstrapController {
     }
 
     /**
+     * Displays an email.
+     *
+     * @param Request $request The request.
+     * @return Response Returns the response.
+     */
+    public function emailAction(Request $request) {
+
+        // Return the response.
+        return $this->render("@Bootstrap/email.html.twig");
+    }
+
+    /**
      * Displays a flashbag page.
      *
      * @param Request $request The request.
