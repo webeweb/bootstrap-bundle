@@ -32,7 +32,9 @@ Includes:
 - [jQuery InputMask 3.3.11](https://github.com/RobinHerbots/Inputmask/) (jQuery plug-in)
 - [Material Design Color Palette 1.1.0](https://github.com/zavoloklom/material-design-color-palette/)
 - [Material Design Iconic Font 2.2.0](https://github.com/zavoloklom/material-design-iconic-font/)
+- [Meteocons](http://www.alessioatzeni.com/meteocons/)
 - [Moment.js 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
+- [SweetAlert 2.1.0](https://github.com/t4t5/sweetalert/)
 - [waitMe 1.19](https://github.com/vadimsva/waitMe/)
 - [WYSIHTML 0.4.15](https://github.com/Edicy/wysihtml5/) (Bootstrap WYSIWYG dependency)
 
@@ -65,6 +67,7 @@ in the `app/AppKernel.php` file of your project:
         $bundles = [
             // ...
             new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
+            new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
         ];
 
         // ...
