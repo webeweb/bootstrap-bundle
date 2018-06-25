@@ -1,0 +1,320 @@
+{# Resources/views/email.html.twig #}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <style type="text/css">
+            body {
+                mso-line-height-rule: exactly;
+                margin: 0;
+                min-width: 100%;
+                padding: 0;
+            }
+            .wrapper {
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                display: table;
+                table-layout: fixed;
+                min-width: 620px;
+                width: 100%;
+            }
+            body, .wrapper {
+                background-color: #ffffff;
+            }
+
+            /* Basic */
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            table.center {
+                margin: 0 auto;
+                width: 602px;
+            }
+            td {
+                padding: 0;
+                vertical-align: top;
+            }
+
+            .spacer,
+            .border {
+                font-size: 1px;
+                line-height: 1px;
+            }
+            .spacer {
+                line-height: 16px;
+                width: 100%;
+            }
+            .border {
+                background-color: #e0e0e0;
+                width: 1px;
+            }
+
+            .padded {
+                padding: 0 24px;
+            }
+            img {
+                -ms-interpolation-mode: bicubic;
+                border: 0;
+            }
+            .image {
+                font-size: 12px;
+            }
+            .image img {
+                display: block;
+            }
+            strong, .strong {
+                font-weight: 700;
+            }
+            h1,
+            h2,
+            h3,
+            p,
+            ol,
+            ul,
+            li {
+                margin-top: 0;
+            }
+            ol,
+            ul,
+            li {
+                padding-left: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: #616161;
+            }
+            .btn {
+                -webkit-text-size-adjust:none;
+                background-color:#2196F3;
+                border:1px solid #2196F3;
+                border-radius:2px;
+                color:#ffffff;
+                display:inline-block;
+                font-family:Roboto, Helvetica, sans-serif;
+                height: 36px;
+                line-height:36px;
+                font-size:14px;
+                font-weight:400;
+                margin: 0;
+                mso-hide:all;
+                outline: 0;
+                outline-offset: 0;
+                padding: 0 8px;
+                text-align:center;
+                text-decoration:none;
+                text-transform:uppercase;
+                width:200px;
+            }
+
+            /* Top panel */
+            .title {
+                text-align: left;
+            }
+
+            .subject {
+                text-align: right;
+            }
+
+            .title, .subject {
+                color: #616161;
+                font-family: Roboto, Helvetica, sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                padding: 8px 0;
+                width: 300px;
+            }
+
+            /* Header */
+            .logo {
+                padding: 16px 0;
+            }
+
+            /* Logo */
+            .logo-image {
+
+            }
+
+            /* Main */
+            .main {
+                -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+                -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+            }
+
+            /* Content */
+            .columns {
+                background-color: #ffffff;
+                font-size: 14px;
+                margin: 0 auto;
+                width: 600px;
+            }
+
+            .column {
+                background-color: #ffffff;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            .column-top {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            .column-bottom {
+                font-size: 8px;
+                line-height: 8px;
+            }
+
+            .content h1 {
+                color: #212121;
+                font-family: Roboto, Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                margin-bottom: 16px;
+                margin-top: 0;
+            }
+
+            .content p {
+                color: #212121;
+                font-family: Roboto, Helvetica, sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 16px;
+                margin-top: 0;
+            }
+            .content .caption {
+                color: #616161;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            /* Footer */
+            .signature, .subscription {
+                margin-bottom: 16px;
+                padding-top: 8px;
+                vertical-align: bottom;
+                width: 300px;
+            }
+
+            .signature {
+                text-align: left;
+            }
+            .subscription {
+                text-align: right;
+            }
+
+            .signature p, .subscription p {
+                color: #616161;
+                font-family: Roboto, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+                margin-bottom: 8px;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <center class="wrapper">
+            {% block bootstrapEmailHeader %}
+                <table class="top-panel center" width="602" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td class="title" width="300">{{ emailLayout.companyName|default("Bootstrap bundle") }}</td>
+                            <td class="subject" width="300">
+                                <a class="strong" href="{{ emailLayout.companyURL|default("https://github.com/webeweb/bootstrap-bundle/") }}" target="_blank">
+                                    {{ emailLayout.companyURL|default("https://github.com") }}
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border" colspan="2">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endblock %}
+            <div class="spacer">&nbsp;</div>
+            {% block bootstrapEmailBody %}
+                <table class="main center" width="602" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td class="column">
+                                <div class="column-top">&nbsp;</div>
+                                {% block bootstrapEmailContent %}
+                                    <table class="content" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="padded">
+                                                    <h1>Responsive Email Template</h1>
+                                                    <p>With a little of <strong>Material Design</strong> by Google.</p>
+                                                    <p>It does not contain all styles of html-elements that you can use. So if you had trouble with something - add comment to this pen.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                    <p>In addition to paragraph and h1-heading you also can create buttons, links and caption text:</p>
+                                                    <p style="text-align:center;"><a href="#" class="btn">EXAMPLE BUTTON</a></p>
+                                                    <p style="text-align:center;">
+                                                        <a href="#" class="strong">Example link</a>
+                                                    </p>
+                                                    <p class="caption">This is a caption text in main email body.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                {% endblock %}
+                                <div class="column-bottom">&nbsp;</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endblock %}
+            <div class="spacer">&nbsp;</div>
+            {% block bootstrapEmailFooter %}
+                <table class="footer center" width="602" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td class="border" colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="signature" width="300">
+                                <p>
+                                    {{ emailLayout.bestRegards|default("label.with_best_regards"|trans({}, "BootstrapBundle")) }},<br/>
+                                    {{ emailLayout.companyName|default("Bootstrap bundle") }}<br/>
+                                    {{ emailLayout.supportPhone|default("+33 6 xx xx xx xx") }}, {{ emailLayout.supportName|default("label.support"|trans({}, "BootstrapBundle")) }}<br/>
+                                </p>
+                                <p>
+                                    {{ "label.support"|trans({}, "BootstrapBundle") }}: <a class="strong" href="{{ emailLayout.supportEmail|default("http://github.com/webeweb/bootstrap-bundle/issues") }}" target="_blank">
+                                        {{ emailLayout.supportName|default("https://github.com") }}
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="subscription" width="300">
+                                <div class="logo-image">
+                                    <a href="{{ emailLayout.companyURL|default("https://github.com/webeweb/bootstrap-bundle/") }}" target="_blank">
+                                        <img src="{{ emailLayout.companyLogo|default("https://github.com/webeweb/bootstrap-bundle/blob/master/Resources/public/favicons/favicon-96x96.png?raw=true") }}" alt="logo-alt" width="70" height="70">
+                                    </a>
+                                </div>
+                                <p>
+                                    <a class="strong block" href="{{ emailLayout.unsubscribeURL|default("#") }}" target="_blank">
+                                        {{ "label.unsubscribe"|trans({}, "BootstrapBundle") }}
+                                    </a>
+                                    <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                    <a class="strong block" href="{{ emailLayout.accountSettingsURL|default("#") }}" target="_blank">
+                                        {{ "label.account_settings"|trans({}, "BootstrapBundle") }}
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endblock %}
+        </center>
+    </body>
+</html>
