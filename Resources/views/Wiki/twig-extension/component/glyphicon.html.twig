@@ -2,5 +2,21 @@
 {% extends "@Bootstrap/Wiki/layout.html.twig" %}
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapWikiContent %}
-
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "bootstrapGlyphicon",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapGlyphicon") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "name", "the name"],
+                ["string", "style", "the style"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapGlyphicon({"name": "home"}) }}') }}
+            {{ wiki.functionOutput(bootstrapGlyphicon({"name": "home"})) }}
+            {{ wiki.functionExample('{{ bootstrapGlyphicon({"name": "home", "style": "color: #337AB7;"}) }}') }}
+            {{ wiki.functionOutput(bootstrapGlyphicon({"name": "home", "style": "color: #337AB7;"})) }}
+        </div>
+    </div>
 {% endblock %}
