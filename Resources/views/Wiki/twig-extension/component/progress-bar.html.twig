@@ -2,5 +2,87 @@
 {% extends "@Bootstrap/Wiki/layout.html.twig" %}
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapWikiContent %}
-
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "bootstrapProgressBarBasic",
+        "bootstrapProgressBarDanger",
+        "bootstrapProgressBarInfo",
+        "bootstrapProgressBarSuccess",
+        "bootstrapProgressBarWarning",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapProgressBarBasic") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["integer", "value", "the value"],
+                ["integer", "min", "the min value"],
+                ["integer", "max", "the max value"],
+                ["boolean", "striped", "striped?"],
+                ["boolean", "animated", "animated?"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapProgressBarBasic({"content": "content", "min": 0, "max": 100, "value": 75, "striped": true, "animated": true}) }}') }}
+            {{ wiki.functionOutput(bootstrapProgressBarBasic({"content": "content", "min": 0, "max": 100, "value": 75, "striped": true, "animated": true})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapProgressBarDanger") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["integer", "value", "the value"],
+                ["integer", "min", "the min value"],
+                ["integer", "max", "the max value"],
+                ["boolean", "striped", "striped?"],
+                ["boolean", "animated", "animated?"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapProgressBarDanger({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapProgressBarDanger({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapProgressBarInfo") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["integer", "value", "the value"],
+                ["integer", "min", "the min value"],
+                ["integer", "max", "the max value"],
+                ["boolean", "striped", "striped?"],
+                ["boolean", "animated", "animated?"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapProgressBarInfo({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapProgressBarInfo({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapProgressBarSuccess") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["integer", "value", "the value"],
+                ["integer", "min", "the min value"],
+                ["integer", "max", "the max value"],
+                ["boolean", "striped", "striped?"],
+                ["boolean", "animated", "animated?"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapProgressBarSuccess({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapProgressBarSuccess({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapProgressBarWarning") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+                ["integer", "value", "the value"],
+                ["integer", "min", "the min value"],
+                ["integer", "max", "the max value"],
+                ["boolean", "striped", "striped?"],
+                ["boolean", "animated", "animated?"],
+           ])}}
+            {{ wiki.functionExample('{{ bootstrapProgressBarWarning({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapProgressBarWarning({"content": "content"})) }}
+        </div>
+    </div>
 {% endblock %}
