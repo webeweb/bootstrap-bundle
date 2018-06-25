@@ -2,5 +2,18 @@
 {% extends "@Bootstrap/Wiki/layout.html.twig" %}
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapWikiContent %}
-
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "bootstrapBold",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapBold") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapBold({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapBold({"content": "content"})) }}
+        </div>
+    </div>
 {% endblock %}
