@@ -1,11 +1,15 @@
 # Resources/translations/BootstrapBundle.en.yml
 label:
+    account_settings:  "Account settings"
     cancel:            "Cancel"
     close:             "Close"
     delete:            "Delete"
     edit:              "Edit"
     submit:            "Submit"
+    support:           "Support"
     toggle_navigation: "Toggle navigation"
+    unsubscribe:       "Unsubscribe"
+    with_best_regards: "With best regards"
 
 navigation:
     node:
