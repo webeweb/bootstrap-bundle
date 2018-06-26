@@ -71,63 +71,61 @@ abstract class AbstractBootstrapController extends Controller {
      * @param string $eventName The event name.
      * @param string $notification The notification.
      * @param string $type The notification type.
-     * @return void
+     * @return Event Returns the event.
      */
     private function notify($eventName, $notification, $type) {
 
-        // Get the event dispatcher.
+        // Get and check the event dispatcher.
         $eventDispatcher = $this->getEventDispatcher();
+        if (null === $eventDispatcher || false === $eventDispatcher->hasListeners($eventName)) {
+            return null;
+        }
 
-        // Check the event dispatcher.
-        if (null === $eventDispatcher) {
-            return;
-        }
-        if (false === $eventDispatcher->hasListeners($eventName)) {
-            return;
-        }
+        // Log a debug trace.
+        $this->getLogger()->debug(sprintf("Bootstrap controller dispatch a notification event with name \"%s\"", $eventName));
 
         // Dispatch the event.
-        $eventDispatcher->dispatch($eventName, new NotificationEvent($eventName, $notification, $type));
+        return $eventDispatcher->dispatch($eventName, new NotificationEvent($eventName, $notification, $type));
     }
 
     /**
      * Notify "Danger".
      *
      * @param string $notification The notification.
-     * @return void
+     * @return Event Returns the event.
      */
     protected function notifyDanger($notification) {
-        $this->notify(NotificationEvents::NOTIFICATION_DANGER, $notification, BootstrapBundle::BOOTSTRAP_DANGER);
+        return $this->notify(NotificationEvents::NOTIFICATION_DANGER, $notification, BootstrapBundle::BOOTSTRAP_DANGER);
     }
 
     /**
      * Notify "Info".
      *
      * @param string $notification The notification.
-     * @return void
+     * @return Event Returns the event.
      */
     protected function notifyInfo($notification) {
-        $this->notify(NotificationEvents::NOTIFICATION_INFO, $notification, BootstrapBundle::BOOTSTRAP_INFO);
+        return $this->notify(NotificationEvents::NOTIFICATION_INFO, $notification, BootstrapBundle::BOOTSTRAP_INFO);
     }
 
     /**
      * Notify "Success".
      *
      * @param string $notification The notification.
-     * @return void
+     * @return Event Returns the event.
      */
     protected function notifySuccess($notification) {
-        $this->notify(NotificationEvents::NOTIFICATION_SUCCESS, $notification, BootstrapBundle::BOOTSTRAP_SUCCESS);
+        return $this->notify(NotificationEvents::NOTIFICATION_SUCCESS, $notification, BootstrapBundle::BOOTSTRAP_SUCCESS);
     }
 
     /**
      * Notify "Warning".
      *
      * @param string $notification The notification.
-     * @return void
+     * @return Event Returns the event.
      */
     protected function notifyWarning($notification) {
-        $this->notify(NotificationEvents::NOTIFICATION_WARNING, $notification, BootstrapBundle::BOOTSTRAP_WARNING);
+        return $this->notify(NotificationEvents::NOTIFICATION_WARNING, $notification, BootstrapBundle::BOOTSTRAP_WARNING);
     }
 
 }
