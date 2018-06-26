@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Model;
 
 /**
- * Email layout.
+ * Email layout model.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Model
