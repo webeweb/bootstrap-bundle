@@ -58,7 +58,7 @@ class BadUserRoleException extends AbstractBootstrapException {
      * @param string $route The route.
      * @param string $redirect The redirect.
      */
-    public function __construct($user, array $roles, $route, $redirect) {
+    public function __construct(UserInterface $user, array $roles, $route, $redirect) {
         parent::__construct(sprintf("User \"%s\" is not allowed to access to \"%s\" with roles [%s]", $user->getUsername(), $route, implode(",", $roles)), HTTPInterface::HTTP_STATUS_FORBIDDEN);
         $this->setRedirect($redirect);
         $this->setRoles($roles);
