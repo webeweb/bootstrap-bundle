@@ -11,10 +11,13 @@
 
 namespace WBW\Bundle\BootstrapBundle\EventListener;
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use WBW\Bundle\BootstrapBundle\Exception\BadUserRoleException;
 use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
 
 /**
@@ -114,6 +117,28 @@ class KernelEventListener {
             return $this->user;
         }
         return null;
+    }
+
+    /**
+     * On kernel exception.
+     *
+     * @param GetResponseForExceptionEvent $event The event.
+     * @return Event Returns the event.
+     */
+    public function onKernelException(GetResponseForExceptionEvent $event) {
+
+        // Get the exception.
+        $ex = $event->getException();
+
+        // Check the exception.
+        if (true === ($ex instanceOf BadUserRoleException) && null !== $ex->getRedirect()) {
+
+            // Set the response.
+            $event->setResponse(new RedirectResponse($ex->getRedirect()));
+        }
+
+        // Return the event.
+        return $event;
     }
 
     /**

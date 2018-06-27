@@ -15,10 +15,14 @@ use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Security\Core\User\User;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Event\NotificationEvent;
 use WBW\Bundle\BootstrapBundle\Event\NotificationEvents;
+use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
+use WBW\Bundle\BootstrapBundle\Exception\BadUserRoleException;
+use WBW\Bundle\BootstrapBundle\Helper\UserHelper;
 
 /**
  * Abstract Bootstrap controller.
@@ -36,6 +40,15 @@ abstract class AbstractBootstrapController extends Controller {
      */
     protected function getEventDispatcher() {
         return $this->get("event_dispatcher");
+    }
+
+    /**
+     * Get the kernel event listener.
+     *
+     * @return KernelEventListener Returns the kernel event listener.
+     */
+    protected function getKernelEventListener() {
+        return $this->get(KernelEventListener::SERVICE_NAME);
     }
 
     /**
@@ -63,6 +76,32 @@ abstract class AbstractBootstrapController extends Controller {
      */
     protected function getTranslator() {
         return $this->get("translator");
+    }
+
+    /**
+     * Determines if the connected user have roles or redirect.
+     *
+     * @param array $roles The roles.
+     * @param boolean $or OR ?
+     * @param string $redirect The redirect.
+     * @return boolean Returns true.
+     * @throws BadUserRoleException Throws a bad user role exception.
+     */
+    protected function hasRolesOrRedirect(array $roles, $or, $redirect) {
+
+        // Get the user.
+        $user = $this->getKernelEventListener()->getUser();
+
+        // User have roles ?
+        if (false === UserHelper::hasRoles($user, $roles, $or)) {
+
+            // Throw a bad user role exception with an anonymous user if user is null.
+            $user = null !== $user ? $user : new User("anonymous", "");
+            throw new BadUserRoleException($user, $roles, "", $redirect);
+        }
+
+        // Return
+        return true;
     }
 
     /**
