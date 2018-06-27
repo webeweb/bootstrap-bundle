@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Bootstrap bundle test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\BootstrapBundle;
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @final
  */
-final class BootstrapBundleTest extends PHPUnit_Framework_TestCase {
+final class BootstrapBundleTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests __construct() method.
