@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\Form\Renderer\FormRenderer;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Form\Factory
- * @final
  */
-final class FormFactory {
+class FormFactory {
 
     /**
      * Date format.
