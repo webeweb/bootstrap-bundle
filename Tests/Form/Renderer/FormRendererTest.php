@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Form\Renderer;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\ChoiceRendererInterface;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\FormRenderer;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\TranslatedChoiceRendererInterface;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Library\Core\Algorithm\Sorting\AlphabeticalTreeSortInterface;
 
 /**
@@ -24,7 +24,7 @@ use WBW\Library\Core\Algorithm\Sorting\AlphabeticalTreeSortInterface;
  * @package WBW\Bundle\BootstrapBundle\Tests\Form\Renderer
  * @final
  */
-final class FormRendererTest extends PHPUnit_Framework_TestCase {
+final class FormRendererTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Arguments.
