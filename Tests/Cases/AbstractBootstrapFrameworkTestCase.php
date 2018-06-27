@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
 
+use Doctrine\Common\Persistence\ObjectManager;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
@@ -45,6 +46,13 @@ abstract class AbstractBootstrapFrameworkTestCase extends PHPUnit_Framework_Test
      * @var KernelInterface
      */
     protected $kernel;
+
+    /**
+     * Object manager.
+     *
+     * @var ObjectManager
+     */
+    protected $objectManager;
 
     /**
      * Router.
@@ -109,6 +117,9 @@ abstract class AbstractBootstrapFrameworkTestCase extends PHPUnit_Framework_Test
 
         // Set a Kernel mock.
         $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
+
+        // Set a Router mock.
+        $this->objectManager = $this->getMockBuilder(ObjectManager::class)->getMock();
 
         // Set a Router mock.
         $this->router = $this->getMockBuilder(RouterInterface::class)->getMock();
