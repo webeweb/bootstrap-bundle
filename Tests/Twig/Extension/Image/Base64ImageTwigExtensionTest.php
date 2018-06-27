@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Image;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
 use WBW\Library\Core\Utility\IO\FileUtility;
 
@@ -24,7 +24,7 @@ use WBW\Library\Core\Utility\IO\FileUtility;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Image
  * @final
  */
-final class Base64ImageTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class Base64ImageTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
