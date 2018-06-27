@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Node;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeDashboard;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Navigation node "Dashboard" test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeDashboard;
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
  * @final
  */
-final class NavigationNodeDashboardTest extends PHPUnit_Framework_TestCase {
+final class NavigationNodeDashboardTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
