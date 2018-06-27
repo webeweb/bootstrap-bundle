@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension
  * @final
  */
-final class BootstrapRendererTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class BootstrapRendererTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the renderIcon() method.
