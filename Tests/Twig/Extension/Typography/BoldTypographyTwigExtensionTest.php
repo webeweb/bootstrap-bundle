@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExten
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Typography
  * @final
  */
-final class BoldTypographyTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class BoldTypographyTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
