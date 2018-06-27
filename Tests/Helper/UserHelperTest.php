@@ -32,6 +32,9 @@ final class UserHelperTest extends AbstractBootstrapFrameworkTestCase {
 
         $arg = new User("github", "github", ["ROLE_SUPER_ADMIN", "ROLE_USER"]);
 
+        $this->assertFalse(UserHelper::hasRoles(null, "ROLE_SUPER_ADMIN"));
+        $this->assertFalse(UserHelper::hasRoles("null", "ROLE_SUPER_ADMIN"));
+
         $this->assertTrue(UserHelper::hasRoles($arg, "ROLE_SUPER_ADMIN"));
         $this->assertTrue(UserHelper::hasRoles($arg, "ROLE_SUPER_ADMIN", false));
 
