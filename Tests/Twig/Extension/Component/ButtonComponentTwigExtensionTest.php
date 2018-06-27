@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
 
 /**
@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExten
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class ButtonComponentTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class ButtonComponentTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.
