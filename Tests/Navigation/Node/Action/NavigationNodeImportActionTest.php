@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\NavigationNodeImportAction;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Navigation node "Import" action test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\NavigationNodeImportAction
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action
  * @final
  */
-final class NavigationNodeImportActionTest extends PHPUnit_Framework_TestCase {
+final class NavigationNodeImportActionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
