@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Code;
 
-use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Code
  * @final
  */
-final class InlineCodeTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class InlineCodeTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
