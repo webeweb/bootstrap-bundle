@@ -14,6 +14,11 @@ bootstrap_flashbag_action:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::flashbagAction" }
     methods:  ["GET"]
 
+bootstrap_redirect_action:
+    path:     "/redirect"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::redirectAction" }
+    methods:  ["GET"]
+
 bootstrap_wiki:
     prefix:   "/"
     resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"

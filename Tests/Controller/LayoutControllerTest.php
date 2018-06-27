@@ -88,4 +88,20 @@ EOTXT;
         $this->assertEquals($res, $client->getResponse()->getContent());
     }
 
+    /**
+     * Tests the redirectAction() method.
+     *
+     * @return void
+     */
+    public function testRedirectAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/redirect");
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertEquals("/blank", $client->getResponse()->headers->get("location"));
+    }
+
 }

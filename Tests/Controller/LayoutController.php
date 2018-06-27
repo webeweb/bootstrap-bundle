@@ -66,4 +66,19 @@ final class LayoutController extends AbstractBootstrapController {
         return $this->render("@Bootstrap/include/flashbag.html.twig");
     }
 
+    /**
+     * Redirect.
+     *
+     * @param Request $request The request.
+     * @return Response Returns the response.
+     */
+    public function redirectAction(Request $request) {
+
+        //
+        $this->hasRolesOrRedirect(["ROLE_GITHUB"], false, "/blank");
+
+        // Return the response.
+        return $this->render("@Bootstrap/layout/blank.html.twig");
+    }
+
 }
