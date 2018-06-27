@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Form\Helper;
+namespace WBW\Bundle\BootstrapBundle\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -19,7 +19,7 @@ use Doctrine\Common\Persistence\ObjectManager;
  * Form helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Form\Helper
+ * @package WBW\Bundle\BootstrapBundle\Helper
  */
 class FormHelper {
 

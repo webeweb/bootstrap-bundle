@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Form\Helper;
+namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use WBW\Bundle\BootstrapBundle\Form\Helper\FormHelper;
+use WBW\Bundle\BootstrapBundle\Helper\FormHelper;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Form helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Form\Helper
+ * @package WBW\Bundle\BootstrapBundle\Tests\Helper
  * @final
  */
 final class FormHelperTest extends AbstractBootstrapFrameworkTestCase {
