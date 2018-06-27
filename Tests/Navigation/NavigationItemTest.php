@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 
-use PHPUnit_Framework_TestCase;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Navigation item test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation
  * @final
  */
-final class NavigationItemTest extends PHPUnit_Framework_TestCase {
+final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

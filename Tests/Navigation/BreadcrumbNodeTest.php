@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Breadcrumb node test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation
  * @final
  */
-final class BreadcrumbNodeTest extends PHPUnit_Framework_TestCase {
+final class BreadcrumbNodeTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

@@ -11,11 +11,11 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Navigation tree test.
@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation
  * @final
  */
-final class NavigationTreeTest extends PHPUnit_Framework_TestCase {
+final class NavigationTreeTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
