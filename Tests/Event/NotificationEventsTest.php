@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Event;
 
-use PHPUnit_Framework_TestCase;
 use WBW\Bundle\BootstrapBundle\Event\NotificationEvents;
+use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Notification events test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Event\NotificationEvents;
  * @package WBW\Bundle\BootstrapBundle\Tests\Event
  * @final
  */
-final class NotificationEventsTest extends PHPUnit_Framework_TestCase {
+final class NotificationEventsTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests __construct() method.
