@@ -47,7 +47,7 @@ class UserHelper {
         // Handle each role.
         foreach ($roles as $role) {
             $buffer = in_array($role, $user->getRoles());
-            if (true == $buffer && true === $or) {
+            if (true === $buffer && true === $or) {
                 $result = $buffer;
                 break;
             }
