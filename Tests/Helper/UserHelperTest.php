@@ -30,15 +30,15 @@ final class UserHelperTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testHasRoles() {
 
-        $arg = new User("github", "github", ["ROLE_SUPER_ADMIN", "ROLE_USER"]);
+        $arg = new User("github", "github", ["ROLE_USER"]);
 
         $this->assertFalse(UserHelper::hasRoles(null, ""));
         $this->assertFalse(UserHelper::hasRoles(null, null));
         $this->assertFalse(UserHelper::hasRoles("", null));
         $this->assertFalse(UserHelper::hasRoles("", ""));
 
-        $this->assertTrue(UserHelper::hasRoles($arg, "ROLE_SUPER_ADMIN"));
-        $this->assertTrue(UserHelper::hasRoles($arg, "ROLE_SUPER_ADMIN", false));
+        $this->assertFalse(UserHelper::hasRoles($arg, "ROLE_SUPER_ADMIN"));
+        $this->assertFalse(UserHelper::hasRoles($arg, "ROLE_SUPER_ADMIN", false));
 
         $this->assertTrue(UserHelper::hasRoles($arg, "ROLE_USER"));
         $this->assertTrue(UserHelper::hasRoles($arg, "ROLE_USER", false));
@@ -47,9 +47,9 @@ final class UserHelperTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertFalse(UserHelper::hasRoles($arg, "ROLE_GITHUB", false));
 
         $this->assertTrue(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_USER"]));
-        $this->assertTrue(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_USER"], false));
+        $this->assertFalse(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_USER"], false));
 
-        $this->assertTrue(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_GITHUB"]));
+        $this->assertFalse(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_GITHUB"]));
         $this->assertFalse(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_GITHUB"], false));
     }
 
