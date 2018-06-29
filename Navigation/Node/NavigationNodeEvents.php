@@ -14,12 +14,12 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Node;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node "Event".
+ * Navigation node "Events".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node
  */
-class NavigationNodeEvent extends NavigationNode {
+class NavigationNodeEvents extends NavigationNode {
 
     /**
      * Constructor.
@@ -27,7 +27,7 @@ class NavigationNodeEvent extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.event", "g:calendar", $route);
+        parent::__construct("navigation.node.events", "g:calendar", $route);
     }
 
 }

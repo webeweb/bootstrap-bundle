@@ -11,17 +11,17 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Node;
 
-use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeEvent;
+use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeEvents;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
- * Navigation node "Event" test.
+ * Navigation node "Events" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
  * @final
  */
-final class NavigationNodeEventTest extends AbstractBootstrapFrameworkTestCase {
+final class NavigationNodeEventsTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,9 +30,9 @@ final class NavigationNodeEventTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeEvent("route");
+        $obj = new NavigationNodeEvents("route");
 
-        $this->assertEquals("navigation.node.event", $obj->getId());
+        $this->assertEquals("navigation.node.events", $obj->getId());
         $this->assertEquals("g:calendar", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
