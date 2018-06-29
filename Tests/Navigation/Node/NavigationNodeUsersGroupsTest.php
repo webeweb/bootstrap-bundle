@@ -11,17 +11,17 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Node;
 
-use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeUserGroup;
+use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeUsersGroups;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
- * Navigation node "User group" test.
+ * Navigation node "Users groups" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
  * @final
  */
-final class NavigationNodeUserGroupTest extends AbstractBootstrapFrameworkTestCase {
+final class NavigationNodeUsersGroupsTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,9 +30,9 @@ final class NavigationNodeUserGroupTest extends AbstractBootstrapFrameworkTestCa
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeUserGroup("route");
+        $obj = new NavigationNodeUsersGroups("route");
 
-        $this->assertEquals("navigation.node.usersGroup", $obj->getId());
+        $this->assertEquals("navigation.node.usersGroups", $obj->getId());
         $this->assertEquals("g:user", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }

@@ -14,12 +14,12 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Node;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node "User group".
+ * Navigation node "Users groups".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Node
  */
-class NavigationNodeUserGroup extends NavigationNode {
+class NavigationNodeUsersGroups extends NavigationNode {
 
     /**
      * Constructor.
@@ -27,7 +27,7 @@ class NavigationNodeUserGroup extends NavigationNode {
      * @param string $route The route.
      */
     public function __construct($route = null) {
-        parent::__construct("navigation.node.usersGroup", "g:user", $route);
+        parent::__construct("navigation.node.usersGroups", "g:user", $route);
     }
 
 }
