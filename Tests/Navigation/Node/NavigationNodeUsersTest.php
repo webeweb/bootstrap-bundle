@@ -11,17 +11,17 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Node;
 
-use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeUser;
+use WBW\Bundle\BootstrapBundle\Navigation\Node\NavigationNodeUsers;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
- * Navigation node "User" test.
+ * Navigation node "Users" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Node
  * @final
  */
-final class NavigationNodeUserTest extends AbstractBootstrapFrameworkTestCase {
+final class NavigationNodeUsesrTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,9 +30,9 @@ final class NavigationNodeUserTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testConstructor() {
 
-        $obj = new NavigationNodeUser("route");
+        $obj = new NavigationNodeUsers("route");
 
-        $this->assertEquals("navigation.node.user", $obj->getId());
+        $this->assertEquals("navigation.node.users", $obj->getId());
         $this->assertEquals("g:user", $obj->getIcon());
         $this->assertEquals("route", $obj->getRoute());
     }
