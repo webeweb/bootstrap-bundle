@@ -27,7 +27,7 @@ class InlineCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.inline";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.code.inline";
 
     /**
      * Constructor.

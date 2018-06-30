@@ -30,7 +30,7 @@ class Base64ImageTwigExtension extends AbstractImageTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.image.base64";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.image.base64";
 
     /**
      * Constructor.

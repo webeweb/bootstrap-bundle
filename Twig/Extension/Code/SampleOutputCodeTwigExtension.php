@@ -27,7 +27,7 @@ class SampleOutputCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.sampleoutput";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.code.sampleoutput";
 
     /**
      * Constructor.

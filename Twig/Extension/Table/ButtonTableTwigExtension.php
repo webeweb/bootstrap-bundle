@@ -29,7 +29,7 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.table.button";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.table.button";
 
     /**
      * Translator.

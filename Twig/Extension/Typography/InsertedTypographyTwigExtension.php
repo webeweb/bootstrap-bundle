@@ -27,7 +27,7 @@ class InsertedTypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.inserted";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.typography.inserted";
 
     /**
      * Constructor.

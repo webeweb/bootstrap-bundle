@@ -27,7 +27,7 @@ class SmallTypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.small";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.typography.small";
 
     /**
      * Constructor.

@@ -27,7 +27,7 @@ class MarkedTypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.marked";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.typography.marked";
 
     /**
      * Constructor.

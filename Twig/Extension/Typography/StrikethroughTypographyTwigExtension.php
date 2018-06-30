@@ -27,7 +27,7 @@ class StrikethroughTypographyTwigExtension extends AbstractTypographyTwigExtensi
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.strikethrough";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.typography.strikethrough";
 
     /**
      * Constructor.

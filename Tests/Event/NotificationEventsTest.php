@@ -30,10 +30,10 @@ final class NotificationEventsTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testConstructor() {
 
-        $this->assertEquals("webeweb.bundle.bootstrapbundle.event.notification.danger", NotificationEvents::NOTIFICATION_DANGER);
-        $this->assertEquals("webeweb.bundle.bootstrapbundle.event.notification.info", NotificationEvents::NOTIFICATION_INFO);
-        $this->assertEquals("webeweb.bundle.bootstrapbundle.event.notification.success", NotificationEvents::NOTIFICATION_SUCCESS);
-        $this->assertEquals("webeweb.bundle.bootstrapbundle.event.notification.warning", NotificationEvents::NOTIFICATION_WARNING);
+        $this->assertEquals("webeweb.bootstrapbundle.event.notification.danger", NotificationEvents::NOTIFICATION_DANGER);
+        $this->assertEquals("webeweb.bootstrapbundle.event.notification.info", NotificationEvents::NOTIFICATION_INFO);
+        $this->assertEquals("webeweb.bootstrapbundle.event.notification.success", NotificationEvents::NOTIFICATION_SUCCESS);
+        $this->assertEquals("webeweb.bootstrapbundle.event.notification.warning", NotificationEvents::NOTIFICATION_WARNING);
     }
 
 }

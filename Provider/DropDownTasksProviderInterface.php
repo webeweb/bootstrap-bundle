@@ -24,7 +24,7 @@ interface DropDownTasksProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.dropdowntasks";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.provider.dropdowntasks";
 
     /**
      * Get the tasks.

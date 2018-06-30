@@ -27,7 +27,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.grid.grid";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.grid.grid";
 
     /**
      * Constructor.

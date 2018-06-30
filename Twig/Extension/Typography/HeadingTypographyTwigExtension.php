@@ -27,7 +27,7 @@ class HeadingTypographyTwigExtension extends AbstractTypographyTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.typography.heading";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.typography.heading";
 
     /**
      * Constructor.

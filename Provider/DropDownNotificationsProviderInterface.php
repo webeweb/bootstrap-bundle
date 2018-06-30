@@ -24,7 +24,7 @@ interface DropDownNotificationsProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.provider.dropdownnotifications";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.provider.dropdownnotifications";
 
     /**
      * Get the notifications.

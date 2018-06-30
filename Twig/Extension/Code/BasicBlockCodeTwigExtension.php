@@ -27,7 +27,7 @@ class BasicBlockCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.basicblock";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.code.basicblock";
 
     /**
      * Constructor.

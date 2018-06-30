@@ -27,7 +27,7 @@ class UserInputCodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.code.userinput";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.code.userinput";
 
     /**
      * Constructor.

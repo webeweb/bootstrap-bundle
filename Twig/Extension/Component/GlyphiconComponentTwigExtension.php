@@ -28,7 +28,7 @@ class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtension imp
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bundle.bootstrapbundle.twig.extension.component.glyphicon";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.component.glyphicon";
 
     /**
      * Constructor.
