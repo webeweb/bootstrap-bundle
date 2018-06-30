@@ -24,7 +24,7 @@ class UserHelper {
     /**
      * Determines if the connected user entity has role $roles.
      *
-     * @param object $user The user.
+     * @param UserInterface|null $user The user.
      * @param string|array $roles The role or roles.
      * @param boolean $or OR ? If true, matches a role cause a break and the method returns true.
      * @return boolean Returns true in case of success, false otherwise.
