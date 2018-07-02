@@ -31,6 +31,7 @@ Includes:
 - [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
 - [jQuery InputMask 3.3.11](https://github.com/RobinHerbots/Inputmask/) (jQuery plug-in)
 - [Material Design Color Palette 1.1.0](https://github.com/zavoloklom/material-design-color-palette/)
+- [Material Design Hierarchical Display 1.0.1](https://github.com/zavoloklom/material-design-hierarchical-display/)
 - [Material Design Iconic Font 2.2.0](https://github.com/zavoloklom/material-design-iconic-font/)
 - [Meteocons](http://www.alessioatzeni.com/meteocons/)
 - [Moment.js 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
