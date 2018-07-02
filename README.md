@@ -30,6 +30,7 @@ Includes:
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
 - [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
 - [jQuery InputMask 3.3.11](https://github.com/RobinHerbots/Inputmask/) (jQuery plug-in)
+- [jQuery Select2 4.0.5](https://github.com/select2/select2/) (jQuery plug-in)
 - [Material Design Color Palette 1.1.0](https://github.com/zavoloklom/material-design-color-palette/)
 - [Material Design Hierarchical Display 1.0.1](https://github.com/zavoloklom/material-design-hierarchical-display/)
 - [Material Design Iconic Font 2.2.0](https://github.com/zavoloklom/material-design-iconic-font/)
