@@ -10,6 +10,7 @@ label:
     toggle_navigation: "Basculer la navigation"
     unsubscribe:       "Se désinscrire"
     with_best_regards: "Cordialement"
+    work_in_progress:  "En cours de développement !"
 
 navigation:
     node:
