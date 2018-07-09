@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension;
 
 /**
  * Bootstrap renderer Twig extension.
@@ -57,6 +58,10 @@ class BootstrapRendererTwigExtension {
 
             case "fa": // Font Awesome
                 $output = (new FontAwesomePluginTwigExtension())->renderIcon($handler[1], $style);
+                break;
+
+            case "mc": // Meteocons
+                $output = (new MeteoconsPluginTwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             case "zmdi": // Material Design Iconic Font

@@ -36,14 +36,17 @@ final class BootstrapRendererTwigExtensionTest extends AbstractBootstrapFramewor
         $res1 = '<i class="zmdi zmdi-home"></i>';
         $this->assertEquals($res1, BootstrapRendererTwigExtension::renderIcon("zmdi:home"));
 
-        $res2 = '<i class="fa fa-home"></i>';
-        $this->assertEquals($res2, BootstrapRendererTwigExtension::renderIcon("fa:home"));
+        $res2 = '<i class="meteocons" data-meteocons="A"></i>';
+        $this->assertEquals($res2, BootstrapRendererTwigExtension::renderIcon("mc:A"));
 
-        $res3 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
-        $this->assertEquals($res3, BootstrapRendererTwigExtension::renderIcon("g:home"));
+        $res3 = '<i class="fa fa-home"></i>';
+        $this->assertEquals($res3, BootstrapRendererTwigExtension::renderIcon("fa:home"));
 
         $res4 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
-        $this->assertEquals($res4, BootstrapRendererTwigExtension::renderIcon("b:home"));
+        $this->assertEquals($res4, BootstrapRendererTwigExtension::renderIcon("g:home"));
+
+        $res5 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+        $this->assertEquals($res5, BootstrapRendererTwigExtension::renderIcon("b:home"));
 
         $res9 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
         $this->assertEquals($res9, BootstrapRendererTwigExtension::renderIcon("home"));
