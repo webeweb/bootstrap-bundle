@@ -139,4 +139,28 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
     }
 
+    /**
+     * Displays a Meteocons icon.
+     *
+     * @param string $name The Meteocons name.
+     * @param string $style The Meteocons style.
+     * @return string Returns the Meteocons icon.
+     */
+    protected function meteoconsIcon($name, $style) {
+
+        // Initialize the template.
+        $template = "<i %attributes%></i>";
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["class"]          = "meteocons";
+        $attributes["data-meteocons"] = $name;
+
+        $attributes["style"] = $style;
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+    }
+
 }
