@@ -63,10 +63,10 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
     }
 
     /**
-     * Displays a Font Awesome.
+     * Displays a Material Design Iocnic Font icon.
      *
      * @param array $args The arguments.
-     * @return Returns a Font Awesome.
+     * @return Returns the Material Design Iconic Font icon.
      */
     public function materialDesignIconicFontIconFunction(array $args = []) {
         return $this->materialDesignIconicFontIcon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "size"), ArrayUtility::get($args, "fixedWidth", false), ArrayUtility::get($args, "border", false), ArrayUtility::get($args, "pull"), ArrayUtility::get($args, "spin"), ArrayUtility::get($args, "rotate"), ArrayUtility::get($args, "flip"), ArrayUtility::get($args, "style"));
@@ -93,8 +93,8 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
     /**
      * Displays a Material Design Iconic Font list icon.
      *
-     * @param string $icon The Material Design Iconic Fonticon.
-     * @param string $content The content.
+     * @param string $icon The Material Design Iconic Font icon.
+     * @param string $content The Material Design Iconic Font content.
      * @return string Returns the Material Design Iconic Font list icon.
      */
     public function materialDesignIconicFontListIconFilter($icon, $content) {

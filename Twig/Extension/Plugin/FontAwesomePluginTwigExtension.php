@@ -43,7 +43,7 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension impleme
      * Displays a Font Awesome icon.
      *
      * @param array $args The arguments.
-     * @return Returns a Font Awesome icon.
+     * @return Returns the Font Awesome icon.
      */
     public function fontAwesomeIconFunction(array $args = []) {
         return $this->fontAwesomeIcon(ArrayUtility::get($args, "font"), ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "size"), ArrayUtility::get($args, "fixedWidth", false), ArrayUtility::get($args, "bordered", false), ArrayUtility::get($args, "pull"), ArrayUtility::get($args, "animated"), ArrayUtility::get($args, "style"));
