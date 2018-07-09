@@ -20,7 +20,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPlu
 /**
  * Material Design Iconic Font plugin Twig extension test.
  *
- *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
  * @final
