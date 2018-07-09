@@ -96,6 +96,7 @@ class WikiController extends AbstractBootstrapController {
         $tableContents[] = new WikiPage("twig-extension", "plugin", "font-awesome", "Font Awesome");
         $tableContents[] = new WikiPage("twig-extension", "plugin", "jquery-inputmask", "jQuery InputMask");
         $tableContents[] = new WikiPage("twig-extension", "plugin", "material-design-iconic-font", "Material Design Iconic Font");
+        $tableContents[] = new WikiPage("twig-extension", "plugin", "meteocons", "Meteocons");
 
         // Twig extensions > Table
         $tableContents[] = new WikiPage("twig-extension", "table", "button", "Button");
