@@ -104,19 +104,21 @@ services:
 
     webeweb.bootstrapbundle.twig.extension.plugin.fontawesome:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension
-        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.plugin.jqueryinputmask:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskPluginTwigExtension
-        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.plugin.materialdesigniconicfont:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension
-        arguments: ["@translator"]
+        tags:
+            - { name: "twig.extension" }
+
+    webeweb.bootstrapbundle.twig.extension.plugin.meteocons:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension
         tags:
             - { name: "twig.extension" }
 
