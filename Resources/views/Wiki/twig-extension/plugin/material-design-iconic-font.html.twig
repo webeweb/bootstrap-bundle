@@ -2,5 +2,30 @@
 {% extends "@Bootstrap/Wiki/layout.html.twig" %}
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapWikiContent %}
-    {% include "@Bootstrap/include/work-in-progress.html.twig" %}
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "materialDesignIconicFontIcon",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("materialDesignIconicFontIcon") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "name", "the name"],
+                ["string", "size", "the size ('lg'|'2x'|'3x'|'4x'|'5x')"],
+                ["boolean", "fixedWidth", "fixed width? (false by default)"],
+                ["string", "border", "the border ('border'|'border-circle')"],
+                ["string", "pull", "the pull ('left'|'right')"],
+                ["string", "spin", "the spin ('spin'|'spin-reverse')"],
+                ["string", "rotate", "the rotate ('90'|'180'|'270')"],
+                ["string", "flip", "the flip ('horizontal'|'vertical')"],
+                ["string", "style", "the style"],
+            ])}}
+            {{ wiki.functionExample('{{ materialDesignIconicFontIcon({"name": "help", "size": "2x", "fixedWidth": true, "border": "border", "pull": "right", "spin": "spin-reverse", "rotate": "90", "flip": "vertical", "style": "color: #337AB7;"}) }}') }}
+            {{ wiki.functionOutput(materialDesignIconicFontIcon({"name": "help", "size": "2x", "fixedWidth": true, "border": "border", "pull": "right", "spin": "spin-reverse", "rotate": "90", "flip": "vertical", "style": "color: #337AB7;"})) }}
+            {{ wiki.functionExample('{{ materialDesignIconicFontIcon({"name": "help", "size": "3x"}) }}') }}
+            {{ wiki.functionOutput(materialDesignIconicFontIcon({"name": "help", "size": "3x"})) }}
+            {{ wiki.functionExample('{{ materialDesignIconicFontIcon({"name": "500px", "size": "3x"}) }}') }}
+            {{ wiki.functionOutput(materialDesignIconicFontIcon({"name": "500px", "size": "3x"})) }}
+        </div>
+    </div>
 {% endblock %}

@@ -2,5 +2,21 @@
 {% extends "@Bootstrap/Wiki/layout.html.twig" %}
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 {% block bootstrapWikiContent %}
-    {% include "@Bootstrap/include/work-in-progress.html.twig" %}
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "meteoconsIcon",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("meteoconsIcon") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "name", "the name"],
+                ["string", "style", "the style"],
+            ])}}
+            {{ wiki.functionExample('{{ meteoconsIcon({"name": "A", "style": "color: #337AB7;"}) }}') }}
+            {{ wiki.functionOutput(meteoconsIcon({"name": "A", "style": "color: #337AB7;"})) }}
+            {{ wiki.functionExample('{{ meteoconsIcon({"name": "B"}) }}') }}
+            {{ wiki.functionOutput(meteoconsIcon({"name": "B"})) }}
+        </div>
+    </div>
 {% endblock %}

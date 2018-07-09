@@ -10,13 +10,13 @@
         {{ wiki.functionTitle("fontAwesomeIcon") }}
         <div class="panel-body">
             {{ wiki.argumentsList([
-                ["string", "font", "the font (s|r|l|b)"],
+                ["string", "font", "the font ('s'|'r'|'l'|'b')"],
                 ["string", "name", "the name"],
-                ["string", "size", "the size (xs|sm|lg|2x|3x|4|5x|6x|7x|8x|9x|10x)"],
+                ["string", "size", "the size ('xs'|'sm'|'lg'|'2x'|'3x'|'4x'|'5x'|'6x'|'7x'|'8x'|'9x'|'10x')"],
                 ["boolean", "fullWidth", "full width? (false by default)"],
                 ["boolean", "bordered", "bordered? (false by default)"],
-                ["string", "pull", "the pull (left|right)"],
-                ["string", "animated", "the animation (spin|pulse)"],
+                ["string", "pull", "the pull ('left'|'right')"],
+                ["string", "animated", "the animation ('spin'|'pulse')"],
                 ["string", "style", "the style"],
             ])}}
             {{ wiki.functionExample('{{ fontAwesomeIcon({"font": "s", "name": "address-book", "size": "2x", "fullWidth": true, "bordered": true, "pull": "right", "animated": "pulse", "style": "color: #337AB7;"}) }}') }}
