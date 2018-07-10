@@ -26,6 +26,41 @@ use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider
 abstract class AbstractWikiController extends AbstractBootstrapController {
 
     /**
+     * Get a user.
+     *
+     * @return UserInterface Returns the user.
+     */
+    protected function getSampleUser() {
+        return new User("anonymous", "", ["ROLE_SUPER_ADMIN", "ROLE_ADMIN", "ROLE_USER"]);
+    }
+
+    /**
+     * Get a user role colors.
+     *
+     * @return array Returns the user role colors.
+     */
+    protected function getSampleUserRoleColors() {
+        return [
+            "ROLE_SUPER_ADMIN" => "#F44336",
+            "ROLE_ADMIN"       => "#E91E63",
+            "ROLE_USER"        => "#9E9E9E",
+        ];
+    }
+
+    /**
+     * Get a user role translations.
+     *
+     * @return array Returns the user role translations.
+     */
+    protected function getSampleUserRoleTranslations() {
+        return [
+            "ROLE_SUPER_ADMIN" => "Super administrator",
+            "ROLE_ADMIN"       => "Administrator",
+            "ROLE_USER"        => "User",
+        ];
+    }
+
+    /**
      * Get the Syntax Highlighter config.
      *
      * @return SyntaxHighlighterConfig Returns the SyntaxHighlighter config.
@@ -55,41 +90,6 @@ abstract class AbstractWikiController extends AbstractBootstrapController {
 
         // Return the SyntaxHighlighter defaults.
         return $defaults;
-    }
-
-    /**
-     * Get a user.
-     *
-     * @return UserInterface Returns the user.
-     */
-    protected function getUser() {
-        return new User("anonymous", "", ["ROLE_SUPER_ADMIN", "ROLE_ADMIN", "ROLE_USER"]);
-    }
-
-    /**
-     * Get the user role colors.
-     *
-     * @return array Returns the user role colors.
-     */
-    protected function getUserRoleColors() {
-        return [
-            "ROLE_SUPER_ADMIN" => "#F44336",
-            "ROLE_ADMIN"       => "#E91E63",
-            "ROLE_USER"        => "#9E9E9E",
-        ];
-    }
-
-    /**
-     * Get the user role translations.
-     *
-     * @return array Returns the user role translations.
-     */
-    protected function getUserRoleTranslations() {
-        return [
-            "ROLE_SUPER_ADMIN" => "Super administrator",
-            "ROLE_ADMIN"       => "Administrator",
-            "ROLE_USER"        => "User",
-        ];
     }
 
 }

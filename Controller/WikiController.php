@@ -137,9 +137,9 @@ class WikiController extends AbstractWikiController {
                 "wikiPages"                 => $wikiPages,
                 "syntaxHighlighterConfig"   => $this->getSyntaxHighlighterConfig(),
                 "syntaxHighlighterDefaults" => $this->getSyntaxHighlighterDefaults(),
-                "user"                      => $this->getUser(),
-                "userRoleColors"            => $this->getUserRoleColors(),
-                "userRoleTranslations"      => $this->getUserRoleTranslations(),
+                "user"                      => $this->getSampleUser(),
+                "userRoleColors"            => $this->getSampleUserRoleColors(),
+                "userRoleTranslations"      => $this->getSampleUserRoleTranslations(),
         ]);
     }
 
