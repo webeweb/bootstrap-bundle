@@ -102,7 +102,7 @@ Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-exten
 ### 1) Template
 
 ```html
-{# Resources/views/layout.html.twig #}
+{# AppBundle/Resources/views/layout.html.twig #}
 {% extends "@Bootstrap/layout.html.twig" %}
 {% block bootstrapFormTheme %}
     {# your form theme #}
