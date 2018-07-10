@@ -86,7 +86,7 @@ $ php bin/console assets:install
 
 Add the wiki routing into the `app/config/routing_dev.yml` file of your project:
 
-̀̀```yaml
+```yaml
 # ...
 _bootstrap_wiki:
     prefix:   "/bootstrap"
