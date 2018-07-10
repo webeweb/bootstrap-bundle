@@ -99,7 +99,7 @@ Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-exten
 
 ## Usage
 
-### 1) Template
+### Template
 
 ```html
 {# AppBundle/Resources/views/layout.html.twig #}
