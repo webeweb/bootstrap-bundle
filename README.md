@@ -107,6 +107,9 @@ Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-exten
 {% block bootstrapFormTheme %}
     {# your form theme #}
 {% endblock %}
+{% block bootstrapHeadFavicon %}
+    {# your favicons #}
+{% endblock %}
 {% block bootstrapHeadStyles %}
     {{ parent() }}
     {# your styles #}
