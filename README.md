@@ -84,6 +84,17 @@ Once the bundle is added then do:
 $ php bin/console assets:install
 ```
 
+Add the wiki routing into the `app/config/routing_dev.yml` file of your project:
+
+̀̀```yml
+# ...
+_bootstrap_wiki:
+    prefix:   "/bootstrap"
+    resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"
+```
+
+Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-extension/code/basic-block
+
 ---
 
 ## Testing
