@@ -14,9 +14,6 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\BootstrapBundle\Model\WikiPage;
-use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterConfig;
-use WBW\Bundle\SyntaxHighlighterBundle\API\SyntaxHighlighterDefaults;
-use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider;
 
 /**
  * Wiki controller.
@@ -24,39 +21,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Controller
  */
-class WikiController extends AbstractBootstrapController {
-
-    /**
-     * Get the Syntax Highlighter config.
-     *
-     * @return SyntaxHighlighterConfig Returns the SyntaxHighlighter config.
-     */
-    protected function getSyntaxHighlighterConfig() {
-
-        // Get the SyntaxHighlighter strings provider.
-        $provider = $this->get(SyntaxHighlighterStringsProvider::SERVICE_NAME);
-
-        // Initialize the SyntaxHighlighter config.
-        $config = new SyntaxHighlighterConfig();
-        $config->setStrings($provider->getSyntaxHighlighterStrings());
-
-        // Return the SyntaxHighlighter config.
-        return $config;
-    }
-
-    /**
-     * Get the Syntax Highlighter defaults.
-     *
-     * @return SyntaxHighlighterDefaults Returns the SyntaxHighlighter defaults.
-     */
-    protected function getSyntaxHighlighterDefaults() {
-
-        // Initialize the SyntaxHighlighter defaults.
-        $defaults = new SyntaxHighlighterDefaults();
-
-        // Return the SyntaxHighlighter defaults.
-        return $defaults;
-    }
+class WikiController extends AbstractWikiController {
 
     /**
      * Get the wiki pages.
@@ -168,10 +133,13 @@ class WikiController extends AbstractBootstrapController {
 
         // Returns the response.
         return $this->render(implode("", $template), [
-                "syntaxHighlighterConfig"   => $this->getSyntaxHighlighterConfig(),
-                "syntaxHighlighterDefaults" => $this->getSyntaxHighlighterDefaults(),
                 "wikiPage"                  => $wikiPage,
                 "wikiPages"                 => $wikiPages,
+                "syntaxHighlighterConfig"   => $this->getSyntaxHighlighterConfig(),
+                "syntaxHighlighterDefaults" => $this->getSyntaxHighlighterDefaults(),
+                "user"                      => $this->getUser(),
+                "userRoleColors"            => $this->getUserRoleColors(),
+                "userRoleTranslations"      => $this->getUserRoleTranslations(),
         ]);
     }
 
