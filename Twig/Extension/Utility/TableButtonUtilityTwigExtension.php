@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Table;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
@@ -17,35 +17,36 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExten
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Button table Twig extension.
+ * Table button utility Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Table
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  */
-class ButtonTableTwigExtension extends AbstractTableTwigExtension {
+class TableButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.table.button";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.utility.tablebutton";
 
     /**
-     * Translator.
+     * Extension.
      *
-     * @var TranslatorInterface
+     * @var ButtonComponentTwigExtension
      */
-    private $translator;
+    private $extension;
 
     /**
      * Constructor.
      *
-     * @param TranslatorInterface $translator The translator service.
+     * @param TranslatorInterface $translator The translator.
+     * @param ButtonComponentTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(TranslatorInterface $translator) {
-        parent::__construct();
-        $this->setTranslator($translator);
+    public function __construct(TranslatorInterface $translator, ButtonComponentTwigExtension $extension) {
+        parent::__construct($translator);
+        $this->setExtension($extension);
     }
 
     /**
@@ -76,11 +77,10 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
         $txt = $this->getTranslator()->trans("label.delete", [], "BootstrapBundle");
 
         // Initialize the button.
-        $ext = new ButtonComponentTwigExtension();
-        $but = $ext->bootstrapButtonDangerFunction(["title" => $txt, "icon" => "trash"]);
+        $but = $this->getExtension()->bootstrapButtonDangerFunction(["title" => $txt, "icon" => "trash"]);
 
         // Return the HTML.
-        return $ext->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
+        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -95,11 +95,19 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
         $txt = $this->getTranslator()->trans("label.edit", [], "BootstrapBundle");
 
         // Initialize the button.
-        $ext = new ButtonComponentTwigExtension();
-        $but = $ext->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "pencil"]);
+        $but = $this->getExtension()->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "pencil"]);
 
         // Return the HTML.
-        return $ext->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
+        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
+    }
+
+    /**
+     * Get the extension.
+     *
+     * @return ButtonComponentTwigExtension Returns the extension.
+     */
+    public function getExtension() {
+        return $this->extension;
     }
 
     /**
@@ -116,22 +124,13 @@ class ButtonTableTwigExtension extends AbstractTableTwigExtension {
     }
 
     /**
-     * Get the translator.
+     * Set the extension.
      *
-     * @return TranslatorInterface Returns the translator.
+     * @param ButtonComponentTwigExtension $extension The extension.
+     * @return TableButtonUtilityTwigExtension Returns this table button Twig extension.
      */
-    public function getTranslator() {
-        return $this->translator;
-    }
-
-    /**
-     * Set the translator.
-     *
-     * @param TranslatorInterface $translator The translator.
-     * @return ButtonTableTwigExtension Returns this button table Twig extension.
-     */
-    protected function setTranslator(TranslatorInterface $translator) {
-        $this->translator = $translator;
+    protected function setExtension(ButtonComponentTwigExtension $extension) {
+        $this->extension = $extension;
         return $this;
     }
 

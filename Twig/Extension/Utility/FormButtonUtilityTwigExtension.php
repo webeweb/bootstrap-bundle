@@ -101,6 +101,15 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
+     * Get the extension.
+     *
+     * @return ButtonComponentTwigExtension Returns the extension.
+     */
+    public function getExtension() {
+        return $this->extension;
+    }
+
+    /**
      * Get the Twig functions.
      *
      * @return array Returns the Twig functions.
@@ -111,15 +120,6 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
             new Twig_SimpleFunction("bootstrapDefaultFormButtons", [$this, "bootstrapDefaultFormButtonsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapSubmitFormButton", [$this, "bootstrapSubmitFormButtonFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Get the extension.
-     *
-     * @return ButtonComponentTwigExtension Returns the extension.
-     */
-    public function getExtension() {
-        return $this->extension;
     }
 
     /**

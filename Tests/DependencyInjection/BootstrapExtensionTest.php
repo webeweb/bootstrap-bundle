@@ -33,7 +33,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtens
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Table\ButtonTableTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
@@ -45,6 +44,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikethroughTypography
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonUtilityTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonUtilityTwigExtension;
 
 /**
  * Bootstrap extension test.
@@ -105,9 +105,6 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(MaterialDesignIconicFontPluginTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontPluginTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsPluginTwigExtension::class, $this->containerBuilder->get(MeteoconsPluginTwigExtension::SERVICE_NAME));
 
-        // Table
-        $this->assertInstanceOf(ButtonTableTwigExtension::class, $this->containerBuilder->get(ButtonTableTwigExtension::SERVICE_NAME));
-
         // Typography
         $this->assertInstanceOf(BoldTypographyTwigExtension::class, $this->containerBuilder->get(BoldTypographyTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $this->containerBuilder->get(DeletedTypographyTwigExtension::SERVICE_NAME));
@@ -122,6 +119,7 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         // Utility
         $this->assertInstanceOf(FormButtonUtilityTwigExtension::class, $this->containerBuilder->get(FormButtonUtilityTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RoleLabelUtilityTwigExtension::class, $this->containerBuilder->get(RoleLabelUtilityTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(TableButtonUtilityTwigExtension::class, $this->containerBuilder->get(TableButtonUtilityTwigExtension::SERVICE_NAME));
     }
 
 }
