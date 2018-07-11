@@ -41,21 +41,14 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
     private $extension;
 
     /**
-     * Translator.
-     *
-     * @var TranslatorInterface
-     */
-    private $translator;
-
-    /**
      * Constructor.
      *
+     * @param TranslatorInterface $translator The translator.
      * @param LabelComponentTwigExtension $extension The label component Twig extension.
      */
     public function __construct(TranslatorInterface $translator, LabelComponentTwigExtension $extension) {
-        parent::__construct();
+        parent::__construct($translator);
         $this->setExtension($extension);
-        $this->setTranslator($translator);
     }
 
     /**
@@ -139,15 +132,6 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Get the translator.
-     *
-     * @return TranslatorInterface Returns the translator.
-     */
-    public function getTranslator() {
-        return $this->translator;
-    }
-
-    /**
      * Set the extension.
      *
      * @param LabelComponentTwigExtension $extension The extension.
@@ -155,17 +139,6 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
      */
     protected function setExtension(LabelComponentTwigExtension $extension) {
         $this->extension = $extension;
-        return $this;
-    }
-
-    /**
-     * Set the translator.
-     *
-     * @param TranslatorInterface $translator The translator.
-     * @return RoleLabelUtilityTwigExtension Returns this role label utility Twig extension.
-     */
-    protected function setTranslator(TranslatorInterface $translator) {
-        $this->translator = $translator;
         return $this;
     }
 
