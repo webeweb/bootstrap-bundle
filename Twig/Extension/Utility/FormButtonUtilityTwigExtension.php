@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Form;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
@@ -17,19 +17,19 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExten
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Button form Twig extension.
+ * Form button utility Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Form
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  */
-class ButtonFormTwigExtension extends AbstractFormTwigExtension {
+class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.form.button";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.utility.formbutton";
 
     /**
      * Constructor.
@@ -49,7 +49,7 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
     public function bootstrapCancelFormButtonFunction(array $args = []) {
 
         // Translate the label.
-        $txt = $this->translator->trans("label.cancel", [], "BootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.cancel", [], "BootstrapBundle");
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();
@@ -83,7 +83,7 @@ class ButtonFormTwigExtension extends AbstractFormTwigExtension {
     public function bootstrapSubmitFormButtonFunction() {
 
         // Translate the label.
-        $txt = $this->translator->trans("label.submit", [], "BootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.submit", [], "BootstrapBundle");
 
         // Initialize the button.
         $ext = new ButtonComponentTwigExtension();

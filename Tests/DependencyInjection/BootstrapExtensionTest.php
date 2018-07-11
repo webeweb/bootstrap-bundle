@@ -27,7 +27,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExten
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
@@ -44,6 +43,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkedTypographyTwigExt
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonUtilityTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtension;
 
 /**
@@ -93,9 +93,6 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(LabelComponentTwigExtension::class, $this->containerBuilder->get(LabelComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $this->containerBuilder->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
 
-        // Form
-        $this->assertInstanceOf(ButtonFormTwigExtension::class, $this->containerBuilder->get(ButtonFormTwigExtension::SERVICE_NAME));
-
         // Grid
         $this->assertInstanceOf(GridTwigExtension::class, $this->containerBuilder->get(GridTwigExtension::SERVICE_NAME));
 
@@ -123,6 +120,7 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $this->containerBuilder->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
 
         // Utility
+        $this->assertInstanceOf(FormButtonUtilityTwigExtension::class, $this->containerBuilder->get(FormButtonUtilityTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RoleLabelUtilityTwigExtension::class, $this->containerBuilder->get(RoleLabelUtilityTwigExtension::SERVICE_NAME));
     }
 

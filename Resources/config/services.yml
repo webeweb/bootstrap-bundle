@@ -86,12 +86,6 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.form.button:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension
-        arguments: ["@translator"]
-        tags:
-            - { name: "twig.extension" }
-
     webeweb.bootstrapbundle.twig.extension.grid.grid:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension
         tags:
@@ -170,6 +164,12 @@ services:
 
     webeweb.bootstrapbundle.twig.extension.typography.underlined:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
+    webeweb.bootstrapbundle.twig.extension.utility.formbutton:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonUtilityTwigExtension
+        arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 

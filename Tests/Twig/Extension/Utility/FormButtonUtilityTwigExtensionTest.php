@@ -14,16 +14,16 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Form\ButtonFormTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonUtilityTwigExtension;
 
 /**
- * Button form Twig extension test.
+ * Form button utility Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class ButtonFormTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class FormButtonUtilityTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}
@@ -44,7 +44,7 @@ final class ButtonFormTwigExtensionTest extends AbstractBootstrapFrameworkTestCa
      */
     public function testGetFunctions() {
 
-        $obj = new ButtonFormTwigExtension($this->translator);
+        $obj = new FormButtonUtilityTwigExtension($this->translator);
 
         $res = $obj->getFunctions();
 
@@ -74,7 +74,7 @@ final class ButtonFormTwigExtensionTest extends AbstractBootstrapFrameworkTestCa
      */
     public function testBootstrapCancelFormButtonFunction() {
 
-        $obj = new ButtonFormTwigExtension($this->translator);
+        $obj = new FormButtonUtilityTwigExtension($this->translator);
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
@@ -89,7 +89,7 @@ final class ButtonFormTwigExtensionTest extends AbstractBootstrapFrameworkTestCa
      */
     public function testBootstrapDefaultFormButtonsFunction() {
 
-        $obj = new ButtonFormTwigExtension($this->translator);
+        $obj = new FormButtonUtilityTwigExtension($this->translator);
 
         $cnl = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
         $sbt = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> label.submit</button>';
@@ -107,7 +107,7 @@ final class ButtonFormTwigExtensionTest extends AbstractBootstrapFrameworkTestCa
      */
     public function testBootstrapSubmitFormButtonFunction() {
 
-        $obj = new ButtonFormTwigExtension($this->translator);
+        $obj = new FormButtonUtilityTwigExtension($this->translator);
 
         $res = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> label.submit</button>';
         $this->assertEquals($res, $obj->bootstrapSubmitFormButtonFunction());
