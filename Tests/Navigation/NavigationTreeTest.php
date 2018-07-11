@@ -71,6 +71,7 @@ final class NavigationTreeTest extends AbstractBootstrapFrameworkTestCase {
         $obj->getLastNode()->addNode(new NavigationNode("jQuery DataTables bundle", null, "https://github.com/webeweb/jquery-datatables-bundle"));
         $obj->getLastNode()->addNode(new NavigationNode("jQuery QueryBuilder bundle", null, "https://github.com/webeweb/jquery-querybuilder-bundle"));
         $obj->getLastNode()->addNode(new NavigationNode("SyntaxHighlighter bundle", null, "https://github.com/webeweb/syntaxhighlighter-bundle"));
+        $obj->getLastNode()->addNode(new NavigationItem("Core library", null, "https://github.com/webeweb/core-library"));
 
         // Mark the node "Bootstrap bundle" as active.
         $obj->activeNodes("https://github.com/webeweb/bootstrap-bundle", $obj->getNodes());
