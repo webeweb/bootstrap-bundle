@@ -169,7 +169,7 @@ services:
 
     webeweb.bootstrapbundle.twig.extension.utility.formbutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonUtilityTwigExtension
-        arguments: ["@translator"]
+        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.component.button"]
         tags:
             - { name: "twig.extension" }
 

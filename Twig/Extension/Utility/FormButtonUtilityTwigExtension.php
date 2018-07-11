@@ -32,12 +32,21 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.utility.formbutton";
 
     /**
+     * Extension.
+     *
+     * @var ButtonComponentTwigExtension
+     */
+    private $extension;
+
+    /**
      * Constructor.
      *
      * @param TranslatorInterface $translator The translator.
+     * @param ButtonComponentTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(TranslatorInterface $translator) {
+    public function __construct(TranslatorInterface $translator, ButtonComponentTwigExtension $extension) {
         parent::__construct($translator);
+        $this->setExtension($extension);
     }
 
     /**
@@ -52,11 +61,10 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
         $txt = $this->getTranslator()->trans("label.cancel", [], "BootstrapBundle");
 
         // Initialize the button.
-        $ext = new ButtonComponentTwigExtension();
-        $but = $ext->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "remove"]);
+        $but = $this->getExtension()->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "remove"]);
 
         // Return the HTML.
-        return $ext->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
+        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -86,11 +94,10 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
         $txt = $this->getTranslator()->trans("label.submit", [], "BootstrapBundle");
 
         // Initialize the button.
-        $ext = new ButtonComponentTwigExtension();
-        $but = $ext->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "ok"]);
+        $but = $this->getExtension()->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "ok"]);
 
         // Return the HTML.
-        return $ext->bootstrapButtonSubmitFilter($but);
+        return $this->getExtension()->bootstrapButtonSubmitFilter($but);
     }
 
     /**
@@ -104,6 +111,26 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
             new Twig_SimpleFunction("bootstrapDefaultFormButtons", [$this, "bootstrapDefaultFormButtonsFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapSubmitFormButton", [$this, "bootstrapSubmitFormButtonFunction"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * Get the extension.
+     *
+     * @return ButtonComponentTwigExtension Returns the extension.
+     */
+    public function getExtension() {
+        return $this->extension;
+    }
+
+    /**
+     * Set the extension.
+     *
+     * @param ButtonComponentTwigExtension $extension The extension.
+     * @return FormButtonTwigExtension Returns this form button Twig extension.
+     */
+    protected function setExtension(ButtonComponentTwigExtension $extension) {
+        $this->extension = $extension;
+        return $this;
     }
 
 }
