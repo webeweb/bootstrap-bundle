@@ -2,14 +2,14 @@
 services:
 
     webeweb.bootstrapbundle.eventlistener.kernel:
-        class: WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener
+        class:     WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener
         arguments: ["@security.token_storage", "@webeweb.bootstrapbundle.manager.providers"]
         tags:
             - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
             - { name: "kernel.event_listener", event: "kernel.request",   method: "onKernelRequest" }
 
     webeweb.bootstrapbundle.eventlistener.notification:
-        class: WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener
+        class:     WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener
         arguments: ["@webeweb.bootstrapbundle.eventlistener.kernel"]
         tags:
             - { name: "kernel.event_listener", event: "webeweb.bootstrapbundle.event.notification.danger",  method: "onNotify" }
@@ -97,22 +97,22 @@ services:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.plugin.fontawesome:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.plugin.jqueryinputmask:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskPluginTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskPluginTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.plugin.materialdesigniconicfont:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.plugin.meteocons:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension
         tags:
             - { name: "twig.extension" }
 
