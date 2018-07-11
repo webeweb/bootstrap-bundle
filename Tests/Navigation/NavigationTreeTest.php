@@ -75,15 +75,15 @@ final class NavigationTreeTest extends AbstractBootstrapFrameworkTestCase {
         // Mark the node "Bootstrap bundle" as active.
         $obj->activeNodes("https://github.com/webeweb/bootstrap-bundle", $obj->getNodes());
 
-        $this->assertTrue($obj->getNodeById("GitHub")->getActive());
+        $this->assertTrue($obj->getNodeAt(0)->getActive());
 
-        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("AdminBSB Material Design bundle")->getActive());
-        $this->assertTrue($obj->getNodeById("GitHub")->getNodeById("Bootstrap bundle")->getActive());
-        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("EDM bundle")->getActive());
-        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("Highcharts bundle")->getActive());
-        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("jQuery DataTables bundle")->getActive());
-        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("jQuery QueryBuilder bundle")->getActive());
-        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("SyntaxHighlighter bundle")->getActive());
+        $this->assertFalse($obj->getNodeAt(0)->getNodeAt(0)->getActive());
+        $this->assertTrue($obj->getNodeAt(0)->getNodeAt(1)->getActive());
+        $this->assertFalse($obj->getNodeAt(0)->getNodeAt(2)->getActive());
+        $this->assertFalse($obj->getNodeAt(0)->getNodeAt(3)->getActive());
+        $this->assertFalse($obj->getNodeAt(0)->getNodeAt(4)->getActive());
+        $this->assertFalse($obj->getNodeAt(0)->getNodeAt(5)->getActive());
+        $this->assertFalse($obj->getNodeAt(0)->getNodeAt(6)->getActive());
     }
 
     /**
