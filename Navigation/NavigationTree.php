@@ -29,6 +29,60 @@ class NavigationTree extends AbstractNavigationNode {
     }
 
     /**
+     * Actives the nodes.
+     *
+     * @param string $url The active URL.
+     * @param array $nodes The nodes.
+     * @param integer $level The node level.
+     * @return boolean Returns true in case of success, false othewise.
+     */
+    public function activeNodes($url, array $nodes = [], $level = 0) {
+
+        // Initialize.
+        $parent  = false;
+        $current = false;
+        $delete  = false;
+
+        // Handle each node.
+        foreach ($nodes as $n) {
+
+            // Check the node.
+            if (false === ($n instanceOf AbstractNavigationNode)) {
+                continue;
+            }
+
+            // Determines if the current node matches the URL.
+            if ($url === $n->getRoute()) {
+                $current = true;
+                $delete  = true;
+            } else {
+                $current = $this->activeNodes($url, $n->getNodes(), $level + 1);
+            }
+
+            // Handle next node.
+            if (false === $current) {
+                continue;
+            }
+
+            // Mark the node as active.
+            $n->setActive(true);
+
+            // Remove the icon only on the last level.
+            if (true === $delete && 0 < $level) {
+                $n->setIcon(null);
+            }
+
+            // Reset.
+            $parent  = true;
+            $current = false;
+            $delete  = false;
+        }
+
+        // Return.
+        return $parent;
+    }
+
+    /**
      * Get the breadcrumbs.
      *
      * @param AbstractNavigationNode $node The navigation node.

@@ -43,6 +43,50 @@ final class NavigationTreeTest extends AbstractBootstrapFrameworkTestCase {
     }
 
     /**
+     * Tests the activeNodes() method.
+     *
+     * @return void
+     */
+    public function testActiveNodes() {
+
+        $obj = new NavigationTree("tree");
+
+        /*
+         * Build a navigation tree like this :
+         *
+         * GitHub
+         * |- AdminBSB Material Design bundle
+         * |- Bootstrap bundle
+         * |- EDM bundle
+         * |- Highcharts bundle
+         * |- jQuery DataTables bundle
+         * |- jQuery QueryBuilder bundle
+         * |- SyntaxHighlighter bundle
+         */
+        $obj->addNode(new NavigationNode("GitHub"));
+        $obj->getLastNode()->addNode(new NavigationNode("AdminBSB Material Design bundle", null, "https://github.com/webeweb/adminbsb-material-design-bundle"));
+        $obj->getLastNode()->addNode(new NavigationNode("Bootstrap bundle", null, "https://github.com/webeweb/bootstrap-bundle"));
+        $obj->getLastNode()->addNode(new NavigationNode("EDM bundle", null, "https://github.com/webeweb/edm-bundle"));
+        $obj->getLastNode()->addNode(new NavigationNode("Highcharts bundle", null, "https://github.com/webeweb/highcharts-bundle"));
+        $obj->getLastNode()->addNode(new NavigationNode("jQuery DataTables bundle", null, "https://github.com/webeweb/jquery-datatables-bundle"));
+        $obj->getLastNode()->addNode(new NavigationNode("jQuery QueryBuilder bundle", null, "https://github.com/webeweb/jquery-querybuilder-bundle"));
+        $obj->getLastNode()->addNode(new NavigationNode("SyntaxHighlighter bundle", null, "https://github.com/webeweb/syntaxhighlighter-bundle"));
+
+        // Mark the node "Bootstrap bundle" as active.
+        $obj->activeNodes("https://github.com/webeweb/bootstrap-bundle", $obj->getNodes());
+
+        $this->assertTrue($obj->getNodeById("GitHub")->getActive());
+
+        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("AdminBSB Material Design bundle")->getActive());
+        $this->assertTrue($obj->getNodeById("GitHub")->getNodeById("Bootstrap bundle")->getActive());
+        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("EDM bundle")->getActive());
+        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("Highcharts bundle")->getActive());
+        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("jQuery DataTables bundle")->getActive());
+        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("jQuery QueryBuilder bundle")->getActive());
+        $this->assertFalse($obj->getNodeById("GitHub")->getNodeById("SyntaxHighlighter bundle")->getActive());
+    }
+
+    /**
      * Tests the getBreadcrumbs() method.
      *
      * @return void
