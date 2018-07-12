@@ -33,10 +33,6 @@
         "symfony/templating": "^2.6|^3.0",
         "symfony/twig-bundle": "^2.6|^3.0"
     },
-    "suggest": {
-        "webeweb/highcharts-bundle": "Integrate Highcharts with Symfony 2",
-        "webeweb/jquery-querybuilder-bundle": "Integrate jQuery QueryBuilder with Symfony 2"
-    },
     "support": {
         "issues": "http://github.com/webeweb/bootstrap-bundle/issues"
     },
@@ -47,6 +43,14 @@
         "exclude-from-classmap": [
             "/Tests/"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WBW\\Bundle\\BootstrapBundle\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {
