@@ -38,10 +38,8 @@ class NavigationTree extends AbstractNavigationNode {
      */
     public function activeNodes($url, array $nodes = [], $level = 0) {
 
-        // Initialize.
-        $parent  = false;
-        $current = false;
-        $delete  = false;
+        // Initialize the result.
+        $result = false;
 
         // Handle each node.
         foreach ($nodes as $n) {
@@ -50,6 +48,10 @@ class NavigationTree extends AbstractNavigationNode {
             if (false === ($n instanceOf AbstractNavigationNode)) {
                 continue;
             }
+
+            // Init.
+            $current = false;
+            $delete  = false;
 
             // Determines if the current node matches the URL.
             if ($url === $n->getRoute()) {
@@ -72,14 +74,12 @@ class NavigationTree extends AbstractNavigationNode {
                 $n->setIcon(null);
             }
 
-            // Reset.
-            $parent  = true;
-            $current = false;
-            $delete  = false;
+            // Set the result.
+            $result = true;
         }
 
-        // Return.
-        return $parent;
+        // Return the result.
+        return $result;
     }
 
     /**
