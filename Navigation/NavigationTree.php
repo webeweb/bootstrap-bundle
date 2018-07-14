@@ -52,16 +52,17 @@ class NavigationTree extends AbstractNavigationNode {
             // Init.
             $current = false;
             $delete  = false;
+            $pattern = "/" . preg_quote($n->getRoute(), "/") . "/";
 
             // Determines if the current node matches the URL.
-            if ($url === $n->getRoute()) {
+            if ($url === $n->getRoute() || (null !== $n->getRoute() && 1 === preg_match($pattern, $url))) {
                 $current = true;
                 $delete  = true;
             } else {
                 $current = $this->activeNodes($url, $n->getNodes(), $level + 1);
             }
 
-            // Handle next node.
+            // Handle the next node.
             if (false === $current) {
                 continue;
             }
