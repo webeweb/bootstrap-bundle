@@ -36,7 +36,7 @@ class NavigationTree extends AbstractNavigationNode {
      * @param integer $level The node level.
      * @return boolean Returns true in case of success, false othewise.
      */
-    public function activeNodes($url, array $nodes = [], $level = 0) {
+    protected function activeNodes($url, array $nodes = [], $level = 0) {
 
         // Initialize the result.
         $result = false;
@@ -80,6 +80,16 @@ class NavigationTree extends AbstractNavigationNode {
 
         // Return the result.
         return $result;
+    }
+
+    /**
+     * Active the tree.
+     *
+     * @param string $url The URL.
+     * @return void
+     */
+    public function activeTree($url) {
+        $this->activeNodes($url, $this->getNodes());
     }
 
     /**
