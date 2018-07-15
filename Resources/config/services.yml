@@ -81,6 +81,11 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bootstrapbundle.twig.extension.component.nav:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavComponentTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bootstrapbundle.twig.extension.component.progressbar:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension
         tags:

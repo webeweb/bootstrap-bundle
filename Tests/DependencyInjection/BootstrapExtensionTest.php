@@ -26,6 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtens
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
@@ -91,6 +92,7 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(ButtonComponentTwigExtension::class, $this->containerBuilder->get(ButtonComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $this->containerBuilder->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(LabelComponentTwigExtension::class, $this->containerBuilder->get(LabelComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(NavComponentTwigExtension::class, $this->containerBuilder->get(NavComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $this->containerBuilder->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
 
         // Grid
