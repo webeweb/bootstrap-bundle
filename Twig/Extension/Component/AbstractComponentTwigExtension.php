@@ -122,6 +122,32 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     }
 
     /**
+     * Displays a Bootstrap button group.
+     *
+     * @param string $class The class.
+     * @param string $role The role.
+     * @param array $buttons The buttons.
+     * @return string Returns the Bootstrap button group.
+     */
+    protected function bootstrapButtonGroup($class, $role, array $buttons) {
+
+        // Initialize the template.
+        $template = "<div %attributes%>\n%innerHTML%\n</div>";
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["class"] = $class;
+        $attributes["role"]  = $role;
+
+        // Initialize the parameters.
+        $innerHTML = implode("\n", $buttons);
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+    }
+
+    /**
      * Displays a Bootstrap glyphicon.
      *
      * @param string $name The glyphicon name.

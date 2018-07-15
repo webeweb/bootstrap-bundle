@@ -60,6 +60,28 @@ class ButtonComponentTwigExtension extends AbstractComponentTwigExtension {
     }
 
     /**
+     * Displays a Bootstrap button group "Basic".
+     *
+     * @param array $args The arguments.
+     * @param array $buttons The buttons.
+     * @return string Returns the Bootstrap button group "Basic".
+     */
+    public function bootstrapButtonGroupBasicFunction(array $args = [], array $buttons = []) {
+        return $this->bootstrapButtonGroup("btn-group", "group", $buttons);
+    }
+
+    /**
+     * Displays a Bootstrap button group "Toolbar".
+     *
+     * @param array $args The arguments.
+     * @param array $buttons The buttons.
+     * @return string Returns the Bootstrap button group "Toolbar".
+     */
+    public function bootstrapButtonGroupToolbarFunction(array $args = [], array $buttons = []) {
+        return $this->bootstrapButtonGroup("btn-toolbar", "toolbar", $buttons);
+    }
+
+    /**
      * Displays a Bootstrap button "Info".
      *
      * @param array $args The arguments.
@@ -154,6 +176,8 @@ class ButtonComponentTwigExtension extends AbstractComponentTwigExtension {
         return [
             new Twig_SimpleFunction("bootstrapButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),

@@ -61,7 +61,7 @@ final class ButtonComponentTwigExtensionTest extends AbstractBootstrapFrameworkT
 
         $res = $obj->getFunctions();
 
-        $this->assertCount(7, $res);
+        $this->assertCount(9, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapButtonDanger", $res[0]->getName());
@@ -74,29 +74,39 @@ final class ButtonComponentTwigExtensionTest extends AbstractBootstrapFrameworkT
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapButtonInfo", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapButtonGroupBasic", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupBasicFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("bootstrapButtonLink", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[3]->getCallable());
+        $this->assertEquals("bootstrapButtonGroupToolbar", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("bootstrapButtonPrimary", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[4]->getCallable());
+        $this->assertEquals("bootstrapButtonInfo", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
-        $this->assertEquals("bootstrapButtonSuccess", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[5]->getCallable());
+        $this->assertEquals("bootstrapButtonLink", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
-        $this->assertEquals("bootstrapButtonWarning", $res[6]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[6]->getCallable());
+        $this->assertEquals("bootstrapButtonPrimary", $res[6]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertEquals("bootstrapButtonSuccess", $res[7]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[7]->getCallable());
+        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[8]);
+        $this->assertEquals("bootstrapButtonWarning", $res[8]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[8]->getCallable());
+        $this->assertEquals(["html"], $res[8]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -166,6 +176,54 @@ final class ButtonComponentTwigExtensionTest extends AbstractBootstrapFrameworkT
         $arg0 = [];
         $res0 = '<button class="btn btn-default" type="button"></button>';
         $this->assertEquals($res0, $obj->bootstrapButtonDefaultFunction($arg0));
+    }
+
+    /**
+     * Tests the bootstrapButtoionGroupBasicFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapButtonGroupBasicFunction() {
+
+        $obj = new ButtonComponentTwigExtension();
+
+        $arg = [];
+        $but = [
+            $obj->bootstrapButtonDefaultFunction(["content" => "Edit"]),
+            $obj->bootstrapButtonDangerFunction(["content" => "Delete"]),
+        ];
+        $res = <<< 'EOTXT'
+<div class="btn-group" role="group">
+<button class="btn btn-default" type="button">Edit</button>
+<button class="btn btn-danger" type="button">Delete</button>
+</div>
+EOTXT;
+
+        $this->assertEquals($res, $obj->bootstrapButtonGroupBasicFunction($arg, $but));
+    }
+
+    /**
+     * Tests the bootstrapButtoionGroupToolbarFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapButtonGroupToolbarFunction() {
+
+        $obj = new ButtonComponentTwigExtension();
+
+        $arg = [];
+        $but = [
+            $obj->bootstrapButtonDefaultFunction(["content" => "Edit"]),
+            $obj->bootstrapButtonDangerFunction(["content" => "Delete"]),
+        ];
+        $res = <<< 'EOTXT'
+<div class="btn-toolbar" role="toolbar">
+<button class="btn btn-default" type="button">Edit</button>
+<button class="btn btn-danger" type="button">Delete</button>
+</div>
+EOTXT;
+
+        $this->assertEquals($res, $obj->bootstrapButtonGroupToolbarFunction($arg, $but));
     }
 
     /**
