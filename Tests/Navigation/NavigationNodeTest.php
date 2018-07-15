@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
@@ -38,6 +39,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertNull($obj->getIcon());
         $this->assertNull($obj->getRoute());
         $this->assertNull($obj->getTarget());
+        $this->assertEquals(NavigationInterface::NAVIGATION_TYPE_URL, $obj->getType());
         $this->assertTrue($obj->getVisible());
     }
 
@@ -123,6 +125,19 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
 
         $obj->setTarget("_blank");
         $this->assertEquals("_blank", $obj->getTarget());
+    }
+
+    /**
+     * Tests the setType() method.
+     *
+     * @return void
+     */
+    public function testSetType() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setType(NavigationInterface::NAVIGATION_TYPE_ROUTER);
+        $this->assertEquals(NavigationInterface::NAVIGATION_TYPE_ROUTER, $obj->getType());
     }
 
 }

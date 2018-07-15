@@ -58,6 +58,13 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     private $target;
 
     /**
+     * Type.
+     *
+     * @var string
+     */
+    private $type;
+
+    /**
      * Visible ?
      *
      * @var boolean
@@ -70,14 +77,16 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param string $name The name.
      * @param string $icon The icon.
      * @param string $route The route.
+     * @param string $type The type.
      */
-    protected function __construct($name, $icon = null, $route = self::NAVIGATION_HREF_DEFAULT) {
+    protected function __construct($name, $icon = null, $route = self::NAVIGATION_HREF_DEFAULT, $type = self::NAVIGATION_TYPE_URL) {
         parent::__construct($name);
         $this->setActive(false);
         $this->setEnable(false);
         $this->setIcon($icon);
         $this->setRoute($route);
         $this->setTarget(null);
+        $this->setType($type);
         $this->setVisible(true);
     }
 
@@ -86,7 +95,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @return boolean Returns the active.
      */
-    final public function getActive() {
+    public function getActive() {
         return $this->active;
     }
 
@@ -95,7 +104,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @return boolean Returns the enable.
      */
-    final public function getEnable() {
+    public function getEnable() {
         return $this->enable;
     }
 
@@ -104,7 +113,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @return string Returns the icon.
      */
-    final public function getIcon() {
+    public function getIcon() {
         return $this->icon;
     }
 
@@ -113,7 +122,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @return string Returns the route.
      */
-    final public function getRoute() {
+    public function getRoute() {
         return $this->route;
     }
 
@@ -122,8 +131,17 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @return string Returns the target.
      */
-    final public function getTarget() {
+    public function getTarget() {
         return $this->target;
+    }
+
+    /**
+     * Get the type.
+     *
+     * @return string Returns the type.
+     */
+    public function getType() {
+        return $this->type;
     }
 
     /**
@@ -131,7 +149,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @return boolean Returns the visible.
      */
-    final public function getVisible() {
+    public function getVisible() {
         return $this->visible;
     }
 
@@ -140,7 +158,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @return boolean Returns true in case of success, false otherwise.
      */
-    final public function isDisplayable() {
+    public function isDisplayable() {
         $displayable = $this->enable && $this->visible;
         if (true === $displayable) {
             return true;
@@ -162,7 +180,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param boolean $active Active ?
      * @return NavigationNode Returns the navigation node.
      */
-    final public function setActive($active) {
+    public function setActive($active) {
         $this->active = $active;
         return $this;
     }
@@ -173,7 +191,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param boolean $enable Enable ?.
      * @return NavigationNode Returns the navigation node.
      */
-    final public function setEnable($enable) {
+    public function setEnable($enable) {
         $this->enable = $enable;
         return $this;
     }
@@ -184,7 +202,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param string $icon The icon.
      * @return NavigationNode Returns the navigation node.
      */
-    final public function setIcon($icon) {
+    public function setIcon($icon) {
         $this->icon = $icon;
         return $this;
     }
@@ -195,7 +213,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param string $route The route.
      * @return NavigationNode Returns the navigation node.
      */
-    final public function setRoute($route) {
+    public function setRoute($route) {
         $this->route = $route;
         return $this;
     }
@@ -206,8 +224,19 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param string $target The target.
      * @return NavigationNode Returns the navigation node.
      */
-    final public function setTarget($target) {
+    public function setTarget($target) {
         $this->target = $target;
+        return $this;
+    }
+
+    /**
+     * Set the type.
+     *
+     * @param string $type The type.
+     * @return NavigationNode Returns the navigation node.
+     */
+    public function setType($type) {
+        $this->type = $type;
         return $this;
     }
 
@@ -217,7 +246,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param boolean $visible Visible ?
      * @return NavigationNode Returns the navigation node.
      */
-    final protected function setVisible($visible) {
+    protected function setVisible($visible) {
         $this->visible = $visible;
         return $this;
     }
