@@ -34,7 +34,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
 
         $obj = new NavigationItem("id");
 
-        $this->assertEquals(NavigationInterface::DEFAULT_HREF, $obj->getHref());
+        $this->assertEquals(NavigationInterface::NAVIGATION_HREF_DEFAULT, $obj->getHref());
         $this->assertNull($obj->getIcon());
     }
 

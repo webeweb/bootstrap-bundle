@@ -44,7 +44,7 @@ class NavigationItem extends AbstractNode implements NavigationInterface {
      * @param string $icon The icon.
      * @param string $href The href.
      */
-    public function __construct($id, $icon = null, $href = self::DEFAULT_HREF) {
+    public function __construct($id, $icon = null, $href = self::NAVIGATION_HREF_DEFAULT) {
         parent::__construct($id);
         $this->icon = $icon;
         $this->href = $href;

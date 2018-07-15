@@ -36,7 +36,7 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
      *
      * @var string
      */
-    const DEFAULT_HREF = NavigationInterface::DEFAULT_HREF;
+    const DEFAULT_HREF = NavigationInterface::NAVIGATION_HREF_DEFAULT;
 
     /**
      * Constructor.

@@ -24,7 +24,7 @@ interface NavigationInterface {
      *
      * @var string
      */
-    const DEFAULT_HREF = "javascript:void(0);";
+    const NAVIGATION_HREF_DEFAULT = "javascript:void(0);";
 
     /**
      * Navigation type ""Reg exp".

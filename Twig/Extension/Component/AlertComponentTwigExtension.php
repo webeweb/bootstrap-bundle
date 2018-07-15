@@ -73,7 +73,7 @@ class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["href"] = ArrayUtility::get($args, "href", NavigationInterface::DEFAULT_HREF);
+        $attributes["href"] = ArrayUtility::get($args, "href", NavigationInterface::NAVIGATION_HREF_DEFAULT);
 
         // Initialize the parameters.
         $innerHTML = ArrayUtility::get($args, "content");

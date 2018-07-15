@@ -71,14 +71,14 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param string $icon The icon.
      * @param string $route The route.
      */
-    protected function __construct($name, $icon = null, $route = self::DEFAULT_HREF) {
+    protected function __construct($name, $icon = null, $route = self::NAVIGATION_HREF_DEFAULT) {
         parent::__construct($name);
-        $this->active  = false;
-        $this->enable  = false;
-        $this->icon    = $icon;
-        $this->route   = $route;
-        $this->target  = null;
-        $this->visible = true;
+        $this->setActive(false);
+        $this->setEnable(false);
+        $this->setIcon($icon);
+        $this->setRoute($route);
+        $this->setTarget(null);
+        $this->setVisible(true);
     }
 
     /**
