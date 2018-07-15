@@ -20,10 +20,31 @@ namespace WBW\Bundle\BootstrapBundle\Navigation;
 interface NavigationInterface {
 
     /**
-     * Default href.
+     * Navigation HREF "default".
      *
      * @var string
      */
     const DEFAULT_HREF = "javascript:void(0);";
+
+    /**
+     * Navigation type ""Reg exp".
+     *
+     * @var string
+     */
+    const NAVIGATION_TYPE_REGEXP = "regexp";
+
+    /**
+     * Navigation type ""Router".
+     *
+     * @var string
+     */
+    const NAVIGATION_TYPE_ROUTER = "router";
+
+    /**
+     * Navigation type "URL".
+     *
+     * @var string
+     */
+    const NAVIGATION_TYPE_URL = "url";
 
 }
