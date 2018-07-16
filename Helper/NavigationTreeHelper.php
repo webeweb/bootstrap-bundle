@@ -135,7 +135,7 @@ class NavigationTreeHelper {
         switch ($node->getMatcher()) {
 
             case NavigationInterface::NAVIGATION_MATCHER_REGEXP:
-                $result = preg_match("/" . $node->getRoute() . "/", $request->getRequestUri());
+                $result = preg_match("/" . $node->getRoute() . "/", $request->getUri());
                 break;
 
             case NavigationInterface::NAVIGATION_MATCHER_ROUTER:
