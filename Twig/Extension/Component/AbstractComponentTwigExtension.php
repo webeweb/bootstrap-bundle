@@ -107,24 +107,16 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     private function bootstrapBreadcrumb(NavigationNode $node, $last) {
 
         // Initialize the template.
-        $template = "<li%class%>%innerHTML%</li>";
+        $template = "<li%attributes%>%innerHTML%</li>";
 
         // Initialize the parameters.
-        $class     = true === $node->getActive() && true == $last ? " class=\"active\"" : "";
-        $innerHTML = [];
+        $content = $this->getTranslator()->trans($node->getId());
 
-        if (false === $last) {
-            $innerHTML[] = "<a href=\"";
-            $innerHTML[] = $node->getRoute();
-            $innerHTML[] = "\">";
-        }
-        $innerHTML[] = $this->getTranslator()->trans($node->getId());
-        if (false === $last) {
-            $innerHTML[] = "</a>";
-        }
+        $attributes = true === $node->getActive() && true == $last ? " class=\"active\"" : "";
+        $innerHTML  = true === $last ? $content : $this->bootstrapDOMObject("a", "href=\"" . $node->getRoute() . "\"", $content);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%class%", "%innerHTML%"], [$class, implode("", $innerHTML)]);
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [$attributes, $innerHTML]);
     }
 
     /**
