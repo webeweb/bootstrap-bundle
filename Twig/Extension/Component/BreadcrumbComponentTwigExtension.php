@@ -51,7 +51,7 @@ class BreadcrumbComponentTwigExtension extends AbstractComponentTwigExtension {
      */
     public function bootstrapBreadcrumbsFunction(array $args = [], NavigationTree $tree, Request $request) {
         NavigationTreeHelper::activeTree($tree, $request);
-        return $this->bootstrapBreadcrumbs($tree, $request);
+        return $this->bootstrapBreadcrumbs($tree);
     }
 
     /**
