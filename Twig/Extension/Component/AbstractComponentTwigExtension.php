@@ -112,7 +112,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         // Initialize the parameters.
         $content = $this->getTranslator()->trans($node->getId());
 
-        $attributes = true === $node->getActive() && true == $last ? " class=\"active\"" : "";
+        $attributes = true === $node->getActive() && true === $last ? " class=\"active\"" : "";
         $innerHTML  = true === $last ? $content : $this->bootstrapDOMObject("a", "href=\"" . $node->getRoute() . "\"", $content);
 
         // Return the HTML.
@@ -140,7 +140,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $innerHTML = [];
 
         // Get the breadcrumb node.
-        $nodes = NavigationTreeHelper::getBreadcrumbs($tree, $request);
+        $nodes = NavigationTreeHelper::getBreadcrumbs($tree);
         $count = count($nodes);
 
         // Handle each breadcrumb node.
