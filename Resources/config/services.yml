@@ -66,6 +66,12 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bootstrapbundle.twig.extension.component.breadcrumb:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbComponentTwigExtension
+        arguments: ["@translator"]
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bootstrapbundle.twig.extension.component.button:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension
         tags:
