@@ -27,24 +27,24 @@ interface NavigationInterface {
     const NAVIGATION_HREF_DEFAULT = "javascript:void(0);";
 
     /**
-     * Navigation type ""Reg exp".
+     * Navigation matcher "Reg exp".
      *
      * @var string
      */
-    const NAVIGATION_TYPE_REGEXP = "regexp";
+    const NAVIGATION_MATCHER_REGEXP = "regexp";
 
     /**
-     * Navigation type ""Router".
+     * Navigation matcher "Router".
      *
      * @var string
      */
-    const NAVIGATION_TYPE_ROUTER = "router";
+    const NAVIGATION_MATCHER_ROUTER = "router";
 
     /**
-     * Navigation type "URL".
+     * Navigation matcher "URL".
      *
      * @var string
      */
-    const NAVIGATION_TYPE_URL = "url";
+    const NAVIGATION_MATCHER_URL = "url";
 
 }
