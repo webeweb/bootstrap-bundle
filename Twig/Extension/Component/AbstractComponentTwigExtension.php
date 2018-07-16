@@ -123,10 +123,9 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * Displays a Bootstrap breadcrumbs.
      *
      * @param NavigationTree $tree The tree.
-     * @param Request $request The request.
      * @return string Returns the Bootstrap breadcrumbs.
      */
-    protected function bootstrapBreadcrumbs(NavigationTree $tree, Request $request) {
+    protected function bootstrapBreadcrumbs(NavigationTree $tree) {
 
         // Initialize the template.
         $template = "<ol %attributes%>\n%innerHTML%\n</ol>";
