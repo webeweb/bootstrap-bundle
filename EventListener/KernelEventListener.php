@@ -107,11 +107,12 @@ class KernelEventListener {
      * @return UserInterface Returns the current user in case of success, null otherwise.
      */
     public function getUser() {
+        $token = null;
         if (null === $this->user) {
             $token = $this->getTokenStorage()->getToken();
-            if (null !== $token) {
-                $this->user = $token->getUser();
-            }
+        }
+        if (null !== $token) {
+            $this->user = $token->getUser();
         }
         if (true === ($this->user instanceof UserInterface)) {
             return $this->user;
