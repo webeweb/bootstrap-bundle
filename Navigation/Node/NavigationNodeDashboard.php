@@ -25,9 +25,10 @@ class NavigationNodeDashboard extends NavigationNode {
      * Constructor.
      *
      * @param string $route The route.
+     * @param string $matcher The matcher.
      */
-    public function __construct($route = null) {
-        parent::__construct("navigation.node.dashboard", "g:dashboard", $route);
+    public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
+        parent::__construct("navigation.node.dashboard", "g:dashboard", $route, $matcher);
     }
 
 }
