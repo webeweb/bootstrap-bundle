@@ -66,7 +66,7 @@ final class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationItem("SkiData library", null, "https://github.com/webeweb/skidata-library"));
         $tree->getLastNode()->addNode(new NavigationItem("sMsmode library", null, "https://github.com/webeweb/smsmode-library"));
 
-        // Return the the tree.
+        // Return the tree.
         return $tree;
     }
 
