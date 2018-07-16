@@ -47,6 +47,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setAccountSettingsURL() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetAccountSeetings() {
 
@@ -60,6 +61,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setBestRegards() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetBestRegards() {
 
@@ -73,6 +75,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setCompanyLogo() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetCompanyLogo() {
 
@@ -86,6 +89,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setCompanyName() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetCompanyName() {
 
@@ -99,6 +103,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setCompanyURL() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetCompanyURL() {
 
@@ -112,6 +117,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setSupportEmail() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetSupportEmail() {
 
@@ -125,6 +131,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setSupportName() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetSupportName() {
 
@@ -138,6 +145,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setSupportPhone() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetSupportPhone() {
 
@@ -151,6 +159,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setUnsubscribeURL() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetUnsubscribeURL() {
 

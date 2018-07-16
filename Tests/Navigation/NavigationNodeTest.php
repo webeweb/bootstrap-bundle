@@ -47,6 +47,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the isDisplayable() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testIsDisplayable() {
 
@@ -66,6 +67,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setActive() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetActive() {
 
@@ -79,6 +81,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setEnable() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetEnable() {
 
@@ -92,6 +95,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setIcon() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetIcon() {
 
@@ -105,6 +109,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setMatcher() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetMatcher() {
 
@@ -118,6 +123,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setRoute() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetRoute() {
 
@@ -131,6 +137,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setTarget() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetTarget() {
 

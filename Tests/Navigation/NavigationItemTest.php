@@ -42,6 +42,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setHref() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetHref() {
 
@@ -55,6 +56,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setIcon() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testSetIcon() {
 
@@ -68,6 +70,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the toArray() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testToArray() {
 

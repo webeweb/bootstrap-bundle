@@ -85,6 +85,7 @@ final class NavigationTreeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the activeTree() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testActiveTree() {
 
@@ -106,6 +107,7 @@ final class NavigationTreeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the getBreadcrumbs() method.
      *
      * @return void
+     * @depends testConstructor
      */
     public function testGetBreadcrumbs() {
 
