@@ -59,12 +59,12 @@ final class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationNode("jQuery QueryBuilder bundle", null, "https://github.com/webeweb/jquery-querybuilder-bundle"));
         $tree->getLastNode()->addNode(new NavigationNode("OpenData bundle", null, "https://github.com/webeweb/opendata-bundle"));
         $tree->getLastNode()->addNode(new NavigationNode("SyntaxHighlighter bundle", null, "https://github.com/webeweb/syntaxhighlighter-bundle"));
-        $tree->getLastNode()->addNode(new NavigationItem("Core library", null, "https://github.com/webeweb/core-library"));
-        $tree->getLastNode()->addNode(new NavigationItem("cURL library", null, "https://github.com/webeweb/curl-library"));
-        $tree->getLastNode()->addNode(new NavigationItem("FTP library", null, "https://github.com/webeweb/ftp-library"));
+        $tree->getLastNode()->addNode(new NavigationNode("Core library", null, "https://github.com/webeweb/core-library"));
+        $tree->getLastNode()->addNode(new NavigationNode("cURL library", null, "https://github.com/webeweb/curl-library"));
+        $tree->getLastNode()->addNode(new NavigationNode("FTP library", null, "https://github.com/webeweb/ftp-library"));
         $tree->getLastNode()->addNode(new NavigationItem("fPDF library", null, "https://github.com/webeweb/fpdf-library"));
-        $tree->getLastNode()->addNode(new NavigationItem("SkiData library", null, "https://github.com/webeweb/skidata-library"));
-        $tree->getLastNode()->addNode(new NavigationItem("sMsmode library", null, "https://github.com/webeweb/smsmode-library"));
+        $tree->getLastNode()->addNode(new NavigationNode("SkiData library", null, "https://github.com/webeweb/skidata-library"));
+        $tree->getLastNode()->addNode(new NavigationNode("sMsmode library", null, "https://github.com/webeweb/smsmode-library"));
 
         // Return the tree.
         return $tree;
