@@ -28,7 +28,7 @@ class NavigationNode extends AbstractNavigationNode {
      * @param string $matcher The matcher.
      */
     public function __construct($name, $icon = null, $route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
-        parent::__construct($name, $icon, $route);
+        parent::__construct($name, $icon, $route, $matcher);
     }
 
 }
