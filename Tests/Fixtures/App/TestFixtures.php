@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\App;
 
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
@@ -49,7 +50,7 @@ final class TestFixtures {
         // Initialize the tree.
         $tree = new NavigationTree("tree");
 
-        $tree->addNode(new NavigationNode("GitHub"));
+        $tree->addNode(new NavigationNode("GitHub", null, NavigationInterface::NAVIGATION_HREF_DEFAULT));
 
         $tree->getLastNode()->addNode(new NavigationNode("AdminBSB Material Design bundle", null, "https://github.com/webeweb/adminbsb-material-design-bundle"));
         $tree->getLastNode()->addNode(new NavigationNode("Bootstrap bundle", null, "https://github.com/webeweb/bootstrap-bundle"));
