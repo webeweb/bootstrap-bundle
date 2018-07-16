@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\BootstrapBundle\Helper\NavigationTreeHelper;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
@@ -144,9 +143,6 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
 
         // Handle each breadcrumb node.
         for ($i = 0; $i < $count; ++$i) {
-            if (false === ($nodes[$i] instanceOf NavigationNode)) {
-                continue;
-            }
             $innerHTML[] = $this->bootstrapBreadcrumb($nodes[$i], $count === $i + 1);
         }
 
