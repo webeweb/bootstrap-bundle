@@ -23,6 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\UserInputCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\VariableCodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
@@ -89,6 +90,7 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         // Component
         $this->assertInstanceOf(AlertComponentTwigExtension::class, $this->containerBuilder->get(AlertComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(BadgeComponentTwigExtension::class, $this->containerBuilder->get(BadgeComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(BreadcrumbComponentTwigExtension::class, $this->containerBuilder->get(BreadcrumbComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ButtonComponentTwigExtension::class, $this->containerBuilder->get(ButtonComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $this->containerBuilder->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(LabelComponentTwigExtension::class, $this->containerBuilder->get(LabelComponentTwigExtension::SERVICE_NAME));
