@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Node\Action;
 
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\Node\Action\BreadcrumbNodeEditAction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
@@ -34,6 +35,7 @@ final class BreadcrumbNodeEditActionTest extends AbstractBootstrapFrameworkTestC
 
         $this->assertEquals("navigation.node.action.edit", $obj->getId());
         $this->assertEquals("g:pencil", $obj->getIcon());
+        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getRoute());
     }
 
