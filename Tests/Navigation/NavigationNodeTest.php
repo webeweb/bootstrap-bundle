@@ -37,9 +37,9 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertFalse($obj->getActive());
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
+        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertNull($obj->getRoute());
         $this->assertNull($obj->getTarget());
-        $this->assertEquals(NavigationInterface::NAVIGATION_TYPE_URL, $obj->getType());
         $this->assertTrue($obj->getVisible());
     }
 
@@ -102,6 +102,19 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
     }
 
     /**
+     * Tests the setMatcher() method.
+     *
+     * @return void
+     */
+    public function testSetMatcher() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setMatcher(NavigationInterface::NAVIGATION_MATCHER_ROUTER);
+        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_ROUTER, $obj->getMatcher());
+    }
+
+    /**
      * Tests the setRoute() method.
      *
      * @return void
@@ -125,19 +138,6 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
 
         $obj->setTarget("_blank");
         $this->assertEquals("_blank", $obj->getTarget());
-    }
-
-    /**
-     * Tests the setType() method.
-     *
-     * @return void
-     */
-    public function testSetType() {
-
-        $obj = new NavigationNode("id");
-
-        $obj->setType(NavigationInterface::NAVIGATION_TYPE_ROUTER);
-        $this->assertEquals(NavigationInterface::NAVIGATION_TYPE_ROUTER, $obj->getType());
     }
 
 }

@@ -44,6 +44,13 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     private $icon;
 
     /**
+     * Matcher.
+     *
+     * @var string
+     */
+    private $matcher;
+
+    /**
      * Route.
      *
      * @var string
@@ -58,13 +65,6 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     private $target;
 
     /**
-     * Type.
-     *
-     * @var string
-     */
-    private $type;
-
-    /**
      * Visible ?
      *
      * @var boolean
@@ -77,16 +77,16 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param string $name The name.
      * @param string $icon The icon.
      * @param string $route The route.
-     * @param string $type The type.
+     * @param string $matcher The matcher.
      */
-    protected function __construct($name, $icon = null, $route = self::NAVIGATION_HREF_DEFAULT, $type = self::NAVIGATION_TYPE_URL) {
+    protected function __construct($name, $icon = null, $route = self::NAVIGATION_HREF_DEFAULT, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct($name);
         $this->setActive(false);
         $this->setEnable(false);
         $this->setIcon($icon);
+        $this->setMatcher($matcher);
         $this->setRoute($route);
         $this->setTarget(null);
-        $this->setType($type);
         $this->setVisible(true);
     }
 
@@ -118,6 +118,15 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     }
 
     /**
+     * Get the matcher.
+     *
+     * @return string Returns the matcher.
+     */
+    public function getMatcher() {
+        return $this->matcher;
+    }
+
+    /**
      * Get the route.
      *
      * @return string Returns the route.
@@ -133,15 +142,6 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      */
     public function getTarget() {
         return $this->target;
-    }
-
-    /**
-     * Get the type.
-     *
-     * @return string Returns the type.
-     */
-    public function getType() {
-        return $this->type;
     }
 
     /**
@@ -208,6 +208,17 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     }
 
     /**
+     * Set the mather.
+     *
+     * @param string $matcher The matcher.
+     * @return NavigationNode Returns the navigation node.
+     */
+    public function setMatcher($matcher) {
+        $this->matcher = $matcher;
+        return $this;
+    }
+
+    /**
      * Set the route.
      *
      * @param string $route The route.
@@ -226,17 +237,6 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      */
     public function setTarget($target) {
         $this->target = $target;
-        return $this;
-    }
-
-    /**
-     * Set the type.
-     *
-     * @param string $type The type.
-     * @return NavigationNode Returns the navigation node.
-     */
-    public function setType($type) {
-        $this->type = $type;
         return $this;
     }
 

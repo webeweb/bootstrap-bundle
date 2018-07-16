@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
@@ -35,6 +36,7 @@ final class BreadcrumbNodeTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertFalse($obj->getActive());
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
+        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertNull($obj->getRoute());
         $this->assertFalse($obj->getVisible());
     }
