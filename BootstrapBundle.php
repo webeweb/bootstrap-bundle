@@ -63,4 +63,20 @@ class BootstrapBundle extends Bundle {
      */
     const BOOTSTRAP_WARNING = "warning";
 
+    /**
+     * Get the Bootstrap constants.
+     *
+     * @return array Returns the Bootstrap constants.
+     */
+    public static function getBootstrapConstants() {
+        return [
+            self::BOOTSTRAP_DANGER,
+            self::BOOTSTRAP_DEFAULT,
+            self::BOOTSTRAP_INFO,
+            self::BOOTSTRAP_PRIMARY,
+            self::BOOTSTRAP_SUCCESS,
+            self::BOOTSTRAP_WARNING,
+        ];
+    }
+
 }

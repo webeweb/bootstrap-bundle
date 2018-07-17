@@ -24,11 +24,11 @@ use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 final class BootstrapBundleTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
-     * Tests __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $this->assertEquals("danger", BootstrapBundle::BOOTSTRAP_DANGER);
         $this->assertEquals("default", BootstrapBundle::BOOTSTRAP_DEFAULT);
@@ -36,6 +36,25 @@ final class BootstrapBundleTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertEquals("primary", BootstrapBundle::BOOTSTRAP_PRIMARY);
         $this->assertEquals("success", BootstrapBundle::BOOTSTRAP_SUCCESS);
         $this->assertEquals("warning", BootstrapBundle::BOOTSTRAP_WARNING);
+    }
+
+    /**
+     * Tests the getBootstrapConstants() method.
+     *
+     * @return void
+     * @depends testConstruct
+     */
+    public function testGetBootstrapConstants() {
+
+        $res = [
+            BootstrapBundle::BOOTSTRAP_DANGER,
+            BootstrapBundle::BOOTSTRAP_DEFAULT,
+            BootstrapBundle::BOOTSTRAP_INFO,
+            BootstrapBundle::BOOTSTRAP_PRIMARY,
+            BootstrapBundle::BOOTSTRAP_SUCCESS,
+            BootstrapBundle::BOOTSTRAP_WARNING,
+        ];
+        $this->assertEquals($res, BootstrapBundle::getBootstrapConstants());
     }
 
 }
