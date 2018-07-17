@@ -216,6 +216,49 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     }
 
     /**
+     * Displays a Bootstrap dropdown "Divider".
+     *
+     * @return string Returns the Bootstrap dropdown "Divider".
+     */
+    protected function bootstrapDropdownDivider() {
+
+        // Initialize the template.
+        $template = "<li %attributes%></li>";
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["class"] = "divider";
+        $attributes["role"]  = "separator";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+    }
+
+    /**
+     * Displays a Bootstrap dropdown "Header".
+     *
+     * @param string $content The content.
+     * @return string Returns the Bootstrap dropdown "Header".
+     */
+    protected function bootstrapDropdownHeader($content) {
+
+        // Initialize the template.
+        $template = "<li %attributes%>%innerHTML%</li>";
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["class"] = "dropdown-header";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+    }
+
+    /**
      * Displays a Bootstrap glyphicon.
      *
      * @param string $name The glyphicon name.
