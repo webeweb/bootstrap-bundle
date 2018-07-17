@@ -148,7 +148,7 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         $attributes["style"]          = $style;
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("i", null, $attributes); //StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return self::bootstrapHTMLElement("i", null, $attributes);
     }
 
 }

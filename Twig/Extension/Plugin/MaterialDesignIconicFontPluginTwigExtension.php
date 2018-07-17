@@ -80,14 +80,11 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
      */
     public function materialDesignIconicFontListFilter($items) {
 
-        // Initialize the template.
-        $template = "<ul class=\"zmdi-hc-ul\">%innerHTML%</ul>";
-
         // Initialize the parameters.
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+        return self::bootstrapHTMLElement("ul", $innerHTML, ["class" => "zmdi-hc-ul"]);
     }
 
     /**
@@ -99,15 +96,12 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
      */
     public function materialDesignIconicFontListIconFilter($icon, $content) {
 
-        // Initialize the template.
-        $template = "<li>%glyphicon%%innerHTML%</li>";
-
         // Initialize the parameters.
         $glyphicon = null !== $icon ? StringUtility::replace($icon, ["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"]) : "";
         $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
+        return self::bootstrapHTMLElement("li", $glyphicon . $innerHTML);
     }
 
     /**

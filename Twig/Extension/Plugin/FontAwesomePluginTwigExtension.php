@@ -15,7 +15,6 @@ use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
-use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Font Awesome plugin Twig extension.
@@ -57,14 +56,11 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension impleme
      */
     public function fontAwesomeListFilter($items) {
 
-        // Initialize the template.
-        $template = "<ul class=\"fa-ul\">%innerHTML%</ul>";
-
         // Initialize the parameters.
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%innerHTML%"], [$innerHTML]);
+        return self::bootstrapHTMLElement("ul", $innerHTML, ["class" => "fa-ul"]);
     }
 
     /**
@@ -76,15 +72,12 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension impleme
      */
     public function fontAwesomeListIconFilter($icon, $content) {
 
-        // Initialize the template.
-        $template = "<li><span class=\"fa-li\">%glyphicon%</span>%innerHTML%</li>";
-
         // Initialize the parameters.
-        $glyphicon = null !== $icon ? $icon : "";
+        $glyphicon = self::bootstrapHTMLElement("span", $icon, ["class" => "fa-li"]);
         $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%glyphicon%", "%innerHTML%"], [$glyphicon, $innerHTML]);
+        return self::bootstrapHTMLElement("li", $glyphicon . $innerHTML);
     }
 
     /**
