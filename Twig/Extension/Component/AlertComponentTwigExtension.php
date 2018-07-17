@@ -15,7 +15,6 @@ use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
-use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
  * Alert component Twig extension.
@@ -67,9 +66,6 @@ class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
      */
     public function bootstrapAlertLinkFunction(array $args = []) {
 
-        // Initialize the template.
-        $template = "<a %attributes%>%innerHTML%</a>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -79,7 +75,7 @@ class AlertComponentTwigExtension extends AbstractComponentTwigExtension {
         $innerHTML = ArrayUtility::get($args, "content");
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("a", $innerHTML, $attributes);
     }
 
     /**
