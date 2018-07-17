@@ -79,14 +79,16 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
     protected function jQueryInputMask($selector, $mask, $scriptTag, array $options) {
 
         // Initialize the template.
-        $template = ["$('%selector%').inputmask(\"%mask%\",%arguments%);"];
-        if (true === $scriptTag) {
-            array_unshift($template, "<script type=\"text/javascript\">");
-            array_push($template, "</script>");
-        }
+        $template = "$('%selector%').inputmask(\"%mask%\",%arguments%);";
 
-        // Return the HTML.
-        return StringUtility::replace(implode("\n", $template), ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
+        // Initialize the parameters.
+        $innerHTML = StringUtility::replace($template, ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
+
+        // Return the HTML
+        if (true === $scriptTag) {
+            return self::bootstrapHTMLElement("script", "\n" . $innerHTML . "\n", ["type" => "text/javascript"]);
+        }
+        return $innerHTML;
     }
 
     /**
