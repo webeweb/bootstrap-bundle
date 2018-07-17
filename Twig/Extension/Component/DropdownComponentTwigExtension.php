@@ -49,10 +49,9 @@ class DropdownComponentTwigExtension extends AbstractComponentTwigExtension {
     /**
      * Displays a Bootstrap dropdown "Divider".
      *
-     * @param array $args The arguments.
      * @return string Returns the Bootstrap dropdown "Divider".
      */
-    public function bootstrapDropdownDividerFunction(array $args = []) {
+    public function bootstrapDropdownDividerFunction() {
         return $this->bootstrapDropdownDivider();
     }
 
