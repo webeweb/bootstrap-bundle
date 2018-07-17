@@ -51,9 +51,6 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         $pulls    = ["left", "right"];
         $animates = ["spin", "pulse"];
 
-        // Initialize the template.
-        $template = "<i %attributes%></i>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -64,11 +61,10 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         $attributes["class"][] = true === $bordered ? "fa-border" : null;
         $attributes["class"][] = true === in_array($pull, $pulls) ? "fa-pull-" . $pull : null;
         $attributes["class"][] = true === in_array($anime, $animates) ? "fa-" . $anime : null;
-
-        $attributes["style"] = $style;
+        $attributes["style"]   = $style;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return self::bootstrapHTMLElement("i", null, $attributes);
     }
 
     /**
@@ -117,9 +113,6 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         $rotates = ["90", "180", "270"];
         $flips   = ["horizontal", "vertical"];
 
-        // Initialize the template.
-        $template = "<i %attributes%></i>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -132,11 +125,10 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
         $attributes["class"][] = true === in_array($spin, $spins) ? "zmdi-hc-" . $spin : null;
         $attributes["class"][] = true === in_array($rotate, $rotates) ? "zmdi-hc-rotate-" . $rotate : null;
         $attributes["class"][] = true === in_array($flip, $flips) ? "zmdi-hc-flip-" . $flip : null;
-
-        $attributes["style"] = $style;
+        $attributes["style"]   = $style;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return self::bootstrapHTMLElement("i", null, $attributes);
     }
 
     /**
@@ -148,19 +140,15 @@ abstract class AbstractPluginTwigExtension extends AbstractBootstrapTwigExtensio
      */
     protected function meteoconsIcon($name, $style) {
 
-        // Initialize the template.
-        $template = "<i %attributes%></i>";
-
         // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"]          = "meteocons";
         $attributes["data-meteocons"] = $name;
-
-        $attributes["style"] = $style;
+        $attributes["style"]          = $style;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return self::bootstrapHTMLElement("i", null, $attributes); //StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
     }
 
 }
