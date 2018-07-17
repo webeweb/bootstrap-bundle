@@ -60,10 +60,8 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
      * @return string Returns the label with applied color.
      */
     private function applyColor($label, $content, $color) {
-
         $searches = ">" . $content;
         $replaces = " style=\"background-color:" . $color . ";\"" . $searches;
-
         return StringUtility::replace($label, [$searches], [$replaces]);
     }
 
