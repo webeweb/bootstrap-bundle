@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Helper\NavigationTreeHelper;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
@@ -210,6 +211,40 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
 
         // Initialize the parameters.
         $innerHTML = implode("\n", $buttons);
+
+        // Return the HTML.
+        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+    }
+
+    /**
+     * Displays a Bootstrap dropdown "Button".
+     *
+     * @param string $content The content.
+     * @param boolean $expanded Expanded ?
+     * @param string $class The class.
+     * @return string Returns the Bootstrap dropdown "Button".
+     */
+    protected function bootstrapDropdownButton($content, $expanded, $class) {
+
+        // Initailize the values.
+        $classes = BootstrapBundle::getBootstrapConstants();
+
+        // Initialize the template.
+        $template = "<button %attributes%>%innerHTML%<span class=\"caret\"></span></button>";
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["class"][]         = "btn";
+        $attributes["class"][]         = true === in_array($class, $classes) ? "btn-" . $class : "btn-default";
+        $attributes["class"][]         = "dropdown-toggle";
+        $attributes["type"][]          = "button";
+        $attributes["data-toggle"][]   = "dropdown";
+        $attributes["aria-haspopup"][] = "true";
+        $attributes["aria-expanded"][] = StringUtility::parseBoolean($expanded);
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
