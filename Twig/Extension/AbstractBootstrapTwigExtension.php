@@ -46,24 +46,29 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
     }
 
     /**
-     * Displays a Bootstrap DOM object.
+     * Displays a Bootstrap HTML element.
      *
-     * @param string $object The object.
+     * @param string $element The object.
      * @param string $content The content.
-     * @param string $attrs The attributes.
-     * @return string Returns the Bootstrap DOM object.
+     * @param array $attrs The attributes.
+     * @return string Returns the Bootstrap HTML element.
      */
-    protected function bootstrapDOMObject($object, $content, $attrs) {
+    protected function bootstrapHTMLElement($element, $content, array $attrs = []) {
 
         // Initialize the templates.
-        $template = "<%object%%attributes%>%innerHTML%</%object%>";
+        $template = "<%element%%attributes%>%innerHTML%</%element%>";
+
+        // Initialize the attributes.
+        $attributes = trim(StringUtility::parseArray($attrs));
+        if (0 < strlen($attributes)) {
+            $attributes = " " . $attributes;
+        }
 
         // Initialize the parameters.
-        $attributes = null !== $attrs ? " " . trim($attrs) : "";
-        $innerHTML  = null !== $content ? trim($content) : "";
+        $innerHTML = null !== $content ? trim($content) : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%object%", "%attributes%", "%innerHTML%"], [$object, $attributes, $innerHTML]);
+        return StringUtility::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [$element, $attributes, $innerHTML]);
     }
 
 }
