@@ -72,16 +72,20 @@ final class DropdownComponentTwigExtensionTest extends AbstractBootstrapFramewor
         $res1 = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">content<span class="caret"></span></button>';
         $this->assertEquals($res1, $obj->bootstrapDropdownButtonFunction($arg1));
 
-        $arg2 = ["expanded" => false];
-        $res2 = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>';
+        $arg2 = ["id" => "id"];
+        $res2 = '<button class="btn btn-default dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
         $this->assertEquals($res2, $obj->bootstrapDropdownButtonFunction($arg2));
 
-        $arg3 = ["class" => "primary"];
-        $res3 = '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+        $arg3 = ["expanded" => false];
+        $res3 = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>';
         $this->assertEquals($res3, $obj->bootstrapDropdownButtonFunction($arg3));
 
-        $arg9 = ["content" => "content", "expanded" => false, "class" => "danger"];
-        $res9 = '<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">content<span class="caret"></span></button>';
+        $arg4 = ["class" => "primary"];
+        $res4 = '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+        $this->assertEquals($res4, $obj->bootstrapDropdownButtonFunction($arg4));
+
+        $arg9 = ["content" => "content", "id" => "id", "expanded" => false, "class" => "danger"];
+        $res9 = '<button class="btn btn-danger dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">content<span class="caret"></span></button>';
         $this->assertEquals($res9, $obj->bootstrapDropdownButtonFunction($arg9));
     }
 

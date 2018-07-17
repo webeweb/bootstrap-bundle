@@ -220,11 +220,12 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * Displays a Bootstrap dropdown "Button".
      *
      * @param string $content The content.
+     * @param string $id The id.
      * @param boolean $expanded Expanded ?
      * @param string $class The class.
      * @return string Returns the Bootstrap dropdown "Button".
      */
-    protected function bootstrapDropdownButton($content, $expanded, $class) {
+    protected function bootstrapDropdownButton($content, $id, $expanded, $class) {
 
         // Initailize the values.
         $classes = BootstrapBundle::getBootstrapConstants();
@@ -239,6 +240,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["class"][]         = true === in_array($class, $classes) ? "btn-" . $class : "btn-default";
         $attributes["class"][]         = "dropdown-toggle";
         $attributes["type"][]          = "button";
+        $attributes["id"][]            = null !== $id ? $id : "";
         $attributes["data-toggle"][]   = "dropdown";
         $attributes["aria-haspopup"][] = "true";
         $attributes["aria-expanded"][] = StringUtility::parseBoolean($expanded);

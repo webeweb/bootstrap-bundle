@@ -43,7 +43,7 @@ class DropdownComponentTwigExtension extends AbstractComponentTwigExtension {
      * @return string Returns the Bootstrap dropdown "Button".
      */
     public function bootstrapDropdownButtonFunction(array $args = []) {
-        return $this->bootstrapDropdownButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "expanded", true), ArrayUtility::get($args, "class", "default"));
+        return $this->bootstrapDropdownButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "expanded", true), ArrayUtility::get($args, "class", "default"));
     }
 
     /**
