@@ -65,7 +65,7 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
         }
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? trim($content) : "";
+        $innerHTML = null !== $content ? trim($content, " ") : "";
 
         // Return the HTML.
         return StringUtility::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [$element, $attributes, $innerHTML]);
