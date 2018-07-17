@@ -49,11 +49,11 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
      * Displays a Bootstrap DOM object.
      *
      * @param string $object The object.
-     * @param string $attrs The attributes.
      * @param string $content The content.
+     * @param string $attrs The attributes.
      * @return string Returns the Bootstrap DOM object.
      */
-    protected function bootstrapDOMObject($object, $attrs, $content) {
+    protected function bootstrapDOMObject($object, $content, $attrs) {
 
         // Initialize the templates.
         $template = "<%object%%attributes%>%innerHTML%</%object%>";

@@ -36,7 +36,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap deleted text.
      */
     protected function bootstrapBasicBlock($content) {
-        return $this->bootstrapDOMObject("pre", null, $content);
+        return $this->bootstrapDOMObject("pre", $content, null);
     }
 
     /**
@@ -46,7 +46,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap inline.
      */
     protected function bootstrapInline($content) {
-        return $this->bootstrapDOMObject("code", null, $content);
+        return $this->bootstrapDOMObject("code", $content, null);
     }
 
     /**
@@ -56,7 +56,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap user input.
      */
     protected function bootstrapSampleOutput($content) {
-        return $this->bootstrapDOMObject("samp", null, $content);
+        return $this->bootstrapDOMObject("samp", $content, null);
     }
 
     /**
@@ -66,7 +66,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap user input.
      */
     protected function bootstrapUserInput($content) {
-        return $this->bootstrapDOMObject("kbd", null, $content);
+        return $this->bootstrapDOMObject("kbd", $content, null);
     }
 
     /**
@@ -76,7 +76,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap variable.
      */
     protected function bootstrapVariable($content) {
-        return $this->bootstrapDOMObject("var", null, $content);
+        return $this->bootstrapDOMObject("var", $content, null);
     }
 
 }
