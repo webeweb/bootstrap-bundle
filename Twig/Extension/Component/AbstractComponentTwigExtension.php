@@ -57,8 +57,8 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     protected function bootstrapAlert($content, $dismissible, $class) {
 
         // Initialize the templates.
-        $template = "<div %attributes%>%innerHTML%</div>";
-        $button   = "<button class=\"close\" type=\"button\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>";
+        $span   = self::bootstrapHTMLElement("span", "&times;", ["aria-hidden" => "true"]);
+        $button = self::bootstrapHTMLElement("button", $span, ["class" => "close", "type" => "button", "data-dismiss" => "alert", "aria-label" => "Close"]);
 
         // Initialize the attributes.
         $attributes = [];
@@ -71,7 +71,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $innerHTML = (true === $dismissible ? $button : "") . (null !== $content ? $content : "");
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("div", $innerHTML, $attributes);
     }
 
     /**
@@ -82,19 +82,13 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     protected function bootstrapBadge($content) {
 
-        // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
-
         // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = ["badge"];
 
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("span", $content, $attributes);
     }
 
     /**
@@ -106,17 +100,15 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     private function bootstrapBreadcrumb(NavigationNode $node, $last) {
 
-        // Initialize the template.
-        $template = "<li%attributes%>%innerHTML%</li>";
+        // Initialize the attributes.
+        $attributes = true === $node->getActive() && true === $last ? ["class" => "active"] : [];
 
         // Initialize the parameters.
-        $content = $this->getTranslator()->trans($node->getId());
-
-        $attributes = true === $node->getActive() && true === $last ? " class=\"active\"" : "";
-        $innerHTML  = true === $last ? $content : $this->bootstrapDOMObject("a", "href=\"" . $node->getRoute() . "\"", $content);
+        $content   = $this->getTranslator()->trans($node->getId());
+        $innerHTML = true === $last ? $content : self::bootstrapHTMLElement("a", $content, ["href" => $node->getRoute()]);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [$attributes, $innerHTML]);
+        return self::bootstrapHTMLElement("li", $innerHTML, $attributes);
     }
 
     /**
@@ -126,9 +118,6 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      * @return string Returns the Bootstrap breadcrumbs.
      */
     protected function bootstrapBreadcrumbs(NavigationTree $tree) {
-
-        // Initialize the template.
-        $template = "<ol %attributes%>\n%innerHTML%\n</ol>";
 
         // Initialize the attributes.
         $attributes = [];
@@ -148,7 +137,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         }
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), implode("\n", $innerHTML)]);
+        return self::bootstrapHTMLElement("ol", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
 
     /**
@@ -166,9 +155,6 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     protected function bootstrapButton($content, $title, $size, $block, $active, $disable, $class, $icon) {
 
-        // Initialize the template.
-        $template = "<button %attributes%>%glyphicon%%innerHTML%</button>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -184,10 +170,10 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
 
         // Handle the parameters.
         $glyphicon = null !== $icon ? BootstrapRendererTwigExtension::renderIcon($icon) : "";
-        $innerHTML = null !== $content ? ("" !== $glyphicon ? " " . $content : $content) : "";
+        $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%glyphicon%", "%innerHTML%"], [StringUtility::parseArray($attributes), $glyphicon, $innerHTML]);
+        return self::bootstrapHTMLElement("button", implode(" ", [$glyphicon, $innerHTML]), $attributes);
     }
 
     /**
@@ -200,9 +186,6 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     protected function bootstrapButtonGroup($class, $role, array $buttons) {
 
-        // Initialize the template.
-        $template = "<div %attributes%>\n%innerHTML%\n</div>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -210,10 +193,10 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["role"]  = $role;
 
         // Initialize the parameters.
-        $innerHTML = implode("\n", $buttons);
+        $innerHTML = "\n" . implode("\n", $buttons) . "\n";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("div", $innerHTML, $attributes);
     }
 
     /**
@@ -230,9 +213,6 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         // Initailize the values.
         $classes = BootstrapBundle::getBootstrapConstants();
 
-        // Initialize the template.
-        $template = "<button %attributes%>%innerHTML%<span class=\"caret\"></span></button>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -246,10 +226,10 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["aria-expanded"][] = StringUtility::parseBoolean($expanded);
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = (null !== $content ? $content : "") . "<span class=\"caret\"></span>";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("button", $innerHTML, $attributes);
     }
 
     /**
@@ -259,9 +239,6 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     protected function bootstrapDropdownDivider() {
 
-        // Initialize the template.
-        $template = "<li %attributes%></li>";
-
         // Initialize the attributes.
         $attributes = [];
 
@@ -269,7 +246,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["role"]  = "separator";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return self::bootstrapHTMLElement("li", null, $attributes);
     }
 
     /**
@@ -280,19 +257,13 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     protected function bootstrapDropdownHeader($content) {
 
-        // Initialize the template.
-        $template = "<li %attributes%>%innerHTML%</li>";
-
         // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = "dropdown-header";
 
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("li", $content, $attributes);
     }
 
     /**
@@ -303,19 +274,16 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     protected function bootstrapGlyphicon($name, $style) {
 
-        // Initialize the template.
-        $template = "<span %attributes%></span>";
-
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"]       = ["glyphicon"];
+        $attributes["class"][]     = "glyphicon";
         $attributes["class"][]     = null !== $name ? "glyphicon-" . $name : null;
         $attributes["aria-hidden"] = "true";
         $attributes["style"]       = $style;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return self::bootstrapHTMLElement("span", null, $attributes);
     }
 
     /**
@@ -327,19 +295,13 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
      */
     protected function bootstrapLabel($content, $class) {
 
-        // Initialize the template.
-        $template = "<span %attributes%>%innerHTML%</span>";
-
         // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = ["label", $class];
 
-        // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : "";
-
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("span", $content, $attributes);
     }
 
     /**
@@ -357,8 +319,7 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
     protected function bootstrapProgressBar($content, $value, $min, $max, $striped, $animated, $class = null) {
 
         // Initialize the template.
-        $template = "<div class=\"progress\"><div %attributes%>%innerHTML%</div></div>";
-        $span     = "<span class=\"sr-only\">%value%%</span>";
+        $span = self::bootstrapHTMLElement("span", $value . "%", ["class" => "sr-only"]);
 
         // Initialize the attributes.
         $attributes = [];
@@ -373,10 +334,13 @@ abstract class AbstractComponentTwigExtension extends AbstractBootstrapTwigExten
         $attributes["aria-valuemax"] = $max . "%";
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? $content : StringUtility::replace($span, ["%value%"], [$value]);
+        $innerHTML = null !== $content ? $content : $span;
+
+        // Initialize the template.
+        $div = self::bootstrapHTMLElement("div", $innerHTML, $attributes);
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%", "%innerHTML%"], [StringUtility::parseArray($attributes), $innerHTML]);
+        return self::bootstrapHTMLElement("div", $div, ["class" => "progress"]);
     }
 
     /**
