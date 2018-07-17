@@ -77,6 +77,11 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bootstrapbundle.twig.extension.component.dropdown:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownComponentTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bootstrapbundle.twig.extension.component.glyphicon:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension
         tags:
