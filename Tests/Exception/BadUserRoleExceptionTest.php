@@ -29,7 +29,7 @@ final class BadUserRoleExceptionTest extends AbstractBootstrapFrameworkTestCase 
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $user     = new User("anonymous", "empty");
         $roles    = ["ROLE_ADMIN", "ROLE_USER"];

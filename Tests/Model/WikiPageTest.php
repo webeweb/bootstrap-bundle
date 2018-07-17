@@ -28,7 +28,7 @@ final class WikiPageTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new WikiPage("category", "package", "page", "title");
 

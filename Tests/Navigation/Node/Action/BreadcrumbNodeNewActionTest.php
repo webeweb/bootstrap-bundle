@@ -29,7 +29,7 @@ final class BreadcrumbNodeNewActionTest extends AbstractBootstrapFrameworkTestCa
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new BreadcrumbNodeNewAction("route");
 

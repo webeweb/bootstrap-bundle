@@ -29,7 +29,7 @@ final class BreadcrumbNodeNewUserGroupActionTest extends AbstractBootstrapFramew
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new BreadcrumbNodeNewUserGroupAction("route");
 

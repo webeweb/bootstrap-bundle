@@ -29,7 +29,7 @@ final class NavigationNodeUsersGroupsTest extends AbstractBootstrapFrameworkTest
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new NavigationNodeUsersGroups("route");
 

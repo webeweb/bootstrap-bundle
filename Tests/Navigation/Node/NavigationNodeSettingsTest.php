@@ -29,7 +29,7 @@ final class NavigationNodeSettingsTest extends AbstractBootstrapFrameworkTestCas
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new NavigationNodeSettings("route");
 

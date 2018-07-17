@@ -28,7 +28,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new EmailLayout();
 
@@ -47,7 +47,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setAccountSettingsURL() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetAccountSeetings() {
 
@@ -61,7 +61,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setBestRegards() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetBestRegards() {
 
@@ -75,7 +75,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setCompanyLogo() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetCompanyLogo() {
 
@@ -89,7 +89,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setCompanyName() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetCompanyName() {
 
@@ -103,7 +103,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setCompanyURL() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetCompanyURL() {
 
@@ -117,7 +117,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setSupportEmail() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetSupportEmail() {
 
@@ -131,7 +131,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setSupportName() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetSupportName() {
 
@@ -145,7 +145,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setSupportPhone() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetSupportPhone() {
 
@@ -159,7 +159,7 @@ final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setUnsubscribeURL() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetUnsubscribeURL() {
 

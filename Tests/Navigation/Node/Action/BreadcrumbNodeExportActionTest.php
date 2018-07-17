@@ -29,7 +29,7 @@ final class BreadcrumbNodeExportActionTest extends AbstractBootstrapFrameworkTes
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new BreadcrumbNodeExportAction("route");
 

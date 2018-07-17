@@ -29,7 +29,7 @@ final class NavigationNodeNewActionTest extends AbstractBootstrapFrameworkTestCa
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new NavigationNodeNewAction("route");
 

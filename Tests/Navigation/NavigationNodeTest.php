@@ -30,7 +30,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new NavigationNode("id");
 
@@ -47,7 +47,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the isDisplayable() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testIsDisplayable() {
 
@@ -67,7 +67,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setActive() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetActive() {
 
@@ -81,7 +81,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setEnable() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetEnable() {
 
@@ -95,7 +95,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setIcon() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetIcon() {
 
@@ -109,7 +109,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setMatcher() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetMatcher() {
 
@@ -123,7 +123,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setRoute() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetRoute() {
 
@@ -137,7 +137,7 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setTarget() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetTarget() {
 

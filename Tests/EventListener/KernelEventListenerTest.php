@@ -49,7 +49,7 @@ final class KernelEventListenerTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
@@ -61,7 +61,7 @@ final class KernelEventListenerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the getUser() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testGetUser() {
 
@@ -78,7 +78,7 @@ final class KernelEventListenerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the onKernelRequest() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testOnKernelRequest() {
 

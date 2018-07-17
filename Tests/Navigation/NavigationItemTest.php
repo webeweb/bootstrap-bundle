@@ -30,7 +30,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new NavigationItem("id");
 
@@ -42,7 +42,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setHref() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetHref() {
 
@@ -56,7 +56,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setIcon() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetIcon() {
 
@@ -70,7 +70,7 @@ final class NavigationItemTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the toArray() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testToArray() {
 

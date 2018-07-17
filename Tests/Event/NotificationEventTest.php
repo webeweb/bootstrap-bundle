@@ -28,7 +28,7 @@ final class NotificationEventTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new NotificationEvent("name", "notification", "type");
 

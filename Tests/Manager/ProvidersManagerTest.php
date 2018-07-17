@@ -44,7 +44,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new ProvidersManager($this->twigEnvironment);
 
@@ -63,7 +63,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the register() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testRegister() {
 
@@ -116,7 +116,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setApplicationProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetApplicationProvider() {
 
@@ -133,7 +133,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setBreadcrumbsProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetBreadcrumbsProvider() {
 
@@ -150,7 +150,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setDropDownHookProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetDropDownHookProvider() {
 
@@ -167,7 +167,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setDropDownNotificationsProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetDropDownNotificationsProvider() {
 
@@ -184,7 +184,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setDropDownTasksProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetDropDownTasksProvider() {
 
@@ -201,7 +201,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setFooterProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetFooterProvider() {
 
@@ -218,7 +218,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setNavigationProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetNavigationProvider() {
 
@@ -235,7 +235,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setSearchProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetSearchProvider() {
 
@@ -252,7 +252,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      * Tests the setUserInfoProvider() method.
      *
      * @return void
-     * @depends testConstructor
+     * @depends testConstruct
      */
     public function testSetUserInfoProvider() {
 

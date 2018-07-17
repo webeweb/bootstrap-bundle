@@ -29,7 +29,7 @@ final class BreadcrumbNodeTest extends AbstractBootstrapFrameworkTestCase {
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new BreadcrumbNode("id");
 

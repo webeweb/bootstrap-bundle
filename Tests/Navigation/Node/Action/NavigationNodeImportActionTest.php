@@ -29,7 +29,7 @@ final class NavigationNodeImportActionTest extends AbstractBootstrapFrameworkTes
      *
      * @return void
      */
-    public function testConstructor() {
+    public function testConstruct() {
 
         $obj = new NavigationNodeImportAction("route");
 
