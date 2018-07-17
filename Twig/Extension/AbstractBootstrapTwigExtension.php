@@ -53,7 +53,7 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
      * @param array $attrs The attributes.
      * @return string Returns the Bootstrap HTML element.
      */
-    protected function bootstrapHTMLElement($element, $content, array $attrs = []) {
+    public static function bootstrapHTMLElement($element, $content, array $attrs = []) {
 
         // Initialize the templates.
         $template = "<%element%%attributes%>%innerHTML%</%element%>";

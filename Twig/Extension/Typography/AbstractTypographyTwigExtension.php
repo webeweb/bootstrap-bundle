@@ -36,7 +36,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap bold text.
      */
     protected function bootstrapBold($content) {
-        return $this->bootstrapHTMLElement("strong", $content);
+        return self::bootstrapHTMLElement("strong", $content);
     }
 
     /**
@@ -46,7 +46,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap deleted text.
      */
     protected function bootstrapDeleted($content) {
-        return $this->bootstrapHTMLElement("del", $content);
+        return self::bootstrapHTMLElement("del", $content);
     }
 
     /**
@@ -76,7 +76,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
         $innerHTML = (null !== $content ? $content : "") . $secondary;
 
         // Return the HTML.
-        return $this->bootstrapHTMLElement($element, $innerHTML, $attributes);
+        return self::bootstrapHTMLElement($element, $innerHTML, $attributes);
     }
 
     /**
@@ -86,7 +86,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap inserted text.
      */
     protected function bootstrapInserted($content) {
-        return $this->bootstrapHTMLElement("ins", $content);
+        return self::bootstrapHTMLElement("ins", $content);
     }
 
     /**
@@ -96,7 +96,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap italic text.
      */
     protected function bootstrapItalic($content) {
-        return $this->bootstrapHTMLElement("em", $content);
+        return self::bootstrapHTMLElement("em", $content);
     }
 
     /**
@@ -106,7 +106,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap marked text.
      */
     protected function bootstrapMarked($content) {
-        return $this->bootstrapHTMLElement("mark", $content);
+        return self::bootstrapHTMLElement("mark", $content);
     }
 
     /**
@@ -116,7 +116,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap strike through text.
      */
     protected function bootstrapStrikeThrough($content) {
-        return $this->bootstrapHTMLElement("s", $content);
+        return self::bootstrapHTMLElement("s", $content);
     }
 
     /**
@@ -126,7 +126,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap small text.
      */
     protected function bootstrapSmall($content) {
-        return $this->bootstrapHTMLElement("small", $content);
+        return self::bootstrapHTMLElement("small", $content);
     }
 
     /**
@@ -136,7 +136,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap underlined text.
      */
     protected function bootstrapUnderlined($content) {
-        return $this->bootstrapHTMLElement("u", $content);
+        return self::bootstrapHTMLElement("u", $content);
     }
 
 }
