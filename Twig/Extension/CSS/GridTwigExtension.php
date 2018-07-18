@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Grid;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
@@ -18,7 +18,8 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * Grid Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Grid
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
+ * @see https://getbootstrap.com/docs/3.3/css/#grid
  */
 class GridTwigExtension extends AbstractGridTwigExtension {
 
@@ -27,7 +28,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.grid.grid";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.css.grid";
 
     /**
      * Constructor.

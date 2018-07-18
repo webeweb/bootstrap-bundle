@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Grid;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * Abstract grid Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Grid
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @abstract
  */
 abstract class AbstractGridTwigExtension extends AbstractBootstrapTwigExtension {

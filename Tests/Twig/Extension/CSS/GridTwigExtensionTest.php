@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Grid;
+namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
 
 /**
  * Grid Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Grid
+ * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  * @final
  */
 final class GridTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
