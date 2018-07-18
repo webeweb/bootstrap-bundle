@@ -14,16 +14,16 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
 
 /**
- * Alert component Twig extension test.
+ * Alert Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class AlertComponentTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class AlertTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class AlertComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testGetFunctions() {
 
-        $obj = new AlertComponentTwigExtension();
+        $obj = new AlertTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -72,7 +72,7 @@ final class AlertComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapAlertDangerFunction() {
 
-        $obj = new AlertComponentTwigExtension();
+        $obj = new AlertTwigExtension();
 
         $arg0 = [];
         $res0 = '<div class="alert alert-danger" role="alert"></div>';
@@ -91,7 +91,7 @@ final class AlertComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapAlertInfoFunction() {
 
-        $obj = new AlertComponentTwigExtension();
+        $obj = new AlertTwigExtension();
 
         $arg = [];
         $res = '<div class="alert alert-info" role="alert"></div>';
@@ -106,7 +106,7 @@ final class AlertComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapAlertLinkFunction() {
 
-        $obj = new AlertComponentTwigExtension();
+        $obj = new AlertTwigExtension();
 
         $arg0 = [];
         $res0 = '<a href="javascript:void(0);"></a>';
@@ -133,7 +133,7 @@ final class AlertComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapAlertSuccessFunction() {
 
-        $obj = new AlertComponentTwigExtension();
+        $obj = new AlertTwigExtension();
 
         $arg = [];
         $res = '<div class="alert alert-success" role="alert"></div>';
@@ -148,7 +148,7 @@ final class AlertComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapAlertWarningFunction() {
 
-        $obj = new AlertComponentTwigExtension();
+        $obj = new AlertTwigExtension();
 
         $arg = [];
         $res = '<div class="alert alert-warning" role="alert"></div>';
