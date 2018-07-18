@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Image;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
@@ -18,7 +18,7 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
  * Abstract image Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Image
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @abstract
  */
 abstract class AbstractImageTwigExtension extends AbstractBootstrapTwigExtension {

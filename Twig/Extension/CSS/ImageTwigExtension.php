@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Image;
+namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use SplFileObject;
 use Symfony\Component\HttpKernel\Kernel;
@@ -18,19 +18,20 @@ use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Base64 image Twig extension.
+ * Image Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Image
+ * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
+ * @see https://getbootstrap.com/docs/3.3/css/#images
  */
-class Base64ImageTwigExtension extends AbstractImageTwigExtension {
+class ImageTwigExtension extends AbstractImageTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.image.base64";
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.css.image";
 
     /**
      * Constructor.
@@ -73,12 +74,12 @@ class Base64ImageTwigExtension extends AbstractImageTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap base 64 image.
+     * Displays a Bootstrap image "Base 64".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap base 64 image.
      */
-    public function bootstrapBase64ImageFunction(array $args = []) {
+    public function bootstrapImageBase64Function(array $args = []) {
 
         // Initialize the src.
         $src = $this->base64Encode(ArrayUtility::get($args, "src"));
@@ -94,7 +95,7 @@ class Base64ImageTwigExtension extends AbstractImageTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapBase64Image", [$this, "bootstrapBase64ImageFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
         ];
     }
 
