@@ -17,16 +17,16 @@ use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\App\TestFixtures;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
 
 /**
- * Breadcrumb component Twig extension test.
+ * Breadcrumb Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class BreadcrumbComponentTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class BreadcrumbTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Navigation tree
@@ -57,7 +57,7 @@ final class BreadcrumbComponentTwigExtensionTest extends AbstractBootstrapFramew
      */
     public function testGetFunctions() {
 
-        $obj = new BreadcrumbComponentTwigExtension($this->translator);
+        $obj = new BreadcrumbTwigExtension($this->translator);
 
         $res = $obj->getFunctions();
 
@@ -77,7 +77,7 @@ final class BreadcrumbComponentTwigExtensionTest extends AbstractBootstrapFramew
      */
     public function testBootstrapBreadcrumbsFunction() {
 
-        $obj = new BreadcrumbComponentTwigExtension($this->translator);
+        $obj = new BreadcrumbTwigExtension($this->translator);
 
         $res = <<< 'EOTXT'
 <ol class="breadcrumb">

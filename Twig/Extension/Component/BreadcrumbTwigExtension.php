@@ -18,12 +18,13 @@ use WBW\Bundle\BootstrapBundle\Helper\NavigationTreeHelper;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 
 /**
- * BreadcrumbComponentTwigExtension.
+ * Breadcrumb Twig Extension.
  *
- * @author Camille A. <camille@ingeneo.eu>
+ * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
+ * @see https://getbootstrap.com/docs/3.3/components/#breadcrumbs
  */
-class BreadcrumbComponentTwigExtension extends AbstractComponentTwigExtension {
+class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
 
     /**
      * Service name.
