@@ -32,7 +32,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap bold text.
      *
-     * @param string $content The bold text content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap bold text.
      */
     protected function bootstrapBold($content) {
@@ -42,7 +42,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap deleted text.
      *
-     * @param string $content The deleted text content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap deleted text.
      */
     protected function bootstrapDeleted($content) {
@@ -52,10 +52,10 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap heading.
      *
-     * @param integer $size The heading size.
-     * @param string $content The heading content.
-     * @param string $description The heading description.
-     * @param string $class The heading class.
+     * @param integer $size The size.
+     * @param string $content The content.
+     * @param string $description The description.
+     * @param string $class The class.
      * @return string Returns the Bootstrap heading.
      */
     protected function bootstrapHeading($size, $content, $description, $class) {
@@ -82,7 +82,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap inserted text.
      *
-     * @param string $content The inserted text content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap inserted text.
      */
     protected function bootstrapInserted($content) {
@@ -92,7 +92,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap italic text.
      *
-     * @param string $content The italic text content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap italic text.
      */
     protected function bootstrapItalic($content) {
@@ -102,7 +102,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap marked text.
      *
-     * @param string $content The marked text content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap marked text.
      */
     protected function bootstrapMarked($content) {
@@ -112,7 +112,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap strike through text.
      *
-     * @param string $content The strike through content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap strike through text.
      */
     protected function bootstrapStrikeThrough($content) {
@@ -122,7 +122,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap small text.
      *
-     * @param string $content The small text content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap small text.
      */
     protected function bootstrapSmall($content) {
@@ -132,7 +132,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap underlined text.
      *
-     * @param string $content The underlined text content.
+     * @param string $content The content.
      * @return string  Returns the Bootstrap underlined text.
      */
     protected function bootstrapUnderlined($content) {
