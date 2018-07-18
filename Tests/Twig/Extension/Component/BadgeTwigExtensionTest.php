@@ -14,16 +14,16 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension;
 
 /**
- * Badge component Twig extension test.
+ * Badge Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class BadgeComponentTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class BadgeTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class BadgeComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testGetFunctions() {
 
-        $obj = new BadgeComponentTwigExtension();
+        $obj = new BadgeTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -52,7 +52,7 @@ final class BadgeComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapBadgeFunction() {
 
-        $obj = new BadgeComponentTwigExtension();
+        $obj = new BadgeTwigExtension();
 
         $arg0 = [];
         $res0 = '<span class="badge"></span>';
