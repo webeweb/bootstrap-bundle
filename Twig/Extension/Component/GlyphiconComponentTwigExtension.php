@@ -16,12 +16,13 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Glyphicon component Twig extension.
+ * Glyphicon Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
+ * @see
  */
-class GlyphiconComponentTwigExtension extends AbstractComponentTwigExtension implements IconRendererTwigExtensionInterface {
+class GlyphiconComponentTwigExtension extends AbstractGlyphiconTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
