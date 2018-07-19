@@ -22,7 +22,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @see https://getbootstrap.com/docs/3.3/components/#labels
  */
-class LabelComponentTwigExtension extends AbstractLabelTwigExtension {
+class LabelTwigExtension extends AbstractLabelTwigExtension {
 
     /**
      * Service name.

@@ -14,16 +14,16 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 
 /**
- * Label component Twig extension test.
+ * Label Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class LabelTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testGetFunctions() {
 
-        $obj = new LabelComponentTwigExtension();
+        $obj = new LabelTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -77,7 +77,7 @@ final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapLabelDangerFunction() {
 
-        $obj = new LabelComponentTwigExtension();
+        $obj = new LabelTwigExtension();
 
         $arg0 = [];
         $res0 = '<span class="label label-danger"></span>';
@@ -96,7 +96,7 @@ final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapLabelDefaultFunction() {
 
-        $obj = new LabelComponentTwigExtension();
+        $obj = new LabelTwigExtension();
 
         $arg = [];
         $res = '<span class="label label-default"></span>';
@@ -111,7 +111,7 @@ final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapLabelInfoFunction() {
 
-        $obj = new LabelComponentTwigExtension();
+        $obj = new LabelTwigExtension();
 
         $arg = [];
         $res = '<span class="label label-info"></span>';
@@ -126,7 +126,7 @@ final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapLabelPrimaryFunction() {
 
-        $obj = new LabelComponentTwigExtension();
+        $obj = new LabelTwigExtension();
 
         $arg = [];
         $res = '<span class="label label-primary"></span>';
@@ -141,7 +141,7 @@ final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapLabelSuccessFunction() {
 
-        $obj = new LabelComponentTwigExtension();
+        $obj = new LabelTwigExtension();
 
         $arg = [];
         $res = '<span class="label label-success"></span>';
@@ -156,7 +156,7 @@ final class LabelComponentTwigExtensionTest extends AbstractBootstrapFrameworkTe
      */
     public function testBootstrapLabelWarningFunction() {
 
-        $obj = new LabelComponentTwigExtension();
+        $obj = new LabelTwigExtension();
 
         $arg = [];
         $res = '<span class="label label-warning"></span>';
