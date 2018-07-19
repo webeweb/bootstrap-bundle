@@ -20,9 +20,9 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
- * @see
+ * @see https://getbootstrap.com/docs/3.3/components/#glyphicons
  */
-class GlyphiconComponentTwigExtension extends AbstractGlyphiconTwigExtension implements IconRendererTwigExtensionInterface {
+class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.

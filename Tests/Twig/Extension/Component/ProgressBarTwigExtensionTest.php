@@ -14,16 +14,16 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension;
 
 /**
- * Progress bar component Twig extension test.
+ * Progress bar Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class ProgressBarComponentTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class ProgressBarTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class ProgressBarComponentTwigExtensionTest extends AbstractBootstrapFrame
      */
     public function testGetFunctions() {
 
-        $obj = new ProgressBarComponentTwigExtension();
+        $obj = new ProgressBarTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -72,7 +72,7 @@ final class ProgressBarComponentTwigExtensionTest extends AbstractBootstrapFrame
      */
     public function testBootstrapProgressBarBasicFunction() {
 
-        $obj = new ProgressBarComponentTwigExtension();
+        $obj = new ProgressBarTwigExtension();
 
         $arg0 = [];
         $res0 = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
@@ -115,7 +115,7 @@ final class ProgressBarComponentTwigExtensionTest extends AbstractBootstrapFrame
      */
     public function testBootstrapProgressBarDangerFunction() {
 
-        $obj = new ProgressBarComponentTwigExtension();
+        $obj = new ProgressBarTwigExtension();
 
         $arg = [];
         $res = '<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
@@ -130,7 +130,7 @@ final class ProgressBarComponentTwigExtensionTest extends AbstractBootstrapFrame
      */
     public function testBootstrapProgressBarInfoFunction() {
 
-        $obj = new ProgressBarComponentTwigExtension();
+        $obj = new ProgressBarTwigExtension();
 
         $arg = [];
         $res = '<div class="progress"><div class="progress-bar progress-bar-info" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
@@ -145,7 +145,7 @@ final class ProgressBarComponentTwigExtensionTest extends AbstractBootstrapFrame
      */
     public function testBootstrapProgressBarSuccessFunction() {
 
-        $obj = new ProgressBarComponentTwigExtension();
+        $obj = new ProgressBarTwigExtension();
 
         $arg = [];
         $res = '<div class="progress"><div class="progress-bar progress-bar-success" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
@@ -160,7 +160,7 @@ final class ProgressBarComponentTwigExtensionTest extends AbstractBootstrapFrame
      */
     public function testBootstrapProgressBarWarningFunction() {
 
-        $obj = new ProgressBarComponentTwigExtension();
+        $obj = new ProgressBarTwigExtension();
 
         $arg = [];
         $res = '<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
