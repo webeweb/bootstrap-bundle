@@ -16,12 +16,13 @@ use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Progress bar component Twig extension.
+ * Progress bar Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
+ * @see https://getbootstrap.com/docs/3.3/components/#progress
  */
-class ProgressBarComponentTwigExtension extends AbstractComponentTwigExtension {
+class ProgressBarComponentTwigExtension extends AbstractProgressBarTwigExtension {
 
     /**
      * Service name.
