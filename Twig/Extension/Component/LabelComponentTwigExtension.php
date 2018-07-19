@@ -16,12 +16,13 @@ use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Label component Twig extension.
+ * Label Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
+ * @see https://getbootstrap.com/docs/3.3/components/#labels
  */
-class LabelComponentTwigExtension extends AbstractComponentTwigExtension {
+class LabelComponentTwigExtension extends AbstractLabelTwigExtension {
 
     /**
      * Service name.
