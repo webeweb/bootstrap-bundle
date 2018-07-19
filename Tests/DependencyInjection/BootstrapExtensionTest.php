@@ -16,35 +16,24 @@ use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\UserInputCodeTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Code\VariableCodeTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonGroupTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkedTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonUtilityTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonUtilityTwigExtension;
@@ -81,46 +70,29 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
         $this->assertInstanceOf(ProvidersManager::class, $this->containerBuilder->get(ProvidersManager::SERVICE_NAME));
 
-        // Code
-        $this->assertInstanceOf(BasicBlockCodeTwigExtension::class, $this->containerBuilder->get(BasicBlockCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(InlineCodeTwigExtension::class, $this->containerBuilder->get(InlineCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(SampleOutputCodeTwigExtension::class, $this->containerBuilder->get(SampleOutputCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(UserInputCodeTwigExtension::class, $this->containerBuilder->get(UserInputCodeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(VariableCodeTwigExtension::class, $this->containerBuilder->get(VariableCodeTwigExtension::SERVICE_NAME));
+        // CSS
+        $this->assertInstanceOf(ButtonTwigExtension::class, $this->containerBuilder->get(ButtonTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(CodeTwigExtension::class, $this->containerBuilder->get(CodeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(GridTwigExtension::class, $this->containerBuilder->get(GridTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ImageTwigExtension::class, $this->containerBuilder->get(ImageTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(TypographyTwigExtension::class, $this->containerBuilder->get(TypographyTwigExtension::SERVICE_NAME));
 
         // Component
-        $this->assertInstanceOf(AlertComponentTwigExtension::class, $this->containerBuilder->get(AlertComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(BadgeComponentTwigExtension::class, $this->containerBuilder->get(BadgeComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(BreadcrumbComponentTwigExtension::class, $this->containerBuilder->get(BreadcrumbComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ButtonComponentTwigExtension::class, $this->containerBuilder->get(ButtonComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(DropdownComponentTwigExtension::class, $this->containerBuilder->get(DropdownComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(GlyphiconComponentTwigExtension::class, $this->containerBuilder->get(GlyphiconComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(LabelComponentTwigExtension::class, $this->containerBuilder->get(LabelComponentTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(AlertTwigExtension::class, $this->containerBuilder->get(AlertTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(BadgeTwigExtension::class, $this->containerBuilder->get(BadgeTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(BreadcrumbTwigExtension::class, $this->containerBuilder->get(BreadcrumbTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ButtonGroupTwigExtension::class, $this->containerBuilder->get(ButtonGroupTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(DropdownTwigExtension::class, $this->containerBuilder->get(DropdownTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(GlyphiconTwigExtension::class, $this->containerBuilder->get(GlyphiconTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(LabelTwigExtension::class, $this->containerBuilder->get(LabelTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(NavComponentTwigExtension::class, $this->containerBuilder->get(NavComponentTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ProgressBarComponentTwigExtension::class, $this->containerBuilder->get(ProgressBarComponentTwigExtension::SERVICE_NAME));
-
-        // Grid
-        $this->assertInstanceOf(GridTwigExtension::class, $this->containerBuilder->get(GridTwigExtension::SERVICE_NAME));
-
-        // Image
-        $this->assertInstanceOf(Base64ImageTwigExtension::class, $this->containerBuilder->get(Base64ImageTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(ProgressBarTwigExtension::class, $this->containerBuilder->get(ProgressBarTwigExtension::SERVICE_NAME));
 
         // Plugin
         $this->assertInstanceOf(FontAwesomePluginTwigExtension::class, $this->containerBuilder->get(FontAwesomePluginTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(JQueryInputMaskPluginTwigExtension::class, $this->containerBuilder->get(JQueryInputMaskPluginTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MaterialDesignIconicFontPluginTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontPluginTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsPluginTwigExtension::class, $this->containerBuilder->get(MeteoconsPluginTwigExtension::SERVICE_NAME));
-
-        // Typography
-        $this->assertInstanceOf(BoldTypographyTwigExtension::class, $this->containerBuilder->get(BoldTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(DeletedTypographyTwigExtension::class, $this->containerBuilder->get(DeletedTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(HeadingTypographyTwigExtension::class, $this->containerBuilder->get(HeadingTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(InsertedTypographyTwigExtension::class, $this->containerBuilder->get(InsertedTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ItalicTypographyTwigExtension::class, $this->containerBuilder->get(ItalicTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(MarkedTypographyTwigExtension::class, $this->containerBuilder->get(MarkedTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(SmallTypographyTwigExtension::class, $this->containerBuilder->get(SmallTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(StrikethroughTypographyTwigExtension::class, $this->containerBuilder->get(StrikethroughTypographyTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(UnderlinedTypographyTwigExtension::class, $this->containerBuilder->get(UnderlinedTypographyTwigExtension::SERVICE_NAME));
 
         // Utility
         $this->assertInstanceOf(FormButtonUtilityTwigExtension::class, $this->containerBuilder->get(FormButtonUtilityTwigExtension::SERVICE_NAME));

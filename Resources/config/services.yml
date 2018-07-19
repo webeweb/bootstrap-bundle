@@ -31,64 +31,64 @@ services:
             - ["setSearchProvider",                ["@?webeweb.bootstrapbundle.provider.search"]]
             - ["setUserInfoProvider",              ["@?webeweb.bootstrapbundle.provider.userinfo"]]
 
-    webeweb.bootstrapbundle.twig.extension.code.basicblock:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\BasicBlockCodeTwigExtension
+    webeweb.bootstrapbundle.twig.extension.css.button:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.code.inline:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\InlineCodeTwigExtension
+    webeweb.bootstrapbundle.twig.extension.css.code:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.code.sampleoutput:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\SampleOutputCodeTwigExtension
+    webeweb.bootstrapbundle.twig.extension.css.grid:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.code.userinput:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\UserInputCodeTwigExtension
+    webeweb.bootstrapbundle.twig.extension.css.image:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.code.variable:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Code\VariableCodeTwigExtension
+    webeweb.bootstrapbundle.twig.extension.css.typography:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.component.alert:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertComponentTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.component.badge:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeComponentTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.component.breadcrumb:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbComponentTwigExtension
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension
         arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.button:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension
+    webeweb.bootstrapbundle.twig.extension.component.buttongroup:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonGroupTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.component.dropdown:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownComponentTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.component.glyphicon:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.component.label:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension
         tags:
             - { name: "twig.extension" }
 
@@ -98,17 +98,7 @@ services:
             - { name: "twig.extension" }
 
     webeweb.bootstrapbundle.twig.extension.component.progressbar:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarComponentTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.grid.grid:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Grid\GridTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.image.base64:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Image\Base64ImageTwigExtension
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
         tags:
             - { name: "twig.extension" }
 
@@ -132,54 +122,9 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.typography.bold:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\BoldTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.deleted:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\DeletedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.heading:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\HeadingTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.inserted:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\InsertedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.italic:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\ItalicTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.marked:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\MarkedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.small:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\SmallTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.strikethrough:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\StrikethroughTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
-    webeweb.bootstrapbundle.twig.extension.typography.underlined:
-        class: WBW\Bundle\BootstrapBundle\Twig\Extension\Typography\UnderlinedTypographyTwigExtension
-        tags:
-            - { name: "twig.extension" }
-
     webeweb.bootstrapbundle.twig.extension.utility.formbutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonUtilityTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.component.button"]
+        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.css.button"]
         tags:
             - { name: "twig.extension" }
 
@@ -191,6 +136,6 @@ services:
 
     webeweb.bootstrapbundle.twig.extension.utility.tablebutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonUtilityTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.component.button"]
+        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.css.button"]
         tags:
             - { name: "twig.extension" }
