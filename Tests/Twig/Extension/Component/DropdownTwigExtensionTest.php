@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension;
 
 /**
  * Dropdown component Twig extension test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownComponentTwigExt
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class DropdownComponentTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class DropdownTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class DropdownComponentTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testGetFunctions() {
 
-        $obj = new DropdownComponentTwigExtension();
+        $obj = new DropdownTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -62,7 +62,7 @@ final class DropdownComponentTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testBootstrapDropdownButtonFunction() {
 
-        $obj = new DropdownComponentTwigExtension();
+        $obj = new DropdownTwigExtension();
 
         $arg0 = [];
         $res0 = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
@@ -97,7 +97,7 @@ final class DropdownComponentTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testBootstrapDropdownDividerFunction() {
 
-        $obj = new DropdownComponentTwigExtension();
+        $obj = new DropdownTwigExtension();
 
         $arg = [];
         $res = '<li class="divider" role="separator"></li>';
@@ -112,7 +112,7 @@ final class DropdownComponentTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testBootstrapDropdownHeaderFunction() {
 
-        $obj = new DropdownComponentTwigExtension();
+        $obj = new DropdownTwigExtension();
 
         $arg0 = [];
         $res0 = '<li class="dropdown-header"></li>';
