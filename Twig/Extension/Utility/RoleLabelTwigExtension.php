@@ -15,16 +15,16 @@ use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
- * Role label utility Twig extension.
+ * Role label Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  */
-class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
+class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
 
     /**
      * Service name.
@@ -36,7 +36,7 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Extension.
      *
-     * @var LabelComponentTwigExtension
+     * @var LabelTwigExtension
      */
     private $extension;
 
@@ -44,9 +44,9 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
      * Constructor.
      *
      * @param TranslatorInterface $translator The translator.
-     * @param LabelComponentTwigExtension $extension The label component Twig extension.
+     * @param LabelTwigExtension $extension The label component Twig extension.
      */
-    public function __construct(TranslatorInterface $translator, LabelComponentTwigExtension $extension) {
+    public function __construct(TranslatorInterface $translator, LabelTwigExtension $extension) {
         parent::__construct($translator);
         $this->setExtension($extension);
     }
@@ -123,7 +123,7 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Get the extension.
      *
-     * @return LabelComponentTwigExtension Returns the extension.
+     * @return LabelTwigExtension Returns the extension.
      */
     public function getExtension() {
         return $this->extension;
@@ -132,10 +132,10 @@ class RoleLabelUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Set the extension.
      *
-     * @param LabelComponentTwigExtension $extension The extension.
+     * @param LabelTwigExtension $extension The extension.
      * @return RoleLabelUtilityTwigExtension Returns this role label utility Twig extension.
      */
-    protected function setExtension(LabelComponentTwigExtension $extension) {
+    protected function setExtension(LabelTwigExtension $extension) {
         $this->extension = $extension;
         return $this;
     }

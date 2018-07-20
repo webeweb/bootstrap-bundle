@@ -15,8 +15,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
 
 /**
  * Role label utility Twig extension test.
@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelUtilityTwigExtens
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility
  * @final
  */
-final class RoleLabelUtilityTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class RoleLabelTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}
@@ -52,7 +52,7 @@ final class RoleLabelUtilityTwigExtensionTest extends AbstractBootstrapFramework
      */
     public function testGetFunctions() {
 
-        $obj = new RoleLabelUtilityTwigExtension($this->translator, new LabelComponentTwigExtension());
+        $obj = new RoleLabelTwigExtension($this->translator, new LabelTwigExtension());
 
         $res = $obj->getFunctions();
 
@@ -72,7 +72,7 @@ final class RoleLabelUtilityTwigExtensionTest extends AbstractBootstrapFramework
      */
     public function testBootstrapRoleLabelFunction() {
 
-        $obj = new RoleLabelUtilityTwigExtension($this->translator, new LabelComponentTwigExtension());
+        $obj = new RoleLabelTwigExtension($this->translator, new LabelTwigExtension());
 
         $colors = [
             "ROLE_SUPER_ADMIN" => "#D9534F",
