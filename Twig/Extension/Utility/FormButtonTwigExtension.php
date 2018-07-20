@@ -13,16 +13,16 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Form button utility Twig extension.
+ * Form button Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  */
-class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
+class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
 
     /**
      * Service name.
@@ -34,7 +34,7 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Extension.
      *
-     * @var ButtonComponentTwigExtension
+     * @var ButtonTwigExtension
      */
     private $extension;
 
@@ -42,9 +42,9 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
      * Constructor.
      *
      * @param TranslatorInterface $translator The translator.
-     * @param ButtonComponentTwigExtension $extension The button component Twig extension.
+     * @param ButtonTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(TranslatorInterface $translator, ButtonComponentTwigExtension $extension) {
+    public function __construct(TranslatorInterface $translator, ButtonTwigExtension $extension) {
         parent::__construct($translator);
         $this->setExtension($extension);
     }
@@ -103,7 +103,7 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Get the extension.
      *
-     * @return ButtonComponentTwigExtension Returns the extension.
+     * @return ButtonTwigExtension Returns the extension.
      */
     public function getExtension() {
         return $this->extension;
@@ -125,10 +125,10 @@ class FormButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Set the extension.
      *
-     * @param ButtonComponentTwigExtension $extension The extension.
+     * @param ButtonTwigExtension $extension The extension.
      * @return FormButtonTwigExtension Returns this form button Twig extension.
      */
-    protected function setExtension(ButtonComponentTwigExtension $extension) {
+    protected function setExtension(ButtonTwigExtension $extension) {
         $this->extension = $extension;
         return $this;
     }
