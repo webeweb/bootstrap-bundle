@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension;
@@ -53,7 +53,7 @@ class BootstrapRendererTwigExtension {
 
             case "b": // Bootstrap
             case "g": // Glyphicon
-                $output = (new GlyphiconComponentTwigExtension())->renderIcon($handler[1], $style);
+                $output = (new GlyphiconTwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             case "fa": // Font Awesome
