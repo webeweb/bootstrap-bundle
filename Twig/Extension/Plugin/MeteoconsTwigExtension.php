@@ -16,12 +16,12 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Meteocons plugin Twig extension.
+ * Meteocons Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class MeteoconsPluginTwigExtension extends AbstractPluginTwigExtension implements IconRendererTwigExtensionInterface {
+class MeteoconsTwigExtension extends AbstractMeteoconsTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.

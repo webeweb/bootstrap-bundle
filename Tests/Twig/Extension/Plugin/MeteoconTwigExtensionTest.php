@@ -14,16 +14,16 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 
 /**
- * Meteocons plugin Twig extension test.
+ * Meteocons Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
  * @final
  */
-final class MeteoconsPluginTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class MeteoconsTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.
@@ -32,7 +32,7 @@ final class MeteoconsPluginTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testGetFunctions() {
 
-        $obj = new MeteoconsPluginTwigExtension();
+        $obj = new MeteoconsTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -52,7 +52,7 @@ final class MeteoconsPluginTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testMeteoconsIconFunction() {
 
-        $obj = new MeteoconsPluginTwigExtension();
+        $obj = new MeteoconsTwigExtension();
 
         $arg0 = [];
         $res0 = '<i class="meteocons" data-meteocons="A"></i>';
