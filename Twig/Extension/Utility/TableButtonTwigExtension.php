@@ -13,16 +13,16 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Table button utility Twig extension.
+ * Table button Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  */
-class TableButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
+class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
 
     /**
      * Service name.
@@ -34,7 +34,7 @@ class TableButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Extension.
      *
-     * @var ButtonComponentTwigExtension
+     * @var ButtonTwigExtension
      */
     private $extension;
 
@@ -44,7 +44,7 @@ class TableButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
      * @param TranslatorInterface $translator The translator.
      * @param ButtonComponentTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(TranslatorInterface $translator, ButtonComponentTwigExtension $extension) {
+    public function __construct(TranslatorInterface $translator, ButtonTwigExtension $extension) {
         parent::__construct($translator);
         $this->setExtension($extension);
     }
@@ -104,7 +104,7 @@ class TableButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Get the extension.
      *
-     * @return ButtonComponentTwigExtension Returns the extension.
+     * @return ButtonTwigExtension Returns the extension.
      */
     public function getExtension() {
         return $this->extension;
@@ -126,10 +126,10 @@ class TableButtonUtilityTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Set the extension.
      *
-     * @param ButtonComponentTwigExtension $extension The extension.
+     * @param ButtonTwigExtension $extension The extension.
      * @return TableButtonUtilityTwigExtension Returns this table button Twig extension.
      */
-    protected function setExtension(ButtonComponentTwigExtension $extension) {
+    protected function setExtension(ButtonTwigExtension $extension) {
         $this->extension = $extension;
         return $this;
     }

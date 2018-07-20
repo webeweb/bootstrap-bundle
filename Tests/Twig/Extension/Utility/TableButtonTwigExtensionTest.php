@@ -14,8 +14,8 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonComponentTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonUtilityTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
 
 /**
  * Table button utility Twig extension test.
@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonUtilityTwigExte
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class TableButtonUtilityTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class TableButtonTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}
@@ -45,7 +45,7 @@ final class TableButtonUtilityTwigExtensionTest extends AbstractBootstrapFramewo
      */
     public function testGetFunctions() {
 
-        $obj = new TableButtonUtilityTwigExtension($this->translator, new ButtonComponentTwigExtension());
+        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $res = $obj->getFunctions();
 
@@ -75,7 +75,7 @@ final class TableButtonUtilityTwigExtensionTest extends AbstractBootstrapFramewo
      */
     public function testBootstrapDefaultRowButtonsFunction() {
 
-        $obj = new TableButtonUtilityTwigExtension($this->translator, new ButtonComponentTwigExtension());
+        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $edt = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
         $dlt = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
@@ -93,7 +93,7 @@ final class TableButtonUtilityTwigExtensionTest extends AbstractBootstrapFramewo
      */
     public function testBootstrapDeleteRowButtonFunction() {
 
-        $obj = new TableButtonUtilityTwigExtension($this->translator, new ButtonComponentTwigExtension());
+        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
@@ -109,7 +109,7 @@ final class TableButtonUtilityTwigExtensionTest extends AbstractBootstrapFramewo
     public function testBootstrapEditRowButtonFunction() {
 
 
-        $obj = new TableButtonUtilityTwigExtension($this->translator, new ButtonComponentTwigExtension());
+        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
