@@ -16,8 +16,9 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
+ * @see https://getbootstrap.com/docs/3.3/components/#nav
  */
-class NavComponentTwigExtension extends AbstractComponentTwigExtension {
+class NavTwigExtension extends AbstractNavTwigExtension {
 
     /**
      * Service name.
