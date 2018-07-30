@@ -15,12 +15,12 @@ use Twig_SimpleFunction;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * jQuery Input mask plugin Twig Extension.
+ * jQuery Input mask Twig Extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class JQueryInputMaskPluginTwigExtension extends AbstractPluginTwigExtension {
+class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension {
 
     /**
      * Service name.
@@ -133,10 +133,10 @@ class JQueryInputMaskPluginTwigExtension extends AbstractPluginTwigExtension {
      * Prepare the arguments.
      *
      * @param array $args The arguments.
-     * @param string $defaultMask
+     * @param string $defaultMask The default mask.
      * @return array Returns the prepared arguments.
      */
-    private function prepareOptions(array $args = [], $defaultMask) {
+    private function prepareOptions(array $args, $defaultMask) {
 
         // Initialize the options.
         $options = ArrayUtility::get($args, "opts", []);
