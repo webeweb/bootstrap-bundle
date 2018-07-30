@@ -17,12 +17,12 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
- * Font Awesome plugin Twig extension.
+ * Font Awesome Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension implements IconRendererTwigExtensionInterface {
+class FontAwesomePluginTwigExtension extends AbstractFontAwesomeTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
@@ -55,12 +55,7 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension impleme
      * @return string Returns the Font Awesome list.
      */
     public function fontAwesomeListFilter($items) {
-
-        // Initialize the parameters.
-        $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
-
-        // Return the HTML.
-        return self::bootstrapHTMLElement("ul", $innerHTML, ["class" => "fa-ul"]);
+        return $this->fontAwesomeList($items);
     }
 
     /**
@@ -71,13 +66,7 @@ class FontAwesomePluginTwigExtension extends AbstractPluginTwigExtension impleme
      * @return string Returns the Font Awesome list icon.
      */
     public function fontAwesomeListIconFilter($icon, $content) {
-
-        // Initialize the parameters.
-        $glyphicon = self::bootstrapHTMLElement("span", $icon, ["class" => "fa-li"]);
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return self::bootstrapHTMLElement("li", $glyphicon . $innerHTML);
+        return $this->fontAwesomeListIcon($icon, $content);
     }
 
     /**
