@@ -15,16 +15,16 @@ use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
 
 /**
- * Material Design Iconic Font plugin Twig extension test.
+ * Material Design Iconic Font Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
  * @final
  */
-final class MaterialDesignIconicFontPluginTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class MaterialDesignIconicFontTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.
@@ -33,7 +33,7 @@ final class MaterialDesignIconicFontPluginTwigExtensionTest extends AbstractBoot
      */
     public function testGetFilters() {
 
-        $obj = new MaterialDesignIconicFontPluginTwigExtension();
+        $obj = new MaterialDesignIconicFontTwigExtension();
 
         $res = $obj->getFilters();
 
@@ -57,7 +57,7 @@ final class MaterialDesignIconicFontPluginTwigExtensionTest extends AbstractBoot
      */
     public function testGetFunctions() {
 
-        $obj = new MaterialDesignIconicFontPluginTwigExtension();
+        $obj = new MaterialDesignIconicFontTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -70,41 +70,6 @@ final class MaterialDesignIconicFontPluginTwigExtensionTest extends AbstractBoot
     }
 
     /**
-     * Tests the materialDesignIconicFontListFilter() method.
-     *
-     * @return void
-     * @depends testGetFilters
-     */
-    public function testMaterialDesignIconicFontListFilter() {
-
-        $obj = new MaterialDesignIconicFontPluginTwigExtension();
-
-        $arg = $obj->materialDesignIconicFontListIconFilter($obj->materialDesignIconicFontIconFunction([]), "content");
-
-        $res9 = '<ul class="zmdi-hc-ul"><li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li></ul>';
-        $this->assertEquals($res9, $obj->materialDesignIconicFontListFilter($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontListIconFilter() method.
-     *
-     * @return void
-     * @depends testGetFilters
-     */
-    public function testMaterialDesignIconicFontListIconFilter() {
-
-        $obj = new MaterialDesignIconicFontPluginTwigExtension();
-
-        $arg = $obj->materialDesignIconicFontIconFunction([]);
-
-        $res0 = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i></li>';
-        $this->assertEquals($res0, $obj->materialDesignIconicFontListIconFilter($arg, null));
-
-        $res9 = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li>';
-        $this->assertEquals($res9, $obj->materialDesignIconicFontListIconFilter($arg, "content"));
-    }
-
-    /**
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
@@ -112,7 +77,7 @@ final class MaterialDesignIconicFontPluginTwigExtensionTest extends AbstractBoot
      */
     public function testMaterialDesignIconicFontIconFunction() {
 
-        $obj = new MaterialDesignIconicFontPluginTwigExtension();
+        $obj = new MaterialDesignIconicFontTwigExtension();
 
         $arg0 = [];
         $res0 = '<i class="zmdi zmdi-home"></i>';
@@ -153,6 +118,43 @@ final class MaterialDesignIconicFontPluginTwigExtensionTest extends AbstractBoot
         $arg9 = ["name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "border" => "border-circle", "pull" => "left", "spin" => "spin", "rotate" => "180", "flip" => "horizontal"];
         $res9 = '<i class="zmdi zmdi-camera-retro zmdi-hc-lg zmdi-hc-fw zmdi-hc-border-circle pull-left zmdi-hc-spin zmdi-hc-rotate-180 zmdi-hc-flip-horizontal"></i>';
         $this->assertEquals($res9, $obj->materialDesignIconicFontIconFunction($arg9));
+    }
+
+    /**
+     * Tests the materialDesignIconicFontListFilter() method.
+     *
+     * @return void
+     * @depends testGetFilters
+     * @depends testMaterialDesignIconicFontIconFunction
+     */
+    public function testMaterialDesignIconicFontListFilter() {
+
+        $obj = new MaterialDesignIconicFontTwigExtension();
+
+        $arg = $obj->materialDesignIconicFontListIconFilter($obj->materialDesignIconicFontIconFunction([]), "content");
+
+        $res9 = '<ul class="zmdi-hc-ul"><li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li></ul>';
+        $this->assertEquals($res9, $obj->materialDesignIconicFontListFilter($arg));
+    }
+
+    /**
+     * Tests the materialDesignIconicFontListIconFilter() method.
+     *
+     * @return void
+     * @depends testGetFilters
+     * @depends testMaterialDesignIconicFontIconFunction
+     */
+    public function testMaterialDesignIconicFontListIconFilter() {
+
+        $obj = new MaterialDesignIconicFontTwigExtension();
+
+        $arg = $obj->materialDesignIconicFontIconFunction([]);
+
+        $res0 = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i></li>';
+        $this->assertEquals($res0, $obj->materialDesignIconicFontListIconFilter($arg, null));
+
+        $res9 = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li>';
+        $this->assertEquals($res9, $obj->materialDesignIconicFontListIconFilter($arg, "content"));
     }
 
 }

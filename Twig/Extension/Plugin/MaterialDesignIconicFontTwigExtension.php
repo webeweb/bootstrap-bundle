@@ -15,15 +15,14 @@ use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
 use WBW\Library\Core\Utility\Argument\ArrayUtility;
-use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
- * Material Design Iconic Font plugin Twig extension.
+ * Material Design Iconic Font Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExtension implements IconRendererTwigExtensionInterface {
+class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconicFontTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
@@ -79,12 +78,7 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
      * @return string Returns the Material Design Iconic Font list.
      */
     public function materialDesignIconicFontListFilter($items) {
-
-        // Initialize the parameters.
-        $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
-
-        // Return the HTML.
-        return self::bootstrapHTMLElement("ul", $innerHTML, ["class" => "zmdi-hc-ul"]);
+        return $this->materialDesignIconicFontList($items);
     }
 
     /**
@@ -95,13 +89,7 @@ class MaterialDesignIconicFontPluginTwigExtension extends AbstractPluginTwigExte
      * @return string Returns the Material Design Iconic Font list icon.
      */
     public function materialDesignIconicFontListIconFilter($icon, $content) {
-
-        // Initialize the parameters.
-        $glyphicon = null !== $icon ? StringUtility::replace($icon, ["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"]) : "";
-        $innerHTML = null !== $content ? $content : "";
-
-        // Return the HTML.
-        return self::bootstrapHTMLElement("li", $glyphicon . $innerHTML);
+        return $this->materialDesignIconicFontListIcon($icon, $content);
     }
 
     /**
