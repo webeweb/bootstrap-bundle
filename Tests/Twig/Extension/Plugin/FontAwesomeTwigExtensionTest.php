@@ -70,41 +70,6 @@ final class FontAwesomeTwigExtensionTest extends AbstractBootstrapFrameworkTestC
     }
 
     /**
-     * Tests the fontAwesomeListFilter() method.
-     *
-     * @return void
-     * @depends testGetFilters
-     */
-    public function testFontAwesomeListFilter() {
-
-        $obj = new FontAwesomeTwigExtension();
-
-        $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction([]), "content");
-
-        $res9 = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
-        $this->assertEquals($res9, $obj->fontAwesomeListFilter($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeListIconFilter() method.
-     *
-     * @return void
-     * @depends testGetFilters
-     */
-    public function testFontAwesomeListIconFilter() {
-
-        $obj = new FontAwesomeTwigExtension();
-
-        $arg = $obj->fontAwesomeIconFunction([]);
-
-        $res0 = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
-        $this->assertEquals($res0, $obj->fontAwesomeListIconFilter($arg, null));
-
-        $res9 = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
-        $this->assertEquals($res9, $obj->fontAwesomeListIconFilter($arg, "content"));
-    }
-
-    /**
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
@@ -149,6 +114,43 @@ final class FontAwesomeTwigExtensionTest extends AbstractBootstrapFrameworkTestC
         $arg9 = ["font" => "s", "name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "bordered" => true, "pull" => "left", "animated" => "spin"];
         $res9 = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin"></i>';
         $this->assertEquals($res9, $obj->fontAwesomeIconFunction($arg9));
+    }
+
+    /**
+     * Tests the fontAwesomeListFilter() method.
+     *
+     * @return void
+     * @depends testGetFilters
+     * @depends testFontAwesomeIconFunction
+     */
+    public function testFontAwesomeListFilter() {
+
+        $obj = new FontAwesomeTwigExtension();
+
+        $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction([]), "content");
+
+        $res9 = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
+        $this->assertEquals($res9, $obj->fontAwesomeListFilter($arg));
+    }
+
+    /**
+     * Tests the fontAwesomeListIconFilter() method.
+     *
+     * @return void
+     * @depends testGetFilters
+     * @depends testFontAwesomeIconFunction
+     */
+    public function testFontAwesomeListIconFilter() {
+
+        $obj = new FontAwesomeTwigExtension();
+
+        $arg = $obj->fontAwesomeIconFunction([]);
+
+        $res0 = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
+        $this->assertEquals($res0, $obj->fontAwesomeListIconFilter($arg, null));
+
+        $res9 = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
+        $this->assertEquals($res9, $obj->fontAwesomeListIconFilter($arg, "content"));
     }
 
 }
