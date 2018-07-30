@@ -15,16 +15,16 @@ use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 
 /**
- * Font Awesome plugin Twig extension test.
+ * Font Awesome Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
  * @final
  */
-final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class FontAwesomeTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.
@@ -33,7 +33,7 @@ final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testGetFilters() {
 
-        $obj = new FontAwesomePluginTwigExtension();
+        $obj = new FontAwesomeTwigExtension();
 
         $res = $obj->getFilters();
 
@@ -57,7 +57,7 @@ final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testGetFunctions() {
 
-        $obj = new FontAwesomePluginTwigExtension();
+        $obj = new FontAwesomeTwigExtension();
 
         $res = $obj->getFunctions();
 
@@ -77,7 +77,7 @@ final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testFontAwesomeListFilter() {
 
-        $obj = new FontAwesomePluginTwigExtension();
+        $obj = new FontAwesomeTwigExtension();
 
         $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction([]), "content");
 
@@ -93,7 +93,7 @@ final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testFontAwesomeListIconFilter() {
 
-        $obj = new FontAwesomePluginTwigExtension();
+        $obj = new FontAwesomeTwigExtension();
 
         $arg = $obj->fontAwesomeIconFunction([]);
 
@@ -112,7 +112,7 @@ final class FontAwesomePluginTwigExtensionTest extends AbstractBootstrapFramewor
      */
     public function testFontAwesomeIconFunction() {
 
-        $obj = new FontAwesomePluginTwigExtension();
+        $obj = new FontAwesomeTwigExtension();
 
         $arg0 = [];
         $res0 = '<i class="fa fa-home"></i>';

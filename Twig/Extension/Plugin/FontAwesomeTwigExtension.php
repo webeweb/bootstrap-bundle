@@ -22,7 +22,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin
  */
-class FontAwesomePluginTwigExtension extends AbstractFontAwesomeTwigExtension implements IconRendererTwigExtensionInterface {
+class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implements IconRendererTwigExtensionInterface {
 
     /**
      * Service name.
