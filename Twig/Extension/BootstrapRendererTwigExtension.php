@@ -12,9 +12,9 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomePluginTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontPluginTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsPluginTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 
 /**
  * Bootstrap renderer Twig extension.
@@ -57,15 +57,15 @@ class BootstrapRendererTwigExtension {
                 break;
 
             case "fa": // Font Awesome
-                $output = (new FontAwesomePluginTwigExtension())->renderIcon($handler[1], $style);
+                $output = (new FontAwesomeTwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             case "mc": // Meteocons
-                $output = (new MeteoconsPluginTwigExtension())->renderIcon($handler[1], $style);
+                $output = (new MeteoconsTwigExtension())->renderIcon($handler[1], $style);
                 break;
 
             case "zmdi": // Material Design Iconic Font
-                $output = (new MaterialDesignIconicFontPluginTwigExtension())->renderIcon($handler[1], $style);
+                $output = (new MaterialDesignIconicFontTwigExtension())->renderIcon($handler[1], $style);
                 break;
         }
 
