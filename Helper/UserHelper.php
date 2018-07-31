@@ -29,7 +29,7 @@ class UserHelper {
      * @param boolean $or OR ? If true, matches a role cause a break and the method returns true.
      * @return boolean Returns true in case of success, false otherwise.
      */
-    public function hasRoles($user, $roles, $or = true) {
+    public static function hasRoles($user, $roles, $or = true) {
 
         // Check the user.
         if (null === $user || false === ($user instanceof UserInterface)) {
