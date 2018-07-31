@@ -1,9 +1,14 @@
 # Resources/config/services.yml
 services:
 
+    logger:
+        alias: "monolog.logger"
+        public: true
+
     webeweb.bootstrapbundle.eventlistener.kernel:
         class:     WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener
         arguments: ["@security.token_storage", "@webeweb.bootstrapbundle.manager.providers"]
+        public:    true
         tags:
             - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
             - { name: "kernel.event_listener", event: "kernel.request",   method: "onKernelRequest" }
