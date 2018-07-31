@@ -127,6 +127,11 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.bootstrapbundle.twig.extension.renderer:
+        class: WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.bootstrapbundle.twig.extension.utility.formbutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension
         arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.css.button"]

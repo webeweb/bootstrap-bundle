@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension;
 
+use Twig_Node;
+use Twig_SimpleFilter;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 
@@ -22,6 +24,42 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
  * @final
  */
 final class BootstrapRendererTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+
+    /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new BootstrapRendererTwigExtension();
+
+        $res = $obj->getFilters();
+
+        $this->assertCount(1, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
+        $this->assertEquals("bootstrapScript", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapScriptFilter"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
+
+    /**
+     * Tests the bootstrapScriptFilter() method.
+     *
+     * @return void
+     */
+    public function testBootstrapScriptFilter() {
+
+        $obj = new BootstrapRendererTwigExtension();
+
+        $res = <<< EOTXT
+<script type="text/javascript">
+content
+</script>
+EOTXT;
+        $this->assertEquals($res, $obj->bootstrapScriptFilter("content"));
+    }
 
     /**
      * Tests the renderIcon() method.

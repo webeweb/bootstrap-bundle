@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
+use Twig_SimpleFilter;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
@@ -22,7 +23,51 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension
  */
-class BootstrapRendererTwigExtension {
+class BootstrapRendererTwigExtension extends AbstractBootstrapTwigExtension {
+
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.renderer";
+
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * Displays a Bootstrap script.
+     *
+     * @param string $content The content.
+     */
+    public function bootstrapScriptFilter($content) {
+
+        // Initialize the attributes.
+        $attributes = [];
+
+        $attributes["type"] = "text/javascript";
+
+        // Initialize the parameters.
+        $innerHTML = null !== $content ? "\n" . $content . "\n" : "";
+
+        // Return the HTML.
+        return self::bootstrapHTMLElement("script", $innerHTML, $attributes);
+    }
+
+    /**
+     * Get the Twig filters.
+     *
+     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     */
+    public function getFilters() {
+        return [
+            new Twig_SimpleFilter("bootstrapScript", [$this, "bootstrapScriptFilter"], ["is_safe" => ["html"]]),
+        ];
+    }
 
     /**
      * Render an icon.
