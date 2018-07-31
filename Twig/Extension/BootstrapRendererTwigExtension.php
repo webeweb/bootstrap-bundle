@@ -43,6 +43,7 @@ class BootstrapRendererTwigExtension extends AbstractBootstrapTwigExtension {
      * Displays a Bootstrap script.
      *
      * @param string $content The content.
+     * @return string Returns a Bootstrap script.
      */
     public function bootstrapScriptFilter($content) {
 
