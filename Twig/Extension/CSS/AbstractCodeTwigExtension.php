@@ -53,7 +53,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * Displays a Bootstrap sample output.
      *
      * @param string $content The sample output content.
-     * @return string  Returns the Bootstrap user input.
+     * @return string  Returns the Bootstrap sample output.
      */
     protected function bootstrapSampleOutput($content) {
         return self::bootstrapHTMLElement("samp", $content);
