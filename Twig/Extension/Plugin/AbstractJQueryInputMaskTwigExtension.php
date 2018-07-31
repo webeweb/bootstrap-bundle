@@ -69,7 +69,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractBootstrapTwi
 
         // Return the HTML
         if (true === $scriptTag) {
-            return self::bootstrapHTMLElement("script", "\n" . $innerHTML . "\n", ["type" => "text/javascript"]);
+            return $this->getRenderer()->bootstrapScriptFilter($innerHTML);
         }
         return $innerHTML;
     }
