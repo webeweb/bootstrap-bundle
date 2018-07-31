@@ -26,7 +26,7 @@ abstract class AbstractMeteoconsTwigExtension extends AbstractBootstrapTwigExten
      * Constructor.
      */
     protected function __construct() {
-        // NOTHING TO DO.
+        parent::__construct();
     }
 
     /**
