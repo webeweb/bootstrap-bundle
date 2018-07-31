@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtension;
 
 /**
@@ -26,13 +27,30 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtensio
 final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
+     * Renderer.
+     *
+     * @var new BootstrapRendererTwigExtension()
+     */
+    private $renderer;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Boostrap renderer mock.
+        $this->renderer = new BootstrapRendererTwigExtension();
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
      */
     public function testGetFunctions() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $res = $obj->getFunctions();
 
@@ -82,7 +100,7 @@ final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testJQueryInputMaskFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $arg0 = ["selector" => "#selector"];
         $res0 = "$('#selector').inputmask(\"\",[]);";
@@ -102,7 +120,7 @@ final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testJQueryInputMaskPhoneNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"99 99 99 99 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"__ __ __ __ __\"});";
@@ -117,7 +135,7 @@ final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testJQueryInputMaskSIRETNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"999 999 999 99999\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"___ ___ ___ _____\"});";
@@ -132,7 +150,7 @@ final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testJQueryInputMaskTime12Function() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"hh:mm t\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"hourFormat\":\"12\",\"placeholder\":\"__:__ _m\"});";
@@ -147,7 +165,7 @@ final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testJQueryInputMaskTime24Function() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"hh:mm\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"hourFormat\":\"24\",\"placeholder\":\"__:__\"});";
@@ -162,7 +180,7 @@ final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testJQueryInputMaskSocialSecurityNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"9 99 99 99 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_ __ __ __ ___ ___ __\"});";
@@ -177,7 +195,7 @@ final class JQueryInputMaskTwigExtensionTest extends AbstractBootstrapFrameworkT
      */
     public function testJQueryInputMaskVATNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension();
+        $obj = new JQueryInputMaskTwigExtension($this->renderer);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"**999 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_____ ___ ___ __\"});";

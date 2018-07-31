@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 use WBW\Library\Core\Utility\Argument\StringUtility;
 
 /**
@@ -24,10 +25,29 @@ use WBW\Library\Core\Utility\Argument\StringUtility;
 abstract class AbstractJQueryInputMaskTwigExtension extends AbstractBootstrapTwigExtension {
 
     /**
-     * Constructor.
+     * Renderer.
+     *
+     * @var BootstrapRendererTwigExtension
      */
-    protected function __construct() {
-        // NOTHING TO DO.
+    private $renderer;
+
+    /**
+     * Constructor.
+     *
+     * @param BootstrapRendererTwigExtension $renderer The renderer.
+     */
+    protected function __construct(BootstrapRendererTwigExtension $renderer) {
+        parent::__construct();
+        $this->setRenderer($renderer);
+    }
+
+    /**
+     * Get the renderer.
+     *
+     * @return BootstrapRendererTwigExtension Returns the renderer.
+     */
+    public function getRenderer() {
+        return $this->renderer;
     }
 
     /**
@@ -35,11 +55,11 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractBootstrapTwi
      *
      * @param string $selector The input mask selector.
      * @param string $mask The input mask.
-     * @param boolean $scriptTag Script tag ?
      * @param array $options The input mask options.
+     * @param boolean $scriptTag Script tag ?
      * @return string Returns the jQuery input mask.
      */
-    protected function jQueryInputMask($selector, $mask, $scriptTag, array $options) {
+    protected function jQueryInputMask($selector, $mask, array $options, $scriptTag) {
 
         // Initialize the template.
         $template = "$('%selector%').inputmask(\"%mask%\",%arguments%);";
@@ -52,6 +72,17 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractBootstrapTwi
             return self::bootstrapHTMLElement("script", "\n" . $innerHTML . "\n", ["type" => "text/javascript"]);
         }
         return $innerHTML;
+    }
+
+    /**
+     * Set the renderer.
+     *
+     * @param BootstrapRendererTwigExtension $renderer The renderer.
+     * @return AbstractJQueryInputMaskTwigExtension Returns this jQuery Twig extension.
+     */
+    protected function setRenderer(BootstrapRendererTwigExtension $renderer) {
+        $this->renderer = $renderer;
+        return $this;
     }
 
 }
