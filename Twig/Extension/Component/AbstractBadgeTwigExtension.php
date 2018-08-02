@@ -32,18 +32,11 @@ abstract class AbstractBadgeTwigExtension extends AbstractBootstrapTwigExtension
     /**
      * Displays a Bootstrap badge.
      *
-     * @param string $content The badge content.
+     * @param string $content The content.
      * @return string Returns the Bootstrap badge.
      */
     protected function bootstrapBadge($content) {
-
-        // Initialize the attributes.
-        $attributes = [];
-
-        $attributes["class"] = ["badge"];
-
-        // Return the HTML.
-        return self::bootstrapHTMLElement("span", $content, $attributes);
+        return self::bootstrapHTMLElement("span", $content, ["class" => "badge"]);
     }
 
 }
