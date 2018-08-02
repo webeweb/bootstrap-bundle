@@ -32,8 +32,8 @@ abstract class AbstractMeteoconsTwigExtension extends AbstractBootstrapTwigExten
     /**
      * Displays a Meteocons icon.
      *
-     * @param string $name The Meteocons name.
-     * @param string $style The Meteocons style.
+     * @param string $name The name.
+     * @param string $style The style.
      * @return string Returns the Meteocons icon.
      */
     protected function meteoconsIcon($name, $style) {

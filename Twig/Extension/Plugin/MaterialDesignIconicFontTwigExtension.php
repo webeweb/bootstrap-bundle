@@ -62,7 +62,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
     }
 
     /**
-     * Displays a Material Design Iocnic Font icon.
+     * Displays a Material Design Iconic Font icon.
      *
      * @param array $args The arguments.
      * @return Returns the Material Design Iconic Font icon.
@@ -74,7 +74,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
     /**
      * Displays a Material Design Iconic Font list.
      *
-     * @param array|string $items The list items.
+     * @param array|string $items The items.
      * @return string Returns the Material Design Iconic Font list.
      */
     public function materialDesignIconicFontListFilter($items) {
@@ -84,8 +84,8 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
     /**
      * Displays a Material Design Iconic Font list icon.
      *
-     * @param string $icon The Material Design Iconic Font icon.
-     * @param string $content The Material Design Iconic Font content.
+     * @param string $icon The icon.
+     * @param string $content The content.
      * @return string Returns the Material Design Iconic Font list icon.
      */
     public function materialDesignIconicFontListIconFilter($icon, $content) {

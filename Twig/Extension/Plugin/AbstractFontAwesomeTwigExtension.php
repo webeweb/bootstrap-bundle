@@ -32,14 +32,14 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractBootstrapTwigExt
     /**
      * Displays a Font Awesome icon.
      *
-     * @param string $font The Font Awesome font.
-     * @param string $name The Font Awesome name.
-     * @param string $size The Font Awesome size.
+     * @param string $font The font.
+     * @param string $name The name.
+     * @param string $size The size.
      * @param boolean $fixedWidth Fixed width ?
      * @param boolean $bordered Bordered ?
-     * @param string $pull The Font Awesome pull.
-     * @param string $anime The Font Awesome animation.
-     * @param string $style The Font Awesome style.
+     * @param string $pull The pull.
+     * @param string $anime The animation.
+     * @param string $style The style.
      * @return string Returns the Font Awesome icon.
      */
     protected function fontAwesomeIcon($font, $name, $size, $fixedWidth, $bordered, $pull, $anime, $style) {
@@ -69,7 +69,7 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractBootstrapTwigExt
     /**
      * Displays a Font Awesome list.
      *
-     * @param array|string $items The list items.
+     * @param array|string $items The items.
      * @return string Returns the Font Awesome list.
      */
     protected function fontAwesomeList($items) {
@@ -84,7 +84,7 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractBootstrapTwigExt
     /**
      * Displays a Font Awesome list icon.
      *
-     * @param string $icon The Font Awesome icon.
+     * @param string $icon The icon.
      * @param string $content The content.
      * @return string Returns the Font Awesome list icon.
      */

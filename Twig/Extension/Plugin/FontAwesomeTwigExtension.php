@@ -51,7 +51,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     /**
      * Displays a Font Awesome list.
      *
-     * @param array|string $items The list items.
+     * @param array|string $items The items.
      * @return string Returns the Font Awesome list.
      */
     public function fontAwesomeListFilter($items) {
@@ -61,7 +61,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     /**
      * Displays a Font Awesome list icon.
      *
-     * @param string $icon The Font Awesome icon.
+     * @param string $icon The icon.
      * @param string $content The content.
      * @return string Returns the Font Awesome list icon.
      */

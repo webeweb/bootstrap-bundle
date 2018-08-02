@@ -33,15 +33,15 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractBoo
     /**
      * Displays a Material Design Iconic Font icon.
      *
-     * @param string $name The Material Design Iconic Font name.
-     * @param string $size The Material Design Iconic Font size.
+     * @param string $name The name.
+     * @param string $size The size.
      * @param boolean $fixedWidth Fixed width ?
-     * @param string $border The Material Design Iconic Font border
-     * @param string $pull The Material Design Iconic Font pull.
-     * @param string $spin The Material Design Iconic Font spin.
-     * @param string $rotate The Material Design Iconic Font rotate.
-     * @param string $flip The Material Design Iconic Font flip.
-     * @param string $style The Material Design Iconic Font style.
+     * @param string $border The border
+     * @param string $pull The pull.
+     * @param string $spin The spin.
+     * @param string $rotate The rotate.
+     * @param string $flip The flip.
+     * @param string $style The style.
      * @return string Returns the Material Design Iconic Font icon.
      */
     protected function materialDesignIconicFontIcon($name, $size, $fixedWidth, $border, $pull, $spin, $rotate, $flip, $style) {
@@ -75,7 +75,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractBoo
     /**
      * Displays a Material Design Iconic Font list.
      *
-     * @param array|string $items The list items.
+     * @param array|string $items The items.
      * @return string Returns the Material Design Iconic Font list.
      */
     protected function materialDesignIconicFontList($items) {
@@ -90,8 +90,8 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractBoo
     /**
      * Displays a Material Design Iconic Font list icon.
      *
-     * @param string $icon The Material Design Iconic Font icon.
-     * @param string $content The Material Design Iconic Font content.
+     * @param string $icon The icon.
+     * @param string $content The content.
      * @return string Returns the Material Design Iconic Font list icon.
      */
     protected function materialDesignIconicFontListIcon($icon, $content) {

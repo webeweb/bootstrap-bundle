@@ -53,9 +53,9 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractBootstrapTwi
     /**
      * Displays a jQuery input mask.
      *
-     * @param string $selector The input mask selector.
-     * @param string $mask The input mask.
-     * @param array $options The input mask options.
+     * @param string $selector The selector.
+     * @param string $mask The mask.
+     * @param array $options The options.
      * @param boolean $scriptTag Script tag ?
      * @return string Returns the jQuery input mask.
      */
