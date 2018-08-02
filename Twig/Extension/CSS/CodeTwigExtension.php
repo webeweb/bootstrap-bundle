@@ -58,10 +58,10 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap inline.
+     * Displays a Bootstrap sample output.
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap inline.
+     * @return string Returns the Bootstrap smaple output.
      */
     public function bootstrapSampleOutputFunction(array $args = []) {
         return $this->bootstrapSampleOutput(ArrayUtility::get($args, "content"));

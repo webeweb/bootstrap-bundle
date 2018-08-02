@@ -63,15 +63,13 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
         // Initialize the values.
         $sizes = [1, 2, 3, 4, 5, 6];
 
-        // Initialize the element.
-        $element = "h" . (true === in_array($size, $sizes) ? $size : 1);
-
         // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = [$class];
 
         // Initialize the parameters.
+        $element   = "h" . (true === in_array($size, $sizes) ? $size : 1);
         $secondary = null !== $description ? " <small>" . $description . "</small>" : "";
         $innerHTML = (null !== $content ? $content : "") . $secondary;
 

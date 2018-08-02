@@ -33,12 +33,12 @@ abstract class AbstractImageTwigExtension extends AbstractBootstrapTwigExtension
     /**
      * Displays a Bootstrap image.
      *
-     * @param string $src The image source
-     * @param string $alt The image alternative.
-     * @param string $width The image width.
-     * @param string $height The image height.
-     * @param string $class The image class.
-     * @param string $usemap The image usemap.
+     * @param string $src The source
+     * @param string $alt The alternative text.
+     * @param string $width The width.
+     * @param string $height The height.
+     * @param string $class The class.
+     * @param string $usemap The usemap.
      * @return string Returns the Bootstrap image.
      */
     protected function bootstrapImage($src, $alt, $width, $height, $class, $usemap) {
