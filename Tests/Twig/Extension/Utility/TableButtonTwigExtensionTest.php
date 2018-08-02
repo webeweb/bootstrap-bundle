@@ -52,28 +52,28 @@ final class TableButtonTwigExtensionTest extends AbstractBootstrapFrameworkTestC
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapDefaultRowButtons", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapDefaultRowButtonsFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapRowButtonDefault", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapRowButtonDefaultFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapDeleteRowButton", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapDeleteRowButtonFunction"], $res[1]->getCallable());
+        $this->assertEquals("bootstrapRowButtonDelete", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapRowButtonDeleteFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapEditRowButton", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapEditRowButtonFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapRowButtonEdit", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapRowButtonEditFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapDefaultRowButtonsFunction() method.
+     * Tests the bootstrapRowButtonDefaultFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapDefaultRowButtonsFunction() {
+    public function testBootstrapRowButtonDefaultFunction() {
 
         $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
@@ -82,38 +82,38 @@ final class TableButtonTwigExtensionTest extends AbstractBootstrapFrameworkTestC
 
         $arg = ["edit_href" => "https://github.com/", "delete_href" => "https://github.com/"];
         $res = $edt . " " . $dlt;
-        $this->assertEquals($res, $obj->bootstrapDefaultRowButtonsFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapRowButtonDefaultFunction($arg));
     }
 
     /**
-     * Tests the bootstrapDeleteRowButtonFunction() method.
+     * Tests the bootstrapRowButtonDeleteFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapDeleteRowButtonFunction() {
+    public function testBootstrapRowButtonDeleteFunction() {
 
         $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
-        $this->assertEquals($res, $obj->bootstrapDeleteRowButtonFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapRowButtonDeleteFunction($arg));
     }
 
     /**
-     * Tests the bootstrapEditRowButtonFunction() method.
+     * Tests the bootstrapRowButtonEditFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapEditRowButtonFunction() {
+    public function testBootstrapRowButtonEditFunction() {
 
 
         $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
-        $this->assertEquals($res, $obj->bootstrapEditRowButtonFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapRowButtonEditFunction($arg));
     }
 
 }

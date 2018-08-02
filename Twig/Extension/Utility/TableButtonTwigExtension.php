@@ -50,28 +50,28 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap default row buttons.
+     * Displays a Bootstrap row button "Default".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap default form buttons.
+     * @return string Returns the Bootstrap form button "Default".
      */
-    public function bootstrapDefaultRowButtonsFunction(array $args = []) {
+    public function bootstrapRowButtonDefaultFunction(array $args = []) {
 
         // Initialize the buttons.
-        $editButton   = $this->bootstrapEditRowButtonFunction(["href" => ArrayUtility::get($args, "edit_href")]);
-        $deleteButton = $this->bootstrapDeleteRowButtonFunction(["href" => ArrayUtility::get($args, "delete_href")]);
+        $editButton   = $this->bootstrapRowButtonEditFunction(["href" => ArrayUtility::get($args, "edit_href")]);
+        $deleteButton = $this->bootstrapRowButtonDeleteFunction(["href" => ArrayUtility::get($args, "delete_href")]);
 
         // Return the HTML.
         return implode(" ", [$editButton, $deleteButton]);
     }
 
     /**
-     * Displays a Bootstrap delete row button.
+     * Displays a Bootstrap row button "Delete".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap delete row button.
+     * @return string Returns the Bootstrap row button "Delete".
      */
-    public function bootstrapDeleteRowButtonFunction(array $args = []) {
+    public function bootstrapRowButtonDeleteFunction(array $args = []) {
 
         // Translate the label.
         $txt = $this->getTranslator()->trans("label.delete", [], "BootstrapBundle");
@@ -84,12 +84,12 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap edit row button.
+     * Displays a Bootstrap row button "Edit".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap edit row button.
+     * @return string Returns the Bootstrap row button "Edit".
      */
-    public function bootstrapEditRowButtonFunction(array $args = []) {
+    public function bootstrapRowButtonEditFunction(array $args = []) {
 
         // Translate the label.
         $txt = $this->getTranslator()->trans("label.edit", [], "BootstrapBundle");
@@ -117,9 +117,9 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapDefaultRowButtons", [$this, "bootstrapDefaultRowButtonsFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapDeleteRowButton", [$this, "bootstrapDeleteRowButtonFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapEditRowButton", [$this, "bootstrapEditRowButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapRowButtonDefault", [$this, "bootstrapRowButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapRowButtonDelete", [$this, "bootstrapRowButtonDeleteFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapRowButtonEdit", [$this, "bootstrapRowButtonEditFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
