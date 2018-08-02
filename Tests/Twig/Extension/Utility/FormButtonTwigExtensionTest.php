@@ -52,43 +52,43 @@ final class FormButtonTwigExtensionTest extends AbstractBootstrapFrameworkTestCa
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapCancelFormButton", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapCancelFormButtonFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapFormButtonCancel", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonCancelFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapDefaultFormButtons", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapDefaultFormButtonsFunction"], $res[1]->getCallable());
+        $this->assertEquals("bootstrapFormButtonDefault", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonDefaultFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapSubmitFormButton", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapSubmitFormButtonFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapFormButtonSubmit", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonSubmitFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapCancelFormButtonFunction() method.
+     * Tests the bootstrapFormButtonCancelFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapCancelFormButtonFunction() {
+    public function testBootstrapFormButtonCancelFunction() {
 
         $obj = new FormButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
-        $this->assertEquals($res, $obj->bootstrapCancelFormButtonFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapFormButtonCancelFunction($arg));
     }
 
     /**
-     * Tests the bootstrapDefaultFormButtonsFunction() method.
+     * Tests the bootstrapFormButtonDefaultFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapDefaultFormButtonsFunction() {
+    public function testBootstrapFormButtonDefaultFunction() {
 
         $obj = new FormButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
@@ -97,21 +97,21 @@ final class FormButtonTwigExtensionTest extends AbstractBootstrapFrameworkTestCa
 
         $arg = ["cancel_href" => "https://github.com/"];
         $res = $cnl . " " . $sbt;
-        $this->assertEquals($res, $obj->bootstrapDefaultFormButtonsFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapFormButtonDefaultFunction($arg));
     }
 
     /**
-     * Tests the bootstrapSubmitFormButtonFunction() method.
+     * Tests the bootstrapFormButtonSubmitFunction() method.
      *
      * @return void
      * @depends testGetFunctions
      */
-    public function testBootstrapSubmitFormButtonFunction() {
+    public function testBootstrapFormButtonSubmitFunction() {
 
         $obj = new FormButtonTwigExtension($this->translator, new ButtonTwigExtension());
 
         $res = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> label.submit</button>';
-        $this->assertEquals($res, $obj->bootstrapSubmitFormButtonFunction());
+        $this->assertEquals($res, $obj->bootstrapFormButtonSubmitFunction());
     }
 
 }

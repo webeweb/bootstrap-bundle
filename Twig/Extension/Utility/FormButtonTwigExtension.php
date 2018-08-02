@@ -50,12 +50,12 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap cancel form button.
+     * Displays a Bootstrap form button "Cancel".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap cancel form button.
      */
-    public function bootstrapCancelFormButtonFunction(array $args = []) {
+    public function bootstrapFormButtonCancelFunction(array $args = []) {
 
         // Translate the label.
         $txt = $this->getTranslator()->trans("label.cancel", [], "BootstrapBundle");
@@ -68,27 +68,27 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap default form buttons.
+     * Displays a Bootstrap form buttons "Default".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap default form buttons.
      */
-    public function bootstrapDefaultFormButtonsFunction(array $args = []) {
+    public function bootstrapFormButtonDefaultFunction(array $args = []) {
 
         // Initialize the buttons.
-        $cancelButton = $this->bootstrapCancelFormButtonFunction(["href" => ArrayUtility::get($args, "cancel_href")]);
-        $submitButton = $this->bootstrapSubmitFormButtonFunction();
+        $cancelButton = $this->bootstrapFormButtonCancelFunction(["href" => ArrayUtility::get($args, "cancel_href")]);
+        $submitButton = $this->bootstrapFormButtonSubmitFunction();
 
         // Return the HTML.
         return implode(" ", [$cancelButton, $submitButton]);
     }
 
     /**
-     * Displays a Bootstrap submit form button.
+     * Displays a Bootstrap form button "Submit".
      *
      * @return string Returns the Bootstrap submit form button.
      */
-    public function bootstrapSubmitFormButtonFunction() {
+    public function bootstrapFormButtonSubmitFunction() {
 
         // Translate the label.
         $txt = $this->getTranslator()->trans("label.submit", [], "BootstrapBundle");
@@ -116,9 +116,9 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapCancelFormButton", [$this, "bootstrapCancelFormButtonFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapDefaultFormButtons", [$this, "bootstrapDefaultFormButtonsFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapSubmitFormButton", [$this, "bootstrapSubmitFormButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapFormButtonCancel", [$this, "bootstrapFormButtonCancelFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapFormButtonDefault", [$this, "bootstrapFormButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapFormButtonSubmit", [$this, "bootstrapFormButtonSubmitFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
