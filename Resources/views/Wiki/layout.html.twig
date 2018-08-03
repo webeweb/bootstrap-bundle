@@ -1,6 +1,9 @@
 {# Resources/views/Wiki/layout.html.twig #}
+
 {% extends "@Bootstrap/layout.html.twig" %}
+
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
+
 {% block bootstrapHeadStyles %}
     {{ parent() }}
     {% include "@SyntaxHighlighter/include/styles.html.twig" with {"theme": "eclipse"} %}
@@ -10,7 +13,9 @@
         }
     </style>
 {% endblock %}
+
 {% block bootstrapHeadTitle %}webeweb/bootstrap-bundle{% endblock %}
+
 {% block bootstrapBodyContent %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -62,6 +67,7 @@
         </div>
     </section>
 {% endblock %}
+
 {% block bootstrapBodyScripts %}
     {{ parent() }}
     {% include "@SyntaxHighlighter/include/scripts.html.twig" %}
