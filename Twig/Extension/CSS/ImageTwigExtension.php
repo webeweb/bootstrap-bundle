@@ -15,7 +15,7 @@ use SplFileObject;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Image Twig extension.
@@ -82,10 +82,10 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
     public function bootstrapImageBase64Function(array $args = []) {
 
         // Initialize the src.
-        $src = $this->base64Encode(ArrayUtility::get($args, "src"));
+        $src = $this->base64Encode(ArrayHelper::get($args, "src"));
 
         // Return the Bootstrap image.
-        return $this->bootstrapImage($src, ArrayUtility::get($args, "alt"), ArrayUtility::get($args, "width"), ArrayUtility::get($args, "height"), ArrayUtility::get($args, "class"), ArrayUtility::get($args, "usemap"));
+        return $this->bootstrapImage($src, ArrayHelper::get($args, "alt"), ArrayHelper::get($args, "width"), ArrayHelper::get($args, "height"), ArrayHelper::get($args, "class"), ArrayHelper::get($args, "usemap"));
     }
 
     /**

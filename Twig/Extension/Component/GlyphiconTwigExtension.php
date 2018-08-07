@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Glyphicon Twig extension.
@@ -45,7 +45,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
      * @return string Returns the Bootstrap glyphicon.
      */
     public function bootstrapGlyphiconFunction(array $args = []) {
-        return $this->bootstrapGlyphicon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "style"));
+        return $this->bootstrapGlyphicon(ArrayHelper::get($args, "name", "home"), ArrayHelper::get($args, "style"));
     }
 
     /**

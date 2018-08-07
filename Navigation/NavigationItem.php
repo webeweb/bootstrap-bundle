@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Navigation;
 
 use WBW\Library\Core\Node\AbstractNode;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Navigation item.
@@ -100,9 +100,9 @@ class NavigationItem extends AbstractNode implements NavigationInterface {
         // Initialize the output.
         $output = [];
 
-        ArrayUtility::set($output, "href", $this->href, [null]);
-        ArrayUtility::set($output, "icon", $this->icon, [null]);
-        ArrayUtility::set($output, "span", $this->getId(), [null]);
+        ArrayHelper::set($output, "href", $this->href, [null]);
+        ArrayHelper::set($output, "icon", $this->icon, [null]);
+        ArrayHelper::set($output, "span", $this->getId(), [null]);
 
         // Check the nodes.
         if (0 < $this->size()) {

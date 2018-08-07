@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract image Twig extension.
@@ -57,7 +57,7 @@ abstract class AbstractImageTwigExtension extends AbstractBootstrapTwigExtension
         $attributes["usemap"] = $usemap;
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%attributes%"], [StringUtility::parseArray($attributes)]);
+        return StringHelper::replace($template, ["%attributes%"], [StringHelper::parseArray($attributes)]);
     }
 
 }

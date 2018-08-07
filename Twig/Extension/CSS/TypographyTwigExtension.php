@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Typography Twig extension.
@@ -44,7 +44,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap bold text.
      */
     public function bootstrapBoldFunction(array $args = []) {
-        return $this->bootstrapBold(ArrayUtility::get($args, "content"));
+        return $this->bootstrapBold(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap deleted text.
      */
     public function bootstrapDeletedFunction(array $args = []) {
-        return $this->bootstrapDeleted(ArrayUtility::get($args, "content"));
+        return $this->bootstrapDeleted(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -64,7 +64,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap heading 1.
      */
     public function bootstrapHeading1Function(array $args = []) {
-        return $this->bootstrapHeading(1, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+        return $this->bootstrapHeading(1, ArrayHelper::get($args, "content"), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "class"));
     }
 
     /**
@@ -74,7 +74,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap heading 2.
      */
     public function bootstrapHeading2Function(array $args = []) {
-        return $this->bootstrapHeading(2, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+        return $this->bootstrapHeading(2, ArrayHelper::get($args, "content"), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "class"));
     }
 
     /**
@@ -84,7 +84,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap heading 3.
      */
     public function bootstrapHeading3Function(array $args = []) {
-        return $this->bootstrapHeading(3, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+        return $this->bootstrapHeading(3, ArrayHelper::get($args, "content"), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "class"));
     }
 
     /**
@@ -94,7 +94,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap heading 4.
      */
     public function bootstrapHeading4Function(array $args = []) {
-        return $this->bootstrapHeading(4, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+        return $this->bootstrapHeading(4, ArrayHelper::get($args, "content"), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "class"));
     }
 
     /**
@@ -104,7 +104,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap heading 5.
      */
     public function bootstrapHeading5Function(array $args = []) {
-        return $this->bootstrapHeading(5, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+        return $this->bootstrapHeading(5, ArrayHelper::get($args, "content"), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "class"));
     }
 
     /**
@@ -114,7 +114,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap heading 6.
      */
     public function bootstrapHeading6Function(array $args = []) {
-        return $this->bootstrapHeading(6, ArrayUtility::get($args, "content"), ArrayUtility::get($args, "description"), ArrayUtility::get($args, "class"));
+        return $this->bootstrapHeading(6, ArrayHelper::get($args, "content"), ArrayHelper::get($args, "description"), ArrayHelper::get($args, "class"));
     }
 
     /**
@@ -124,7 +124,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap inserted text.
      */
     public function bootstrapInsertedFunction(array $args = []) {
-        return $this->bootstrapInserted(ArrayUtility::get($args, "content"));
+        return $this->bootstrapInserted(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -134,7 +134,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap marked text.
      */
     public function bootstrapMarkedFunction(array $args = []) {
-        return $this->bootstrapMarked(ArrayUtility::get($args, "content"));
+        return $this->bootstrapMarked(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -144,7 +144,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap italic text.
      */
     public function bootstrapItalicFunction(array $args = []) {
-        return $this->bootstrapItalic(ArrayUtility::get($args, "content"));
+        return $this->bootstrapItalic(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -154,7 +154,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap small text.
      */
     public function bootstrapSmallFunction(array $args = []) {
-        return $this->bootstrapSmall(ArrayUtility::get($args, "content"));
+        return $this->bootstrapSmall(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -164,7 +164,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap strike through text.
      */
     public function bootstrapStrikeThroughFunction(array $args = []) {
-        return $this->bootstrapStrikeThrough(ArrayUtility::get($args, "content"));
+        return $this->bootstrapStrikeThrough(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -174,7 +174,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return string Returns the Bootstrap underlined text.
      */
     public function bootstrapUnderlinedFunction(array $args = []) {
-        return $this->bootstrapUnderlined(ArrayUtility::get($args, "content"));
+        return $this->bootstrapUnderlined(ArrayHelper::get($args, "content"));
     }
 
     /**

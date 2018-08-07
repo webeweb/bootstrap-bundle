@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Badge component Twig extension.
@@ -44,7 +44,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @return string Returns the Bootstrap badge.
      */
     public function bootstrapBadgeFunction(array $args = []) {
-        return $this->bootstrapBadge(ArrayUtility::get($args, "content"));
+        return $this->bootstrapBadge(ArrayHelper::get($args, "content"));
     }
 
     /**

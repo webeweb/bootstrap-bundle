@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Form button Twig extension.
@@ -64,7 +64,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
         $but = $this->getExtension()->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "remove"]);
 
         // Return the HTML.
-        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
+        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -76,7 +76,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     public function bootstrapFormButtonDefaultFunction(array $args = []) {
 
         // Initialize the buttons.
-        $cancelButton = $this->bootstrapFormButtonCancelFunction(["href" => ArrayUtility::get($args, "cancel_href")]);
+        $cancelButton = $this->bootstrapFormButtonCancelFunction(["href" => ArrayHelper::get($args, "cancel_href")]);
         $submitButton = $this->bootstrapFormButtonSubmitFunction();
 
         // Return the HTML.

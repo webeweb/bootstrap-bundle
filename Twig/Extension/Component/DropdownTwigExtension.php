@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Dropdown Twig extension.
@@ -44,7 +44,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
      * @return string Returns the Bootstrap dropdown "Button".
      */
     public function bootstrapDropdownButtonFunction(array $args = []) {
-        return $this->bootstrapDropdownButton(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "id"), ArrayUtility::get($args, "expanded", true), ArrayUtility::get($args, "class", "default"));
+        return $this->bootstrapDropdownButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "expanded", true), ArrayHelper::get($args, "class", "default"));
     }
 
     /**
@@ -63,7 +63,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
      * @return string Returns the Bootstrap dropdown "Header".
      */
     public function bootstrapDropdownHeaderFunction(array $args = []) {
-        return $this->bootstrapDropdownHeader(ArrayUtility::get($args, "content"));
+        return $this->bootstrapDropdownHeader(ArrayHelper::get($args, "content"));
     }
 
     /**

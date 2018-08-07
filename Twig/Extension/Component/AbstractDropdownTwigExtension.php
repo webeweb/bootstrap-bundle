@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract dropdown Twig extension.
@@ -55,7 +55,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractBootstrapTwigExtens
         $attributes["id"][]            = null !== $id ? $id : "";
         $attributes["data-toggle"][]   = "dropdown";
         $attributes["aria-haspopup"][] = "true";
-        $attributes["aria-expanded"][] = StringUtility::parseBoolean($expanded);
+        $attributes["aria-expanded"][] = StringHelper::parseBoolean($expanded);
 
         // Initialize the parameters.
         $innerHTML = (null !== $content ? $content : "") . "<span class=\"caret\"></span>";

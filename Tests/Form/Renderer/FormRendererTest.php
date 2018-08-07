@@ -15,7 +15,7 @@ use WBW\Bundle\BootstrapBundle\Form\Renderer\ChoiceRendererInterface;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\FormRenderer;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\TranslatedChoiceRendererInterface;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Library\Core\Algorithm\Sorting\AlphabeticalTreeSortInterface;
+use WBW\Library\Core\Model\Sorting\AlphabeticalTreeNodeInterface;
 
 /**
  * Form renderer test.
@@ -41,13 +41,13 @@ final class FormRendererTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $this->args = [
             null,
-            $this->getMockBuilder(AlphabeticalTreeSortInterface::class)->getMock(),
+            $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock(),
             $this->getMockBuilder(ChoiceRendererInterface::class)->getMock(),
             $this->getMockBuilder(TranslatedChoiceRendererInterface::class)->getMock(),
             $this,
         ];
 
-        $this->args[1]->expects($this->any())->method("getAlphabeticalTreeSortParent")->willReturn(null);
+        $this->args[1]->expects($this->any())->method("getAlphabeticalTreeNodeParent")->willReturn(null);
         $this->args[2]->expects($this->any())->method("getChoiceLabel")->willReturn("choiceLabel");
         $this->args[3]->expects($this->any())->method("getTranslatedChoiceLabel")->willReturn("translatedChoiceLabel");
     }

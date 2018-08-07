@@ -15,7 +15,7 @@ use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
-use WBW\Library\Core\Utility\IO\FileUtility;
+use WBW\Library\Core\Helper\IO\FileHelper;
 
 /**
  * Image Twig extension.
@@ -55,7 +55,7 @@ final class ImageTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
         $obj = new ImageTwigExtension();
 
-        $ref = FileUtility::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
+        $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
         $src = getcwd() . "/Resources/doc/images/bootstrap-stack_1024x0860.png";
 
         $arg0 = [];

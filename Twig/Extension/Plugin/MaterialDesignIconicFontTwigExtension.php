@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Material Design Iconic Font Twig extension.
@@ -68,7 +68,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      * @return Returns the Material Design Iconic Font icon.
      */
     public function materialDesignIconicFontIconFunction(array $args = []) {
-        return $this->materialDesignIconicFontIcon(ArrayUtility::get($args, "name", "home"), ArrayUtility::get($args, "size"), ArrayUtility::get($args, "fixedWidth", false), ArrayUtility::get($args, "border", false), ArrayUtility::get($args, "pull"), ArrayUtility::get($args, "spin"), ArrayUtility::get($args, "rotate"), ArrayUtility::get($args, "flip"), ArrayUtility::get($args, "style"));
+        return $this->materialDesignIconicFontIcon(ArrayHelper::get($args, "name", "home"), ArrayHelper::get($args, "size"), ArrayHelper::get($args, "fixedWidth", false), ArrayHelper::get($args, "border", false), ArrayHelper::get($args, "pull"), ArrayHelper::get($args, "spin"), ArrayHelper::get($args, "rotate"), ArrayHelper::get($args, "flip"), ArrayHelper::get($args, "style"));
     }
 
     /**

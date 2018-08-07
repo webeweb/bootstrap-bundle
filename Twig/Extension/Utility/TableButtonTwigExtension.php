@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Table button Twig extension.
@@ -58,8 +58,8 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
     public function bootstrapRowButtonDefaultFunction(array $args = []) {
 
         // Initialize the buttons.
-        $editButton   = $this->bootstrapRowButtonEditFunction(["href" => ArrayUtility::get($args, "edit_href")]);
-        $deleteButton = $this->bootstrapRowButtonDeleteFunction(["href" => ArrayUtility::get($args, "delete_href")]);
+        $editButton   = $this->bootstrapRowButtonEditFunction(["href" => ArrayHelper::get($args, "edit_href")]);
+        $deleteButton = $this->bootstrapRowButtonDeleteFunction(["href" => ArrayHelper::get($args, "delete_href")]);
 
         // Return the HTML.
         return implode(" ", [$editButton, $deleteButton]);
@@ -80,7 +80,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
         $but = $this->getExtension()->bootstrapButtonDangerFunction(["title" => $txt, "icon" => "trash"]);
 
         // Return the HTML.
-        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
+        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -98,7 +98,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
         $but = $this->getExtension()->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "pencil"]);
 
         // Return the HTML.
-        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayUtility::get($args, "href", self::DEFAULT_HREF));
+        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -127,7 +127,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      * Set the extension.
      *
      * @param ButtonTwigExtension $extension The extension.
-     * @return TableButtonUtilityTwigExtension Returns this table button Twig extension.
+     * @return TableButtonHelperTwigExtension Returns this table button Twig extension.
      */
     protected function setExtension(ButtonTwigExtension $extension) {
         $this->extension = $extension;

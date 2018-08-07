@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Alert Twig extension.
@@ -46,7 +46,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      * @return string Returns the Bootstrap alert "Danger".
      */
     public function bootstrapAlertDangerFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_DANGER);
+        return $this->bootstrapAlert(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_DANGER);
     }
 
     /**
@@ -56,7 +56,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      * @return string Returns the Bootstrap alert "Info".
      */
     public function bootstrapAlertInfoFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_INFO);
+        return $this->bootstrapAlert(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_INFO);
     }
 
     /**
@@ -70,10 +70,10 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["href"] = ArrayUtility::get($args, "href", NavigationInterface::NAVIGATION_HREF_DEFAULT);
+        $attributes["href"] = ArrayHelper::get($args, "href", NavigationInterface::NAVIGATION_HREF_DEFAULT);
 
         // Initialize the parameters.
-        $innerHTML = ArrayUtility::get($args, "content");
+        $innerHTML = ArrayHelper::get($args, "content");
 
         // Return the HTML.
         return self::bootstrapHTMLElement("a", $innerHTML, $attributes);
@@ -86,7 +86,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      * @return string Returns the Bootstrap alert "Success".
      */
     public function bootstrapAlertSuccessFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_SUCCESS);
+        return $this->bootstrapAlert(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_SUCCESS);
     }
 
     /**
@@ -96,7 +96,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      * @return string Returns the Bootstrap alert "Warning".
      */
     public function bootstrapAlertWarningFunction(array $args = []) {
-        return $this->bootstrapAlert(ArrayUtility::get($args, "content"), ArrayUtility::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_WARNING);
+        return $this->bootstrapAlert(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "dismissible"), "alert-" . BootstrapBundle::BOOTSTRAP_WARNING);
     }
 
     /**

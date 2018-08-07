@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * jQuery Input mask Twig Extension.
@@ -46,7 +46,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @return string Returns the jQuery input mask.
      */
     public function jQueryInputMaskFunction(array $args = []) {
-        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), ArrayUtility::get($args, "mask", ""), ArrayUtility::get($args, "opts", []), ArrayUtility::get($args, "scriptTag", false));
+        return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), ArrayHelper::get($args, "mask", ""), ArrayHelper::get($args, "opts", []), ArrayHelper::get($args, "scriptTag", false));
     }
 
     /**
@@ -57,7 +57,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      */
     public function jQueryInputMaskPhoneNumberFunction(array $args = []) {
         $defaultMask = "99 99 99 99 99";
-        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayUtility::get($args, "scriptTag", false));
+        return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 
     /**
@@ -68,7 +68,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      */
     public function jQueryInputMaskSIRETNumberFunction(array $args = []) {
         $defaultMask = "999 999 999 99999";
-        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayUtility::get($args, "scriptTag", false));
+        return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 
     /**
@@ -79,7 +79,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      */
     public function jQueryInputMaskSocialSecurityNumberFunction(array $args = []) {
         $defaultMask = "9 99 99 99 999 999 99";
-        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayUtility::get($args, "scriptTag", false));
+        return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 
     /**
@@ -90,7 +90,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      */
     public function jQueryInputMaskTime12Function(array $args = []) {
         $defaultMask = "hh:mm t";
-        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, array_merge($this->prepareOptions($args, null), ["hourFormat" => "12", "placeholder" => "__:__ _m"]), ArrayUtility::get($args, "scriptTag", false));
+        return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, array_merge($this->prepareOptions($args, null), ["hourFormat" => "12", "placeholder" => "__:__ _m"]), ArrayHelper::get($args, "scriptTag", false));
     }
 
     /**
@@ -101,7 +101,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      */
     public function jQueryInputMaskTime24Function(array $args = []) {
         $defaultMask = "hh:mm";
-        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, array_merge($this->prepareOptions($args, null), ["hourFormat" => "24", "placeholder" => "__:__"]), ArrayUtility::get($args, "scriptTag", false));
+        return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, array_merge($this->prepareOptions($args, null), ["hourFormat" => "24", "placeholder" => "__:__"]), ArrayHelper::get($args, "scriptTag", false));
     }
 
     /**
@@ -112,7 +112,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      */
     public function jQueryInputMaskVATNumberFunction(array $args = []) {
         $defaultMask = "**999 999 999 99";
-        return $this->jQueryInputMask(ArrayUtility::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayUtility::get($args, "scriptTag", false));
+        return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 
     /**
@@ -142,10 +142,10 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     private function prepareOptions(array $args, $defaultMask) {
 
         // Initialize the options.
-        $options = ArrayUtility::get($args, "opts", []);
+        $options = ArrayHelper::get($args, "opts", []);
 
-        $options["autoUnmask"]         = ArrayUtility::get($options, "autoUnmask", true);
-        $options["removeMaskOnSubmit"] = ArrayUtility::get($options, "removeMaskOnSubmit", true);
+        $options["autoUnmask"]         = ArrayHelper::get($options, "autoUnmask", true);
+        $options["removeMaskOnSubmit"] = ArrayHelper::get($options, "removeMaskOnSubmit", true);
         if (null !== $defaultMask) {
             $options["placeholder"] = preg_replace("/[^\ ][.]*/", "_", $defaultMask);
         }

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract Material Design Iconic Font Twig extension.
@@ -97,7 +97,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractBoo
     protected function materialDesignIconicFontListIcon($icon, $content) {
 
         // Initialize the parameters.
-        $glyphicon = null !== $icon ? StringUtility::replace($icon, ["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"]) : "";
+        $glyphicon = null !== $icon ? StringHelper::replace($icon, ["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"]) : "";
         $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.

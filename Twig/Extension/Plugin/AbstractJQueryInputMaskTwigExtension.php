@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract jQuery input mask Twig extension.
@@ -65,7 +65,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractBootstrapTwi
         $template = "$('%selector%').inputmask(\"%mask%\",%arguments%);";
 
         // Initialize the parameters.
-        $innerHTML = StringUtility::replace($template, ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
+        $innerHTML = StringHelper::replace($template, ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
 
         // Return the HTML
         if (true === $scriptTag) {

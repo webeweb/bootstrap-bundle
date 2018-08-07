@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Role label Twig extension.
@@ -62,7 +62,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
     private function applyColor($label, $content, $color) {
         $searches = ">" . $content;
         $replaces = " style=\"background-color:" . $color . ";\"" . $searches;
-        return StringUtility::replace($label, [$searches], [$replaces]);
+        return StringHelper::replace($label, [$searches], [$replaces]);
     }
 
     /**
@@ -133,7 +133,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      * Set the extension.
      *
      * @param LabelTwigExtension $extension The extension.
-     * @return RoleLabelUtilityTwigExtension Returns this role label utility Twig extension.
+     * @return RoleLabelHelperTwigExtension Returns this role label utility Twig extension.
      */
     protected function setExtension(LabelTwigExtension $extension) {
         $this->extension = $extension;

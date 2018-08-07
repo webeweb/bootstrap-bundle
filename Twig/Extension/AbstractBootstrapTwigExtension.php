@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig_Extension;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
-use WBW\Library\Core\Utility\Argument\StringUtility;
+use WBW\Library\Core\Helper\Argument\StringHelper;
 
 /**
  * Abstract Bootstrap Twig extension.
@@ -59,7 +59,7 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
         $template = "<%element%%attributes%>%innerHTML%</%element%>";
 
         // Initialize the attributes.
-        $attributes = trim(StringUtility::parseArray($attrs));
+        $attributes = trim(StringHelper::parseArray($attrs));
         if (0 < strlen($attributes)) {
             $attributes = " " . $attributes;
         }
@@ -68,7 +68,7 @@ abstract class AbstractBootstrapTwigExtension extends Twig_Extension {
         $innerHTML = null !== $content ? trim($content, " ") : "";
 
         // Return the HTML.
-        return StringUtility::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML]);
+        return StringHelper::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML]);
     }
 
 }

@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Form\Renderer;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Library\Core\Algorithm\Sorting\AlphabeticalTreeSort;
-use WBW\Library\Core\Algorithm\Sorting\AlphabeticalTreeSortInterface;
+use WBW\Library\Core\Helper\Sorting\AlphabeticalTreeNodeHelper;
+use WBW\Library\Core\Model\Sorting\AlphabeticalTreeNodeInterface;
 
 /**
  * Form renderer.
@@ -47,8 +47,8 @@ final class FormRenderer {
             $output = "FormRendererInterface not implemented by this object";
         }
 
-        if (true === ($option instanceof AlphabeticalTreeSortInterface)) {
-            $multiplier = AlphabeticalTreeSort::getLevel($option);
+        if (true === ($option instanceof AlphabeticalTreeNodeInterface)) {
+            $multiplier = AlphabeticalTreeNodeHelper::getLevel($option);
             $nbsp       = html_entity_decode("&nbsp;");
             $symbol     = html_entity_decode(0 === $multiplier ? "&#9472;" : "&#9492;");
             $output     = implode("", [str_repeat($nbsp, $multiplier * 3), $symbol, $nbsp, $output]);

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Code Twig extension.
@@ -44,7 +44,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap basic block.
      */
     public function bootstrapBasicBlockFunction(array $args = []) {
-        return $this->bootstrapBasicBlock(ArrayUtility::get($args, "content"));
+        return $this->bootstrapBasicBlock(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -54,7 +54,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap inline.
      */
     public function bootstrapInlineFunction(array $args = []) {
-        return $this->bootstrapInline(ArrayUtility::get($args, "content"));
+        return $this->bootstrapInline(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -64,7 +64,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap smaple output.
      */
     public function bootstrapSampleOutputFunction(array $args = []) {
-        return $this->bootstrapSampleOutput(ArrayUtility::get($args, "content"));
+        return $this->bootstrapSampleOutput(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -74,7 +74,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap user input.
      */
     public function bootstrapUserInputFunction(array $args = []) {
-        return $this->bootstrapUserInput(ArrayUtility::get($args, "content"));
+        return $this->bootstrapUserInput(ArrayHelper::get($args, "content"));
     }
 
     /**
@@ -84,7 +84,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @return string Returns the Bootstrap variable.
      */
     public function bootstrapVariableFunction(array $args = []) {
-        return $this->bootstrapVariable(ArrayUtility::get($args, "content"));
+        return $this->bootstrapVariable(ArrayHelper::get($args, "content"));
     }
 
     /**

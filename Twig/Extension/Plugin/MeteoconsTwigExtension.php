@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
-use WBW\Library\Core\Utility\Argument\ArrayUtility;
+use WBW\Library\Core\Helper\Argument\ArrayHelper;
 
 /**
  * Meteocons Twig extension.
@@ -55,7 +55,7 @@ class MeteoconsTwigExtension extends AbstractMeteoconsTwigExtension implements I
      * @return string Returns a Meteocons icon.
      */
     public function meteoconsIconFunction(array $args = []) {
-        return $this->meteoconsIcon(ArrayUtility::get($args, "name", "A"), ArrayUtility::get($args, "style"));
+        return $this->meteoconsIcon(ArrayHelper::get($args, "name", "A"), ArrayHelper::get($args, "style"));
     }
 
     /**
