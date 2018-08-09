@@ -37,7 +37,7 @@ abstract class AbstractNavTwigExtension extends AbstractBootstrapTwigExtension {
      * @param bool $stacked Stacked ?
      * @return string Returns the Bootstrap nav.
      */
-    protected function bootstrapNav($items, $class, $stacked) {
+    protected function bootstrapNav(array $items, $class, $stacked) {
 
         // Initialize the attributes.
         $attributes = [];
