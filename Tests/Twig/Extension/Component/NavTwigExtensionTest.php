@@ -60,27 +60,27 @@ final class NavTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapNavJustified", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapNavJustifiedFunction"], $res[0]->getCallable());
+        $this->assertEquals("bootstrapNavsJustified", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsJustifiedFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapNavPills", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapNavPillsFunction"], $res[1]->getCallable());
+        $this->assertEquals("bootstrapNavsPills", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapNavTabs", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapNavTabsFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapNavsTabs", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
     }
 
     /**
-     * Tests the bootstrapNavJustifiedFunction() method.
+     * Tests the bootstrapNavsJustifiedFunction() method.
      *
      * @return void
      */
-    public function testBootstrapNavJustified() {
+    public function testBootstrapNavsJustified() {
 
         $obj = new NavTwigExtension();
 
@@ -93,15 +93,15 @@ final class NavTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
 </ul>
 EOTXT;
 
-        $this->assertEquals($res, $obj->bootstrapNavJustified($arg));
+        $this->assertEquals($res, $obj->bootstrapNavsJustified($arg));
     }
 
     /**
-     * Tests the bootstrapNavPillsFunction() method.
+     * Tests the bootstrapNavsPillsFunction() method.
      *
      * @return void
      */
-    public function testBootstrapNavPills() {
+    public function testBootstrapNavsPills() {
 
         $obj = new NavTwigExtension();
 
@@ -114,7 +114,7 @@ EOTXT;
 </ul>
 EOTXT;
 
-        $this->assertEquals($res0, $obj->bootstrapNavPills($arg0));
+        $this->assertEquals($res0, $obj->bootstrapNavsPills($arg0));
 
         $arg9 = ["items" => $this->items, "stacked" => true];
         $res9 = <<< 'EOTXT'
@@ -125,15 +125,15 @@ EOTXT;
 </ul>
 EOTXT;
 
-        $this->assertEquals($res9, $obj->bootstrapNavPills($arg9));
+        $this->assertEquals($res9, $obj->bootstrapNavsPills($arg9));
     }
 
     /**
-     * Tests the bootstrapNavTabsFunction() method.
+     * Tests the bootstrapNavsTabsFunction() method.
      *
      * @return void
      */
-    public function testBootstrapNavTabs() {
+    public function testBootstrapNavsTabs() {
 
         $obj = new NavTwigExtension();
 
@@ -146,7 +146,7 @@ EOTXT;
 </ul>
 EOTXT;
 
-        $this->assertEquals($res, $obj->bootstrapNavTabs($arg));
+        $this->assertEquals($res, $obj->bootstrapNavsTabs($arg));
     }
 
 }

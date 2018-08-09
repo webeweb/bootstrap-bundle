@@ -38,33 +38,33 @@ class NavTwigExtension extends AbstractNavTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap nav "Justified".
+     * Displays a Bootstrap navs "Justified".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "Justified".
      */
-    public function bootstrapNavJustified(array $args = []) {
-        return $this->bootstrapNav(ArrayHelper::get($args, "items", []), "nav-justified", false);
+    public function bootstrapNavsJustified(array $args = []) {
+        return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-justified", false);
     }
 
     /**
-     * Displays a Bootstrap nav "Pills".
+     * Displays a Bootstrap navs "Pills".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "Pills".
      */
-    public function bootstrapNavPills(array $args = []) {
-        return $this->bootstrapNav(ArrayHelper::get($args, "items", []), "nav-pills", ArrayHelper::get($args, "stacked", false));
+    public function bootstrapNavsPills(array $args = []) {
+        return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-pills", ArrayHelper::get($args, "stacked", false));
     }
 
     /**
-     * Displays a Bootstrap nav "Tabs".
+     * Displays a Bootstrap navs "Tabs".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "Tabs".
      */
-    public function bootstrapNavTabs(array $args = []) {
-        return $this->bootstrapNav(ArrayHelper::get($args, "items", []), "nav-tabs", false);
+    public function bootstrapNavsTabs(array $args = []) {
+        return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-tabs", false);
     }
 
     /**
@@ -74,9 +74,9 @@ class NavTwigExtension extends AbstractNavTwigExtension {
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapNavJustified", [$this, "bootstrapNavJustifiedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapNavPills", [$this, "bootstrapNavPillsFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapNavTabs", [$this, "bootstrapNavTabsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapNavsPills", [$this, "bootstrapNavsPillsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bootstrapNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
