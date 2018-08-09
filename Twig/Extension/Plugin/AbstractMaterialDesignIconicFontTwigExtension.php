@@ -35,7 +35,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractBoo
      *
      * @param string $name The name.
      * @param string $size The size.
-     * @param boolean $fixedWidth Fixed width ?
+     * @param bool $fixedWidth Fixed width ?
      * @param string $border The border
      * @param string $pull The pull.
      * @param string $spin The spin.

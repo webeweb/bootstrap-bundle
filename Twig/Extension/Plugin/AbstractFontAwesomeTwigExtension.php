@@ -35,8 +35,8 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractBootstrapTwigExt
      * @param string $font The font.
      * @param string $name The name.
      * @param string $size The size.
-     * @param boolean $fixedWidth Fixed width ?
-     * @param boolean $bordered Bordered ?
+     * @param bool $fixedWidth Fixed width ?
+     * @param bool $bordered Bordered ?
      * @param string $pull The pull.
      * @param string $anime The animation.
      * @param string $style The style.
