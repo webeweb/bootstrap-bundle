@@ -31,7 +31,7 @@ class NavigationTreeHelper {
      *
      * @param Request $request The request.
      * @param array $nodes The nodes.
-     * @param integer $level The node level.
+     * @param int $level The node level.
      * @return boolean Returns true in case of success, false othewise.
      */
     protected static function activeNodes(Request $request, array $nodes = [], $level = 0) {
