@@ -5,148 +5,148 @@ services:
         alias: "monolog.logger"
         public: true
 
-    webeweb.bootstrapbundle.eventlistener.kernel:
+    webeweb.bootstrap.eventlistener.kernel:
         class:     WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener
-        arguments: ["@security.token_storage", "@webeweb.bootstrapbundle.manager.providers"]
+        arguments: ["@security.token_storage", "@webeweb.bootstrap.manager.providers"]
         public:    true
         tags:
             - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
             - { name: "kernel.event_listener", event: "kernel.request",   method: "onKernelRequest" }
 
-    webeweb.bootstrapbundle.eventlistener.notification:
+    webeweb.bootstrap.eventlistener.notification:
         class:     WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener
-        arguments: ["@webeweb.bootstrapbundle.eventlistener.kernel"]
+        arguments: ["@webeweb.bootstrap.eventlistener.kernel"]
         tags:
-            - { name: "kernel.event_listener", event: "webeweb.bootstrapbundle.event.notification.danger",  method: "onNotify" }
-            - { name: "kernel.event_listener", event: "webeweb.bootstrapbundle.event.notification.info",    method: "onNotify" }
-            - { name: "kernel.event_listener", event: "webeweb.bootstrapbundle.event.notification.success", method: "onNotify" }
-            - { name: "kernel.event_listener", event: "webeweb.bootstrapbundle.event.notification.warning", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bootstrap.event.notification.danger",  method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bootstrap.event.notification.info",    method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bootstrap.event.notification.success", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.bootstrap.event.notification.warning", method: "onNotify" }
 
-    webeweb.bootstrapbundle.manager.providers:
+    webeweb.bootstrap.manager.providers:
         class:     WBW\Bundle\BootstrapBundle\Manager\ProvidersManager
         arguments: ["@twig"]
         calls:
-            - ["setApplicationProvider",           ["@?webeweb.bootstrapbundle.provider.application"]]
-            - ["setBreadcrumbsProvider",           ["@?webeweb.bootstrapbundle.provider.breadcrumbs"]]
-            - ["setDropDownHookProvider",          ["@?webeweb.bootstrapbundle.provider.dropdownhook"]]
-            - ["setDropDownNotificationsProvider", ["@?webeweb.bootstrapbundle.provider.dropdownnotifications"]]
-            - ["setDropDownTasksProvider",         ["@?webeweb.bootstrapbundle.provider.dropdowntasks"]]
-            - ["setFooterProvider",                ["@?webeweb.bootstrapbundle.provider.footer"]]
-            - ["setNavigationProvider",            ["@?webeweb.bootstrapbundle.provider.navigation"]]
-            - ["setSearchProvider",                ["@?webeweb.bootstrapbundle.provider.search"]]
-            - ["setUserInfoProvider",              ["@?webeweb.bootstrapbundle.provider.userinfo"]]
+            - ["setApplicationProvider",           ["@?webeweb.bootstrap.provider.application"]]
+            - ["setBreadcrumbsProvider",           ["@?webeweb.bootstrap.provider.breadcrumbs"]]
+            - ["setDropDownHookProvider",          ["@?webeweb.bootstrap.provider.dropdownhook"]]
+            - ["setDropDownNotificationsProvider", ["@?webeweb.bootstrap.provider.dropdownnotifications"]]
+            - ["setDropDownTasksProvider",         ["@?webeweb.bootstrap.provider.dropdowntasks"]]
+            - ["setFooterProvider",                ["@?webeweb.bootstrap.provider.footer"]]
+            - ["setNavigationProvider",            ["@?webeweb.bootstrap.provider.navigation"]]
+            - ["setSearchProvider",                ["@?webeweb.bootstrap.provider.search"]]
+            - ["setUserInfoProvider",              ["@?webeweb.bootstrap.provider.userinfo"]]
 
-    webeweb.bootstrapbundle.twig.extension.css.button:
+    webeweb.bootstrap.twig.extension.css.button:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.css.code:
+    webeweb.bootstrap.twig.extension.css.code:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.css.grid:
+    webeweb.bootstrap.twig.extension.css.grid:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.css.image:
+    webeweb.bootstrap.twig.extension.css.image:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.css.typography:
+    webeweb.bootstrap.twig.extension.css.typography:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.alert:
+    webeweb.bootstrap.twig.extension.component.alert:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.badge:
+    webeweb.bootstrap.twig.extension.component.badge:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.breadcrumb:
+    webeweb.bootstrap.twig.extension.component.breadcrumb:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension
         arguments: ["@translator"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.buttongroup:
+    webeweb.bootstrap.twig.extension.component.buttongroup:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonGroupTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.dropdown:
+    webeweb.bootstrap.twig.extension.component.dropdown:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.glyphicon:
+    webeweb.bootstrap.twig.extension.component.glyphicon:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.label:
+    webeweb.bootstrap.twig.extension.component.label:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.nav:
+    webeweb.bootstrap.twig.extension.component.nav:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.component.progressbar:
+    webeweb.bootstrap.twig.extension.component.progressbar:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.plugin.fontawesome:
+    webeweb.bootstrap.twig.extension.plugin.fontawesome:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.plugin.jqueryinputmask:
+    webeweb.bootstrap.twig.extension.plugin.jqueryinputmask:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtension
-        arguments: ["@webeweb.bootstrapbundle.twig.extension.renderer"]
+        arguments: ["@webeweb.bootstrap.twig.extension.renderer"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.plugin.materialdesigniconicfont:
+    webeweb.bootstrap.twig.extension.plugin.materialdesigniconicfont:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.plugin.meteocons:
+    webeweb.bootstrap.twig.extension.plugin.meteocons:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.renderer:
+    webeweb.bootstrap.twig.extension.renderer:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.utility.formbutton:
+    webeweb.bootstrap.twig.extension.utility.formbutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.css.button"]
+        arguments: ["@translator", "@webeweb.bootstrap.twig.extension.css.button"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.utility.rolelabel:
+    webeweb.bootstrap.twig.extension.utility.rolelabel:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.component.label"]
+        arguments: ["@translator", "@webeweb.bootstrap.twig.extension.component.label"]
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrapbundle.twig.extension.utility.tablebutton:
+    webeweb.bootstrap.twig.extension.utility.tablebutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrapbundle.twig.extension.css.button"]
+        arguments: ["@translator", "@webeweb.bootstrap.twig.extension.css.button"]
         tags:
             - { name: "twig.extension" }

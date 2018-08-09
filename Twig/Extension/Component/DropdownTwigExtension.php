@@ -28,7 +28,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.component.dropdown";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.dropdown";
 
     /**
      * Constructor.

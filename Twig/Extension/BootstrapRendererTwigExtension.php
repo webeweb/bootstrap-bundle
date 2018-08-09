@@ -30,7 +30,7 @@ class BootstrapRendererTwigExtension extends AbstractBootstrapTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.renderer";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.renderer";
 
     /**
      * Constructor.

@@ -29,7 +29,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.plugin.fontawesome";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.plugin.fontawesome";
 
     /**
      * Constructor.

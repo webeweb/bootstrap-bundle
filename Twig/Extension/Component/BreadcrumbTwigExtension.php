@@ -31,7 +31,7 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.component.breadcrumb";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.breadcrumb";
 
     /**
      * Constructor.

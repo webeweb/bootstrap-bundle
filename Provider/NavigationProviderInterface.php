@@ -26,7 +26,7 @@ interface NavigationProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.provider.navigation";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.navigation";
 
     /**
      * Get the tree.

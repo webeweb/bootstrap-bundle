@@ -35,7 +35,7 @@ class ProvidersManager {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.manager.providers";
+    const SERVICE_NAME = "webeweb.bootstrap.manager.providers";
 
     /**
      * Application provider.

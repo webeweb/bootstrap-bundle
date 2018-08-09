@@ -29,7 +29,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.component.label";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.label";
 
     /**
      * Constructor.

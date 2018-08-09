@@ -24,7 +24,7 @@ interface SearchProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.provider.search";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.search";
 
     /**
      * Get the view.

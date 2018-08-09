@@ -28,7 +28,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.plugin.jqueryinputmask";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.plugin.jqueryinputmask";
 
     /**
      * Constructor.

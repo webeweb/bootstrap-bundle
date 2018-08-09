@@ -24,7 +24,7 @@ interface UserInfoProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.provider.userinfo";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.userinfo";
 
     /**
      * Provides a register link.

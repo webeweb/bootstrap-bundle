@@ -30,7 +30,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.component.alert";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.alert";
 
     /**
      * Constructor.

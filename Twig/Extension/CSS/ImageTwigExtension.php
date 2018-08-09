@@ -31,7 +31,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.css.image";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.css.image";
 
     /**
      * Constructor.

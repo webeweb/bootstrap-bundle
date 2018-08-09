@@ -29,7 +29,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.plugin.materialdesigniconicfont";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.plugin.materialdesigniconicfont";
 
     /**
      * Constructor.

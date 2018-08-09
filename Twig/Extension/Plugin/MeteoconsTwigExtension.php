@@ -28,7 +28,7 @@ class MeteoconsTwigExtension extends AbstractMeteoconsTwigExtension implements I
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.plugin.meteocons";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.plugin.meteocons";
 
     /**
      * Constructor.

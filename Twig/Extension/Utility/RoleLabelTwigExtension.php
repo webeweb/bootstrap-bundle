@@ -31,7 +31,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.utility.rolelabel";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.utility.rolelabel";
 
     /**
      * Extension.

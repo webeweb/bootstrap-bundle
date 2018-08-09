@@ -31,7 +31,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.css.button";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.css.button";
 
     /**
      * Constructor.

@@ -24,7 +24,7 @@ interface ApplicationProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.provider.application";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.application";
 
     /**
      * Get the description.

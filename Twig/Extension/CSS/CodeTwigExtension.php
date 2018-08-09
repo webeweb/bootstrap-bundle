@@ -28,7 +28,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.css.code";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.css.code";
 
     /**
      * Constructor.

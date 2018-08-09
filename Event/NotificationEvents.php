@@ -26,27 +26,27 @@ class NotificationEvents {
      *
      * @var string
      */
-    const NOTIFICATION_DANGER = "webeweb.bootstrapbundle.event.notification." . BootstrapBundle::BOOTSTRAP_DANGER;
+    const NOTIFICATION_DANGER = "webeweb.bootstrap.event.notification." . BootstrapBundle::BOOTSTRAP_DANGER;
 
     /**
      * Notification "Info".
      *
      * @var string
      */
-    const NOTIFICATION_INFO = "webeweb.bootstrapbundle.event.notification." . BootstrapBundle::BOOTSTRAP_INFO;
+    const NOTIFICATION_INFO = "webeweb.bootstrap.event.notification." . BootstrapBundle::BOOTSTRAP_INFO;
 
     /**
      * Notification "Success".
      *
      * @var string
      */
-    const NOTIFICATION_SUCCESS = "webeweb.bootstrapbundle.event.notification." . BootstrapBundle::BOOTSTRAP_SUCCESS;
+    const NOTIFICATION_SUCCESS = "webeweb.bootstrap.event.notification." . BootstrapBundle::BOOTSTRAP_SUCCESS;
 
     /**
      * Notification "Warning".
      *
      * @var string
      */
-    const NOTIFICATION_WARNING = "webeweb.bootstrapbundle.event.notification." . BootstrapBundle::BOOTSTRAP_WARNING;
+    const NOTIFICATION_WARNING = "webeweb.bootstrap.event.notification." . BootstrapBundle::BOOTSTRAP_WARNING;
 
 }

@@ -29,7 +29,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.twig.extension.utility.formbutton";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.utility.formbutton";
 
     /**
      * Extension.

@@ -26,7 +26,7 @@ class NotificationEventListener {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrapbundle.eventlistener.notification";
+    const SERVICE_NAME = "webeweb.bootstrap.eventlistener.notification";
 
     /**
      * Kernel event listener.
