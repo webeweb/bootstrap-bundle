@@ -22,7 +22,7 @@ use WBW\Library\Core\Helper\Argument\StringHelper;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
- * @see https://getbootstrap.com/docs/3.3/css/#buttons
+ * @link https://getbootstrap.com/docs/3.3/css/#buttons
  */
 class ButtonTwigExtension extends AbstractButtonTwigExtension {
 

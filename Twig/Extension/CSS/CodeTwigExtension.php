@@ -19,7 +19,7 @@ use WBW\Library\Core\Helper\Argument\ArrayHelper;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
- * @see https://getbootstrap.com/docs/3.3/css/#code
+ * @link https://getbootstrap.com/docs/3.3/css/#code
  */
 class CodeTwigExtension extends AbstractCodeTwigExtension {
 
