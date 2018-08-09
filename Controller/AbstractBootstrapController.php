@@ -82,7 +82,7 @@ abstract class AbstractBootstrapController extends Controller {
      * Determines if the connected user have roles or redirect.
      *
      * @param array $roles The roles.
-     * @param boolean $or OR ?
+     * @param bool $or OR ?
      * @param string $redirect The redirect.
      * @return boolean Returns true.
      * @throws BadUserRoleException Throws a bad user role exception.
