@@ -47,7 +47,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractBootstrapTwigExte
      * Displays a Bootstrap breadcrumb.
      *
      * @param NavigationNode $node The node.
-     * @param boolean $last Last node ?.
+     * @param bool $last Last node ?.
      * @return string Returns the Bootstrap breadcrumb.
      */
     private function bootstrapBreadcrumb(NavigationNode $node, $last) {

@@ -36,7 +36,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractBootstrapTwigExtens
      *
      * @param string $content The content.
      * @param string $id The id.
-     * @param boolean $expanded Expanded ?
+     * @param bool $expanded Expanded ?
      * @param string $class The class.
      * @return string Returns the Bootstrap dropdown "Button".
      */

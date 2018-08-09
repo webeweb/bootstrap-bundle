@@ -33,11 +33,11 @@ abstract class AbstractProgressBarTwigExtension extends AbstractBootstrapTwigExt
      * Displays a Bootstrap progress bar.
      *
      * @param string $content The content.
-     * @param integer $value The value.
-     * @param integer $min The min.
-     * @param integer $max The max.
-     * @param boolean $striped Striped ?
-     * @param boolean $animated Animated ?
+     * @param int $value The value.
+     * @param int $min The min.
+     * @param int $max The max.
+     * @param bool $striped Striped ?
+     * @param bool $animated Animated ?
      * @param string $class The class.
      * @return string Returns the Bootstrap progress bar.
      */

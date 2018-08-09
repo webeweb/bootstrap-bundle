@@ -33,7 +33,7 @@ abstract class AbstractAlertTwigExtension extends AbstractBootstrapTwigExtension
      * Displays a Bootstrap alert.
      *
      * @param string $content The content.
-     * @param boolean $dismissible Dismissible ?
+     * @param bool $dismissible Dismissible ?
      * @param string $class The class.
      * @return string Returns the Bootstrap alert.
      */
