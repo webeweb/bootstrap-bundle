@@ -26,7 +26,7 @@ abstract class AbstractBootstrapException extends Exception {
      * Constructor.
      *
      * @param string $message The message.
-     * @param integer $code The code.
+     * @param int $code The code.
      * @param Exception $previous The previous.
      */
     public function __construct($message, $code = 500, Exception $previous = null) {
