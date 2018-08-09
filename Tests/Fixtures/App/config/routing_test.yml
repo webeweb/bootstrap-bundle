@@ -14,6 +14,16 @@ bootstrap_flashbag_action:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::flashbagAction" }
     methods:  ["GET"]
 
+bootstrap_get_router_action:
+    path:     "/get/router"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::getRouterAction" }
+    methods:  ["GET"]
+
+bootstrap_get_translator_action:
+    path:     "/get/translator"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::getTranslatorAction" }
+    methods:  ["GET"]
+
 bootstrap_redirect_action:
     path:     "/redirect"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::redirectAction" }

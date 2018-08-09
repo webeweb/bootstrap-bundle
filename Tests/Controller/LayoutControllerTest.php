@@ -89,6 +89,36 @@ EOTXT;
     }
 
     /**
+     * Tests the getRouterAction() method.
+     *
+     * @return void
+     */
+    public function testGetRouterAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/get/router");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * Tests the getTranslatorAction() method.
+     *
+     * @return void
+     */
+    public function testGetTranslatorAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/get/translator");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
      * Tests the redirectAction() method.
      *
      * @return void

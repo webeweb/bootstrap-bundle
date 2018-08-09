@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\BootstrapBundle\Controller\AbstractBootstrapController;
 
@@ -27,10 +26,9 @@ final class LayoutController extends AbstractBootstrapController {
     /**
      * Displays a blank page.
      *
-     * @param Request $request The request.
      * @return Response Returns the response.
      */
-    public function blankAction(Request $request) {
+    public function blankAction() {
 
         // Return the response.
         return $this->render("@Bootstrap/layout/blank.html.twig");
@@ -39,10 +37,9 @@ final class LayoutController extends AbstractBootstrapController {
     /**
      * Displays an email.
      *
-     * @param Request $request The request.
      * @return Response Returns the response.
      */
-    public function emailAction(Request $request) {
+    public function emailAction() {
 
         // Return the response.
         return $this->render("@Bootstrap/email.html.twig");
@@ -51,10 +48,9 @@ final class LayoutController extends AbstractBootstrapController {
     /**
      * Displays a flashbag page.
      *
-     * @param Request $request The request.
      * @return Response Returns the response.
      */
-    public function flashbagAction(Request $request) {
+    public function flashbagAction() {
 
         // Notifiy
         $this->notifyDanger("Danger");
@@ -67,12 +63,39 @@ final class LayoutController extends AbstractBootstrapController {
     }
 
     /**
-     * Redirect.
+     * Get router.
      *
-     * @param Request $request The request.
      * @return Response Returns the response.
      */
-    public function redirectAction(Request $request) {
+    public function getRouterAction() {
+
+        // Get the translator.
+        $this->getRouter();
+
+        // Return the response.
+        return $this->render("@Bootstrap/layout/blank.html.twig");
+    }
+
+    /**
+     * Get translator.
+     *
+     * @return Response Returns the response.
+     */
+    public function getTranslatorAction() {
+
+        // Get the translator.
+        $this->getTranslator();
+
+        // Return the response.
+        return $this->render("@Bootstrap/layout/blank.html.twig");
+    }
+
+    /**
+     * Redirect.
+     *
+     * @return Response Returns the response.
+     */
+    public function redirectAction() {
 
         //
         $this->hasRolesOrRedirect(["ROLE_GITHUB"], false, "/blank");
