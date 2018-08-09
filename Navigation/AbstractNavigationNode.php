@@ -177,7 +177,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Set the active.
      *
-     * @param boolean $active Active ?
+     * @param bool $active Active ?
      * @return NavigationNode Returns the navigation node.
      */
     public function setActive($active) {
@@ -188,7 +188,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Set the enable.
      *
-     * @param boolean $enable Enable ?.
+     * @param bool $enable Enable ?.
      * @return NavigationNode Returns the navigation node.
      */
     public function setEnable($enable) {
@@ -243,7 +243,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Set the visible.
      *
-     * @param boolean $visible Visible ?
+     * @param bool $visible Visible ?
      * @return NavigationNode Returns the navigation node.
      */
     protected function setVisible($visible) {
