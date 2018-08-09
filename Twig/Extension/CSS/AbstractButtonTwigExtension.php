@@ -36,7 +36,7 @@ abstract class AbstractButtonTwigExtension extends AbstractBootstrapTwigExtensio
      * @param string $content The content.
      * @param string $title The title.
      * @param string $size The size.
-     * @param boolean $block Block ?
+     * @param bool $block Block ?
      * @param booelan $active Active ?
      * @param booelan $disable Disable ?
      * @param string $class The class.

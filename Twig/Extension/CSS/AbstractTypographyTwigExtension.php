@@ -52,7 +52,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
     /**
      * Displays a Bootstrap heading.
      *
-     * @param integer $size The size.
+     * @param int $size The size.
      * @param string $content The content.
      * @param string $description The description.
      * @param string $class The class.
