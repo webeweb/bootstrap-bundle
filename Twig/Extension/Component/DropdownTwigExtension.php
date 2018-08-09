@@ -19,7 +19,7 @@ use WBW\Library\Core\Helper\Argument\ArrayHelper;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
- * @see https://getbootstrap.com/docs/3.3/components/#dropdowns
+ * @link https://getbootstrap.com/docs/3.3/components/#dropdowns
  */
 class DropdownTwigExtension extends AbstractDropdownTwigExtension {
 

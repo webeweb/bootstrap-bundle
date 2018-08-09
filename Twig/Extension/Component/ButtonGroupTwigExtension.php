@@ -18,7 +18,7 @@ use Twig_SimpleFunction;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
- * @see https://getbootstrap.com/docs/3.3/components/#btn-groups
+ * @link https://getbootstrap.com/docs/3.3/components/#btn-groups
  */
 class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
 

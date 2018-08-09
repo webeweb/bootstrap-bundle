@@ -20,7 +20,7 @@ use WBW\Library\Core\Helper\Argument\ArrayHelper;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
- * @see https://getbootstrap.com/docs/3.3/components/#labels
+ * @link https://getbootstrap.com/docs/3.3/components/#labels
  */
 class LabelTwigExtension extends AbstractLabelTwigExtension {
 
