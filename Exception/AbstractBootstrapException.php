@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Exception;
 
-use Exception;
+use WBW\Library\Core\Exception\AbstractCoreException;
 
 /**
  * Abstract Bootstrap exception.
@@ -20,17 +20,15 @@ use Exception;
  * @package WBW\Bundle\BootstrapBundle\Exception
  * @abstract
  */
-abstract class AbstractBootstrapException extends Exception {
+abstract class AbstractBootstrapException extends AbstractCoreException {
 
     /**
      * Constructor.
      *
      * @param string $message The message.
-     * @param int $code The code.
-     * @param Exception $previous The previous.
      */
-    public function __construct($message, $code = 500, Exception $previous = null) {
-        parent::__construct($message, $code, $previous);
+    public function __construct($message) {
+        parent::__construct($message);
     }
 
 }
