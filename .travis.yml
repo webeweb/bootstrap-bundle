@@ -1,32 +1,32 @@
 # .travis.yml
-language: php
+language: "php"
 
 php:
-    - 5.6
-    - 7.0
-    - 7.1
-    - 7.2
-    - nightly
-    - hhvm
+    - "5.6"
+    - "7.0"
+    - "7.1"
+    - "7.2"
+    - "nightly"
+    - "hhvm"
 
 matrix:
     include:
-        - php: 5.6
-          env: SYMFONY_VERSION=2.6.*
-        - php: 5.6
-          env: SYMFONY_VERSION=2.7.*
-        - php: 5.6
-          env: SYMFONY_VERSION=2.8.*
-        - php: 5.6
-          env: SYMFONY_VERSION=3.0.*
-        - php: 5.6
-          env: SYMFONY_VERSION=3.1.*
-        - php: 5.6
-          env: SYMFONY_VERSION=3.2.*
-        - php: 5.6
-          env: SYMFONY_VERSION=3.3.*
-        - php: 5.6
-          env: SYMFONY_VERSION=3.4.*
+        - php: "5.6"
+          env: "SYMFONY_VERSION=2.6.*"
+        - php: "5.6"
+          env: "SYMFONY_VERSION=2.7.*"
+        - php: "5.6"
+          env: "SYMFONY_VERSION=2.8.*"
+        - php: "5.6"
+          env: "SYMFONY_VERSION=3.0.*"
+        - php: "5.6"
+          env: "SYMFONY_VERSION=3.1.*"
+        - php: "5.6"
+          env: "SYMFONY_VERSION=3.2.*"
+        - php: "5.6"
+          env: "SYMFONY_VERSION=3.3.*"
+        - php: "5.6"
+          env: "SYMFONY_VERSION=3.4.*"
     allow_failures:
         - php: nightly
         - php: hhvm
@@ -37,21 +37,21 @@ before_install:
     - if [ "$SYMFONY_VERSION" = "3.4.*@dev" ]; then perl -pi -e 's/^}$/,"minimum-stability":"dev"}/' composer.json; fi;
 
 install:
-    - composer update
-    - wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.0.0/php-coveralls.phar -O coveralls.phar
-    - chmod +x coveralls.phar
-    - php coveralls.phar --version
+    - "composer update"
+    - "wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.0.0/php-coveralls.phar -O coveralls.phar"
+    - "chmod +x coveralls.phar"
+    - "php coveralls.phar --version"
 
 before_script:
-    - mkdir -p build/logs
+    - "mkdir -p build/logs"
 
 script:
-    - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+    - "vendor/bin/phpunit --coverage-clover build/logs/clover.xml"
 
 after_success:
-    - php coveralls.phar -v
+    - "php coveralls.phar -v"
 
 notifications:
     email:
-        on_failure: always
-        on_success: always
+        on_failure: "always"
+        on_success: "always"
