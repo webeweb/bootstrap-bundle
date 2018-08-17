@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Model;
+namespace WBW\Bundle\BootstrapBundle\Model\Layout;
 
 /**
  * Email layout model.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Model
+ * @package WBW\Bundle\BootstrapBundle\Model\Layout
  */
 class EmailLayout {
 
