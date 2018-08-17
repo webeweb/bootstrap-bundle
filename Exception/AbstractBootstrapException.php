@@ -26,9 +26,10 @@ abstract class AbstractBootstrapException extends AbstractCoreException {
      * Constructor.
      *
      * @param string $message The message.
+     * @param int $code The code.
      */
-    public function __construct($message) {
-        parent::__construct($message);
+    public function __construct($message, $code) {
+        parent::__construct($message, $code);
     }
 
 }
