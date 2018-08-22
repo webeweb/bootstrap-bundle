@@ -15,7 +15,7 @@ use SplFileObject;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
 use Twig_SimpleFunction;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Image Twig extension.

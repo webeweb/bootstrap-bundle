@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Library\Core\Helper\Argument\StringHelper;
+use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Abstract dropdown Twig extension.

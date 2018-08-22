@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Exception;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Library\Core\Helper\IO\HTTPInterface;
+use WBW\Library\Core\IO\HTTPInterface;
 
 /**
  * Bad user role exception.

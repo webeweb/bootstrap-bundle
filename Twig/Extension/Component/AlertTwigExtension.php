@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Alert Twig extension.

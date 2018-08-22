@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Progress bar Twig extension.

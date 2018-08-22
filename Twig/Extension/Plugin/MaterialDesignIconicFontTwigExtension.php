@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Material Design Iconic Font Twig extension.

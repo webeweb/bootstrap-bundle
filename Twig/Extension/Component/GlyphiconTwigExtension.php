@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Glyphicon Twig extension.

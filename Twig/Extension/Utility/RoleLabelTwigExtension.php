@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
-use WBW\Library\Core\Helper\Argument\StringHelper;
+use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Role label Twig extension.

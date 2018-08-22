@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Form\Renderer;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Library\Core\Helper\Sorting\AlphabeticalTreeNodeHelper;
-use WBW\Library\Core\Model\Sorting\AlphabeticalTreeNodeInterface;
+use WBW\Library\Core\Sorting\AlphabeticalTreeNodeHelper;
+use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 
 /**
  * Form renderer.

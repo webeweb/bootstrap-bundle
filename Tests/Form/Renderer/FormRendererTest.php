@@ -15,7 +15,7 @@ use WBW\Bundle\BootstrapBundle\Form\Renderer\ChoiceRendererInterface;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\FormRenderer;
 use WBW\Bundle\BootstrapBundle\Form\Renderer\TranslatedChoiceRendererInterface;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Library\Core\Model\Sorting\AlphabeticalTreeNodeInterface;
+use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 
 /**
  * Form renderer test.

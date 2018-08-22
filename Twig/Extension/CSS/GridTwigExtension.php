@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use Twig_SimpleFunction;
-use WBW\Library\Core\Helper\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Grid Twig extension.

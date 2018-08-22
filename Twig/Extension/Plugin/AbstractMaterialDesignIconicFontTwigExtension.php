@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Library\Core\Helper\Argument\StringHelper;
+use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Abstract Material Design Iconic Font Twig extension.
