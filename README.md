@@ -151,5 +151,5 @@ $ vendor/bin/phpunit
 
 ## License
 
-bootstrap-bundle is released under the LGPL License. See the bundled [LICENSE](LICENSE)
+`bootstrap-bundle` is released under the LGPL License. See the bundled [LICENSE](LICENSE)
 file for details.
