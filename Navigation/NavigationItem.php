@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Navigation;
 
 use WBW\Library\Core\Argument\ArrayHelper;
-use WBW\Library\Core\Node\AbstractNode;
+use WBW\Library\Core\Model\Node\AbstractNode;
 
 /**
  * Navigation item.

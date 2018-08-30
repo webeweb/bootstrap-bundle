@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\Select2;
 
 use WBW\Bundle\BootstrapBundle\Model\Select2\Select2DataFormatInterface;
-use WBW\Library\Core\Node\AbstractNode;
+use WBW\Library\Core\Model\Node\AbstractNode;
 
 /**
  * Select2 item model.
