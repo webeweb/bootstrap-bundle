@@ -12,11 +12,11 @@
 namespace WBW\Bundle\BootstrapBundle\Helper;
 
 use Symfony\Component\HttpFoundation\Request;
-use WBW\Bundle\BootstrapBundle\Navigation\AbstractNavigationNode;
-use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\AbstractNavigationNode;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\BreadcrumbNode;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationInterface;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationTree;
 
 /**
  * Navigation tree helper.
