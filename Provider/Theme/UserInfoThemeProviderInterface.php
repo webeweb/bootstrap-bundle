@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ThemeProviderInterface;
 
 /**
- * User info provider interface.
+ * User info theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface UserInfoProviderInterface extends BootstrapProviderInterface {
+interface UserInfoThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Service name.
@@ -41,11 +41,4 @@ interface UserInfoProviderInterface extends BootstrapProviderInterface {
      * @return boolean Returns true in case of success, false otherwise.
      */
     public function provideResettingLink();
-
-    /**
-     * Get the view.
-     *
-     * @return string Returns the view.
-     */
-    public function getView();
 }

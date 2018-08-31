@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ThemeProviderInterface;
 
 /**
- * Drop down "Notifications" provider interface.
+ * Notifications drop down theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface DropDownNotificationsProviderInterface extends BootstrapProviderInterface {
+interface NotificationsDropDownThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Service name.
@@ -34,11 +34,4 @@ interface DropDownNotificationsProviderInterface extends BootstrapProviderInterf
      * @return array Returns the notifications.
      */
     public function getNotifications();
-
-    /**
-     * Get the view.
-     *
-     * @return string Returns the view.
-     */
-    public function getView();
 }

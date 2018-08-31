@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ThemeProviderInterface;
 
 /**
- * Application provider interface.
+ * Application theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface ApplicationProviderInterface extends BootstrapProviderInterface {
+interface ApplicationThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Service name.

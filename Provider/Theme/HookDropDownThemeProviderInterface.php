@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ThemeProviderInterface;
 
 /**
- * Drop down hook provider interface.
+ * Hook drop down theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface DropDownHookProviderInterface extends BootstrapProviderInterface {
+interface HookDropDownThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Service name.
@@ -34,11 +34,4 @@ interface DropDownHookProviderInterface extends BootstrapProviderInterface {
      * @return array Returns the items.
      */
     public function getItems();
-
-    /**
-     * Get the view.
-     *
-     * @return string Returns the view.
-     */
-    public function getView();
 }

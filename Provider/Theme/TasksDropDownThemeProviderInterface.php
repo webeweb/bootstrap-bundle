@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ThemeProviderInterface;
 
 /**
- * Drop down "Tasks" provider interface.
+ * Tasks drop down theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface DropDownTasksProviderInterface extends BootstrapProviderInterface {
+interface TasksDropDownThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Service name.
@@ -34,11 +34,4 @@ interface DropDownTasksProviderInterface extends BootstrapProviderInterface {
      * @return array Returns the tasks.
      */
     public function getTasks();
-
-    /**
-     * Get the view.
-     *
-     * @return string Returns the view.
-     */
-    public function getView();
 }

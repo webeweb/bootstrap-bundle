@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ThemeProviderInterface;
 
 /**
- * Footer provider interface.
+ * Footer theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface FooterProviderInterface extends BootstrapProviderInterface {
+interface FooterThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Service name.
@@ -28,10 +28,4 @@ interface FooterProviderInterface extends BootstrapProviderInterface {
      */
     const SERVICE_NAME = "webeweb.bootstrap.provider.footer";
 
-    /**
-     * Get the view.
-     *
-     * @return string Returns the view.
-     */
-    public function getView();
 }

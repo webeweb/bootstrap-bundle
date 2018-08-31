@@ -11,27 +11,28 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Provider\ThemeProviderInterface;
 
 /**
- * Search provider interface.
+ * Navigation theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface SearchProviderInterface extends BootstrapProviderInterface {
+interface NavigationThemeProviderInterface extends ThemeProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.search";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.navigation";
 
     /**
-     * Get the view.
+     * Get the tree.
      *
-     * @return string Returns the view.
+     * @return NavigationTree Returns the tree.
      */
-    public function getView();
+    public function getTree();
 }
