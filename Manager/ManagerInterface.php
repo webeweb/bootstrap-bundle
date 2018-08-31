@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Manager
  */
-interface BootstrapManagerInterface {
+interface ManagerInterface {
 
     /**
      * Register a provider.
