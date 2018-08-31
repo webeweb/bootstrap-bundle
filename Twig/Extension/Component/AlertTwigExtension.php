@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**

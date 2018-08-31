@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig_Extension;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
+use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationInterface;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
