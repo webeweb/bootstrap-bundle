@@ -18,7 +18,7 @@ use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
  * Select2 helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package  WBW\Bundle\BootstrapBundle\Helper\Model
+ * @package WBW\Bundle\BootstrapBundle\Helper\Model
  */
 class Select2Helper {
 
@@ -27,7 +27,7 @@ class Select2Helper {
      *
      * @param Select2DataFormatInterface[] $items The items.
      * @return array Returns the "results" array.
-     * @throws IllegalArgumentException Throws an illegal argument exceptino if an item does not implement Select2DataFormatInterface.
+     * @throws IllegalArgumentException Throws an illegal argument exception if an item does not implement Select2DataFormatInterface.
      */
     public static function toResults($items) {
 
