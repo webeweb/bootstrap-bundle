@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Form\Factory;
 
 use WBW\Bundle\BootstrapBundle\Form\Factory\FormFactory;
-use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**

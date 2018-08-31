@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\App;
 
-use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationInterface;
-use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationItem;
-use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
+use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 
 /**
  * Test fixtures.
