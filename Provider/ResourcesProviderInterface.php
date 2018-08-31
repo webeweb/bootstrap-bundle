@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\Resource;
+namespace WBW\Bundle\BootstrapBundle\Provider;
 
 /**
- * Bootstrap resources provider interface.
+ * Resources provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\Resource
+ * @package WBW\Bundle\BootstrapBundle\Provider
  */
-interface BootstrapResourcesProviderInterface {
+interface ResourcesProviderInterface extends ProviderInterface {
 
     /**
      * Get the resources.

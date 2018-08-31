@@ -12,17 +12,17 @@
 namespace WBW\Bundle\BootstrapBundle\Provider;
 
 /**
- * Bootstrap resources provider interface.
+ * Theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider
  */
-interface BootstrapResourcesProviderInterface extends BootstrapProviderInterface {
+interface ThemeProviderInterface extends ProviderInterface {
 
     /**
-     * Get the resources.
+     * Get the view.
      *
-     * @return array Returns the resources.
+     * @return string Returns the view.
      */
-    public function getResources();
+    public function getView();
 }
