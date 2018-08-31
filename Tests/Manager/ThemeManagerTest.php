@@ -12,15 +12,15 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Manager;
 
 use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownHookProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownNotificationsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownTasksProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownHookThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownNotificationsThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownTasksThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
@@ -68,15 +68,15 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testRegister() {
 
         $obj = new ThemeManager($this->twigEnvironment);
-        $obj->setApplicationProvider($this->getMockBuilder(ApplicationProviderInterface::class)->getMock());
-        $obj->setBreadcrumbsProvider($this->getMockBuilder(BreadcrumbsProviderInterface::class)->getMock());
-        $obj->setDropDownHookProvider($this->getMockBuilder(DropDownHookProviderInterface::class)->getMock());
-        $obj->setDropDownNotificationsProvider($this->getMockBuilder(DropDownNotificationsProviderInterface::class)->getMock());
-        $obj->setDropDownTasksProvider($this->getMockBuilder(DropDownTasksProviderInterface::class)->getMock());
-        $obj->setFooterProvider($this->getMockBuilder(FooterProviderInterface::class)->getMock());
-        $obj->setNavigationProvider($this->getMockBuilder(NavigationProviderInterface::class)->getMock());
-        $obj->setSearchProvider($this->getMockBuilder(SearchProviderInterface::class)->getMock());
-        $obj->setUserInfoProvider($this->getMockBuilder(UserInfoProviderInterface::class)->getMock());
+        $obj->setApplicationProvider($this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock());
+        $obj->setBreadcrumbsProvider($this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock());
+        $obj->setDropDownHookProvider($this->getMockBuilder(DropDownHookThemeProviderInterface::class)->getMock());
+        $obj->setDropDownNotificationsProvider($this->getMockBuilder(DropDownNotificationsThemeProviderInterface::class)->getMock());
+        $obj->setDropDownTasksProvider($this->getMockBuilder(DropDownTasksThemeProviderInterface::class)->getMock());
+        $obj->setFooterProvider($this->getMockBuilder(FooterThemeProviderInterface::class)->getMock());
+        $obj->setNavigationProvider($this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock());
+        $obj->setSearchProvider($this->getMockBuilder(SearchThemeProviderInterface::class)->getMock());
+        $obj->setUserInfoProvider($this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock());
 
         $obj->register();
 
@@ -85,31 +85,31 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertCount(9, $res);
 
         $this->assertArrayHasKey("ApplicationProvider", $res);
-        $this->assertInstanceOf(ApplicationProviderInterface::class, $res["ApplicationProvider"]);
+        $this->assertInstanceOf(ApplicationThemeProviderInterface::class, $res["ApplicationProvider"]);
 
         $this->assertArrayHasKey("BreadcrumbsProvider", $res);
-        $this->assertInstanceOf(BreadcrumbsProviderInterface::class, $res["BreadcrumbsProvider"]);
+        $this->assertInstanceOf(BreadcrumbsThemeProviderInterface::class, $res["BreadcrumbsProvider"]);
 
         $this->assertArrayHasKey("DropDownHookProvider", $res);
-        $this->assertInstanceOf(DropDownHookProviderInterface::class, $res["DropDownHookProvider"]);
+        $this->assertInstanceOf(DropDownHookThemeProviderInterface::class, $res["DropDownHookProvider"]);
 
         $this->assertArrayHasKey("DropDownNotificationsProvider", $res);
-        $this->assertInstanceOf(DropDownNotificationsProviderInterface::class, $res["DropDownNotificationsProvider"]);
+        $this->assertInstanceOf(DropDownNotificationsThemeProviderInterface::class, $res["DropDownNotificationsProvider"]);
 
         $this->assertArrayHasKey("DropDownTasksProvider", $res);
-        $this->assertInstanceOf(DropDownTasksProviderInterface::class, $res["DropDownTasksProvider"]);
+        $this->assertInstanceOf(DropDownTasksThemeProviderInterface::class, $res["DropDownTasksProvider"]);
 
         $this->assertArrayHasKey("FooterProvider", $res);
-        $this->assertInstanceOf(FooterProviderInterface::class, $res["FooterProvider"]);
+        $this->assertInstanceOf(FooterThemeProviderInterface::class, $res["FooterProvider"]);
 
         $this->assertArrayHasKey("NavigationProvider", $res);
-        $this->assertInstanceOf(NavigationProviderInterface::class, $res["NavigationProvider"]);
+        $this->assertInstanceOf(NavigationThemeProviderInterface::class, $res["NavigationProvider"]);
 
         $this->assertArrayHasKey("SearchProvider", $res);
-        $this->assertInstanceOf(SearchProviderInterface::class, $res["SearchProvider"]);
+        $this->assertInstanceOf(SearchThemeProviderInterface::class, $res["SearchProvider"]);
 
         $this->assertArrayHasKey("UserInfoProvider", $res);
-        $this->assertInstanceOf(UserInfoProviderInterface::class, $res["UserInfoProvider"]);
+        $this->assertInstanceOf(UserInfoThemeProviderInterface::class, $res["UserInfoProvider"]);
     }
 
     /**
@@ -121,7 +121,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetApplicationProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(ApplicationProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -138,7 +138,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetBreadcrumbsProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(BreadcrumbsProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetDropDownHookProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(DropDownHookProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(DropDownHookThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -172,7 +172,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetDropDownNotificationsProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(DropDownNotificationsProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(DropDownNotificationsThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -189,7 +189,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetDropDownTasksProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(DropDownTasksProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(DropDownTasksThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -206,7 +206,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetFooterProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(FooterProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(FooterThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -223,7 +223,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetNavigationProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(NavigationProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -240,7 +240,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetSearchProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(SearchProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(SearchThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
@@ -257,7 +257,7 @@ final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testSetUserInfoProvider() {
 
         // Set the mocks.
-        $provider = $this->getMockBuilder(UserInfoProviderInterface::class)->getMock();
+        $provider = $this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 

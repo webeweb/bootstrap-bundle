@@ -12,15 +12,15 @@
 namespace WBW\Bundle\BootstrapBundle\Manager;
 
 use Twig_Environment;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownHookProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownNotificationsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownTasksProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownHookThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownNotificationsThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownTasksThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoThemeProviderInterface;
 
 /**
  * Theme manager.
@@ -40,56 +40,56 @@ class ThemeManager {
     /**
      * Application provider.
      *
-     * @var ApplicationProviderInterface
+     * @var ApplicationThemeProviderInterface
      */
     private $applicationProvider;
 
     /**
      * Breadcrumbs provider.
      *
-     * @var BreadcrumbsProviderInterface
+     * @var BreadcrumbsThemeProviderInterface
      */
     private $breadcrumbsProvider;
 
     /**
      * Drop down hook provider.
      *
-     * @var DropDownHookProviderInterface
+     * @var DropDownHookThemeProviderInterface
      */
     private $dropDownHookProvider;
 
     /**
      * Drop down notifications provider.
      *
-     * @var DropDownNotificationsProviderInterface
+     * @var DropDownNotificationsThemeProviderInterface
      */
     private $dropDownNotificationsProvider;
 
     /**
      * Drop down tasks provider.
      *
-     * @var DropDownTasksProviderInterface
+     * @var DropDownTasksThemeProviderInterface
      */
     private $dropDownTasksProvider;
 
     /**
      * Footer provider.
      *
-     * @var FooterProviderInterface
+     * @var FooterThemeProviderInterface
      */
     private $footerProvider;
 
     /**
      * Navigation provider.
      *
-     * @var NavigationProviderInterface
+     * @var NavigationThemeProviderInterface
      */
     private $navigationProvider;
 
     /**
      * Search provider.
      *
-     * @var SearchProviderInterface
+     * @var SearchThemeProviderInterface
      */
     private $searchProvider;
 
@@ -103,7 +103,7 @@ class ThemeManager {
     /**
      * User info provider.
      *
-     * @var UserInfoProviderInterface
+     * @var UserInfoThemeProviderInterface
      */
     private $userInfoProvider;
 
@@ -119,7 +119,7 @@ class ThemeManager {
     /**
      * Get the application provider.
      *
-     * @return ApplicationProviderInterface Returns the application provider.
+     * @return ApplicationThemeProviderInterface Returns the application provider.
      */
     public function getApplicationProvider() {
         return $this->applicationProvider;
@@ -128,7 +128,7 @@ class ThemeManager {
     /**
      * Get the breadcrumbs provider.
      *
-     * @return BreadcrumbsProviderInterface Returns the breadcrumbs provider.
+     * @return BreadcrumbsThemeProviderInterface Returns the breadcrumbs provider.
      */
     public function getBreadcrumbsProvider() {
         return $this->breadcrumbsProvider;
@@ -137,7 +137,7 @@ class ThemeManager {
     /**
      * Get the drop down hook provider.
      *
-     * @return DropDownHookProviderInterface Returns the drop down hook provider.
+     * @return DropDownHookThemeProviderInterface Returns the drop down hook provider.
      */
     public function getDropDownHookProvider() {
         return $this->dropDownHookProvider;
@@ -146,7 +146,7 @@ class ThemeManager {
     /**
      * Get the drop down notifications provider.
      *
-     * @return DropDownNotificationsProviderInterface Returns the drop down notifications provider.
+     * @return DropDownNotificationsThemeProviderInterface Returns the drop down notifications provider.
      */
     public function getDropDownNotificationsProvider() {
         return $this->dropDownNotificationsProvider;
@@ -155,7 +155,7 @@ class ThemeManager {
     /**
      * Get the drop down tasks provider.
      *
-     * @return DropDownTasksProviderInterface Returns the drop down tasks provider.
+     * @return DropDownTasksThemeProviderInterface Returns the drop down tasks provider.
      */
     public function getDropDownTasksProvider() {
         return $this->dropDownTasksProvider;
@@ -164,7 +164,7 @@ class ThemeManager {
     /**
      * Get the footer provider.
      *
-     * @return FooterProviderInterface Returns the footer provider.
+     * @return FooterThemeProviderInterface Returns the footer provider.
      */
     public function getFooterProvider() {
         return $this->footerProvider;
@@ -173,7 +173,7 @@ class ThemeManager {
     /**
      * Get the navigation provider.
      *
-     * @return NavigationProviderInterface Returns the navigation provider.
+     * @return NavigationThemeProviderInterface Returns the navigation provider.
      */
     public function getNavigationProvider() {
         return $this->navigationProvider;
@@ -182,7 +182,7 @@ class ThemeManager {
     /**
      * Get the search provider.
      *
-     * @return SearchProviderInterface Returns the search provider.
+     * @return SearchThemeProviderInterface Returns the search provider.
      */
     public function getSearchProvider() {
         return $this->searchProvider;
@@ -191,7 +191,7 @@ class ThemeManager {
     /**
      * Get the user info provider.
      *
-     * @return UserInfoProviderInterface Returns the user info provider.
+     * @return UserInfoThemeProviderInterface Returns the user info provider.
      */
     public function getUserInfoProvider() {
         return $this->userInfoProvider;
@@ -217,10 +217,10 @@ class ThemeManager {
     /**
      * Set the application provider.
      *
-     * @param ApplicationProviderInterface $applicationProvider The application provider.
+     * @param ApplicationThemeProviderInterface $applicationProvider The application provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setApplicationProvider(ApplicationProviderInterface $applicationProvider) {
+    public function setApplicationProvider(ApplicationThemeProviderInterface $applicationProvider) {
         $this->applicationProvider = $applicationProvider;
         return $this;
     }
@@ -228,10 +228,10 @@ class ThemeManager {
     /**
      * Set the breadcrumbs provider.
      *
-     * @param BreadcrumbsProviderInterface $breadcrumbsProvider The breadcrumbs provider.
+     * @param BreadcrumbsThemeProviderInterface $breadcrumbsProvider The breadcrumbs provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setBreadcrumbsProvider(BreadcrumbsProviderInterface $breadcrumbsProvider) {
+    public function setBreadcrumbsProvider(BreadcrumbsThemeProviderInterface $breadcrumbsProvider) {
         $this->breadcrumbsProvider = $breadcrumbsProvider;
         return $this;
     }
@@ -239,10 +239,10 @@ class ThemeManager {
     /**
      * Set the drop down hook provider.
      *
-     * @param DropDownHookProviderInterface $dropDownHookProvider The drop down hook provider.
+     * @param DropDownHookThemeProviderInterface $dropDownHookProvider The drop down hook provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setDropDownHookProvider(DropDownHookProviderInterface $dropDownHookProvider) {
+    public function setDropDownHookProvider(DropDownHookThemeProviderInterface $dropDownHookProvider) {
         $this->dropDownHookProvider = $dropDownHookProvider;
         return $this;
     }
@@ -250,10 +250,10 @@ class ThemeManager {
     /**
      * Set the drop down notifications provider.
      *
-     * @param DropDownNotificationsProviderInterface $dropDownNotificationsProvider The drop down notifications provider.
+     * @param DropDownNotificationsThemeProviderInterface $dropDownNotificationsProvider The drop down notifications provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setDropDownNotificationsProvider(DropDownNotificationsProviderInterface $dropDownNotificationsProvider) {
+    public function setDropDownNotificationsProvider(DropDownNotificationsThemeProviderInterface $dropDownNotificationsProvider) {
         $this->dropDownNotificationsProvider = $dropDownNotificationsProvider;
         return $this;
     }
@@ -261,10 +261,10 @@ class ThemeManager {
     /**
      * Set the drop down tasks provider.
      *
-     * @param DropDownTasksProviderInterface $dropDownTasksProvider The drop down task provider.
+     * @param DropDownTasksThemeProviderInterface $dropDownTasksProvider The drop down task provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setDropDownTasksProvider(DropDownTasksProviderInterface $dropDownTasksProvider) {
+    public function setDropDownTasksProvider(DropDownTasksThemeProviderInterface $dropDownTasksProvider) {
         $this->dropDownTasksProvider = $dropDownTasksProvider;
         return $this;
     }
@@ -272,10 +272,10 @@ class ThemeManager {
     /**
      * Set the footer provider.
      *
-     * @param FooterProviderInterface $footerProvider The footer priovider.
+     * @param FooterThemeProviderInterface $footerProvider The footer priovider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setFooterProvider(FooterProviderInterface $footerProvider) {
+    public function setFooterProvider(FooterThemeProviderInterface $footerProvider) {
         $this->footerProvider = $footerProvider;
         return $this;
     }
@@ -283,10 +283,10 @@ class ThemeManager {
     /**
      * Set the navigation provider.
      *
-     * @param NavigationProviderInterface $navigationProvider The navigation provider.
+     * @param NavigationThemeProviderInterface $navigationProvider The navigation provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setNavigationProvider(NavigationProviderInterface $navigationProvider) {
+    public function setNavigationProvider(NavigationThemeProviderInterface $navigationProvider) {
         $this->navigationProvider = $navigationProvider;
         return $this;
     }
@@ -294,10 +294,10 @@ class ThemeManager {
     /**
      * Set the search provider.
      *
-     * @param SearchProviderInterface $searchProvider The search provider.
+     * @param SearchThemeProviderInterface $searchProvider The search provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setSearchProvider(SearchProviderInterface $searchProvider) {
+    public function setSearchProvider(SearchThemeProviderInterface $searchProvider) {
         $this->searchProvider = $searchProvider;
         return $this;
     }
@@ -305,10 +305,10 @@ class ThemeManager {
     /**
      * Set the user info provider.
      *
-     * @param UserInfoProviderInterface $userInfoProvider The user info provider.
+     * @param UserInfoThemeProviderInterface $userInfoProvider The user info provider.
      * @return ProvidersManager Returns the providers manager.
      */
-    public function setUserInfoProvider(UserInfoProviderInterface $userInfoProvider) {
+    public function setUserInfoProvider(UserInfoThemeProviderInterface $userInfoProvider) {
         $this->userInfoProvider = $userInfoProvider;
         return $this;
     }
