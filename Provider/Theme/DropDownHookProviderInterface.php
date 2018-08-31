@@ -9,22 +9,31 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider;
+namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
+
+use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
 
 /**
- * Footer provider interface.
+ * Drop down hook provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider
+ * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface FooterProviderInterface {
+interface DropDownHookProviderInterface extends BootstrapProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.footer";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.dropdownhook";
+
+    /**
+     * Get the items.
+     *
+     * @return array Returns the items.
+     */
+    public function getItems();
 
     /**
      * Get the view.

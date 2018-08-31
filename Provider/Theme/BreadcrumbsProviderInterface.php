@@ -9,22 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider;
+namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
+
+use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
 
 /**
- * Search provider interface.
+ * Breadcrumbs provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider
+ * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface SearchProviderInterface {
+interface BreadcrumbsProviderInterface extends BootstrapProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.search";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.breadcrumbs";
 
     /**
      * Get the view.

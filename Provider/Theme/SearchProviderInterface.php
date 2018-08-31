@@ -9,29 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider;
+namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
+
+use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
 
 /**
- * Drop down "Tasks" provider interface.
+ * Search provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider
+ * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface DropDownTasksProviderInterface {
+interface SearchProviderInterface extends BootstrapProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.dropdowntasks";
-
-    /**
-     * Get the tasks.
-     *
-     * @return array Returns the tasks.
-     */
-    public function getTasks();
+    const SERVICE_NAME = "webeweb.bootstrap.provider.search";
 
     /**
      * Get the view.

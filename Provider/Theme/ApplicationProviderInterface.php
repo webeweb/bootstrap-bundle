@@ -9,15 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider;
+namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
+
+use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
 
 /**
  * Application provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider
+ * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface ApplicationProviderInterface {
+interface ApplicationProviderInterface extends BootstrapProviderInterface {
 
     /**
      * Service name.

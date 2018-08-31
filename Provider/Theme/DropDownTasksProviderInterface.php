@@ -9,29 +9,31 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider;
+namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
+
+use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
 
 /**
- * Drop down "Notifications" provider interface.
+ * Drop down "Tasks" provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider
+ * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface DropDownNotificationsProviderInterface {
+interface DropDownTasksProviderInterface extends BootstrapProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.dropdownnotifications";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.dropdowntasks";
 
     /**
-     * Get the notifications.
+     * Get the tasks.
      *
-     * @return array Returns the notifications.
+     * @return array Returns the tasks.
      */
-    public function getNotifications();
+    public function getTasks();
 
     /**
      * Get the view.

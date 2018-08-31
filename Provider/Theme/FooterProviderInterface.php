@@ -9,31 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider;
+namespace WBW\Bundle\BootstrapBundle\Provider\Theme;
 
-use WBW\Bundle\BootstrapBundle\Model\Navigation\NavigationTree;
+use WBW\Bundle\BootstrapBundle\Provider\BootstrapProviderInterface;
 
 /**
- * Navigation provider interface.
+ * Footer provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider
+ * @package WBW\Bundle\BootstrapBundle\Provider\Theme
  */
-interface NavigationProviderInterface {
+interface FooterProviderInterface extends BootstrapProviderInterface {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.navigation";
-
-    /**
-     * Get the tree.
-     *
-     * @return NavigationTree Returns the tree.
-     */
-    public function getTree();
+    const SERVICE_NAME = "webeweb.bootstrap.provider.footer";
 
     /**
      * Get the view.
