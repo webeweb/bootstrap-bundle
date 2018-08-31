@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\BootstrapBundle\Exception\BadUserRoleException;
-use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 
 /**
  * Kernel event listener.
@@ -38,7 +38,7 @@ class KernelEventListener {
     /**
      * Providers manager.
      *
-     * @var ProvidersManager
+     * @var ThemeManager
      */
     private $providersManager;
 
@@ -67,19 +67,19 @@ class KernelEventListener {
      * Constructor.
      *
      * @param TokenStorageInterface $tokenStorage The token storage service.
-     * @param ProvidersManager $providersManager The providers manager service.
+     * @param ThemeManager $providersManager The providers manager service.
      */
-    public function __construct(TokenStorageInterface $tokenStorage, ProvidersManager $providersManager) {
-        $this->setProvidersManager($providersManager);
+    public function __construct(TokenStorageInterface $tokenStorage, ThemeManager $providersManager) {
+        $this->setThemeManager($providersManager);
         $this->setTokenStorage($tokenStorage);
     }
 
     /**
      * Get the providers manager.
      *
-     * @return ProvidersManager Returns the providers manager.
+     * @return ThemeManager Returns the providers manager.
      */
-    public function getProvidersManager() {
+    public function getThemeManager() {
         return $this->providersManager;
     }
 
@@ -154,16 +154,16 @@ class KernelEventListener {
         $this->setRequest($event->getRequest());
 
         // Register the providers.
-        $this->getProvidersManager()->register();
+        $this->getThemeManager()->register();
     }
 
     /**
      * Set the providers manager.
      *
-     * @param ProvidersManager $providersManager The providers manager.
+     * @param ThemeManager $providersManager The providers manager.
      * @return KernelEventListener Returns this kernel event listener.
      */
-    protected function setProvidersManager(ProvidersManager $providersManager) {
+    protected function setThemeManager(ThemeManager $providersManager) {
         $this->providersManager = $providersManager;
         return $this;
     }

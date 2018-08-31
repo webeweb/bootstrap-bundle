@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
-use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
@@ -41,7 +41,7 @@ final class KernelEventListenerTest extends AbstractBootstrapFrameworkTestCase {
         parent::setUp();
 
         // Set a Provider manager mock.
-        $this->providersManager = new ProvidersManager($this->twigEnvironment);
+        $this->providersManager = new ThemeManager($this->twigEnvironment);
     }
 
     /**

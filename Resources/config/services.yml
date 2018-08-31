@@ -7,7 +7,7 @@ services:
 
     webeweb.bootstrap.eventlistener.kernel:
         class:     WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener
-        arguments: ["@security.token_storage", "@webeweb.bootstrap.manager.providers"]
+        arguments: ["@security.token_storage", "@webeweb.bootstrap.manager.theme"]
         public:    true
         tags:
             - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
@@ -22,8 +22,8 @@ services:
             - { name: "kernel.event_listener", event: "webeweb.bootstrap.event.notification.success", method: "onNotify" }
             - { name: "kernel.event_listener", event: "webeweb.bootstrap.event.notification.warning", method: "onNotify" }
 
-    webeweb.bootstrap.manager.providers:
-        class:     WBW\Bundle\BootstrapBundle\Manager\ProvidersManager
+    webeweb.bootstrap.manager.theme:
+        class:     WBW\Bundle\BootstrapBundle\Manager\ThemeManager
         arguments: ["@twig"]
         calls:
             - ["setApplicationProvider",           ["@?webeweb.bootstrap.provider.application"]]

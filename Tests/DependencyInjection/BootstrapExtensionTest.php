@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
-use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
+use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
@@ -70,8 +70,8 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));
         $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
 
-        // Providers
-        $this->assertInstanceOf(ProvidersManager::class, $this->containerBuilder->get(ProvidersManager::SERVICE_NAME));
+        // Manager
+        $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
 
         // Twig extensions CSS
         $this->assertInstanceOf(ButtonTwigExtension::class, $this->containerBuilder->get(ButtonTwigExtension::SERVICE_NAME));

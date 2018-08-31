@@ -12,30 +12,30 @@
 namespace WBW\Bundle\BootstrapBundle\Manager;
 
 use Twig_Environment;
-use WBW\Bundle\BootstrapBundle\Provider\ApplicationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\BreadcrumbsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDownHookProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDownNotificationsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDownTasksProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\FooterProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\NavigationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\SearchProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownHookProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownNotificationsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownTasksProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoProviderInterface;
 
 /**
- * Providers manager.
+ * Theme manager.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Manager
  */
-class ProvidersManager {
+class ThemeManager {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.manager.providers";
+    const SERVICE_NAME = "webeweb.bootstrap.manager.theme";
 
     /**
      * Application provider.

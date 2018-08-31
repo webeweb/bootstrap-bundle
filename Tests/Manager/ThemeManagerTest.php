@@ -11,26 +11,26 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Manager;
 
-use WBW\Bundle\BootstrapBundle\Manager\ProvidersManager;
-use WBW\Bundle\BootstrapBundle\Provider\ApplicationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\BreadcrumbsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDownHookProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDownNotificationsProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\DropDownTasksProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\FooterProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\NavigationProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\SearchProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\UserInfoProviderInterface;
+use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownHookProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownNotificationsProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownTasksProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoProviderInterface;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
- * Providers manager test.
+ * Theme manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Manager
  * @final
  */
-final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
+final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * {@inheritdoc}
@@ -46,7 +46,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testConstruct() {
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $this->assertNull($obj->getApplicationProvider());
         $this->assertNull($obj->getBreadcrumbsProvider());
@@ -67,7 +67,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testRegister() {
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
         $obj->setApplicationProvider($this->getMockBuilder(ApplicationProviderInterface::class)->getMock());
         $obj->setBreadcrumbsProvider($this->getMockBuilder(BreadcrumbsProviderInterface::class)->getMock());
         $obj->setDropDownHookProvider($this->getMockBuilder(DropDownHookProviderInterface::class)->getMock());
@@ -123,7 +123,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(ApplicationProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setApplicationProvider($provider);
         $this->assertSame($provider, $obj->getApplicationProvider());
@@ -140,7 +140,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(BreadcrumbsProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setBreadcrumbsProvider($provider);
         $this->assertSame($provider, $obj->getBreadcrumbsProvider());
@@ -157,7 +157,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(DropDownHookProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setDropDownHookProvider($provider);
         $this->assertSame($provider, $obj->getDropDownHookProvider());
@@ -174,7 +174,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(DropDownNotificationsProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setDropDownNotificationsProvider($provider);
         $this->assertSame($provider, $obj->getDropDownNotificationsProvider());
@@ -191,7 +191,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(DropDownTasksProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setDropDownTasksProvider($provider);
         $this->assertSame($provider, $obj->getDropDownTasksProvider());
@@ -208,7 +208,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(FooterProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setFooterProvider($provider);
         $this->assertSame($provider, $obj->getFooterProvider());
@@ -225,7 +225,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(NavigationProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setNavigationProvider($provider);
         $this->assertSame($provider, $obj->getNavigationProvider());
@@ -242,7 +242,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(SearchProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setSearchProvider($provider);
         $this->assertSame($provider, $obj->getSearchProvider());
@@ -259,7 +259,7 @@ final class ProvidersManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(UserInfoProviderInterface::class)->getMock();
 
-        $obj = new ProvidersManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $obj->setUserInfoProvider($provider);
         $this->assertSame($provider, $obj->getUserInfoProvider());
