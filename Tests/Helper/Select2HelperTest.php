@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Helper\Model;
+namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 
 use Exception;
-use WBW\Bundle\BootstrapBundle\Helper\Model\Select2Helper;
+use WBW\Bundle\BootstrapBundle\Helper\Select2Helper;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\Select2\Select2Item;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\Select2Item;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**

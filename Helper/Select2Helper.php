@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Helper\Model;
+namespace WBW\Bundle\BootstrapBundle\Helper;
 
-use WBW\Bundle\BootstrapBundle\Model\Select2\Select2DataFormatInterface;
+use WBW\Bundle\BootstrapBundle\Model\Select2DataFormatInterface;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * Select2 helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Helper\Model
+ * @package WBW\Bundle\BootstrapBundle\Helper
  */
 class Select2Helper {
 

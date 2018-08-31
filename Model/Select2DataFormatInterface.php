@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Model\Select2;
+namespace WBW\Bundle\BootstrapBundle\Model;
 
 /**
  * Select2 data format interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Model\Select2
+ * @package WBW\Bundle\BootstrapBundle\Model
  */
 interface Select2DataFormatInterface {
 

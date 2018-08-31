@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\Select2;
+namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model;
 
-use WBW\Bundle\BootstrapBundle\Model\Select2\Select2DataFormatInterface;
+use WBW\Bundle\BootstrapBundle\Model\Select2DataFormatInterface;
 use WBW\Library\Core\Model\Node\AbstractNode;
 
 /**
  * Select2 item model.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\Select2;
+ * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model;
  */
 final class Select2Item extends AbstractNode implements Select2DataFormatInterface {
 

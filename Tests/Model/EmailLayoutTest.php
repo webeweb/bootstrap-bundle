@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Model\Layout;
+namespace WBW\Bundle\BootstrapBundle\Tests\Model;
 
-use WBW\Bundle\BootstrapBundle\Model\Layout\EmailLayout;
+use WBW\Bundle\BootstrapBundle\Model\EmailLayout;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Email layout test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Model\Layout
+ * @package WBW\Bundle\BootstrapBundle\Tests\Model
  * @final
  */
-final class EmailPageTest extends AbstractBootstrapFrameworkTestCase {
+final class EmailLayoutTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
