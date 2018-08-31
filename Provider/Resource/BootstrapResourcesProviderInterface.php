@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Provider\Resource;
 /**
  * Bootstrap resources provider interface.
  *
+ * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Resource
  */
 interface BootstrapResourcesProviderInterface {
