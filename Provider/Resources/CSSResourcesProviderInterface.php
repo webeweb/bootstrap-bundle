@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Provider\Resource;
 
-use WBW\Bundle\BootstrapBundle\Provider\BootstrapResourcesProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\ResourcesProviderInterface;
 
 /**
  * CSS resources provider interface.
@@ -19,6 +19,6 @@ use WBW\Bundle\BootstrapBundle\Provider\BootstrapResourcesProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Resource
  */
-interface CSSResourcesProviderInterface extends BootstrapResourcesProviderInterface {
+interface CSSResourcesProviderInterface extends ResourcesProviderInterface {
 
 }
