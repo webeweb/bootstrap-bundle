@@ -88,5 +88,5 @@
  # @return string Returns the wiki title.
  #}
 {% macro wikiTitle(wikiPage) %}
-    <h3 class="panel-title panel-primary">{{ bootstrapGlyphicon({"name": "book"}) }} {{ wikiPage.category|capitalize|replace({"-": " "}) }} {{ bootstrapGlyphicon({"name": "chevron-right"}) }} {{ wikiPage.package|capitalize }} {{ bootstrapGlyphicon({"name": "chevron-right"}) }} {{ wikiPage.title }}</h3>
+    <h3 class="panel-title panel-primary">{{ bootstrapGlyphicon({"name": "book"}) }} {{ wikiPage.category|replace({"-": " "}) }} {{ bootstrapGlyphicon({"name": "chevron-right"}) }} {{ wikiPage.package }} {{ bootstrapGlyphicon({"name": "chevron-right"}) }} {{ wikiPage.title }}</h3>
 {% endmacro %}
