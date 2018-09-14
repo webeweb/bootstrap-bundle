@@ -33,29 +33,19 @@ class WikiController extends AbstractWikiController {
         // Initialize the table of contents.
         $tableContents = [];
 
-        // Twig extensions > Code
-        $tableContents[] = new WikiPage("twig-extension", "code", "basic-block", "Basic block");
-        $tableContents[] = new WikiPage("twig-extension", "code", "inline", "Inline");
-        $tableContents[] = new WikiPage("twig-extension", "code", "sample-output", "Sample output");
-        $tableContents[] = new WikiPage("twig-extension", "code", "user-input", "User input");
-        $tableContents[] = new WikiPage("twig-extension", "code", "variable", "Variable");
+        // Twig extensions > CSS
+        $tableContents[] = new WikiPage("twig-extension", "css", "button", "Button");
+        $tableContents[] = new WikiPage("twig-extension", "css", "code", "Code");
+        $tableContents[] = new WikiPage("twig-extension", "css", "grid", "Grid");
+        $tableContents[] = new WikiPage("twig-extension", "css", "image", "Image");
+        $tableContents[] = new WikiPage("twig-extension", "css", "typography", "Typography");
 
         // Twig extensions > Component
         $tableContents[] = new WikiPage("twig-extension", "component", "alert", "Alert");
         $tableContents[] = new WikiPage("twig-extension", "component", "badge", "Badge");
-        $tableContents[] = new WikiPage("twig-extension", "component", "button", "Button");
         $tableContents[] = new WikiPage("twig-extension", "component", "glyphicon", "Glyphicon");
         $tableContents[] = new WikiPage("twig-extension", "component", "label", "Label");
         $tableContents[] = new WikiPage("twig-extension", "component", "progress-bar", "Progress bar");
-
-        // Twig extensions > Form
-        $tableContents[] = new WikiPage("twig-extension", "form", "button", "Button");
-
-        // Twig extensions > Grid
-        $tableContents[] = new WikiPage("twig-extension", "grid", "grid", "Grid");
-
-        // Twig extensions > Image
-        $tableContents[] = new WikiPage("twig-extension", "image", "base64", "Base 64");
 
         // Twig extensions > Plugin
         $tableContents[] = new WikiPage("twig-extension", "plugin", "font-awesome", "Font Awesome");
@@ -63,22 +53,10 @@ class WikiController extends AbstractWikiController {
         $tableContents[] = new WikiPage("twig-extension", "plugin", "material-design-iconic-font", "Material Design Iconic Font");
         $tableContents[] = new WikiPage("twig-extension", "plugin", "meteocons", "Meteocons");
 
-        // Twig extensions > Table
-        $tableContents[] = new WikiPage("twig-extension", "table", "button", "Button");
-
-        // Twig extensions > Typography
-        $tableContents[] = new WikiPage("twig-extension", "typography", "bold", "Bold");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "deleted", "Deleted");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "heading", "Heading");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "inserted", "Inserted");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "italic", "Italic");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "marked", "Marked");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "small", "Small");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "strikethrough", "Strikethrough");
-        $tableContents[] = new WikiPage("twig-extension", "typography", "underlined", "Underlined");
-
         // Twig extensions > Utility
+        $tableContents[] = new WikiPage("twig-extension", "utility", "form-button", "Form button");
         $tableContents[] = new WikiPage("twig-extension", "utility", "role-label", "Role label");
+        $tableContents[] = new WikiPage("twig-extension", "utility", "table-button", "Table button");
 
         // Return the table of contents.
         return $tableContents;
