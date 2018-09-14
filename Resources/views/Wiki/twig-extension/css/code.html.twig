@@ -1,0 +1,65 @@
+{# Resources/views/Wiki/twig-extension/css/code.html.twig #}
+{% extends "@Bootstrap/Wiki/layout.html.twig" %}
+
+{% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
+
+{% block bootstrapWikiContent %}
+    {{ wiki.functionsTitle() }}
+    {{ wiki.functionsList([
+        "bootstrapBasicBlock",
+        "bootstrapInline",
+        "bootstrapSampleOutput",
+        "bootstrapUserInput",
+        "bootstrapVariable",
+    ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapBasicBlock") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapBasicBlock({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapBasicBlock({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapInline") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapInline({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapInline({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapSampleOutput") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapSampleOutput({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapSampleOutput({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapUserInput") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapUserInput({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapUserInput({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapVariable") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapVariable({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapVariable({"content": "content"})) }}
+        </div>
+    </div>
+{% endblock %}

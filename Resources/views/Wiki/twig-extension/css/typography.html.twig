@@ -1,16 +1,46 @@
-{# Resources/views/Wiki/twig-extension/typography/heading.html.twig #}
+{# Resources/views/Wiki/twig-extension/css/typography.html.twig #}
 {% extends "@Bootstrap/Wiki/layout.html.twig" %}
+
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
+
 {% block bootstrapWikiContent %}
     {{ wiki.functionsTitle() }}
     {{ wiki.functionsList([
+        "bootstrapBold",
+        "bootstrapDeleted",
         "bootstrapHeading1",
         "bootstrapHeading2",
         "bootstrapHeading3",
         "bootstrapHeading4",
         "bootstrapHeading5",
         "bootstrapHeading6",
+        "bootstrapInserted",
+        "bootstrapItalic",
+        "bootstrapMarked",
+        "bootstrapSmall",
+        "bootstrapStrikethrough",
+        "bootstrapUnderlined",
     ]) }}
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapBold") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapBold({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapBold({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapDeleted") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapDeleted({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapDeleted({"content": "content"})) }}
+        </div>
+    </div>
     <div class="panel panel-default">
         {{ wiki.functionTitle("bootstrapHeading1") }}
         <div class="panel-body">
@@ -81,6 +111,66 @@
             ])}}
             {{ wiki.functionExample('{{ bootstrapHeading6({"content": "content"}) }}') }}
             {{ wiki.functionOutput(bootstrapHeading6({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapInserted") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapInserted({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapInserted({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapItalic") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapItalic({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapItalic({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapMarked") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapMarked({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapMarked({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapSmall") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapSmall({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapSmall({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapStrikethrough") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapStrikethrough({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapStrikethrough({"content": "content"})) }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        {{ wiki.functionTitle("bootstrapUnderlined") }}
+        <div class="panel-body">
+            {{ wiki.argumentsList([
+                ["string", "content", "the content"],
+            ])}}
+            {{ wiki.functionExample('{{ bootstrapUnderlined({"content": "content"}) }}') }}
+            {{ wiki.functionOutput(bootstrapUnderlined({"content": "content"})) }}
         </div>
     </div>
 {% endblock %}
