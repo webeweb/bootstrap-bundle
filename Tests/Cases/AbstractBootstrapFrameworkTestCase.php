@@ -12,7 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -31,7 +30,7 @@ use Twig_LoaderInterface;
  * @package WBW\Bundle\BootstrapBundle\Tests\Cases
  * @abstract
  */
-abstract class AbstractBootstrapFrameworkTestCase extends PHPUnit_Framework_TestCase {
+abstract class AbstractBootstrapFrameworkTestCase extends TestCase {
 
     /**
      * Container builder.
