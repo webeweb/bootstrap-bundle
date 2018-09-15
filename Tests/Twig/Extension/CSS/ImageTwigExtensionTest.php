@@ -15,7 +15,7 @@ use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
-use WBW\Library\Core\IO\FileHelper;
+use WBW\Library\Core\FileSystem\FileHelper;
 
 /**
  * Image Twig extension.
