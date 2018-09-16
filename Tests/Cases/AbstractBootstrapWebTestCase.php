@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use TestKernel;
 
 /**
  * Abstract Bootstrap web test case.
@@ -21,6 +22,13 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  * @abstract
  */
 abstract class AbstractBootstrapWebTestCase extends WebTestCase {
+
+    /**
+     * {@inheritdoc}
+     */
+    protected static function getKernelClass() {
+        return TestKernel::class;
+    }
 
     /**
      * {@inheritdoc}
