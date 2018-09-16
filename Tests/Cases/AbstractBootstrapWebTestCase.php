@@ -27,6 +27,7 @@ abstract class AbstractBootstrapWebTestCase extends WebTestCase {
      * {@inheritdoc}
      */
     protected static function getKernelClass() {
+        require_once __DIR__ . "./../Fixtures/App/TestKernel.php";
         return TestKernel::class;
     }
 
