@@ -23,7 +23,7 @@
     </filter>
     <testsuites>
         <testsuite name="webeweb/bootstrap-bundle">
-            <directory>./Tests</directory>
+            <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
