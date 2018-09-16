@@ -21,10 +21,6 @@
             </exclude>
         </whitelist>
     </filter>
-    <php>
-        <!--<server name="KERNEL_DIR" value="./Tests/Fixtures/App" />-->
-        <server name="KERNEL_CLASS" value="\TestKernel" />
-    </php>
     <testsuites>
         <testsuite name="webeweb/bootstrap-bundle">
             <directory>./Tests</directory>
