@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
@@ -84,7 +85,7 @@ final class KernelEventListenerTest extends AbstractBootstrapFrameworkTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
-        $obj->onKernelRequest(new GetResponseEvent($this->kernel, new Request(), "GET"));
+        $obj->onKernelRequest(new GetResponseEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST));
         $this->assertInstanceOf(Request::class, $obj->getRequest());
     }
 
