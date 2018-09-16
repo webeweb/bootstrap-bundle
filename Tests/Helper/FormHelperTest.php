@@ -72,7 +72,7 @@ final class FormHelperTest extends AbstractBootstrapFrameworkTestCase {
         $newCollection = FormHelper::onPreHandleRequestWithCollection($oldCollection);
         $newCollection->removeElement("element1");
 
-        FormHelper::onPostHandleRequestWithCollection($oldCollection, $newCollection, $this->objectManager);
+        $this->assertNull(FormHelper::onPostHandleRequestWithCollection($oldCollection, $newCollection, $this->objectManager));
     }
 
 }
