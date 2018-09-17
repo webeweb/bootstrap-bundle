@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Manager\Asset;
 
 use Exception;
-use WBW\Bundle\BootstrapBundle\Asset\BootstrapJSAssetProvider;
+use WBW\Bundle\BootstrapBundle\Asset\JSAssetProvider;
 use WBW\Bundle\BootstrapBundle\Manager\Asset\JSAssetManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\TestJSAssetProvider;
@@ -51,7 +51,7 @@ final class JSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
         $this->directory = getcwd() . "/Tests/Fixtures/App/web";
 
         // Set a JS resources provider mock.
-        $this->provider = new BootstrapJSAssetProvider();
+        $this->provider = new JSAssetProvider();
     }
 
     /**
