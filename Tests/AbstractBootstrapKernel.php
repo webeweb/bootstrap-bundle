@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
+namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
@@ -24,31 +24,32 @@ use Symfony\Component\HttpKernel\Kernel;
 abstract class AbstractBootstrapKernel extends Kernel {
 
     /**
-     * {@inheritdoc}
+     * Get the bundle directory.
+     *
+     * @return string Returns the bundle directory.
+     * @abstract
      */
-    public function registerContainerConfiguration(LoaderInterface $loader) {
-        $loader->load($this->getTestsDir() . "/Fixtures/App/config/config_test.yml");
-    }
+    abstract public function getBundleDir();
 
     /**
      * {@inheritdoc}
      */
     public function getCacheDir() {
-        return $this->getTestsDir() . "/Fixtures/App/var/cache";
+        return $this->getBundleDir() . "/Tests/Fixtures/App/var/cache";
     }
 
     /**
      * {@inheritdoc}
      */
     public function getLogDir() {
-        return $this->getTestsDir() . "/Fixtures/App/var/logs";
+        return $this->getBundleDir() . "/Tests/Fixtures/App/var/logs";
     }
 
     /**
-     * Get the Tests directory.
-     *
-     * @return string Returns the Tests directory.
-     * @abstract
+     * {@inheritdoc}
      */
-    abstract public function getTestsDir();
+    public function registerContainerConfiguration(LoaderInterface $loader) {
+        $loader->load($this->getBundleDir() . "/Tests/Fixtures/App/config/config_test.yml");
+    }
+
 }

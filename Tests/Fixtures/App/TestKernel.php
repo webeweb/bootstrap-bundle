@@ -1,14 +1,14 @@
 <?php
 
 /**
- * This file is part of the jquery-datatables-bundle package.
+ * This file is part of the bootstrap-bundle package.
  *
- * (c) 2017 WEBEWEB
+ * (c) 2018 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapKernel;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapKernel;
 
 /**
  * Test kernel.
@@ -18,6 +18,13 @@ use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapKernel;
  * @final
  */
 final class TestKernel extends AbstractBootstrapKernel {
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBundleDir() {
+        return getcwd();
+    }
 
     /**
      * {@inheritdoc}
@@ -32,13 +39,6 @@ final class TestKernel extends AbstractBootstrapKernel {
             new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
         ];
         return $bundles;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getTestsDir() {
-        return __DIR__ . "/../..";
     }
 
 }
