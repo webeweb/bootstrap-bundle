@@ -29,7 +29,7 @@ class Select2Helper {
      * @return array Returns the "results" array.
      * @throws IllegalArgumentException Throws an illegal argument exception if an item does not implement Select2DataFormatInterface.
      */
-    public static function toResults($items) {
+    public static function toResults(array $items) {
 
         // Initialize the output.
         $output = [];
