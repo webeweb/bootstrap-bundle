@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoThemeProviderInterface;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Theme manager test.
