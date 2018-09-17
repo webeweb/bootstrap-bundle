@@ -18,7 +18,7 @@ use TestKernel;
  * Abstract Bootstrap web test case.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Cases
+ * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
 abstract class AbstractBootstrapWebTestCase extends WebTestCase {

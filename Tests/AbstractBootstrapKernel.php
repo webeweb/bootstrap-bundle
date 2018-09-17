@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Kernel;
  * Abstract Bootstrap kernel.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Cases
+ * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
 abstract class AbstractBootstrapKernel extends Kernel {

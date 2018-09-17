@@ -28,7 +28,7 @@ use Twig_LoaderInterface;
  * Abstract Bootstrap framework test case.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Cases
+ * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
 abstract class AbstractBootstrapFrameworkTestCase extends TestCase {
