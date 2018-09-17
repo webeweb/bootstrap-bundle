@@ -1,4 +1,4 @@
-# Tests/Fixtures/App/config/routing_test.yml
+# Tests/Fixtures/app/config/routing_test.yml
 bootstrap_blank_action:
     path:     "/blank"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }

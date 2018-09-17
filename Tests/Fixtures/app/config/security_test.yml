@@ -1,4 +1,4 @@
-# Tests/Fixtures/App/config/security_test.yml
+# Tests/Fixtures/app/config/security_test.yml
 security:
 
     providers:

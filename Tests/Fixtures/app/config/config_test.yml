@@ -1,4 +1,4 @@
-# Tests/Fixtures/App/config/config_test.yml
+# Tests/Fixtures/app/config/config_test.yml
 imports:
     - { resource: "security_test.yml" }
     - { resource: "services_test.yml" }
