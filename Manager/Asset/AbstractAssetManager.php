@@ -107,7 +107,7 @@ abstract class AbstractAssetManager extends AbstractManager {
                 // Build and check the resource path.
                 $resourcePath = $provider->getDirectory() . $resource;
                 if (0 === preg_match("/" . $this->getExtension() . "$/", $resourcePath)) {
-                    $msg = sprintf("The resource \"%s\" must match the extension %s", $resourcePath, $this->getExtension());
+                    $msg = sprintf("The resource \"%s\" must end with the extension %s", $resourcePath, $this->getExtension());
                     throw new IllegalArgumentException($msg);
                 }
 
