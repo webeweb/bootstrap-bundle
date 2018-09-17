@@ -27,9 +27,10 @@ abstract class AbstractBootstrapKernel extends Kernel {
      * Get the bundle directory.
      *
      * @return string Returns the bundle directory.
-     * @abstract
      */
-    abstract public function getBundleDir();
+    protected function getBundleDir() {
+        return getcwd();
+    }
 
     /**
      * {@inheritdoc}

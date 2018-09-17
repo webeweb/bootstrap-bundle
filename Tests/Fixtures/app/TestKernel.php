@@ -22,13 +22,6 @@ final class TestKernel extends AbstractBootstrapKernel {
     /**
      * {@inheritdoc}
      */
-    public function getBundleDir() {
-        return getcwd();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function registerBundles() {
         $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
