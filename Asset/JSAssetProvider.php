@@ -15,12 +15,12 @@ use WBW\Bundle\BootstrapBundle\Asset\AbstractAssetProvider;
 use WBW\Bundle\BootstrapBundle\Provider\Asset\JSAssetProviderInterface;
 
 /**
- * Bootstrap JS asset provider.
+ * JS asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Asset
  */
-class BootstrapJSAssetProvider extends AbstractAssetProvider implements JSAssetProviderInterface {
+class JSAssetProvider extends AbstractAssetProvider implements JSAssetProviderInterface {
 
     /**
      * {@inheritdoc}
