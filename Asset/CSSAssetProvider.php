@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Asset\CSSAssetProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Asset
  */
-class BootstrapCSSAssetProvider extends AbstractAssetProvider implements CSSAssetProviderInterface {
+class CSSAssetProvider extends AbstractAssetProvider implements CSSAssetProviderInterface {
 
     /**
      * {@inheritdoc}

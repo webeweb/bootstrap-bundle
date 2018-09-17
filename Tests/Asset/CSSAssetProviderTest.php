@@ -11,11 +11,11 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Provider\Asset;
 
-use WBW\Bundle\BootstrapBundle\Asset\BootstrapCSSAssetProvider;
+use WBW\Bundle\BootstrapBundle\Asset\CSSAssetProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
- * Bootstrap CSS asset provider.
+ * CSS asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset
@@ -30,7 +30,7 @@ final class CSSAssetProviderTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testGetResources() {
 
-        $obj = new BootstrapCSSAssetProvider();
+        $obj = new CSSAssetProvider();
 
         $this->assertCount(19, $obj->getResources());
     }
