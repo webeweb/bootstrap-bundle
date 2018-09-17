@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Exception;
 
 use Symfony\Component\Security\Core\User\User;
 use WBW\Bundle\BootstrapBundle\Exception\BadUserRoleException;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Bad user role exception test.
