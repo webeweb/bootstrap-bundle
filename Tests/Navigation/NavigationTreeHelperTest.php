@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Navigation;
 use Symfony\Component\HttpFoundation\Request;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTreeHelper;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\App\TestFixtures;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\TestFixtures;
 
 /**
  * Navigation tree helper test.
