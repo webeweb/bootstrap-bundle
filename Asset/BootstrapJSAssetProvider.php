@@ -9,15 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\Resources;
+namespace WBW\Bundle\BootstrapBundle\Asset;
+
+use WBW\Bundle\BootstrapBundle\Asset\AbstractAssetProvider;
+use WBW\Bundle\BootstrapBundle\Provider\Asset\JSAssetProviderInterface;
 
 /**
- * JS resources provider.
+ * Bootstrap JS asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\Resources
+ * @package WBW\Bundle\BootstrapBundle\Asset
  */
-class JSResourcesProvider extends AbstractResourcesProvider implements JSResourcesProviderInterface {
+class BootstrapJSAssetProvider extends AbstractAssetProvider implements JSAssetProviderInterface {
 
     /**
      * {@inheritdoc}

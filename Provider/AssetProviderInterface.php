@@ -12,12 +12,12 @@
 namespace WBW\Bundle\BootstrapBundle\Provider;
 
 /**
- * Resources provider interface.
+ * Asset provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider
  */
-interface ResourcesProviderInterface extends ProviderInterface {
+interface AssetProviderInterface extends ProviderInterface {
 
     /**
      * Get the directory.

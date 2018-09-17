@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\Resources;
+namespace WBW\Bundle\BootstrapBundle\Asset;
 
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Bundle\BootstrapBundle\Provider\ResourcesProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\AssetProviderInterface;
 
 /**
- * Abstract resources provider.
+ * Abstract asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\Resources
+ * @package WBW\Bundle\BootstrapBundle\Asset
  * @abstract
  */
-abstract class AbstractResourcesProvider implements ResourcesProviderInterface {
+abstract class AbstractAssetProvider implements AssetProviderInterface {
 
     /**
      * Constructor.

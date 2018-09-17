@@ -9,15 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Provider\Resources;
+namespace WBW\Bundle\BootstrapBundle\Asset;
+
+use WBW\Bundle\BootstrapBundle\Asset\AbstractAssetProvider;
+use WBW\Bundle\BootstrapBundle\Provider\Asset\CSSAssetProviderInterface;
 
 /**
- * CSS resources provider.
+ * CSS asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Provider\Resources
+ * @package WBW\Bundle\BootstrapBundle\Asset
  */
-class CSSResourcesProvider extends AbstractResourcesProvider implements CSSResourcesProviderInterface {
+class BootstrapCSSAssetProvider extends AbstractAssetProvider implements CSSAssetProviderInterface {
 
     /**
      * {@inheritdoc}
