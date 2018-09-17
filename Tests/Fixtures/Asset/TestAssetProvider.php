@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Provider\Resources;
+namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset;
 
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Bundle\BootstrapBundle\Provider\Resources\CSSResourcesProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Asset\CSSAssetProviderInterface;
 
 /**
- * Test resources provider.
+ * Test asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Provider\Resources
+ * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset
  * @final
  */
-final class TestResourcesProvider implements CSSResourcesProviderInterface {
+final class TestAssetProvider implements CSSAssetProviderInterface {
 
     /**
      * {@inheritdoc}
