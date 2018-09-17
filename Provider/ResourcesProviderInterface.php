@@ -20,6 +20,13 @@ namespace WBW\Bundle\BootstrapBundle\Provider;
 interface ResourcesProviderInterface extends ProviderInterface {
 
     /**
+     * Get the directory.
+     *
+     * @return string Returns the directory.
+     */
+    public function getDirectory();
+
+    /**
      * Get the resources.
      *
      * @return array Returns the resources.
