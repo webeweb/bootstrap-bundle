@@ -9,13 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Manager;
+namespace WBW\Bundle\BootstrapBundle\Manager\Resources;
+
+use WBW\Bundle\BootstrapBundle\Manager\AbstractManager;
+use WBW\Bundle\BootstrapBundle\Manager\ManagerInterface;
 
 /**
  * Abstract resources manager.
  *
  * @author e <https://github.com/e/>
- * @package WBW\Bundle\BootstrapBundle\Manager
+ * @package WBW\Bundle\BootstrapBundle\Manager\Resources
  * @abstract
  */
 abstract class AbstractResourcesManager extends AbstractManager {

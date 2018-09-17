@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Manager;
+namespace WBW\Bundle\BootstrapBundle\Tests\Manager\Resources;
 
-use WBW\Bundle\BootstrapBundle\Manager\CSSResourcesManager;
+use WBW\Bundle\BootstrapBundle\Manager\Resources\CSSResourcesManager;
 use WBW\Bundle\BootstrapBundle\Provider\Resources\CSSResourcesProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * CSS resources manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Manager
+ * @package WBW\Bundle\BootstrapBundle\Tests\Manager\Resources
  * @final
  */
 final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {

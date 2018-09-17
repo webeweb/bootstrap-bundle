@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Manager;
+namespace WBW\Bundle\BootstrapBundle\Manager\Resources;
 
 /**
  * CSS resources manager.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Manager
+ * @package WBW\Bundle\BootstrapBundle\Manager\Resources
  */
 class CSSResourcesManager extends AbstractResourcesManager {
 
