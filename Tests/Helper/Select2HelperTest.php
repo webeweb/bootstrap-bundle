@@ -15,7 +15,7 @@ use Exception;
 use WBW\Bundle\BootstrapBundle\Helper\Select2Helper;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\Select2Item;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\TestSelect2Item;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
@@ -43,9 +43,9 @@ final class Select2HelperTest extends AbstractBootstrapFrameworkTestCase {
         // Set a items array mock.
         $this->items = [];
 
-        $this->items[] = new Select2Item("1", "item1");
-        $this->items[] = new Select2Item("2", "item2");
-        $this->items[] = new Select2Item("3", "item3");
+        $this->items[] = new TestSelect2Item("1", "item1");
+        $this->items[] = new TestSelect2Item("2", "item2");
+        $this->items[] = new TestSelect2Item("3", "item3");
     }
 
     /**

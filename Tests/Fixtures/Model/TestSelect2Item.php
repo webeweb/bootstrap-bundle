@@ -15,12 +15,12 @@ use WBW\Bundle\BootstrapBundle\Model\Select2DataFormatInterface;
 use WBW\Library\Core\Model\Node\AbstractNode;
 
 /**
- * Select2 item model.
+ * Test Select2 item model.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model;
  */
-final class Select2Item extends AbstractNode implements Select2DataFormatInterface {
+final class TestSelect2Item extends AbstractNode implements Select2DataFormatInterface {
 
     /**
      * Name.
@@ -71,7 +71,7 @@ final class Select2Item extends AbstractNode implements Select2DataFormatInterfa
      * Set the name.
      *
      * @param string $name The name.
-     * @return Select2Item Returns this Select2 item.
+     * @return TestSelect2Item Returns this Select2 item.
      */
     public function setName($name) {
         $this->name = $name;
