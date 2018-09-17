@@ -12,7 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Bootstrap bundle test.
