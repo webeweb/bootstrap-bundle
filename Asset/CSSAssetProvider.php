@@ -23,6 +23,13 @@ use WBW\Bundle\BootstrapBundle\Provider\Asset\CSSAssetProviderInterface;
 class CSSAssetProvider extends AbstractAssetProvider implements CSSAssetProviderInterface {
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bootstrap.asset.css";
+
+    /**
      * {@inheritdoc}
      */
     public function getResources() {

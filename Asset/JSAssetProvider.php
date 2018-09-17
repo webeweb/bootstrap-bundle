@@ -23,6 +23,13 @@ use WBW\Bundle\BootstrapBundle\Provider\Asset\JSAssetProviderInterface;
 class JSAssetProvider extends AbstractAssetProvider implements JSAssetProviderInterface {
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.bootstrap.asset.js";
+
+    /**
      * {@inheritdoc}
      */
     public function getResources() {

@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
+use WBW\Bundle\BootstrapBundle\Asset\CSSAssetProvider;
+use WBW\Bundle\BootstrapBundle\Asset\JSAssetProvider;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
@@ -60,6 +62,10 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $obj = new BootstrapExtension();
 
         $obj->load([], $this->containerBuilder);
+
+        // Asset
+        $this->assertInstanceOf(CSSAssetProvider::class, $this->containerBuilder->get(CSSAssetProvider::SERVICE_NAME));
+        $this->assertInstanceOf(JSAssetProvider::class, $this->containerBuilder->get(JSAssetProvider::SERVICE_NAME));
 
         // Event listeners
         $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));
