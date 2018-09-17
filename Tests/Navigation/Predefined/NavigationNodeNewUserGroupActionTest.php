@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Model\Navigation\Predefined;
 
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\Predefined\NavigationNodeNewUserGroupAction;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Navigation node "New user group" action test.
