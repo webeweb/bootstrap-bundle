@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Manager\Asset;
 
 use Exception;
-use WBW\Bundle\BootstrapBundle\Asset\BootstrapCSSAssetProvider;
+use WBW\Bundle\BootstrapBundle\Asset\CSSAssetProvider;
 use WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\TestCSSAssetProvider;
@@ -50,8 +50,8 @@ final class CSSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
         // Set a Directory mock.
         $this->directory = getcwd() . "/Tests/Fixtures/App/web";
 
-        // Set a CSS resources provider mock.
-        $this->provider = new BootstrapCSSAssetProvider();
+        // Set a CSS asset provider mock.
+        $this->provider = new CSSAssetProvider();
     }
 
     /**
