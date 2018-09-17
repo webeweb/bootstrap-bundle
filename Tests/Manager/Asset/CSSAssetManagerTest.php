@@ -9,23 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Manager\Resources;
+namespace WBW\Bundle\BootstrapBundle\Tests\Manager\Asset;
 
 use Exception;
-use WBW\Bundle\BootstrapBundle\Manager\Resources\CSSResourcesManager;
-use WBW\Bundle\BootstrapBundle\Provider\Resources\CSSResourcesProvider;
+use WBW\Bundle\BootstrapBundle\Asset\BootstrapCSSAssetProvider;
+use WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Provider\Resources\TestResourcesProvider;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\TestAssetProvider;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
- * CSS resources manager test.
+ * CSS asset manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Manager\Resources
+ * @package WBW\Bundle\BootstrapBundle\Tests\Manager\Asset
  * @final
  */
-final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
+final class CSSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Directory.
@@ -37,7 +37,7 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
     /**
      * Provider.
      *
-     * @var CSSResourcesProvider
+     * @var CSSAssetProvider
      */
     private $provider;
 
@@ -51,7 +51,7 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
         $this->directory = getcwd() . "/Tests/Fixtures/App/web";
 
         // Set a CSS resources provider mock.
-        $this->provider = new CSSResourcesProvider();
+        $this->provider = new BootstrapCSSAssetProvider();
     }
 
     /**
@@ -80,7 +80,7 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testConstruct() {
 
-        $obj = new CSSResourcesManager($this->directory);
+        $obj = new CSSAssetManager($this->directory);
 
         $this->assertEquals($this->directory, $obj->getDirectory());
         $this->assertEquals(".css", $obj->getExtension());
@@ -95,7 +95,7 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testAddProvider() {
 
-        $obj = new CSSResourcesManager($this->directory);
+        $obj = new CSSAssetManager($this->directory);
 
         $this->assertSame($obj, $obj->addProvider($this->provider));
         $this->assertCount(1, $obj->getProviders());
@@ -109,7 +109,7 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testExists() {
 
-        $obj = new CSSResourcesManager($this->directory);
+        $obj = new CSSAssetManager($this->directory);
 
         $this->assertFalse($obj->exists());
     }
@@ -121,7 +121,7 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testRegisterProvider() {
 
-        $obj = new CSSResourcesManager($this->directory);
+        $obj = new CSSAssetManager($this->directory);
 
         $this->assertSame($obj, $obj->registerProvider($this->provider));
         $this->assertCount(1, $obj->getProviders());
@@ -135,7 +135,7 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testWrite() {
 
-        $obj = new CSSResourcesManager($this->directory);
+        $obj = new CSSAssetManager($this->directory);
         $obj->registerProvider($this->provider);
 
         // Initialize the minimal size
@@ -156,8 +156,8 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testWriteWithIllegalArgumentException() {
 
-        $obj = new CSSResourcesManager($this->directory);
-        $obj->registerProvider(new TestResourcesProvider());
+        $obj = new CSSAssetManager($this->directory);
+        $obj->registerProvider(new TestAssetProvider());
 
         try {
 

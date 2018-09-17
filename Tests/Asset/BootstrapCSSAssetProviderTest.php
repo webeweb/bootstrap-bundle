@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Provider\Resources;
+namespace WBW\Bundle\BootstrapBundle\Tests\Provider\Asset;
 
-use WBW\Bundle\BootstrapBundle\Provider\Resources\CSSResourcesProvider;
+use WBW\Bundle\BootstrapBundle\Asset\BootstrapCSSAssetProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
- * CSS resources provider.
+ * Bootstrap CSS asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Provider\Resources
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset
  * @final
  */
-final class CSSResourcesProviderTest extends AbstractBootstrapFrameworkTestCase {
+final class CSSAssetProviderTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
      * Tests the getResources() method.
@@ -30,7 +30,7 @@ final class CSSResourcesProviderTest extends AbstractBootstrapFrameworkTestCase 
      */
     public function testGetResources() {
 
-        $obj = new CSSResourcesProvider();
+        $obj = new BootstrapCSSAssetProvider();
 
         $this->assertCount(19, $obj->getResources());
     }
