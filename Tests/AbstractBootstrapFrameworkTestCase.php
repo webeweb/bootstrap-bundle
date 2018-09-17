@@ -149,8 +149,14 @@ abstract class AbstractBootstrapFrameworkTestCase extends TestCase {
             return $this->twigGlobals;
         });
 
+        // Set a Parameter bag mock.
+        $parameterBag = new ParameterBag([
+            "kernel.environment" => "dev",
+            "kernel.root_dir"    => getcwd() . "/Fixtures/app"
+        ]);
+
         // We set a container builder with only the necessary.
-        $this->containerBuilder = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
+        $this->containerBuilder = new ContainerBuilder($parameterBag);
         $this->containerBuilder->set("kernel", $this->kernel);
         $this->containerBuilder->set("router", $this->router);
         $this->containerBuilder->set("security.token_storage", $this->tokenStorage);
