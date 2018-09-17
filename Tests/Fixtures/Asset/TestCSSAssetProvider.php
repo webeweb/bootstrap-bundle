@@ -34,15 +34,9 @@ final class TestCSSAssetProvider implements CSSAssetProviderInterface {
      * {@inheritdoc}
      */
     public function getResources() {
-
-        // Initialize the resources.
-        $resources = [];
-
-        $resources[] = "/animate.css-3.5.2/animate.min.css";
-        $resources[] = "/animate.css-3.5.2/animate.min.js";
-
-        // Returns the resources.
-        return $resources;
+        return [
+            "/animate.css-3.5.2/animate.min.js",
+        ];
     }
 
 }

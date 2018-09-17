@@ -165,7 +165,7 @@ final class CSSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(IllegalArgumentException::class, $ex);
-            $this->assertRegExp("/^The resource \".*animate\.min\.js\" must match the extension .css$/", $ex->getMessage());
+            $this->assertRegExp("/^The resource \".*animate\.min\.js\" must end with the extension \.css$/", $ex->getMessage());
         }
     }
 
