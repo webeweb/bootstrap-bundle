@@ -11,9 +11,12 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Manager\Resources;
 
+use Exception;
 use WBW\Bundle\BootstrapBundle\Manager\Resources\CSSResourcesManager;
 use WBW\Bundle\BootstrapBundle\Provider\Resources\CSSResourcesProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Provider\Resources\TestResourcesProvider;
+use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * CSS resources manager test.
@@ -49,6 +52,25 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
 
         // Set a CSS resources provider mock.
         $this->provider = new CSSResourcesProvider();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function tearDownAfterClass() {
+
+        // Initialize the filenames.
+        $filenames = [
+            getcwd() . "/Tests/Fixtures/App/web/resources.css",
+        ];
+
+        // Handle each filename.
+        foreach ($filenames as $current) {
+            if (false === file_exists($current)) {
+                continue;
+            }
+            unlink($current); // Remove files for local unit tests.
+        }
     }
 
     /**
@@ -104,6 +126,47 @@ final class CSSResourcesManagerTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertSame($obj, $obj->registerProvider($this->provider));
         $this->assertCount(1, $obj->getProviders());
         $this->assertSame($this->provider, $obj->getProviders()[0]);
+    }
+
+    /**
+     * Tests the write() method.
+     *
+     * @return void
+     */
+    public function testWrite() {
+
+        $obj = new CSSResourcesManager($this->directory);
+        $obj->registerProvider($this->provider);
+
+        // Initialize the minimal size
+        $size = 0;
+        foreach ($this->provider->getResources() as $current) {
+            $size += filesize($this->provider->getDirectory() . $current);
+        }
+
+        $this->assertNull($obj->write());
+        $this->assertFileExists($obj->getFilename());
+        $this->assertGreaterThan($size, filesize($obj->getFilename()));
+    }
+
+    /**
+     * Tests the write() method.
+     *
+     * @return void
+     */
+    public function testWriteWithIllegalArgumentException() {
+
+        $obj = new CSSResourcesManager($this->directory);
+        $obj->registerProvider(new TestResourcesProvider());
+
+        try {
+
+            $obj->write();
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
+            $this->assertRegExp("/^The resource \".*animate\.min\.js\" must match the extension .css$/", $ex->getMessage());
+        }
     }
 
 }
