@@ -31,9 +31,7 @@ abstract class AbstractResourcesProvider implements ResourcesProviderInterface {
     }
 
     /**
-     * Get the directory.
-     *
-     * @return string Returns the directory.
+     * {@inheritdoc}
      */
     public function getDirectory() {
         return BootstrapBundle::getResourcesDirectory() . "/public";
