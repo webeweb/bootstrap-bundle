@@ -17,7 +17,7 @@ namespace WBW\Bundle\BootstrapBundle\Provider\Resources;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Provider\Resources
  */
-class JSResourcesProvider implements JSResourcesProviderInterface {
+class JSResourcesProvider extends AbstractResourcesProvider implements JSResourcesProviderInterface {
 
     /**
      * {@inheritdoc}
