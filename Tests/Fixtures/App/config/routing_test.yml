@@ -1,32 +1,32 @@
 # Tests/Fixtures/App/config/routing_test.yml
 bootstrap_blank_action:
     path:     "/blank"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::blankAction" }
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
     methods:  ["GET"]
 
 bootstrap_email_action:
     path:     "/email"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::emailAction" }
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::emailAction" }
     methods:  ["GET"]
 
 bootstrap_flashbag_action:
     path:     "/flashbag"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::flashbagAction" }
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
     methods:  ["GET"]
 
 bootstrap_get_router_action:
     path:     "/get/router"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::getRouterAction" }
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getRouterAction" }
     methods:  ["GET"]
 
 bootstrap_get_translator_action:
     path:     "/get/translator"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::getTranslatorAction" }
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getTranslatorAction" }
     methods:  ["GET"]
 
 bootstrap_redirect_action:
     path:     "/redirect"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Controller\\LayoutController::redirectAction" }
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::redirectAction" }
     methods:  ["GET"]
 
 bootstrap_wiki:

@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
+namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\BootstrapBundle\Controller\AbstractBootstrapController;
 
 /**
- * Layout controller.
+ * Test layout controller.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Controller
+ * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller
  * @final
  */
-final class LayoutController extends AbstractBootstrapController {
+final class TestLayoutController extends AbstractBootstrapController {
 
     /**
      * Displays a blank page.
