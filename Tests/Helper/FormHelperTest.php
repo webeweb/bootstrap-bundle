@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use WBW\Bundle\BootstrapBundle\Helper\FormHelper;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Form helper test.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 
 use Symfony\Component\Security\Core\User\User;
 use WBW\Bundle\BootstrapBundle\Helper\UserHelper;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * User helper test.
