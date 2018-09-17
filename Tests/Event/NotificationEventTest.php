@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Event;
 
 use WBW\Bundle\BootstrapBundle\Event\NotificationEvent;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Notification event test.
