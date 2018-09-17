@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Manager;
 use WBW\Bundle\BootstrapBundle\Provider\ProviderInterface;
 
 /**
- * Bootstrap manager interface.
+ * Manager interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Manager
@@ -25,7 +25,7 @@ interface ManagerInterface {
      * Register a provider.
      *
      * @param ProviderInterface $provider The provider
-     * @return void
+     * @return ManagerInterface Returns this manager.
      */
     public function registerProvider(ProviderInterface $provider);
 }
