@@ -15,13 +15,13 @@ use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Provider\Asset\CSSAssetProviderInterface;
 
 /**
- * Test asset provider.
+ * Test CSS asset provider.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset
  * @final
  */
-final class TestAssetProvider implements CSSAssetProviderInterface {
+final class TestCSSAssetProvider implements CSSAssetProviderInterface {
 
     /**
      * {@inheritdoc}

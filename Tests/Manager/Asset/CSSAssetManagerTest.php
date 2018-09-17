@@ -15,7 +15,7 @@ use Exception;
 use WBW\Bundle\BootstrapBundle\Asset\BootstrapCSSAssetProvider;
 use WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\TestAssetProvider;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\TestCSSAssetProvider;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
@@ -157,7 +157,7 @@ final class CSSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
     public function testWriteWithIllegalArgumentException() {
 
         $obj = new CSSAssetManager($this->directory);
-        $obj->registerProvider(new TestAssetProvider());
+        $obj->registerProvider(new TestCSSAssetProvider());
 
         try {
 
