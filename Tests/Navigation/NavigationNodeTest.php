@@ -58,8 +58,8 @@ final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
 
         $this->assertFalse($obj->isDisplayable());
 
-        $this->assertSame($obj, $obj->getLastNode()->setActive(true));
-        $this->assertSame($obj, $obj->getLastNode()->setEnable(true));
+        $this->assertNotSame($obj, $obj->getLastNode()->setActive(true));
+        $this->assertNotSame($obj, $obj->getLastNode()->setEnable(true));
         $this->assertTrue($obj->isDisplayable());
     }
 
