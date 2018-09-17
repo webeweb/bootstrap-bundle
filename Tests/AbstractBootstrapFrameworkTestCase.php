@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Cases;
+namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use PHPUnit\Framework\TestCase;
