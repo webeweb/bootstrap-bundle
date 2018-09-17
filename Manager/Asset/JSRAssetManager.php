@@ -9,22 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Manager\Resources;
+namespace WBW\Bundle\BootstrapBundle\Manager\Asset;
 
 /**
- * CSS resources manager.
+ * JS asset manager.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Manager\Resources
+ * @package WBW\Bundle\BootstrapBundle\Manager\Asset
  */
-class CSSResourcesManager extends AbstractResourcesManager {
+class JSAssetManager extends AbstractAssetManager {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.manager.resources.css";
+    const SERVICE_NAME = "webeweb.bootstrap.manager.asset.js";
 
     /**
      * Constructor.
@@ -32,7 +32,7 @@ class CSSResourcesManager extends AbstractResourcesManager {
      * @param string $directory The directory.
      */
     public function __construct($directory) {
-        parent::__construct($directory, ".css");
+        parent::__construct($directory, ".js");
     }
 
 }

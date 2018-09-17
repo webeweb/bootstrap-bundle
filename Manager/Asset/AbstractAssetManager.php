@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Manager\Resources;
+namespace WBW\Bundle\BootstrapBundle\Manager\Asset;
 
 use WBW\Bundle\BootstrapBundle\Manager\AbstractManager;
 use WBW\Bundle\BootstrapBundle\Manager\ManagerInterface;
@@ -17,13 +17,13 @@ use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 use WBW\Library\Core\FileSystem\FileHelper;
 
 /**
- * Abstract resources manager.
+ * Abstract asset manager.
  *
  * @author e <https://github.com/e/>
- * @package WBW\Bundle\BootstrapBundle\Manager\Resources
+ * @package WBW\Bundle\BootstrapBundle\Manager\Asset
  * @abstract
  */
-abstract class AbstractResourcesManager extends AbstractManager {
+abstract class AbstractAssetManager extends AbstractManager {
 
     /**
      * Directory.
