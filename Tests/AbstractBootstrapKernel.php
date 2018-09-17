@@ -35,21 +35,21 @@ abstract class AbstractBootstrapKernel extends Kernel {
      * {@inheritdoc}
      */
     public function getCacheDir() {
-        return $this->getBundleDir() . "/Tests/Fixtures/App/var/cache";
+        return $this->getBundleDir() . "/Tests/Fixtures/var/cache";
     }
 
     /**
      * {@inheritdoc}
      */
     public function getLogDir() {
-        return $this->getBundleDir() . "/Tests/Fixtures/App/var/logs";
+        return $this->getBundleDir() . "/Tests/Fixtures/var/logs";
     }
 
     /**
      * {@inheritdoc}
      */
     public function registerContainerConfiguration(LoaderInterface $loader) {
-        $loader->load($this->getBundleDir() . "/Tests/Fixtures/App/config/config_test.yml");
+        $loader->load($this->getBundleDir() . "/Tests/Fixtures/app/config/config_test.yml");
     }
 
 }
