@@ -48,7 +48,7 @@ final class CSSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
         parent::setUp();
 
         // Set a Directory mock.
-        $this->directory = getcwd() . "/Tests/Fixtures/App/web";
+        $this->directory = getcwd() . "/Tests/Fixtures/web";
 
         // Set a CSS asset provider mock.
         $this->provider = new CSSAssetProvider();
@@ -61,7 +61,7 @@ final class CSSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
 
         // Initialize the filenames.
         $filenames = [
-            getcwd() . "/Tests/Fixtures/App/web/resources.css",
+            getcwd() . "/Tests/Fixtures/web/resources.css",
         ];
 
         // Handle each filename.

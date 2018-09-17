@@ -48,7 +48,7 @@ final class JSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
         parent::setUp();
 
         // Set a Directory mock.
-        $this->directory = getcwd() . "/Tests/Fixtures/App/web";
+        $this->directory = getcwd() . "/Tests/Fixtures/web";
 
         // Set a JS resources provider mock.
         $this->provider = new JSAssetProvider();
@@ -61,7 +61,7 @@ final class JSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
 
         // Initialize the filenames.
         $filenames = [
-            getcwd() . "/Tests/Fixtures/App/web/resources.js",
+            getcwd() . "/Tests/Fixtures/web/resources.js",
         ];
 
         // Handle each filename.
