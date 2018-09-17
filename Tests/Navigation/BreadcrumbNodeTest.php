@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Model\Navigation;
 
 use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Breadcrumb node test.
