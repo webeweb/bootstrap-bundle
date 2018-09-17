@@ -3,5 +3,5 @@
 /vendor/*
 
 # Fixtures
-/Tests/Fixtures/var/*
-!/Tests/Fixtures/var/.gitkeep
+/Tests/Fixtures/app/var/*
+!/Tests/Fixtures/app/var/.gitkeep
