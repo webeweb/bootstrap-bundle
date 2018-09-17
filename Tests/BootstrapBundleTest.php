@@ -38,6 +38,16 @@ final class BootstrapBundleTest extends AbstractBootstrapFrameworkTestCase {
     }
 
     /**
+     * Tests the getBundleDirectory() method.
+     *
+     * @return void
+     */
+    public function testGetBundleDirectory() {
+
+        $this->assertRegExp("/^.*\/bootstrap\-bundle$/", BootstrapBundle::getBundleDirectory());
+    }
+
+    /**
      * Tests the getBootstrapConstants() method.
      *
      * @return void
@@ -54,6 +64,16 @@ final class BootstrapBundleTest extends AbstractBootstrapFrameworkTestCase {
             BootstrapBundle::BOOTSTRAP_WARNING,
         ];
         $this->assertEquals($res, BootstrapBundle::getBootstrapConstants());
+    }
+
+    /**
+     * Tests the getResourcesDirectory() method.
+     *
+     * @return void
+     */
+    public function testGetResourcesDirectory() {
+
+        $this->assertRegExp("/^.*\/bootstrap\-bundle\/Resources$/", BootstrapBundle::getResourcesDirectory());
     }
 
 }
