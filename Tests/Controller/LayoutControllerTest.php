@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapWebTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapWebTestCase;
 
 /**
  * Layout controller test.
