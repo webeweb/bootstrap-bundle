@@ -61,6 +61,7 @@ abstract class AbstractManager implements ManagerInterface {
      */
     public function registerProvider(ProviderInterface $provider) {
         $this->addProvider($provider);
+        return $this;
     }
 
     /**
