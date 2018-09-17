@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Model;
 
 use WBW\Bundle\BootstrapBundle\Model\EmailLayout;
-use WBW\Bundle\BootstrapBundle\Tests\Cases\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 
 /**
  * Email layout test.
