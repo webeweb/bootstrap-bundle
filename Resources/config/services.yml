@@ -36,6 +36,14 @@ services:
             - ["setSearchProvider",                ["@?webeweb.bootstrap.provider.search"]]
             - ["setUserInfoProvider",              ["@?webeweb.bootstrap.provider.userinfo"]]
 
+    webeweb.bootstrap.manager.asset.css:
+        class:     WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager
+        arguments: ["%kernel.root_dir%/../web"]
+
+    webeweb.bootstrap.manager.asset.js:
+        class:     WBW\Bundle\BootstrapBundle\Manager\Asset\JSAssetManager
+        arguments: ["%kernel.root_dir%/../web"]
+
     webeweb.bootstrap.twig.extension.css.button:
         class: WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
         tags:

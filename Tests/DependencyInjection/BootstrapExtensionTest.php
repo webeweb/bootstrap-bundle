@@ -14,6 +14,8 @@ namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
+use WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager;
+use WBW\Bundle\BootstrapBundle\Manager\Asset\JSAssetManager;
 use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
@@ -49,13 +51,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
 final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
-     * {@inheritdoc}
-     */
-    protected function setUp() {
-        parent::setUp();
-    }
-
-    /**
      * Tests the load() method.
      *
      * @return void
@@ -71,6 +66,8 @@ final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
 
         // Manager
+        $this->assertInstanceOf(CSSAssetManager::class, $this->containerBuilder->get(CSSAssetManager::SERVICE_NAME));
+        $this->assertInstanceOf(JSAssetManager::class, $this->containerBuilder->get(JSAssetManager::SERVICE_NAME));
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
 
         // Twig extensions CSS
