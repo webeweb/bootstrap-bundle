@@ -36,11 +36,11 @@ class KernelEventListener {
     const SERVICE_NAME = "webeweb.bootstrap.eventlistener.kernel";
 
     /**
-     * Providers manager.
+     * Theme manager.
      *
      * @var ThemeManager
      */
-    private $providersManager;
+    private $themeManager;
 
     /**
      * Request.
@@ -75,12 +75,12 @@ class KernelEventListener {
     }
 
     /**
-     * Get the providers manager.
+     * Get the theme manager.
      *
-     * @return ThemeManager Returns the providers manager.
+     * @return ThemeManager Returns the theme manager.
      */
     public function getThemeManager() {
-        return $this->providersManager;
+        return $this->themeManager;
     }
 
     /**
@@ -89,7 +89,7 @@ class KernelEventListener {
      * @return Request Returns the request.
      */
     public function getRequest() {
-        return self::$request;
+        return static::$request;
     }
 
     /**
@@ -160,11 +160,11 @@ class KernelEventListener {
     /**
      * Set the providers manager.
      *
-     * @param ThemeManager $providersManager The providers manager.
+     * @param ThemeManager $themeManager The theme manager.
      * @return KernelEventListener Returns this kernel event listener.
      */
-    protected function setThemeManager(ThemeManager $providersManager) {
-        $this->providersManager = $providersManager;
+    protected function setThemeManager(ThemeManager $themeManager) {
+        $this->themeManager = $themeManager;
         return $this;
     }
 
@@ -175,7 +175,7 @@ class KernelEventListener {
      * @return KernelEventListener Returns this kernel event listener.
      */
     protected function setRequest(Request $request) {
-        self::$request = $request;
+        static::$request = $request;
         return $this;
     }
 
