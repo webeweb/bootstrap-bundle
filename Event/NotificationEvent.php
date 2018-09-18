@@ -17,7 +17,7 @@ namespace WBW\Bundle\BootstrapBundle\Event;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Event
  */
-class NotificationEvent extends AbstractBootstrapEvent {
+class NotificationEvent extends AbstractEvent {
 
     /**
      * Notification.

@@ -14,13 +14,13 @@ namespace WBW\Bundle\BootstrapBundle\Event;
 use Symfony\Component\EventDispatcher\Event;
 
 /**
- * Abstract Bootstrap event.
+ * Abstract event.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Event
  * @abstract
  */
-abstract class AbstractBootstrapEvent extends Event {
+abstract class AbstractEvent extends Event {
 
     /**
      * Event name.
