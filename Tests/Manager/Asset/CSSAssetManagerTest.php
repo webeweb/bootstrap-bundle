@@ -128,45 +128,4 @@ final class CSSAssetManagerTest extends AbstractBootstrapFrameworkTestCase {
         $this->assertSame($this->provider, $obj->getProviders()[0]);
     }
 
-    /**
-     * Tests the write() method.
-     *
-     * @return void
-     */
-    public function testWrite() {
-
-        $obj = new CSSAssetManager($this->directory);
-        $obj->registerProvider($this->provider);
-
-        // Initialize the minimal size
-        $size = 0;
-        foreach ($this->provider->getResources() as $current) {
-            $size += filesize($this->provider->getDirectory() . $current);
-        }
-
-        $this->assertNull($obj->write());
-        $this->assertFileExists($obj->getFilename());
-        $this->assertGreaterThan($size, filesize($obj->getFilename()));
-    }
-
-    /**
-     * Tests the write() method.
-     *
-     * @return void
-     */
-    public function testWriteWithIllegalArgumentException() {
-
-        $obj = new CSSAssetManager($this->directory);
-        $obj->registerProvider(new TestCSSAssetProvider());
-
-        try {
-
-            $obj->write();
-        } catch (Exception $ex) {
-
-            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
-            $this->assertRegExp("/^The resource \".*animate\.min\.js\" must end with the extension \.css$/", $ex->getMessage());
-        }
-    }
-
 }

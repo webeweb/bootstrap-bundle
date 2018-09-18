@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Manager\Asset;
 
+use WBW\Bundle\BootstrapBundle\Helper\AssetHelper;
 use WBW\Bundle\BootstrapBundle\Manager\AbstractManager;
 use WBW\Bundle\BootstrapBundle\Manager\ManagerInterface;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
@@ -52,9 +53,9 @@ abstract class AbstractAssetManager extends AbstractManager {
     }
 
     /**
-     * Determines if the resource exists.
+     * Determines if the filename exists.
      *
-     * @return boolean Returns true in case of success, false otrherwise.
+     * @return boolean Returns true in case of success, false otherwise.
      */
     public function exists() {
         return file_exists($this->getFilename());
@@ -88,39 +89,6 @@ abstract class AbstractAssetManager extends AbstractManager {
     }
 
     /**
-     * Get the resources.
-     *
-     * @return array Returns the resources.
-     * @throw IllegalArgumentException Throw an illegal argument exception if a resource does not math the extension.
-     */
-    protected function getResources() {
-
-        // Initialize the output.
-        $output = [];
-
-        // Hande each provider.
-        foreach ($this->getProviders() as $provider) {
-
-            // Handle each resource.
-            foreach ($provider->getResources() as $resource) {
-
-                // Build and check the resource path.
-                $resourcePath = $provider->getDirectory() . $resource;
-                if (0 === preg_match("/" . $this->getExtension() . "$/", $resourcePath)) {
-                    $msg = sprintf("The resource \"%s\" must end with the extension %s", $resourcePath, $this->getExtension());
-                    throw new IllegalArgumentException($msg);
-                }
-
-                // Add the resource.
-                $output[] = $resourcePath;
-            }
-        }
-
-        // Return the output.
-        return $output;
-    }
-
-    /**
      * Set the directory.
      *
      * @param string $directory The directory.
@@ -140,18 +108,6 @@ abstract class AbstractAssetManager extends AbstractManager {
     protected function setExtension($extension) {
         $this->extension = $extension;
         return $this;
-    }
-
-    /**
-     * Write.
-     *
-     * @return void
-     * @throw IllegalArgumentException Throw an illegal argument exception if a resource does not math the extension.
-     */
-    public function write() {
-        foreach ($this->getResources() as $current) {
-            FileHelper::appendTo($current, $this->getFilename(), true);
-        }
     }
 
 }
