@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 use Exception;
 use WBW\Bundle\BootstrapBundle\Asset\CSSAssetProvider;
 use WBW\Bundle\BootstrapBundle\Helper\AssetHelper;
+use WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\TestCSSAssetProvider;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
@@ -34,8 +35,11 @@ final class AssetHelperTest extends AbstractBootstrapFrameworkTestCase {
      */
     public function testGetFilenames() {
 
-        $res = AssetHelper::getFilenames([new CSSAssetProvider()], ".css");
-        $this->assertCount(19, $res);
+        $res0 = AssetHelper::getFilenames([new CSSAssetManager("")], ".css");
+        $this->assertCount(0, $res0);
+
+        $res9 = AssetHelper::getFilenames([new CSSAssetProvider()], ".css");
+        $this->assertCount(19, $res9);
     }
 
     /**
