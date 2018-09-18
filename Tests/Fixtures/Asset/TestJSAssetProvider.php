@@ -33,7 +33,7 @@ final class TestJSAssetProvider implements JSAssetProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getResources() {
+    public function getFilenames() {
         return [
             "/animate.css-3.5.2/animate.min.css",
         ];

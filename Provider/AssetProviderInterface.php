@@ -27,9 +27,9 @@ interface AssetProviderInterface extends ProviderInterface {
     public function getDirectory();
 
     /**
-     * Get the resources.
+     * Get the filenames.
      *
-     * @return array Returns the resources.
+     * @return array Returns the filenames.
      */
-    public function getResources();
+    public function getFilenames();
 }

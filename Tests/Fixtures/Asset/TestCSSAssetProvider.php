@@ -33,7 +33,7 @@ final class TestCSSAssetProvider implements CSSAssetProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getResources() {
+    public function getFilenames() {
         return [
             "/animate.css-3.5.2/animate.min.js",
         ];

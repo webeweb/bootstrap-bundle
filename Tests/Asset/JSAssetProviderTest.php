@@ -24,15 +24,15 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
 final class JSAssetProviderTest extends AbstractBootstrapFrameworkTestCase {
 
     /**
-     * Tests the getResources() method.
+     * Tests the getFilenames() method.
      *
      * @return void
      */
-    public function testGetResources() {
+    public function testGetFilenames() {
 
         $obj = new JSAssetProvider();
 
-        $this->assertCount(20, $obj->getResources());
+        $this->assertCount(20, $obj->getFilenames());
     }
 
 }
