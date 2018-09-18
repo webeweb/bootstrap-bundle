@@ -89,7 +89,7 @@ class KernelEventListener {
      * @return Request Returns the request.
      */
     public function getRequest() {
-        return static::$request;
+        return self::$request;
     }
 
     /**
@@ -175,7 +175,7 @@ class KernelEventListener {
      * @return KernelEventListener Returns this kernel event listener.
      */
     protected function setRequest(Request $request) {
-        static::$request = $request;
+        self::$request = $request;
         return $this;
     }
 
