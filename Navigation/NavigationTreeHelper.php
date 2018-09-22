@@ -44,12 +44,10 @@ class NavigationTreeHelper {
 
             // Init.
             $current = false;
-            $delete  = false;
 
             // Determines if the current node matches the URL.
             if (true === self::nodeMatch($n, $request)) {
                 $current = true;
-                $delete  = true;
             } else {
                 $current = self::activeNodes($request, $n->getNodes(), $level + 1);
             }
@@ -61,11 +59,6 @@ class NavigationTreeHelper {
 
             // Mark the node as active.
             $n->setActive(true);
-
-            // Remove the icon only on the last level.
-            if (true === $delete && 0 < $level) {
-                $n->setIcon(null);
-            }
 
             // Set the result.
             $result = true;
