@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapKernel;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractKernel;
 
 /**
  * Test kernel.
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapKernel;
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\App
  * @final
  */
-final class TestKernel extends AbstractBootstrapKernel {
+final class TestKernel extends AbstractKernel {
 
     /**
      * {@inheritdoc}

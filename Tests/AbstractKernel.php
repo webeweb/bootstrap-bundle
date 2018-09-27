@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\Kernel;
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
-abstract class AbstractBootstrapKernel extends Kernel {
+abstract class AbstractKernel extends Kernel {
 
     /**
      * Get the bundle directory.
