@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Model\Navigation\Predefined;
 
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\Predefined\BreadcrumbNodeNewUserAction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Breadcrumb node "New user" action test.
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Model\Navigation\Predefined
  * @final
  */
-final class BreadcrumbNodeNewUserActionTest extends AbstractBootstrapFrameworkTestCase {
+final class BreadcrumbNodeNewUserActionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

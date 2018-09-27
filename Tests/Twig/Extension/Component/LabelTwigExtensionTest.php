@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class LabelTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class LabelTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

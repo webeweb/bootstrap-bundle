@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class NavTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class NavTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Items.

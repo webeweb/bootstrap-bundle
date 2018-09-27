@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
 use WBW\Library\Core\FileSystem\FileHelper;
 
@@ -24,7 +24,7 @@ use WBW\Library\Core\FileSystem\FileHelper;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  * @final
  */
-final class ImageTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class ImageTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

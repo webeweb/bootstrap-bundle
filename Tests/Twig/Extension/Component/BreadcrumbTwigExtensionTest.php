@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\TestFixtures;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
 
@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  * @final
  */
-final class BreadcrumbTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Navigation tree

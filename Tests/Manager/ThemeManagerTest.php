@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoThemeProviderInterface;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Theme manager test.
@@ -30,7 +30,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Manager
  * @final
  */
-final class ThemeManagerTest extends AbstractBootstrapFrameworkTestCase {
+final class ThemeManagerTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}

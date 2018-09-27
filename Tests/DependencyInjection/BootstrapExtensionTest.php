@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager;
 use WBW\Bundle\BootstrapBundle\Manager\Asset\JSAssetManager;
 use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension;
@@ -48,7 +48,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\DependencyInjection
  * @final
  */
-final class BootstrapExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class BootstrapExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the load() method.

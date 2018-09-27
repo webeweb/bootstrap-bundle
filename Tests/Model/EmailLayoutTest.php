@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Model;
 
 use WBW\Bundle\BootstrapBundle\Model\EmailLayout;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Email layout test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Model
  * @final
  */
-final class EmailLayoutTest extends AbstractBootstrapFrameworkTestCase {
+final class EmailLayoutTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

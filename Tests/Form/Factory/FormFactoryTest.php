@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Form\Factory;
 
 use WBW\Bundle\BootstrapBundle\Form\Factory\FormFactory;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * FormFactoryTest
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Form\Factory
  * @final
  */
-final class FormFactoryTest extends AbstractBootstrapFrameworkTestCase {
+final class FormFactoryTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the createChoiceType() method.

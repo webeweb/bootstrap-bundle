@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Model;
 
 use WBW\Bundle\BootstrapBundle\Model\WikiPage;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Wiki page model test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Model
  * @final
  */
-final class WikiPageTest extends AbstractBootstrapFrameworkTestCase {
+final class WikiPageTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

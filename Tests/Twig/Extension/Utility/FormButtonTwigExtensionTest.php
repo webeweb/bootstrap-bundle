@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension;
 
@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
  * @final
  */
-final class FormButtonTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class FormButtonTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}

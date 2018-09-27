@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\BootstrapBundle;
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @final
  */
-final class BootstrapBundleTest extends AbstractBootstrapFrameworkTestCase {
+final class BootstrapBundleTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

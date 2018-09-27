@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
 
@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility
  * @final
  */
-final class RoleLabelTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class RoleLabelTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}

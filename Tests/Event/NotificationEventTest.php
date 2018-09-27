@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Event;
 
 use WBW\Bundle\BootstrapBundle\Event\NotificationEvent;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Notification event test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Event
  * @final
  */
-final class NotificationEventTest extends AbstractBootstrapFrameworkTestCase {
+final class NotificationEventTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests __construct() method.

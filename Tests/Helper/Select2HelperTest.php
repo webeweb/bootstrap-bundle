@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 use Exception;
 use WBW\Bundle\BootstrapBundle\Helper\Select2Helper;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model\TestSelect2Item;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
@@ -25,7 +25,7 @@ use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
  * @package WBW\Bundle\BootstrapBundle\Tests\Helper\Model
  * @final
  */
-final class Select2HelperTest extends AbstractBootstrapFrameworkTestCase {
+final class Select2HelperTest extends AbstractFrameworkTestCase {
 
     /**
      * Items.

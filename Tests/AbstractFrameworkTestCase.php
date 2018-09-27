@@ -31,7 +31,7 @@ use Twig_LoaderInterface;
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
-abstract class AbstractBootstrapFrameworkTestCase extends TestCase {
+abstract class AbstractFrameworkTestCase extends TestCase {
 
     /**
      * Container builder.

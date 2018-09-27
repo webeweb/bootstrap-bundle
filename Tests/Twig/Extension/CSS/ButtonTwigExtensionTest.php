@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 
 /**
@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  * @final
  */
-final class ButtonTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class ButtonTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.

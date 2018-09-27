@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension;
 
 use Twig_Node;
 use Twig_SimpleFilter;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension
  * @final
  */
-final class BootstrapRendererTwigExtensionTest extends AbstractBootstrapFrameworkTestCase {
+final class BootstrapRendererTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.

@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Model\Navigation;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationItem;
 use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
 /**
  * Navigation node test.
@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapFrameworkTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Model\Navigation
  * @final
  */
-final class NavigationNodeTest extends AbstractBootstrapFrameworkTestCase {
+final class NavigationNodeTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
