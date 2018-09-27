@@ -112,22 +112,29 @@ Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-exten
 ```html
 {# AppBundle/Resources/views/layout.html.twig #}
 {% extends "@Bootstrap/layout.html.twig" %}
+
 {% block bootstrapFormTheme %}
     {# your form theme #}
 {% endblock %}
+
 {% block bootstrapHeadFavicon %}
     {# your favicons #}
 {% endblock %}
+
 {% block bootstrapHeadStyles %}
     {{ parent() }}
     {# your styles #}
 {% endblock %}
+
 {% block bootstrapHeadTitle %}{{ parent() }}{# your title #}{% endblock %}
+
 {% block bootstrapBodyClasses %}{{ parent() }}{# your attributes #}{% endblock %}
+
 {% block bootstrapBodyContent %}
     {{ parent() }}
     {# your content #}
 {% endblock %}
+
 {% block bootstrapBodyScripts %}
     {{ parent() }}
     {# your scripts #}
