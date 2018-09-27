@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
 use WBW\Bundle\BootstrapBundle\Controller\WikiController;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapWebTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 
 /**
  * Wiki controller test.
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapWebTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Controller
  * @final
  */
-final class WikiControllerTest extends AbstractBootstrapWebTestCase {
+final class WikiControllerTest extends AbstractWebTestCase {
 
     /**
      * Tests the indexAction() method.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
-use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapWebTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 
 /**
  * Layout controller test.
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractBootstrapWebTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests\Controller
  * @final
  */
-final class LayoutControllerTest extends AbstractBootstrapWebTestCase {
+final class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
      * Tests the blankAction() method.

@@ -21,7 +21,7 @@ use TestKernel;
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
-abstract class AbstractBootstrapWebTestCase extends WebTestCase {
+abstract class AbstractWebTestCase extends WebTestCase {
 
     /**
      * {@inheritdoc}
