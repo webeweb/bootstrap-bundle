@@ -42,9 +42,6 @@ class NavigationTreeHelper {
                 continue;
             }
 
-            // Init.
-            $current = false;
-
             // Determines if the current node matches the URL.
             if (true === self::nodeMatch($n, $request)) {
                 $current = true;
