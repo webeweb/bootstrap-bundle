@@ -26,6 +26,6 @@ interface FooterThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.footer";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.theme.footer";
 
 }
