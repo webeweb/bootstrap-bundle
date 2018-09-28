@@ -26,7 +26,7 @@ interface NotificationsDropDownThemeProviderInterface extends ThemeProviderInter
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.dropdownnotifications";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.theme.notificationsdropdown";
 
     /**
      * Get the notifications.
