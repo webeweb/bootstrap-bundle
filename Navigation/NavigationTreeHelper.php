@@ -116,7 +116,7 @@ class NavigationTreeHelper {
         // Initialize the result.
         $result = false;
 
-        //
+        // Switch into matcher.
         switch ($node->getMatcher()) {
 
             case NavigationInterface::NAVIGATION_MATCHER_REGEXP:
