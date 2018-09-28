@@ -26,7 +26,7 @@ interface HookDropDownThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.dropdownhook";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.theme.hookdropdown";
 
     /**
      * Get the items.
