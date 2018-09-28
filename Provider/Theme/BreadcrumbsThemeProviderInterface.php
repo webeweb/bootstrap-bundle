@@ -26,6 +26,6 @@ interface BreadcrumbsThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.breadcrumbs";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.theme.breadcrumbs";
 
 }
