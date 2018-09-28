@@ -27,7 +27,7 @@ interface NavigationThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.provider.navigation";
+    const SERVICE_NAME = "webeweb.bootstrap.provider.theme.navigation";
 
     /**
      * Get the tree.
