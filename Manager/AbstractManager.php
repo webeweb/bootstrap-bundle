@@ -52,7 +52,7 @@ abstract class AbstractManager implements ManagerInterface {
      *
      * @return ProviderInterface[] Returns the provider.
      */
-    public function getProviders() {
+    public function &getProviders() {
         return $this->providers;
     }
 
