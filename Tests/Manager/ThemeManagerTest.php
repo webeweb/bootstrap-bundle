@@ -14,12 +14,12 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Manager;
 use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownHookThemeProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownNotificationsThemeProviderInterface;
-use WBW\Bundle\BootstrapBundle\Provider\Theme\DropDownTasksThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\FooterThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\HookDropDownThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\NavigationThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\NotificationsDropDownThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\SearchThemeProviderInterface;
+use WBW\Bundle\BootstrapBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Provider\Theme\UserInfoThemeProviderInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
@@ -48,221 +48,223 @@ final class ThemeManagerTest extends AbstractFrameworkTestCase {
 
         $obj = new ThemeManager($this->twigEnvironment);
 
-        $this->assertNull($obj->getApplicationProvider());
-        $this->assertNull($obj->getBreadcrumbsProvider());
-        $this->assertNull($obj->getDropDownHookProvider());
-        $this->assertNull($obj->getDropDownNotificationsProvider());
-        $this->assertNull($obj->getDropDownTasksProvider());
-        $this->assertNull($obj->getFooterProvider());
-        $this->assertNull($obj->getNavigationProvider());
-        $this->assertNull($obj->getSearchProvider());
-        $this->assertNull($obj->getUserInfoProvider());
+        $this->assertNull($obj->getApplicationThemeProvider());
+        $this->assertNull($obj->getBreadcrumbsThemeProvider());
+        $this->assertNull($obj->getFooterThemeProvider());
+        $this->assertNull($obj->getHookDropDownThemeProvider());
+        $this->assertNull($obj->getNavigationThemeProvider());
+        $this->assertNull($obj->getNotificationsDropDownThemeProvider());
+        $this->assertNull($obj->getSearchThemeProvider());
+        $this->assertNull($obj->getTasksDropDownThemeProvider());
+        $this->assertNull($obj->getUserInfoThemeProvider());
     }
 
     /**
-     * Tests the register() method.
+     * Tests the addGlobal() method.
      *
      * @return void
      * @depends testConstruct
      */
-    public function testRegister() {
+    public function testAddGlobal() {
 
         $obj = new ThemeManager($this->twigEnvironment);
-        $obj->setApplicationProvider($this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock());
-        $obj->setBreadcrumbsProvider($this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock());
-        $obj->setDropDownHookProvider($this->getMockBuilder(DropDownHookThemeProviderInterface::class)->getMock());
-        $obj->setDropDownNotificationsProvider($this->getMockBuilder(DropDownNotificationsThemeProviderInterface::class)->getMock());
-        $obj->setDropDownTasksProvider($this->getMockBuilder(DropDownTasksThemeProviderInterface::class)->getMock());
-        $obj->setFooterProvider($this->getMockBuilder(FooterThemeProviderInterface::class)->getMock());
-        $obj->setNavigationProvider($this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock());
-        $obj->setSearchProvider($this->getMockBuilder(SearchThemeProviderInterface::class)->getMock());
-        $obj->setUserInfoProvider($this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock());
 
-        $obj->register();
+        // Set the Theme provider mocks.
+        $obj->setApplicationThemeProvider($this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock());
+        $obj->setBreadcrumbsThemeProvider($this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock());
+        $obj->setHookDropDownThemeProvider($this->getMockBuilder(HookDropDownThemeProviderInterface::class)->getMock());
+        $obj->setFooterThemeProvider($this->getMockBuilder(FooterThemeProviderInterface::class)->getMock());
+        $obj->setNavigationThemeProvider($this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock());
+        $obj->setNotificationsDropDownThemeProvider($this->getMockBuilder(NotificationsDropDownThemeProviderInterface::class)->getMock());
+        $obj->setSearchThemeProvider($this->getMockBuilder(SearchThemeProviderInterface::class)->getMock());
+        $obj->setTasksDropDownThemeProvider($this->getMockBuilder(TasksDropDownThemeProviderInterface::class)->getMock());
+        $obj->setUserInfoThemeProvider($this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock());
+
+        $obj->addGlobal();
 
         $res = $this->twigEnvironment->getGlobals();
 
         $this->assertCount(9, $res);
 
-        $this->assertArrayHasKey("ApplicationProvider", $res);
-        $this->assertInstanceOf(ApplicationThemeProviderInterface::class, $res["ApplicationProvider"]);
+        $this->assertArrayHasKey("ApplicationThemeProvider", $res);
+        $this->assertInstanceOf(ApplicationThemeProviderInterface::class, $res["ApplicationThemeProvider"]);
 
-        $this->assertArrayHasKey("BreadcrumbsProvider", $res);
-        $this->assertInstanceOf(BreadcrumbsThemeProviderInterface::class, $res["BreadcrumbsProvider"]);
+        $this->assertArrayHasKey("BreadcrumbsThemeProvider", $res);
+        $this->assertInstanceOf(BreadcrumbsThemeProviderInterface::class, $res["BreadcrumbsThemeProvider"]);
 
-        $this->assertArrayHasKey("DropDownHookProvider", $res);
-        $this->assertInstanceOf(DropDownHookThemeProviderInterface::class, $res["DropDownHookProvider"]);
+        $this->assertArrayHasKey("FooterThemeProvider", $res);
+        $this->assertInstanceOf(FooterThemeProviderInterface::class, $res["FooterThemeProvider"]);
 
-        $this->assertArrayHasKey("DropDownNotificationsProvider", $res);
-        $this->assertInstanceOf(DropDownNotificationsThemeProviderInterface::class, $res["DropDownNotificationsProvider"]);
+        $this->assertArrayHasKey("HookDropDownThemeProvider", $res);
+        $this->assertInstanceOf(HookDropDownThemeProviderInterface::class, $res["HookDropDownThemeProvider"]);
 
-        $this->assertArrayHasKey("DropDownTasksProvider", $res);
-        $this->assertInstanceOf(DropDownTasksThemeProviderInterface::class, $res["DropDownTasksProvider"]);
+        $this->assertArrayHasKey("NavigationThemeProvider", $res);
+        $this->assertInstanceOf(NavigationThemeProviderInterface::class, $res["NavigationThemeProvider"]);
 
-        $this->assertArrayHasKey("FooterProvider", $res);
-        $this->assertInstanceOf(FooterThemeProviderInterface::class, $res["FooterProvider"]);
+        $this->assertArrayHasKey("NotificationsDropDownThemeProvider", $res);
+        $this->assertInstanceOf(NotificationsDropDownThemeProviderInterface::class, $res["NotificationsDropDownThemeProvider"]);
 
-        $this->assertArrayHasKey("NavigationProvider", $res);
-        $this->assertInstanceOf(NavigationThemeProviderInterface::class, $res["NavigationProvider"]);
+        $this->assertArrayHasKey("TasksDropDownThemeProvider", $res);
+        $this->assertInstanceOf(TasksDropDownThemeProviderInterface::class, $res["TasksDropDownThemeProvider"]);
 
-        $this->assertArrayHasKey("SearchProvider", $res);
-        $this->assertInstanceOf(SearchThemeProviderInterface::class, $res["SearchProvider"]);
+        $this->assertArrayHasKey("SearchThemeProvider", $res);
+        $this->assertInstanceOf(SearchThemeProviderInterface::class, $res["SearchThemeProvider"]);
 
-        $this->assertArrayHasKey("UserInfoProvider", $res);
-        $this->assertInstanceOf(UserInfoThemeProviderInterface::class, $res["UserInfoProvider"]);
+        $this->assertArrayHasKey("UserInfoThemeProvider", $res);
+        $this->assertInstanceOf(UserInfoThemeProviderInterface::class, $res["UserInfoThemeProvider"]);
     }
 
     /**
-     * Tests the setApplicationProvider() method.
+     * Tests the setApplicationThemeProvider() method.
      *
      * @return void
      * @depends testConstruct
      */
-    public function testSetApplicationProvider() {
+    public function testSetApplicationThemeProvider() {
 
-        // Set the mocks.
+        // Set the Application theme provider mock.
         $provider = $this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
-        $obj->setApplicationProvider($provider);
-        $this->assertSame($provider, $obj->getApplicationProvider());
+        $obj->setApplicationThemeProvider($provider);
+        $this->assertSame($provider, $obj->getApplicationThemeProvider());
     }
 
     /**
-     * Tests the setBreadcrumbsProvider() method.
+     * Tests the setBreadcrumbsThemeProvider() method.
      *
      * @return void
      * @depends testConstruct
      */
-    public function testSetBreadcrumbsProvider() {
+    public function testSetBreadcrumbsThemeProvider() {
 
-        // Set the mocks.
+        // Set the Breadcrumbs theme provider mock.
         $provider = $this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
-        $obj->setBreadcrumbsProvider($provider);
-        $this->assertSame($provider, $obj->getBreadcrumbsProvider());
+        $obj->setBreadcrumbsThemeProvider($provider);
+        $this->assertSame($provider, $obj->getBreadcrumbsThemeProvider());
     }
 
     /**
-     * Tests the setDropDownHookProvider() method.
+     * Tests the setFooterThemeProvider() method.
      *
      * @return void
      * @depends testConstruct
      */
-    public function testSetDropDownHookProvider() {
-
-        // Set the mocks.
-        $provider = $this->getMockBuilder(DropDownHookThemeProviderInterface::class)->getMock();
-
-        $obj = new ThemeManager($this->twigEnvironment);
-
-        $obj->setDropDownHookProvider($provider);
-        $this->assertSame($provider, $obj->getDropDownHookProvider());
-    }
-
-    /**
-     * Tests the setDropDownNotificationsProvider() method.
-     *
-     * @return void
-     * @depends testConstruct
-     */
-    public function testSetDropDownNotificationsProvider() {
-
-        // Set the mocks.
-        $provider = $this->getMockBuilder(DropDownNotificationsThemeProviderInterface::class)->getMock();
-
-        $obj = new ThemeManager($this->twigEnvironment);
-
-        $obj->setDropDownNotificationsProvider($provider);
-        $this->assertSame($provider, $obj->getDropDownNotificationsProvider());
-    }
-
-    /**
-     * Tests the setDropDownTasksProvider() method.
-     *
-     * @return void
-     * @depends testConstruct
-     */
-    public function testSetDropDownTasksProvider() {
-
-        // Set the mocks.
-        $provider = $this->getMockBuilder(DropDownTasksThemeProviderInterface::class)->getMock();
-
-        $obj = new ThemeManager($this->twigEnvironment);
-
-        $obj->setDropDownTasksProvider($provider);
-        $this->assertSame($provider, $obj->getDropDownTasksProvider());
-    }
-
-    /**
-     * Tests the setFooterProvider() method.
-     *
-     * @return void
-     * @depends testConstruct
-     */
-    public function testSetFooterProvider() {
+    public function testSetFooterThemeProvider() {
 
         // Set the mocks.
         $provider = $this->getMockBuilder(FooterThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
-        $obj->setFooterProvider($provider);
-        $this->assertSame($provider, $obj->getFooterProvider());
+        $obj->setFooterThemeProvider($provider);
+        $this->assertSame($provider, $obj->getFooterThemeProvider());
     }
 
     /**
-     * Tests the setNavigationProvider() method.
+     * Tests the setHookDropDownThemeProvider() method.
      *
      * @return void
      * @depends testConstruct
      */
-    public function testSetNavigationProvider() {
+    public function testSetHookDropDownThemeProvider() {
+
+        // Set the mocks.
+        $provider = $this->getMockBuilder(HookDropDownThemeProviderInterface::class)->getMock();
+
+        $obj = new ThemeManager($this->twigEnvironment);
+
+        $obj->setHookDropDownThemeProvider($provider);
+        $this->assertSame($provider, $obj->getHookDropDownThemeProvider());
+    }
+
+    /**
+     * Tests the setNavigationThemeProvider() method.
+     *
+     * @return void
+     * @depends testConstruct
+     */
+    public function testSetNavigationThemeProvider() {
 
         // Set the mocks.
         $provider = $this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
-        $obj->setNavigationProvider($provider);
-        $this->assertSame($provider, $obj->getNavigationProvider());
+        $obj->setNavigationThemeProvider($provider);
+        $this->assertSame($provider, $obj->getNavigationThemeProvider());
     }
 
     /**
-     * Tests the setSearchProvider() method.
+     * Tests the setNotificationsDropDownThemeProvider() method.
      *
      * @return void
      * @depends testConstruct
      */
-    public function testSetSearchProvider() {
+    public function testSetNotificationsDropDownThemeProvider() {
+
+        // Set the mocks.
+        $provider = $this->getMockBuilder(NotificationsDropDownThemeProviderInterface::class)->getMock();
+
+        $obj = new ThemeManager($this->twigEnvironment);
+
+        $obj->setNotificationsDropDownThemeProvider($provider);
+        $this->assertSame($provider, $obj->getNotificationsDropDownThemeProvider());
+    }
+
+    /**
+     * Tests the setSearchThemeProvider() method.
+     *
+     * @return void
+     * @depends testConstruct
+     */
+    public function testSetSearchThemeProvider() {
 
         // Set the mocks.
         $provider = $this->getMockBuilder(SearchThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
-        $obj->setSearchProvider($provider);
-        $this->assertSame($provider, $obj->getSearchProvider());
+        $obj->setSearchThemeProvider($provider);
+        $this->assertSame($provider, $obj->getSearchThemeProvider());
     }
 
     /**
-     * Tests the setUserInfoProvider() method.
+     * Tests the setTasksDropDownThemeProvider() method.
      *
      * @return void
      * @depends testConstruct
      */
-    public function testSetUserInfoProvider() {
+    public function testSetTasksDropDownThemeProvider() {
+
+        // Set the mocks.
+        $provider = $this->getMockBuilder(TasksDropDownThemeProviderInterface::class)->getMock();
+
+        $obj = new ThemeManager($this->twigEnvironment);
+
+        $obj->setTasksDropDownThemeProvider($provider);
+        $this->assertSame($provider, $obj->getTasksDropDownThemeProvider());
+    }
+
+    /**
+     * Tests the setUserInfoThemeProvider() method.
+     *
+     * @return void
+     * @depends testConstruct
+     */
+    public function testSetUserInfoThemeProvider() {
 
         // Set the mocks.
         $provider = $this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock();
 
         $obj = new ThemeManager($this->twigEnvironment);
 
-        $obj->setUserInfoProvider($provider);
-        $this->assertSame($provider, $obj->getUserInfoProvider());
+        $obj->setUserInfoThemeProvider($provider);
+        $this->assertSame($provider, $obj->getUserInfoThemeProvider());
     }
 
 }

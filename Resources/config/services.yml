@@ -28,15 +28,15 @@ services:
         arguments: ["@twig"]
         public:    true
         calls:
-            - ["setApplicationProvider",           ["@?webeweb.bootstrap.provider.application"]]
-            - ["setBreadcrumbsProvider",           ["@?webeweb.bootstrap.provider.breadcrumbs"]]
-            - ["setDropDownHookProvider",          ["@?webeweb.bootstrap.provider.dropdownhook"]]
-            - ["setDropDownNotificationsProvider", ["@?webeweb.bootstrap.provider.dropdownnotifications"]]
-            - ["setDropDownTasksProvider",         ["@?webeweb.bootstrap.provider.dropdowntasks"]]
-            - ["setFooterProvider",                ["@?webeweb.bootstrap.provider.footer"]]
-            - ["setNavigationProvider",            ["@?webeweb.bootstrap.provider.navigation"]]
-            - ["setSearchProvider",                ["@?webeweb.bootstrap.provider.search"]]
-            - ["setUserInfoProvider",              ["@?webeweb.bootstrap.provider.userinfo"]]
+            - ["setApplicationThemeProvider",           ["@?webeweb.bootstrap.provider.theme.application"]]
+            - ["setBreadcrumbsThemeProvider",           ["@?webeweb.bootstrap.provider.theme.breadcrumbs"]]
+            - ["setDropDownHookThemeProvider",          ["@?webeweb.bootstrap.provider.theme.dropdownhook"]]
+            - ["setDropDownNotificationsThemeProvider", ["@?webeweb.bootstrap.provider.theme.dropdownnotifications"]]
+            - ["setDropDownTasksThemeProvider",         ["@?webeweb.bootstrap.provider.theme.dropdowntasks"]]
+            - ["setFooterThemeProvider",                ["@?webeweb.bootstrap.provider.theme.footer"]]
+            - ["setNavigationThemeProvider",            ["@?webeweb.bootstrap.provider.theme.navigation"]]
+            - ["setSearchThemeProvider",                ["@?webeweb.bootstrap.provider.theme.search"]]
+            - ["setUserInfoThemeProvider",              ["@?webeweb.bootstrap.provider.theme.userinfo"]]
 
     webeweb.bootstrap.twig.extension.css.button:
         class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension

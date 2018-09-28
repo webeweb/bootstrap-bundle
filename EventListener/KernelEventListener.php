@@ -154,7 +154,7 @@ class KernelEventListener {
         $this->setRequest($event->getRequest());
 
         // Register the providers.
-        $this->getThemeManager()->register();
+        $this->getThemeManager()->addGlobal();
     }
 
     /**
