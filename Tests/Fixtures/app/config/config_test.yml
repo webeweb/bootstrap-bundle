@@ -7,7 +7,7 @@ parameters:
     locale: en
 
 framework:
-    #assets:          ~
+    assets:          ~
     #csrf_protection: true
     default_locale:  "%locale%"
     form:            true
