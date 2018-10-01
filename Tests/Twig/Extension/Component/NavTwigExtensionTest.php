@@ -85,13 +85,13 @@ final class NavTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new NavTwigExtension();
 
         $arg = ["items" => $this->items];
-        $res = <<< 'EOTXT'
+        $res = <<< 'EOT'
 <ul class="nav nav-justified">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
-EOTXT;
+EOT;
 
         $this->assertEquals($res, $obj->bootstrapNavsJustified($arg));
     }
@@ -106,24 +106,24 @@ EOTXT;
         $obj = new NavTwigExtension();
 
         $arg0 = ["items" => $this->items];
-        $res0 = <<< 'EOTXT'
+        $res0 = <<< 'EOT'
 <ul class="nav nav-pills">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
-EOTXT;
+EOT;
 
         $this->assertEquals($res0, $obj->bootstrapNavsPills($arg0));
 
         $arg9 = ["items" => $this->items, "stacked" => true];
-        $res9 = <<< 'EOTXT'
+        $res9 = <<< 'EOT'
 <ul class="nav nav-pills nav-stacked">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
-EOTXT;
+EOT;
 
         $this->assertEquals($res9, $obj->bootstrapNavsPills($arg9));
     }
@@ -138,13 +138,13 @@ EOTXT;
         $obj = new NavTwigExtension();
 
         $arg = ["items" => $this->items];
-        $res = <<< 'EOTXT'
+        $res = <<< 'EOT'
 <ul class="nav nav-tabs">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
-EOTXT;
+EOT;
 
         $this->assertEquals($res, $obj->bootstrapNavsTabs($arg));
     }

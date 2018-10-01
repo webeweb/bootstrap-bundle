@@ -79,12 +79,12 @@ final class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new BreadcrumbTwigExtension($this->translator);
 
-        $res = <<< 'EOTXT'
+        $res = <<< 'EOT'
 <ol class="breadcrumb">
 <li><a href="javascript:void(0);">GitHub</a></li>
 <li class="active">Bootstrap bundle</li>
 </ol>
-EOTXT;
+EOT;
 
         $this->assertEquals($res, $obj->bootstrapBreadcrumbsFunction([], $this->tree, Request::create("https://github.com/webeweb/bootstrap-bundle")));
     }

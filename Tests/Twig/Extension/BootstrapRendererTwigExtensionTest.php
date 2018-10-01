@@ -53,11 +53,11 @@ final class BootstrapRendererTwigExtensionTest extends AbstractFrameworkTestCase
 
         $obj = new BootstrapRendererTwigExtension();
 
-        $res = <<< EOTXT
+        $res = <<< 'EOT'
 <script type="text/javascript">
 content
 </script>
-EOTXT;
+EOT;
         $this->assertEquals($res, $obj->bootstrapScriptFilter("content"));
     }
 

@@ -59,7 +59,7 @@ final class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFlashbagAction() {
 
-        $res = <<< 'EOTXT'
+        $res = <<< 'EOT'
             <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             Danger
@@ -76,8 +76,8 @@ final class LayoutControllerTest extends AbstractWebTestCase {
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             Warning
         </div>
-    
-EOTXT;
+
+EOT;
 
         // Create a client.
         $client = static::createClient();
