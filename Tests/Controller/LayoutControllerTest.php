@@ -76,7 +76,7 @@ final class LayoutControllerTest extends AbstractWebTestCase {
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             Warning
         </div>
-
+    
 EOT;
 
         // Create a client.
