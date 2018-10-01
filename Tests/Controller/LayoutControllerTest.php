@@ -59,7 +59,7 @@ final class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFlashbagAction() {
 
-        $res = <<< 'EOT'
+        $res = <<<'EOT'
             <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             Danger

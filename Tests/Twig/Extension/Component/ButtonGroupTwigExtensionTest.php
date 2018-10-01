@@ -64,7 +64,7 @@ final class ButtonGroupTwigExtensionTest extends AbstractFrameworkTestCase {
             (new ButtonTwigExtension())->bootstrapButtonDefaultFunction(["content" => "Edit"]),
             (new ButtonTwigExtension())->bootstrapButtonDangerFunction(["content" => "Delete"]),
         ];
-        $res = <<< 'EOT'
+        $res = <<<'EOT'
 <div class="btn-group" role="group">
 <button class="btn btn-default" type="button">Edit</button>
 <button class="btn btn-danger" type="button">Delete</button>
@@ -88,7 +88,7 @@ EOT;
             (new ButtonTwigExtension())->bootstrapButtonDefaultFunction(["content" => "Edit"]),
             (new ButtonTwigExtension())->bootstrapButtonDangerFunction(["content" => "Delete"]),
         ];
-        $res = <<< 'EOT'
+        $res = <<<'EOT'
 <div class="btn-toolbar" role="toolbar">
 <button class="btn btn-default" type="button">Edit</button>
 <button class="btn btn-danger" type="button">Delete</button>

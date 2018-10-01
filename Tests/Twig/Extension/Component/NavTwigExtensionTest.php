@@ -85,7 +85,7 @@ final class NavTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new NavTwigExtension();
 
         $arg = ["items" => $this->items];
-        $res = <<< 'EOT'
+        $res = <<<'EOT'
 <ul class="nav nav-justified">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
@@ -106,7 +106,7 @@ EOT;
         $obj = new NavTwigExtension();
 
         $arg0 = ["items" => $this->items];
-        $res0 = <<< 'EOT'
+        $res0 = <<<'EOT'
 <ul class="nav nav-pills">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
@@ -117,7 +117,7 @@ EOT;
         $this->assertEquals($res0, $obj->bootstrapNavsPills($arg0));
 
         $arg9 = ["items" => $this->items, "stacked" => true];
-        $res9 = <<< 'EOT'
+        $res9 = <<<'EOT'
 <ul class="nav nav-pills nav-stacked">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
@@ -138,7 +138,7 @@ EOT;
         $obj = new NavTwigExtension();
 
         $arg = ["items" => $this->items];
-        $res = <<< 'EOT'
+        $res = <<<'EOT'
 <ul class="nav nav-tabs">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
