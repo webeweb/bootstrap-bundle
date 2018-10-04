@@ -84,7 +84,7 @@ abstract class AbstractBootstrapController extends Controller {
      * @param array $roles The roles.
      * @param bool $or OR ?
      * @param string $redirect The redirect.
-     * @return boolean Returns true.
+     * @return bool Returns true.
      * @throws BadUserRoleException Throws a bad user role exception.
      */
     protected function hasRolesOrRedirect(array $roles, $or, $redirect) {

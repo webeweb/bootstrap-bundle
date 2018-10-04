@@ -25,14 +25,14 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Active ?
      *
-     * @var boolean
+     * @var bool
      */
     private $active;
 
     /**
      * Enable ?
      *
-     * @var boolean
+     * @var bool
      */
     private $enable;
 
@@ -67,7 +67,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Visible ?
      *
-     * @var boolean
+     * @var bool
      */
     private $visible;
 
@@ -93,7 +93,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Get the active.
      *
-     * @return boolean Returns the active.
+     * @return bool Returns the active.
      */
     public function getActive() {
         return $this->active;
@@ -102,7 +102,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Get the enable.
      *
-     * @return boolean Returns the enable.
+     * @return bool Returns the enable.
      */
     public function getEnable() {
         return $this->enable;
@@ -147,7 +147,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Get the visible.
      *
-     * @return boolean Returns the visible.
+     * @return bool Returns the visible.
      */
     public function getVisible() {
         return $this->visible;
@@ -156,7 +156,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     /**
      * Determines if the node is displayable.
      *
-     * @return boolean Returns true in case of success, false otherwise.
+     * @return bool Returns true in case of success, false otherwise.
      */
     public function isDisplayable() {
         $displayable = $this->enable && $this->visible;

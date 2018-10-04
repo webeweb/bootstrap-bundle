@@ -27,7 +27,7 @@ class NavigationTreeHelper {
      * @param Request $request The request.
      * @param array $nodes The nodes.
      * @param int $level The node level.
-     * @return boolean Returns true in case of success, false othewise.
+     * @return bool Returns true in case of success, false othewise.
      */
     protected static function activeNodes(Request $request, array $nodes = [], $level = 0) {
 
@@ -109,7 +109,7 @@ class NavigationTreeHelper {
      *
      * @param AbstractNavigationNode $node The node.
      * @param Request $request The request.
-     * @return boolean Returns true in case of success, false otherwise.
+     * @return bool Returns true in case of success, false otherwise.
      */
     protected static function nodeMatch(AbstractNavigationNode $node, Request $request) {
 
