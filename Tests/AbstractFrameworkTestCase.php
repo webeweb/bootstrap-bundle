@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use PHPUnit\Framework\TestCase;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -46,6 +47,13 @@ abstract class AbstractFrameworkTestCase extends TestCase {
      * @var KernelInterface
      */
     protected $kernel;
+
+    /**
+     * Logger.
+     *
+     * @var LoggerInterface
+     */
+    protected $logger;
 
     /**
      * Object manager.
@@ -118,7 +126,10 @@ abstract class AbstractFrameworkTestCase extends TestCase {
         // Set a Kernel mock.
         $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
 
-        // Set a Router mock.
+        // Set a Logger mock.
+        $this->logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
+
+        // Set an Object manager mock.
         $this->objectManager = $this->getMockBuilder(ObjectManager::class)->getMock();
 
         // Set a Router mock.
