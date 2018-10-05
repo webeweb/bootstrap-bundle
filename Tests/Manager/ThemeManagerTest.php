@@ -115,6 +115,21 @@ final class ThemeManagerTest extends AbstractFrameworkTestCase {
     }
 
     /**
+     * Tests the hasProviders() method.
+     *
+     * @return void
+     */
+    public function testHasProviders() {
+
+        $obj = new ThemeManager($this->twigEnvironment);
+
+        $this->assertFalse($obj->hasProviders());
+
+        $obj->setApplicationThemeProvider($this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock());
+        $this->assertTrue($obj->hasProviders());
+    }
+
+    /**
      * Tests the setApplicationThemeProvider() method.
      *
      * @return void

@@ -57,6 +57,15 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
+     * Determines if this manager contains providers.
+     *
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function hasProviders() {
+        return 0 < count($this->providers);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function registerProvider(ProviderInterface $provider) {
