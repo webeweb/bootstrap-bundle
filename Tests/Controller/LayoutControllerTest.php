@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
+use Symfony\Component\BrowserKit\Cookie;
+use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 
 /**
@@ -134,17 +136,17 @@ EOT;
     }
 
     /**
-     * Tests the redirectAction() method.
+     * Tests the hasRoleOrRedirectAction() method.
      *
      * @return void
      */
-    public function testRedirectAction() {
+    public function testHasRoleOrRedirectRedirectAction() {
 
         // Create a client.
         $client = static::createClient();
 
         // Make a GET request.
-        $client->request("GET", "/redirect");
+        $client->request("GET", "/has/role/or/redirect");
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $this->assertEquals("/blank", $client->getResponse()->headers->get("location"));
     }

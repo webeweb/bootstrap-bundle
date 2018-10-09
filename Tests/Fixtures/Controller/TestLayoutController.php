@@ -105,11 +105,11 @@ final class TestLayoutController extends AbstractBootstrapController {
     }
 
     /**
-     * Redirect.
+     * Has role or redirect.
      *
      * @return Response Returns the response.
      */
-    public function redirectAction() {
+    public function hasRoleOrRedirectAction() {
 
         //
         $this->hasRolesOrRedirect(["ROLE_GITHUB"], false, "/blank");

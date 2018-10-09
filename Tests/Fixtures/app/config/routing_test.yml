@@ -29,9 +29,9 @@ bootstrap_get_translator_action:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getTranslatorAction" }
     methods:  ["GET"]
 
-bootstrap_redirect_action:
-    path:     "/redirect"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::redirectAction" }
+bootstrap_has_role_or_redirect_action:
+    path:     "/has/role/or/redirect"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::hasRoleOrRedirectAction" }
     methods:  ["GET"]
 
 bootstrap_wiki:
