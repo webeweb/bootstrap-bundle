@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\EventListener;
 
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use WBW\Bundle\BootstrapBundle\Event\NotificationEvent;
 
 /**
@@ -29,28 +30,28 @@ class NotificationEventListener {
     const SERVICE_NAME = "webeweb.bootstrap.eventlistener.notification";
 
     /**
-     * Kernel event listener.
+     * Session.
      *
-     * @var KernelEventListener
+     * @var SessionInterface
      */
-    private $kernelEventListener;
+    private $session;
 
     /**
      * Constructor.
      *
-     * @param KernelEventListener $kernelEventListener The kernel event listener.
+     * @param SessionInterface $session The session.
      */
-    public function __construct(KernelEventListener $kernelEventListener) {
-        $this->setKernelEventListener($kernelEventListener);
+    public function __construct(SessionInterface $session) {
+        $this->setSession($session);
     }
 
     /**
-     * Get the kernel event listener.
+     * Get the session.
      *
-     * @return KernelEventListener Returns the kernel event listener.
+     * @return SessionInterface Returns the session.
      */
-    public function getKernelEventListener() {
-        return $this->kernelEventListener;
+    public function getSession() {
+        return $this->session;
     }
 
     /**
@@ -60,17 +61,17 @@ class NotificationEventListener {
      * @return void
      */
     public function onNotify(NotificationEvent $event) {
-        $this->getKernelEventListener()->getRequest()->getSession()->getFlashBag()->add($event->getType(), $event->getNotification());
+        $this->getSession()->getFlashBag()->add($event->getType(), $event->getNotification());
     }
 
     /**
-     * Set the kernel event listener.
+     * Set the session.
      *
-     * @param KernelEventListener $kernelEventListener The kernel event listener.
+     * @param SessionInterface $session The session.
      * @return NotificationEventListener Returns this notification event listener.
      */
-    protected function setKernelEventListener(KernelEventListener $kernelEventListener) {
-        $this->kernelEventListener = $kernelEventListener;
+    protected function setSession(SessionInterface $session) {
+        $this->session = $session;
         return $this;
     }
 

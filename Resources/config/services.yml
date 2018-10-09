@@ -15,7 +15,7 @@ services:
 
     webeweb.bootstrap.eventlistener.notification:
         class:     WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener
-        arguments: ["@webeweb.bootstrap.eventlistener.kernel"]
+        arguments: ["@session"]
         public:    true
         tags:
             - { name: "kernel.event_listener", event: "webeweb.bootstrap.event.notification.danger",  method: "onNotify" }
