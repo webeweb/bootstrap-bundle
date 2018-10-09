@@ -11,11 +11,14 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\EventListener;
 
+use Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
+use WBW\Bundle\BootstrapBundle\Exception\BadUserRoleException;
 use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 
@@ -73,6 +76,35 @@ final class KernelEventListenerTest extends AbstractFrameworkTestCase {
 
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
         $this->assertSame($this->user, $obj->getUser());
+    }
+
+    /**
+     * Tests the onKernelException() method.
+     *
+     * @return void
+     */
+    public function testOnKernelException() {
+
+        $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
+
+        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), "GET", new Exception());
+        $this->assertSame($arg, $obj->onKernelException($arg));
+    }
+
+    /**
+     * Tests the onKernelException() method.
+     *
+     * @return void
+     */
+    public function testOnKernelExceptionWithBadUserRoleException() {
+
+        $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
+
+        // Set an User modk.
+        $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
+
+        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), "GET", new BadUserRoleException($this->user, [], "route", "/"));
+        $this->assertSame($arg, $obj->onKernelException($arg));
     }
 
     /**
