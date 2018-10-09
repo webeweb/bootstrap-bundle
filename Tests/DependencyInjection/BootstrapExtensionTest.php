@@ -14,8 +14,6 @@ namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
 use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
-use WBW\Bundle\BootstrapBundle\Manager\Asset\CSSAssetManager;
-use WBW\Bundle\BootstrapBundle\Manager\Asset\JSAssetManager;
 use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
