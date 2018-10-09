@@ -87,7 +87,7 @@ final class KernelEventListenerTest extends AbstractFrameworkTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
-        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), "GET", new Exception());
+        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, new Exception());
         $this->assertSame($arg, $obj->onKernelException($arg));
     }
 
