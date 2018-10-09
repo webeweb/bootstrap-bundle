@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
 use Symfony\Component\Translation\TranslatorInterface;
@@ -67,6 +68,15 @@ abstract class AbstractBootstrapController extends Controller {
      */
     protected function getRouter() {
         return $this->get("router");
+    }
+
+    /**
+     * Get the session.
+     *
+     * @return SessionInterface Returns the session.
+     */
+    protected function getSession() {
+        return $this->get("session");
     }
 
     /**

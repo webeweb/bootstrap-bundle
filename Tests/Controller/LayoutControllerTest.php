@@ -104,6 +104,21 @@ EOT;
     }
 
     /**
+     * Tests the getSessionAction() method.
+     *
+     * @return void
+     */
+    public function testGetSessionAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/get/session");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
      * Tests the getTranslatorAction() method.
      *
      * @return void

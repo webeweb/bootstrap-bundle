@@ -19,6 +19,11 @@ bootstrap_get_router_action:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getRouterAction" }
     methods:  ["GET"]
 
+bootstrap_get_session_action:
+    path:     "/get/session"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getSessionAction" }
+    methods:  ["GET"]
+
 bootstrap_get_translator_action:
     path:     "/get/translator"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getTranslatorAction" }

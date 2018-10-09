@@ -69,8 +69,22 @@ final class TestLayoutController extends AbstractBootstrapController {
      */
     public function getRouterAction() {
 
-        // Get the translator.
+        // Get the router.
         $this->getRouter();
+
+        // Return the response.
+        return $this->render("@Bootstrap/layout/blank.html.twig");
+    }
+
+    /**
+     * Get session.
+     *
+     * @return Response Returns the response.
+     */
+    public function getSessionAction() {
+
+        // Get the session.
+        $this->getSession();
 
         // Return the response.
         return $this->render("@Bootstrap/layout/blank.html.twig");
