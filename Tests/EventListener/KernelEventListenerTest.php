@@ -57,7 +57,7 @@ final class KernelEventListenerTest extends AbstractFrameworkTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->providersManager);
 
-        $this->assertNull($obj->getRequest());
+        $this->assertNotNull($obj->getRequest());
         $this->assertNull($obj->getUser());
     }
 

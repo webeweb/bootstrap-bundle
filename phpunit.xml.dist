@@ -24,7 +24,6 @@
     <testsuites>
         <testsuite name="webeweb/bootstrap-bundle">
             <directory suffix="Test.php">./Tests</directory>
-            <exclude>Tests/Controller/LayoutControllerTest.php</exclude>
             <exclude>Tests/Controller/WikiControllerTest.php</exclude>
         </testsuite>
     </testsuites>
