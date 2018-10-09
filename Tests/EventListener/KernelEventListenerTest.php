@@ -103,7 +103,7 @@ final class KernelEventListenerTest extends AbstractFrameworkTestCase {
         // Set an User modk.
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
 
-        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), "GET", new BadUserRoleException($this->user, [], "route", "/"));
+        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, new BadUserRoleException($this->user, [], "route", "/"));
         $this->assertSame($arg, $obj->onKernelException($arg));
     }
 
