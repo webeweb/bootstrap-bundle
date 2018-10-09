@@ -16,6 +16,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -68,6 +69,13 @@ abstract class AbstractFrameworkTestCase extends TestCase {
      * @var RouterInterface
      */
     protected $router;
+
+    /**
+     * Session.
+     *
+     * @var SessionInterface
+     */
+    protected $session;
 
     /**
      * Token
@@ -135,6 +143,9 @@ abstract class AbstractFrameworkTestCase extends TestCase {
         // Set a Router mock.
         $this->router = $this->getMockBuilder(RouterInterface::class)->getMock();
 
+        // Set a Session mock.
+        $this->session = $this->getMockBuilder(SessionInterface::class)->getMock();
+
         // Set a Translator mock.
         $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
 
@@ -170,6 +181,7 @@ abstract class AbstractFrameworkTestCase extends TestCase {
         $this->containerBuilder = new ContainerBuilder($parameterBag);
         $this->containerBuilder->set("kernel", $this->kernel);
         $this->containerBuilder->set("router", $this->router);
+        $this->containerBuilder->set("session", $this->session);
         $this->containerBuilder->set("security.token_storage", $this->tokenStorage);
         $this->containerBuilder->set("translator", $this->translator);
         $this->containerBuilder->set("twig", $this->twigEnvironment);
