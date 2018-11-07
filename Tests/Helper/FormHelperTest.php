@@ -20,9 +20,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Helper
- * @final
  */
-final class FormHelperTest extends AbstractFrameworkTestCase {
+class FormHelperTest extends AbstractFrameworkTestCase {
 
     /**
      * Collection.

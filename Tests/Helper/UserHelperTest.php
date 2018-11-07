@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Helper
  */
-final class UserHelperTest extends AbstractFrameworkTestCase {
+class UserHelperTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the hasRoles() method.

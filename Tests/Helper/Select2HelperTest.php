@@ -23,9 +23,8 @@ use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Helper\Model
- * @final
  */
-final class Select2HelperTest extends AbstractFrameworkTestCase {
+class Select2HelperTest extends AbstractFrameworkTestCase {
 
     /**
      * Items.
