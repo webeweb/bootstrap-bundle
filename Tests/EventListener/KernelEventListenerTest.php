@@ -27,9 +27,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\EventListener
- * @final
  */
-final class KernelEventListenerTest extends AbstractFrameworkTestCase {
+class KernelEventListenerTest extends AbstractFrameworkTestCase {
 
     /**
      * Providers manager.

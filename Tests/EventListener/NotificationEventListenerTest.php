@@ -22,9 +22,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\EventListener
- * @final
  */
-final class NotificationEventListenerTest extends AbstractFrameworkTestCase {
+class NotificationEventListenerTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}
