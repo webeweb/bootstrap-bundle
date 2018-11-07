@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Model
- * @final
  */
-final class EmailLayoutTest extends AbstractFrameworkTestCase {
+class EmailLayoutTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Model
- * @final
  */
-final class WikiPageTest extends AbstractFrameworkTestCase {
+class WikiPageTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
