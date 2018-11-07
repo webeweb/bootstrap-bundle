@@ -20,9 +20,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Form\Factory
- * @final
  */
-final class FormFactoryTest extends AbstractFrameworkTestCase {
+class FormFactoryTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the createChoiceType() method.

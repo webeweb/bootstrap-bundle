@@ -22,9 +22,8 @@ use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Form\Renderer
- * @final
  */
-final class FormRendererTest extends AbstractFrameworkTestCase {
+class FormRendererTest extends AbstractFrameworkTestCase {
 
     /**
      * Arguments.
