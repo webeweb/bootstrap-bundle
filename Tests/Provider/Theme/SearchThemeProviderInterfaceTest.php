@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Provider\Theme
- * @final
  */
-final class SearchThemeProviderInterfaceTest extends AbstractFrameworkTestCase {
+class SearchThemeProviderInterfaceTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

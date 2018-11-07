@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Provider\Theme
- * @final
  */
-final class TasksDropDownThemeProviderInterfaceTest extends AbstractFrameworkTestCase {
+class TasksDropDownThemeProviderInterfaceTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
