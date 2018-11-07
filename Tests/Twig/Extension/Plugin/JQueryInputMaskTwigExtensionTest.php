@@ -22,9 +22,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtensio
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
- * @final
  */
-final class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
+class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Renderer.

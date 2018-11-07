@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
- * @final
  */
-final class BadgeTwigExtensionTest extends AbstractFrameworkTestCase {
+class BadgeTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

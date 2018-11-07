@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
- * @final
  */
-final class AlertTwigExtensionTest extends AbstractFrameworkTestCase {
+class AlertTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

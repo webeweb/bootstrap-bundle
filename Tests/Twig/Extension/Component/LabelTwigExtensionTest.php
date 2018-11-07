@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
- * @final
  */
-final class LabelTwigExtensionTest extends AbstractFrameworkTestCase {
+class LabelTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

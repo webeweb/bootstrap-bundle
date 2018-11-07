@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
- * @final
  */
-final class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
+class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

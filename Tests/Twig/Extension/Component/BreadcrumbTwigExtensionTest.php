@@ -24,9 +24,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
- * @final
  */
-final class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
+class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Navigation tree

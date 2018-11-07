@@ -22,9 +22,8 @@ use WBW\Library\Core\FileSystem\FileHelper;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
- * @final
  */
-final class ImageTwigExtensionTest extends AbstractFrameworkTestCase {
+class ImageTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFunctions() method.

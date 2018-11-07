@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension
- * @final
  */
-final class BootstrapRendererTwigExtensionTest extends AbstractFrameworkTestCase {
+class BootstrapRendererTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.

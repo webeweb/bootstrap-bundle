@@ -22,9 +22,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
- * @final
  */
-final class TableButtonTwigExtensionTest extends AbstractFrameworkTestCase {
+class TableButtonTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}

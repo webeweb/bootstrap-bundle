@@ -22,9 +22,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
- * @final
  */
-final class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
+class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.

@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
- * @final
  */
-final class NavTwigExtensionTest extends AbstractFrameworkTestCase {
+class NavTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Items.

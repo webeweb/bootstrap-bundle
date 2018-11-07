@@ -22,9 +22,8 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwi
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Plugin
- * @final
  */
-final class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCase {
+class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the getFilters() method.
