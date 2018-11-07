@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Event
- * @final
  */
-final class NotificationEventTest extends AbstractFrameworkTestCase {
+class NotificationEventTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests __construct() method.
