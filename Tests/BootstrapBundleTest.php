@@ -18,9 +18,8 @@ use WBW\Bundle\BootstrapBundle\BootstrapBundle;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests
- * @final
  */
-final class BootstrapBundleTest extends AbstractFrameworkTestCase {
+class BootstrapBundleTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
