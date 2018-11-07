@@ -20,9 +20,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Model\Navigation
- * @final
  */
-final class BreadcrumbNodeTest extends AbstractFrameworkTestCase {
+class BreadcrumbNodeTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

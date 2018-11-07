@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\TestFixtures;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation
- * @final
  */
-final class NavigationTreeHelperTest extends AbstractFrameworkTestCase {
+class NavigationTreeHelperTest extends AbstractFrameworkTestCase {
 
     /**
      * Navigation tree
