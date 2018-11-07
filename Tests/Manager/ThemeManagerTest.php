@@ -28,9 +28,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Manager
- * @final
  */
-final class ThemeManagerTest extends AbstractFrameworkTestCase {
+class ThemeManagerTest extends AbstractFrameworkTestCase {
 
     /**
      * {@inheritdoc}
