@@ -20,7 +20,7 @@ use WBW\Library\Core\Model\Node\AbstractNode;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Model;
  */
-final class TestSelect2Item extends AbstractNode implements Select2DataFormatInterface {
+class TestSelect2Item extends AbstractNode implements Select2DataFormatInterface {
 
     /**
      * Name.

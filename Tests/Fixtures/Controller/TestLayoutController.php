@@ -19,9 +19,8 @@ use WBW\Bundle\BootstrapBundle\Controller\AbstractBootstrapController;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller
- * @final
  */
-final class TestLayoutController extends AbstractBootstrapController {
+class TestLayoutController extends AbstractBootstrapController {
 
     /**
      * Displays a blank page.

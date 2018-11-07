@@ -15,9 +15,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractKernel;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\App
- * @final
  */
-final class TestKernel extends AbstractKernel {
+class TestKernel extends AbstractKernel {
 
     /**
      * {@inheritdoc}

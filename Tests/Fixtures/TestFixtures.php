@@ -21,9 +21,8 @@ use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\App
- * @final
  */
-final class TestFixtures {
+class TestFixtures {
 
     /**
      * Get a navigation tree.
