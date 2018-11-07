@@ -20,9 +20,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Exception
- * @final
  */
-final class BadUserRoleExceptionTest extends AbstractFrameworkTestCase {
+class BadUserRoleExceptionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
