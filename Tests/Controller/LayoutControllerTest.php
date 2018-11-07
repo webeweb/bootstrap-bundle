@@ -20,9 +20,8 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Controller
- * @final
  */
-final class LayoutControllerTest extends AbstractWebTestCase {
+class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
      * Tests the blankAction() method.
