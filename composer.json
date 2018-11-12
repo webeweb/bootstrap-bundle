@@ -3,12 +3,12 @@
     "type": "symfony-bundle",
     "description": "Intregate Bootstrap theme with Symfony 2 and more",
     "keywords": ["webeweb", "bundle", "symfony", "bootstrap", "theme"],
-    "homepage": "http://github.com/webeweb/bootstrap-bundle",
+    "homepage": "https://github.com/webeweb/bootstrap-bundle",
     "license": "LGPL-3.0-only",
     "authors": [
         {
             "name": "webeweb",
-            "homepage": "http://github.com/webeweb/"
+            "homepage": "https://github.com/webeweb/"
         }
     ],
     "require": {
@@ -34,7 +34,7 @@
         "symfony/twig-bundle": "^2.6|^3.0|^4.0"
     },
     "support": {
-        "issues": "http://github.com/webeweb/bootstrap-bundle/issues"
+        "issues": "https://github.com/webeweb/bootstrap-bundle/issues"
     },
     "autoload": {
         "psr-4": {
