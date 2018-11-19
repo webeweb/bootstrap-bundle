@@ -12,9 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
-use WBW\Bundle\BootstrapBundle\EventListener\KernelEventListener;
-use WBW\Bundle\BootstrapBundle\EventListener\NotificationEventListener;
-use WBW\Bundle\BootstrapBundle\Manager\ThemeManager;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
@@ -31,10 +28,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
@@ -58,13 +51,6 @@ class BootstrapExtensionTest extends AbstractFrameworkTestCase {
 
         $obj->load([], $this->containerBuilder);
 
-        // Event listeners
-        $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));
-        $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
-
-        // Manager
-        $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
-
         // Twig extensions CSS
         $this->assertInstanceOf(ButtonTwigExtension::class, $this->containerBuilder->get(ButtonTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(CodeTwigExtension::class, $this->containerBuilder->get(CodeTwigExtension::SERVICE_NAME));
@@ -82,12 +68,6 @@ class BootstrapExtensionTest extends AbstractFrameworkTestCase {
         $this->assertInstanceOf(LabelTwigExtension::class, $this->containerBuilder->get(LabelTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(NavTwigExtension::class, $this->containerBuilder->get(NavTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ProgressBarTwigExtension::class, $this->containerBuilder->get(ProgressBarTwigExtension::SERVICE_NAME));
-
-        // Twig extensions Plugin
-        $this->assertInstanceOf(FontAwesomeTwigExtension::class, $this->containerBuilder->get(FontAwesomeTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(JQueryInputMaskTwigExtension::class, $this->containerBuilder->get(JQueryInputMaskTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(MaterialDesignIconicFontTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(MeteoconsTwigExtension::class, $this->containerBuilder->get(MeteoconsTwigExtension::SERVICE_NAME));
 
         // Twig extensions Renderer
         $this->assertInstanceOf(BootstrapRendererTwigExtension::class, $this->containerBuilder->get(BootstrapRendererTwigExtension::SERVICE_NAME));
