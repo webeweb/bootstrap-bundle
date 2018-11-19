@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Navigation\Predefined;
 
-use WBW\Bundle\BootstrapBundle\Navigation\BreadcrumbNode;
+use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 
 /**
  * Breadcrumb node "Edit" action.

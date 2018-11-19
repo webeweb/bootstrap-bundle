@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Navigation\Predefined;
 
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
+use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
  * Navigation node "Events".
