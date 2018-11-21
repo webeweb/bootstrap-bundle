@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the adminbsb-material-design-bundle package.
+ * This file is part of the bootstrap-bundle package.
  *
  * (c) 2018 WEBEWEB
  *
@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Navigation\Predefined;
+namespace WBW\Bundle\BootstrapBundle\Navigation\Glyphicon;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node "Edit" action.
+ * Navigation node action "Edit".
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Navigation\Predefined
+ * @package WBW\Bundle\BootstrapBundle\Navigation\Glyphicon
  */
-class NavigationNodeEditAction extends NavigationNode {
+class NavigationNodeActionEdit extends NavigationNode {
 
     /**
      * Constructor.
