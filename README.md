@@ -76,6 +76,7 @@ in the `app/AppKernel.php` file of your project:
     public function registerBundles() {
         $bundles = [
             // ...
+            new WBW\Bundle\CoreBundle\CoreBundle(),
             new WBW\Bundle\BootstrapBundle\BootstrapBundle(),
             new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
         ];
