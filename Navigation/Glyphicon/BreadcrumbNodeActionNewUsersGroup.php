@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the adminbsb-material-design-bundle package.
+ * This file is part of the bootstrap-bundle package.
  *
  * (c) 2018 WEBEWEB
  *
@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Navigation\Predefined;
+namespace WBW\Bundle\BootstrapBundle\Navigation\Glyphicon;
 
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 
 /**
- * Breadcrumb node "New user group" action.
+ * Breadcrumb node action "New users group".
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Navigation\Predefined
+ * @package WBW\Bundle\BootstrapBundle\Navigation\Glyphicon
  */
-class BreadcrumbNodeNewUserGroupAction extends BreadcrumbNode {
+class BreadcrumbNodeActionNewUsersGroup extends BreadcrumbNode {
 
     /**
      * Constructor.
