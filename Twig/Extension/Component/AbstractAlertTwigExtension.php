@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract alert Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @abstract
  */
-abstract class AbstractAlertTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractAlertTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -40,8 +43,8 @@ abstract class AbstractAlertTwigExtension extends AbstractBootstrapTwigExtension
     protected function bootstrapAlert($content, $dismissible, $class) {
 
         // Initialize the templates.
-        $span   = self::bootstrapHTMLElement("span", "&times;", ["aria-hidden" => "true"]);
-        $button = self::bootstrapHTMLElement("button", $span, ["class" => "close", "type" => "button", "data-dismiss" => "alert", "aria-label" => "Close"]);
+        $span   = static::coreHTMLElement("span", "&times;", ["aria-hidden" => "true"]);
+        $button = static::coreHTMLElement("button", $span, ["class" => "close", "type" => "button", "data-dismiss" => "alert", "aria-label" => "Close"]);
 
         // Initialize the attributes.
         $attributes = [];
@@ -54,7 +57,7 @@ abstract class AbstractAlertTwigExtension extends AbstractBootstrapTwigExtension
         $innerHTML = (true === $dismissible ? $button : "") . (null !== $content ? $content : "");
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("div", $innerHTML, $attributes);
+        return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
 
 }

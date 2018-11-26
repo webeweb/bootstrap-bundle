@@ -31,10 +31,9 @@ class AlertTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new AlertTwigExtension();
+        $obj = new AlertTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -67,30 +66,38 @@ class AlertTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapAlertDangerFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapAlertDangerFunction() {
 
-        $obj = new AlertTwigExtension();
+        $obj = new AlertTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<div class="alert alert-danger" role="alert"></div>';
-        $this->assertEquals($res0, $obj->bootstrapAlertDangerFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<div class="alert alert-danger" role="alert">content</div>';
+        $this->assertEquals($res, $obj->bootstrapAlertDangerFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<div class="alert alert-danger" role="alert">content</div>';
-        $this->assertEquals($res9, $obj->bootstrapAlertDangerFunction($arg9));
+    /**
+     * Tests the bootstrapAlertDangerFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapAlertDangerFunctionWithoutArguments() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<div class="alert alert-danger" role="alert"></div>';
+        $this->assertEquals($res, $obj->bootstrapAlertDangerFunction($arg));
     }
 
     /**
      * Tests the bootstrapAlertInfoFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapAlertInfoFunction() {
 
-        $obj = new AlertTwigExtension();
+        $obj = new AlertTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = '<div class="alert alert-info" role="alert"></div>';
@@ -101,38 +108,66 @@ class AlertTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapAlertLinkFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapAlertLinkFunction() {
 
-        $obj = new AlertTwigExtension();
+        $obj = new AlertTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<a href="javascript:void(0);"></a>';
-        $this->assertEquals($res0, $obj->bootstrapAlertLinkFunction($arg0));
+        $arg = ["href" => "https://github.com/", "content" => "content"];
+        $res = '<a href="https://github.com/">content</a>';
+        $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
+    }
 
-        $arg1 = ["href" => "https://github.com/"];
-        $res1 = '<a href="https://github.com/"></a>';
-        $this->assertEquals($res1, $obj->bootstrapAlertLinkFunction($arg1));
+    /**
+     * Tests the bootstrapAlertLinkFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapAlertLinkFunctionWithContent() {
 
-        $arg2 = ["content" => "content"];
-        $res2 = '<a href="javascript:void(0);">content</a>';
-        $this->assertEquals($res2, $obj->bootstrapAlertLinkFunction($arg2));
+        $obj = new AlertTwigExtension($this->twigEnvironment);
 
-        $arg9 = ["href" => "https://github.com/", "content" => "content"];
-        $res9 = '<a href="https://github.com/">content</a>';
-        $this->assertEquals($res9, $obj->bootstrapAlertLinkFunction($arg9));
+        $arg = ["content" => "content"];
+        $res = '<a href="javascript:void(0);">content</a>';
+        $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapAlertLinkFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapAlertLinkFunctionWithHref() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
+        $arg = ["href" => "https://github.com/"];
+        $res = '<a href="https://github.com/"></a>';
+        $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapAlertLinkFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapAlertLinkFunctionWithoutArguments() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<a href="javascript:void(0);"></a>';
+        $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
     }
 
     /**
      * Tests the bootstrapAlertSuccessFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapAlertSuccessFunction() {
 
-        $obj = new AlertTwigExtension();
+        $obj = new AlertTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = '<div class="alert alert-success" role="alert"></div>';
@@ -143,11 +178,10 @@ class AlertTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapAlertWarningFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapAlertWarningFunction() {
 
-        $obj = new AlertTwigExtension();
+        $obj = new AlertTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = '<div class="alert alert-warning" role="alert"></div>';

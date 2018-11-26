@@ -11,9 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationInterface;
+use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -34,9 +35,11 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -76,7 +79,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
         $innerHTML = ArrayHelper::get($args, "content");
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("a", $innerHTML, $attributes);
+        return static::coreHTMLElement("a", $innerHTML, $attributes);
     }
 
     /**
