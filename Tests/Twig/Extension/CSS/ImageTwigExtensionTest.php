@@ -35,7 +35,6 @@ class ImageTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -49,44 +48,119 @@ class ImageTwigExtensionTest extends AbstractFrameworkTestCase {
      *
      * @return void
      */
-    public function testBootstrapImageBase64Function() {
+    public function testBootstrapImageBase64FunctionWithAlt() {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
+        $arg = ["alt" => "Bootstrap stack"];
+        $res = "<img alt=\"Bootstrap stack\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64Function() {
+
+        // Set the mocks.
         $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
         $src = getcwd() . "/Resources/doc/images/bootstrap-stack_1024x0860.png";
 
-        $arg0 = [];
-        $res0 = "<img />";
-        $this->assertEquals($res0, $obj->bootstrapImageBase64Function($arg0));
+        $obj = new ImageTwigExtension($this->twigEnvironment);
 
-        $arg1 = ["src" => $src];
-        $res1 = "<img src=\"" . $ref . "\"/>";
-        $this->assertEquals($res1, $obj->bootstrapImageBase64Function($arg1));
+        $arg = ["src" => $src, "alt" => "Bootstrap stack", "width" => 1024, "height" => 860, "class" => "class", "usemap" => "#usemap"];
+        $res = "<img src=\"" . $ref . "\" alt=\"Bootstrap stack\" width=\"1024\" height=\"860\" class=\"class\" usemap=\"#usemap\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
 
-        $arg2 = ["alt" => "Bootstrap stack"];
-        $res2 = "<img alt=\"Bootstrap stack\"/>";
-        $this->assertEquals($res2, $obj->bootstrapImageBase64Function($arg2));
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64FunctionWithClass() {
 
-        $arg3 = ["width" => 1024];
-        $res3 = "<img width=\"1024\"/>";
-        $this->assertEquals($res3, $obj->bootstrapImageBase64Function($arg3));
+        $obj = new ImageTwigExtension($this->twigEnvironment);
 
-        $arg4 = ["height" => 860];
-        $res4 = "<img height=\"860\"/>";
-        $this->assertEquals($res4, $obj->bootstrapImageBase64Function($arg4));
+        $arg = ["class" => "class"];
+        $res = "<img class=\"class\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
 
-        $arg5 = ["class" => "class"];
-        $res5 = "<img class=\"class\"/>";
-        $this->assertEquals($res5, $obj->bootstrapImageBase64Function($arg5));
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64FunctionWithHeight() {
 
-        $arg6 = ["usemap" => "#usemap"];
-        $res6 = "<img usemap=\"#usemap\"/>";
-        $this->assertEquals($res6, $obj->bootstrapImageBase64Function($arg6));
+        $obj = new ImageTwigExtension($this->twigEnvironment);
 
-        $arg9 = ["src" => $src, "alt" => "Bootstrap stack", "width" => 1024, "height" => 860, "class" => "class", "usemap" => "#usemap"];
-        $res9 = "<img src=\"" . $ref . "\" alt=\"Bootstrap stack\" width=\"1024\" height=\"860\" class=\"class\" usemap=\"#usemap\"/>";
-        $this->assertEquals($res9, $obj->bootstrapImageBase64Function($arg9));
+        $arg = ["height" => 860];
+        $res = "<img height=\"860\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64FunctionWithSrc() {
+
+        // Set the mocks.
+        $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
+        $src = getcwd() . "/Resources/doc/images/bootstrap-stack_1024x0860.png";
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $arg = ["src" => $src];
+        $res = "<img src=\"" . $ref . "\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64FunctionWithUsemap() {
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $arg = ["usemap" => "#usemap"];
+        $res = "<img usemap=\"#usemap\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64FunctionWithWidth() {
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $arg = ["width" => 1024];
+        $res = "<img width=\"1024\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64FunctionWithoutArguments() {
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<img />";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
 }
