@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract glyphicon Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @abstract
  */
-abstract class AbstractGlyphiconTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractGlyphiconTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -46,7 +49,7 @@ abstract class AbstractGlyphiconTwigExtension extends AbstractBootstrapTwigExten
         $attributes["style"]       = $style;
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("span", null, $attributes);
+        return static::coreHTMLElement("span", null, $attributes);
     }
 
 }

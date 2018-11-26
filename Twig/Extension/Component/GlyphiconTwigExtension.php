@@ -11,8 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\IconRendererTwigExtensionInterface;
+use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -22,7 +23,7 @@ use WBW\Library\Core\Argument\ArrayHelper;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @link https://getbootstrap.com/docs/3.3/components/#glyphicons
  */
-class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements IconRendererTwigExtensionInterface {
+class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements IconRendererInterface {
 
     /**
      * Service name.
@@ -33,9 +34,11 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
