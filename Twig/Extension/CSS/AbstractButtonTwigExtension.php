@@ -11,8 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
 
 /**
  * Abstract button Twig extension.
@@ -21,13 +22,15 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @abstract
  */
-abstract class AbstractButtonTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -59,11 +62,11 @@ abstract class AbstractButtonTwigExtension extends AbstractBootstrapTwigExtensio
         $attributes["disabled"]       = true === $disable ? "disabled" : null;
 
         // Handle the parameters.
-        $glyphicon = null !== $icon ? BootstrapRendererTwigExtension::renderIcon($icon) : "";
+        $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon) : "";
         $innerHTML = null !== $content ? $content : "";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("button", implode(" ", [$glyphicon, $innerHTML]), $attributes);
+        return static::coreHTMLElement("button", implode(" ", [$glyphicon, $innerHTML]), $attributes);
     }
 
 }
