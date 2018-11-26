@@ -31,7 +31,7 @@ class GridTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new GridTwigExtension();
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
 
@@ -67,11 +67,10 @@ class GridTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapGridFunction().
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapGridFunction() {
 
-        $obj = new GridTwigExtension();
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "";
@@ -86,11 +85,10 @@ class GridTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapGridOffsetFunction().
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapGridOffsetFunction() {
 
-        $obj = new GridTwigExtension();
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
         // Nothing
         $arg0 = [];
@@ -175,11 +173,10 @@ class GridTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapGridPullFunction().
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapGridPullFunction() {
 
-        $obj = new GridTwigExtension();
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
         // Nothing
         $arg0 = [];
@@ -264,11 +261,10 @@ class GridTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapGridPushFunction().
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapGridPushFunction() {
 
-        $obj = new GridTwigExtension();
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
         // Nothing
         $arg0 = [];
@@ -353,11 +349,10 @@ class GridTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapGridStackedFunction().
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapGridStackedFunction() {
 
-        $obj = new GridTwigExtension();
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
         // Nothing
         $arg0 = [];
