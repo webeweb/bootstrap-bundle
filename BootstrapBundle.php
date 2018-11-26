@@ -12,7 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use WBW\Library\Core\Argument\ObjectHelper;
 
 /**
  * Bootstrap bundle.
@@ -65,15 +64,6 @@ class BootstrapBundle extends Bundle {
     const BOOTSTRAP_WARNING = "warning";
 
     /**
-     * Get the bundle directory.
-     *
-     * @return string Returns the bundle directory.
-     */
-    public static function getBundleDirectory() {
-        return ObjectHelper::getDirectory(BootstrapBundle::class);
-    }
-
-    /**
      * Get the Bootstrap constants.
      *
      * @return array Returns the Bootstrap constants.
@@ -87,15 +77,6 @@ class BootstrapBundle extends Bundle {
             self::BOOTSTRAP_SUCCESS,
             self::BOOTSTRAP_WARNING,
         ];
-    }
-
-    /**
-     * Get the resources directory.
-     *
-     * @return string Returns the resources directory.
-     */
-    public static function getResourcesDirectory() {
-        return static::getBundleDirectory() . "/Resources";
     }
 
 }
