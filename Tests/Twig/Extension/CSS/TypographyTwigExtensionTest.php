@@ -31,7 +31,7 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
 
@@ -112,11 +112,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapBoldFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapBoldFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<strong></strong>";
@@ -131,11 +130,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapDeletedFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapDeletedFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<del></del>";
@@ -150,11 +148,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapHeading1Function() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapH1Function() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<h1></h1>";
@@ -184,7 +181,7 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapH2Function() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = "<h2></h2>";
@@ -198,7 +195,7 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapH3Function() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = "<h3></h3>";
@@ -212,7 +209,7 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapH4Function() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = "<h4></h4>";
@@ -226,7 +223,7 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapH5Function() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = "<h5></h5>";
@@ -240,7 +237,7 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapH6Function() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = "<h6></h6>";
@@ -251,11 +248,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapInsertedFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapInsFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<ins></ins>";
@@ -270,11 +266,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapItalicFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapEmFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<em></em>";
@@ -289,11 +284,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapMarkedFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapMarkedFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<mark></mark>";
@@ -308,11 +302,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapSmallFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapSmallFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<small></small>";
@@ -327,11 +320,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapStrikethroughFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapStrikethroughFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<s></s>";
@@ -346,11 +338,10 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapUnderlinedFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapUnderlinedFunction() {
 
-        $obj = new TypographyTwigExtension();
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<u></u>";

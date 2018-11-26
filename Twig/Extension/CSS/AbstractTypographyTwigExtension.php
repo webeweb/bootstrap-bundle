@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract typography Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @abstract
  */
-abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -36,7 +39,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap bold text.
      */
     protected function bootstrapBold($content) {
-        return self::bootstrapHTMLElement("strong", $content);
+        return static::coreHTMLElement("strong", $content);
     }
 
     /**
@@ -46,7 +49,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap deleted text.
      */
     protected function bootstrapDeleted($content) {
-        return self::bootstrapHTMLElement("del", $content);
+        return static::coreHTMLElement("del", $content);
     }
 
     /**
@@ -74,7 +77,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
         $innerHTML = (null !== $content ? $content : "") . $secondary;
 
         // Return the HTML.
-        return self::bootstrapHTMLElement($element, $innerHTML, $attributes);
+        return static::coreHTMLElement($element, $innerHTML, $attributes);
     }
 
     /**
@@ -84,7 +87,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap inserted text.
      */
     protected function bootstrapInserted($content) {
-        return self::bootstrapHTMLElement("ins", $content);
+        return static::coreHTMLElement("ins", $content);
     }
 
     /**
@@ -94,7 +97,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap italic text.
      */
     protected function bootstrapItalic($content) {
-        return self::bootstrapHTMLElement("em", $content);
+        return static::coreHTMLElement("em", $content);
     }
 
     /**
@@ -104,7 +107,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap marked text.
      */
     protected function bootstrapMarked($content) {
-        return self::bootstrapHTMLElement("mark", $content);
+        return static::coreHTMLElement("mark", $content);
     }
 
     /**
@@ -114,7 +117,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap strike through text.
      */
     protected function bootstrapStrikeThrough($content) {
-        return self::bootstrapHTMLElement("s", $content);
+        return static::coreHTMLElement("s", $content);
     }
 
     /**
@@ -124,7 +127,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap small text.
      */
     protected function bootstrapSmall($content) {
-        return self::bootstrapHTMLElement("small", $content);
+        return static::coreHTMLElement("small", $content);
     }
 
     /**
@@ -134,7 +137,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractBootstrapTwigExte
      * @return string  Returns the Bootstrap underlined text.
      */
     protected function bootstrapUnderlined($content) {
-        return self::bootstrapHTMLElement("u", $content);
+        return static::coreHTMLElement("u", $content);
     }
 
 }
