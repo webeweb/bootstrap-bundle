@@ -11,8 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use TestKernel;
+use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as BaseWebTestCase;
 
 /**
  * Abstract Bootstrap web test case.
@@ -21,34 +20,6 @@ use TestKernel;
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
-abstract class AbstractWebTestCase extends WebTestCase {
-
-    /**
-     * {@inheritdoc}
-     */
-    protected static function getKernelClass() {
-        require_once __DIR__ . "/Fixtures/app/TestKernel.php";
-        return TestKernel::class;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass() {
-        parent::setUpBeforeClass();
-
-        // Initialize and boot the kernel.
-        static::$kernel = static::createKernel();
-        static::$kernel->boot();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function tearDown() {
-
-        // Shutdown the kernel.
-        static::$kernel->shutdown();
-    }
+abstract class AbstractWebTestCase extends BaseWebTestCase {
 
 }
