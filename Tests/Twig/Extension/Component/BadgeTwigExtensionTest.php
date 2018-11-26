@@ -31,10 +31,9 @@ class BadgeTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new BadgeTwigExtension();
+        $obj = new BadgeTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -47,19 +46,28 @@ class BadgeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapBadgeFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapBadgeFunction() {
 
-        $obj = new BadgeTwigExtension();
+        $obj = new BadgeTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<span class="badge"></span>';
-        $this->assertEquals($res0, $obj->bootstrapBadgeFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<span class="badge">content</span>';
+        $this->assertEquals($res, $obj->bootstrapBadgeFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<span class="badge">content</span>';
-        $this->assertEquals($res9, $obj->bootstrapBadgeFunction($arg9));
+    /**
+     * Tests the bootstrapBadgeFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapBadgeFunctionWithoutArguments() {
+
+        $obj = new BadgeTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="badge"></span>';
+        $this->assertEquals($res, $obj->bootstrapBadgeFunction($arg));
     }
 
 }
