@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract code Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @abstract
  */
-abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -36,7 +39,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap basic block.
      */
     protected function bootstrapBasicBlock($content) {
-        return self::bootstrapHTMLElement("pre", $content);
+        return static::coreHTMLElement("pre", $content);
     }
 
     /**
@@ -46,7 +49,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap inline.
      */
     protected function bootstrapInline($content) {
-        return self::bootstrapHTMLElement("code", $content);
+        return static::coreHTMLElement("code", $content);
     }
 
     /**
@@ -56,7 +59,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap sample output.
      */
     protected function bootstrapSampleOutput($content) {
-        return self::bootstrapHTMLElement("samp", $content);
+        return static::coreHTMLElement("samp", $content);
     }
 
     /**
@@ -66,7 +69,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap user input.
      */
     protected function bootstrapUserInput($content) {
-        return self::bootstrapHTMLElement("kbd", $content);
+        return static::coreHTMLElement("kbd", $content);
     }
 
     /**
@@ -76,7 +79,7 @@ abstract class AbstractCodeTwigExtension extends AbstractBootstrapTwigExtension 
      * @return string  Returns the Bootstrap variable.
      */
     protected function bootstrapVariable($content) {
-        return self::bootstrapHTMLElement("var", $content);
+        return static::coreHTMLElement("var", $content);
     }
 
 }

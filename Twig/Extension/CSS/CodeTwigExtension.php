@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -32,9 +33,11 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**

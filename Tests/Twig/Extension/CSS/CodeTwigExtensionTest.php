@@ -31,10 +31,9 @@ class CodeTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new CodeTwigExtension();
+        $obj = new CodeTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -67,72 +66,94 @@ class CodeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapBasicBlockFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapBasicBlockFunction() {
 
-        $obj = new CodeTwigExtension();
+        $obj = new CodeTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<pre></pre>";
-        $this->assertEquals($res0, $obj->bootstrapBasicBlockFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<pre>content</pre>";
+        $this->assertEquals($res, $obj->bootstrapBasicBlockFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<pre>content</pre>";
-        $this->assertEquals($res9, $obj->bootstrapBasicBlockFunction($arg9));
+    /**
+     * Tests the bootstrapBasicBlockFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapBasicBlockFunctionWithoutArguments() {
+
+        $obj = new CodeTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<pre></pre>";
+        $this->assertEquals($res, $obj->bootstrapBasicBlockFunction($arg));
     }
 
     /**
      * Tests the bootstrapInlineFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapInlineFunction() {
 
-        $obj = new CodeTwigExtension();
+        $obj = new CodeTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<code></code>";
-        $this->assertEquals($res0, $obj->bootstrapInlineFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<code>content</code>";
+        $this->assertEquals($res, $obj->bootstrapInlineFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<code>content</code>";
-        $this->assertEquals($res9, $obj->bootstrapInlineFunction($arg9));
+    /**
+     * Tests the bootstrapInlineFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapInlineFunctionWithoutArguments() {
+
+        $obj = new CodeTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<code></code>";
+        $this->assertEquals($res, $obj->bootstrapInlineFunction($arg));
     }
 
     /**
      * Tests the bootstrapSampleOutputFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapSampleOutputFunction() {
 
-        $obj = new CodeTwigExtension();
+        $obj = new CodeTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<samp></samp>";
-        $this->assertEquals($res0, $obj->bootstrapSampleOutputFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<samp>content</samp>";
+        $this->assertEquals($res, $obj->bootstrapSampleOutputFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<samp>content</samp>";
-        $this->assertEquals($res9, $obj->bootstrapSampleOutputFunction($arg9));
+    /**
+     * Tests the bootstrapSampleOutputFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapSampleOutputFunctionWithoutArguments() {
+
+        $obj = new CodeTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<samp></samp>";
+        $this->assertEquals($res, $obj->bootstrapSampleOutputFunction($arg));
     }
 
     /**
      * Tests the bootstrapUserInputFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapUserInputFunction() {
 
-        $obj = new CodeTwigExtension();
-
-        $arg0 = [];
-        $res0 = "<kbd></kbd>";
-        $this->assertEquals($res0, $obj->bootstrapUserInputFunction($arg0));
+        $obj = new CodeTwigExtension($this->twigEnvironment);
 
         $arg9 = ["content" => "content"];
         $res9 = "<kbd>content</kbd>";
@@ -140,14 +161,27 @@ class CodeTwigExtensionTest extends AbstractFrameworkTestCase {
     }
 
     /**
+     * Tests the bootstrapUserInputFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapUserInputFunctionWithoutArguments() {
+
+        $obj = new CodeTwigExtension($this->twigEnvironment);
+
+        $arg0 = [];
+        $res0 = "<kbd></kbd>";
+        $this->assertEquals($res0, $obj->bootstrapUserInputFunction($arg0));
+    }
+
+    /**
      * Tests the bootstrapVariableFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapVariableFunction() {
 
-        $obj = new CodeTwigExtension();
+        $obj = new CodeTwigExtension($this->twigEnvironment);
 
         $arg0 = [];
         $res0 = "<var></var>";
