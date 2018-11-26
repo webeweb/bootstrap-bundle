@@ -12,10 +12,12 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationNode;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationTreeHelper;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
+use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
+use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 
 /**
  * Abstract breadcrumb Twig extension.
@@ -24,22 +26,18 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @abstract
  */
-abstract class AbstractBreadcrumbTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
 
-    /**
-     * Translator.
-     *
-     * @var TranslatorInterface
-     */
-    private $translator;
+    use TranslatorTrait;
 
     /**
      * Constructor.
      *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(TranslatorInterface $translator) {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+        parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }
 
@@ -57,10 +55,10 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractBootstrapTwigExte
 
         // Initialize the parameters.
         $content   = $this->getTranslator()->trans($node->getId());
-        $innerHTML = true === $last ? $content : self::bootstrapHTMLElement("a", $content, ["href" => $node->getRoute()]);
+        $innerHTML = true === $last ? $content : static::coreHTMLElement("a", $content, ["href" => $node->getUri()]);
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("li", $innerHTML, $attributes);
+        return static::coreHTMLElement("li", $innerHTML, $attributes);
     }
 
     /**
@@ -89,26 +87,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractBootstrapTwigExte
         }
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("ol", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
-    }
-
-    /**
-     * Get the translator.
-     *
-     * @return TranslatorInterface Returns the translator.
-     */
-    public function getTranslator() {
-        return $this->translator;
-    }
-
-    /**
-     * Set the translator.
-     * @param TranslatorInterface $translator The translator.
-     * @return AbstractComponentTwigExtension Returns this component Twig extension.
-     */
-    protected function setTranslator(TranslatorInterface $translator = null) {
-        $this->translator = $translator;
-        return $this;
+        return static::coreHTMLElement("ol", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
 
 }

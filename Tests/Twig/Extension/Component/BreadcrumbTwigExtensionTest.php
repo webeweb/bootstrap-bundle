@@ -14,10 +14,10 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 use Symfony\Component\HttpFoundation\Request;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\TestFixtures;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
+use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
 /**
  * Breadcrumb Twig extension test.
@@ -56,10 +56,9 @@ class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new BreadcrumbTwigExtension($this->translator);
+        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -72,11 +71,10 @@ class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapBreadcrumbsFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapBreadcrumbsFunction() {
 
-        $obj = new BreadcrumbTwigExtension($this->translator);
+        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
         $res = <<<'EOT'
 <ol class="breadcrumb">
@@ -84,7 +82,6 @@ class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
 <li class="active">Bootstrap bundle</li>
 </ol>
 EOT;
-
         $this->assertEquals($res, $obj->bootstrapBreadcrumbsFunction([], $this->tree, Request::create("https://github.com/webeweb/bootstrap-bundle")));
     }
 

@@ -13,9 +13,10 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Translation\TranslatorInterface;
+use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationTree;
-use WBW\Bundle\BootstrapBundle\Navigation\NavigationTreeHelper;
+use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
 
 /**
  * Breadcrumb Twig Extension.
@@ -36,10 +37,11 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
     /**
      * Constructor.
      *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(TranslatorInterface $translator) {
-        parent::__construct($translator);
+    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+        parent::__construct($twigEnvironment, $translator);
     }
 
     /**
