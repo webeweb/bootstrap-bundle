@@ -32,7 +32,7 @@ class ImageTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new ImageTwigExtension();
+        $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
 
@@ -48,11 +48,10 @@ class ImageTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapImageBase64Function() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapImageBase64Function() {
 
-        $obj = new ImageTwigExtension();
+        $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
         $src = getcwd() . "/Resources/doc/images/bootstrap-stack_1024x0860.png";

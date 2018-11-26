@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 use SplFileObject;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -35,9 +36,11 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**

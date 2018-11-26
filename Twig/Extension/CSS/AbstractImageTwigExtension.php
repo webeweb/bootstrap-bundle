@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -21,13 +22,15 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @abstract
  */
-abstract class AbstractImageTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractImageTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
