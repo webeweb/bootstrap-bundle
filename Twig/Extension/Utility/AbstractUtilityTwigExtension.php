@@ -12,7 +12,9 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract utility Twig extension.
@@ -21,43 +23,19 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  * @abstract
  */
-abstract class AbstractUtilityTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractUtilityTwigExtension extends AbstractTwigExtension {
 
-    /**
-     * Translator.
-     *
-     * @var TranslatorInterface
-     */
-    private $translator;
+    use TranslatorTrait;
 
     /**
      * Constructor.
      *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(TranslatorInterface $translator) {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+        parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
-    }
-
-    /**
-     * Get the translator.
-     *
-     * @return TranslatorInterface Returns the translator.
-     */
-    public function getTranslator() {
-        return $this->translator;
-    }
-
-    /**
-     * Set the translator.
-     *
-     * @param TranslatorInterface $translator The translator.
-     * @return AbstractUtilityTwigExtension Retunrs this form Twig extension.
-     */
-    protected function setTranslator(TranslatorInterface $translator) {
-        $this->translator = $translator;
-        return $this;
     }
 
 }
