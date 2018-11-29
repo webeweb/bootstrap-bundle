@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -33,9 +34,11 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**

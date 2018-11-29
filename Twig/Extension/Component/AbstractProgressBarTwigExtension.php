@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract progress bar Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @abstract
  */
-abstract class AbstractProgressBarTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -44,7 +47,7 @@ abstract class AbstractProgressBarTwigExtension extends AbstractBootstrapTwigExt
     protected function bootstrapProgressBar($content, $value, $min, $max, $striped, $animated, $class = null) {
 
         // Initialize the template.
-        $span = self::bootstrapHTMLElement("span", $value . "%", ["class" => "sr-only"]);
+        $span = static::coreHTMLElement("span", $value . "%", ["class" => "sr-only"]);
 
         // Initialize the attributes.
         $attributes = [];
@@ -62,10 +65,10 @@ abstract class AbstractProgressBarTwigExtension extends AbstractBootstrapTwigExt
         $innerHTML = null !== $content ? $content : $span;
 
         // Initialize the template.
-        $div = self::bootstrapHTMLElement("div", $innerHTML, $attributes);
+        $div = static::coreHTMLElement("div", $innerHTML, $attributes);
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("div", $div, ["class" => "progress"]);
+        return static::coreHTMLElement("div", $div, ["class" => "progress"]);
     }
 
 }
