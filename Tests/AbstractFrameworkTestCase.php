@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase as BaseFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase as BaseFrameworkTestCase;
 
 /**
  * Abstract framework test case.
