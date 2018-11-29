@@ -34,7 +34,6 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(14, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -117,13 +116,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<strong></strong>";
-        $this->assertEquals($res0, $obj->bootstrapBoldFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<strong>content</strong>";
+        $this->assertEquals($res, $obj->bootstrapBoldFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<strong>content</strong>";
-        $this->assertEquals($res9, $obj->bootstrapBoldFunction($arg9));
+    /**
+     * Tests the bootstrapBoldFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapBoldFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<strong></strong>";
+        $this->assertEquals($res, $obj->bootstrapBoldFunction($arg));
     }
 
     /**
@@ -135,13 +144,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<del></del>";
-        $this->assertEquals($res0, $obj->bootstrapDeletedFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<del>content</del>";
+        $this->assertEquals($res, $obj->bootstrapDeletedFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<del>content</del>";
-        $this->assertEquals($res9, $obj->bootstrapDeletedFunction($arg9));
+    /**
+     * Tests the bootstrapDeletedFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapDeletedFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<del></del>";
+        $this->assertEquals($res, $obj->bootstrapDeletedFunction($arg));
     }
 
     /**
@@ -153,25 +172,65 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<h1></h1>";
-        $this->assertEquals($res0, $obj->bootstrapHeading1Function($arg0));
+        $arg = ["content" => "content", "description" => "description", "class" => "class"];
+        $res = '<h1 class="class">content <small>description</small></h1>';
+        $this->assertEquals($res, $obj->bootstrapHeading1Function($arg));
+    }
 
-        $arg1 = ["content" => "content"];
-        $res1 = "<h1>content</h1>";
-        $this->assertEquals($res1, $obj->bootstrapHeading1Function($arg1));
+    /**
+     * Tests the bootstrapHeading1Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapH1FunctionWithContent() {
 
-        $arg2 = ["description" => "description"];
-        $res2 = "<h1><small>description</small></h1>";
-        $this->assertEquals($res2, $obj->bootstrapHeading1Function($arg2));
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg3 = ["class" => "class"];
-        $res3 = '<h1 class="class"></h1>';
-        $this->assertEquals($res3, $obj->bootstrapHeading1Function($arg3));
+        $arg = ["content" => "content"];
+        $res = "<h1>content</h1>";
+        $this->assertEquals($res, $obj->bootstrapHeading1Function($arg));
+    }
 
-        $arg9 = ["content" => "content", "description" => "description", "class" => "class"];
-        $res9 = '<h1 class="class">content <small>description</small></h1>';
-        $this->assertEquals($res9, $obj->bootstrapHeading1Function($arg9));
+    /**
+     * Tests the bootstrapHeading1Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapH1FunctionWithDescription() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["description" => "description"];
+        $res = "<h1><small>description</small></h1>";
+        $this->assertEquals($res, $obj->bootstrapHeading1Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading1Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapH1FunctionWithClass() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["class" => "class"];
+        $res = '<h1 class="class"></h1>';
+        $this->assertEquals($res, $obj->bootstrapHeading1Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading1Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapH1FunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<h1></h1>";
+        $this->assertEquals($res, $obj->bootstrapHeading1Function($arg));
     }
 
     /**
@@ -253,13 +312,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<ins></ins>";
-        $this->assertEquals($res0, $obj->bootstrapInsertedFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<ins>content</ins>";
+        $this->assertEquals($res, $obj->bootstrapInsertedFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<ins>content</ins>";
-        $this->assertEquals($res9, $obj->bootstrapInsertedFunction($arg9));
+    /**
+     * Tests the bootstrapInsertedFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapInsFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<ins></ins>";
+        $this->assertEquals($res, $obj->bootstrapInsertedFunction($arg));
     }
 
     /**
@@ -271,13 +340,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<em></em>";
-        $this->assertEquals($res0, $obj->bootstrapItalicFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<em>content</em>";
+        $this->assertEquals($res, $obj->bootstrapItalicFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<em>content</em>";
-        $this->assertEquals($res9, $obj->bootstrapItalicFunction($arg9));
+    /**
+     * Tests the bootstrapItalicFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapEmFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<em></em>";
+        $this->assertEquals($res, $obj->bootstrapItalicFunction($arg));
     }
 
     /**
@@ -289,13 +368,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<mark></mark>";
-        $this->assertEquals($res0, $obj->bootstrapMarkedFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<mark>content</mark>";
+        $this->assertEquals($res, $obj->bootstrapMarkedFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<mark>content</mark>";
-        $this->assertEquals($res9, $obj->bootstrapMarkedFunction($arg9));
+    /**
+     * Tests the bootstrapMarkedFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapMarkedFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<mark></mark>";
+        $this->assertEquals($res, $obj->bootstrapMarkedFunction($arg));
     }
 
     /**
@@ -307,13 +396,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<small></small>";
-        $this->assertEquals($res0, $obj->bootstrapSmallFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<small>content</small>";
+        $this->assertEquals($res, $obj->bootstrapSmallFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<small>content</small>";
-        $this->assertEquals($res9, $obj->bootstrapSmallFunction($arg9));
+    /**
+     * Tests the bootstrapSmallFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapSmallFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<small></small>";
+        $this->assertEquals($res, $obj->bootstrapSmallFunction($arg));
     }
 
     /**
@@ -325,13 +424,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<s></s>";
-        $this->assertEquals($res0, $obj->bootstrapStrikethroughFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<s>content</s>";
+        $this->assertEquals($res, $obj->bootstrapStrikethroughFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<s>content</s>";
-        $this->assertEquals($res9, $obj->bootstrapStrikethroughFunction($arg9));
+    /**
+     * Tests the bootstrapStrikethroughFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapStrikethroughFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<s></s>";
+        $this->assertEquals($res, $obj->bootstrapStrikethroughFunction($arg));
     }
 
     /**
@@ -343,13 +452,23 @@ class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<u></u>";
-        $this->assertEquals($res0, $obj->bootstrapUnderlinedFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<u>content</u>";
+        $this->assertEquals($res, $obj->bootstrapUnderlinedFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<u>content</u>";
-        $this->assertEquals($res9, $obj->bootstrapUnderlinedFunction($arg9));
+    /**
+     * Tests the bootstrapUnderlinedFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapUnderlinedFunctionWithoutArguments() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<u></u>";
+        $this->assertEquals($res, $obj->bootstrapUnderlinedFunction($arg));
     }
 
 }
