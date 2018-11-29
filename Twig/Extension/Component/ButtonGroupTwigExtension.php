@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use Twig_Environment;
 use Twig_SimpleFunction;
 
 /**
@@ -31,9 +32,11 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**

@@ -26,16 +26,45 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 class ButtonGroupTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
+     * Delete button.
+     *
+     * @var string
+     */
+    private $deleteButton;
+
+    /**
+     * Edit button.
+     *
+     * @var string
+     */
+    private $editButton;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Button Twig extension mock.
+        $buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
+
+        // Set a Delete button mock.
+        $this->deleteButton = $buttonTwigExtension->bootstrapButtonDangerFunction(["content" => "Delete"]);
+
+        // Set an Edit button mock.
+        $this->editButton = $buttonTwigExtension->bootstrapButtonDefaultFunction(["content" => "Edit"]);
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
      */
     public function testGetFunctions() {
 
-        $obj = new ButtonGroupTwigExtension();
+        $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -56,21 +85,16 @@ class ButtonGroupTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapButtonGroupBasicFunction() {
 
-        $obj = new ButtonGroupTwigExtension();
+        $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $but = [
-            (new ButtonTwigExtension())->bootstrapButtonDefaultFunction(["content" => "Edit"]),
-            (new ButtonTwigExtension())->bootstrapButtonDangerFunction(["content" => "Delete"]),
-        ];
         $res = <<<'EOT'
 <div class="btn-group" role="group">
 <button class="btn btn-default" type="button">Edit</button>
 <button class="btn btn-danger" type="button">Delete</button>
 </div>
 EOT;
-
-        $this->assertEquals($res, $obj->bootstrapButtonGroupBasicFunction($arg, $but));
+        $this->assertEquals($res, $obj->bootstrapButtonGroupBasicFunction($arg, [$this->editButton, $this->deleteButton]));
     }
 
     /**
@@ -80,21 +104,16 @@ EOT;
      */
     public function testBootstrapButtonGroupToolbarFunction() {
 
-        $obj = new ButtonGroupTwigExtension();
+        $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $but = [
-            (new ButtonTwigExtension())->bootstrapButtonDefaultFunction(["content" => "Edit"]),
-            (new ButtonTwigExtension())->bootstrapButtonDangerFunction(["content" => "Delete"]),
-        ];
         $res = <<<'EOT'
 <div class="btn-toolbar" role="toolbar">
 <button class="btn btn-default" type="button">Edit</button>
 <button class="btn btn-danger" type="button">Delete</button>
 </div>
 EOT;
-
-        $this->assertEquals($res, $obj->bootstrapButtonGroupToolbarFunction($arg, $but));
+        $this->assertEquals($res, $obj->bootstrapButtonGroupToolbarFunction($arg, [$this->editButton, $this->deleteButton]));
     }
 
 }

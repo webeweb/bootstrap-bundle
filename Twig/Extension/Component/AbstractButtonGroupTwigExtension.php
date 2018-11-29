@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract button group Twig extension.
@@ -20,13 +21,15 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @abstract
  */
-abstract class AbstractButtonGroupTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractButtonGroupTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -49,7 +52,7 @@ abstract class AbstractButtonGroupTwigExtension extends AbstractBootstrapTwigExt
         $innerHTML = "\n" . implode("\n", $buttons) . "\n";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("div", $innerHTML, $attributes);
+        return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
 
 }
