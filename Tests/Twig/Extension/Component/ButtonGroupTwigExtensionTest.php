@@ -88,7 +88,7 @@ class ButtonGroupTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = <<<'EOT'
+        $res = <<< EOT
 <div class="btn-group" role="group">
 <button class="btn btn-default" type="button">Edit</button>
 <button class="btn btn-danger" type="button">Delete</button>
@@ -107,7 +107,7 @@ EOT;
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = <<<'EOT'
+        $res = <<< EOT
 <div class="btn-toolbar" role="toolbar">
 <button class="btn btn-default" type="button">Edit</button>
 <button class="btn btn-danger" type="button">Delete</button>

@@ -76,7 +76,7 @@ class BreadcrumbTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
-        $res = <<<'EOT'
+        $res = <<< EOT
 <ol class="breadcrumb">
 <li><a href="javascript:void(0);">GitHub</a></li>
 <li class="active">Bootstrap bundle</li>
