@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
-use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract utility Twig extension.
