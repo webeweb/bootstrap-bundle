@@ -31,10 +31,9 @@ class GlyphiconTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new GlyphiconTwigExtension();
+        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -47,19 +46,28 @@ class GlyphiconTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapGlyphiconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapGlyphiconFunction() {
 
-        $obj = new GlyphiconTwigExtension();
+        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
-        $this->assertEquals($res0, $obj->bootstrapGlyphiconFunction($arg0));
+        $arg = ["name" => "asterisk"];
+        $res = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
+        $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
+    }
 
-        $arg9 = ["name" => "asterisk"];
-        $res9 = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
-        $this->assertEquals($res9, $obj->bootstrapGlyphiconFunction($arg9));
+    /**
+     * Tests the bootstrapGlyphiconFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapGlyphiconFunctionWithoutArguments() {
+
+        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+        $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
     }
 
 }
