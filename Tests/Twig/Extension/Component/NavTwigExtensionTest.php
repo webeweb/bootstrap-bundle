@@ -52,10 +52,9 @@ class NavTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new NavTwigExtension();
+        $obj = new NavTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -81,17 +80,16 @@ class NavTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testBootstrapNavsJustified() {
 
-        $obj = new NavTwigExtension();
+        $obj = new NavTwigExtension($this->twigEnvironment);
 
         $arg = ["items" => $this->items];
-        $res = <<<'EOT'
+        $res = <<< EOT
 <ul class="nav nav-justified">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
 EOT;
-
         $this->assertEquals($res, $obj->bootstrapNavsJustified($arg));
     }
 
@@ -102,29 +100,37 @@ EOT;
      */
     public function testBootstrapNavsPills() {
 
-        $obj = new NavTwigExtension();
-
-        $arg0 = ["items" => $this->items];
-        $res0 = <<<'EOT'
-<ul class="nav nav-pills">
-<li role="presentation"><a href="#">Home</a></li>
-<li role="presentation"><a href="#">Profile</a></li>
-<li role="presentation"><a href="#">Message</a></li>
-</ul>
-EOT;
-
-        $this->assertEquals($res0, $obj->bootstrapNavsPills($arg0));
+        $obj = new NavTwigExtension($this->twigEnvironment);
 
         $arg9 = ["items" => $this->items, "stacked" => true];
-        $res9 = <<<'EOT'
+        $res9 = <<< EOT
 <ul class="nav nav-pills nav-stacked">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
 EOT;
-
         $this->assertEquals($res9, $obj->bootstrapNavsPills($arg9));
+    }
+
+    /**
+     * Tests the bootstrapNavsPillsFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapNavsPillsWithItems() {
+
+        $obj = new NavTwigExtension($this->twigEnvironment);
+
+        $arg = ["items" => $this->items];
+        $res = <<< EOT
+<ul class="nav nav-pills">
+<li role="presentation"><a href="#">Home</a></li>
+<li role="presentation"><a href="#">Profile</a></li>
+<li role="presentation"><a href="#">Message</a></li>
+</ul>
+EOT;
+        $this->assertEquals($res, $obj->bootstrapNavsPills($arg));
     }
 
     /**
@@ -134,17 +140,16 @@ EOT;
      */
     public function testBootstrapNavsTabs() {
 
-        $obj = new NavTwigExtension();
+        $obj = new NavTwigExtension($this->twigEnvironment);
 
         $arg = ["items" => $this->items];
-        $res = <<<'EOT'
+        $res = <<< EOT
 <ul class="nav nav-tabs">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
 EOT;
-
         $this->assertEquals($res, $obj->bootstrapNavsTabs($arg));
     }
 
