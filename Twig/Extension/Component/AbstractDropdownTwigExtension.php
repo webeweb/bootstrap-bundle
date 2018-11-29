@@ -11,8 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use Twig_Environment;
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractBootstrapTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -22,13 +23,15 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @abstract
  */
-abstract class AbstractDropdownTwigExtension extends AbstractBootstrapTwigExtension {
+abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct() {
-        parent::__construct();
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
     }
 
     /**
@@ -61,7 +64,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractBootstrapTwigExtens
         $innerHTML = (null !== $content ? $content : "") . "<span class=\"caret\"></span>";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("button", $innerHTML, $attributes);
+        return static::coreHTMLElement("button", $innerHTML, $attributes);
     }
 
     /**
@@ -78,7 +81,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractBootstrapTwigExtens
         $attributes["role"]  = "separator";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("li", null, $attributes);
+        return static::coreHTMLElement("li", null, $attributes);
     }
 
     /**
@@ -95,7 +98,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractBootstrapTwigExtens
         $attributes["class"] = "dropdown-header";
 
         // Return the HTML.
-        return self::bootstrapHTMLElement("li", $content, $attributes);
+        return static::coreHTMLElement("li", $content, $attributes);
     }
 
 }

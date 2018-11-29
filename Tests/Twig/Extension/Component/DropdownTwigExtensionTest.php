@@ -31,10 +31,9 @@ class DropdownTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new DropdownTwigExtension();
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -57,46 +56,94 @@ class DropdownTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapDropdownButtonFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapDropdownButtonFunction() {
 
-        $obj = new DropdownTwigExtension();
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
-        $this->assertEquals($res0, $obj->bootstrapDropdownButtonFunction($arg0));
+        $arg = ["content" => "content", "id" => "id", "expanded" => false, "class" => "danger"];
+        $res = '<button class="btn btn-danger dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">content<span class="caret"></span></button>';
+        $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
+    }
 
-        $arg1 = ["content" => "content"];
-        $res1 = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">content<span class="caret"></span></button>';
-        $this->assertEquals($res1, $obj->bootstrapDropdownButtonFunction($arg1));
+    /**
+     * Tests the bootstrapDropdownButtonFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapDropdownButtonFunctionWithClass() {
 
-        $arg2 = ["id" => "id"];
-        $res2 = '<button class="btn btn-default dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
-        $this->assertEquals($res2, $obj->bootstrapDropdownButtonFunction($arg2));
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
 
-        $arg3 = ["expanded" => false];
-        $res3 = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>';
-        $this->assertEquals($res3, $obj->bootstrapDropdownButtonFunction($arg3));
+        $arg = ["class" => "primary"];
+        $res = '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+        $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
+    }
 
-        $arg4 = ["class" => "primary"];
-        $res4 = '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
-        $this->assertEquals($res4, $obj->bootstrapDropdownButtonFunction($arg4));
+    /**
+     * Tests the bootstrapDropdownButtonFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapDropdownButtonFunctionWithContent() {
 
-        $arg9 = ["content" => "content", "id" => "id", "expanded" => false, "class" => "danger"];
-        $res9 = '<button class="btn btn-danger dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">content<span class="caret"></span></button>';
-        $this->assertEquals($res9, $obj->bootstrapDropdownButtonFunction($arg9));
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content"];
+        $res = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">content<span class="caret"></span></button>';
+        $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapDropdownButtonFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapDropdownButtonFunctionWithExpanded() {
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $arg = ["expanded" => false];
+        $res = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>';
+        $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapDropdownButtonFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapDropdownButtonFunctionWithId() {
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $arg = ["id" => "id"];
+        $res = '<button class="btn btn-default dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+        $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapDropdownButtonFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapDropdownButtonFunctionWithoutArguments() {
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+        $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
     }
 
     /**
      * Tests the bootstrapDropdownDividerFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapDropdownDividerFunction() {
 
-        $obj = new DropdownTwigExtension();
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
 
         $arg = [];
         $res = '<li class="divider" role="separator"></li>';
@@ -107,19 +154,28 @@ class DropdownTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapDropdownHeaderFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapDropdownHeaderFunction() {
 
-        $obj = new DropdownTwigExtension();
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<li class="dropdown-header"></li>';
-        $this->assertEquals($res0, $obj->bootstrapDropdownHeaderFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = '<li class="dropdown-header">content</li>';
+        $this->assertEquals($res, $obj->bootstrapDropdownHeaderFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = '<li class="dropdown-header">content</li>';
-        $this->assertEquals($res9, $obj->bootstrapDropdownHeaderFunction($arg9));
+    /**
+     * Tests the bootstrapDropdownHeaderFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapDropdownHeaderFunctionWithoutArguments() {
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<li class="dropdown-header"></li>';
+        $this->assertEquals($res, $obj->bootstrapDropdownHeaderFunction($arg));
     }
 
 }
