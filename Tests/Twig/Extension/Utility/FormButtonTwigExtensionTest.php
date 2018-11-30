@@ -26,15 +26,20 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension;
 class FormButtonTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
+     * Button Twig extension.
+     *
+     * @var ButtonTwigExtension
+     */
+    private $buttonTwigExtension;
+
+    /**
      * {@inheritdoc}
      */
     protected function setUp() {
         parent::setUp();
 
-        // Set the Translator mock.
-        $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
-            return $id;
-        });
+        // Set a Button Twig extension mock.
+        $this->buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
     }
 
     /**
@@ -44,10 +49,9 @@ class FormButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new FormButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -70,11 +74,10 @@ class FormButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapFormButtonCancelFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapFormButtonCancelFunction() {
 
-        $obj = new FormButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
@@ -85,17 +88,16 @@ class FormButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapFormButtonDefaultFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapFormButtonDefaultFunction() {
 
-        $obj = new FormButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $cnl = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> label.cancel</a>';
         $sbt = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> label.submit</button>';
 
         $arg = ["cancel_href" => "https://github.com/"];
-        $res = $cnl . " " . $sbt;
+        $res = implode(" ", [$cnl, $sbt]);
         $this->assertEquals($res, $obj->bootstrapFormButtonDefaultFunction($arg));
     }
 
@@ -103,11 +105,10 @@ class FormButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapFormButtonSubmitFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapFormButtonSubmitFunction() {
 
-        $obj = new FormButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $res = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> label.submit</button>';
         $this->assertEquals($res, $obj->bootstrapFormButtonSubmitFunction());
