@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
+use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -41,11 +42,12 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Constructor.
      *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      * @param ButtonComponentTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(TranslatorInterface $translator, ButtonTwigExtension $extension) {
-        parent::__construct($translator);
+    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator, ButtonTwigExtension $extension) {
+        parent::__construct($twigEnvironment, $translator);
         $this->setExtension($extension);
     }
 

@@ -26,15 +26,20 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
 class TableButtonTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
+     * Button Twig extension.
+     *
+     * @var ButtonTwigExtension
+     */
+    private $buttonTwigExtension;
+
+    /**
      * {@inheritdoc}
      */
     protected function setUp() {
         parent::setUp();
 
-        // Set the Translator mock.
-        $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
-            return $id;
-        });
+        // Set a Button Twig extension.
+        $this->buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
     }
 
     /**
@@ -44,10 +49,9 @@ class TableButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -70,17 +74,16 @@ class TableButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapRowButtonDefaultFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapRowButtonDefaultFunction() {
 
-        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $edt = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
         $dlt = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
 
         $arg = ["edit_href" => "https://github.com/", "delete_href" => "https://github.com/"];
-        $res = $edt . " " . $dlt;
+        $res = implode(" ", [$edt, $dlt]);
         $this->assertEquals($res, $obj->bootstrapRowButtonDefaultFunction($arg));
     }
 
@@ -88,11 +91,10 @@ class TableButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapRowButtonDeleteFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapRowButtonDeleteFunction() {
 
-        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
@@ -103,12 +105,11 @@ class TableButtonTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the bootstrapRowButtonEditFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testBootstrapRowButtonEditFunction() {
 
 
-        $obj = new TableButtonTwigExtension($this->translator, new ButtonTwigExtension());
+        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
