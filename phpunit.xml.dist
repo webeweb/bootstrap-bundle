@@ -26,10 +26,6 @@
             <directory suffix="Test.php">./Tests</directory>
             <exclude>Tests/Controller/</exclude>
             <exclude>Tests/DependencyInjection/</exclude>
-            <exclude>Tests/Twig/Extension/CSS/</exclude>
-            <exclude>Tests/Twig/Extension/Component/</exclude>
-            <exclude>Tests/Twig/Extension/Utility/</exclude>
-            <exclude>Tests/Twig/Extension/</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
