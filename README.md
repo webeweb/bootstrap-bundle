@@ -98,7 +98,7 @@ Add the wiki routing into the `app/config/routing_dev.yml` file of your project:
 ```yaml
 # ...
 _bootstrap_wiki:
-    prefix:   "/bootstrap"
+    prefix:   "/_bootstrap"
     resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"
 ```
 
@@ -153,7 +153,7 @@ stable version of this package:
 ```bash
 $ mkdir bootstrap-bundle
 $ cd bootstrap-bundle
-$ git clone git@github.com:webeweb/bootstrap-bundle.git .
+$ git clone https://github.com/webeweb/bootstrap-bundle.git .
 $ composer install
 ```
 
