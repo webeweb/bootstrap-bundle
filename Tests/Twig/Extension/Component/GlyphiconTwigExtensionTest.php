@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  */
-class GlyphiconTwigExtensionTest extends AbstractFrameworkTestCase {
+class GlyphiconTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the getFunctions() method.

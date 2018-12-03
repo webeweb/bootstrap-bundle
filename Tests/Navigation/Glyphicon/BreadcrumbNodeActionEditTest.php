@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Navigation\Glyphicon;
 
 use WBW\Bundle\BootstrapBundle\Navigation\Glyphicon\BreadcrumbNodeActionEdit;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Navigation\Glyphicon
  */
-class BreadcrumbNodeActionEditTest extends AbstractFrameworkTestCase {
+class BreadcrumbNodeActionEditTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

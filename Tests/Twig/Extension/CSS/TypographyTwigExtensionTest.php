@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  */
-class TypographyTwigExtensionTest extends AbstractFrameworkTestCase {
+class TypographyTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the getFunctions() method.

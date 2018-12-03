@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  */
-class GridTwigExtensionTest extends AbstractFrameworkTestCase {
+class GridTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the getFunctions() method.

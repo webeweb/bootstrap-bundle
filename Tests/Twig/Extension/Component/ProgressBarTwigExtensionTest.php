@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  */
-class ProgressBarTwigExtensionTest extends AbstractFrameworkTestCase {
+class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the getFunctions() method.

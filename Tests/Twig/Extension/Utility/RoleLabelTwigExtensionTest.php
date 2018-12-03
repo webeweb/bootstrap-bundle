@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
 
@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility
  */
-class RoleLabelTwigExtensionTest extends AbstractFrameworkTestCase {
+class RoleLabelTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Color choices.

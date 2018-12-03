@@ -14,12 +14,12 @@ namespace WBW\Bundle\BootstrapBundle\Tests;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase as TestCase;
 
 /**
- * Abstract framework test case.
+ * Abstract test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
-abstract class AbstractFrameworkTestCase extends TestCase {
+abstract class AbstractTestCase extends TestCase {
 
 }
