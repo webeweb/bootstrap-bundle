@@ -17,6 +17,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtensionTrait;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -27,19 +28,14 @@ use WBW\Library\Core\Argument\StringHelper;
  */
 class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
 
+    use LabelTwigExtensionTrait;
+
     /**
      * Service name.
      *
      * @var string
      */
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.utility.rolelabel";
-
-    /**
-     * Extension.
-     *
-     * @var LabelTwigExtension
-     */
-    private $extension;
 
     /**
      * Constructor.
@@ -50,7 +46,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator, LabelTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
-        $this->setExtension($extension);
+        $this->setLabelTwigExtension($extension);
     }
 
     /**
@@ -98,7 +94,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
             }
 
             // Initialize the label.
-            $label = $this->getExtension()->bootstrapLabelDefaultFunction(["content" => $trans]);
+            $label = $this->getLabelTwigExtension()->bootstrapLabelDefaultFunction(["content" => $trans]);
             if (true === array_key_exists($role, $roleColors)) {
                 $label = $this->applyColor($label, $trans, $roleColors[$role]);
             }
@@ -120,26 +116,6 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
         return [
             new Twig_SimpleFunction("bootstrapRoleLabel", [$this, "bootstrapRoleLabelFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Get the extension.
-     *
-     * @return LabelTwigExtension Returns the extension.
-     */
-    public function getExtension() {
-        return $this->extension;
-    }
-
-    /**
-     * Set the extension.
-     *
-     * @param LabelTwigExtension $extension The extension.
-     * @return RoleLabelHelperTwigExtension Returns this role label utility Twig extension.
-     */
-    protected function setExtension(LabelTwigExtension $extension) {
-        $this->extension = $extension;
-        return $this;
     }
 
 }
