@@ -15,6 +15,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtensionTrait;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -25,19 +26,14 @@ use WBW\Library\Core\Argument\ArrayHelper;
  */
 class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
 
+    use ButtonTwigExtensionTrait;
+
     /**
      * Service name.
      *
      * @var string
      */
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.utility.formbutton";
-
-    /**
-     * Extension.
-     *
-     * @var ButtonTwigExtension
-     */
-    private $extension;
 
     /**
      * Constructor.
@@ -48,7 +44,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator, ButtonTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
-        $this->setExtension($extension);
+        $this->setButtonTwigExtension($extension);
     }
 
     /**
@@ -63,10 +59,10 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
         $txt = $this->getTranslator()->trans("label.cancel", [], "BootstrapBundle");
 
         // Initialize the button.
-        $but = $this->getExtension()->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "remove"]);
+        $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "remove"]);
 
         // Return the HTML.
-        return $this->getExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
+        return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -96,19 +92,10 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
         $txt = $this->getTranslator()->trans("label.submit", [], "BootstrapBundle");
 
         // Initialize the button.
-        $but = $this->getExtension()->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "ok"]);
+        $but = $this->getButtonTwigExtension()->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "ok"]);
 
         // Return the HTML.
-        return $this->getExtension()->bootstrapButtonSubmitFilter($but);
-    }
-
-    /**
-     * Get the extension.
-     *
-     * @return ButtonTwigExtension Returns the extension.
-     */
-    public function getExtension() {
-        return $this->extension;
+        return $this->getButtonTwigExtension()->bootstrapButtonSubmitFilter($but);
     }
 
     /**
@@ -122,17 +109,6 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
             new Twig_SimpleFunction("bootstrapFormButtonDefault", [$this, "bootstrapFormButtonDefaultFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("bootstrapFormButtonSubmit", [$this, "bootstrapFormButtonSubmitFunction"], ["is_safe" => ["html"]]),
         ];
-    }
-
-    /**
-     * Set the extension.
-     *
-     * @param ButtonTwigExtension $extension The extension.
-     * @return FormButtonTwigExtension Returns this form button Twig extension.
-     */
-    protected function setExtension(ButtonTwigExtension $extension) {
-        $this->extension = $extension;
-        return $this;
     }
 
 }
