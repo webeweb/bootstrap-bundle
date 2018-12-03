@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as BaseWebTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as WebTestCase;
 
 /**
  * Abstract Bootstrap web test case.
@@ -20,6 +20,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as BaseWebTestCase;
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */
-abstract class AbstractWebTestCase extends BaseWebTestCase {
+abstract class AbstractWebTestCase extends WebTestCase {
 
 }
