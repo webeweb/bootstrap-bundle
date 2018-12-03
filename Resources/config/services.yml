@@ -56,7 +56,7 @@ services:
 
     webeweb.bootstrap.twig.extension.component.breadcrumb:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension
-        arguments: ["@translator"]
+        arguments: ["@twig", "@translator"]
         public:    true
         tags:
             - { name: "twig.extension" }
@@ -104,7 +104,7 @@ services:
             - { name: "twig.extension" }
 
     webeweb.bootstrap.twig.extension.renderer:
-        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\BootstrapRendererTwigExtension
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
@@ -112,21 +112,21 @@ services:
 
     webeweb.bootstrap.twig.extension.utility.formbutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrap.twig.extension.css.button"]
+        arguments: ["@twig", "@translator", "@webeweb.bootstrap.twig.extension.css.button"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrap.twig.extension.utility.rolelabel:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrap.twig.extension.component.label"]
+        arguments: ["@twig", "@translator", "@webeweb.bootstrap.twig.extension.component.label"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
     webeweb.bootstrap.twig.extension.utility.tablebutton:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension
-        arguments: ["@translator", "@webeweb.bootstrap.twig.extension.css.button"]
+        arguments: ["@twig", "@translator", "@webeweb.bootstrap.twig.extension.css.button"]
         public:    true
         tags:
             - { name: "twig.extension" }
