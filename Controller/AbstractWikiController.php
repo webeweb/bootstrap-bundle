@@ -23,7 +23,7 @@ use WBW\Bundle\SyntaxHighlighterBundle\Provider\SyntaxHighlighterStringsProvider
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Controller
  */
-abstract class AbstractWikiController extends AbstractBootstrapController {
+abstract class AbstractWikiController extends AbstractController {
 
     /**
      * Get a user.
@@ -84,12 +84,7 @@ abstract class AbstractWikiController extends AbstractBootstrapController {
      * @return SyntaxHighlighterDefaults Returns the SyntaxHighlighter defaults.
      */
     protected function getSyntaxHighlighterDefaults() {
-
-        // Initialize the SyntaxHighlighter defaults.
-        $defaults = new SyntaxHighlighterDefaults();
-
-        // Return the SyntaxHighlighter defaults.
-        return $defaults;
+        return new SyntaxHighlighterDefaults();
     }
 
 }
