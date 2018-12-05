@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase as WebTestCase;
 
 /**
- * Abstract Bootstrap web test case.
+ * Abstract web test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests
