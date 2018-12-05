@@ -4,34 +4,9 @@ bootstrap_blank_action:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
     methods:  ["GET"]
 
-bootstrap_email_action:
-    path:     "/email"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::emailAction" }
-    methods:  ["GET"]
-
 bootstrap_flashbag_action:
     path:     "/flashbag"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
-    methods:  ["GET"]
-
-bootstrap_get_router_action:
-    path:     "/get/router"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getRouterAction" }
-    methods:  ["GET"]
-
-bootstrap_get_session_action:
-    path:     "/get/session"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getSessionAction" }
-    methods:  ["GET"]
-
-bootstrap_get_translator_action:
-    path:     "/get/translator"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::getTranslatorAction" }
-    methods:  ["GET"]
-
-bootstrap_has_role_or_redirect_action:
-    path:     "/has/role/or/redirect"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::hasRoleOrRedirectAction" }
     methods:  ["GET"]
 
 bootstrap_wiki:

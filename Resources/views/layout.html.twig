@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% block bootstrapHeadFavicon %}
+        {% block bootstrapFavicons %}
             <!-- Favicons -->
             <link rel="apple-touch-icon" href="{{ asset("bundles/bootstrap/favicons/apple-icon-57x57.png") }}" sizes="57x57">
             <link rel="apple-touch-icon" href="{{ asset("bundles/bootstrap/favicons/apple-icon-60x60.png") }}" sizes="60x60">
@@ -29,16 +29,16 @@
         {% endblock %}
         <meta http-equiv="Content-Type" content="text/html; charset=utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        {% include "@Bootstrap/include/styles.html.twig" %}
-        {% block bootstrapHeadStyles %}
+        {% block bootstrapStylesheets %}
+            {% include "@Bootstrap/include/stylesheets.html.twig" %}
         {% endblock %}
-        <title>{% block bootstrapHeadTitle %}{% endblock %}</title>
+        <title>{% block bootstrapTitle %}{% endblock %}</title>
     </head>
-    <body{% block bootstrapBodyClasses %}{% endblock %}>
-        {% block bootstrapBodyContent %}
+    <body{% block bootstrapBody %}{% endblock %}>
+        {% block bootstrapContent %}
         {% endblock %}
-        {% include "@Bootstrap/include/scripts.html.twig" %}
-        {% block bootstrapBodyScripts %}
+        {% block bootstrapJavascripts %}
+            {% include "@Bootstrap/include/javascripts.html.twig" %}
         {% endblock %}
     </body>
 </html>

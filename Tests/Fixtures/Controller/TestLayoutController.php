@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
-use WBW\Bundle\BootstrapBundle\Controller\AbstractBootstrapController;
+use WBW\Bundle\BootstrapBundle\Controller\AbstractController;
 
 /**
  * Test layout controller.
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Controller\AbstractBootstrapController;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller
  */
-class TestLayoutController extends AbstractBootstrapController {
+class TestLayoutController extends AbstractController {
 
     /**
      * Displays a blank page.
@@ -31,17 +31,6 @@ class TestLayoutController extends AbstractBootstrapController {
 
         // Return the response.
         return $this->render("@Bootstrap/layout/blank.html.twig");
-    }
-
-    /**
-     * Displays an email.
-     *
-     * @return Response Returns the response.
-     */
-    public function emailAction() {
-
-        // Return the response.
-        return $this->render("@Bootstrap/email.html.twig");
     }
 
     /**
@@ -59,62 +48,6 @@ class TestLayoutController extends AbstractBootstrapController {
 
         // Return th response.
         return $this->render("@Bootstrap/include/flashbag.html.twig");
-    }
-
-    /**
-     * Get router.
-     *
-     * @return Response Returns the response.
-     */
-    public function getRouterAction() {
-
-        // Get the router.
-        $this->getRouter();
-
-        // Return the response.
-        return $this->render("@Bootstrap/layout/blank.html.twig");
-    }
-
-    /**
-     * Get session.
-     *
-     * @return Response Returns the response.
-     */
-    public function getSessionAction() {
-
-        // Get the session.
-        $this->getSession();
-
-        // Return the response.
-        return $this->render("@Bootstrap/layout/blank.html.twig");
-    }
-
-    /**
-     * Get translator.
-     *
-     * @return Response Returns the response.
-     */
-    public function getTranslatorAction() {
-
-        // Get the translator.
-        $this->getTranslator();
-
-        // Return the response.
-        return $this->render("@Bootstrap/layout/blank.html.twig");
-    }
-
-    /**
-     * Has role or redirect.
-     *
-     * @return Response Returns the response.
-     */
-    public function hasRoleOrRedirectAction() {
-
-        //
-        $this->hasRolesOrRedirect(["ROLE_GITHUB"], false, "/blank");
-
-        // Return the response.
-        return $this->render("@Bootstrap/layout/blank.html.twig");
     }
 
 }

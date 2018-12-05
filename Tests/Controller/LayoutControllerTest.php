@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
-use Symfony\Component\BrowserKit\Cookie;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 
 /**
@@ -39,28 +37,13 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the emailAction() method.
-     *
-     * @return void
-     */
-    public function testEmailAction() {
-
-        // Create a client.
-        $client = static::createClient();
-
-        // Make a GET request.
-        $client->request("GET", "/email");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    /**
      * Tests the flashbagAction() method.
      *
      * @return void
      */
     public function testFlashbagAction() {
 
-        $res = <<<'EOT'
+        $res = <<< EOT
             <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             Danger
@@ -87,67 +70,6 @@ EOT;
         $client->request("GET", "/flashbag");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals($res, $client->getResponse()->getContent());
-    }
-
-    /**
-     * Tests the getRouterAction() method.
-     *
-     * @return void
-     */
-    public function testGetRouterAction() {
-
-        // Create a client.
-        $client = static::createClient();
-
-        // Make a GET request.
-        $client->request("GET", "/get/router");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    /**
-     * Tests the getSessionAction() method.
-     *
-     * @return void
-     */
-    public function testGetSessionAction() {
-
-        // Create a client.
-        $client = static::createClient();
-
-        // Make a GET request.
-        $client->request("GET", "/get/session");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    /**
-     * Tests the getTranslatorAction() method.
-     *
-     * @return void
-     */
-    public function testGetTranslatorAction() {
-
-        // Create a client.
-        $client = static::createClient();
-
-        // Make a GET request.
-        $client->request("GET", "/get/translator");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    /**
-     * Tests the hasRoleOrRedirectAction() method.
-     *
-     * @return void
-     */
-    public function testHasRoleOrRedirectRedirectAction() {
-
-        // Create a client.
-        $client = static::createClient();
-
-        // Make a GET request.
-        $client->request("GET", "/has/role/or/redirect");
-        $this->assertEquals(302, $client->getResponse()->getStatusCode());
-        $this->assertEquals("/blank", $client->getResponse()->headers->get("location"));
     }
 
 }
