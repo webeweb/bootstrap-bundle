@@ -65,6 +65,13 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
     const BOOTSTRAP_WARNING = "warning";
 
     /**
+     * {@inheritdoc}
+     */
+    public function getAssetsRelativeDirectory() {
+        return "/Resources/assets";
+    }
+
+    /**
      * Get the Bootstrap constants.
      *
      * @return array Returns the Bootstrap constants.
@@ -78,13 +85,6 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
             self::BOOTSTRAP_SUCCESS,
             self::BOOTSTRAP_WARNING,
         ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getAssetsRelativeDirectory() {
-        return "/Resources/assets";
     }
 
 }
