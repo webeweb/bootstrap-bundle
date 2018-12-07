@@ -155,9 +155,9 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<kbd>content</kbd>";
-        $this->assertEquals($res9, $obj->bootstrapUserInputFunction($arg9));
+        $arg = ["content" => "content"];
+        $res = "<kbd>content</kbd>";
+        $this->assertEquals($res, $obj->bootstrapUserInputFunction($arg));
     }
 
     /**
@@ -169,9 +169,9 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<kbd></kbd>";
-        $this->assertEquals($res0, $obj->bootstrapUserInputFunction($arg0));
+        $arg = [];
+        $res = "<kbd></kbd>";
+        $this->assertEquals($res, $obj->bootstrapUserInputFunction($arg));
     }
 
     /**
@@ -183,13 +183,23 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "<var></var>";
-        $this->assertEquals($res0, $obj->bootstrapVariableFunction($arg0));
+        $arg = ["content" => "content"];
+        $res = "<var>content</var>";
+        $this->assertEquals($res, $obj->bootstrapVariableFunction($arg));
+    }
 
-        $arg9 = ["content" => "content"];
-        $res9 = "<var>content</var>";
-        $this->assertEquals($res9, $obj->bootstrapVariableFunction($arg9));
+    /**
+     * Tests the bootstrapVariableFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapVariableFunctionWithoutArguments() {
+
+        $obj = new CodeTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<var></var>";
+        $this->assertEquals($res, $obj->bootstrapVariableFunction($arg));
     }
 
 }
