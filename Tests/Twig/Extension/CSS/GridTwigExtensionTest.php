@@ -72,13 +72,23 @@ class GridTwigExtensionTest extends AbstractTestCase {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = "";
-        $this->assertEquals($res0, $obj->bootstrapGridFunction($arg0));
+        $arg = ["lg" => 12, "recopy" => true, "mdOffset" => 12, "recopyOffset" => true, "smPull" => 12, "recopyPull" => true, "xsPush" => 12, "recopyPush" => true];
+        $res = "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-md-offset-12 col-sm-offset-12 col-xs-offset-12 col-xs-push-12 col-sm-pull-12 col-xs-pull-12";
+        $this->assertEquals($res, $obj->bootstrapGridFunction($arg));
+    }
 
-        $arg9 = ["lg" => 12, "recopy" => true, "mdOffset" => 12, "recopyOffset" => true, "smPull" => 12, "recopyPull" => true, "xsPush" => 12, "recopyPush" => true];
-        $res9 = "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-md-offset-12 col-sm-offset-12 col-xs-offset-12 col-xs-push-12 col-sm-pull-12 col-xs-pull-12";
-        $this->assertEquals($res9, $obj->bootstrapGridFunction($arg9));
+    /**
+     * Tests the bootstrapGridFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridFunctionWithoutArguments() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridFunction($arg));
     }
 
     /**
