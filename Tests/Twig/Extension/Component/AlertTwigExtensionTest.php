@@ -99,6 +99,20 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
+        $arg = ["content" => "content"];
+        $res = '<div class="alert alert-info" role="alert">content</div>';
+        $this->assertEquals($res, $obj->bootstrapAlertInfoFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapAlertInfoFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapAlertInfoFunctionWithoutArguments() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
         $arg = [];
         $res = '<div class="alert alert-info" role="alert"></div>';
         $this->assertEquals($res, $obj->bootstrapAlertInfoFunction($arg));
@@ -169,6 +183,20 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
+        $arg = ["content" => "content"];
+        $res = '<div class="alert alert-success" role="alert">content</div>';
+        $this->assertEquals($res, $obj->bootstrapAlertSuccessFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapAlertSuccessFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapAlertSuccessFunctionWithoutArguments() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
         $arg = [];
         $res = '<div class="alert alert-success" role="alert"></div>';
         $this->assertEquals($res, $obj->bootstrapAlertSuccessFunction($arg));
@@ -180,6 +208,20 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      * @return void
      */
     public function testBootstrapAlertWarningFunction() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content"];
+        $res = '<div class="alert alert-warning" role="alert">content</div>';
+        $this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapAlertWarningFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapAlertWarningFunctionWithoutArguments() {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
