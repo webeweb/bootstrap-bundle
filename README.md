@@ -19,7 +19,6 @@ Integrate Bootstrap theme with Symfony 2 and more.
 
 Includes:
 
-- [Animate.css 3.5.2](https://daneden.github.io/animate.css/)
 - [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
 - [Bootstrap Colorpicker 2.5.1](https://farbelous.io/bootstrap-colorpicker/) (Bootstrap plug-in)
 - [Bootstrap Datepicker 1.7.1](https://uxsolutions.github.io/bootstrap-datepicker/) (Bootstrap plug-in)
@@ -32,19 +31,8 @@ Includes:
 - [Bootstrap Tagsinput 0.8.0](http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/) (Bootstrap plug-in)
 - [Bootstrap Timepicker 0.5.2](http://jdewit.github.io/bootstrap-timepicker/) (Bootstrap plug-in)
 - [Bootstrap WYSIWYG 0.3.3](http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/) (Bootstrap plug-in)
-- [Font Awesome 5.3.1](https://fontawesome.com/)
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
-- [jQuery 3.2.1](http://jquery.com/) (Bootstrap dependency)
-- [jQuery EasyAutocomplete 1.3.4](http://www.easyautocomplete.com/) (jQuery plug-in)
-- [jQuery InputMask 3.3.11](https://robinherbots.github.io/Inputmask/) (jQuery plug-in)
-- [jQuery Select2 4.0.5](https://select2.org/) (jQuery plug-in)
-- [Material Design Color Palette 1.1.0](http://zavoloklom.github.io/material-design-color-palette/)
-- [Material Design Hierarchical Display 1.0.1](http://zavoloklom.github.io/material-design-hierarchical-display/)
-- [Material Design Iconic Font 2.2.0](http://zavoloklom.github.io/material-design-iconic-font/)
-- [Meteocons](http://www.alessioatzeni.com/meteocons/)
 - [Moment.js 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
-- [SweetAlert 2.1.0](https://sweetalert.js.org/)
-- [waitMe 1.19](http://vadimsva.github.io/waitMe/) (jQuery plug-in)
 - [WYSIHTML 0.4.15](http://wysihtml.com/) (Bootstrap WYSIWYG dependency)
 
 ---
@@ -90,6 +78,7 @@ in the `app/AppKernel.php` file of your project:
 Once the bundle is added then do:
 
 ```bash
+$ php bin/console wbw:core:unzip-assets
 $ php bin/console assets:install
 ```
 
