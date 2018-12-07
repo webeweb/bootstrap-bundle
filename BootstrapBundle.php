@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
  * Bootstrap bundle.
@@ -19,7 +20,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle
  */
-class BootstrapBundle extends Bundle {
+class BootstrapBundle extends Bundle implements AssetsProviderInterface {
 
     /**
      * Bootstrap "Danger".
@@ -77,6 +78,13 @@ class BootstrapBundle extends Bundle {
             self::BOOTSTRAP_SUCCESS,
             self::BOOTSTRAP_WARNING,
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAssetsRelativeDirectory() {
+        return "/Resources/assets";
     }
 
 }

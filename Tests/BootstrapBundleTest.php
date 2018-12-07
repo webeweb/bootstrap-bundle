@@ -54,4 +54,17 @@ class BootstrapBundleTest extends AbstractTestCase {
         $this->assertEquals($res, BootstrapBundle::getBootstrapConstants());
     }
 
+    /**
+     * Tests the getAssetsRelativeDirectory() method.
+     *
+     * @return void
+     */
+    public function testGetAssetsRelativeDirectory() {
+
+        $obj = new BootstrapBundle();
+
+        $res = "/Resources/assets";
+        $this->assertEquals($res, $obj->getAssetsRelativeDirectory());
+    }
+
 }
