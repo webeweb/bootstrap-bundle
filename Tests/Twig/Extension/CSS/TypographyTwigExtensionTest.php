@@ -168,7 +168,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH1Function() {
+    public function testBootstrapHeading1Function() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -182,7 +182,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH1FunctionWithContent() {
+    public function testBootstrapHeading1FunctionWithContent() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -196,7 +196,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH1FunctionWithDescription() {
+    public function testBootstrapHeading1FunctionWithDescription() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -210,7 +210,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH1FunctionWithClass() {
+    public function testBootstrapHeading1FunctionWithClass() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -224,7 +224,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH1FunctionWithoutArguments() {
+    public function testBootstrapHeading1FunctionWithoutArguments() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -238,7 +238,63 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH2Function() {
+    public function testBootstrapHeading2Function() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content", "description" => "description", "class" => "class"];
+        $res = '<h2 class="class">content <small>description</small></h2>';
+        $this->assertEquals($res, $obj->bootstrapHeading2Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading2Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading2FunctionWithContent() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content"];
+        $res = "<h2>content</h2>";
+        $this->assertEquals($res, $obj->bootstrapHeading2Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading2Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading2FunctionWithDescription() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["description" => "description"];
+        $res = "<h2><small>description</small></h2>";
+        $this->assertEquals($res, $obj->bootstrapHeading2Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading2Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading2FunctionWithClass() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["class" => "class"];
+        $res = '<h2 class="class"></h2>';
+        $this->assertEquals($res, $obj->bootstrapHeading2Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading2Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading2FunctionWithoutArguments() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -252,7 +308,63 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH3Function() {
+    public function testBootstrapHeading3Function() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content", "description" => "description", "class" => "class"];
+        $res = '<h3 class="class">content <small>description</small></h3>';
+        $this->assertEquals($res, $obj->bootstrapHeading3Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading3Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading3FunctionWithContent() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content"];
+        $res = "<h3>content</h3>";
+        $this->assertEquals($res, $obj->bootstrapHeading3Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading3Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading3FunctionWithDescription() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["description" => "description"];
+        $res = "<h3><small>description</small></h3>";
+        $this->assertEquals($res, $obj->bootstrapHeading3Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading3Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading3FunctionWithClass() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["class" => "class"];
+        $res = '<h3 class="class"></h3>';
+        $this->assertEquals($res, $obj->bootstrapHeading3Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading3Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading3FunctionWithoutArguments() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -266,7 +378,63 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH4Function() {
+    public function testBootstrapHeading4Function() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content", "description" => "description", "class" => "class"];
+        $res = '<h4 class="class">content <small>description</small></h4>';
+        $this->assertEquals($res, $obj->bootstrapHeading4Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading4Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading4FunctionWithContent() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content"];
+        $res = "<h4>content</h4>";
+        $this->assertEquals($res, $obj->bootstrapHeading4Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading4Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading4FunctionWithDescription() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["description" => "description"];
+        $res = "<h4><small>description</small></h4>";
+        $this->assertEquals($res, $obj->bootstrapHeading4Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading4Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading4FunctionWithClass() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["class" => "class"];
+        $res = '<h4 class="class"></h4>';
+        $this->assertEquals($res, $obj->bootstrapHeading4Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading4Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading4FunctionWithoutArguments() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -280,7 +448,63 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH5Function() {
+    public function testBootstrapHeading5Function() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content", "description" => "description", "class" => "class"];
+        $res = '<h5 class="class">content <small>description</small></h5>';
+        $this->assertEquals($res, $obj->bootstrapHeading5Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading5Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading5FunctionWithContent() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content"];
+        $res = "<h5>content</h5>";
+        $this->assertEquals($res, $obj->bootstrapHeading5Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading5Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading5FunctionWithDescription() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["description" => "description"];
+        $res = "<h5><small>description</small></h5>";
+        $this->assertEquals($res, $obj->bootstrapHeading5Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading5Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading5FunctionWithClass() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["class" => "class"];
+        $res = '<h5 class="class"></h5>';
+        $this->assertEquals($res, $obj->bootstrapHeading5Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading5Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading5FunctionWithoutArguments() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -294,7 +518,63 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapH6Function() {
+    public function testBootstrapHeading6Function() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content", "description" => "description", "class" => "class"];
+        $res = '<h6 class="class">content <small>description</small></h6>';
+        $this->assertEquals($res, $obj->bootstrapHeading6Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading6Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading6FunctionWithContent() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["content" => "content"];
+        $res = "<h6>content</h6>";
+        $this->assertEquals($res, $obj->bootstrapHeading6Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading6Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading6FunctionWithDescription() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["description" => "description"];
+        $res = "<h6><small>description</small></h6>";
+        $this->assertEquals($res, $obj->bootstrapHeading6Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading6Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading6FunctionWithClass() {
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $arg = ["class" => "class"];
+        $res = '<h6 class="class"></h6>';
+        $this->assertEquals($res, $obj->bootstrapHeading6Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapHeading6Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapHeading6FunctionWithoutArguments() {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
