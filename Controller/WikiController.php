@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use WBW\Bundle\BootstrapBundle\Model\WikiPage;
+use WBW\Bundle\CoreBundle\Model\WikiView;
 
 /**
  * Wiki controller.
@@ -24,39 +24,44 @@ use WBW\Bundle\BootstrapBundle\Model\WikiPage;
 class WikiController extends AbstractWikiController {
 
     /**
-     * Get the wiki pages.
+     * Get the wiki views.
      *
-     * @return WikiPage[] Returns the wiki pages.
+     * @return WikiView[] Returns the wiki views.
      */
-    public static function getWikiPages() {
+    public static function getWikiViews() {
 
         // Initialize the table of contents.
         $tableContents = [];
 
         // Twig extensions > CSS
-        $tableContents[] = new WikiPage("Twig-extension", "CSS", "button", "Button");
-        $tableContents[] = new WikiPage("twig-extension", "CSS", "code", "Code");
-        $tableContents[] = new WikiPage("Twig-extension", "CSS", "grid", "Grid");
-        $tableContents[] = new WikiPage("Twig-extension", "CSS", "image", "Image");
-        $tableContents[] = new WikiPage("Twig-extension", "CSS", "typography", "Typography");
+        $tableContents[] = new WikiView("Twig-extension", "CSS", "button", "Button");
+        $tableContents[] = new WikiView("twig-extension", "CSS", "code", "Code");
+        $tableContents[] = new WikiView("Twig-extension", "CSS", "grid", "Grid");
+        $tableContents[] = new WikiView("Twig-extension", "CSS", "image", "Image");
+        $tableContents[] = new WikiView("Twig-extension", "CSS", "typography", "Typography");
 
         // Twig extensions > Component
-        $tableContents[] = new WikiPage("Twig-extension", "Component", "alert", "Alert");
-        $tableContents[] = new WikiPage("Twig-extension", "Component", "badge", "Badge");
-        $tableContents[] = new WikiPage("Twig-extension", "Component", "glyphicon", "Glyphicon");
-        $tableContents[] = new WikiPage("Twig-extension", "Component", "label", "Label");
-        $tableContents[] = new WikiPage("Twig-extension", "Component", "progress-bar", "Progress bar");
-
-        // Twig extensions > Plugin
-        $tableContents[] = new WikiPage("Twig-extension", "Plugin", "font-awesome", "Font Awesome");
-        $tableContents[] = new WikiPage("Twig-extension", "Plugin", "jquery-inputmask", "jQuery InputMask");
-        $tableContents[] = new WikiPage("Twig-extension", "Plugin", "material-design-iconic-font", "Material Design Iconic Font");
-        $tableContents[] = new WikiPage("Twig-extension", "Plugin", "meteocons", "Meteocons");
+        $tableContents[] = new WikiView("Twig-extension", "Component", "alert", "Alert");
+        $tableContents[] = new WikiView("Twig-extension", "Component", "badge", "Badge");
+        $tableContents[] = new WikiView("Twig-extension", "Component", "glyphicon", "Glyphicon");
+        $tableContents[] = new WikiView("Twig-extension", "Component", "label", "Label");
+        $tableContents[] = new WikiView("Twig-extension", "Component", "progress-bar", "Progress bar");
 
         // Twig extensions > Utility
-        $tableContents[] = new WikiPage("Twig-extension", "Utility", "form-button", "Form button");
-        $tableContents[] = new WikiPage("Twig-extension", "Utility", "role-label", "Role label");
-        $tableContents[] = new WikiPage("Twig-extension", "Utility", "table-button", "Table button");
+        $tableContents[] = new WikiView("Twig-extension", "Utility", "form-button", "Form button");
+        $tableContents[] = new WikiView("Twig-extension", "Utility", "role-label", "Role label");
+        $tableContents[] = new WikiView("Twig-extension", "Utility", "table-button", "Table button");
+
+        // Twig extensions > Plugin
+        $tableContents[] = new WikiView("Twig-extension", "Plugin", "font-awesome", "Font Awesome");
+        $tableContents[] = new WikiView("Twig-extension", "Plugin", "jquery-inputmask", "jQuery InputMask");
+        $tableContents[] = new WikiView("Twig-extension", "Plugin", "material-design-iconic-font", "Material Design Iconic Font");
+        $tableContents[] = new WikiView("Twig-extension", "Plugin", "meteocons", "Meteocons");
+
+        // Handle each wiki view.
+        foreach ($tableContents as $current) {
+            $current->setBundle("Bootstrap");
+        }
 
         // Return the table of contents.
         return $tableContents;
@@ -74,22 +79,22 @@ class WikiController extends AbstractWikiController {
     public function indexAction(Request $request, $category, $package, $page) {
 
         // Initialize.
-        $wikiPages = self::getWikiPages();
-        $wikiPage  = null;
+        $wikiViews = self::getWikiViews();
+        $wikiView  = null;
 
         // Find the wiki page.
-        foreach ($wikiPages as $current) {
+        foreach ($wikiViews as $current) {
             if ($category === $current->getCategory() && $package === $current->getPackage() && $page === $current->getPage()) {
-                $wikiPage = $current;
+                $wikiView = $current;
                 break;
             }
         }
 
         // Check if the wiki page exists.
-        if (null === $wikiPage) {
+        if (null === $wikiView) {
 
             // Set the default wiki page.
-            $wikiPage = $wikiPages[0];
+            $wikiView = $wikiViews[0];
 
             // Notify the user.
             $this->notifyDanger("The requested page was not found");
@@ -99,20 +104,20 @@ class WikiController extends AbstractWikiController {
         // Set the template.
         $template = [
             "@",
-            $wikiPage->getBundle(),
+            $wikiView->getBundle(),
             "/Wiki/",
-            strtolower($wikiPage->getCategory()),
+            strtolower($wikiView->getCategory()),
             "/",
-            strtolower($wikiPage->getPackage()),
+            strtolower($wikiView->getPackage()),
             "/",
-            $wikiPage->getPage(),
+            $wikiView->getPage(),
             ".html.twig",
         ];
 
         // Returns the response.
         return $this->render(implode("", $template), [
-                "wikiPage"                  => $wikiPage,
-                "wikiPages"                 => $wikiPages,
+                "wikiViews"                 => $wikiViews,
+                "wikiView"                  => $wikiView,
                 "syntaxHighlighterConfig"   => $this->getSyntaxHighlighterConfig(),
                 "syntaxHighlighterDefaults" => $this->getSyntaxHighlighterDefaults(),
                 "user"                      => $this->getSampleUser(),

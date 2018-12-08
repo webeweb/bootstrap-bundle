@@ -30,7 +30,7 @@ class WikiControllerTest extends AbstractWebTestCase {
     public function testIndexAction() {
 
         // Get the wiki pages.
-        $wikiPages = WikiController::getWikiPages();
+        $wikiPages = WikiController::getWikiViews();
 
         // Handle each wiki page.
         foreach ($wikiPages as $current) {
