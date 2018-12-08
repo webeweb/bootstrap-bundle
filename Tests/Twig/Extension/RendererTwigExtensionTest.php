@@ -44,4 +44,15 @@ class RendererTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "fa:home"));
     }
 
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     */
+    public function testRenderIconWithoutArguments() {
+
+        $res = "";
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "fa::home"));
+    }
+
 }
