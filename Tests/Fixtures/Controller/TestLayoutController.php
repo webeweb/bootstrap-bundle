@@ -50,4 +50,26 @@ class TestLayoutController extends AbstractController {
         return $this->render("@Bootstrap/layout/flashbag.html.twig");
     }
 
+    /**
+     * Displays a work in progress page.
+     *
+     * @return Response Returns the response.
+     */
+    public function twigConsoleAction() {
+
+        // Return the response.
+        return $this->render("@Bootstrap/layout/twig-console.html.twig");
+    }
+
+    /**
+     * Displays a work in progress page.
+     *
+     * @return Response Returns the response.
+     */
+    public function workInProgressAction() {
+
+        // Return the response.
+        return $this->render("@Bootstrap/layout/work-in-progress.html.twig");
+    }
+
 }

@@ -9,6 +9,16 @@ bootstrap_flashbag_action:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
     methods:  ["GET"]
 
+bootstrap_twig_console_action:
+    path:     "/twig-console"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::twigConsoleAction" }
+    methods:  ["GET"]
+
+bootstrap_work_in_progress_action:
+    path:     "/work-in-progress"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::workInProgressAction" }
+    methods:  ["GET"]
+
 bootstrap_wiki:
     prefix:   "/"
     resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"

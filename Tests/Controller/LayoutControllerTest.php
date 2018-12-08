@@ -72,4 +72,34 @@ EOT;
         $this->assertEquals($res, $client->getResponse()->getContent());
     }
 
+    /**
+     * Tests the twigConsoleAction() method.
+     *
+     * @return void
+     */
+    public function testTwigConsoleAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/twig-console");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * Tests the workInProgressAction() method.
+     *
+     * @return void
+     */
+    public function testWorkInProgressAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/work-in-progress");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
 }
