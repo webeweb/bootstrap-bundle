@@ -30,7 +30,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         {% block bootstrapStylesheets %}
-            {% include "@Bootstrap/include/stylesheets.html.twig" %}
+            {% include "@Bootstrap/layout/stylesheets.html.twig" %}
         {% endblock %}
         <title>{% block bootstrapTitle %}{% endblock %}</title>
     </head>
@@ -38,7 +38,7 @@
         {% block bootstrapContent %}
         {% endblock %}
         {% block bootstrapJavascripts %}
-            {% include "@Bootstrap/include/javascripts.html.twig" %}
+            {% include "@Bootstrap/layout/javascripts.html.twig" %}
         {% endblock %}
     </body>
 </html>

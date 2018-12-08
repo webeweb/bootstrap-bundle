@@ -1,9 +1,0 @@
-{# Resources/views/include/flashbag.html.twig #}
-{% for key, messages in app.session.flashbag.all() %}
-    {% for message in messages %}
-        <div class="alert alert-{{ key }} alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="{{ "label.close"|trans({}, "BootstrapBundle") }}"><span aria-hidden="true">&times;</span></button>
-            {{ message|raw }}
-        </div>
-    {% endfor %}
-{% endfor %}

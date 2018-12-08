@@ -47,7 +47,7 @@ class TestLayoutController extends AbstractController {
         $this->notifyWarning("Warning");
 
         // Return th response.
-        return $this->render("@Bootstrap/include/flashbag.html.twig");
+        return $this->render("@Bootstrap/layout/flashbag.html.twig");
     }
 
 }
