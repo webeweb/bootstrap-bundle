@@ -4,6 +4,120 @@ CHANGELOG
 ### 2.0.0 (2018-xx-xx)
 
 - Add CHANGELOG
+- Update dependencies (Core bundle 1.2.0 and SyntaxHighlighter 2.2.0)
+- Reorganize layout templates
+- Remove jQuery (moved into Core bundle)
+- Remove email template (moved into Core bundle)
+- Remove waitMe (moved into Core bundle)
+- Remove SweetAlert (moved into Core bundle)
+- Remove Meteocons (moved into Core bundle)
+- Remove Material Design Iconic Font (moved into Core bundle)
+- Remove Material Design Hierarchical Display (moved into Core bundle)
+- Remove Material Design Color Palette (moved into Core bundle)
+- Remove jQuery Select2 (moved into Core bundle)
+- Remove jQuery Inputmask (moved into Core bundle)
+- Remove jQuery EasyAutocomplete (moved into Core bundle)
+- Remove Font Awesome (moved into Core bundle)
+- Remove Animate.css (moved into Core bundle)
+- Zip public resources into assets folder
+- Add Role label Twig extension trait (used for dependency injection into another service)
+- Add Table button Twig extension trait (used for dependency injection into another service)
+- Add Form button Twig extension trait (used for dependency injection into another service)
+- Add Progress bar Twig extension trait (used for dependency injection into another service)
+- Add Nav Twig extension trait (used for dependency injection into another service)
+- Add Label Twig extension trait (used for dependency injection into another service)
+- Add Glyphicon Twig extension trait (used for dependency injection into another service)
+- Add Dropdown Twig extension trait (used for dependency injection into another service)
+- Add Button groug Twig extension trait (used for dependency injection into another service)
+- Add Breadcrumb Twig extension trait (used for dependency injection into another service)
+- Add Badge Twig extension trait (used for dependency injection into another service)
+- Add Alert Twig extension trait (used for dependency injection into another service)
+- Add Typography Twig extension trait (used for dependency injection into another service)
+- Add Image Twig extension trait (used for dependency injection into another service)
+- Add Grid Twig extension trait (used for dependency injection into another service)
+- Add Code Twig extension trait (used for dependency injection into another service)
+- Add Button Twig extension trait (used for dependency injection into another service)
+- Update Role label Twig extension
+- Update Table button Twig extension
+- Update Form button Twig extension
+- Update Progress bar Twig extension
+- Update Nav Twig extension
+- Update Label Twig extension
+- Update Glyphicon Twig extension
+- Update Dropdown Twig extension
+- Update Button groug Twig extension
+- Update Breadcrumb Twig extension
+- Update Badge Twig extension
+- Update Alert Twig extension
+- Update Typography Twig extension
+- Update Image Twig extension
+- Update Grid Twig extension
+- Update Code Twig extension
+- Update Button Twig extension
+- Remove unused code
+- Improve unit tests
+- Add Navigation node "users groups" (with Glyphicon icon)
+- Add Navigation node "users" (with Glyphicon icon)
+- Add Navigation node "settings" (with Glyphicon icon)
+- Add Navigation node "parameters" (with Glyphicon icon)
+- Add Navigation node "events" (with Glyphicon icon)
+- Add Navigation node "dashboard" (with Glyphicon icon)
+- Add Navigation node action "new users group" (with Glyphicon icon)
+- Add Navigation node action "new user" (with Glyphicon icon)
+- Add Navigation node action "new" (with Glyphicon icon)
+- Add Navigation node action "index" (with Glyphicon icon)
+- Add Navigation node action "import" (with Glyphicon icon)
+- Add Navigation node action "export" (with Glyphicon icon)
+- Add Navigation node action "edit" (with Glyphicon icon)
+- Add Breadcrumb node action "new users group" (with Glyphicon icon)
+- Add Breadcrumb node action "new user" (with Glyphicon icon)
+- Add Breadcrumb node action "new" (with Glyphicon icon)
+- Add Breadcrumb node action "index" (with Glyphicon icon)
+- Add Breadcrumb node action "import" (with Glyphicon icon)
+- Add Breadcrumb node action "export" (with Glyphicon icon)
+- Add Breadcrumb node action "edit" (with Glyphicon icon)
+- Remove Meteocons Twig extension (moved into core-bundle)
+- Remove Material Design Iconic Font Twig extension (moved into core-bundle)
+- Remove jQuery InputMask Twig extension (moved into core-bundle)
+- Remove Font Awesome Twig extension (moved into core-bundle)
+- Remove Navigation interface (moved into core-bundle)
+- Remove Breadcrumb node (moved into core-bundle)
+- Remove Navigation item (moved into core-bundle)
+- Remove Navigation node (moved into core-bundle)
+- Remove Navigation tree (moved into core-bundle)
+- Remove Navigation tree helper (moved into core-bundle)
+- Remove Wiki page (moved into core-bundle)
+- Remove Email layout (moved into core-bundle)
+- Remove Provider interface (moved into core-bundle)
+- Remove Theme provider interface (moved into core-bundle)
+- Remove Application theme provider interface (moved into core-bundle)
+- Remove Breadcrumbs theme provider interface (moved into core-bundle)
+- Remove Footer theme provider interface (moved into core-bundle)
+- Remove Hook drop down theme provider interface (moved into core-bundle)
+- Remove Navigation theme provider interface (moved into core-bundle)
+- Remove Notifications drop down theme provider interface (moved into core-bundle)
+- Remove Search theme provider interface (moved into core-bundle)
+- Remove Tasks drop down theme provider interface (moved into core-bundle)
+- Remove User info theme provider interface (moved into core-bundle)
+- Remove Select2 data format interface (moved into core-bundle)
+- Remove Form helper (moved into core-bundle)
+- Remove Select2 helper (moved into core-bundle)
+- Remove User helper (moved into core-bundle)
+- Remove Theme manager interface (moved into core-bundle)
+- Remove abstract manager (moved into core-bundle)
+- Remove abstract Theme manager (moved into core-bundle)
+- Remove Theme manager (moved into core-bundle)
+- Remove Form factory (moved into core-bundle)
+- Remove Translated choice renderer interface (moved into core-bundle)
+- Remove Choice renderer interface (moved into core-bundle)
+- Remove Form renderer (moved into core-bundle)
+- Remove Kernel event listener (moved into core-bundle)
+- Remove Bad user role exception (moved into core-bundle)
+- Remove Bad user role exception (moved into core-bundle)
+- Remove Notification event (moved into core-bundle)
+- Remove Notification events (moved into core-bundle)
+- Remove "final" keyword
+- Add hasProviders() into abstract manager
 
 ### 1.7.3 (2018-10-04)
 
