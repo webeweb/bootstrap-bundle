@@ -1,12 +1,11 @@
 {# Resources/views/Wiki/layout.html.twig #}
-
-{% extends "@Bootstrap/layout.html.twig" %}
+{% extends "@Bootstrap/layout3.html.twig" %}
 
 {% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
 
-{% block bootstrapHeadStyles %}
+{% block bootstrapStylesheets %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/include/styles.html.twig" with {"theme": "eclipse"} %}
+    {% include "@SyntaxHighlighter/layout/stylesheets.html.twig" with {"theme": "eclipse"} %}
     <style type="text/css">
         .content {
             margin: 70px 0 0;
@@ -14,7 +13,7 @@
     </style>
 {% endblock %}
 
-{% block bootstrapHeadTitle %}webeweb/bootstrap-bundle{% endblock %}
+{% block bootstrapTitle %}webeweb/bootstrap-bundle{% endblock %}
 
 {% block bootstrapBodyContent %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -35,7 +34,7 @@
             {% if (0 < app.session.flashbag.peekAll()|length) %}
                 <div class="row clearfix">
                     <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
-                        {% include "@Bootstrap/include/flashbag.html.twig" %}
+                        {% include "@Bootstrap/layout/flashbag.html.twig" %}
                     </div>
                 </div>
             {% endif %}
@@ -62,15 +61,15 @@
                 </div>
             </div>
             {% if ("dev" == app.environment) %}
-                {% include "@Bootstrap/include/twig-console.html.twig" %}
+                {% include "@Bootstrap/layout/twig-console.html.twig" %}
             {% endif %}
         </div>
     </section>
 {% endblock %}
 
-{% block bootstrapBodyScripts %}
+{% block bootstrapJavascripts %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/include/scripts.html.twig" %}
+    {% include "@SyntaxHighlighter/layout/javascripts.html.twig" %}
     {{ (syntaxHighlighterConfig(syntaxHighlighterConfig) ~ "\n" ~
         syntaxHighlighterDefaults(syntaxHighlighterDefaults) ~ "\n" ~
         "SyntaxHighlighter.all();")|syntaxHighlighterScript() }}
