@@ -51,18 +51,12 @@ class RendererTwigExtension extends BaseTwigExtension {
 
         // Determines the handler.
         $handler = explode(":", $name);
-
-        // Get and check the parse count.
-        $parseNb = count($handler);
-        if ($parseNb < 1 || 2 < $parseNb) {
+        if (1 === count($handler)) {
+            array_unshift($handler, "g");
+        }
+        if (2 !== count($handler)) {
             return "";
         }
-        if (1 === count($handler)) {
-            $handler = ["g", $name];
-        }
-
-        // Initialize the output.
-        $output = "";
 
         // Swith into handler.
         switch ($handler[0]) {
