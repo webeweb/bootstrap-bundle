@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultUserInfoThemeProvider as BaseUserInfoThemeProvider;
 
 /**
  * Default user info theme provider.
@@ -19,34 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
+class DefaultUserInfoThemeProvider extends BaseUserInfoThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function provideRegisterLink() {
-        return false;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function provideResettingLink() {
-        return false;
+        parent::__construct();
     }
 
 }
