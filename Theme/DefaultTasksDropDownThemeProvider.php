@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider as BaseTasksDropDownThemeProvider;
 
 /**
  * Default tasks drop down theme provider.
@@ -19,27 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInterface {
+class DefaultTasksDropDownThemeProvider extends BaseTasksDropDownThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getTasks() {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
+        parent::__construct();
     }
 
 }
