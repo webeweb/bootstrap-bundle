@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Theme\DefaultSearchThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default search theme provider test.
@@ -31,7 +31,7 @@ class DefaultSearchThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultSearchThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNotNull($obj);
     }
 
 }

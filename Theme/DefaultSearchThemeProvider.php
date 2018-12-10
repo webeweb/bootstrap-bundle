@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultSearchThemeProvider as BaseSearchThemeProvider;
 
 /**
  * Default search theme provider.
@@ -19,20 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultSearchThemeProvider implements SearchThemeProviderInterface {
+class DefaultSearchThemeProvider extends BaseSearchThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
+        parent::__construct();
     }
 
 }
