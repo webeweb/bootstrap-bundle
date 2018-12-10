@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider as BaseNotificationsDropDownThemeProvider;
 
 /**
  * Default notifications drop down theme provider.
@@ -19,27 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderInter
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultNotificationsDropDownThemeProvider implements NotificationsDropDownThemeProviderInterface {
+class DefaultNotificationsDropDownThemeProvider extends BaseNotificationsDropDownThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getNotifications() {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
+        parent::__construct();
     }
 
 }

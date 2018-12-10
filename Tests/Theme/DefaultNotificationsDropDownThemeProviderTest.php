@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Theme\DefaultNotificationsDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default notifications drop down theme provider test.
@@ -31,8 +31,7 @@ class DefaultNotificationsDropDownThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultNotificationsDropDownThemeProvider();
 
-        $this->assertEquals([], $obj->getNotifications());
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNotNull($obj);
     }
 
 }
