@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Theme\DefaultApplicationThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default application theme provider test.
@@ -32,13 +32,8 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
         $obj = new DefaultApplicationThemeProvider();
 
         $this->assertEquals("Bootstrap bundle", $obj->getDescription());
-        $this->assertEquals("/", $obj->getHome());
         $this->assertEquals("Bootstrap<b>bundle</b>", $obj->getName());
-        $this->assertEquals("/", $obj->getRoute());
         $this->assertEquals("Bootstrap bundle", $obj->getTitle());
-        $this->assertEquals("dev-master", $obj->getVersion());
-        $this->assertEquals(null, $obj->getView());
-        $this->assertContains("2018", $obj->getYear());
     }
 
 }

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider as BaseApplicationThemeProvider;
 
 /**
  * Default application theme provider.
@@ -19,13 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterface {
+class DefaultApplicationThemeProvider extends BaseApplicationThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct();
     }
 
     /**
@@ -38,13 +38,6 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
     /**
      * {@inheritdoc}
      */
-    public function getHome() {
-        return "/";
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getName() {
         return "Bootstrap<b>bundle</b>";
     }
@@ -52,41 +45,8 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
     /**
      * {@inheritdoc}
      */
-    public function getRoute() {
-        return "/";
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getTitle() {
         return "Bootstrap bundle";
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getVersion() {
-        return "dev-master";
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getYear() {
-        $today = date("Y");
-        $years = ["2018"];
-        if ($years[0] !== $today) {
-            $years[] = $today;
-        }
-        return implode("-", $years);
     }
 
 }
