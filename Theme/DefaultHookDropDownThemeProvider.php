@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider as BaseHookDropDownThemeProvider;
 
 /**
  * Default hook drop down theme provider.
@@ -19,27 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultHookDropDownThemeProvider implements HookDropDownThemeProviderInterface {
+class DefaultHookDropDownThemeProvider extends BaseHookDropDownThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getItems() {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
+        parent::__construct();
     }
 
 }

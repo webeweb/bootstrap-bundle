@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Theme\DefaultHookDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default hook drop down theme provider test.
@@ -31,8 +31,7 @@ class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultHookDropDownThemeProvider();
 
-        $this->assertEquals([], $obj->getItems());
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNotNull($obj);
     }
 
 }
