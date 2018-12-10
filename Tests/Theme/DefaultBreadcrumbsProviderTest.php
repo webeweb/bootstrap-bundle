@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Theme\DefaultBreadcrumbsThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default breadcrumbs theme provider test
@@ -31,7 +31,7 @@ class DefaultBreadcrumbsThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultBreadcrumbsThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNotNull($obj);
     }
 
 }

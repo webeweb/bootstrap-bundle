@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider as BaseBreadcrumbsThemeProvider;
 
 /**
  * Default breadcrumbs theme provider.
@@ -19,20 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultBreadcrumbsThemeProvider implements BreadcrumbsThemeProviderInterface {
+class DefaultBreadcrumbsThemeProvider extends BaseBreadcrumbsThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
+        parent::__construct();
     }
 
 }
