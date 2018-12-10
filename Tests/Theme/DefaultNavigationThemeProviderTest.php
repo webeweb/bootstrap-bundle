@@ -11,9 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Theme\DefaultNavigationThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default navigation theme provider test.
@@ -32,8 +31,7 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultNavigationThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
-        $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
+        $this->assertNotNull($obj);
     }
 
 }

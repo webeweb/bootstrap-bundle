@@ -11,8 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Provider\Theme\NavigationThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider as BaseNavigationThemeProvider;
 
 /**
  * Default navigation theme provider.
@@ -20,27 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\NavigationThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface {
+class DefaultNavigationThemeProvider extends BaseNavigationThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getTree() {
-        return new NavigationTree("");
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
+        parent::__construct();
     }
 
 }
