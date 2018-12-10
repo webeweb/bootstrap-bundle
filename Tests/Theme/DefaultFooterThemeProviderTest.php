@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Theme\DefaultFooterThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default footer theme provider test.
@@ -31,7 +31,7 @@ class DefaultFooterThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultFooterThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNotNull($obj);
     }
 
 }

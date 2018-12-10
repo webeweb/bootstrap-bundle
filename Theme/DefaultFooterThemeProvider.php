@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Theme\DefaultFooterThemeProvider as BaseFooterThemeProvider;
 
 /**
  * Default footer theme provider.
@@ -19,20 +19,13 @@ use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Theme
  */
-class DefaultFooterThemeProvider implements FooterThemeProviderInterface {
+class DefaultFooterThemeProvider extends BaseFooterThemeProvider {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
+        parent::__construct();
     }
 
 }
