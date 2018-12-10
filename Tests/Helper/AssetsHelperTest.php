@@ -49,22 +49,22 @@ class AssetsHelperTest extends AbstractTestCase {
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
         $this->assertCount(16, $res);
 
-        $this->assertRegexp("/bootstrap\-.*\.zip$/", $res[0]);
-        $this->assertRegexp("/bootstrap\-colorpicker\-.*\.zip$/", $res[1]);
-        $this->assertRegexp("/bootstrap\-datepicker\-.*\.zip$/", $res[2]);
-        $this->assertRegexp("/bootstrap\-daterangepicker\-.*\.zip$/", $res[3]);
-        $this->assertRegexp("/bootstrap\-markdown\-.*\.zip$/", $res[4]);
-        $this->assertRegexp("/bootstrap\-notify\-.*\.zip$/", $res[5]);
-        $this->assertRegexp("/bootstrap\-select\-.*\.zip$/", $res[6]);
-        $this->assertRegexp("/bootstrap\-slider\-.*\.zip$/", $res[7]);
-        $this->assertRegexp("/bootstrap\-social\-.*\.zip$/", $res[8]);
-        $this->assertRegexp("/bootstrap\-tagsinput\-.*\.zip$/", $res[9]);
-        $this->assertRegexp("/bootstrap\-timepicker\-.*\.zip$/", $res[10]);
-        $this->assertRegexp("/bootstrap\-wysiwyg\-.*\.zip$/", $res[11]);
-        $this->assertRegexp("/favicons\.zip$/", $res[12]);
-        $this->assertRegexp("/handlebars\-.*\.zip$/", $res[13]);
-        $this->assertRegexp("/moment\-.*\.zip$/", $res[14]);
-        $this->assertRegexp("/wysihtml\-.*\.zip$/", $res[15]);
+        $this->assertRegExp("/bootstrap\-.*\.zip$/", $res[0]);
+        $this->assertRegExp("/bootstrap\-colorpicker\-.*\.zip$/", $res[1]);
+        $this->assertRegExp("/bootstrap\-datepicker\-.*\.zip$/", $res[2]);
+        $this->assertRegExp("/bootstrap\-daterangepicker\-.*\.zip$/", $res[3]);
+        $this->assertRegExp("/bootstrap\-markdown\-.*\.zip$/", $res[4]);
+        $this->assertRegExp("/bootstrap\-notify\-.*\.zip$/", $res[5]);
+        $this->assertRegExp("/bootstrap\-select\-.*\.zip$/", $res[6]);
+        $this->assertRegExp("/bootstrap\-slider\-.*\.zip$/", $res[7]);
+        $this->assertRegExp("/bootstrap\-social\-.*\.zip$/", $res[8]);
+        $this->assertRegExp("/bootstrap\-tagsinput\-.*\.zip$/", $res[9]);
+        $this->assertRegExp("/bootstrap\-timepicker\-.*\.zip$/", $res[10]);
+        $this->assertRegExp("/bootstrap\-wysiwyg\-.*\.zip$/", $res[11]);
+        $this->assertRegExp("/favicons\.zip$/", $res[12]);
+        $this->assertRegExp("/handlebars\-.*\.zip$/", $res[13]);
+        $this->assertRegExp("/moment\-.*\.zip$/", $res[14]);
+        $this->assertRegExp("/wysihtml\-.*\.zip$/", $res[15]);
     }
 
 }
