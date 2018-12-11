@@ -3,6 +3,17 @@ CHANGELOG
 
 ### 2.0.0 (2018-xx-xx)
 
+- Add Bootstrap 4 asset
+- Fix handler for icon rendering into Twig extensions 
+- Add default user info theme provider
+- Add default tasks drop down theme provider
+- Add default search theme provider
+- Add default notifications drop down theme provider
+- Add default navigation theme provider
+- Add default hook drop down theme provider
+- Add default footer theme provider
+- Add default breadcrumbs theme provider
+- Add default application theme provider
 - Add CHANGELOG
 - Update dependencies (Core bundle 1.2.0 and SyntaxHighlighter 2.2.0)
 - Reorganize layout templates
