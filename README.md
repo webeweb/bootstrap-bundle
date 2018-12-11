@@ -91,7 +91,7 @@ _bootstrap_wiki:
     resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"
 ```
 
-Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-extension/code/basic-block
+Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/twig-extension/code/basic-block
 
 ---
 
@@ -107,16 +107,16 @@ Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-exten
     {# your form theme #}
 {% endblock %}
 
-{% block bootstrapHeadFavicon %}
+{% block bootstrapFavicons %}
     {# your favicons #}
 {% endblock %}
 
-{% block bootstrapHeadStyles %}
+{% block bootstrapStylesheets %}
     {{ parent() }}
     {# your styles #}
 {% endblock %}
 
-{% block bootstrapHeadTitle %}{{ parent() }}{# your title #}{% endblock %}
+{% block bootstrapTitle %}{{ parent() }}{# your title #}{% endblock %}
 
 {% block bootstrapBodyClasses %}{{ parent() }}{# your attributes #}{% endblock %}
 
@@ -125,7 +125,7 @@ Open your browser at http://localhost:8000/app_dev.php/bootstrap/wiki/twig-exten
     {# your content #}
 {% endblock %}
 
-{% block bootstrapBodyScripts %}
+{% block bootstrapJavascripts %}
     {{ parent() }}
     {# your scripts #}
 {% endblock %}
