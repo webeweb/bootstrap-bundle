@@ -3,8 +3,10 @@ CHANGELOG
 
 ### 2.0.0 (2018-xx-xx)
 
+- Add Bootstrap 4 layout
+- Refactoring Bootstrap 3 layout
 - Add Bootstrap 4 asset
-- Fix handler for icon rendering into Twig extensions 
+- Fix handler for icon rendering into Twig extensions
 - Add default user info theme provider
 - Add default tasks drop down theme provider
 - Add default search theme provider
