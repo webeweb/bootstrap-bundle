@@ -1,3 +1,4 @@
 {# Resources/views/layout/stylesheet/bootstrap.html.twig #}
+{% set _version = bootstrap3|default(false) ? constant("WBW\\Bundle\\BootstrapBundle\\BootstrapBundle::BOOTSTRAP_VERSION_3") : constant("WBW\\Bundle\\BootstrapBundle\\BootstrapBundle::BOOTSTRAP_VERSION_4") %}
 <!-- Bootstrap -->
-<link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-3.3.7/css/bootstrap.min.css") }}">
+<link type="text/css" rel="stylesheet" href="{{ asset("bundles/bootstrap/bootstrap-" ~ _version ~ "/css/bootstrap.min.css") }}">
