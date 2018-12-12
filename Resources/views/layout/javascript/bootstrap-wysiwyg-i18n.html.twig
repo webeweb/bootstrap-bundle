@@ -1,4 +1,4 @@
 {# Resources/views/layout/javascript/bootstrap-wysiwyg-i18n.html.twig #}
-{% set locale = lang|default("en-US") %}
+{% set _locale = lang|default("en-US") %}
 <!-- Bootstrap WYSIWYG i18n -->
-<script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-wysiwyg-0.3.3/locales/bootstrap-wysihtml5." ~ locale ~ ".js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-wysiwyg-0.3.3/locales/bootstrap-wysihtml5." ~ _locale ~ ".js") }}"></script>
