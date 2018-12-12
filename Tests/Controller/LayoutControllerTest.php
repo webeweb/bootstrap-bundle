@@ -73,6 +73,51 @@ EOT;
     }
 
     /**
+     * Tests the layoutAction() method.
+     *
+     * @return void
+     */
+    public function testLayoutAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/layout");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * Tests the layout3Action() method.
+     *
+     * @return void
+     */
+    public function testLayout3Action() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/layout3");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * Tests the layout4Action() method.
+     *
+     * @return void
+     */
+    public function testLayout4Action() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/layout4");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
      * Tests the twigConsoleAction() method.
      *
      * @return void
