@@ -9,6 +9,21 @@ bootstrap_flashbag_action:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
     methods:  ["GET"]
 
+bootstrap_layout_action:
+    path:     "/layout"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layoutAction" }
+    methods:  ["GET"]
+
+bootstrap_layout3_action:
+    path:     "/layout3"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout3Action" }
+    methods:  ["GET"]
+
+bootstrap_layout4_action:
+    path:     "/layout4"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout4Action" }
+    methods:  ["GET"]
+
 bootstrap_twig_console_action:
     path:     "/twig-console"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::twigConsoleAction" }
