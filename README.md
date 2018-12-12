@@ -105,30 +105,30 @@ Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/twig-exte
 {% extends "@Bootstrap/layout.html.twig" %}
 
 {% block bootstrapFormTheme %}
-    {# your form theme #}
+    {# form theme #}
 {% endblock %}
 
 {% block bootstrapFavicons %}
-    {# your favicons #}
+    {# favicons #}
 {% endblock %}
 
 {% block bootstrapStylesheets %}
     {{ parent() }}
-    {# your styles #}
+    {# stylesheets #}
 {% endblock %}
 
-{% block bootstrapTitle %}{{ parent() }}{# your title #}{% endblock %}
+{% block bootstrapTitle %}{{ parent() }}{# title #}{% endblock %}
 
-{% block bootstrapBodyClasses %}{{ parent() }}{# your attributes #}{% endblock %}
+{% block bootstrapClasses %}{{ parent() }}{# body attributes #}{% endblock %}
 
-{% block bootstrapBodyContent %}
+{% block bootstrapContent %}
     {{ parent() }}
-    {# your content #}
+    {# content #}
 {% endblock %}
 
 {% block bootstrapJavascripts %}
     {{ parent() }}
-    {# your scripts #}
+    {# javascripts #}
 {% endblock %}
 ```
 
