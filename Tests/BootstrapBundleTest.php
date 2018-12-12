@@ -34,6 +34,9 @@ class BootstrapBundleTest extends AbstractTestCase {
         $this->assertEquals("primary", BootstrapBundle::BOOTSTRAP_PRIMARY);
         $this->assertEquals("success", BootstrapBundle::BOOTSTRAP_SUCCESS);
         $this->assertEquals("warning", BootstrapBundle::BOOTSTRAP_WARNING);
+
+        $this->assertEquals("3.3.7", BootstrapBundle::BOOTSTRAP_VERSION_3);
+        $this->assertEquals("4.1.3", BootstrapBundle::BOOTSTRAP_VERSION_4);
     }
 
     /**
