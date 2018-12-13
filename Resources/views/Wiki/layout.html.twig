@@ -15,7 +15,7 @@
 
 {% block bootstrapTitle %}webeweb/bootstrap-bundle{% endblock %}
 
-{% block bootstrapBodyContent %}
+{% block bootstrapContainer %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -42,27 +42,25 @@
                 <div class="{{ bootstrapGrid({"lg": 9, "md": 8, "sm": 8, "xs": 12}) }}">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            {{ wiki.wikiTitle(wikiPage) }}
+                            {{ wiki.wikiTitle(wikiView) }}
                         </div>
                         <div class="panel-body">
-                            {% block bootstrapWikiContent %}
+                            {% block bootstrapContent %}
                             {% endblock %}
                         </div>
                     </div>
                 </div>
                 <div class="{{ bootstrapGrid({"lg": 3, "md": 4, "sm": 4, "xs": 12}) }}">
                     <div class="list-group">
-                        {% for wikiPage in wikiPages %}
-                            {% set _url = path("bootstrap_wiki_index", {"category": wikiPage.category, "package": wikiPage.package, "page": wikiPage.page}) %}
+                        {% for wikiView in wikiViews %}
+                            {% set _url = path("bootstrap_wiki_index", {"category": wikiView.category, "package": wikiView.package, "page": wikiView.page}) %}
                             {% set _act = _url == app.request.requestUri %}
-                            <a class="list-group-item{{ _act ? " active" : "" }}" href="{{ _url }}">{{ bootstrapBadge({"content": wikiPage.package}) }}{{ wikiPage.title }}</a>
+                            <a class="list-group-item{{ _act ? " active" : "" }}" href="{{ _url }}">{{ bootstrapBadge({"content": wikiView.package}) }}{{ wikiView.title }}</a>
                         {% endfor %}
                     </div>
                 </div>
             </div>
-            {% if ("dev" == app.environment) %}
-                {% include "@Bootstrap/layout/twig-console.html.twig" %}
-            {% endif %}
+            {% include "@Bootstrap/layout/twig-console.html.twig" %}
         </div>
     </section>
 {% endblock %}
