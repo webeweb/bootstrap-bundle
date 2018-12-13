@@ -70,30 +70,21 @@ class WikiController extends AbstractWikiController {
     /**
      * Displays a wiki page.
      *
-     * @param Request $request The request.
      * @param string $category The category.
      * @param string $package The parent.
      * @param string $page The page.
      * @return Response Returns the response.
      */
-    public function indexAction(Request $request, $category, $package, $page) {
+    public function indexAction($category, $package, $page) {
 
-        // Initialize.
+        // Get the wiki views.
         $wikiViews = self::getWikiViews();
-        $wikiView  = null;
 
-        // Find the wiki page.
-        foreach ($wikiViews as $current) {
-            if ($category === $current->getCategory() && $package === $current->getPackage() && $page === $current->getPage()) {
-                $wikiView = $current;
-                break;
-            }
-        }
-
-        // Check if the wiki page exists.
+        // Find and check the wiki view.
+        $wikiView = WikiView::find($wikiViews, $category, $package, $page);
         if (null === $wikiView) {
 
-            // Set the default wiki page.
+            // Set a default wiki view.
             $wikiView = $wikiViews[0];
 
             // Notify the user.
@@ -101,21 +92,8 @@ class WikiController extends AbstractWikiController {
             $this->notifyInfo("You have been redirected to homepage");
         }
 
-        // Set the template.
-        $template = [
-            "@",
-            $wikiView->getBundle(),
-            "/Wiki/",
-            strtolower($wikiView->getCategory()),
-            "/",
-            strtolower($wikiView->getPackage()),
-            "/",
-            $wikiView->getPage(),
-            ".html.twig",
-        ];
-
         // Returns the response.
-        return $this->render(implode("", $template), [
+        return $this->render($wikiView->getView(), [
                 "wikiViews"                 => $wikiViews,
                 "wikiView"                  => $wikiView,
                 "syntaxHighlighterConfig"   => $this->getSyntaxHighlighterConfig(),
