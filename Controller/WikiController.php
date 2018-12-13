@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\CoreBundle\Model\WikiView;
 
