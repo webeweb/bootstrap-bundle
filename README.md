@@ -92,7 +92,7 @@ _bootstrap_wiki:
     resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"
 ```
 
-Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/twig-extension/code/basic-block
+Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/Twig-extension/CSS/button
 
 ---
 
