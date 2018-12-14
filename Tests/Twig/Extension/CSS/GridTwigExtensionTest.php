@@ -276,83 +276,247 @@ class GridTwigExtensionTest extends AbstractTestCase {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
-        // Nothing
-        $arg0 = [];
-        $res0 = "";
-        $this->assertEquals($res0, $obj->bootstrapGridPushFunction($arg0));
+        $arg = ["lgPush" => 6, "mdPush" => 12, "recopyPush" => true];
+        $res = "col-lg-push-6 col-md-push-12 col-sm-push-12 col-xs-push-12";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
 
-        // LG
-        $argLG = ["lgPush" => 1];
-        $resLG = "col-lg-push-1";
-        $this->assertEquals($resLG, $obj->bootstrapGridPushFunction($argLG));
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithLgPush() {
 
-        $argLGcpy = ["lgPush" => 2, "recopyPush" => true];
-        $resLGcpy = "col-lg-push-2 col-md-push-2 col-sm-push-2 col-xs-push-2";
-        $this->assertEquals($resLGcpy, $obj->bootstrapGridPushFunction($argLGcpy));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argLGmin = ["lgPush" => 0];
-        $resLGmin = "";
-        $this->assertEquals($resLGmin, $obj->bootstrapGridPushFunction($argLGmin));
+        $arg = ["lgPush" => 1];
+        $res = "col-lg-push-1";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
 
-        $argLGmax = ["lgPush" => 13];
-        $resLGmax = "";
-        $this->assertEquals($resLGmax, $obj->bootstrapGridPushFunction($argLGmax));
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithLgPushAndRecopy() {
 
-        // MD
-        $argMD = ["mdPush" => 2];
-        $resMD = "col-md-push-2";
-        $this->assertEquals($resMD, $obj->bootstrapGridPushFunction($argMD));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argMDcpy = ["mdPush" => 2, "recopyPush" => true];
-        $resMDcpy = "col-md-push-2 col-sm-push-2 col-xs-push-2";
-        $this->assertEquals($resMDcpy, $obj->bootstrapGridPushFunction($argMDcpy));
+        $arg = ["lgPush" => 2, "recopyPush" => true];
+        $res = "col-lg-push-2 col-md-push-2 col-sm-push-2 col-xs-push-2";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
 
-        $argMDmin = ["mdPush" => 0];
-        $resMDmin = "";
-        $this->assertEquals($resMDmin, $obj->bootstrapGridPushFunction($argMDmin));
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithLgPushMax() {
 
-        $argMDmax = ["mgPush" => 13];
-        $resMDmax = "";
-        $this->assertEquals($resMDmax, $obj->bootstrapGridPushFunction($argMDmax));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        // SM
-        $argSM = ["smPush" => 3];
-        $resSM = "col-sm-push-3";
-        $this->assertEquals($resSM, $obj->bootstrapGridPushFunction($argSM));
+        $arg = ["lgPush" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
 
-        $argSMcpy = ["smPush" => 2, "recopyPush" => true];
-        $resSMcpy = "col-sm-push-2 col-xs-push-2";
-        $this->assertEquals($resSMcpy, $obj->bootstrapGridPushFunction($argSMcpy));
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithLgPushMin() {
 
-        $argSMmin = ["smPush" => 0];
-        $resSMmin = "";
-        $this->assertEquals($resSMmin, $obj->bootstrapGridPushFunction($argSMmin));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argSMmax = ["smPush" => 13];
-        $resSMmax = "";
-        $this->assertEquals($resSMmax, $obj->bootstrapGridPushFunction($argSMmax));
+        $arg = ["lgPush" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
 
-        // XS
-        $argXS = ["xsPush" => 4];
-        $resXS = "col-xs-push-4";
-        $this->assertEquals($resXS, $obj->bootstrapGridPushFunction($argXS));
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithMdPush() {
 
-        $argXScpy = ["xsPush" => 2, "recopyPush" => true];
-        $resXScpy = "col-xs-push-2";
-        $this->assertEquals($resXScpy, $obj->bootstrapGridPushFunction($argXScpy));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argXSmin = ["xsPush" => 0];
-        $resXSmin = "";
-        $this->assertEquals($resXSmin, $obj->bootstrapGridPushFunction($argXSmin));
+        $arg = ["mdPush" => 2];
+        $res = "col-md-push-2";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
 
-        $argXSmax = ["xsPush" => 13];
-        $resXSmax = "";
-        $this->assertEquals($resXSmax, $obj->bootstrapGridPushFunction($argXSmax));
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithMdPushAndRecopy() {
 
-        //
-        $arg9 = ["lgPush" => 6, "mdPush" => 12, "recopyPush" => true];
-        $res9 = "col-lg-push-6 col-md-push-12 col-sm-push-12 col-xs-push-12";
-        $this->assertEquals($res9, $obj->bootstrapGridPushFunction($arg9));
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdPush" => 2, "recopyPush" => true];
+        $res = "col-md-push-2 col-sm-push-2 col-xs-push-2";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithMdPushMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mgPush" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithMdPushMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdPush" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithSmPush() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPush" => 3];
+        $res = "col-sm-push-3";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithSmPushAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPush" => 2, "recopyPush" => true];
+        $res = "col-sm-push-2 col-xs-push-2";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithSmPushMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPush" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithSmPushMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPush" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithXsPush() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPush" => 4];
+        $res = "col-xs-push-4";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithXsPushAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPush" => 2, "recopyPush" => true];
+        $res = "col-xs-push-2";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithXsPushMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPush" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithXsPushMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPush" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPushFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPushFunctionWithoutArguments() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPushFunction($arg));
     }
 
     /**
@@ -364,83 +528,247 @@ class GridTwigExtensionTest extends AbstractTestCase {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
-        // Nothing
-        $arg0 = [];
-        $res0 = "";
-        $this->assertEquals($res0, $obj->bootstrapGridStackedFunction($arg0));
+        $arg = ["lg" => 6, "md" => 12, "recopy" => true];
+        $res = "col-lg-6 col-md-12 col-sm-12 col-xs-12";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
 
-        // LG
-        $argLG = ["lg" => 1];
-        $resLG = "col-lg-1";
-        $this->assertEquals($resLG, $obj->bootstrapGridStackedFunction($argLG));
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithoutArguments() {
 
-        $argLGcpy = ["lg" => 2, "recopy" => true];
-        $resLGcpy = "col-lg-2 col-md-2 col-sm-2 col-xs-2";
-        $this->assertEquals($resLGcpy, $obj->bootstrapGridStackedFunction($argLGcpy));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argLGmin = ["lg" => 0];
-        $resLGmin = "";
-        $this->assertEquals($resLGmin, $obj->bootstrapGridStackedFunction($argLGmin));
+        $arg = [];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
 
-        $argLGmax = ["lg" => 13];
-        $resLGmax = "";
-        $this->assertEquals($resLGmax, $obj->bootstrapGridStackedFunction($argLGmax));
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithLg() {
 
-        // MD
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lg" => 1];
+        $res = "col-lg-1";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithLgAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lg" => 2, "recopy" => true];
+        $res = "col-lg-2 col-md-2 col-sm-2 col-xs-2";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithLgMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lg" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithLgMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lg" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithMd() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
         $argMD = ["md" => 2];
         $resMD = "col-md-2";
         $this->assertEquals($resMD, $obj->bootstrapGridStackedFunction($argMD));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithMdAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
         $argMDcpy = ["md" => 2, "recopy" => true];
         $resMDcpy = "col-md-2 col-sm-2 col-xs-2";
         $this->assertEquals($resMDcpy, $obj->bootstrapGridStackedFunction($argMDcpy));
+    }
 
-        $argMDmin = ["md" => 0];
-        $resMDmin = "";
-        $this->assertEquals($resMDmin, $obj->bootstrapGridStackedFunction($argMDmin));
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithMdMax() {
 
-        $argMDmax = ["mg" => 13];
-        $resMDmax = "";
-        $this->assertEquals($resMDmax, $obj->bootstrapGridStackedFunction($argMDmax));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        // SM
-        $argSM = ["sm" => 3];
-        $resSM = "col-sm-3";
-        $this->assertEquals($resSM, $obj->bootstrapGridStackedFunction($argSM));
+        $arg = ["mg" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
 
-        $argSMcpy = ["sm" => 2, "recopy" => true];
-        $resSMcpy = "col-sm-2 col-xs-2";
-        $this->assertEquals($resSMcpy, $obj->bootstrapGridStackedFunction($argSMcpy));
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithMdMin() {
 
-        $argSMmin = ["sm" => 0];
-        $resSMmin = "";
-        $this->assertEquals($resSMmin, $obj->bootstrapGridStackedFunction($argSMmin));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argSMmax = ["sm" => 13];
-        $resSMmax = "";
-        $this->assertEquals($resSMmax, $obj->bootstrapGridStackedFunction($argSMmax));
+        $arg = ["md" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
 
-        // XS
-        $argXS = ["xs" => 4];
-        $resXS = "col-xs-4";
-        $this->assertEquals($resXS, $obj->bootstrapGridStackedFunction($argXS));
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithSm() {
 
-        $argXScpy = ["xs" => 2, "recopy" => true];
-        $resXScpy = "col-xs-2";
-        $this->assertEquals($resXScpy, $obj->bootstrapGridStackedFunction($argXScpy));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argXSmin = ["xs" => 0];
-        $resXSmin = "";
-        $this->assertEquals($resXSmin, $obj->bootstrapGridStackedFunction($argXSmin));
+        $arg = ["sm" => 3];
+        $res = "col-sm-3";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
 
-        $argXSmax = ["xs" => 13];
-        $resXSmax = "";
-        $this->assertEquals($resXSmax, $obj->bootstrapGridStackedFunction($argXSmax));
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithSmAndRecopy() {
 
-        //
-        $arg9 = ["lg" => 6, "md" => 12, "recopy" => true];
-        $res9 = "col-lg-6 col-md-12 col-sm-12 col-xs-12";
-        $this->assertEquals($res9, $obj->bootstrapGridStackedFunction($arg9));
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["sm" => 2, "recopy" => true];
+        $res = "col-sm-2 col-xs-2";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithSmMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["sm" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithSmMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["sm" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithXs() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xs" => 4];
+        $res = "col-xs-4";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithXsAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xs" => 2, "recopy" => true];
+        $res = "col-xs-2";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithXsMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xs" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithXsMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xs" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
     }
 
 }
