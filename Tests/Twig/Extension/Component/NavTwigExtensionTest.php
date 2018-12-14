@@ -102,15 +102,15 @@ EOT;
 
         $obj = new NavTwigExtension($this->twigEnvironment);
 
-        $arg9 = ["items" => $this->items, "stacked" => true];
-        $res9 = <<< EOT
+        $arg = ["items" => $this->items, "stacked" => true];
+        $res = <<< EOT
 <ul class="nav nav-pills nav-stacked">
 <li role="presentation"><a href="#">Home</a></li>
 <li role="presentation"><a href="#">Profile</a></li>
 <li role="presentation"><a href="#">Message</a></li>
 </ul>
 EOT;
-        $this->assertEquals($res9, $obj->bootstrapNavsPills($arg9));
+        $this->assertEquals($res, $obj->bootstrapNavsPills($arg));
     }
 
     /**
