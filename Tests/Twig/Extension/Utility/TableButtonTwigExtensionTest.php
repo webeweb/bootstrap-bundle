@@ -108,7 +108,6 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      */
     public function testBootstrapRowButtonEditFunction() {
 
-
         $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $arg = ["href" => "https://github.com/"];
