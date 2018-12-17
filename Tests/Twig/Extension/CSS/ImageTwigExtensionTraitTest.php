@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the bootstrap-bundle package.
  *
  * (c) 2018 WEBEWEB
