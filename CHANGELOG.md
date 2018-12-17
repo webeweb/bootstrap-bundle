@@ -3,6 +3,7 @@ CHANGELOG
 
 ### 2.0.0 (2018-xx-xx)
 
+- Update Bootstrap 3 (3.3.7 > 3.4.0)
 - Update Wiki
 - Add Bootstrap 4 layout
 - Refactoring Bootstrap 3 layout
