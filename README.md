@@ -19,7 +19,7 @@ Integrate Bootstrap theme with Symfony 2 and more.
 
 Includes:
 
-- [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
+- [Bootstrap 3.4.0](https://getbootstrap.com/docs/3.4/)
 - [Bootstrap 4.1.3](https://getbootstrap.com/docs/4.1/)
 - [Bootstrap Colorpicker 2.5.1](https://farbelous.io/bootstrap-colorpicker/) (Bootstrap plug-in)
 - [Bootstrap Datepicker 1.7.1](https://uxsolutions.github.io/bootstrap-datepicker/) (Bootstrap plug-in)
