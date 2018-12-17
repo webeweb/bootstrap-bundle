@@ -62,7 +62,7 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
      *
      * @var string
      */
-    const BOOTSTRAP_VERSION_3 = "3.3.7";
+    const BOOTSTRAP_VERSION_3 = "3.4.0";
 
     /**
      * Bootstrap version 4.
