@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
+use WBW\Bundle\BootstrapBundle\BootstrapBundle;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 
 /**
@@ -85,6 +86,10 @@ EOT;
         // Make a GET request.
         $client->request("GET", "/layout");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Check the Bootstrap version.
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
     }
 
     /**
@@ -100,6 +105,10 @@ EOT;
         // Make a GET request.
         $client->request("GET", "/layout3");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Check the Bootstrap version.
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
     }
 
     /**
@@ -115,6 +124,10 @@ EOT;
         // Make a GET request.
         $client->request("GET", "/layout4");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Check the Bootstrap version.
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
     }
 
     /**
