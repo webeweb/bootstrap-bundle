@@ -15,6 +15,11 @@ Integrate Bootstrap theme with Symfony 2 and more.
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
 
+`bootstrap-bundle` eases the use of Bootstrap to display components in your
+Symfony application by providing Twig extensions and PHP objects to do the heavy
+lifting. The bundle include the excellent framework [Bootstrap](https://getbootstrap.com/)
+and some useful plugins.
+
 <img src="https://raw.githubusercontent.com/webeweb/bootstrap-bundle/master/Resources/doc/images/bootstrap-stack_1024x0860.png" alt="Bootstrap bundle" align="right" width="416"/>
 
 Includes:
@@ -35,6 +40,23 @@ Includes:
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
 - [Moment.js 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
 - [WYSIHTML 0.4.15](http://wysihtml.com/) (Bootstrap WYSIWYG dependency)
+
+Provides:
+
+- Customizable Bootstrap 3 layout
+- Customizable Bootstrap 4 layout
+
+- Button Twig extension
+- Code Twig extension
+- Grid Twig extension (only for Bootstrap 3)
+- Typography Twig extension
+
+- Alert Twig extension
+- Badge Twig extension
+- Button group Twig extension
+- Glyphicon Twig extension
+- Label Twig extension
+- Progress bar Twig extension
 
 ---
 
