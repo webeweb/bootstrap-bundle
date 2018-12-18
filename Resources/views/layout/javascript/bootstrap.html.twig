@@ -1,4 +1,8 @@
 {# Resources/views/layout/javascript/bootstrap.html.twig #}
-{% set _version = bootstrap3|default(false) ? constant("WBW\\Bundle\\BootstrapBundle\\BootstrapBundle::BOOTSTRAP_VERSION_3") : constant("WBW\\Bundle\\BootstrapBundle\\BootstrapBundle::BOOTSTRAP_VERSION_4") %}
+{% set _versions = {
+    "3": constant("WBW\\Bundle\\BootstrapBundle\\BootstrapBundle::BOOTSTRAP_VERSION_3"),
+    "4": constant("WBW\\Bundle\\BootstrapBundle\\BootstrapBundle::BOOTSTRAP_VERSION_4"),
+} %}
+{% set _version = _versions[bootstrapVersion|default("")] is defined ? _versions[bootstrapVersion] : _versions["4"] %}
 <!-- Bootstrap -->
 <script type="text/javascript" src="{{ asset("bundles/bootstrap/bootstrap-" ~ _version ~ "/js/bootstrap.min.js") }}"></script>
