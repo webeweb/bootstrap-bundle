@@ -43,14 +43,10 @@ Includes:
 
 Provides:
 
-- Customizable Bootstrap 3 layout
-- Customizable Bootstrap 4 layout
-
 - Button Twig extension
 - Code Twig extension
 - Grid Twig extension (only for Bootstrap 3)
 - Typography Twig extension
-
 - Alert Twig extension
 - Badge Twig extension
 - Button group Twig extension
@@ -114,7 +110,7 @@ _bootstrap_wiki:
     resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"
 ```
 
-Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/Twig-extension/CSS/button
+Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/twig-extension/css/button
 
 ---
 
