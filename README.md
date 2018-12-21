@@ -11,10 +11,6 @@ bootstrap-bundle
 
 Integrate Bootstrap theme with Symfony 2 and more.
 
-> IMPORTANT NOTICE: This package is still under development. Any changes will be
-> done without prior notice to consumers of this package. Of course this code
-> will become stable at a certain point, but for now, use at your own risk.
-
 `bootstrap-bundle` eases the use of Bootstrap to display components in your
 Symfony application by providing Twig extensions and PHP objects to do the heavy
 lifting. The bundle include the excellent framework [Bootstrap](https://getbootstrap.com/)
@@ -69,7 +65,7 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-$ composer require webeweb/bootstrap-bundle "^1.0"
+$ composer require webeweb/bootstrap-bundle "^2.0"
 ```
 
 This command requires you to have Composer installed globally, as explained in
@@ -135,9 +131,9 @@ Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/twig-exte
     {# stylesheets #}
 {% endblock %}
 
-{% block bootstrapTitle %}{{ parent() }}{# title #}{% endblock %}
+{% block bootstrapTitle %}{# title #}{% endblock %}
 
-{% block bootstrapClasses %}{{ parent() }}{# body attributes #}{% endblock %}
+{% block bootstrapAttributes %}{# body attributes #}{% endblock %}
 
 {% block bootstrapContent %}
     {{ parent() }}
