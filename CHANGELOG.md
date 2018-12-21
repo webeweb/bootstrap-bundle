@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 2.0.0 (2018-xx-xx)
+### 2.0.0 (2018-12-21)
 
 - Improve functional tests
 - Update Bootstrap 3 (3.3.7 > 3.4.0)
