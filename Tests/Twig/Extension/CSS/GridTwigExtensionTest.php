@@ -25,6 +25,18 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
 class GridTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.css.grid", GridTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
