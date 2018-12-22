@@ -43,6 +43,18 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.utility.form_button", FormButtonTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+    /**
      * Tests the getFunctions() method.
      *
      * @return void

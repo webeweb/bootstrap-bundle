@@ -110,7 +110,7 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrap.twig.extension.utility.formbutton:
+    webeweb.bootstrap.twig.extension.utility.form_button:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension
         arguments: ["@twig", "@translator", "@webeweb.bootstrap.twig.extension.css.button"]
         public:    true
