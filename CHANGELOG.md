@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### 2.0.0 (2018-12-21)
 
 - Improve functional tests
