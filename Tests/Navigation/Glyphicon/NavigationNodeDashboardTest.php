@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the core-bundle package.
+ * This file is part of the bootstrap-bundle package.
  *
  * (c) 2018 WEBEWEB
  *
