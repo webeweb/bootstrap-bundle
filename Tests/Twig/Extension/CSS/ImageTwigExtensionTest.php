@@ -26,6 +26,18 @@ use WBW\Library\Core\FileSystem\FileHelper;
 class ImageTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
