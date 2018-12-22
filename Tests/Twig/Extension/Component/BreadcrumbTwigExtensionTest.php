@@ -40,13 +40,21 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     protected function setUp() {
         parent::setUp();
 
-        // Set the Translator mock.
-        $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
-            return $id;
-        });
-
         // Set up a Navigation tree mock.
         $this->tree = TestFixtures::getNavigationTree();
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
     /**
