@@ -117,7 +117,7 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrap.twig.extension.utility.rolelabel:
+    webeweb.bootstrap.twig.extension.utility.role_label:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension
         arguments: ["@twig", "@translator", "@webeweb.bootstrap.twig.extension.component.label"]
         public:    true
