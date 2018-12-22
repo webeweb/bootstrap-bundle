@@ -28,7 +28,7 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.buttongroup";
+    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.button_group";
 
     /**
      * Constructor.

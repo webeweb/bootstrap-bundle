@@ -61,7 +61,7 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrap.twig.extension.component.buttongroup:
+    webeweb.bootstrap.twig.extension.component.button_group:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonGroupTwigExtension
         arguments: ["@twig"]
         public:    true
@@ -96,7 +96,7 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrap.twig.extension.component.progressbar:
+    webeweb.bootstrap.twig.extension.component.progress_bar:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
         arguments: ["@twig"]
         public:    true

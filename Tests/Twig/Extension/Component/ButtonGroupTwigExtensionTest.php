@@ -56,6 +56,19 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
