@@ -43,6 +43,19 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.utility.table_button", TableButtonTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void

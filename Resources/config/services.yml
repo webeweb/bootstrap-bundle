@@ -124,7 +124,7 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.bootstrap.twig.extension.utility.tablebutton:
+    webeweb.bootstrap.twig.extension.utility.table_button:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension
         arguments: ["@twig", "@translator", "@webeweb.bootstrap.twig.extension.css.button"]
         public:    true
