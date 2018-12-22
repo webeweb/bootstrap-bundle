@@ -25,6 +25,19 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension;
 class DropdownTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
