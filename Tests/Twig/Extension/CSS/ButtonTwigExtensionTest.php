@@ -581,8 +581,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<a class="btn btn-danger" href="javascript:void(0);"></a>';
-        $this->assertEquals($res, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg)));
+        $res = '<a class="btn btn-danger" href="https://github.com/"></a>';
+        $this->assertEquals($res, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg), "https://github.com/"));
     }
 
     /**
@@ -590,12 +590,12 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonLinkFilterWithHref() {
+    public function testBootstrapButtonLinkFilterWithDisable() {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = [];
-        $res = '<a class="btn btn-danger" href="https://github.com/"></a>';
+        $arg = ["disable" => true];
+        $res = '<a class="disabled btn btn-danger" href="https://github.com/"></a>';
         $this->assertEquals($res, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg), "https://github.com/"));
     }
 
@@ -611,6 +611,20 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $res = '<a class="btn btn-danger" href="https://github.com/" target="_blank"></a>';
         $this->assertEquals($res, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg), "https://github.com/", "_blank"));
+    }
+
+    /**
+     * Tests the bootstrapButtonLinkFilter() method.
+     *
+     * @return void
+     */
+    public function testBootstrapButtonLinkFilterWithoutArguments() {
+
+        $obj = new ButtonTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<a class="btn btn-danger" href="javascript:void(0);"></a>';
+        $this->assertEquals($res, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg)));
     }
 
     /**
