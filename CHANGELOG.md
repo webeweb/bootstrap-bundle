@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Fix disable state with button link filter
 - Improve unit tests
 
 ### 2.0.0 (2018-12-21)
