@@ -25,57 +25,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
 class AlertTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new AlertTwigExtension($this->twigEnvironment);
-
-        $this->assertEquals("webeweb.bootstrap.twig.extension.component.alert", AlertTwigExtension::SERVICE_NAME);
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
-     * Tests the getFunctions() method.
-     *
-     * @return void
-     */
-    public function testGetFunctions() {
-
-        $obj = new AlertTwigExtension($this->twigEnvironment);
-
-        $res = $obj->getFunctions();
-        $this->assertCount(5, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapAlertDanger", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapAlertDangerFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapAlertInfo", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapAlertInfoFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapAlertLink", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapAlertLinkFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("bootstrapAlertSuccess", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapAlertSuccessFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("bootstrapAlertWarning", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapAlertWarningFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
-    }
-
-    /**
      * Tests the bootstrapAlertDangerFunction() method.
      *
      * @return void
@@ -241,6 +190,57 @@ class AlertTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $res = '<div class="alert alert-warning" role="alert"></div>';
         $this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.component.alert", AlertTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(5, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapAlertDanger", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertDangerFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bootstrapAlertInfo", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertInfoFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("bootstrapAlertLink", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertLinkFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertEquals("bootstrapAlertSuccess", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertSuccessFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("bootstrapAlertWarning", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapAlertWarningFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
 
 }

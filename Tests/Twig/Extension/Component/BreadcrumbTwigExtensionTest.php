@@ -45,6 +45,24 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the bootstrapBreadcrumbsFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapBreadcrumbsFunction() {
+
+        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
+
+        $res = <<< EOT
+<ol class="breadcrumb">
+<li><a href="javascript:void(0);">GitHub</a></li>
+<li class="active">Bootstrap bundle</li>
+</ol>
+EOT;
+        $this->assertEquals($res, $obj->bootstrapBreadcrumbsFunction([], $this->tree, Request::create("https://github.com/webeweb/bootstrap-bundle")));
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -73,24 +91,6 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bootstrapBreadcrumbs", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapBreadcrumbsFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-    }
-
-    /**
-     * Tests the bootstrapBreadcrumbsFunction() method.
-     *
-     * @return void
-     */
-    public function testBootstrapBreadcrumbsFunction() {
-
-        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
-
-        $res = <<< EOT
-<ol class="breadcrumb">
-<li><a href="javascript:void(0);">GitHub</a></li>
-<li class="active">Bootstrap bundle</li>
-</ol>
-EOT;
-        $this->assertEquals($res, $obj->bootstrapBreadcrumbsFunction([], $this->tree, Request::create("https://github.com/webeweb/bootstrap-bundle")));
     }
 
 }

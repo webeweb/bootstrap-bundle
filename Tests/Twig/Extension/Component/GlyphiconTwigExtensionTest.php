@@ -25,6 +25,34 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 class GlyphiconTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the bootstrapGlyphiconFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapGlyphiconFunction() {
+
+        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
+
+        $arg = ["name" => "asterisk"];
+        $res = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
+        $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGlyphiconFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapGlyphiconFunctionWithoutArguments() {
+
+        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+        $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -53,34 +81,6 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bootstrapGlyphicon", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-    }
-
-    /**
-     * Tests the bootstrapGlyphiconFunction() method.
-     *
-     * @return void
-     */
-    public function testBootstrapGlyphiconFunction() {
-
-        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "asterisk"];
-        $res = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
-        $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
-    }
-
-    /**
-     * Tests the bootstrapGlyphiconFunction() method.
-     *
-     * @return void
-     */
-    public function testBootstrapGlyphiconFunctionWithoutArguments() {
-
-        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
-
-        $arg = [];
-        $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
-        $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
     }
 
 }

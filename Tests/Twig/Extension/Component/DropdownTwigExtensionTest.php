@@ -25,47 +25,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension;
 class DropdownTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new DropdownTwigExtension($this->twigEnvironment);
-
-        $this->assertEquals("webeweb.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
-     * Tests the getFunctions() method.
-     *
-     * @return void
-     */
-    public function testGetFunctions() {
-
-        $obj = new DropdownTwigExtension($this->twigEnvironment);
-
-        $res = $obj->getFunctions();
-        $this->assertCount(3, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapDropdownButton", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapDropdownButtonFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapDropdownDivider", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapDropdownDividerFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapDropdownHeader", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapDropdownHeaderFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
-    }
-
-    /**
      * Tests the bootstrapDropdownButtonFunction() method.
      *
      * @return void
@@ -189,6 +148,47 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $res = '<li class="dropdown-header"></li>';
         $this->assertEquals($res, $obj->bootstrapDropdownHeaderFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(3, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapDropdownButton", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapDropdownButtonFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bootstrapDropdownDivider", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapDropdownDividerFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("bootstrapDropdownHeader", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapDropdownHeaderFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
     }
 
 }
