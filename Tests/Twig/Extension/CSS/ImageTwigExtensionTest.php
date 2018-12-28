@@ -26,50 +26,6 @@ use WBW\Library\Core\FileSystem\FileHelper;
 class ImageTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new ImageTwigExtension($this->twigEnvironment);
-
-        $this->assertEquals("webeweb.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-    /**
-     * Tests the getFunctions() method.
-     *
-     * @return void
-     */
-    public function testGetFunctions() {
-
-        $obj = new ImageTwigExtension($this->twigEnvironment);
-
-        $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapImageBase64", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapImageBase64Function"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-    }
-
-    /**
-     * Tests the bootstrapImageBase64Function() method.
-     *
-     * @return void
-     */
-    public function testBootstrapImageBase64FunctionWithAlt() {
-
-        $obj = new ImageTwigExtension($this->twigEnvironment);
-
-        $arg = ["alt" => "Bootstrap stack"];
-        $res = "<img alt=\"Bootstrap stack\"/>";
-        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
-    }
-
-    /**
      * Tests the bootstrapImageBase64Function() method.
      *
      * @return void
@@ -84,6 +40,20 @@ class ImageTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["src" => $src, "alt" => "Bootstrap stack", "width" => 1024, "height" => 860, "class" => "class", "usemap" => "#usemap"];
         $res = "<img src=\"" . $ref . "\" alt=\"Bootstrap stack\" width=\"1024\" height=\"860\" class=\"class\" usemap=\"#usemap\"/>";
+        $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
+
+    /**
+     * Tests the bootstrapImageBase64Function() method.
+     *
+     * @return void
+     */
+    public function testBootstrapImageBase64FunctionWithAlt() {
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $arg = ["alt" => "Bootstrap stack"];
+        $res = "<img alt=\"Bootstrap stack\"/>";
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
@@ -173,6 +143,37 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $res = "<img />";
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(1, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapImageBase64", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapImageBase64Function"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
 
 }

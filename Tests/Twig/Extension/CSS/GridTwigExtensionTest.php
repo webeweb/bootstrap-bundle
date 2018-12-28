@@ -25,57 +25,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
 class GridTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new GridTwigExtension($this->twigEnvironment);
-
-        $this->assertEquals("webeweb.bootstrap.twig.extension.css.grid", GridTwigExtension::SERVICE_NAME);
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-    /**
-     * Tests the getFunctions() method.
-     *
-     * @return void
-     */
-    public function testGetFunctions() {
-
-        $obj = new GridTwigExtension($this->twigEnvironment);
-
-        $res = $obj->getFunctions();
-
-        $this->assertCount(5, $res);
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("bootstrapGrid", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapGridFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapGridOffset", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapGridOffsetFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapGridPull", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapGridPullFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("bootstrapGridPush", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapGridPushFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
-
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
-        $this->assertEquals("bootstrapGridStacked", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapGridStackedFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
-    }
-
-    /**
      * Tests the bootstrapGridFunction().
      *
      * @return void
@@ -550,20 +499,6 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithoutArguments() {
-
-        $obj = new GridTwigExtension($this->twigEnvironment);
-
-        $arg = [];
-        $res = "";
-        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
-    }
-
-    /**
-     * Tests the bootstrapGridStackedFunction().
-     *
-     * @return void
-     */
     public function testBootstrapGridStackedFunctionWithLg() {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
@@ -781,6 +716,72 @@ class GridTwigExtensionTest extends AbstractTestCase {
         $arg = ["xs" => 0];
         $res = "";
         $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridStackedFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridStackedFunctionWithoutArguments() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridStackedFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.bootstrap.twig.extension.css.grid", GridTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctions() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+
+        $this->assertCount(5, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertEquals("bootstrapGrid", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapGridFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bootstrapGridOffset", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapGridOffsetFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("bootstrapGridPull", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapGridPullFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertEquals("bootstrapGridPush", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapGridPushFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("bootstrapGridStacked", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapGridStackedFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
 
 }
