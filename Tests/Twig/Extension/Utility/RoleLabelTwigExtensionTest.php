@@ -75,6 +75,32 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the bootstrapRoleLabelFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapRoleLabelFunction() {
+
+        $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
+
+        $res = '<span class="label label-default" style="background-color:#D9534F;">label.role.root</span> <span class="label label-default" style="background-color:#337AB7;">label.role.admin</span> <span class="label label-default">label.role.user</span>';
+        $this->assertEquals($res, $obj->bootstrapRoleLabelFunction($this->user, $this->colorChoices, $this->transChoices));
+    }
+
+    /**
+     * Tests the bootstrapRoleLabelFunction() method.
+     *
+     * @return void
+     */
+    public function testBootstrapRoleLabelFunctionWithNull() {
+
+        $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
+
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapRoleLabelFunction(null, $this->colorChoices, $this->transChoices));
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -103,32 +129,6 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bootstrapRoleLabel", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapRoleLabelFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-    }
-
-    /**
-     * Tests the bootstrapRoleLabelFunction() method.
-     *
-     * @return void
-     */
-    public function testBootstrapRoleLabelFunction() {
-
-        $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
-
-        $res = '<span class="label label-default" style="background-color:#D9534F;">label.role.root</span> <span class="label label-default" style="background-color:#337AB7;">label.role.admin</span> <span class="label label-default">label.role.user</span>';
-        $this->assertEquals($res, $obj->bootstrapRoleLabelFunction($this->user, $this->colorChoices, $this->transChoices));
-    }
-
-    /**
-     * Tests the bootstrapRoleLabelFunction() method.
-     *
-     * @return void
-     */
-    public function testBootstrapRoleLabelFunctionWithNull() {
-
-        $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
-
-        $res = "";
-        $this->assertEquals($res, $obj->bootstrapRoleLabelFunction(null, $this->colorChoices, $this->transChoices));
     }
 
 }
