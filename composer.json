@@ -2,7 +2,13 @@
     "name": "webeweb/bootstrap-bundle",
     "type": "symfony-bundle",
     "description": "Intregate Bootstrap theme with Symfony 2 and more",
-    "keywords": ["webeweb", "bundle", "symfony", "bootstrap", "theme"],
+    "keywords": [
+        "bootstrap",
+        "bundle",
+        "symfony",
+        "theme",
+        "webeweb"
+    ],
     "homepage": "https://github.com/webeweb/bootstrap-bundle",
     "license": "LGPL-3.0-only",
     "authors": [
