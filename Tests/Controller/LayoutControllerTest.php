@@ -74,25 +74,6 @@ EOT;
     }
 
     /**
-     * Tests the layoutAction() method.
-     *
-     * @return void
-     */
-    public function testLayoutAction() {
-
-        // Create a client.
-        $client = static::createClient();
-
-        // Make a GET request.
-        $client->request("GET", "/layout");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-
-        // Check the Bootstrap version.
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
-    }
-
-    /**
      * Tests the layout3Action() method.
      *
      * @return void
@@ -128,6 +109,25 @@ EOT;
         // Check the Bootstrap version.
         $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
         $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
+    }
+
+    /**
+     * Tests the layoutAction() method.
+     *
+     * @return void
+     */
+    public function testLayoutAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/layout");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        // Check the Bootstrap version.
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
     }
 
     /**
