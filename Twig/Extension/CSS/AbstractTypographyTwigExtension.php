@@ -111,16 +111,6 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap strike through text.
-     *
-     * @param string $content The content.
-     * @return string  Returns the Bootstrap strike through text.
-     */
-    protected function bootstrapStrikeThrough($content) {
-        return static::coreHTMLElement("s", $content);
-    }
-
-    /**
      * Displays a Bootstrap small text.
      *
      * @param string $content The content.
@@ -128,6 +118,16 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapSmall($content) {
         return static::coreHTMLElement("small", $content);
+    }
+
+    /**
+     * Displays a Bootstrap strike through text.
+     *
+     * @param string $content The content.
+     * @return string  Returns the Bootstrap strike through text.
+     */
+    protected function bootstrapStrikeThrough($content) {
+        return static::coreHTMLElement("s", $content);
     }
 
     /**

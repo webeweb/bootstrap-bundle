@@ -131,16 +131,6 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap marked text.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the Bootstrap marked text.
-     */
-    public function bootstrapMarkedFunction(array $args = []) {
-        return $this->bootstrapMarked(ArrayHelper::get($args, "content"));
-    }
-
-    /**
      * Displays a Bootstrap italic text.
      *
      * @param array $args The arguments.
@@ -148,6 +138,16 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      */
     public function bootstrapItalicFunction(array $args = []) {
         return $this->bootstrapItalic(ArrayHelper::get($args, "content"));
+    }
+
+    /**
+     * Displays a Bootstrap marked text.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap marked text.
+     */
+    public function bootstrapMarkedFunction(array $args = []) {
+        return $this->bootstrapMarked(ArrayHelper::get($args, "content"));
     }
 
     /**
