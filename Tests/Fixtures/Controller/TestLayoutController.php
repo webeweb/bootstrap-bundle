@@ -51,17 +51,6 @@ class TestLayoutController extends AbstractController {
     }
 
     /**
-     * Displays a layout page.
-     *
-     * @return Response Returns the response.
-     */
-    public function layoutAction() {
-
-        // Return the response.
-        return $this->render("@Bootstrap/layout.html.twig");
-    }
-
-    /**
      * Displays a layout3 page.
      *
      * @return Response Returns the response.
@@ -81,6 +70,17 @@ class TestLayoutController extends AbstractController {
 
         // Return the response.
         return $this->render("@Bootstrap/layout4.html.twig");
+    }
+
+    /**
+     * Displays a layout page.
+     *
+     * @return Response Returns the response.
+     */
+    public function layoutAction() {
+
+        // Return the response.
+        return $this->render("@Bootstrap/layout.html.twig");
     }
 
     /**

@@ -26,7 +26,6 @@ class TestFixtures {
 
     /**
      * Get a navigation tree.
-     *
      * GitHub
      * |- AdminBSB Material Design bundle
      * |- Bootstrap bundle
