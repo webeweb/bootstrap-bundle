@@ -93,13 +93,13 @@ class WikiController extends AbstractWikiController {
 
         // Returns the response.
         return $this->render($wikiView->getView(), [
-                "wikiViews"                 => $wikiViews,
-                "wikiView"                  => $wikiView,
-                "syntaxHighlighterConfig"   => $this->getSyntaxHighlighterConfig(),
-                "syntaxHighlighterDefaults" => $this->getSyntaxHighlighterDefaults(),
-                "user"                      => $this->getSampleUser(),
-                "userRoleColors"            => $this->getSampleUserRoleColors(),
-                "userRoleTranslations"      => $this->getSampleUserRoleTranslations(),
+            "wikiViews"                 => $wikiViews,
+            "wikiView"                  => $wikiView,
+            "syntaxHighlighterConfig"   => $this->getSyntaxHighlighterConfig(),
+            "syntaxHighlighterDefaults" => $this->getSyntaxHighlighterDefaults(),
+            "user"                      => $this->getSampleUser(),
+            "userRoleColors"            => $this->getSampleUserRoleColors(),
+            "userRoleTranslations"      => $this->getSampleUserRoleTranslations(),
         ]);
     }
 
