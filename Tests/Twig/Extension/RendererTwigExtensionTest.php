@@ -52,9 +52,21 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIcon() {
+    public function testRenderIconWithDefault() {
 
         $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "home"));
+    }
+
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     */
+    public function testRenderIconWithGlyphicon() {
+
+        $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "b:home"));
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "g:home"));
     }
 
@@ -63,10 +75,21 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithDefault() {
+    public function testRenderIconWithOther() {
 
         $res = '<i class="fa fa-home"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "fa:home"));
+    }
+
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     */
+    public function testRenderIconWithoutName() {
+
+        $res = "";
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
     }
 
 }
