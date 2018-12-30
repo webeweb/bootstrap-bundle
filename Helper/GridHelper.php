@@ -40,13 +40,8 @@ class GridHelper {
         $sizes    = ["lg", "md", "sm", "xs"];
         $suffixes = ["offset", "pull", "push", ""];
 
-        // Check the size.
-        if (false === in_array($size, $sizes)) {
-            return "";
-        }
-
-        // Check the suffixes.
-        if (false === in_array($suffix, $suffixes)) {
+        // Check the parameters.
+        if (false === in_array($size, $sizes) || false === in_array($suffix, $suffixes)) {
             return "";
         }
         if ("" !== $suffix) {
