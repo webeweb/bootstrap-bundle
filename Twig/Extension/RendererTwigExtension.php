@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig_Environment;
+use Twig_SimpleFilter;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension as BaseTwigExtension;
 
