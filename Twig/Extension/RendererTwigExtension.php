@@ -40,6 +40,15 @@ class RendererTwigExtension extends BaseTwigExtension {
     }
 
     /**
+     * Get the Twig filters.
+     *
+     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     */
+    public function getFilters() {
+        return [];
+    }
+
+    /**
      * Render an icon.
      *
      * @param Twig_Environment $twigEnvironment The twig environment.
