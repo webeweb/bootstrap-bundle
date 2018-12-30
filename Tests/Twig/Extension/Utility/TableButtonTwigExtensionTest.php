@@ -98,6 +98,8 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.bootstrap.twig.extension.utility.table_button", TableButtonTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
+        $this->assertSame($this->buttonTwigExtension, $obj->getButtonTwigExtension());
     }
 
     /**
