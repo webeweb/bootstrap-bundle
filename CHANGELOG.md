@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Fix multiple filter declarations into Renderer Twig extension
 - Fix disable state with button link filter
 - Improve unit tests
 
