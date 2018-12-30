@@ -27,13 +27,13 @@ class GridHelper {
      * @param string $suffix The suffix.
      * @param int $min The min value.
      * @param int $max The max value.
-     * @return string Returns the CSS classname.
+     * @return string|null Returns the CSS classname.
      */
     public static function getCSSClassname($size, $value, $suffix, $min = 1, $max = 12) {
 
         // Check the value.
         if ($value < $min || $max < $value) {
-            return "";
+            return null;
         }
 
         // Initialize the values.
@@ -42,7 +42,7 @@ class GridHelper {
 
         // Check the parameters.
         if (false === in_array($size, $sizes) || false === in_array($suffix, $suffixes)) {
-            return "";
+            return null;
         }
         if ("" !== $suffix) {
             $suffix .= "-";

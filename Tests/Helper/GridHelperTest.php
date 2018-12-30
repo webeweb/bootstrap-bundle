@@ -29,8 +29,7 @@ class GridHelperTest extends AbstractTestCase {
      */
     public function testGetCSSClassnameWithBadSize() {
 
-        $res = "";
-        $this->assertEquals($res, GridHelper::getCSSClassname("", 6, ""));
+        $this->assertNull(GridHelper::getCSSClassname("", 6, ""));
     }
 
     /**
@@ -40,8 +39,7 @@ class GridHelperTest extends AbstractTestCase {
      */
     public function testGetCSSClassnameWithBadSuffix() {
 
-        $res = "";
-        $this->assertEquals($res, GridHelper::getCSSClassname("lg", 6, "suffix"));
+        $this->assertNull(GridHelper::getCSSClassname("lg", 6, "suffix"));
     }
 
     /**
@@ -51,9 +49,8 @@ class GridHelperTest extends AbstractTestCase {
      */
     public function testGetCSSClassnameWithBadValue() {
 
-        $res = "";
-        $this->assertEquals($res, GridHelper::getCSSClassname("lg", 0, ""));
-        $this->assertEquals($res, GridHelper::getCSSClassname("lg", 13, ""));
+        $this->assertNull(GridHelper::getCSSClassname("lg", 0, ""));
+        $this->assertNull(GridHelper::getCSSClassname("lg", 13, ""));
     }
 
     /**
