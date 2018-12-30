@@ -86,7 +86,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithoutName() {
+    public function testRenderIconWithoutArguments() {
 
         $res = "";
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
