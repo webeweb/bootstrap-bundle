@@ -111,6 +111,8 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.bootstrap.twig.extension.utility.role_label", RoleLabelTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
+        $this->assertSame($this->labelTwigExtension, $obj->getLabelTwigExtension());
     }
 
     /**
