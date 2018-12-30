@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Helper\GridHelper;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -62,10 +63,10 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
         // Initialize the columns.
         $columns = [];
 
-        $columns[] = 1 <= $lg && $lg <= 12 ? "col-lg-" . $prefix . $lg : null;
-        $columns[] = 1 <= $md && $md <= 12 ? "col-md-" . $prefix . $md : null;
-        $columns[] = 1 <= $sm && $sm <= 12 ? "col-sm-" . $prefix . $sm : null;
-        $columns[] = 1 <= $xs && $xs <= 12 ? "col-xs-" . $prefix . $xs : null;
+        $columns[] = GridHelper::getCSSClassname("lg", $lg, $prefix, 1, 12);
+        $columns[] = GridHelper::getCSSClassname("md", $md, $prefix, 1, 12);;
+        $columns[] = GridHelper::getCSSClassname("sm", $sm, $prefix, 1, 12);;
+        $columns[] = GridHelper::getCSSClassname("xs", $xs, $prefix, 1, 12);;
 
         // Return the columns.
         return trim(implode(" ", $columns));
