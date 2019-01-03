@@ -144,7 +144,7 @@ CHANGELOG
 
 ### 1.7.4 (2019-01-03)
 
-- Fix jQuery EasyAutocomplete paths
+- Fix public resources paths
 
 ### 1.7.3 (2018-10-04)
 
