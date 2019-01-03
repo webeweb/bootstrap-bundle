@@ -142,6 +142,10 @@ CHANGELOG
 - Remove "final" keyword
 - Add hasProviders() into abstract manager
 
+### 1.7.4 (2019-01-03)
+
+- Fix jQuery EasyAutocomplete paths
+
 ### 1.7.3 (2018-10-04)
 
 - Add parent() call into Twig templates
