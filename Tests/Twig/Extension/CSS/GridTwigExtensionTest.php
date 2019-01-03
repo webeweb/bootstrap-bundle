@@ -61,83 +61,247 @@ class GridTwigExtensionTest extends AbstractTestCase {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
-        // Nothing
-        $arg0 = [];
-        $res0 = "";
-        $this->assertEquals($res0, $obj->bootstrapGridOffsetFunction($arg0));
-
-        // LG
-        $argLG = ["lgOffset" => 1];
-        $resLG = "col-lg-offset-1";
-        $this->assertEquals($resLG, $obj->bootstrapGridOffsetFunction($argLG));
-
-        $argLGcpy = ["lgOffset" => 2, "recopyOffset" => true];
-        $resLGcpy = "col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2";
-        $this->assertEquals($resLGcpy, $obj->bootstrapGridOffsetFunction($argLGcpy));
-
-        $argLGmin = ["lgOffset" => 0];
-        $resLGmin = "";
-        $this->assertEquals($resLGmin, $obj->bootstrapGridOffsetFunction($argLGmin));
-
-        $argLGmax = ["lgOffset" => 13];
-        $resLGmax = "";
-        $this->assertEquals($resLGmax, $obj->bootstrapGridOffsetFunction($argLGmax));
-
-        // MD
-        $argMD = ["mdOffset" => 2];
-        $resMD = "col-md-offset-2";
-        $this->assertEquals($resMD, $obj->bootstrapGridOffsetFunction($argMD));
-
-        $argMDcpy = ["mdOffset" => 2, "recopyOffset" => true];
-        $resMDcpy = "col-md-offset-2 col-sm-offset-2 col-xs-offset-2";
-        $this->assertEquals($resMDcpy, $obj->bootstrapGridOffsetFunction($argMDcpy));
-
-        $argMDmin = ["mdOffset" => 0];
-        $resMDmin = "";
-        $this->assertEquals($resMDmin, $obj->bootstrapGridOffsetFunction($argMDmin));
-
-        $argMDmax = ["mgOffset" => 13];
-        $resMDmax = "";
-        $this->assertEquals($resMDmax, $obj->bootstrapGridOffsetFunction($argMDmax));
-
-        // SM
-        $argSM = ["smOffset" => 3];
-        $resSM = "col-sm-offset-3";
-        $this->assertEquals($resSM, $obj->bootstrapGridOffsetFunction($argSM));
-
-        $argSMcpy = ["smOffset" => 2, "recopyOffset" => true];
-        $resSMcpy = "col-sm-offset-2 col-xs-offset-2";
-        $this->assertEquals($resSMcpy, $obj->bootstrapGridOffsetFunction($argSMcpy));
-
-        $argSMmin = ["smOffset" => 0];
-        $resSMmin = "";
-        $this->assertEquals($resSMmin, $obj->bootstrapGridOffsetFunction($argSMmin));
-
-        $argSMmax = ["smOffset" => 13];
-        $resSMmax = "";
-        $this->assertEquals($resSMmax, $obj->bootstrapGridOffsetFunction($argSMmax));
-
-        // XS
-        $argXS = ["xsOffset" => 4];
-        $resXS = "col-xs-offset-4";
-        $this->assertEquals($resXS, $obj->bootstrapGridOffsetFunction($argXS));
-
-        $argXScpy = ["xsOffset" => 2, "recopyOffset" => true];
-        $resXScpy = "col-xs-offset-2";
-        $this->assertEquals($resXScpy, $obj->bootstrapGridOffsetFunction($argXScpy));
-
-        $argXSmin = ["xsOffset" => 0];
-        $resXSmin = "";
-        $this->assertEquals($resXSmin, $obj->bootstrapGridOffsetFunction($argXSmin));
-
-        $argXSmax = ["xsOffset" => 13];
-        $resXSmax = "";
-        $this->assertEquals($resXSmax, $obj->bootstrapGridOffsetFunction($argXSmax));
-
-        //
         $arg9 = ["lgOffset" => 6, "mdOffset" => 12, "recopyOffset" => true];
         $res9 = "col-lg-offset-6 col-md-offset-12 col-sm-offset-12 col-xs-offset-12";
         $this->assertEquals($res9, $obj->bootstrapGridOffsetFunction($arg9));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithLgOffset() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lgOffset" => 1];
+        $res = "col-lg-offset-1";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithLgOffsetAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lgOffset" => 2, "recopyOffset" => true];
+        $res = "col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithLgOffsetMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lgOffset" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithLgOffsetMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["lgOffset" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithMdOffset() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdOffset" => 2];
+        $res = "col-md-offset-2";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithMdOffsetAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdOffset" => 2, "recopyOffset" => true];
+        $res = "col-md-offset-2 col-sm-offset-2 col-xs-offset-2";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithMdOffsetMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdOffset" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithMdOffsetMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdOffset" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithSmOffset() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smOffset" => 3];
+        $res = "col-sm-offset-3";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithSmOffsetAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smOffset" => 2, "recopyOffset" => true];
+        $res = "col-sm-offset-2 col-xs-offset-2";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithSmOffsetMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smOffset" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithSmOffsetMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smOffset" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithXsOffestAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsOffset" => 2, "recopyOffset" => true];
+        $res = "col-xs-offset-2";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithXsOffset() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsOffset" => 4];
+        $res = "col-xs-offset-4";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithXsOffsetMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsOffset" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithXsOffsetMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsOffset" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridOffsetFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridOffsetFunctionWithoutArguments() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridOffsetFunction($arg));
     }
 
     /**
@@ -149,83 +313,247 @@ class GridTwigExtensionTest extends AbstractTestCase {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
-        // Nothing
-        $arg0 = [];
-        $res0 = "";
-        $this->assertEquals($res0, $obj->bootstrapGridPullFunction($arg0));
+        $arg = ["lgPull" => 6, "mdPull" => 12, "recopyPull" => true];
+        $res = "col-lg-pull-6 col-md-pull-12 col-sm-pull-12 col-xs-pull-12";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
 
-        // LG
-        $argLG = ["lgPull" => 1];
-        $resLG = "col-lg-pull-1";
-        $this->assertEquals($resLG, $obj->bootstrapGridPullFunction($argLG));
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithLgPull() {
 
-        $argLGcpy = ["lgPull" => 2, "recopyPull" => true];
-        $resLGcpy = "col-lg-pull-2 col-md-pull-2 col-sm-pull-2 col-xs-pull-2";
-        $this->assertEquals($resLGcpy, $obj->bootstrapGridPullFunction($argLGcpy));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argLGmin = ["lgPull" => 0];
-        $resLGmin = "";
-        $this->assertEquals($resLGmin, $obj->bootstrapGridPullFunction($argLGmin));
+        $arg = ["lgPull" => 1];
+        $res = "col-lg-pull-1";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
 
-        $argLGmax = ["lgPull" => 13];
-        $resLGmax = "";
-        $this->assertEquals($resLGmax, $obj->bootstrapGridPullFunction($argLGmax));
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithLgPullAndRecopy() {
 
-        // MD
-        $argMD = ["mdPull" => 2];
-        $resMD = "col-md-pull-2";
-        $this->assertEquals($resMD, $obj->bootstrapGridPullFunction($argMD));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argMDcpy = ["mdPull" => 2, "recopyPull" => true];
-        $resMDcpy = "col-md-pull-2 col-sm-pull-2 col-xs-pull-2";
-        $this->assertEquals($resMDcpy, $obj->bootstrapGridPullFunction($argMDcpy));
+        $arg = ["lgPull" => 2, "recopyPull" => true];
+        $res = "col-lg-pull-2 col-md-pull-2 col-sm-pull-2 col-xs-pull-2";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
 
-        $argMDmin = ["mdPull" => 0];
-        $resMDmin = "";
-        $this->assertEquals($resMDmin, $obj->bootstrapGridPullFunction($argMDmin));
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithLgPullMax() {
 
-        $argMDmax = ["mgPull" => 13];
-        $resMDmax = "";
-        $this->assertEquals($resMDmax, $obj->bootstrapGridPullFunction($argMDmax));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        // SM
-        $argSM = ["smPull" => 3];
-        $resSM = "col-sm-pull-3";
-        $this->assertEquals($resSM, $obj->bootstrapGridPullFunction($argSM));
+        $arg = ["lgPull" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
 
-        $argSMcpy = ["smPull" => 2, "recopyPull" => true];
-        $resSMcpy = "col-sm-pull-2 col-xs-pull-2";
-        $this->assertEquals($resSMcpy, $obj->bootstrapGridPullFunction($argSMcpy));
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithLgPullMin() {
 
-        $argSMmin = ["smPull" => 0];
-        $resSMmin = "";
-        $this->assertEquals($resSMmin, $obj->bootstrapGridPullFunction($argSMmin));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argSMmax = ["smPull" => 13];
-        $resSMmax = "";
-        $this->assertEquals($resSMmax, $obj->bootstrapGridPullFunction($argSMmax));
+        $arg = ["lgPull" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
 
-        // XS
-        $argXS = ["xsPull" => 4];
-        $resXS = "col-xs-pull-4";
-        $this->assertEquals($resXS, $obj->bootstrapGridPullFunction($argXS));
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithMdPull() {
 
-        $argXScpy = ["xsPull" => 2, "recopyPull" => true];
-        $resXScpy = "col-xs-pull-2";
-        $this->assertEquals($resXScpy, $obj->bootstrapGridPullFunction($argXScpy));
+        $obj = new GridTwigExtension($this->twigEnvironment);
 
-        $argXSmin = ["xsPull" => 0];
-        $resXSmin = "";
-        $this->assertEquals($resXSmin, $obj->bootstrapGridPullFunction($argXSmin));
+        $arg = ["mdPull" => 2];
+        $res = "col-md-pull-2";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
 
-        $argXSmax = ["xsPull" => 13];
-        $resXSmax = "";
-        $this->assertEquals($resXSmax, $obj->bootstrapGridPullFunction($argXSmax));
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithMdPullAndRecopy() {
 
-        //
-        $arg9 = ["lgPull" => 6, "mdPull" => 12, "recopyPull" => true];
-        $res9 = "col-lg-pull-6 col-md-pull-12 col-sm-pull-12 col-xs-pull-12";
-        $this->assertEquals($res9, $obj->bootstrapGridPullFunction($arg9));
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdPull" => 2, "recopyPull" => true];
+        $res = "col-md-pull-2 col-sm-pull-2 col-xs-pull-2";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithMdPullMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdPull" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithMdPullMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["mdPull" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithSmPull() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPull" => 3];
+        $res = "col-sm-pull-3";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithSmPullAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPull" => 2, "recopyPull" => true];
+        $res = "col-sm-pull-2 col-xs-pull-2";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithSmPullMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPull" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithSmPullMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["smPull" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithXsPull() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPull" => 4];
+        $res = "col-xs-pull-4";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithXsPullAndRecopy() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPull" => 2, "recopyPull" => true];
+        $res = "col-xs-pull-2";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithXsPullMax() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPull" => 13];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithXsPullMin() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = ["xsPull" => 0];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
+    }
+
+    /**
+     * Tests the bootstrapGridPullFunction().
+     *
+     * @return void
+     */
+    public function testBootstrapGridPullFunctionWithoutArguments() {
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "";
+        $this->assertEquals($res, $obj->bootstrapGridPullFunction($arg));
     }
 
     /**
