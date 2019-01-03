@@ -26,7 +26,7 @@
  #}
 {% macro functionExample(command) %}
     <h4>{{ bootstrapGlyphicon({"name": "console"}) }} Example</h4>
-    {{ bootstrapUserInput({"content": command})}}
+    {{ bootstrapUserInput({"content": command}) }}
     <div style="margin-bottom: 20px;"></div>
 {% endmacro %}
 
@@ -64,7 +64,7 @@
     <ul class="list-group">
         {% for function in functions %}
             <li class="list-group-item">{{ bootstrapGlyphicon({"name": "bookmark"}) }} {{ function }}()</li>
-            {% endfor %}
+        {% endfor %}
     </ul>
 {% endmacro %}
 
