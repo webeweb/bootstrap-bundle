@@ -8,6 +8,10 @@ CHANGELOG
 - Fix disable state with button link filter
 - Improve unit tests
 
+### 1.7.4 (2019-01-03)
+
+- Fix public resources paths
+
 ### 2.0.0 (2018-12-21)
 
 - Improve functional tests
@@ -141,10 +145,6 @@ CHANGELOG
 - Remove Notification events (moved into core-bundle)
 - Remove "final" keyword
 - Add hasProviders() into abstract manager
-
-### 1.7.4 (2019-01-03)
-
-- Fix public resources paths
 
 ### 1.7.3 (2018-10-04)
 
