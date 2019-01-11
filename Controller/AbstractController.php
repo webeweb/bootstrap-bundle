@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 use Symfony\Component\EventDispatcher\Event;
 use WBW\Bundle\CoreBundle\Controller\AbstractController as BaseController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvents;
-use WBW\Bundle\CoreBundle\Factory\NotificationFactory;
+use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
 
 /**
  * Abstract controller.
