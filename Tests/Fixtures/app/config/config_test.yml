@@ -22,6 +22,15 @@ framework:
     validation:
         enabled: false
 
+doctrine:
+    dbal:
+        driver: "pdo_sqlite"
+        path:   "%kernel.root_dir%/var/test.sqlite"
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping:                true
+        naming_strategy:             "doctrine.orm.naming_strategy.underscore"
+
 monolog:
     handlers:
         main:
