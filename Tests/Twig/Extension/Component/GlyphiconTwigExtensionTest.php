@@ -66,6 +66,19 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFilters();
+        $this->assertCount(0, $res);
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void

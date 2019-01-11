@@ -107,6 +107,19 @@ EOT;
     }
 
     /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFilters();
+        $this->assertCount(0, $res);
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void

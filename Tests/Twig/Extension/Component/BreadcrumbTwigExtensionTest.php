@@ -77,6 +77,19 @@ EOT;
     }
 
     /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
+
+        $res = $obj->getFilters();
+        $this->assertCount(0, $res);
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
