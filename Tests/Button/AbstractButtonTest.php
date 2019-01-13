@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Button;
+namespace WBW\Bundle\BootstrapBundle\Tests\Button;
 
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Button\TestButton;
@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Button\TestButton;
  * Abstract button test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Button
+ * @package WBW\Bundle\BootstrapBundle\Tests\Button
  */
 class AbstractButtonTest extends AbstractTestCase {
 
