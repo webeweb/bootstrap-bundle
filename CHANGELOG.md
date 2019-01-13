@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Add Button interface
 - Add Grid helper
 - Fix disable state with button link filter
 - Fix multiple filter declarations into Renderer Twig extension
