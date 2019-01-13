@@ -4,6 +4,12 @@ CHANGELOG
 ### master
 
 - Add Button interface
+- Add Danger button 
+- Add Default button 
+- Add Info button 
+- Add Primary button 
+- Add Success button 
+- Add Warning button 
 - Add Grid helper
 - Fix disable state with button link filter
 - Fix multiple filter declarations into Renderer Twig extension
