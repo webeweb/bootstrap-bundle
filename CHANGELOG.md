@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Add Button enumerator
 - Add Button factory
 - Add Button interface
 - Add Danger button 
