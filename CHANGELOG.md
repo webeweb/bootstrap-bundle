@@ -13,6 +13,7 @@ CHANGELOG
 - Add Grid helper
 - Fix disable state with button link filter
 - Fix multiple filter declarations into Renderer Twig extension
+- Improve code style
 - Improve unit tests
 
 ### 1.7.4 (2019-01-03)
