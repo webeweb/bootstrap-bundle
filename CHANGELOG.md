@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Add Button factory
 - Add Button interface
 - Add Danger button 
 - Add Default button 
