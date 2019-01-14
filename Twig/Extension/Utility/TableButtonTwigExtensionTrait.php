@@ -44,5 +44,4 @@ trait TableButtonTwigExtensionTrait {
         $this->tableButtonTwigExtension = $tableButtonTwigExtension;
         return $this;
     }
-
 }

@@ -69,5 +69,4 @@ class BootstrapBundleTest extends AbstractTestCase {
         ];
         $this->assertEquals($res, BootstrapBundle::getBootstrapConstants());
     }
-
 }

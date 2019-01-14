@@ -72,5 +72,4 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
             new Twig_SimpleFunction("bootstrapButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

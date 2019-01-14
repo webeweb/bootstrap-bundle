@@ -175,5 +175,4 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "bootstrapImageBase64Function"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
     }
-
 }

@@ -116,5 +116,4 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
             new Twig_SimpleFunction("bootstrapAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

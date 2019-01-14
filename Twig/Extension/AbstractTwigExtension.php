@@ -31,5 +31,4 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
     protected function __construct(Twig_Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
     }
-
 }

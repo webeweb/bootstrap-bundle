@@ -117,5 +117,4 @@ class AbstractWikiControllerTest extends AbstractTestCase {
         $res = $obj->getSyntaxHighlighterDefaults();
         $this->assertInstanceOf(SyntaxHighlighterDefaults::class, $res);
     }
-
 }

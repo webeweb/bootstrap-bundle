@@ -33,5 +33,4 @@ class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
 
         $this->assertNotNull($obj);
     }
-
 }

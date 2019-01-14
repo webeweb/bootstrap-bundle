@@ -33,5 +33,4 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
         $this->assertNotNull($obj);
     }
-
 }

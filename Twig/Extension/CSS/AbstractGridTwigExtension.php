@@ -71,5 +71,4 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
         // Return the columns.
         return trim(implode(" ", $columns));
     }
-
 }

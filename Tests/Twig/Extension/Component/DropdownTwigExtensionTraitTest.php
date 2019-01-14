@@ -50,5 +50,4 @@ class DropdownTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setDropdownTwigExtension($dropdownTwigExtension);
         $this->assertSame($dropdownTwigExtension, $obj->getDropdownTwigExtension());
     }
-
 }

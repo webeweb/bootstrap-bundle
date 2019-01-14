@@ -114,5 +114,4 @@ class GridTwigExtension extends AbstractGridTwigExtension {
             new Twig_SimpleFunction("bootstrapGridStacked", [$this, "bootstrapGridStackedFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

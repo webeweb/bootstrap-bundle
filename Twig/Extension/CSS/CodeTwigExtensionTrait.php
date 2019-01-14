@@ -44,5 +44,4 @@ trait CodeTwigExtensionTrait {
         $this->codeTwigExtension = $codeTwigExtension;
         return $this;
     }
-
 }

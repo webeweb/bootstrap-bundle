@@ -30,5 +30,4 @@ class NavigationNodeActionImport extends NavigationNode {
     public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct("navigation.node.action.import", "g:save", $route, $matcher);
     }
-
 }

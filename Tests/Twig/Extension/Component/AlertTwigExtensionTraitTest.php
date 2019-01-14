@@ -50,5 +50,4 @@ class AlertTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setAlertTwigExtension($alertTwigExtension);
         $this->assertSame($alertTwigExtension, $obj->getAlertTwigExtension());
     }
-
 }

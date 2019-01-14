@@ -44,5 +44,4 @@ trait RoleLabelTwigExtensionTrait {
         $this->roleLabelTwigExtension = $roleLabelTwigExtension;
         return $this;
     }
-
 }

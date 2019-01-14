@@ -49,5 +49,4 @@ abstract class AbstractLabelTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("span", $content, $attributes);
     }
-
 }

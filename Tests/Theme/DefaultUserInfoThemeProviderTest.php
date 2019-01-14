@@ -33,5 +33,4 @@ class DefaultUserInfoThemeProviderTest extends AbstractTestCase {
 
         $this->assertNotNull($obj);
     }
-
 }

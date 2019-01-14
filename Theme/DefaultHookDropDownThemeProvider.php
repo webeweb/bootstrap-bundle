@@ -27,5 +27,4 @@ class DefaultHookDropDownThemeProvider extends BaseHookDropDownThemeProvider {
     public function __construct() {
         parent::__construct();
     }
-
 }

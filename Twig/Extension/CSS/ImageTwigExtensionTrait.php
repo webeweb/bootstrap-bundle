@@ -44,5 +44,4 @@ trait ImageTwigExtensionTrait {
         $this->imageTwigExtension = $imageTwigExtension;
         return $this;
     }
-
 }

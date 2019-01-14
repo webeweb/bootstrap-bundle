@@ -37,5 +37,4 @@ class NavigationNodeActionNewTest extends AbstractTestCase {
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
-
 }

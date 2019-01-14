@@ -44,5 +44,4 @@ trait GridTwigExtensionTrait {
         $this->gridTwigExtension = $gridTwigExtension;
         return $this;
     }
-
 }

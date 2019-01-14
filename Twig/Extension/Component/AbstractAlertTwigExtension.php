@@ -59,5 +59,4 @@ abstract class AbstractAlertTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
-
 }

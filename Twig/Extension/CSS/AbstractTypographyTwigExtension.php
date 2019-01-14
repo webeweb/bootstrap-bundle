@@ -139,5 +139,4 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     protected function bootstrapUnderlined($content) {
         return static::coreHTMLElement("u", $content);
     }
-
 }

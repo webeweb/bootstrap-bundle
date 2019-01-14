@@ -35,5 +35,4 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
         $this->assertEquals("Bootstrap<b>bundle</b>", $obj->getName());
         $this->assertEquals("Bootstrap bundle", $obj->getTitle());
     }
-
 }

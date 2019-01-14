@@ -50,5 +50,4 @@ class GridTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setGridTwigExtension($gridTwigExtension);
         $this->assertSame($gridTwigExtension, $obj->getGridTwigExtension());
     }
-
 }

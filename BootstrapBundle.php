@@ -100,5 +100,4 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
             self::BOOTSTRAP_WARNING,
         ];
     }
-
 }

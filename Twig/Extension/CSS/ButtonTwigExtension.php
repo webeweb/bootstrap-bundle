@@ -178,5 +178,4 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             new Twig_SimpleFunction("bootstrapButtonWarning", [$this, "bootstrapButtonWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

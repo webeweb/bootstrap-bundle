@@ -53,5 +53,4 @@ class WikiControllerTest extends AbstractWebTestCase {
         $client->request("GET", "/wiki/category/package/page");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
-
 }

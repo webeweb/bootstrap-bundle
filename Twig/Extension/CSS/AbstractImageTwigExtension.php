@@ -62,5 +62,4 @@ abstract class AbstractImageTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return StringHelper::replace($template, ["%attributes%"], [StringHelper::parseArray($attributes)]);
     }
-
 }

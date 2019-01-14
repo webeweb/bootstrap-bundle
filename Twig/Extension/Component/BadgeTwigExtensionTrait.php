@@ -44,5 +44,4 @@ trait BadgeTwigExtensionTrait {
         $this->badgeTwigExtension = $badgeTwigExtension;
         return $this;
     }
-
 }

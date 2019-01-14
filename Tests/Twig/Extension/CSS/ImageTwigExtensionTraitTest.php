@@ -50,5 +50,4 @@ class ImageTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setImageTwigExtension($imageTwigExtension);
         $this->assertSame($imageTwigExtension, $obj->getImageTwigExtension());
     }
-
 }

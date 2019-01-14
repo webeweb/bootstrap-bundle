@@ -129,5 +129,4 @@ class GridHelperTest extends AbstractTestCase {
         $res = "col-lg-push-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("lg", 6, "push"));
     }
-
 }

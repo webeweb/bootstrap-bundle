@@ -27,5 +27,4 @@ class DefaultBreadcrumbsThemeProvider extends BaseBreadcrumbsThemeProvider {
     public function __construct() {
         parent::__construct();
     }
-
 }

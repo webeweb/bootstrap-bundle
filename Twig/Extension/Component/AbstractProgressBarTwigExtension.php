@@ -70,5 +70,4 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("div", $div, ["class" => "progress"]);
     }
-
 }

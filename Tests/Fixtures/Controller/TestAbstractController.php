@@ -48,5 +48,4 @@ class TestAbstractController extends AbstractController {
     public function notifyWarning($content) {
         return parent::notifyWarning($content);
     }
-
 }

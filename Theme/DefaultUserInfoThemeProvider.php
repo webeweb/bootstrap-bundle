@@ -27,5 +27,4 @@ class DefaultUserInfoThemeProvider extends BaseUserInfoThemeProvider {
     public function __construct() {
         parent::__construct();
     }
-
 }

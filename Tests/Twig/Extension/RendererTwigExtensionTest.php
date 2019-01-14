@@ -91,5 +91,4 @@ class RendererTwigExtensionTest extends AbstractTestCase {
         $res = "";
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
     }
-
 }

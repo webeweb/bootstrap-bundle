@@ -203,5 +203,4 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
             new Twig_SimpleFunction("bootstrapUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

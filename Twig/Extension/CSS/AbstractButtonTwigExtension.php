@@ -68,5 +68,4 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("button", implode(" ", [$glyphicon, $innerHTML]), $attributes);
     }
-
 }

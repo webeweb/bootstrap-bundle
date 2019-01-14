@@ -763,5 +763,4 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "bootstrapUnderlinedFunction"], $res[13]->getCallable());
         $this->assertEquals(["html"], $res[13]->getSafe(new Twig_Node()));
     }
-
 }

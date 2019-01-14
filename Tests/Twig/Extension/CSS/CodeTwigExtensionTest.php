@@ -214,5 +214,4 @@ class CodeTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "bootstrapVariableFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
-
 }

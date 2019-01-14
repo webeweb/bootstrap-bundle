@@ -54,5 +54,4 @@ class FormButtonTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setFormButtonTwigExtension($formButtonTwigExtension);
         $this->assertSame($formButtonTwigExtension, $obj->getFormButtonTwigExtension());
     }
-
 }

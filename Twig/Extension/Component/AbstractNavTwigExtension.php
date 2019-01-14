@@ -68,5 +68,4 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("ul", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
-
 }

@@ -50,5 +50,4 @@ class GlyphiconTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setGlyphiconTwigExtension($glyphiconTwigExtension);
         $this->assertSame($glyphiconTwigExtension, $obj->getGlyphiconTwigExtension());
     }
-
 }

@@ -50,5 +50,4 @@ class LabelTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setLabelTwigExtension($labelTwigExtension);
         $this->assertSame($labelTwigExtension, $obj->getLabelTwigExtension());
     }
-
 }

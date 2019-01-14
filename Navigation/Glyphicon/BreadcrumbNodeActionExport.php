@@ -30,5 +30,4 @@ class BreadcrumbNodeActionExport extends BreadcrumbNode {
     public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct("navigation.node.action.export", "g:open", $route, $matcher);
     }
-
 }

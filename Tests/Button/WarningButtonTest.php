@@ -34,5 +34,4 @@ class WarningButtonTest extends AbstractTestCase {
 
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
     }
-
 }

@@ -141,5 +141,4 @@ EOT;
         $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
-
 }

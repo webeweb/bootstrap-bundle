@@ -27,5 +27,4 @@ class DefaultNotificationsDropDownThemeProvider extends BaseNotificationsDropDow
     public function __construct() {
         parent::__construct();
     }
-
 }

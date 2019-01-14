@@ -50,5 +50,4 @@ class ButtonGroupTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setButtonGroupTwigExtension($buttonGroupTwigExtension);
         $this->assertSame($buttonGroupTwigExtension, $obj->getButtonGroupTwigExtension());
     }
-
 }

@@ -255,5 +255,4 @@ class AlertTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "bootstrapAlertWarningFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
-
 }

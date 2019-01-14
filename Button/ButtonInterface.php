@@ -178,5 +178,4 @@ interface ButtonInterface {
      * @return ButtonInterface Returns this button.
      */
     public function setType($class);
-
 }

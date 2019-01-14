@@ -110,5 +110,4 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
             new Twig_SimpleFunction("bootstrapFormButtonSubmit", [$this, "bootstrapFormButtonSubmitFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

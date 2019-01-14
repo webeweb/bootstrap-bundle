@@ -102,5 +102,4 @@ class WikiController extends AbstractWikiController {
             "userRoleTranslations"      => $this->getSampleUserRoleTranslations(),
         ]);
     }
-
 }

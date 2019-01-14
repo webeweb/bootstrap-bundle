@@ -44,5 +44,4 @@ trait BreadcrumbTwigExtensionTrait {
         $this->breadcrumbTwigExtension = $breadcrumbTwigExtension;
         return $this;
     }
-
 }

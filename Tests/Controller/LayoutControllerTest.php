@@ -159,5 +159,4 @@ EOT;
         $client->request("GET", "/work-in-progress");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
-
 }

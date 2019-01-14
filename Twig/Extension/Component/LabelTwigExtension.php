@@ -116,5 +116,4 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
             new Twig_SimpleFunction("bootstrapLabelWarning", [$this, "bootstrapLabelWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

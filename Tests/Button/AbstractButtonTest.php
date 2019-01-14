@@ -117,5 +117,4 @@ class AbstractButtonTest extends AbstractTestCase {
         $obj->setTitle("title");
         $this->assertEquals("title", $obj->getTitle());
     }
-
 }

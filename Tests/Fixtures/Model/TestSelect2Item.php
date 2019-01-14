@@ -77,5 +77,4 @@ class TestSelect2Item extends AbstractNode implements Select2DataFormatInterface
         $this->name = $name;
         return $this;
     }
-
 }

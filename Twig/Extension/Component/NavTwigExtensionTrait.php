@@ -44,5 +44,4 @@ trait NavTwigExtensionTrait {
         $this->navTwigExtension = $navTwigExtension;
         return $this;
     }
-
 }

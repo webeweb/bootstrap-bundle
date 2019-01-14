@@ -34,5 +34,4 @@ class DangerButtonTest extends AbstractTestCase {
 
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
     }
-
 }

@@ -34,5 +34,4 @@ class InfoButtonTest extends AbstractTestCase {
 
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
     }
-
 }

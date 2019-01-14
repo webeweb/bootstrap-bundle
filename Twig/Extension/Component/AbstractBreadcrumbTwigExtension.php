@@ -89,5 +89,4 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("ol", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
-
 }

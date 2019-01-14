@@ -19,5 +19,4 @@ class PrimaryButton extends AbstractButton {
     public function __construct() {
         parent::__construct(self::BUTTON_TYPE_PRIMARY);
     }
-
 }

@@ -81,5 +81,4 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
             new Twig_SimpleFunction("bootstrapDropdownHeader", [$this, "bootstrapDropdownHeaderFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

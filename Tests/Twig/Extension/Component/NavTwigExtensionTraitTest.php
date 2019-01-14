@@ -50,5 +50,4 @@ class NavTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setNavTwigExtension($navTwigExtension);
         $this->assertSame($navTwigExtension, $obj->getNavTwigExtension());
     }
-
 }

@@ -44,5 +44,4 @@ trait ProgressBarTwigExtensionTrait {
         $this->progressBarTwigExtension = $progressBarTwigExtension;
         return $this;
     }
-
 }

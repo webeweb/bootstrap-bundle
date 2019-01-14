@@ -48,5 +48,4 @@ class DefaultApplicationThemeProvider extends BaseApplicationThemeProvider {
     public function getTitle() {
         return "Bootstrap bundle";
     }
-
 }

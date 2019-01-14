@@ -104,5 +104,4 @@ class TestLayoutController extends AbstractController {
         // Return the response.
         return $this->render("@Bootstrap/layout/work-in-progress.html.twig");
     }
-
 }

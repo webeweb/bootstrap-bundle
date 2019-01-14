@@ -261,5 +261,4 @@ class LabelTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "bootstrapLabelWarningFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
     }
-
 }

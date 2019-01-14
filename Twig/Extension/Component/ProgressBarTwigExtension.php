@@ -105,5 +105,4 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
             new Twig_SimpleFunction("bootstrapProgressBarWarning", [$this, "bootstrapProgressBarWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

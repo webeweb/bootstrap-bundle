@@ -101,5 +101,4 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
             new Twig_SimpleFunction("bootstrapImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

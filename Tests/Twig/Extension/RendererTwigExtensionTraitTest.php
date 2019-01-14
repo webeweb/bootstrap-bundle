@@ -50,5 +50,4 @@ class RendererTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setRendererTwigExtension($rendererTwigExtension);
         $this->assertSame($rendererTwigExtension, $obj->getRendererTwigExtension());
     }
-
 }

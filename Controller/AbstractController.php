@@ -68,5 +68,4 @@ abstract class AbstractController extends BaseController {
         $notification = NotificationFactory::newWarningNotification($content);
         return $this->notify(NotificationEvents::NOTIFICATION_WARNING, $notification);
     }
-
 }

@@ -25,5 +25,4 @@ class InfoButton extends AbstractButton{
     public function __construct() {
         parent::__construct(self::BUTTON_TYPE_INFO);
     }
-
 }

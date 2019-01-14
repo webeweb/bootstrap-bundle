@@ -51,5 +51,4 @@ abstract class AbstractGlyphiconTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("span", null, $attributes);
     }
-
 }

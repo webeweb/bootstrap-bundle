@@ -178,5 +178,4 @@ EOT;
         $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
     }
-
 }

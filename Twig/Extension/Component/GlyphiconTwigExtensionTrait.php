@@ -44,5 +44,4 @@ trait GlyphiconTwigExtensionTrait {
         $this->glyphiconTwigExtension = $glyphiconTwigExtension;
         return $this;
     }
-
 }

@@ -104,5 +104,4 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
             new Twig_SimpleFunction("bootstrapVariable", [$this, "bootstrapVariableFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

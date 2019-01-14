@@ -84,5 +84,4 @@ class RendererTwigExtension extends BaseTwigExtension {
         // Return the output.
         return $output;
     }
-
 }

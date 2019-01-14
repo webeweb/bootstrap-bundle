@@ -44,5 +44,4 @@ trait TypographyTwigExtensionTrait {
         $this->typographyTwigExtension = $typographyTwigExtension;
         return $this;
     }
-
 }

@@ -1116,5 +1116,4 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
     }
-
 }

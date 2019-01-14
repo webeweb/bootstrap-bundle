@@ -81,5 +81,4 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
     protected function bootstrapVariable($content) {
         return static::coreHTMLElement("var", $content);
     }
-
 }

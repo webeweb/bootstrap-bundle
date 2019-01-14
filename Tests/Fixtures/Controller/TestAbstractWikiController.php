@@ -55,5 +55,4 @@ class TestAbstractWikiController extends AbstractWikiController {
     public function getSyntaxHighlighterDefaults() {
         return parent::getSyntaxHighlighterDefaults();
     }
-
 }

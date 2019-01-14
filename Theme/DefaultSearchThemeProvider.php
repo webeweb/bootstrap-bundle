@@ -27,5 +27,4 @@ class DefaultSearchThemeProvider extends BaseSearchThemeProvider {
     public function __construct() {
         parent::__construct();
     }
-
 }

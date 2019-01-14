@@ -82,5 +82,4 @@ class NavTwigExtension extends AbstractNavTwigExtension {
             new Twig_SimpleFunction("bootstrapNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

@@ -50,5 +50,4 @@ class TypographyTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setTypographyTwigExtension($typographyTwigExtension);
         $this->assertSame($typographyTwigExtension, $obj->getTypographyTwigExtension());
     }
-
 }

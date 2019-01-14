@@ -50,5 +50,4 @@ class ProgressBarTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setProgressBarTwigExtension($progressBarTwigExtension);
         $this->assertSame($progressBarTwigExtension, $obj->getProgressBarTwigExtension());
     }
-
 }

@@ -30,5 +30,4 @@ class BreadcrumbNodeActionNewUser extends BreadcrumbNode {
     public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct("navigation.node.action.new", "g:plus", $route, $matcher);
     }
-
 }

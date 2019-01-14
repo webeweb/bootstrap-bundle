@@ -44,5 +44,4 @@ trait RendererTwigExtensionTrait {
         $this->rendererTwigExtension = $rendererTwigExtension;
         return $this;
     }
-
 }

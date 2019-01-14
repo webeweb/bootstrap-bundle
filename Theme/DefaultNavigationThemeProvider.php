@@ -27,5 +27,4 @@ class DefaultNavigationThemeProvider extends BaseNavigationThemeProvider {
     public function __construct() {
         parent::__construct();
     }
-
 }

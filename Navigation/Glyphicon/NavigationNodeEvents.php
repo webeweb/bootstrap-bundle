@@ -30,5 +30,4 @@ class NavigationNodeEvents extends NavigationNode {
     public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct("navigation.node.events", "g:calendar", $route, $matcher);
     }
-
 }

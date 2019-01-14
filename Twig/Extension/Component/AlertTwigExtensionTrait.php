@@ -44,5 +44,4 @@ trait AlertTwigExtensionTrait {
         $this->alertTwigExtension = $alertTwigExtension;
         return $this;
     }
-
 }

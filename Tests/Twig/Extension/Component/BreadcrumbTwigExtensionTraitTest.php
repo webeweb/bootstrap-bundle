@@ -50,5 +50,4 @@ class BreadcrumbTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setBreadcrumbTwigExtension($breadcrumbTwigExtension);
         $this->assertSame($breadcrumbTwigExtension, $obj->getBreadcrumbTwigExtension());
     }
-
 }

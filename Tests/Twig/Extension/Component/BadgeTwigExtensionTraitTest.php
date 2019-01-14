@@ -50,5 +50,4 @@ class BadgeTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setBadgeTwigExtension($badgeTwigExtension);
         $this->assertSame($badgeTwigExtension, $obj->getBadgeTwigExtension());
     }
-
 }

@@ -34,5 +34,4 @@ class SuccessButtonTest extends AbstractTestCase {
 
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
     }
-
 }

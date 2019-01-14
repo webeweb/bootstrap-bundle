@@ -111,5 +111,4 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
             new Twig_SimpleFunction("bootstrapRowButtonEdit", [$this, "bootstrapRowButtonEditFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

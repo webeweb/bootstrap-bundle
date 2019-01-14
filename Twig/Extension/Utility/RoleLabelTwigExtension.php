@@ -117,5 +117,4 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
             new Twig_SimpleFunction("bootstrapRoleLabel", [$this, "bootstrapRoleLabelFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

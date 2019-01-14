@@ -118,5 +118,4 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertEquals("warning", $res->getNotification()->getContent());
         $this->assertEquals(NotificationInterface::NOTIFICATION_WARNING, $res->getNotification()->getType());
     }
-
 }

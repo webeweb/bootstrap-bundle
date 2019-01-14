@@ -34,5 +34,4 @@ class PrimaryButtonTest extends AbstractTestCase {
 
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_PRIMARY, $obj->getType());
     }
-
 }

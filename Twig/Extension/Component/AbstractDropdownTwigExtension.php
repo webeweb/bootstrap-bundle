@@ -100,5 +100,4 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("li", $content, $attributes);
     }
-
 }

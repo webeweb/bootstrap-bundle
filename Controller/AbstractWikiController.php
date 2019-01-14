@@ -86,5 +86,4 @@ abstract class AbstractWikiController extends AbstractController {
     protected function getSyntaxHighlighterDefaults() {
         return new SyntaxHighlighterDefaults();
     }
-
 }

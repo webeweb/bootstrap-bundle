@@ -50,5 +50,4 @@ class CodeTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setCodeTwigExtension($codeTwigExtension);
         $this->assertSame($codeTwigExtension, $obj->getCodeTwigExtension());
     }
-
 }

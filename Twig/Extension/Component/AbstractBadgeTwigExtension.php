@@ -41,5 +41,4 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
     protected function bootstrapBadge($content) {
         return static::coreHTMLElement("span", $content, ["class" => "badge"]);
     }
-
 }

@@ -44,5 +44,4 @@ trait DropdownTwigExtensionTrait {
         $this->dropdownTwigExtension = $dropdownTwigExtension;
         return $this;
     }
-
 }

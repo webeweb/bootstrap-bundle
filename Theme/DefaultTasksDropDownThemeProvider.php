@@ -27,5 +27,4 @@ class DefaultTasksDropDownThemeProvider extends BaseTasksDropDownThemeProvider {
     public function __construct() {
         parent::__construct();
     }
-
 }

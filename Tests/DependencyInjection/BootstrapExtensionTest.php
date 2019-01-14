@@ -77,5 +77,4 @@ class BootstrapExtensionTest extends AbstractTestCase {
         // Renderer Twig extensions
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
     }
-
 }

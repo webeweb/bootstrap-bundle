@@ -185,5 +185,4 @@ abstract class AbstractButton implements ButtonInterface {
         $this->type = $type;
         return $this;
     }
-
 }

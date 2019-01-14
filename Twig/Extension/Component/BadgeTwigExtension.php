@@ -60,5 +60,4 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
             new Twig_SimpleFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
         ];
     }
-
 }

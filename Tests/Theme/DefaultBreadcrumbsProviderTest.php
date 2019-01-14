@@ -33,5 +33,4 @@ class DefaultBreadcrumbsThemeProviderTest extends AbstractTestCase {
 
         $this->assertNotNull($obj);
     }
-
 }
