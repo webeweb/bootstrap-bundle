@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Button;
 
+use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Button\TestButton;
 
@@ -29,7 +30,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TestButton("type");
+        $obj = new TestButton("danger");
 
         $this->assertFalse($obj->getActive());
         $this->assertFalse($obj->getBlock());
@@ -37,7 +38,7 @@ class AbstractButtonTest extends AbstractTestCase {
         $this->assertFalse($obj->getDisabled());
         $this->assertNull($obj->getSize());
         $this->assertNull($obj->getTitle());
-        $this->assertEquals("type", $obj->getType());
+        $this->assertEquals("danger", $obj->getType());
     }
 
     /**
@@ -101,8 +102,8 @@ class AbstractButtonTest extends AbstractTestCase {
 
         $obj = new TestButton("type");
 
-        $obj->setSize("size");
-        $this->assertEquals("size", $obj->getSize());
+        $obj->setSize(ButtonInterface::BUTTON_SIZE_LG);
+        $this->assertEquals(ButtonInterface::BUTTON_SIZE_LG, $obj->getSize());
     }
 
     /**
