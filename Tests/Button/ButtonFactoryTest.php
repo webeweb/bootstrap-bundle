@@ -24,6 +24,30 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 class ButtonFactoryTest extends AbstractTestCase {
 
     /**
+     * Arguments.
+     *
+     * @var array
+     */
+    private $args;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set the Arguments mock.
+        $this->args = [
+            "content"  => "content",
+            "title"    => "title",
+            "size"     => "lg",
+            "block"    => true,
+            "active"   => true,
+            "disabled" => true,
+        ];
+    }
+
+    /**
      * Tests the newDangerButton() method.
      *
      * @return void
@@ -98,6 +122,126 @@ class ButtonFactoryTest extends AbstractTestCase {
         $obj = ButtonFactory::newWarningButton();
 
         $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
+    }
+
+    /**
+     * Tests the parseDangerButton() method.
+     *
+     * @return void
+     */
+    public function testParseDangerButton() {
+
+        $obj = ButtonFactory::parseDangerButton($this->args);
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
+    }
+
+    /**
+     * Tests the parseDefaultButton() method.
+     *
+     * @return void
+     */
+    public function testParseDefaultButton() {
+
+        $obj = ButtonFactory::parseDefaultButton($this->args);
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_DEFAULT, $obj->getType());
+    }
+
+    /**
+     * Tests the parseInfoButton() method.
+     *
+     * @return void
+     */
+    public function testParseInfoButton() {
+
+        $obj = ButtonFactory::parseInfoButton($this->args);
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
+    }
+
+    /**
+     * Tests the parsePrimaryButton() method.
+     *
+     * @return void
+     */
+    public function testParsePrimaryButton() {
+
+        $obj = ButtonFactory::parsePrimaryButton($this->args);
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_PRIMARY, $obj->getType());
+    }
+
+    /**
+     * Tests the parseSuccessButton() method.
+     *
+     * @return void
+     */
+    public function testParseSuccessButton() {
+
+        $obj = ButtonFactory::parseSuccessButton($this->args);
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
+    }
+
+    /**
+     * Tests the parseWarningButton() method.
+     *
+     * @return void
+     */
+    public function testParseWarningButton() {
+
+        $obj = ButtonFactory::parseWarningButton($this->args);
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
     }
 }
