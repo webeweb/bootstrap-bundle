@@ -48,7 +48,6 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      */
     public function bootstrapGridFunction(array $args = []) {
 
-        // Initialize the output.
         $output = [];
 
         $output[] = $this->bootstrapGridStackedFunction($args);
@@ -56,7 +55,6 @@ class GridTwigExtension extends AbstractGridTwigExtension {
         $output[] = $this->bootstrapGridPushFunction($args);
         $output[] = $this->bootstrapGridPullFunction($args);
 
-        // Return the output.
         return trim(implode(" ", $output));
     }
 
