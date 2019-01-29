@@ -83,7 +83,6 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      */
     public function bootstrapButtonLinkFilter($button, $href = self::DEFAULT_HREF, $target = null) {
 
-        // Check if the button is disabled.
         if (1 === preg_match("/disabled=\"disabled\"/", $button)) {
 
             $searches = [" disabled=\"disabled\"", "class=\""];
@@ -92,11 +91,9 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             $button = StringHelper::replace($button, $searches, $replaces);
         }
 
-        // Initialize the replacments.
         $searches = ["<button", "type=\"button\"", "</button>"];
         $replaces = ["<a", "href=\"" . $href . "\"" . (null !== $target ? " target=\"" . $target . "\"" : ""), "</a>"];
 
-        // Return the HTML.
         return StringHelper::replace($button, $searches, $replaces);
     }
 
@@ -158,7 +155,10 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     public function getFilters() {
         return [
             new Twig_SimpleFilter("bootstrapButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("bsButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFilter("bootstrapButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("bsButtonSubmit", [$this, "bootstrapButtonSubmitFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -170,12 +170,25 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapButtonSuccess", [$this, "bootstrapButtonSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonSuccess", [$this, "bootstrapButtonSuccessFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapButtonWarning", [$this, "bootstrapButtonWarningFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonWarning", [$this, "bootstrapButtonWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
