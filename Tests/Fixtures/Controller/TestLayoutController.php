@@ -28,8 +28,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function blankAction() {
-
-        // Return the response.
         return $this->render("@Bootstrap/layout/blank.html.twig");
     }
 
@@ -40,13 +38,11 @@ class TestLayoutController extends AbstractController {
      */
     public function flashbagAction() {
 
-        // Notifiy
         $this->notifyDanger("Danger");
         $this->notifyInfo("Info");
         $this->notifySuccess("Success");
         $this->notifyWarning("Warning");
 
-        // Return th response.
         return $this->render("@Bootstrap/layout/flashbag.html.twig");
     }
 
@@ -56,8 +52,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function layout3Action() {
-
-        // Return the response.
         return $this->render("@Bootstrap/layout3.html.twig");
     }
 
@@ -67,8 +61,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function layout4Action() {
-
-        // Return the response.
         return $this->render("@Bootstrap/layout4.html.twig");
     }
 
@@ -78,8 +70,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function layoutAction() {
-
-        // Return the response.
         return $this->render("@Bootstrap/layout.html.twig");
     }
 
@@ -89,8 +79,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function twigConsoleAction() {
-
-        // Return the response.
         return $this->render("@Bootstrap/layout/twig-console.html.twig");
     }
 
@@ -100,8 +88,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function workInProgressAction() {
-
-        // Return the response.
         return $this->render("@Bootstrap/layout/work-in-progress.html.twig");
     }
 }
