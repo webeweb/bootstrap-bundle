@@ -40,7 +40,6 @@ abstract class AbstractGlyphiconTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapGlyphicon($name, $style) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"][]     = "glyphicon";
@@ -48,7 +47,6 @@ abstract class AbstractGlyphiconTwigExtension extends AbstractTwigExtension {
         $attributes["aria-hidden"] = "true";
         $attributes["style"]       = $style;
 
-        // Return the HTML.
         return static::coreHTMLElement("span", null, $attributes);
     }
 }

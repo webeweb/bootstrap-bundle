@@ -46,10 +46,8 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapProgressBar($content, $value, $min, $max, $striped, $animated, $class = null) {
 
-        // Initialize the template.
         $span = static::coreHTMLElement("span", $value . "%", ["class" => "sr-only"]);
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"]         = ["progress-bar", $class];
@@ -61,13 +59,10 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
         $attributes["aria-valuemin"] = $min;
         $attributes["aria-valuemax"] = $max . "%";
 
-        // Initialize the parameters.
         $innerHTML = null !== $content ? $content : $span;
 
-        // Initialize the template.
         $div = static::coreHTMLElement("div", $innerHTML, $attributes);
 
-        // Return the HTML.
         return static::coreHTMLElement("div", $div, ["class" => "progress"]);
     }
 }

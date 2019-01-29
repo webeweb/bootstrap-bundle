@@ -50,14 +50,11 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
      */
     private function bootstrapBreadcrumb(NavigationNode $node, $last) {
 
-        // Initialize the attributes.
         $attributes = true === $node->getActive() && true === $last ? ["class" => "active"] : [];
 
-        // Initialize the parameters.
         $content   = $this->getTranslator()->trans($node->getId());
         $innerHTML = true === $last ? $content : static::coreHTMLElement("a", $content, ["href" => $node->getUri()]);
 
-        // Return the HTML.
         return static::coreHTMLElement("li", $innerHTML, $attributes);
     }
 
@@ -69,24 +66,19 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapBreadcrumbs(NavigationTree $tree) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = ["breadcrumb"];
 
-        // Initialize the parameters.
         $innerHTML = [];
 
-        // Get the breadcrumb node.
         $nodes = NavigationTreeHelper::getBreadcrumbs($tree);
         $count = count($nodes);
 
-        // Handle each breadcrumb node.
         for ($i = 0; $i < $count; ++$i) {
             $innerHTML[] = $this->bootstrapBreadcrumb($nodes[$i], $count === $i + 1);
         }
 
-        // Return the HTML.
         return static::coreHTMLElement("ol", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
 }

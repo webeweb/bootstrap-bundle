@@ -45,10 +45,8 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapDropdownButton($content, $id, $expanded, $class) {
 
-        // Initailize the values.
         $classes = BootstrapBundle::getBootstrapConstants();
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"][]         = "btn";
@@ -60,10 +58,8 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
         $attributes["aria-haspopup"][] = "true";
         $attributes["aria-expanded"][] = StringHelper::parseBoolean($expanded);
 
-        // Initialize the parameters.
         $innerHTML = (null !== $content ? $content : "") . "<span class=\"caret\"></span>";
 
-        // Return the HTML.
         return static::coreHTMLElement("button", $innerHTML, $attributes);
     }
 
@@ -74,13 +70,11 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapDropdownDivider() {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = "divider";
         $attributes["role"]  = "separator";
 
-        // Return the HTML.
         return static::coreHTMLElement("li", null, $attributes);
     }
 
@@ -92,12 +86,10 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapDropdownHeader($content) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = "dropdown-header";
 
-        // Return the HTML.
         return static::coreHTMLElement("li", $content, $attributes);
     }
 }

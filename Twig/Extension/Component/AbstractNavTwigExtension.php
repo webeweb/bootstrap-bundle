@@ -45,27 +45,24 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap navs.
      *
-     * @param items $items The items.
+     * @param array $items The items.
      * @param string $class The class.
      * @param bool $stacked Stacked ?
      * @return string Returns the Bootstrap nav.
      */
     protected function bootstrapNavs(array $items, $class, $stacked) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"][] = "nav";
         $attributes["class"][] = $class;
         $attributes["class"][] = true === $stacked ? "nav-stacked" : null;
 
-        // Initialize the parameters.
         $innerHTML = [];
         foreach ($items as $current) {
             $innerHTML[] = $this->bootstrapNav($current);
         }
 
-        // Return the HTML.
         return static::coreHTMLElement("ul", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
 }

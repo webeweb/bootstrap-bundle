@@ -42,16 +42,13 @@ abstract class AbstractButtonGroupTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapButtonGroup($class, $role, array $buttons) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = $class;
         $attributes["role"]  = $role;
 
-        // Initialize the parameters.
         $innerHTML = "\n" . implode("\n", $buttons) . "\n";
 
-        // Return the HTML.
         return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
 }
