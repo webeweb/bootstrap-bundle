@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
+use Exception;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
@@ -44,6 +45,7 @@ class BootstrapExtensionTest extends AbstractTestCase {
      * Tests the load() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testLoad() {
 
