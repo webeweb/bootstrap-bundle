@@ -76,10 +76,8 @@ class WikiController extends AbstractWikiController {
      */
     public function indexAction($category, $package, $page) {
 
-        // Get the wiki views.
         $wikiViews = self::getWikiViews();
 
-        // Find and check the wiki view.
         $wikiView = WikiView::find($wikiViews, $category, $package, $page);
         if (null === $wikiView) {
 
@@ -91,7 +89,6 @@ class WikiController extends AbstractWikiController {
             $this->notifyInfo("You have been redirected to homepage");
         }
 
-        // Returns the response.
         return $this->render($wikiView->getView(), [
             "wikiViews"                 => $wikiViews,
             "wikiView"                  => $wikiView,

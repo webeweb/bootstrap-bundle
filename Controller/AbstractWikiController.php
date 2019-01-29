@@ -67,14 +67,11 @@ abstract class AbstractWikiController extends AbstractController {
      */
     protected function getSyntaxHighlighterConfig() {
 
-        // Get the SyntaxHighlighter strings provider.
         $provider = $this->get(SyntaxHighlighterStringsProvider::SERVICE_NAME);
 
-        // Initialize the SyntaxHighlighter config.
         $config = new SyntaxHighlighterConfig();
         $config->setStrings($provider->getSyntaxHighlighterStrings());
 
-        // Return the SyntaxHighlighter config.
         return $config;
     }
 
