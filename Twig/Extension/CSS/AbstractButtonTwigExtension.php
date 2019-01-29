@@ -40,15 +40,14 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
      * @param string $title The title.
      * @param string $size The size.
      * @param bool $block Block ?
-     * @param booelan $active Active ?
-     * @param booelan $disable Disable ?
+     * @param bool $active Active ?
+     * @param bool $disable Disable ?
      * @param string $class The class.
      * @param string $icon The icon.
      * @return string Returns the Bootstrap button.
      */
     protected function bootstrapButton($content, $title, $size, $block, $active, $disable, $class, $icon) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"]          = ["btn", $class];
@@ -61,11 +60,9 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
         $attributes["data-placement"] = null !== $title ? "top" : null;
         $attributes["disabled"]       = true === $disable ? "disabled" : null;
 
-        // Handle the parameters.
         $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon) : "";
         $innerHTML = null !== $content ? $content : "";
 
-        // Return the HTML.
         return static::coreHTMLElement("button", implode(" ", [$glyphicon, $innerHTML]), $attributes);
     }
 }

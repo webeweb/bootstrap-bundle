@@ -46,11 +46,9 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapGrid($lg, $md, $sm, $xs, $recopy, $prefix) {
 
-        // Initialize the values.
         $found  = null;
         $values = [&$lg, &$md, &$sm, &$xs];
 
-        // Handle each value.
         foreach ($values as &$current) {
             if (1 <= $current && $current <= 12) {
                 $found = $current;
@@ -60,7 +58,6 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
             }
         }
 
-        // Initialize the columns.
         $columns = [];
 
         $columns[] = GridHelper::getCSSClassname("lg", $lg, $prefix, 1, 12);
@@ -68,7 +65,6 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
         $columns[] = GridHelper::getCSSClassname("sm", $sm, $prefix, 1, 12);;
         $columns[] = GridHelper::getCSSClassname("xs", $xs, $prefix, 1, 12);;
 
-        // Return the columns.
         return trim(implode(" ", $columns));
     }
 }

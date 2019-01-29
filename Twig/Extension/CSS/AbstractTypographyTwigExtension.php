@@ -63,20 +63,16 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapHeading($size, $content, $description, $class) {
 
-        // Initialize the values.
         $sizes = [1, 2, 3, 4, 5, 6];
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"] = [$class];
 
-        // Initialize the parameters.
         $element   = "h" . (true === in_array($size, $sizes) ? $size : 1);
         $secondary = null !== $description ? " <small>" . $description . "</small>" : "";
         $innerHTML = (null !== $content ? $content : "") . $secondary;
 
-        // Return the HTML.
         return static::coreHTMLElement($element, $innerHTML, $attributes);
     }
 
