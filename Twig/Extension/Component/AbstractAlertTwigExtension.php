@@ -42,21 +42,17 @@ abstract class AbstractAlertTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapAlert($content, $dismissible, $class) {
 
-        // Initialize the templates.
         $span   = static::coreHTMLElement("span", "&times;", ["aria-hidden" => "true"]);
         $button = static::coreHTMLElement("button", $span, ["class" => "close", "type" => "button", "data-dismiss" => "alert", "aria-label" => "Close"]);
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"]   = ["alert", $class];
         $attributes["class"][] = true === $dismissible ? "alert-dismissible" : null;
         $attributes["role"]    = ["alert"];
 
-        // Initialize the parameters.
         $innerHTML = (true === $dismissible ? $button : "") . (null !== $content ? $content : "");
 
-        // Return the HTML.
         return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
 }

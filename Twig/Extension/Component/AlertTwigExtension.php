@@ -70,15 +70,12 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      */
     public function bootstrapAlertLinkFunction(array $args = []) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["href"] = ArrayHelper::get($args, "href", NavigationInterface::NAVIGATION_HREF_DEFAULT);
 
-        // Initialize the parameters.
         $innerHTML = ArrayHelper::get($args, "content");
 
-        // Return the HTML.
         return static::coreHTMLElement("a", $innerHTML, $attributes);
     }
 
@@ -110,10 +107,19 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapAlertLink", [$this, "bootstrapAlertLinkFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsAlertLink", [$this, "bootstrapAlertLinkFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
