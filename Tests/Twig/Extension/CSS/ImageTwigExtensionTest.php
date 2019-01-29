@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 
+use Exception;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
@@ -29,6 +30,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * Tests the bootstrapImageBase64Function() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testBootstrapImageBase64Function() {
 
@@ -89,6 +91,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * Tests the bootstrapImageBase64Function() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testBootstrapImageBase64FunctionWithSrc() {
 
@@ -168,11 +171,16 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapImageBase64", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapImageBase64Function"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bsImageBase64", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapImageBase64Function"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 }

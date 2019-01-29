@@ -51,28 +51,21 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      */
     private function base64Encode($uri) {
 
-        // Check the URI.
         if (null === $uri) {
             return null;
         }
 
-        // Initialize a SPL file object.
         $splFileObject = new SplFileObject($uri);
 
-        // Check the Kernel version.
         if (30100 < Kernel::VERSION_ID) {
-
-            // Use a Data URI normalizer.
             return (new DataUriNormalizer())->normalize($splFileObject);
         }
 
-        // Read the SPL file object.
         $data = "";
         while (false === $splFileObject->eof()) {
             $data .= $splFileObject->fgets();
         }
 
-        // Encode into base 64.
         return sprintf("data:%s;base64,%s", mime_content_type($uri), base64_encode($data));
     }
 
@@ -84,10 +77,8 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      */
     public function bootstrapImageBase64Function(array $args = []) {
 
-        // Initialize the src.
         $src = $this->base64Encode(ArrayHelper::get($args, "src"));
 
-        // Return the Bootstrap image.
         return $this->bootstrapImage($src, ArrayHelper::get($args, "alt"), ArrayHelper::get($args, "width"), ArrayHelper::get($args, "height"), ArrayHelper::get($args, "class"), ArrayHelper::get($args, "usemap"));
     }
 
@@ -99,6 +90,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
         ];
     }
 }
