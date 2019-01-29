@@ -99,11 +99,16 @@ EOT;
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
         $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapBreadcrumbs", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapBreadcrumbsFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bsBreadcrumbs", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapBreadcrumbsFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 }

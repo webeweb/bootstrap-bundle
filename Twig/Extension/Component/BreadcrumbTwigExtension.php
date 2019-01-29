@@ -65,6 +65,7 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
