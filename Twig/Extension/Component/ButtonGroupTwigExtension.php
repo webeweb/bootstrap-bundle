@@ -69,7 +69,10 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

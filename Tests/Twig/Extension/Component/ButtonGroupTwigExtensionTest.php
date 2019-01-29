@@ -56,7 +56,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtoionGroupBasicFunction() method.
+     * Tests the bootstrapButtonGroupBasicFunction() method.
      *
      * @return void
      */
@@ -75,7 +75,7 @@ EOT;
     }
 
     /**
-     * Tests the bootstrapButtoionGroupToolbarFunction() method.
+     * Tests the bootstrapButtonGroupToolbarFunction() method.
      *
      * @return void
      */
@@ -129,7 +129,7 @@ EOT;
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(2, $res);
+        $this->assertCount(4, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapButtonGroupBasic", $res[0]->getName());
@@ -137,8 +137,18 @@ EOT;
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapButtonGroupToolbar", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[1]->getCallable());
+        $this->assertEquals("bsButtonGroupBasic", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupBasicFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("bootstrapButtonGroupToolbar", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertEquals("bsButtonGroupToolbar", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
     }
 }
