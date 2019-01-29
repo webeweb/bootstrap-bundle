@@ -31,16 +31,13 @@ class GridHelper {
      */
     public static function getCSSClassname($size, $value, $suffix, $min = 1, $max = 12) {
 
-        // Check the value.
         if ($value < $min || $max < $value) {
             return null;
         }
 
-        // Initialize the values.
         $sizes    = ["lg", "md", "sm", "xs"];
         $suffixes = ["offset", "pull", "push", ""];
 
-        // Check the parameters.
         if (false === in_array($size, $sizes) || false === in_array($suffix, $suffixes)) {
             return null;
         }
@@ -48,7 +45,6 @@ class GridHelper {
             $suffix .= "-";
         }
 
-        // Returns the classname.
         return implode("-", ["col", $size, $suffix . $value]);
     }
 }
