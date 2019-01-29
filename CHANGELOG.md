@@ -3,14 +3,26 @@ CHANGELOG
 
 ### master
 
+- Add Alert Twig function aliases
+- Add Badge Twig function aliases
+- Add Button Twig function aliases
+- Add Button group Twig function aliases
 - Add Button enumerator
 - Add Button factory
 - Add Button interface
+- Add Code Twig function aliases
 - Add Danger button 
 - Add Default button 
+- Add Dropdown Twig function aliases
+- Add Glyphicon Twig function aliases
+- Add Image Twig function aliases
 - Add Info button 
+- Add Label Twig function aliases
+- Add Nav Twig function aliases
 - Add Primary button 
+- Add Progress bar Twig function aliases
 - Add Success button 
+- Add Typography Twig function aliases
 - Add Warning button 
 - Add Grid helper
 - Fix disable state with button link filter
