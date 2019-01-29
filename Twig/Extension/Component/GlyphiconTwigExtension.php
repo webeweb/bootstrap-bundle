@@ -59,6 +59,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
