@@ -109,11 +109,22 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapLabelDanger", [$this, "bootstrapLabelDangerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsLabelDanger", [$this, "bootstrapLabelDangerFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapLabelDefault", [$this, "bootstrapLabelDefaultFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsLabelDefault", [$this, "bootstrapLabelDefaultFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapLabelInfo", [$this, "bootstrapLabelInfoFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsLabelInfo", [$this, "bootstrapLabelInfoFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapLabelPrimary", [$this, "bootstrapLabelPrimaryFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsLabelPrimary", [$this, "bootstrapLabelPrimaryFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapLabelSuccess", [$this, "bootstrapLabelSuccessFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsLabelSuccess", [$this, "bootstrapLabelSuccessFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapLabelWarning", [$this, "bootstrapLabelWarningFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsLabelWarning", [$this, "bootstrapLabelWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
