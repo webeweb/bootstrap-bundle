@@ -88,11 +88,16 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapBadge", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("bsBadge", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 }
