@@ -77,8 +77,13 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapDropdownDivider", [$this, "bootstrapDropdownDividerFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsDropdownDivider", [$this, "bootstrapDropdownDividerFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapDropdownHeader", [$this, "bootstrapDropdownHeaderFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsDropdownHeader", [$this, "bootstrapDropdownHeaderFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
