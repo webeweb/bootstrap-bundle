@@ -83,7 +83,6 @@ class ButtonFactory {
      */
     public static function parseDangerButton(array $args) {
 
-        // Initialize the button.
         $button = static::newDangerButton();
 
         $button->setActive(ArrayHelper::get($args, "active", false));
@@ -93,7 +92,6 @@ class ButtonFactory {
         $button->setSize(ArrayHelper::get($args, "size"));
         $button->setTitle(ArrayHelper::get($args, "title"));
 
-        // Return the button.
         return $button;
     }
 
@@ -105,7 +103,6 @@ class ButtonFactory {
      */
     public static function parseDefaultButton(array $args) {
 
-        // Initialize the button.
         $button = static::newDefaultButton();
 
         $button->setActive(ArrayHelper::get($args, "active", false));
@@ -115,7 +112,6 @@ class ButtonFactory {
         $button->setSize(ArrayHelper::get($args, "size"));
         $button->setTitle(ArrayHelper::get($args, "title"));
 
-        // Return the button.
         return $button;
     }
 
@@ -127,7 +123,6 @@ class ButtonFactory {
      */
     public static function parseInfoButton(array $args) {
 
-        // Initialize the button.
         $button = static::newInfoButton();
 
         $button->setActive(ArrayHelper::get($args, "active", false));
@@ -137,7 +132,6 @@ class ButtonFactory {
         $button->setSize(ArrayHelper::get($args, "size"));
         $button->setTitle(ArrayHelper::get($args, "title"));
 
-        // Return the button.
         return $button;
     }
 
@@ -149,7 +143,6 @@ class ButtonFactory {
      */
     public static function parsePrimaryButton(array $args) {
 
-        // Initialize the button.
         $button = static::newPrimaryButton();
 
         $button->setActive(ArrayHelper::get($args, "active", false));
@@ -159,7 +152,6 @@ class ButtonFactory {
         $button->setSize(ArrayHelper::get($args, "size"));
         $button->setTitle(ArrayHelper::get($args, "title"));
 
-        // Return the button.
         return $button;
     }
 
@@ -171,7 +163,6 @@ class ButtonFactory {
      */
     public static function parseSuccessButton(array $args) {
 
-        // Initialize the button.
         $button = static::newSuccessButton();
 
         $button->setActive(ArrayHelper::get($args, "active", false));
@@ -181,7 +172,6 @@ class ButtonFactory {
         $button->setSize(ArrayHelper::get($args, "size"));
         $button->setTitle(ArrayHelper::get($args, "title"));
 
-        // Return the button.
         return $button;
     }
 
@@ -193,7 +183,6 @@ class ButtonFactory {
      */
     public static function parseWarningButton(array $args) {
 
-        // Initialize the button.
         $button = static::newWarningButton();
 
         $button->setActive(ArrayHelper::get($args, "active", false));
@@ -203,7 +192,6 @@ class ButtonFactory {
         $button->setSize(ArrayHelper::get($args, "size"));
         $button->setTitle(ArrayHelper::get($args, "title"));
 
-        // Return the button.
         return $button;
     }
 }
