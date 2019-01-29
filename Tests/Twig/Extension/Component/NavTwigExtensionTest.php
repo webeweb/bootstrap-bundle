@@ -161,7 +161,7 @@ EOT;
         $obj = new NavTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(3, $res);
+        $this->assertCount(6, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("bootstrapNavsJustified", $res[0]->getName());
@@ -169,13 +169,28 @@ EOT;
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("bootstrapNavsPills", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[1]->getCallable());
+        $this->assertEquals("bsNavsJustified", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsJustifiedFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("bootstrapNavsTabs", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapNavsPills", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertEquals("bsNavsPills", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("bootstrapNavsTabs", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertEquals("bsNavsTabs", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[5]->getCallable());
+        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
     }
 }

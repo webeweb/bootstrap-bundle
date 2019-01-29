@@ -78,8 +78,13 @@ class NavTwigExtension extends AbstractNavTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapNavsPills", [$this, "bootstrapNavsPillsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsNavsPills", [$this, "bootstrapNavsPillsFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
