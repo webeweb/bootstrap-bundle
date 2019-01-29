@@ -98,10 +98,19 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("bootstrapBasicBlock", [$this, "bootstrapBasicBlockFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsBasicBlock", [$this, "bootstrapBasicBlockFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapInline", [$this, "bootstrapInlineFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsInline", [$this, "bootstrapInlineFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapSampleOutput", [$this, "bootstrapSampleOutputFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsSampleOutput", [$this, "bootstrapSampleOutputFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapUserInput", [$this, "bootstrapUserInputFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsUserInput", [$this, "bootstrapUserInputFunction"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFunction("bootstrapVariable", [$this, "bootstrapVariableFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("bsVariable", [$this, "bootstrapVariableFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
