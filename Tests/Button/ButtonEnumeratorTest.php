@@ -15,6 +15,12 @@ use WBW\Bundle\BootstrapBundle\Button\ButtonEnumerator;
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
+/**
+ * Button enumerator test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\BootstrapBundle\Tests\Button
+ */
 class ButtonEnumeratorTest extends AbstractTestCase {
 
     /**
