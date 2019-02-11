@@ -30,11 +30,11 @@ CHANGELOG
 - Improve code style
 - Improve unit tests
 
-### 1.7.4 (2019-01-03)
+### [1.7.4](https://github.com/webeweb/bootstrap-bundle/tree/v1.7.4) (2019-01-03)
 
 - Fix public resources paths
 
-### 2.0.0 (2018-12-21)
+### [2.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.0.0) (2018-12-21)
 
 - Add Alert Twig extension trait (used for dependency injection into another service)
 - Add Badge Twig extension trait (used for dependency injection into another service)
@@ -166,22 +166,22 @@ CHANGELOG
 - Update Wiki
 - Zip public resources into assets folder
 
-### 1.7.3 (2018-10-04)
+### [1.7.3](https://github.com/webeweb/bootstrap-bundle/tree/v1.7.3) (2018-10-04)
 
 - Add parent() call into Twig templates
 - Improve PHPDoc
 
-### 1.7.2 (2018-10-01)
+### [1.7.2](https://github.com/webeweb/bootstrap-bundle/tree/v1.7.2) (2018-10-01)
 
 - Fix Layout controller functional tests
 - Replace some string delimiters
 
-### 1.7.1 (2018-10-01)
+### [1.7.1](https://github.com/webeweb/bootstrap-bundle/tree/v1.7.1) (2018-10-01)
 
 - Clean up dependencies
 - Update unit testing configuration
 
-### 1.7.0 (2018-09-28)
+### [1.7.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.7.0) (2018-09-28)
 
 - Add jQuery EasyAutocomplete public resource
 - Add Manager interface
@@ -192,46 +192,46 @@ CHANGELOG
 - Replace static:: by self:: call to avoid possible issues into child classes
 - Update Font Awesome public resource
 
-### 1.6.3 (2018-09-22)
+### [1.6.3](https://github.com/webeweb/bootstrap-bundle/tree/v1.6.3) (2018-09-22)
 
 - Restore icon into Navigation tree helper
 
-### 1.6.2 (2018-08-30)
+### [1.6.2](https://github.com/webeweb/bootstrap-bundle/tree/v1.6.2) (2018-08-30)
 
 - Update dependencies (Core library 4.2.0)
 
-### 1.6.1 (2018-08-22)
+### [1.6.1](https://github.com/webeweb/bootstrap-bundle/tree/v1.6.1) (2018-08-22)
 
 - Update dependencies (Core library 4.0.0)
 
-### 1.6.0 (2018-08-17)
+### [1.6.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.6.0) (2018-08-17)
 
 - Add Select2 helper (use to provide "results" array)
 - Move Wiki layout model
 - Update exception constructors
 
-### 1.5.3 (2018-08-16)
+### [1.5.3](https://github.com/webeweb/bootstrap-bundle/tree/v1.5.3) (2018-08-16)
 
 - Improve PHPDoc
 - Update exceptions inheritance
 - Update Nav Twig extension
 
-### 1.5.2 (2018-08-09)
+### [1.5.2](https://github.com/webeweb/bootstrap-bundle/tree/v1.5.2) (2018-08-09)
 
 - Remobe "bundle" into service names
 
-### 1.5.1 (2018-08-07)
+### [1.5.1](https://github.com/webeweb/bootstrap-bundle/tree/v1.5.1) (2018-08-07)
 
 - Update dependencies (Core library 3.0.0)
 - Update wiki layout template
 
-### 1.5.0 (2018-08-02)
+### [1.5.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.5.0) (2018-08-02)
 
 - Improve PHPDoc
 - Rename Form button Twig extension functions
 - Rename Table button Twig extension functions
 
-### 1.4.0 (2018-07-31)
+### [1.4.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.4.0) (2018-07-31)
 
 - Add Button Twig extension
 - Add Dropdown Twig extension
@@ -251,12 +251,12 @@ CHANGELOG
 - Replace StringUtility by bootstrapHTMLElement() into Twig extensions
 - Set services as public (Symfony ^4.0 compatibility)
 
-### 1.3.1 (2018-07-16)
+### [1.3.1](https://github.com/webeweb/bootstrap-bundle/tree/v1.3.1) (2018-07-16)
 
 - Fix possible issue into abstract Component Twig extension
 - Remove unused code
 
-### 1.3.0 (2018-07-16)
+### [1.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.3.0) (2018-07-16)
 
 - Add Button group Twig extension
 - Add Breadcrumb Twig extension
@@ -264,15 +264,15 @@ CHANGELOG
 - Prepare Nav Twig extension
 - Refactor getUser() method into Kernel event listener
 
-### 1.2.0 (2018-07-14)
+### [1.2.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.2.0) (2018-07-14)
 
 - Add regexp support and activeTree() into NavigationTree
 
-### 1.1.1 (2018-07-12)
+### [1.1.1](https://github.com/webeweb/bootstrap-bundle/tree/v1.1.1) (2018-07-12)
 
 - Fix possible issue into NavigationTree
 
-### 1.1.0 (2018-07-11)
+### [1.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.1.0) (2018-07-11)
 
 - Add activeNodes() into NavigationTree
 - Improve code indent
@@ -280,6 +280,6 @@ CHANGELOG
 - Move Form button Twig extension
 - Move Table button Twig extension
 
-### 1.0.0 (2018-07-10)
+### [1.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v1.0.0) (2018-07-10)
 
 - Initial release
