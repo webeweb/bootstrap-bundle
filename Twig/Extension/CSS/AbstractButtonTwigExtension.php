@@ -12,6 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use Twig_Environment;
+use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Button\ButtonRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
 
@@ -36,32 +38,26 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap button.
      *
-     * @param string $content The content.
-     * @param string $title The title.
-     * @param string $size The size.
-     * @param bool $block Block ?
-     * @param bool $active Active ?
-     * @param bool $disable Disable ?
-     * @param string $class The class.
+     * @param ButtonInterface $button The button.
      * @param string $icon The icon.
      * @return string Returns the Bootstrap button.
      */
-    protected function bootstrapButton($content, $title, $size, $block, $active, $disable, $class, $icon) {
+    protected function bootstrapButton(ButtonInterface $button, $icon) {
 
         $attributes = [];
 
-        $attributes["class"]          = ["btn", $class];
-        $attributes["class"][]        = true === $block ? "btn-block" : null;
-        $attributes["class"][]        = true === in_array($size, ["lg", "sm", "xs"]) ? "btn-" . $size : null;
-        $attributes["class"][]        = true === $active ? "active" : null;
-        $attributes["title"]          = $title;
+        $attributes["class"]          = ["btn", ButtonRenderer::renderType($button)];
+        $attributes["class"][]        = ButtonRenderer::renderBlock($button);
+        $attributes["class"][]        = ButtonRenderer::renderSize($button);
+        $attributes["class"][]        = ButtonRenderer::renderActive($button);
+        $attributes["title"]          = ButtonRenderer::renderTitle($button);
         $attributes["type"]           = "button";
-        $attributes["data-toggle"]    = null !== $title ? "tooltip" : null;
-        $attributes["data-placement"] = null !== $title ? "top" : null;
-        $attributes["disabled"]       = true === $disable ? "disabled" : null;
+        $attributes["data-toggle"]    = ButtonRenderer::renderDataToggle($button);
+        $attributes["data-placement"] = ButtonRenderer::renderDataPLacement($button);
+        $attributes["disabled"]       = ButtonRenderer::renderDisabled($button);
 
         $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon) : "";
-        $innerHTML = null !== $content ? $content : "";
+        $innerHTML = ButtonRenderer::renderContent($button);
 
         return static::coreHTMLElement("button", implode(" ", [$glyphicon, $innerHTML]), $attributes);
     }

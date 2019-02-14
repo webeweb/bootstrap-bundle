@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\BootstrapBundle;
+use WBW\Bundle\BootstrapBundle\Button\ButtonFactory;
 use WBW\Library\Core\Argument\ArrayHelper;
 use WBW\Library\Core\Argument\StringHelper;
 
@@ -50,7 +50,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the Bootstrap button "Danger".
      */
     public function bootstrapButtonDangerFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "active", false), ArrayHelper::get($args, "disable", false), "btn-" . BootstrapBundle::BOOTSTRAP_DANGER, ArrayHelper::get($args, "icon"));
+        return $this->bootstrapButton(ButtonFactory::parseDangerButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -60,7 +60,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the Bootstrap button "Default".
      */
     public function bootstrapButtonDefaultFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "active", false), ArrayHelper::get($args, "disable", false), "btn-" . BootstrapBundle::BOOTSTRAP_DEFAULT, ArrayHelper::get($args, "icon"));
+        return $this->bootstrapButton(ButtonFactory::parseDefaultButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -70,7 +70,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the Bootstrap button "Info".
      */
     public function bootstrapButtonInfoFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "active", false), ArrayHelper::get($args, "disable", false), "btn-" . BootstrapBundle::BOOTSTRAP_INFO, ArrayHelper::get($args, "icon"));
+        return $this->bootstrapButton(ButtonFactory::parseInfoButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -104,7 +104,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the Bootstrap button "Link".
      */
     public function bootstrapButtonLinkFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "active", false), ArrayHelper::get($args, "disable", false), "btn-link", ArrayHelper::get($args, "icon"));
+        return $this->bootstrapButton(ButtonFactory::parseLinkButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -114,7 +114,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the Bootstrap button "Primary".
      */
     public function bootstrapButtonPrimaryFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "active", false), ArrayHelper::get($args, "disable", false), "btn-" . BootstrapBundle::BOOTSTRAP_PRIMARY, ArrayHelper::get($args, "icon"));
+        return $this->bootstrapButton(ButtonFactory::parsePrimaryButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -134,7 +134,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the Bootstrap button "Success".
      */
     public function bootstrapButtonSuccessFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "active", false), ArrayHelper::get($args, "disable", false), "btn-" . BootstrapBundle::BOOTSTRAP_SUCCESS, ArrayHelper::get($args, "icon"));
+        return $this->bootstrapButton(ButtonFactory::parseSuccessButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -144,7 +144,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return string Returns the Bootstrap button "Warning".
      */
     public function bootstrapButtonWarningFunction(array $args = []) {
-        return $this->bootstrapButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "title"), ArrayHelper::get($args, "size", false), ArrayHelper::get($args, "block", false), ArrayHelper::get($args, "active", false), ArrayHelper::get($args, "disable", false), "btn-" . BootstrapBundle::BOOTSTRAP_WARNING, ArrayHelper::get($args, "icon"));
+        return $this->bootstrapButton(ButtonFactory::parseWarningButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
