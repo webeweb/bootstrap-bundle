@@ -87,6 +87,19 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the newLinkButton() method.
+     *
+     * @return void
+     */
+    public function testNewLinkButton() {
+
+        $obj = ButtonFactory::newLinkButton();
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_LINK, $obj->getType());
+    }
+
+    /**
      * Tests the newPrimaryButton() method.
      *
      * @return void
@@ -183,6 +196,26 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
+    }
+
+    /**
+     * Tests the parseLinkButton() method.
+     *
+     * @return void
+     */
+    public function testParseLinkButton() {
+
+        $obj = ButtonFactory::parseLinkButton($this->args);
+
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_LINK, $obj->getType());
     }
 
     /**
