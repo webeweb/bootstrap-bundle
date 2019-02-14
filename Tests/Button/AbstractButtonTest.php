@@ -48,7 +48,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetActive() {
 
-        $obj = new TestButton("type");
+        $obj = new TestButton("danger");
 
         $obj->setActive(true);
         $this->assertTrue($obj->getActive());
@@ -61,7 +61,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetBlock() {
 
-        $obj = new TestButton("type");
+        $obj = new TestButton("danger");
 
         $obj->setBlock(true);
         $this->assertTrue($obj->getBlock());
@@ -74,7 +74,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetContent() {
 
-        $obj = new TestButton("type");
+        $obj = new TestButton("danger");
 
         $obj->setContent("content");
         $this->assertEquals("content", $obj->getContent());
@@ -87,7 +87,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetDisabled() {
 
-        $obj = new TestButton("type");
+        $obj = new TestButton("danger");
 
         $obj->setDisabled(true);
         $this->assertTrue($obj->getDisabled());
@@ -100,10 +100,23 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetSize() {
 
-        $obj = new TestButton("type");
+        $obj = new TestButton("danger");
 
         $obj->setSize(ButtonInterface::BUTTON_SIZE_LG);
         $this->assertEquals(ButtonInterface::BUTTON_SIZE_LG, $obj->getSize());
+    }
+
+    /**
+     * Tests the setSize() method.
+     *
+     * @return void
+     */
+    public function testSetSizeWithBadArgument() {
+
+        $obj = new TestButton("danger");
+
+        $obj->setSize("exception");
+        $this->assertNotEquals("exception", $obj->getSize());
     }
 
     /**
@@ -113,9 +126,23 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetTitle() {
 
-        $obj = new TestButton("type");
+        $obj = new TestButton("danger");
 
         $obj->setTitle("title");
         $this->assertEquals("title", $obj->getTitle());
     }
+
+    /**
+     * Tests the setType() method.
+     *
+     * @return void
+     */
+    public function testSetTypeWithBadArgument() {
+
+        $obj = new TestButton("danger");
+
+        $obj->setType("exception");
+        $this->assertNotEquals("exception", $obj->getType());
+    }
+
 }
