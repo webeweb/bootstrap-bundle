@@ -36,7 +36,17 @@ class ButtonRenderer {
      * @return string|null Returns the rendered block.
      */
     public static function renderBlock(ButtonInterface $button) {
-        return true !== $button->getBlock() ? "btn-block" : null;
+        return true === $button->getBlock() ? "btn-block" : null;
+    }
+
+    /**
+     * Render a content.
+     *
+     * @param ButtonInterface $button The button.
+     * @return string|null Returns the rendered block.
+     */
+    public static function renderContent(ButtonInterface $button) {
+        return null !== $button->getContent() ? $button->getContent() : "";
     }
 
     /**
@@ -87,5 +97,15 @@ class ButtonRenderer {
      */
     public static function renderTitle(ButtonInterface $button) {
         return $button->getTitle();
+    }
+
+    /**
+     * Render a type.
+     *
+     * @param ButtonInterface $button The button.
+     * @return string Returns the rendered title.
+     */
+    public static function renderType(ButtonInterface $button) {
+        return null !== $button->getType() ? "btn-" . $button->getType() : null;
     }
 }
