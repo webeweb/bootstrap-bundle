@@ -31,6 +31,7 @@ CHANGELOG
 - Improve unit tests
 - Update Bootstrap 3 to 3.4.1
 - Update Bootstrap 4 to 4.3.1
+- Update Button Twig extension
 
 ### [1.7.4](https://github.com/webeweb/bootstrap-bundle/tree/v1.7.4) (2019-01-03)
 
