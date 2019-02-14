@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### [2.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.0.0) (2019-02-14)
+### [2.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.1.0) (2019-02-14)
 
 - Add Alert Twig function aliases
 - Add Badge Twig function aliases
