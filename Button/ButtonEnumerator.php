@@ -42,6 +42,7 @@ class ButtonEnumerator {
             ButtonInterface::BUTTON_TYPE_DANGER,
             ButtonInterface::BUTTON_TYPE_DEFAULT,
             ButtonInterface::BUTTON_TYPE_INFO,
+            ButtonInterface::BUTTON_TYPE_LINK,
             ButtonInterface::BUTTON_TYPE_PRIMARY,
             ButtonInterface::BUTTON_TYPE_SUCCESS,
             ButtonInterface::BUTTON_TYPE_WARNING,

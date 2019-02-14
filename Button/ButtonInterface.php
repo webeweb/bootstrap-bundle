@@ -25,48 +25,63 @@ interface ButtonInterface {
      * @var string
      */
     const BUTTON_SIZE_LG = "lg";
+
     /**
      * Button size "sm".
      *
      * @var string
      */
     const BUTTON_SIZE_SM = "sm";
+
     /**
      * Button size "xs".
      *
      * @var string
      */
     const BUTTON_SIZE_XS = "xs";
+
     /**
      * Button type "danger".
      *
      * @var string
      */
     const BUTTON_TYPE_DANGER = "danger";
+
     /**
      * Button type "default".
      *
      * @var string
      */
     const BUTTON_TYPE_DEFAULT = "default";
+
     /**
      * Button type "info".
      *
      * @var string
      */
     const BUTTON_TYPE_INFO = "info";
+
+    /**
+     * Button type "link".
+     *
+     * @var string
+     */
+    const BUTTON_TYPE_LINK = "link";
+
     /**
      * Button type "primary".
      *
      * @var string
      */
     const BUTTON_TYPE_PRIMARY = "primary";
+
     /**
      * Button type "success".
      *
      * @var string
      */
     const BUTTON_TYPE_SUCCESS = "success";
+
     /**
      * Button type "warning".
      *
