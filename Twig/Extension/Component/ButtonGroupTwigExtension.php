@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
 
 /**
@@ -29,15 +28,6 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.button_group";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays a Bootstrap button group "Basic".
