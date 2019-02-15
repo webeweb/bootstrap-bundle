@@ -36,7 +36,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
      * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    protected function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }

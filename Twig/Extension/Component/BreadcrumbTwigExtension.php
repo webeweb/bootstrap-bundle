@@ -12,8 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
@@ -33,16 +31,6 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.breadcrumb";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
-     */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
-        parent::__construct($twigEnvironment, $translator);
-    }
 
     /**
      * Displays a Bootstrap breadcrumbs.
