@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [2.1.1](https://github.com/webeweb/bootstrap-bundle/tree/v2.1.1) (2019-02-15)
+
+- Fix CSS overload into buttons (by setting unknown Bootstrap types and sizes)
+
+
 ### [2.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.1.0) (2019-02-14)
 
 - Add Alert Twig function aliases
