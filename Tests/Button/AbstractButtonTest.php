@@ -107,19 +107,6 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSize() method.
-     *
-     * @return void
-     */
-    public function testSetSizeWithBadArgument() {
-
-        $obj = new TestButton("danger");
-
-        $obj->setSize("exception");
-        $this->assertNotEquals("exception", $obj->getSize());
-    }
-
-    /**
      * Tests the setTitle() method.
      *
      * @return void
@@ -131,18 +118,4 @@ class AbstractButtonTest extends AbstractTestCase {
         $obj->setTitle("title");
         $this->assertEquals("title", $obj->getTitle());
     }
-
-    /**
-     * Tests the setType() method.
-     *
-     * @return void
-     */
-    public function testSetTypeWithBadArgument() {
-
-        $obj = new TestButton("danger");
-
-        $obj->setType("exception");
-        $this->assertNotEquals("exception", $obj->getType());
-    }
-
 }

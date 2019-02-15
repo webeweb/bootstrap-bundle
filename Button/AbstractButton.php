@@ -166,9 +166,6 @@ abstract class AbstractButton implements ButtonInterface {
      * {@inheritdoc}
      */
     public function setSize($size) {
-        if (false === in_array($size, ButtonEnumerator::enumSizes())) {
-            $size = null;
-        }
         $this->size = $size;
         return $this;
     }
@@ -185,9 +182,6 @@ abstract class AbstractButton implements ButtonInterface {
      * {@inheritdoc}
      */
     public function setType($type) {
-        if (false === in_array($type, ButtonEnumerator::enumTypes())) {
-            $type = null;
-        }
         $this->type = $type;
         return $this;
     }
