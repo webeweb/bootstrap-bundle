@@ -32,15 +32,6 @@ class RendererTwigExtension extends BaseTwigExtension {
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.renderer";
 
     /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
-
-    /**
      * Get the Twig filters.
      *
      * @return Twig_SimpleFilter[] Returns the Twig filters.
