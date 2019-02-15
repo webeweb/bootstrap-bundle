@@ -40,7 +40,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      *
      * @param Twig_Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
-     * @param ButtonComponentTwigExtension $extension The button component Twig extension.
+     * @param ButtonTwigExtension $extension The button Twig extension.
      */
     public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator, ButtonTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
