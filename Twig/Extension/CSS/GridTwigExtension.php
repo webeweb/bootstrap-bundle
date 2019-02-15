@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -30,15 +29,6 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.css.grid";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays a Bootstrap grid.

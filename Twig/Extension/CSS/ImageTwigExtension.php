@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use SplFileObject;
 use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -33,15 +33,6 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.css.image";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Encode an URI into base 64.

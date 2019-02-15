@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\BootstrapBundle\Button\ButtonFactory;
@@ -33,15 +32,6 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.bootstrap.twig.extension.css.button";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays a Bootstrap button "Danger".
