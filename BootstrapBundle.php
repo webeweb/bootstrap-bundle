@@ -26,6 +26,7 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
      * Bootstrap "Danger".
      *
      * @var string
+     * @deprecated since 2.2.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface} instead.
      */
     const BOOTSTRAP_DANGER = "danger";
 
@@ -33,6 +34,7 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
      * Bootstrap "Default".
      *
      * @var string
+     * @deprecated since 2.2.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface} instead.
      */
     const BOOTSTRAP_DEFAULT = "default";
 
@@ -40,6 +42,7 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
      * Bootstrap "Info".
      *
      * @var string
+     * @deprecated since 2.2.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface} instead.
      */
     const BOOTSTRAP_INFO = "info";
 
@@ -47,6 +50,7 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
      * Bootstrap "Primary".
      *
      * @var string
+     * @deprecated since 2.2.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface} instead.
      */
     const BOOTSTRAP_PRIMARY = "primary";
 
@@ -54,6 +58,7 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
      * Bootstrap "Success".
      *
      * @var string
+     * @deprecated since 2.2.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface} instead.
      */
     const BOOTSTRAP_SUCCESS = "success";
 
@@ -75,6 +80,7 @@ class BootstrapBundle extends Bundle implements AssetsProviderInterface {
      * Bootstrap "Warning".
      *
      * @var string
+     * @deprecated since 2.2.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface} instead.
      */
     const BOOTSTRAP_WARNING = "warning";
 

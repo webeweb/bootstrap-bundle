@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
+use WBW\Bundle\BootstrapBundle\BootstrapInterface;
 
 /**
  * Bootstrap bundle test.
@@ -28,12 +29,12 @@ class BootstrapBundleTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("danger", BootstrapBundle::BOOTSTRAP_DANGER);
-        $this->assertEquals("default", BootstrapBundle::BOOTSTRAP_DEFAULT);
-        $this->assertEquals("info", BootstrapBundle::BOOTSTRAP_INFO);
-        $this->assertEquals("primary", BootstrapBundle::BOOTSTRAP_PRIMARY);
-        $this->assertEquals("success", BootstrapBundle::BOOTSTRAP_SUCCESS);
-        $this->assertEquals("warning", BootstrapBundle::BOOTSTRAP_WARNING);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DANGER, BootstrapBundle::BOOTSTRAP_DANGER);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DEFAULT, BootstrapBundle::BOOTSTRAP_DEFAULT);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_INFO, BootstrapBundle::BOOTSTRAP_INFO);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_PRIMARY, BootstrapBundle::BOOTSTRAP_PRIMARY);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_SUCCESS, BootstrapBundle::BOOTSTRAP_SUCCESS);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_WARNING, BootstrapBundle::BOOTSTRAP_WARNING);
 
         $this->assertEquals("3.4.1", BootstrapBundle::BOOTSTRAP_VERSION_3);
         $this->assertEquals("4.3.1", BootstrapBundle::BOOTSTRAP_VERSION_4);
