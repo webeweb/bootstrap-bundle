@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Button;
 
+use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+
 /**
  * Button interface.
  *
@@ -45,21 +47,21 @@ interface ButtonInterface {
      *
      * @var string
      */
-    const BUTTON_TYPE_DANGER = "danger";
+    const BUTTON_TYPE_DANGER = BootstrapInterface::BOOTSTRAP_DANGER;
 
     /**
      * Button type "default".
      *
      * @var string
      */
-    const BUTTON_TYPE_DEFAULT = "default";
+    const BUTTON_TYPE_DEFAULT = BootstrapInterface::BOOTSTRAP_DEFAULT;
 
     /**
      * Button type "info".
      *
      * @var string
      */
-    const BUTTON_TYPE_INFO = "info";
+    const BUTTON_TYPE_INFO = BootstrapInterface::BOOTSTRAP_INFO;
 
     /**
      * Button type "link".
@@ -73,21 +75,21 @@ interface ButtonInterface {
      *
      * @var string
      */
-    const BUTTON_TYPE_PRIMARY = "primary";
+    const BUTTON_TYPE_PRIMARY = BootstrapInterface::BOOTSTRAP_PRIMARY;
 
     /**
      * Button type "success".
      *
      * @var string
      */
-    const BUTTON_TYPE_SUCCESS = "success";
+    const BUTTON_TYPE_SUCCESS = BootstrapInterface::BOOTSTRAP_SUCCESS;
 
     /**
      * Button type "warning".
      *
      * @var string
      */
-    const BUTTON_TYPE_WARNING = "warning";
+    const BUTTON_TYPE_WARNING = BootstrapInterface::BOOTSTRAP_WARNING;
 
     /**
      * Get the active.
@@ -132,9 +134,9 @@ interface ButtonInterface {
     public function getTitle();
 
     /**
-     * Get the class.
+     * Get the type.
      *
-     * @return string Returns the class.
+     * @return string Returns the type.
      */
     public function getType();
 
@@ -187,9 +189,9 @@ interface ButtonInterface {
     public function setTitle($title);
 
     /**
-     * Set the class.
+     * Set the type.
      *
-     * @param string $class The class.
+     * @param string $class The type.
      * @return ButtonInterface Returns this button.
      */
     public function setType($class);

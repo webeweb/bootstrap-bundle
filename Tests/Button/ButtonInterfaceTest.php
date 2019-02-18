@@ -9,8 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Button;
+namespace WBW\Bundle\BootstrapBundle\Tests\Button;
 
+use WBW\Bundle\BootstrapBundle\BootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
@@ -18,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
  * Button interface test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package Button
+ * @package WBW\Bundle\BootstrapBundle\Tests\Button
  */
 class ButtonInterfaceTest extends AbstractTestCase {
 
@@ -33,12 +34,12 @@ class ButtonInterfaceTest extends AbstractTestCase {
         $this->assertEquals("sm", ButtonInterface::BUTTON_SIZE_SM);
         $this->assertEquals("xs", ButtonInterface::BUTTON_SIZE_XS);
 
-        $this->assertEquals("danger", ButtonInterface::BUTTON_TYPE_DANGER);
-        $this->assertEquals("default", ButtonInterface::BUTTON_TYPE_DEFAULT);
-        $this->assertEquals("info", ButtonInterface::BUTTON_TYPE_INFO);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DANGER, ButtonInterface::BUTTON_TYPE_DANGER);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DEFAULT, ButtonInterface::BUTTON_TYPE_DEFAULT);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_INFO, ButtonInterface::BUTTON_TYPE_INFO);
         $this->assertEquals("link", ButtonInterface::BUTTON_TYPE_LINK);
-        $this->assertEquals("primary", ButtonInterface::BUTTON_TYPE_PRIMARY);
-        $this->assertEquals("success", ButtonInterface::BUTTON_TYPE_SUCCESS);
-        $this->assertEquals("warning", ButtonInterface::BUTTON_TYPE_WARNING);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_PRIMARY, ButtonInterface::BUTTON_TYPE_PRIMARY);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_SUCCESS, ButtonInterface::BUTTON_TYPE_SUCCESS);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_WARNING, ButtonInterface::BUTTON_TYPE_WARNING);
     }
 }
