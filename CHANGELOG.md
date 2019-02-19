@@ -1,10 +1,18 @@
 CHANGELOG
 =========
 
-### master
+### [2.2.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.2.0) (2019-02-19)
 
 - Add Bootstrap interface
+- Add Danger progress bar
+- Add FOSUser breadcrumb nodes
+- Add Info progress bar
+- Add Progress bar factory
 - Add Progress bar interface
+- Add Progress bar renderer
+- Add Success progress bar
+- Add Warning progress bar
+- Update Progress bar Twig extension
 
 ### [2.1.1](https://github.com/webeweb/bootstrap-bundle/tree/v2.1.1) (2019-02-15)
 
