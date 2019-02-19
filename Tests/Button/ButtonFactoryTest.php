@@ -13,6 +13,13 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Button;
 
 use WBW\Bundle\BootstrapBundle\Button\ButtonFactory;
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Button\DangerButton;
+use WBW\Bundle\BootstrapBundle\Button\DefaultButton;
+use WBW\Bundle\BootstrapBundle\Button\InfoButton;
+use WBW\Bundle\BootstrapBundle\Button\LinkButton;
+use WBW\Bundle\BootstrapBundle\Button\PrimaryButton;
+use WBW\Bundle\BootstrapBundle\Button\SuccessButton;
+use WBW\Bundle\BootstrapBundle\Button\WarningButton;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
@@ -56,8 +63,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::newDangerButton();
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
+        $this->assertInstanceOf(DangerButton::class, $obj);
     }
 
     /**
@@ -69,8 +75,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::newDefaultButton();
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_DEFAULT, $obj->getType());
+        $this->assertInstanceOf(DefaultButton::class, $obj);
     }
 
     /**
@@ -82,8 +87,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::newInfoButton();
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
+        $this->assertInstanceOf(InfoButton::class, $obj);
     }
 
     /**
@@ -95,8 +99,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::newLinkButton();
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_LINK, $obj->getType());
+        $this->assertInstanceOf(LinkButton::class, $obj);
     }
 
     /**
@@ -108,8 +111,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::newPrimaryButton();
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_PRIMARY, $obj->getType());
+        $this->assertInstanceOf(PrimaryButton::class, $obj);
     }
 
     /**
@@ -121,8 +123,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::newSuccessButton();
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
+        $this->assertInstanceOf(SuccessButton::class, $obj);
     }
 
     /**
@@ -134,8 +135,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::newWarningButton();
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
+        $this->assertInstanceOf(WarningButton::class, $obj);
     }
 
     /**
@@ -147,7 +147,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::parseDangerButton($this->args);
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertInstanceOf(DangerButton::class, $obj);
 
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
@@ -167,7 +167,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::parseDefaultButton($this->args);
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertInstanceOf(DefaultButton::class, $obj);
 
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
@@ -187,7 +187,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::parseInfoButton($this->args);
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertInstanceOf(InfoButton::class, $obj);
 
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
@@ -207,7 +207,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::parseLinkButton($this->args);
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertInstanceOf(LinkButton::class, $obj);
 
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
@@ -227,7 +227,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::parsePrimaryButton($this->args);
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertInstanceOf(PrimaryButton::class, $obj);
 
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
@@ -247,7 +247,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::parseSuccessButton($this->args);
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertInstanceOf(SuccessButton::class, $obj);
 
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
@@ -267,7 +267,7 @@ class ButtonFactoryTest extends AbstractTestCase {
 
         $obj = ButtonFactory::parseWarningButton($this->args);
 
-        $this->assertInstanceOf(ButtonInterface::class, $obj);
+        $this->assertInstanceOf(WarningButton::class, $obj);
 
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
