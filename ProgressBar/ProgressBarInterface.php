@@ -142,7 +142,7 @@ interface ProgressBarInterface {
      * Set the type.
      *
      * @param string $class The type.
-     * @return ButtonInterface Returns this button.
+     * @return ProgressBarInterface Returns this progress bar.
      */
     public function setType($class);
 
