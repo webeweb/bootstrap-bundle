@@ -43,7 +43,7 @@ class ButtonRenderer {
      * Render a content.
      *
      * @param ButtonInterface $button The button.
-     * @return string|null Returns the rendered block.
+     * @return string Returns the rendered block.
      */
     public static function renderContent(ButtonInterface $button) {
         return null !== $button->getContent() ? $button->getContent() : "";
@@ -103,7 +103,7 @@ class ButtonRenderer {
      * Render a type.
      *
      * @param ButtonInterface $button The button.
-     * @return string Returns the rendered title.
+     * @return string|null Returns the rendered type.
      */
     public static function renderType(ButtonInterface $button) {
         return null !== $button->getType() ? "btn-" . $button->getType() : null;
