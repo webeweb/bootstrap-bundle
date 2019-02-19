@@ -12,8 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig_SimpleFunction;
-use WBW\Bundle\BootstrapBundle\BootstrapBundle;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarFactory;
 
 /**
  * Progress bar Twig extension.
@@ -38,7 +37,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @return string Returns the Bootstrap progress bar "Basic".
      */
     public function bootstrapProgressBarBasicFunction(array $args = []) {
-        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false));
+        return $this->bootstrapProgressBar(ProgressBarFactory::parseBasicProgressBar($args));
     }
 
     /**
@@ -48,7 +47,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @return string Returns the Bootstrap progress bar "Danger".
      */
     public function bootstrapProgressBarDangerFunction(array $args = []) {
-        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false), "progress-bar-" . BootstrapBundle::BOOTSTRAP_DANGER);
+        return $this->bootstrapProgressBar(ProgressBarFactory::parseDangerProgressBar($args));
     }
 
     /**
@@ -58,7 +57,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @return string Returns the Bootstrap progress bar "Info".
      */
     public function bootstrapProgressBarInfoFunction(array $args = []) {
-        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false), "progress-bar-" . BootstrapBundle::BOOTSTRAP_INFO);
+        return $this->bootstrapProgressBar(ProgressBarFactory::parseInfoProgressBar($args));
     }
 
     /**
@@ -68,7 +67,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @return string Returns the Bootstrap progress bar "Success".
      */
     public function bootstrapProgressBarSuccessFunction(array $args = []) {
-        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false), "progress-bar-" . BootstrapBundle::BOOTSTRAP_SUCCESS);
+        return $this->bootstrapProgressBar(ProgressBarFactory::parseSuccessProgressBar($args));
     }
 
     /**
@@ -78,7 +77,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @return string Returns the Bootstrap progress bar "Warning".
      */
     public function bootstrapProgressBarWarningFunction(array $args = []) {
-        return $this->bootstrapProgressBar(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "value", 50), ArrayHelper::get($args, "min", 0), ArrayHelper::get($args, "max", 100), ArrayHelper::get($args, "striped", false), ArrayHelper::get($args, "animated", false), "progress-bar-" . BootstrapBundle::BOOTSTRAP_WARNING);
+        return $this->bootstrapProgressBar(ProgressBarFactory::parseWarningProgressBar($args));
     }
 
     /**

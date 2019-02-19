@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -25,31 +27,25 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap progress bar.
      *
-     * @param string $content The content.
-     * @param int $value The value.
-     * @param int $min The min.
-     * @param int $max The max.
-     * @param bool $striped Striped ?
-     * @param bool $animated Animated ?
-     * @param string $class The class.
+     * @param ProgressBarInterface $progressBar The progress bar.
      * @return string Returns the Bootstrap progress bar.
      */
-    protected function bootstrapProgressBar($content, $value, $min, $max, $striped, $animated, $class = null) {
+    protected function bootstrapProgressBar(ProgressBarInterface $progressBar) {
 
-        $span = static::coreHTMLElement("span", $value . "%", ["class" => "sr-only"]);
+        $span = static::coreHTMLElement("span", $progressBar->getValue() . "%", ["class" => "sr-only"]);
 
         $attributes = [];
 
-        $attributes["class"]         = ["progress-bar", $class];
-        $attributes["class"][]       = true === $striped ? "progress-bar-striped" : null;
-        $attributes["class"][]       = true === $animated ? "active" : null;
-        $attributes["style"]         = "width: " . $value . "%;";
+        $attributes["class"]         = ["progress-bar", ProgressBarRenderer::renderType($progressBar)];
+        $attributes["class"][]       = ProgressBarRenderer::renderStriped($progressBar);
+        $attributes["class"][]       = ProgressBarRenderer::renderAnimated($progressBar);
+        $attributes["style"]         = ProgressBarRenderer::renderStyle($progressBar);
         $attributes["role"]          = "progressbar";
-        $attributes["aria-valuenow"] = $value;
-        $attributes["aria-valuemin"] = $min;
-        $attributes["aria-valuemax"] = $max . "%";
+        $attributes["aria-valuenow"] = $progressBar->getValue();
+        $attributes["aria-valuemin"] = $progressBar->getMin();
+        $attributes["aria-valuemax"] = $progressBar->getMax() . "%";
 
-        $innerHTML = null !== $content ? $content : $span;
+        $innerHTML = ProgressBarRenderer::renderContent($progressBar, $span);
 
         $div = static::coreHTMLElement("div", $innerHTML, $attributes);
 
