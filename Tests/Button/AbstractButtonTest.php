@@ -32,10 +32,11 @@ class AbstractButtonTest extends AbstractTestCase {
 
         $obj = new TestButton("danger");
 
-        $this->assertFalse($obj->getActive());
-        $this->assertFalse($obj->getBlock());
+        $this->assertNull($obj->getActive());
+        $this->assertNull($obj->getBlock());
         $this->assertNull($obj->getContent());
-        $this->assertFalse($obj->getDisabled());
+        $this->assertNull($obj->getDisabled());
+        $this->assertEquals("btn-", $obj->getPrefix());
         $this->assertNull($obj->getSize());
         $this->assertNull($obj->getTitle());
         $this->assertEquals("danger", $obj->getType());

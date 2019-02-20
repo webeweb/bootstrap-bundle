@@ -120,6 +120,13 @@ interface ButtonInterface {
     public function getDisabled();
 
     /**
+     * Get the prefix.
+     *
+     * @return string Returns the prefix.
+     */
+    public function getPrefix();
+
+    /**
      * Get the size.
      *
      * @return string Returns the size.

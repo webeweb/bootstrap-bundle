@@ -106,6 +106,6 @@ class ButtonRenderer {
      * @return string|null Returns the rendered type.
      */
     public static function renderType(ButtonInterface $button) {
-        return null !== $button->getType() ? "btn-" . $button->getType() : null;
+        return null !== $button->getType() ? $button->getPrefix() . $button->getType() : null;
     }
 }

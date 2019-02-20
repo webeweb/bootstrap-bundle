@@ -75,9 +75,6 @@ abstract class AbstractButton implements ButtonInterface {
      * @param string type.
      */
     protected function __construct($type) {
-        $this->setActive(false);
-        $this->setBlock(false);
-        $this->setDisabled(false);
         $this->setType($type);
     }
 
@@ -107,6 +104,13 @@ abstract class AbstractButton implements ButtonInterface {
      */
     public function getDisabled() {
         return $this->disabled;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPrefix() {
+        return "btn-";
     }
 
     /**
