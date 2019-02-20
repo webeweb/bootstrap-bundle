@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [2.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.3.0) (2019-02-20)
+
+- Add getPrefix() method into Button interface
+- Add getPrefix() method into Progress bar interface
+
 ### [2.2.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.2.0) (2019-02-19)
 
 - Add Bootstrap interface
