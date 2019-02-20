@@ -35,6 +35,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getMax());
         $this->assertNull($obj->getMin());
+        $this->assertEquals("progress-bar-", $obj->getPrefix());
         $this->assertNull($obj->getStriped());
         $this->assertEquals("type", $obj->getType());
         $this->assertNull($obj->getValue());

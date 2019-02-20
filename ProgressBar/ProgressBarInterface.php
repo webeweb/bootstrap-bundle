@@ -78,6 +78,13 @@ interface ProgressBarInterface {
     public function getMin();
 
     /**
+     * Get the prefix.
+     *
+     * @return string Returns the prefix.
+     */
+    public function getPrefix();
+
+    /**
      * Get the striped.
      *
      * @return bool Returns the striped.

@@ -109,6 +109,13 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     /**
      * {@inheritdoc}
      */
+    public function getPrefix() {
+        return "progress-bar-";
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getStriped() {
         return $this->striped;
     }

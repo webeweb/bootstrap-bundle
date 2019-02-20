@@ -30,16 +30,6 @@ class ProgressBarRenderer {
     }
 
     /**
-     * Render a striped.
-     *
-     * @param ProgressBarInterface $progressBar The progress bar.
-     * @return string|null Returns the rendered striped.
-     */
-    public static function renderStriped(ProgressBarInterface $progressBar) {
-        return true === $progressBar->getStriped() ? "progress-bar-striped" : null;
-    }
-
-    /**
      * Render a content.
      *
      * @param ProgressBarInterface $progressBar The progress bar.
@@ -48,6 +38,16 @@ class ProgressBarRenderer {
      */
     public static function renderContent(ProgressBarInterface $progressBar, $default) {
         return null !== $progressBar->getContent() ? $progressBar->getContent() : $default;
+    }
+
+    /**
+     * Render a striped.
+     *
+     * @param ProgressBarInterface $progressBar The progress bar.
+     * @return string|null Returns the rendered striped.
+     */
+    public static function renderStriped(ProgressBarInterface $progressBar) {
+        return true === $progressBar->getStriped() ? "progress-bar-striped" : null;
     }
 
     /**
@@ -67,6 +67,6 @@ class ProgressBarRenderer {
      * @return string|null Returns the rendered type.
      */
     public static function renderType(ProgressBarInterface $progressBar) {
-        return null !== $progressBar->getType() ? "progress-bar-" . $progressBar->getType() : null;
+        return null !== $progressBar->getType() ? $progressBar->getPrefix() . $progressBar->getType() : null;
     }
 }
