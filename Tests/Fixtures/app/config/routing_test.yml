@@ -1,4 +1,8 @@
 # Tests/Fixtures/app/config/routing_test.yml
+bootstrap_wiki:
+    prefix:   "/"
+    resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"
+
 bootstrap_blank_action:
     path:     "/blank"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
@@ -33,7 +37,3 @@ bootstrap_work_in_progress_action:
     path:     "/work-in-progress"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::workInProgressAction" }
     methods:  ["GET"]
-
-bootstrap_wiki:
-    prefix:   "/"
-    resource: "@BootstrapBundle/Resources/config/routing/wiki.yml"
