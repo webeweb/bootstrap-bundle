@@ -155,9 +155,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ mkdir bootstrap-bundle
+$ git clone https://github.com/webeweb/bootstrap-bundle.git
 $ cd bootstrap-bundle
-$ git clone https://github.com/webeweb/bootstrap-bundle.git .
 $ composer install
 ```
 
