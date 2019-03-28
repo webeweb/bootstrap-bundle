@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
 
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension;
@@ -113,19 +113,19 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(3, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("bootstrapFormButtonCancel", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapFormButtonCancelFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
         $this->assertEquals("bootstrapFormButtonDefault", $res[1]->getName());
         $this->assertEquals([$obj, "bootstrapFormButtonDefaultFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
         $this->assertEquals("bootstrapFormButtonSubmit", $res[2]->getName());
         $this->assertEquals([$obj, "bootstrapFormButtonSubmitFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
     }
 }

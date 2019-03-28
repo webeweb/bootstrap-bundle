@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\HttpFoundation\Request;
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
 
@@ -48,12 +48,12 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

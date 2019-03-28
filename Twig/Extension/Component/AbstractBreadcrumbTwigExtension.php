@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
@@ -33,10 +33,10 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }

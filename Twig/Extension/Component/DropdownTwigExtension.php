@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -62,18 +62,18 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapDropdownDivider", [$this, "bootstrapDropdownDividerFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsDropdownDivider", [$this, "bootstrapDropdownDividerFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapDropdownDivider", [$this, "bootstrapDropdownDividerFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsDropdownDivider", [$this, "bootstrapDropdownDividerFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapDropdownHeader", [$this, "bootstrapDropdownHeaderFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsDropdownHeader", [$this, "bootstrapDropdownHeaderFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapDropdownHeader", [$this, "bootstrapDropdownHeaderFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsDropdownHeader", [$this, "bootstrapDropdownHeaderFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -43,12 +43,12 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

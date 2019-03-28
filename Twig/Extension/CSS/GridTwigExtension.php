@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -91,15 +91,15 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapGridOffset", [$this, "bootstrapGridOffsetFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapGridPull", [$this, "bootstrapGridPullFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapGridPush", [$this, "bootstrapGridPushFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapGridStacked", [$this, "bootstrapGridStackedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapGridOffset", [$this, "bootstrapGridOffsetFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapGridPull", [$this, "bootstrapGridPullFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapGridPush", [$this, "bootstrapGridPushFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapGridStacked", [$this, "bootstrapGridStackedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

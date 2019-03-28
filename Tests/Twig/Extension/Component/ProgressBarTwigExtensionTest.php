@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension;
 
@@ -202,54 +202,54 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(10, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("bootstrapProgressBarBasic", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarBasicFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
         $this->assertEquals("bsProgressBarBasic", $res[1]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarBasicFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
         $this->assertEquals("bootstrapProgressBarDanger", $res[2]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarDangerFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertInstanceOf(TwigFunction::class, $res[3]);
         $this->assertEquals("bsProgressBarDanger", $res[3]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarDangerFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertInstanceOf(TwigFunction::class, $res[4]);
         $this->assertEquals("bootstrapProgressBarInfo", $res[4]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarInfoFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertInstanceOf(TwigFunction::class, $res[5]);
         $this->assertEquals("bsProgressBarInfo", $res[5]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarInfoFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertInstanceOf(TwigFunction::class, $res[6]);
         $this->assertEquals("bootstrapProgressBarSuccess", $res[6]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarSuccessFunction"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertInstanceOf(TwigFunction::class, $res[7]);
         $this->assertEquals("bsProgressBarSuccess", $res[7]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarSuccessFunction"], $res[7]->getCallable());
-        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[8]);
+        $this->assertInstanceOf(TwigFunction::class, $res[8]);
         $this->assertEquals("bootstrapProgressBarWarning", $res[8]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarWarningFunction"], $res[8]->getCallable());
-        $this->assertEquals(["html"], $res[8]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[9]);
+        $this->assertInstanceOf(TwigFunction::class, $res[9]);
         $this->assertEquals("bsProgressBarWarning", $res[9]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarWarningFunction"], $res[9]->getCallable());
-        $this->assertEquals(["html"], $res[9]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
     }
 }

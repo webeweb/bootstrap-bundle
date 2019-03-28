@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
@@ -127,9 +127,9 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(1, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("bootstrapRoleLabel", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapRoleLabelFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
     }
 }

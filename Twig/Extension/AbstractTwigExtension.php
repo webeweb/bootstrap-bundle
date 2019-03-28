@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtension;
 
 /**
@@ -26,9 +26,9 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      */
-    public function __construct(Twig_Environment $twigEnvironment) {
+    public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
     }
 }

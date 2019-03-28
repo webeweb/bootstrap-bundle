@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension;
 
@@ -189,54 +189,54 @@ class CodeTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(10, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("bootstrapBasicBlock", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapBasicBlockFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
         $this->assertEquals("bsBasicBlock", $res[1]->getName());
         $this->assertEquals([$obj, "bootstrapBasicBlockFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
         $this->assertEquals("bootstrapInline", $res[2]->getName());
         $this->assertEquals([$obj, "bootstrapInlineFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertInstanceOf(TwigFunction::class, $res[3]);
         $this->assertEquals("bsInline", $res[3]->getName());
         $this->assertEquals([$obj, "bootstrapInlineFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertInstanceOf(TwigFunction::class, $res[4]);
         $this->assertEquals("bootstrapSampleOutput", $res[4]->getName());
         $this->assertEquals([$obj, "bootstrapSampleOutputFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertInstanceOf(TwigFunction::class, $res[5]);
         $this->assertEquals("bsSampleOutput", $res[5]->getName());
         $this->assertEquals([$obj, "bootstrapSampleOutputFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[6]);
+        $this->assertInstanceOf(TwigFunction::class, $res[6]);
         $this->assertEquals("bootstrapUserInput", $res[6]->getName());
         $this->assertEquals([$obj, "bootstrapUserInputFunction"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[7]);
+        $this->assertInstanceOf(TwigFunction::class, $res[7]);
         $this->assertEquals("bsUserInput", $res[7]->getName());
         $this->assertEquals([$obj, "bootstrapUserInputFunction"], $res[7]->getCallable());
-        $this->assertEquals(["html"], $res[7]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[8]);
+        $this->assertInstanceOf(TwigFunction::class, $res[8]);
         $this->assertEquals("bootstrapVariable", $res[8]->getName());
         $this->assertEquals([$obj, "bootstrapVariableFunction"], $res[8]->getCallable());
-        $this->assertEquals(["html"], $res[8]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[9]);
+        $this->assertInstanceOf(TwigFunction::class, $res[9]);
         $this->assertEquals("bsVariable", $res[9]->getName());
         $this->assertEquals([$obj, "bootstrapVariableFunction"], $res[9]->getCallable());
-        $this->assertEquals(["html"], $res[9]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
     }
 }

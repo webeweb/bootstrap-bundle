@@ -14,8 +14,8 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
-use Twig_SimpleFunction;
+use Twig\Environment;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtensionTrait;
 use WBW\Library\Core\Argument\StringHelper;
@@ -40,11 +40,11 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      * @param LabelTwigExtension $extension The label component Twig extension.
      */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator, LabelTwigExtension $extension) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator, LabelTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
         $this->setLabelTwigExtension($extension);
     }
@@ -110,11 +110,11 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapRoleLabel", [$this, "bootstrapRoleLabelFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapRoleLabel", [$this, "bootstrapRoleLabelFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

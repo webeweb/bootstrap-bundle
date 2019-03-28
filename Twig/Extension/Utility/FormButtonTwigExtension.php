@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
-use Twig_SimpleFunction;
+use Twig\Environment;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtensionTrait;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -38,11 +38,11 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      * @param TranslatorInterface $translator The translator.
      * @param ButtonTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(Twig_Environment $twigEnvironment, TranslatorInterface $translator, ButtonTwigExtension $extension) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator, ButtonTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
         $this->setButtonTwigExtension($extension);
     }
@@ -101,13 +101,13 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapFormButtonCancel", [$this, "bootstrapFormButtonCancelFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapFormButtonDefault", [$this, "bootstrapFormButtonDefaultFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bootstrapFormButtonSubmit", [$this, "bootstrapFormButtonSubmitFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapFormButtonCancel", [$this, "bootstrapFormButtonCancelFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapFormButtonDefault", [$this, "bootstrapFormButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapFormButtonSubmit", [$this, "bootstrapFormButtonSubmitFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

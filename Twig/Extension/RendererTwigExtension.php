@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
-use Twig_Environment;
-use Twig_SimpleFilter;
+use Twig\Environment;
+use Twig\TwigFilter;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension as BaseTwigExtension;
 
@@ -34,7 +34,7 @@ class RendererTwigExtension extends BaseTwigExtension {
     /**
      * Get the Twig filters.
      *
-     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters() {
         return [];
@@ -43,12 +43,12 @@ class RendererTwigExtension extends BaseTwigExtension {
     /**
      * Render an icon.
      *
-     * @param Twig_Environment $twigEnvironment The twig environment.
+     * @param Environment $twigEnvironment The twig environment.
      * @param string $name The icon name.
      * @param string $style The icon style.
      * @return string Returns a rendered icon.
      */
-    public static function renderIcon(Twig_Environment $twigEnvironment, $name, $style = null) {
+    public static function renderIcon(Environment $twigEnvironment, $name, $style = null) {
 
         // Determines the handler.
         $handler = explode(":", $name);

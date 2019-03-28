@@ -15,7 +15,7 @@ use SplFileObject;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -39,6 +39,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      *
      * @param string $uri The URI.
      * @return string Returns the URI encoded into base 64.
+     * @throws ExceptionInterface Throws an exception if an error occurs
      */
     private function base64Encode($uri) {
 
@@ -65,6 +66,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap base 64 image.
+     * @throws ExceptionInterface Throws an exception if an error occurs
      */
     public function bootstrapImageBase64Function(array $args = []) {
 
@@ -76,12 +78,12 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
         ];
     }
 }

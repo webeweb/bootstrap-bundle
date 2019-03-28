@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -173,51 +173,51 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapBold", [$this, "bootstrapBoldFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsBold", [$this, "bootstrapBoldFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapBold", [$this, "bootstrapBoldFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsBold", [$this, "bootstrapBoldFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsDeleted", [$this, "bootstrapDeletedFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsHeading1", [$this, "bootstrapHeading1Function"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsHeading2", [$this, "bootstrapHeading2Function"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsHeading3", [$this, "bootstrapHeading3Function"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsHeading4", [$this, "bootstrapHeading4Function"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsHeading5", [$this, "bootstrapHeading5Function"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsHeading6", [$this, "bootstrapHeading6Function"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsInserted", [$this, "bootstrapInsertedFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsItalic", [$this, "bootstrapItalicFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsMarked", [$this, "bootstrapMarkedFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsSmall", [$this, "bootstrapSmallFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapStrikethrough", [$this, "bootstrapStrikethroughFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsStrikethrough", [$this, "bootstrapStrikethroughFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapStrikethrough", [$this, "bootstrapStrikethroughFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsStrikethrough", [$this, "bootstrapStrikethroughFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsUnderlined", [$this, "bootstrapUnderlinedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

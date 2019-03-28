@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -44,12 +44,12 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

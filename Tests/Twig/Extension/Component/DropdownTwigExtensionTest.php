@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
-use Twig_Node;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension;
 
@@ -188,34 +188,34 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(6, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("bootstrapDropdownButton", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapDropdownButtonFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
         $this->assertEquals("bsDropdownButton", $res[1]->getName());
         $this->assertEquals([$obj, "bootstrapDropdownButtonFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
         $this->assertEquals("bootstrapDropdownDivider", $res[2]->getName());
         $this->assertEquals([$obj, "bootstrapDropdownDividerFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertInstanceOf(TwigFunction::class, $res[3]);
         $this->assertEquals("bsDropdownDivider", $res[3]->getName());
         $this->assertEquals([$obj, "bootstrapDropdownDividerFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertInstanceOf(TwigFunction::class, $res[4]);
         $this->assertEquals("bootstrapDropdownHeader", $res[4]->getName());
         $this->assertEquals([$obj, "bootstrapDropdownHeaderFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[5]);
+        $this->assertInstanceOf(TwigFunction::class, $res[5]);
         $this->assertEquals("bsDropdownHeader", $res[5]->getName());
         $this->assertEquals([$obj, "bootstrapDropdownHeaderFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
     }
 }

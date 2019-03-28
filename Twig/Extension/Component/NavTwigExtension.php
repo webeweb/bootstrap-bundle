@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -63,18 +63,18 @@ class NavTwigExtension extends AbstractNavTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapNavsPills", [$this, "bootstrapNavsPillsFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsNavsPills", [$this, "bootstrapNavsPillsFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapNavsPills", [$this, "bootstrapNavsPillsFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsNavsPills", [$this, "bootstrapNavsPillsFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsNavsTabs", [$this, "bootstrapNavsTabsFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

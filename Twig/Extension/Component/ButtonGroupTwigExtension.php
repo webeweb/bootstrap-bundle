@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 
 /**
  * Button group Twig extension.
@@ -54,15 +54,15 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("bootstrapButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
 
-            new Twig_SimpleFunction("bootstrapButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("bsButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonGroupToolbar", [$this, "bootstrapButtonGroupToolbarFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
