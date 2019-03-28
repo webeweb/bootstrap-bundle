@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [2.3.1](https://github.com/webeweb/bootstrap-bundle/tree/v2.3.0) (2019-03-28)
 
+- Fix deprecated Twig classes
 - Improve PHPDoc
 
 ### [2.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.3.0) (2019-02-20)
