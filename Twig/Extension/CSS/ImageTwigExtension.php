@@ -76,7 +76,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
     /**
      * Get the Twig functions.
      *
-     * @return array Returns the Twig functions.
+     * @return Twig_SimpleFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
