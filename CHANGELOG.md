@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [2.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.3.0) (2019-02-20)
 
 - Add getPrefix() method into Button interface
