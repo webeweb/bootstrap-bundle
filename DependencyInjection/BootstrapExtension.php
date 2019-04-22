@@ -25,6 +25,13 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 class BootstrapExtension extends Extension {
 
     /**
+     * {@inheritDoc}
+     */
+    public function getAlias() {
+        return "wbw_" . parent::getAlias();
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function load(array $configs, ContainerBuilder $container) {

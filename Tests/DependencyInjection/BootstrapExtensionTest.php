@@ -42,6 +42,18 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
 class BootstrapExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the getAlias() method.
+     *
+     * @return void
+     */
+    public function testGetAlias() {
+
+        $obj = new BootstrapExtension();
+
+        $this->assertEquals("wbw_bootstrap", $obj->getAlias());
+    }
+
+    /**
      * Tests the load() method.
      *
      * @return void
