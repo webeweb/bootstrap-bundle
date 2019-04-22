@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\BootstrapBundle;
+use WBW\Bundle\BootstrapBundle\Button\ButtonEnumerator;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
@@ -35,7 +35,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapDropdownButton($content, $id, $expanded, $class) {
 
-        $classes = BootstrapBundle::getBootstrapConstants();
+        $classes = ButtonEnumerator::enumTypes();
 
         $attributes = [];
 

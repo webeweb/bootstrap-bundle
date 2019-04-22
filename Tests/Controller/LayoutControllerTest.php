@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
-use WBW\Bundle\BootstrapBundle\BootstrapBundle;
+use WBW\Bundle\BootstrapBundle\BootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 
 /**
@@ -88,8 +88,8 @@ EOT;
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
         // Check the Bootstrap version.
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapInterface::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapInterface::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
     }
 
     /**
@@ -107,8 +107,8 @@ EOT;
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
         // Check the Bootstrap version.
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
     }
 
     /**
@@ -126,8 +126,8 @@ EOT;
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
         // Check the Bootstrap version.
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
-        $this->assertContains(BootstrapBundle::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapInterface::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
+        $this->assertContains(BootstrapInterface::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
     }
 
     /**

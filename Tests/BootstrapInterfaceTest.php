@@ -28,6 +28,9 @@ class BootstrapInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("3.4.1", BootstrapInterface::BOOTSTRAP_VERSION_3);
+        $this->assertEquals("4.3.1", BootstrapInterface::BOOTSTRAP_VERSION_4);
+
         $this->assertEquals("danger", BootstrapInterface::BOOTSTRAP_DANGER);
         $this->assertEquals("default", BootstrapInterface::BOOTSTRAP_DEFAULT);
         $this->assertEquals("info", BootstrapInterface::BOOTSTRAP_INFO);
