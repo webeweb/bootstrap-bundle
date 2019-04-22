@@ -59,7 +59,7 @@ class WikiController extends AbstractWikiController {
 
         // Handle each wiki view.
         foreach ($tableContents as $current) {
-            $current->setBundle("Bootstrap");
+            $current->setBundle("WBWBootstrap");
         }
 
         // Return the table of contents.

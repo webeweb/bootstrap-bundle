@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle
  */
-class BootstrapBundle extends Bundle implements AssetsProviderInterface {
+class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {
 
     /**
      * {@inheritdoc}

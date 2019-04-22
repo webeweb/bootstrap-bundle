@@ -1,7 +1,7 @@
 {# Resources/views/Wiki/layout.html.twig #}
-{% extends "@Bootstrap/layout3.html.twig" %}
+{% extends "@WBWBootstrap/layout3.html.twig" %}
 
-{% import "@Bootstrap/Wiki/macros.html.twig" as wiki %}
+{% import "@WBWBootstrap/Wiki/macros.html.twig" as wiki %}
 
 {% block bootstrapStylesheets %}
     {{ parent() }}
@@ -34,7 +34,7 @@
             {% if (0 < app.session.flashbag.peekAll()|length) %}
                 <div class="row clearfix">
                     <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
-                        {% include "@Bootstrap/layout/flashbag.html.twig" %}
+                        {% include "@WBWBootstrap/layout/flashbag.html.twig" %}
                     </div>
                 </div>
             {% endif %}
@@ -53,14 +53,14 @@
                 <div class="{{ bootstrapGrid({"lg": 3, "md": 4, "sm": 4, "xs": 12}) }}">
                     <div class="list-group">
                         {% for wikiView in wikiViews %}
-                            {% set _url = path("bootstrap_wiki_index", {"category": wikiView.category, "package": wikiView.package, "page": wikiView.page}) %}
+                            {% set _url = path("wbw_bootstrap_wiki_index", {"category": wikiView.category, "package": wikiView.package, "page": wikiView.page}) %}
                             {% set _act = _url == app.request.requestUri %}
                             <a class="list-group-item{{ _act ? " active" : "" }}" href="{{ _url }}">{{ bootstrapBadge({"content": wikiView.package}) }}{{ wikiView.title }}</a>
                         {% endfor %}
                     </div>
                 </div>
             </div>
-            {% include "@Bootstrap/layout/twig-console.html.twig" %}
+            {% include "@WBWBootstrap/layout/twig-console.html.twig" %}
         </div>
     </section>
 {% endblock %}

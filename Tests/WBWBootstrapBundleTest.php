@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
-use WBW\Bundle\BootstrapBundle\BootstrapBundle;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests
  */
-class BootstrapBundleTest extends AbstractTestCase {
+class WBWBootstrapBundleTest extends AbstractTestCase {
 
     /**
      * Tests the getAssetsRelativeDirectory() method.
@@ -29,7 +29,7 @@ class BootstrapBundleTest extends AbstractTestCase {
      */
     public function testGetAssetsRelativeDirectory() {
 
-        $obj = new BootstrapBundle();
+        $obj = new WBWBootstrapBundle();
 
         $res = "/Resources/assets";
         $this->assertEquals($res, $obj->getAssetsRelativeDirectory());
@@ -42,7 +42,7 @@ class BootstrapBundleTest extends AbstractTestCase {
      */
     public function testGetContainerExtension() {
 
-        $obj = new BootstrapBundle();
+        $obj = new WBWBootstrapBundle();
 
         $res = $obj->getContainerExtension();
         $this->assertInstanceOf(BootstrapExtension::class, $res);

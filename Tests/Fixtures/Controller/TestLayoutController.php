@@ -28,7 +28,7 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function blankAction() {
-        return $this->render("@Bootstrap/layout/blank.html.twig");
+        return $this->render("@WBWBootstrap/layout/blank.html.twig");
     }
 
     /**
@@ -43,7 +43,7 @@ class TestLayoutController extends AbstractController {
         $this->notifySuccess("Success");
         $this->notifyWarning("Warning");
 
-        return $this->render("@Bootstrap/layout/flashbag.html.twig");
+        return $this->render("@WBWBootstrap/layout/flashbag.html.twig");
     }
 
     /**
@@ -52,7 +52,7 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function layout3Action() {
-        return $this->render("@Bootstrap/layout3.html.twig");
+        return $this->render("@WBWBootstrap/layout3.html.twig");
     }
 
     /**
@@ -61,7 +61,7 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function layout4Action() {
-        return $this->render("@Bootstrap/layout4.html.twig");
+        return $this->render("@WBWBootstrap/layout4.html.twig");
     }
 
     /**
@@ -70,7 +70,7 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function layoutAction() {
-        return $this->render("@Bootstrap/layout.html.twig");
+        return $this->render("@WBWBootstrap/layout.html.twig");
     }
 
     /**
@@ -79,7 +79,7 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function twigConsoleAction() {
-        return $this->render("@Bootstrap/layout/twig-console.html.twig");
+        return $this->render("@WBWBootstrap/layout/twig-console.html.twig");
     }
 
     /**
@@ -88,6 +88,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function workInProgressAction() {
-        return $this->render("@Bootstrap/layout/work-in-progress.html.twig");
+        return $this->render("@WBWBootstrap/layout/work-in-progress.html.twig");
     }
 }

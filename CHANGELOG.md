@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### master
+
+- Better support of Symfony's bundle recommendations
+- Remove deprecated constants
+
 ### [2.3.1](https://github.com/webeweb/bootstrap-bundle/tree/v2.3.0) (2019-03-28)
 
 - Fix deprecated Twig classes
