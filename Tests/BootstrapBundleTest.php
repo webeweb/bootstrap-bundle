@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use WBW\Bundle\BootstrapBundle\BootstrapBundle;
+use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
 
 /**
  * Bootstrap bundle test.
@@ -32,5 +33,18 @@ class BootstrapBundleTest extends AbstractTestCase {
 
         $res = "/Resources/assets";
         $this->assertEquals($res, $obj->getAssetsRelativeDirectory());
+    }
+
+    /**
+     * Tests the getContainerExtension() method.
+     *
+     * @return void
+     */
+    public function testGetContainerExtension() {
+
+        $obj = new BootstrapBundle();
+
+        $res = $obj->getContainerExtension();
+        $this->assertInstanceOf(BootstrapExtension::class, $res);
     }
 }
