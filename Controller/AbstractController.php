@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
 abstract class AbstractController extends BaseController {
 
     /**
-     * Notify "Danger".
+     * Notify "danger".
      *
      * @param string $content The content.
      * @return Event Returns the event.
@@ -37,7 +37,7 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * Notify "Info".
+     * Notify "info".
      *
      * @param string $content The content.
      * @return Event Returns the event.
@@ -48,7 +48,7 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * Notify "Success".
+     * Notify "success".
      *
      * @param string $content The content.
      * @return Event Returns the event.
@@ -59,7 +59,7 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * Notify "Warning".
+     * Notify "warning".
      *
      * @param string $content The content.
      * @return Event Returns the event.
