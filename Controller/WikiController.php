@@ -29,40 +29,33 @@ class WikiController extends AbstractWikiController {
      */
     public static function getWikiViews() {
 
-        // Initialize the table of contents.
         $tableContents = [];
 
-        // Twig extensions > CSS
         $tableContents[] = new WikiView("Twig-extension", "CSS", "button", "Button");
         $tableContents[] = new WikiView("twig-extension", "CSS", "code", "Code");
         $tableContents[] = new WikiView("Twig-extension", "CSS", "grid", "Grid");
         $tableContents[] = new WikiView("Twig-extension", "CSS", "image", "Image");
         $tableContents[] = new WikiView("Twig-extension", "CSS", "typography", "Typography");
 
-        // Twig extensions > Component
         $tableContents[] = new WikiView("Twig-extension", "Component", "alert", "Alert");
         $tableContents[] = new WikiView("Twig-extension", "Component", "badge", "Badge");
         $tableContents[] = new WikiView("Twig-extension", "Component", "glyphicon", "Glyphicon");
         $tableContents[] = new WikiView("Twig-extension", "Component", "label", "Label");
         $tableContents[] = new WikiView("Twig-extension", "Component", "progress-bar", "Progress bar");
 
-        // Twig extensions > Utility
         $tableContents[] = new WikiView("Twig-extension", "Utility", "form-button", "Form button");
         $tableContents[] = new WikiView("Twig-extension", "Utility", "role-label", "Role label");
         $tableContents[] = new WikiView("Twig-extension", "Utility", "table-button", "Table button");
 
-        // Twig extensions > Plugin
         $tableContents[] = new WikiView("Twig-extension", "Plugin", "font-awesome", "Font Awesome");
         $tableContents[] = new WikiView("Twig-extension", "Plugin", "jquery-inputmask", "jQuery InputMask");
         $tableContents[] = new WikiView("Twig-extension", "Plugin", "material-design-iconic-font", "Material Design Iconic Font");
         $tableContents[] = new WikiView("Twig-extension", "Plugin", "meteocons", "Meteocons");
 
-        // Handle each wiki view.
         foreach ($tableContents as $current) {
             $current->setBundle("WBWBootstrap");
         }
 
-        // Return the table of contents.
         return $tableContents;
     }
 
@@ -84,7 +77,6 @@ class WikiController extends AbstractWikiController {
             // Set a default wiki view.
             $wikiView = $wikiViews[0];
 
-            // Notify the user.
             $this->notifyDanger("The requested page was not found");
             $this->notifyInfo("You have been redirected to homepage");
         }
