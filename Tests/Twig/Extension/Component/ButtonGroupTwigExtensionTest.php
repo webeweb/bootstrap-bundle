@@ -102,7 +102,7 @@ EOT;
 
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

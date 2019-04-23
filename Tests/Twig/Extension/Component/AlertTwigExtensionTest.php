@@ -201,7 +201,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.bootstrap.twig.extension.component.alert", AlertTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.alert", AlertTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

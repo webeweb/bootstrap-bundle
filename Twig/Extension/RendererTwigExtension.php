@@ -29,7 +29,7 @@ class RendererTwigExtension extends BaseTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.renderer";
+    const SERVICE_NAME = "wbw.bootstrap.twig.extension.renderer";
 
     /**
      * Get the Twig filters.

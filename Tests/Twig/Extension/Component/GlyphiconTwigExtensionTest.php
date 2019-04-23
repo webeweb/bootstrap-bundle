@@ -61,7 +61,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
 
         $obj = new GlyphiconTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.bootstrap.twig.extension.component.glyphicon", GlyphiconTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.glyphicon", GlyphiconTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

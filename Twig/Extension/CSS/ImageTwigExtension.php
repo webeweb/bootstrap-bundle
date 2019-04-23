@@ -32,7 +32,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.css.image";
+    const SERVICE_NAME = "wbw.bootstrap.twig.extension.css.image";
 
     /**
      * Encode an URI into base 64.

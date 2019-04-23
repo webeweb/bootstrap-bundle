@@ -71,7 +71,7 @@ EOT;
 
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
-        $this->assertEquals("webeweb.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->translator, $obj->getTranslator());
     }

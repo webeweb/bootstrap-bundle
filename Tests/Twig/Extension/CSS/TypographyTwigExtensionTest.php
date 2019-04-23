@@ -677,7 +677,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.bootstrap.twig.extension.css.typography", TypographyTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.bootstrap.twig.extension.css.typography", TypographyTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

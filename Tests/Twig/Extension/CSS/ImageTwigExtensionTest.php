@@ -157,7 +157,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

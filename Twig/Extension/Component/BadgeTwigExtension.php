@@ -28,7 +28,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.badge";
+    const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.badge";
 
     /**
      * Displays a Bootstrap badge.

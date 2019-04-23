@@ -1,4 +1,4 @@
-# Resources/translations/BootstrapBundle.en.yml
+# Resources/translations/WBWBootstrapBundle.en.yml
 label:
     account_settings:  "Profil utilisateur"
     cancel:            "Annuler"

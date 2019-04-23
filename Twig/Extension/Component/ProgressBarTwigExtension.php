@@ -28,7 +28,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.progress_bar";
+    const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.progress_bar";
 
     /**
      * Displays a Bootstrap progress bar "Basic".

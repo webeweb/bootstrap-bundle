@@ -28,7 +28,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.bootstrap.twig.extension.component.nav";
+    const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.nav";
 
     /**
      * Displays a Bootstrap navs "Justified".
