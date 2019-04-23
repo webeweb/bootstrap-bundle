@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
+use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
@@ -34,6 +34,6 @@ class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {
      * {@inheritDoc}
      */
     public function getContainerExtension() {
-        return new BootstrapExtension();
+        return new WBWBootstrapExtension();
     }
 }

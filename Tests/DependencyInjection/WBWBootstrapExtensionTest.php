@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
 use Exception;
-use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
+use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension;
@@ -39,19 +39,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Tests\DependencyInjection
  */
-class BootstrapExtensionTest extends AbstractTestCase {
-
-    /**
-     * Tests the getAlias() method.
-     *
-     * @return void
-     */
-    public function testGetAlias() {
-
-        $obj = new BootstrapExtension();
-
-        $this->assertEquals("wbw_bootstrap", $obj->getAlias());
-    }
+class WBWBootstrapExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the load() method.
@@ -61,7 +49,7 @@ class BootstrapExtensionTest extends AbstractTestCase {
      */
     public function testLoad() {
 
-        $obj = new BootstrapExtension();
+        $obj = new WBWBootstrapExtension();
 
         $obj->load([], $this->containerBuilder);
 

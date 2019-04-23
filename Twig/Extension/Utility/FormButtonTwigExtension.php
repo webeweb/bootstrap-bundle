@@ -48,32 +48,27 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap form button "Cancel".
+     * Displays a Bootstrap form button "cancel".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap form button "Cancel".
      */
     public function bootstrapFormButtonCancelFunction(array $args = []) {
 
-        // Translate the label.
-        $txt = $this->getTranslator()->trans("label.cancel", [], "BootstrapBundle");
-
-        // Initialize the button.
+        $txt = $this->getTranslator()->trans("label.cancel", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "g:remove"]);
 
-        // Return the HTML.
         return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
-     * Displays a Bootstrap form buttons "Default".
+     * Displays a Bootstrap form buttons "default".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap form button "Default".
      */
     public function bootstrapFormButtonDefaultFunction(array $args = []) {
 
-        // Initialize the buttons.
         $cancelButton = $this->bootstrapFormButtonCancelFunction(["href" => ArrayHelper::get($args, "cancel_href")]);
         $submitButton = $this->bootstrapFormButtonSubmitFunction();
 
@@ -82,19 +77,15 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap form button "Submit".
+     * Displays a Bootstrap form button "submit".
      *
      * @return string Returns the Bootstrap form button "Submit".
      */
     public function bootstrapFormButtonSubmitFunction() {
 
-        // Translate the label.
-        $txt = $this->getTranslator()->trans("label.submit", [], "BootstrapBundle");
-
-        // Initialize the button.
+        $txt = $this->getTranslator()->trans("label.submit", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "g:ok"]);
 
-        // Return the HTML.
         return $this->getButtonTwigExtension()->bootstrapButtonSubmitFilter($but);
     }
 

@@ -22,14 +22,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\DependencyInjection
  */
-class BootstrapExtension extends Extension {
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getAlias() {
-        return "wbw_" . parent::getAlias();
-    }
+class WBWBootstrapExtension extends Extension {
 
     /**
      * {@inheritdoc}

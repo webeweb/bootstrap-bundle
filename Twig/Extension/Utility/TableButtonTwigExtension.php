@@ -48,54 +48,44 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap row button "Default".
+     * Displays a Bootstrap row button "default".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap form button "Default".
      */
     public function bootstrapRowButtonDefaultFunction(array $args = []) {
 
-        // Initialize the buttons.
         $editButton   = $this->bootstrapRowButtonEditFunction(["href" => ArrayHelper::get($args, "edit_href")]);
         $deleteButton = $this->bootstrapRowButtonDeleteFunction(["href" => ArrayHelper::get($args, "delete_href")]);
 
-        // Return the HTML.
         return implode(" ", [$editButton, $deleteButton]);
     }
 
     /**
-     * Displays a Bootstrap row button "Delete".
+     * Displays a Bootstrap row button "delete".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap row button "Delete".
      */
     public function bootstrapRowButtonDeleteFunction(array $args = []) {
 
-        // Translate the label.
-        $txt = $this->getTranslator()->trans("label.delete", [], "BootstrapBundle");
-
-        // Initialize the button.
+        $txt = $this->getTranslator()->trans("label.delete", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonDangerFunction(["title" => $txt, "icon" => "g:trash"]);
 
-        // Return the HTML.
         return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
-     * Displays a Bootstrap row button "Edit".
+     * Displays a Bootstrap row button "edit".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap row button "Edit".
      */
     public function bootstrapRowButtonEditFunction(array $args = []) {
 
-        // Translate the label.
-        $txt = $this->getTranslator()->trans("label.edit", [], "BootstrapBundle");
-
-        // Initialize the button.
+        $txt = $this->getTranslator()->trans("label.edit", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "g:pencil"]);
 
-        // Return the HTML.
         return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 

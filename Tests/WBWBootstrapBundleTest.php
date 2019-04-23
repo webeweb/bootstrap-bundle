@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
-use WBW\Bundle\BootstrapBundle\DependencyInjection\BootstrapExtension;
+use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 
 /**
  * Bootstrap bundle test.
@@ -45,6 +45,6 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
         $obj = new WBWBootstrapBundle();
 
         $res = $obj->getContainerExtension();
-        $this->assertInstanceOf(BootstrapExtension::class, $res);
+        $this->assertInstanceOf(WBWBootstrapExtension::class, $res);
     }
 }
