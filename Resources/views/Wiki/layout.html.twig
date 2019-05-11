@@ -5,7 +5,7 @@
 
 {% block bootstrapStylesheets %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/layout/stylesheets.html.twig" with {"theme": "eclipse"} %}
+    {% include "@WBWSyntaxHighlighter/layout/stylesheets.html.twig" with {"theme": "eclipse"} %}
     <style type="text/css">
         .content {
             margin: 70px 0 0;
@@ -67,7 +67,7 @@
 
 {% block bootstrapJavascripts %}
     {{ parent() }}
-    {% include "@SyntaxHighlighter/layout/javascripts.html.twig" %}
+    {% include "@WBWSyntaxHighlighter/layout/javascripts.html.twig" %}
     {{ (syntaxHighlighterConfig(syntaxHighlighterConfig) ~ "\n" ~
         syntaxHighlighterDefaults(syntaxHighlighterDefaults) ~ "\n" ~
         "SyntaxHighlighter.all();")|syntaxHighlighterScript() }}

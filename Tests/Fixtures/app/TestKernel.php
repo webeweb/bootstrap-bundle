@@ -29,9 +29,9 @@ class TestKernel extends AbstractKernel {
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new WBW\Bundle\CoreBundle\CoreBundle(),
+            new WBW\Bundle\CoreBundle\WBWCoreBundle(),
             new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),
-            new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
+            new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
         return $bundles;
     }
