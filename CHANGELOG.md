@@ -6,6 +6,7 @@ CHANGELOG
 - Better support of Symfony's bundle recommendations
 - Remove deprecated constants
 - Update dependencies
+- Update SERVICE_NAME constants
 
 ### [2.3.1](https://github.com/webeweb/bootstrap-bundle/tree/v2.3.0) (2019-03-28)
 
