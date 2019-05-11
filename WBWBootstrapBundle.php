@@ -12,7 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
@@ -28,12 +27,5 @@ class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {
      */
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getContainerExtension() {
-        return new WBWBootstrapExtension();
     }
 }
