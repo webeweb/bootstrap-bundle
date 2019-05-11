@@ -3,37 +3,37 @@ wbw_bootstrap_wiki:
     prefix:   "/"
     resource: "@WBWBootstrapBundle/Resources/config/routing/wiki.yml"
 
-wbw_bootstrap_blank_action:
+wbw_bootstrap_blank:
     path:     "/blank"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
     methods:  ["GET"]
 
-wbw_bootstrap_flashbag_action:
+wbw_bootstrap_flashbag:
     path:     "/flashbag"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
     methods:  ["GET"]
 
-wbw_bootstrap_layout_action:
+wbw_bootstrap_layout:
     path:     "/layout"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layoutAction" }
     methods:  ["GET"]
 
-wbw_bootstrap_layout3_action:
+wbw_bootstrap_layout3:
     path:     "/layout3"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout3Action" }
     methods:  ["GET"]
 
-wbw_bootstrap_layout4_action:
+wbw_bootstrap_layout4:
     path:     "/layout4"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout4Action" }
     methods:  ["GET"]
 
-wbw_bootstrap_twig_console_action:
+wbw_bootstrap_twig_console:
     path:     "/twig-console"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::twigConsoleAction" }
     methods:  ["GET"]
 
-wbw_bootstrap_work_in_progress_action:
+wbw_bootstrap_work_in_progress:
     path:     "/work-in-progress"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::workInProgressAction" }
     methods:  ["GET"]
