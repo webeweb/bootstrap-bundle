@@ -1,10 +1,11 @@
 CHANGELOG
 =========
 
-### master
+### [3.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.0.0) (2019-05-11)
 
 - Better support of Symfony's bundle recommendations
 - Remove deprecated constants
+- Update dependencies
 
 ### [2.3.1](https://github.com/webeweb/bootstrap-bundle/tree/v2.3.0) (2019-03-28)
 
