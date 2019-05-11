@@ -79,9 +79,9 @@ in the `app/AppKernel.php` file of your project:
     public function registerBundles() {
         $bundles = [
             // ...
-            new WBW\Bundle\CoreBundle\CoreBundle(),
+            new WBW\Bundle\CoreBundle\WBWCoreBundle(),
             new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),
-            new WBW\Bundle\SyntaxHighlighterBundle\SyntaxHighlighterBundle(),
+            new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
 
         // ...
