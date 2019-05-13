@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Split Resources/config/services.yml (listeners.yml, twig.yml)
+
 ### [3.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.0.0) (2019-05-11)
 
 - Better support of Symfony's bundle recommendations
