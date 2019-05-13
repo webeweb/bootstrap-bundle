@@ -1,0 +1,128 @@
+# Resources/config/services.yml
+services:
+
+    wbw.bootstrap.twig.extension.css.button:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.code:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.grid:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.image:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.typography:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.alert:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.badge:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.breadcrumb:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension
+        arguments: ["@twig", "@translator"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.button_group:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonGroupTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.dropdown:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.glyphicon:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.label:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.nav:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.component.progress_bar:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.renderer:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.utility.form_button:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension
+        arguments: ["@twig", "@translator", "@wbw.bootstrap.twig.extension.css.button"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.utility.role_label:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension
+        arguments: ["@twig", "@translator", "@wbw.bootstrap.twig.extension.component.label"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.utility.table_button:
+        class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension
+        arguments: ["@twig", "@translator", "@wbw.bootstrap.twig.extension.css.button"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }

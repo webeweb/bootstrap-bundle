@@ -33,5 +33,7 @@ class WBWBootstrapExtension extends Extension {
 
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
+
+        $serviceLoader->load("twig.yml");
     }
 }
