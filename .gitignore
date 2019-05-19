@@ -2,6 +2,10 @@
 /composer.lock
 /vendor/*
 
+# Resources
+/Resources/public/*
+!/Resources/public/.gitkeep
+
 # Fixtures
 /Tests/Fixtures/app/var/*
 !/Tests/Fixtures/app/var/.gitkeep
