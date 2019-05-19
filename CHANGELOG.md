@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [3.0.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.0.1) (2019-05-19)
 
+- Fix bootstrapVersion into stylesheets template
 - Split Resources/config/services.yml (listeners.yml, twig.yml)
 
 ### [3.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.0.0) (2019-05-11)
