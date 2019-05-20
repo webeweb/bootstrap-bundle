@@ -16,7 +16,7 @@ Symfony application by providing Twig extensions and PHP objects to do the heavy
 lifting. The bundle include the excellent framework [Bootstrap](https://getbootstrap.com/)
 and some useful plugins.
 
-<img src="https://raw.githubusercontent.com/webeweb/bootstrap-bundle/master/Resources/doc/images/bootstrap-stack_1024x0860.png" alt="Bootstrap bundle" align="right" width="416"/>
+<img src="https://raw.githubusercontent.com/webeweb/bootstrap-bundle/master/Resources/doc/screenshot_readme.png" alt="Bootstrap bundle" align="right" width="416"/>
 
 Includes:
 
