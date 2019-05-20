@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Reorganize images
+
 ### [3.0.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.0.1) (2019-05-19)
 
 - Fix bootstrapVersion into stylesheets template
