@@ -36,7 +36,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
 
         // Set the mocks.
         $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
-        $src = getcwd() . "/Resources/doc/images/bootstrap-stack_1024x0860.png";
+        $src = getcwd() . "/Resources/doc/screenshot_1024x0860.png";
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -97,7 +97,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
 
         // Set the mocks.
         $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
-        $src = getcwd() . "/Resources/doc/images/bootstrap-stack_1024x0860.png";
+        $src = getcwd() . "/Resources/doc/screenshot_1024x0860.png";
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
