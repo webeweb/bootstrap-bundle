@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -34,6 +35,13 @@ class WBWBootstrapExtension extends Extension {
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
 
-        $serviceLoader->load("twig.yml");
+        /** @var ConfigurationInterface $configuration */
+        $configuration = $this->getConfiguration($configs, $container);
+
+        $config = $this->processConfiguration($configuration, $configs);
+
+        if (true === $config["twig"]) {
+            $serviceLoader->load("twig.yml");
+        }
     }
 }

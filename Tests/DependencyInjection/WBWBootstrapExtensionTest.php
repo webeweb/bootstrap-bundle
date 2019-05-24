@@ -12,6 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
 use Exception;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use WBW\Bundle\BootstrapBundle\DependencyInjection\Configuration;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
@@ -42,6 +44,51 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
 class WBWBootstrapExtensionTest extends AbstractTestCase {
 
     /**
+     * Configs.
+     *
+     * @var array
+     */
+    private $configs;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a configs array mock.
+        $this->configs = [
+            "wbw_bootstrap" => [
+                "twig" => true,
+            ],
+        ];
+    }
+
+    /**
+     * Tests the getAlias() method.
+     *
+     * @return void
+     */
+    public function testGetAlias() {
+
+        $obj = new WBWBootstrapExtension();
+
+        $this->assertEquals("wbw_bootstrap", $obj->getAlias());
+    }
+
+    /**
+     * Tests the getConfiguration() method.
+     *
+     * @return void
+     */
+    public function testGetConfiguration() {
+
+        $obj = new WBWBootstrapExtension();
+
+        $this->assertInstanceOf(Configuration::class, $obj->getConfiguration([], $this->containerBuilder));
+    }
+
+    /**
      * Tests the load() method.
      *
      * @return void
@@ -51,7 +98,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
 
         $obj = new WBWBootstrapExtension();
 
-        $obj->load([], $this->containerBuilder);
+        $obj->load($this->configs, $this->containerBuilder);
 
         // CSS Twig extensions
         $this->assertInstanceOf(ButtonTwigExtension::class, $this->containerBuilder->get(ButtonTwigExtension::SERVICE_NAME));
@@ -78,5 +125,29 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
 
         // Renderer Twig extensions
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoadWithoutTwig() {
+
+        // Set the configs mock.
+        $this->configs["wbw_bootstrap"]["twig"] = false;
+
+        $obj = new WBWBootstrapExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+            $this->assertContains(RendererTwigExtension::SERVICE_NAME, $ex->getMessage());
+        }
     }
 }
