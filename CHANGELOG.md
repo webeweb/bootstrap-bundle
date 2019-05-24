@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [3.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.1.0) (2019-05-24)
 
+- Add Configuration
 - Reorganize images
 
 ### [3.0.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.0.1) (2019-05-19)
