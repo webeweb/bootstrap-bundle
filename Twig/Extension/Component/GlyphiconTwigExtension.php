@@ -54,7 +54,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function renderIcon($name, $style) {
         return $this->bootstrapGlyphiconFunction(["name" => $name, "style" => $style]);

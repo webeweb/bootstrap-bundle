@@ -29,21 +29,21 @@ class DefaultApplicationThemeProvider extends BaseApplicationThemeProvider {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getDescription() {
         return "Bootstrap bundle";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getName() {
         return "Bootstrap<b>bundle</b>";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getTitle() {
         return "Bootstrap bundle";

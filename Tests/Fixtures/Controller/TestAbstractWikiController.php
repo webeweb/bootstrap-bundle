@@ -22,35 +22,35 @@ use WBW\Bundle\BootstrapBundle\Controller\AbstractWikiController;
 class TestAbstractWikiController extends AbstractWikiController {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSampleUser() {
         return parent::getSampleUser();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSampleUserRoleColors() {
         return parent::getSampleUserRoleColors();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSampleUserRoleTranslations() {
         return parent::getSampleUserRoleTranslations();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSyntaxHighlighterConfig() {
         return parent::getSyntaxHighlighterConfig();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSyntaxHighlighterDefaults() {
         return parent::getSyntaxHighlighterDefaults();

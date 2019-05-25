@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 class AbstractControllerTest extends AbstractTestCase {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

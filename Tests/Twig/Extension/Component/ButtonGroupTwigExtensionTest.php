@@ -40,7 +40,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     private $editButton;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

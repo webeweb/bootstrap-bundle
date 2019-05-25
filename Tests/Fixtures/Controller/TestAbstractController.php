@@ -22,28 +22,28 @@ use WBW\Bundle\BootstrapBundle\Controller\AbstractController;
 class TestAbstractController extends AbstractController {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifyDanger($content) {
         return parent::notifyDanger($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifyInfo($content) {
         return parent::notifyInfo($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifySuccess($content) {
         return parent::notifySuccess($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifyWarning($content) {
         return parent::notifyWarning($content);

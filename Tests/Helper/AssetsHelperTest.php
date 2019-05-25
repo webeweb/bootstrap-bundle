@@ -32,7 +32,7 @@ class AssetsHelperTest extends AbstractTestCase {
     private $directoryAssets;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

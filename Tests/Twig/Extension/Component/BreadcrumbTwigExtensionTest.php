@@ -35,7 +35,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     private $tree;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

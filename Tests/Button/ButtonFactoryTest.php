@@ -38,7 +38,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     private $args;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

@@ -79,63 +79,63 @@ abstract class AbstractButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getActive() {
         return $this->active;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getBlock() {
         return $this->block;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContent() {
         return $this->content;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getDisabled() {
         return $this->disabled;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix() {
         return "btn-";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSize() {
         return $this->size;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getTitle() {
         return $this->title;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getType() {
         return $this->type;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setActive($active) {
         $this->active = $active;
@@ -143,7 +143,7 @@ abstract class AbstractButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setBlock($block) {
         $this->block = $block;
@@ -151,7 +151,7 @@ abstract class AbstractButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setContent($content) {
         $this->content = $content;
@@ -159,7 +159,7 @@ abstract class AbstractButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setDisabled($disabled) {
         $this->disabled = $disabled;
@@ -167,7 +167,7 @@ abstract class AbstractButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setSize($size) {
         $this->size = $size;
@@ -175,7 +175,7 @@ abstract class AbstractButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setTitle($title) {
         $this->title = $title;
@@ -183,7 +183,7 @@ abstract class AbstractButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setType($type) {
         $this->type = $type;

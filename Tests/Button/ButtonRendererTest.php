@@ -32,7 +32,7 @@ class ButtonRendererTest extends AbstractTestCase {
     private $button;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

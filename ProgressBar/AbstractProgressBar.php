@@ -79,63 +79,63 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getAnimated() {
         return $this->animated;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContent() {
         return $this->content;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getMax() {
         return $this->max;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getMin() {
         return $this->min;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix() {
         return "progress-bar-";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getStriped() {
         return $this->striped;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getType() {
         return $this->type;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getValue() {
         return $this->value;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setAnimated($animated) {
         $this->animated = $animated;
@@ -143,7 +143,7 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setContent($content) {
         $this->content = $content;
@@ -151,7 +151,7 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setMax($max) {
         $this->max = $max;
@@ -159,7 +159,7 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setMin($min) {
         $this->min = $min;
@@ -167,7 +167,7 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setStriped($striped) {
         $this->striped = $striped;
@@ -175,7 +175,7 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setType($type) {
         $this->type = $type;
@@ -183,7 +183,7 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setValue($value) {
         $this->value = $value;
