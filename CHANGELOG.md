@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Update Composer (according to Composer schema)
 - Update Travis-CI configuration (Symfony 4.3)
 
 ### [3.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.1.0) (2019-05-24)
