@@ -11,9 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Component\HttpKernel\Kernel;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestAbstractController;
+use WBW\Bundle\CoreBundle\Component\BaseEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvents;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
@@ -32,11 +33,19 @@ class AbstractControllerTest extends AbstractTestCase {
     protected function setUp() {
         parent::setUp();
 
+        // Set a dispatch function.
+        $dispatchFunction = function(BaseEvent $event, $eventName) {
+            return $event;
+        };
+        if (Kernel::VERSION_ID < 40300) {
+            $dispatchFunction = function($eventName, BaseEvent $event) {
+                return $event;
+            };
+        }
+
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, Event $event) {
-            return $event;
-        });
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
     }
 
     /**
