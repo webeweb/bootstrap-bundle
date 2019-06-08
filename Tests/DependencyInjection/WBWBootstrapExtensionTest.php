@@ -58,10 +58,20 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
 
         // Set a configs array mock.
         $this->configs = [
-            "wbw_bootstrap" => [
+            WBWBootstrapExtension::EXTENSION_ALIAS => [
                 "twig" => true,
             ],
         ];
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("wbw_bootstrap", WBWBootstrapExtension::EXTENSION_ALIAS);
     }
 
     /**
@@ -73,7 +83,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
 
         $obj = new WBWBootstrapExtension();
 
-        $this->assertEquals("wbw_bootstrap", $obj->getAlias());
+        $this->assertEquals(WBWBootstrapExtension::EXTENSION_ALIAS, $obj->getAlias());
     }
 
     /**
@@ -135,7 +145,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
     public function testLoadWithoutTwig() {
 
         // Set the configs mock.
-        $this->configs["wbw_bootstrap"]["twig"] = false;
+        $this->configs[WBWBootstrapExtension::EXTENSION_ALIAS]["twig"] = false;
 
         $obj = new WBWBootstrapExtension();
 
