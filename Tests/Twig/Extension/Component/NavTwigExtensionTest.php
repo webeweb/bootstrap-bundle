@@ -132,9 +132,10 @@ EOT;
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.nav", NavTwigExtension::SERVICE_NAME);
+
         $obj = new NavTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.nav", NavTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

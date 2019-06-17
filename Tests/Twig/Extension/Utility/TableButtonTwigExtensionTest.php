@@ -94,9 +94,10 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.bootstrap.twig.extension.utility.table_button", TableButtonTwigExtension::SERVICE_NAME);
+
         $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
-        $this->assertEquals("wbw.bootstrap.twig.extension.utility.table_button", TableButtonTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->translator, $obj->getTranslator());
         $this->assertSame($this->buttonTwigExtension, $obj->getButtonTwigExtension());

@@ -69,9 +69,10 @@ EOT;
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
+
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->translator, $obj->getTranslator());
     }

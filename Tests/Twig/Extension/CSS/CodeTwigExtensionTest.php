@@ -171,9 +171,10 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.bootstrap.twig.extension.css.code", CodeTwigExtension::SERVICE_NAME);
+
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.bootstrap.twig.extension.css.code", CodeTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

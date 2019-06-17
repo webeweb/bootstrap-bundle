@@ -100,9 +100,10 @@ EOT;
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
+
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

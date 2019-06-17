@@ -157,9 +157,10 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
+
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
