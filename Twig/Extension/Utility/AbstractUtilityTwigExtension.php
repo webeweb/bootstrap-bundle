@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
+use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 
 /**
@@ -31,9 +31,9 @@ abstract class AbstractUtilityTwigExtension extends AbstractTwigExtension {
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param BaseTranslatorInterface $translator The translator.
+     * @param TranslatorInterface $translator The translator.
      */
-    public function __construct(Environment $twigEnvironment, BaseTranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }

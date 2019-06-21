@@ -11,11 +11,11 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
+use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtensionTrait;
-use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -39,10 +39,10 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param BaseTranslatorInterface $translator The translator.
+     * @param TranslatorInterface $translator The translator.
      * @param ButtonTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(Environment $twigEnvironment, BaseTranslatorInterface $translator, ButtonTwigExtension $extension) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator, ButtonTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
         $this->setButtonTwigExtension($extension);
     }
