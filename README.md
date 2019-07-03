@@ -35,6 +35,7 @@ Includes:
 - [Bootstrap WYSIWYG 0.3.3](http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/) (Bootstrap plug-in)
 - [Handlebars 1.3.0](http://handlebarsjs.com/) (Bootstrap WYSIWYG dependency)
 - [Moment.js 2.20.1](http://momentjs.com/) (Bootstrap Daterangepicker dependency)
+- [Popper.js 1.15.0](https://popper.js.org/) (Bootstrap dependency)
 - [WYSIHTML 0.4.15](http://wysihtml.com/) (Bootstrap WYSIWYG dependency)
 
 Provides:

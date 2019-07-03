@@ -50,7 +50,7 @@ class AssetsHelperTest extends AbstractTestCase {
     public function testListAssets() {
 
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
-        $this->assertCount(17, $res);
+        $this->assertCount(18, $res);
 
         $this->assertRegExp("/bootstrap\-" . preg_quote(BootstrapInterface::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[0]);
         $this->assertRegExp("/bootstrap\-" . preg_quote(BootstrapInterface::BOOTSTRAP_VERSION_4, ".") . "\.zip$/", $res[1]);
@@ -68,6 +68,7 @@ class AssetsHelperTest extends AbstractTestCase {
         $this->assertRegExp("/favicons\.zip$/", $res[13]);
         $this->assertRegExp("/handlebars\-.*\.zip$/", $res[14]);
         $this->assertRegExp("/moment\-.*\.zip$/", $res[15]);
-        $this->assertRegExp("/wysihtml\-.*\.zip$/", $res[16]);
+        $this->assertRegExp("/popper\.js\-.*\.zip$/", $res[16]);
+        $this->assertRegExp("/wysihtml\-.*\.zip$/", $res[17]);
     }
 }
