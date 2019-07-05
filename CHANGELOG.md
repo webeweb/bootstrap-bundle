@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Replace string by constant into getAssetsRelativeDirectory()
+
 ### [3.2.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.2.2) (2019-07-03)
 
 - Add Popper.js asset (Bootstrap 4 dependency)

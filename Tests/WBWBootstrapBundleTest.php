@@ -11,8 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
-use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
  * Bootstrap bundle test.
@@ -31,8 +32,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
 
         $obj = new WBWBootstrapBundle();
 
-        $res = "/Resources/assets";
-        $this->assertEquals($res, $obj->getAssetsRelativeDirectory());
+        $this->assertEquals(AssetsProviderInterface::ASSETS_RELATIVE_DIRECTORY, $obj->getAssetsRelativeDirectory());
     }
 
     /**
@@ -44,7 +44,6 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
 
         $obj = new WBWBootstrapBundle();
 
-        $res = $obj->getContainerExtension();
-        $this->assertInstanceOf(WBWBootstrapExtension::class, $res);
+        $this->assertInstanceOf(WBWBootstrapExtension::class, $obj->getContainerExtension());
     }
 }
