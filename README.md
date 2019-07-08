@@ -113,39 +113,7 @@ Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/twig-exte
 
 ## Usage
 
-### Template
-
-```html
-{# AppBundle/Resources/views/layout.html.twig #}
-{% extends "@WBWBootstrap/layout.html.twig" %}
-
-{% block bootstrapFormTheme %}
-    {# form theme #}
-{% endblock %}
-
-{% block bootstrapFavicons %}
-    {# favicons #}
-{% endblock %}
-
-{% block bootstrapStylesheets %}
-    {{ parent() }}
-    {# stylesheets #}
-{% endblock %}
-
-{% block bootstrapTitle %}{# title #}{% endblock %}
-
-{% block bootstrapAttributes %}{# body attributes #}{% endblock %}
-
-{% block bootstrapContent %}
-    {{ parent() }}
-    {# content #}
-{% endblock %}
-
-{% block bootstrapJavascripts %}
-    {{ parent() }}
-    {# javascripts #}
-{% endblock %}
-```
+Read the [documentation](Resources/doc/index.md).
 
 ---
 

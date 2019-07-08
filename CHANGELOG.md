@@ -4,6 +4,7 @@ CHANGELOG
 ### [3.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.2.2) (2019-07-08)
 
 - Replace string by constant into getAssetsRelativeDirectory()
+- Update documentation
 - Update Twig console to support Bootstrap 4
 
 ### [3.2.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.2.2) (2019-07-03)
