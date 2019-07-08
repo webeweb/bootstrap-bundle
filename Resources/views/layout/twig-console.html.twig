@@ -1,10 +1,7 @@
 {# Resources/views/layout/twig-console.html.twig #}
-{% set _versions = {
-    "3": constant("WBW\\Bundle\\BootstrapBundle\\BootstrapInterface::BOOTSTRAP_VERSION_3"),
-    "4": constant("WBW\\Bundle\\BootstrapBundle\\BootstrapInterface::BOOTSTRAP_VERSION_4"),
-} %}
-{% set _version = _versions[bootstrapVersion|default("")] is defined ? _versions[bootstrapVersion] : _versions["4"] %}
-{% set _console = {
+{% set _versions = ["3", "4"] %}
+{% set _version  = bootstrapVersion|default("") in _versions ? bootstrapVersion : "4" %}
+{% set _console  = {
     "rowClass":     ("3" == _version ? "row clearfix" : "row"),
     "panelClass":   ("3" == _version ? "panel" : "card"),
     "headingClass": ("3" == _version ? "panel-heading" : "card-header"),
