@@ -1,7 +1,11 @@
 CHANGELOG
 =========
 
-### [3.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.2.2) (2019-07-08)
+### [3.3.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.1) (2019-07-22)
+
+- Add PHP extensions into Composer
+
+### [3.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.0) (2019-07-08)
 
 - Replace string by constant into getAssetsRelativeDirectory()
 - Update documentation
