@@ -55,14 +55,8 @@ class NavTwigExtensionTest extends AbstractTestCase {
         $obj = new NavTwigExtension($this->twigEnvironment);
 
         $arg = ["items" => $this->items];
-        $res = <<< EOT
-<ul class="nav nav-justified">
-<li role="presentation"><a href="#">Home</a></li>
-<li role="presentation"><a href="#">Profile</a></li>
-<li role="presentation"><a href="#">Message</a></li>
-</ul>
-EOT;
-        $this->assertEquals($res, $obj->bootstrapNavsJustified($arg));
+        $res = file_get_contents(__DIR__ . "/testBootstrapNavsJustified.html.txt");
+        $this->assertEquals($res, $obj->bootstrapNavsJustified($arg) . "\n");
     }
 
     /**
@@ -75,14 +69,8 @@ EOT;
         $obj = new NavTwigExtension($this->twigEnvironment);
 
         $arg = ["items" => $this->items, "stacked" => true];
-        $res = <<< EOT
-<ul class="nav nav-pills nav-stacked">
-<li role="presentation"><a href="#">Home</a></li>
-<li role="presentation"><a href="#">Profile</a></li>
-<li role="presentation"><a href="#">Message</a></li>
-</ul>
-EOT;
-        $this->assertEquals($res, $obj->bootstrapNavsPills($arg));
+        $res = file_get_contents(__DIR__ . "/testBootstrapNavsPills.html.txt");
+        $this->assertEquals($res, $obj->bootstrapNavsPills($arg) . "\n");
     }
 
     /**
@@ -95,14 +83,8 @@ EOT;
         $obj = new NavTwigExtension($this->twigEnvironment);
 
         $arg = ["items" => $this->items];
-        $res = <<< EOT
-<ul class="nav nav-pills">
-<li role="presentation"><a href="#">Home</a></li>
-<li role="presentation"><a href="#">Profile</a></li>
-<li role="presentation"><a href="#">Message</a></li>
-</ul>
-EOT;
-        $this->assertEquals($res, $obj->bootstrapNavsPills($arg));
+        $res = file_get_contents(__DIR__ . "/testBootstrapNavsPillsWithItems.html.txt");
+        $this->assertEquals($res, $obj->bootstrapNavsPills($arg) . "\n");
     }
 
     /**
@@ -115,14 +97,8 @@ EOT;
         $obj = new NavTwigExtension($this->twigEnvironment);
 
         $arg = ["items" => $this->items];
-        $res = <<< EOT
-<ul class="nav nav-tabs">
-<li role="presentation"><a href="#">Home</a></li>
-<li role="presentation"><a href="#">Profile</a></li>
-<li role="presentation"><a href="#">Message</a></li>
-</ul>
-EOT;
-        $this->assertEquals($res, $obj->bootstrapNavsTabs($arg));
+        $res = file_get_contents(__DIR__ . "/testBootstrapNavsTabs.html.txt");
+        $this->assertEquals($res, $obj->bootstrapNavsTabs($arg) . "\n");
     }
 
     /**

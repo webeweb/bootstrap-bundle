@@ -44,25 +44,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFlashbagAction() {
 
-        $res = <<< EOT
-            <div class="alert alert-danger alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            Danger
-        </div>
-                <div class="alert alert-info alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            Info
-        </div>
-                <div class="alert alert-success alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            Success
-        </div>
-                <div class="alert alert-warning alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            Warning
-        </div>
-    
-EOT;
+        $res = file_get_contents(__DIR__ . "/testFlashbagAction.html.txt") . "    ";
 
         // Create a client.
         $client = static::createClient();

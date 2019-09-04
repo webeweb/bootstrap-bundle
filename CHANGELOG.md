@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.3.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.2) (2019-09-04)
+
+- Improve unit tests
+
 ### [3.3.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.1) (2019-07-22)
 
 - Add PHP extensions into Composer

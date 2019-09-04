@@ -1,0 +1,4 @@
+<div class="btn-group" role="group">
+<button class="btn btn-default" type="button">Edit</button>
+<button class="btn btn-danger" type="button">Delete</button>
+</div>
