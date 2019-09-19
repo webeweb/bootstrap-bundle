@@ -4,7 +4,7 @@ imports:
     - { resource: "services_test.yml" }
 
 parameters:
-    locale: en
+    locale: "en"
 
 framework:
     default_locale: "%locale%"
