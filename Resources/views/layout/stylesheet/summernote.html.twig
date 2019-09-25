@@ -1,0 +1,8 @@
+{# Resources/views/layout/stylesheet/summernote.html.twig #}
+{% set _versions = {
+    "3": "",
+    "4": "-bs4",
+} %}
+{% set _version = _versions[bootstrapVersion|default("")] is defined ? _versions[bootstrapVersion] : _versions["4"] %}
+<!-- Summernote -->
+<link type="text/css" rel="stylesheet" href="{{ asset("bundles/wbwbootstrap/summernote/summernote" ~ _version ~ ".css") }}">
