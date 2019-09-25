@@ -8,7 +8,9 @@
 <html>
     <head>
         {% block bootstrapStylesheets %}
-            {% include "@WBWBootstrap/layout/stylesheets.html.twig" %}
+            {% include "@WBWCore/layout/stylesheet/fontawesome.html.twig" %}
+            {% include "@WBWBootstrap/layout/stylesheet/bootstrap.html.twig" with {"bootstrapVersion": bootstrapVersion|default("")} %}
+            {% include "@WBWBootstrap/layout/stylesheet/twig-console.html.twig" %}
         {% endblock %}
         {% block bootstrapFavicons %}
             <!-- Favicons -->
@@ -39,7 +41,11 @@
         {% endblock %}
         <div id="asynchronous-output"></div>
         {% block bootstrapJavascripts %}
-            {% include "@WBWBootstrap/layout/javascripts.html.twig" %}
+            {% include "@WBWCore/layout/javascript/fontawesome.html.twig" %}
+            {% include "@WBWCore/layout/javascript/jquery.html.twig" %}
+            {% include "@WBWBootstrap/layout/javascript/popper.js.html.twig" %}
+            {% include "@WBWBootstrap/layout/javascript/bootstrap.html.twig" with {"bootstrapVersion": bootstrapVersion|default("")} %}
+            {% include "@WBWBootstrap/layout/javascript/twig-console.html.twig" %}
         {% endblock %}
     </body>
 </html>
