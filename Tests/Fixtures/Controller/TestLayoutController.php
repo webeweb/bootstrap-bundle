@@ -47,6 +47,15 @@ class TestLayoutController extends AbstractController {
     }
 
     /**
+     * Displays a javascripts page.
+     *
+     * @return Response Returns the response.
+     */
+    public function javascriptsAction() {
+        return $this->render("@WBWBootstrap/layout/javascripts.html.twig");
+    }
+
+    /**
      * Displays a layout3 page.
      *
      * @return Response Returns the response.
@@ -71,6 +80,15 @@ class TestLayoutController extends AbstractController {
      */
     public function layoutAction() {
         return $this->render("@WBWBootstrap/layout.html.twig");
+    }
+
+    /**
+     * Displays a stylesheets page.
+     *
+     * @return Response Returns the response.
+     */
+    public function stylesheetsAction() {
+        return $this->render("@WBWBootstrap/layout/stylesheets.html.twig");
     }
 
     /**
