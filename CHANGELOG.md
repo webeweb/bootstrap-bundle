@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.3.4](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.4) (2019-09-25)
+
+- Fix Summernote CSS path
+
 ### [3.3.3](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.3) (2019-09-25)
 
 - Add Summernote asset
