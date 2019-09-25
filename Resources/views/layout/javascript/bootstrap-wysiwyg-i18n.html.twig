@@ -1,4 +1,10 @@
 {# Resources/views/layout/javascript/bootstrap-wysiwyg-i18n.html.twig #}
-{% set _locale = locale|default("en-US") %}
+{% set _locales = [
+    "ar-AR", "bg-BG", "ca-CT", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-AR",
+    "es-ES", "fr-FR", "hr-HR", "hu-HU", "il-HE", "it-IT", "ja-JP", "ko-KR", "lt-LT",
+    "mo-MD", "nb-NB", "nl-NL", "pl-PL", "pt-BR", "ru-RU", "sk-SK", "sv-SE", "tr-TR",
+    "ua-UA", "zh-CN", "zh-TW",
+] %}
+{% set _locale  = locale|default("") in _locales ? locale : "en-US" %}
 <!-- Bootstrap WYSIWYG i18n -->
 <script type="text/javascript" src="{{ asset("bundles/wbwbootstrap/bootstrap-wysiwyg-0.3.3/locales/bootstrap-wysihtml5." ~ _locale ~ ".js") }}"></script>
