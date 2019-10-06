@@ -69,6 +69,6 @@
     {{ parent() }}
     {% include "@WBWSyntaxHighlighter/layout/javascripts.html.twig" %}
     {{ (syntaxHighlighterConfig(syntaxHighlighterConfig) ~ "\n" ~
-        syntaxHighlighterDefaults(syntaxHighlighterDefaults) ~ "\n" ~
-        "SyntaxHighlighter.all();")|syntaxHighlighterScript() }}
+    syntaxHighlighterDefaults(syntaxHighlighterDefaults) ~ "\n" ~
+    "SyntaxHighlighter.all();")|syntaxHighlighterScript() }}
 {% endblock %}

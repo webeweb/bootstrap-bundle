@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\ProgressBar\SuccessProgressBar;
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\ProgressBar\SuccessProgressBar;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**

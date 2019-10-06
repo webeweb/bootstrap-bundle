@@ -17,7 +17,7 @@ namespace WBW\Bundle\BootstrapBundle\Button;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Button
  */
-class InfoButton extends AbstractButton{
+class InfoButton extends AbstractButton {
 
     /**
      * Constructor.

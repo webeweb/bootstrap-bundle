@@ -58,6 +58,22 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
+     * Tests the javascriptsAction() method.
+     *
+     * @return void
+     */
+    public function testJavascriptsAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/javascripts");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
      * Tests the layout3Action() method.
      *
      * @return void
@@ -161,22 +177,6 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         // Make a GET request.
         $client->request("GET", "/work-in-progress");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-    }
-
-    /**
-     * Tests the javascriptsAction() method.
-     *
-     * @return void
-     */
-    public function testJavascriptsAction() {
-
-        // Create a client.
-        $client = static::createClient();
-
-        // Make a GET request.
-        $client->request("GET", "/javascripts");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }

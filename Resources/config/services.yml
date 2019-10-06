@@ -2,5 +2,5 @@
 services:
 
     logger:
-        alias: "monolog.logger"
+        alias:  "monolog.logger"
         public: true
