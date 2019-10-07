@@ -43,7 +43,7 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
         $attributes["role"]          = "progressbar";
         $attributes["aria-valuenow"] = $progressBar->getValue();
         $attributes["aria-valuemin"] = $progressBar->getMin();
-        $attributes["aria-valuemax"] = $progressBar->getMax() . "%";
+        $attributes["aria-valuemax"] = $progressBar->getMax();
 
         $innerHTML = ProgressBarRenderer::renderContent($progressBar, $span);
 

@@ -34,7 +34,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150">content</div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarBasicFunction($arg));
     }
 
@@ -48,7 +48,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $res = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarBasicFunction($arg));
     }
 
@@ -62,7 +62,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150">content</div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarDangerFunction($arg));
     }
 
@@ -76,7 +76,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarDangerFunction($arg));
     }
 
@@ -90,7 +90,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150">content</div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarInfoFunction($arg));
     }
 
@@ -104,7 +104,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-info" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-info" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarInfoFunction($arg));
     }
 
@@ -118,7 +118,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150">content</div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarSuccessFunction($arg));
     }
 
@@ -132,7 +132,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-success" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-success" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarSuccessFunction($arg));
     }
 
@@ -146,7 +146,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = ["content" => "content", "value" => 75, "min" => 1, "max" => 150, "striped" => true, "animated" => true];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150%">content</div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="1" aria-valuemax="150">content</div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarWarningFunction($arg));
     }
 
@@ -160,7 +160,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100%"><span class="sr-only">50%</span></div></div>';
+        $res = '<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div></div>';
         $this->assertEquals($res, $obj->bootstrapProgressBarWarningFunction($arg));
     }
 
