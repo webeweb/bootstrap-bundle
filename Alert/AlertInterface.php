@@ -27,42 +27,49 @@ interface AlertInterface {
      * @var string
      */
     const ALERT_TYPE_DANGER = BootstrapInterface::BOOTSTRAP_DANGER;
+
     /**
      * Alert type "dark".
      *
      * @var string
      */
     const ALERT_TYPE_DARK = BootstrapInterface::BOOTSTRAP_DARK;
+
     /**
      * Alert type "info".
      *
      * @var string
      */
     const ALERT_TYPE_INFO = BootstrapInterface::BOOTSTRAP_INFO;
+
     /**
      * Alert type "light".
      *
      * @var string
      */
     const ALERT_TYPE_LIGHT = BootstrapInterface::BOOTSTRAP_LIGHT;
+
     /**
      * Alert type "primary".
      *
      * @var string
      */
     const ALERT_TYPE_PRIMARY = BootstrapInterface::BOOTSTRAP_PRIMARY;
+
     /**
      * Alert type "secondary".
      *
      * @var string
      */
     const ALERT_TYPE_SECONDARY = BootstrapInterface::BOOTSTRAP_SECONDARY;
+
     /**
      * Alert type "success".
      *
      * @var string
      */
     const ALERT_TYPE_SUCCESS = BootstrapInterface::BOOTSTRAP_SUCCESS;
+
     /**
      * Alert type "warning".
      *

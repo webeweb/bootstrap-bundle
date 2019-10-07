@@ -64,13 +64,13 @@ abstract class AbstractAlert implements AlertInterface {
         return $this->dismissible;
     }
 
-
     /**
      * {@inheritDoc}
      */
     public function getPrefix() {
         return "alert-";
     }
+
     /**
      * {@inheritDoc}
      */

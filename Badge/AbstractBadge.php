@@ -27,14 +27,6 @@ abstract class AbstractBadge implements BadgeInterface {
      */
     private $content;
 
-
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPrefix() {
-        return "badge-";
-    }
     /**
      * Pill.
      *
@@ -70,6 +62,13 @@ abstract class AbstractBadge implements BadgeInterface {
      */
     public function getPill() {
         return $this->pill;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPrefix() {
+        return "badge-";
     }
 
     /**
