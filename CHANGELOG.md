@@ -1,6 +1,36 @@
 CHANGELOG
 =========
 
+### master
+
+- Add abstract Alert
+- Add Alert Enumerator
+- Add Alert factory
+- Add Alert interface
+- Add Alert renderer
+- Add Danger alert
+- Add Dark alert
+- Add Info alert
+- Add Light alert
+- Add Primary alert
+- Add Secondary alert
+- Add Success alert
+- Add Warning alert
+- Add abstract Badge
+- Add Badge Enumerator
+- Add Badge factory
+- Add Badge interface
+- Add Badge renderer
+- Add Danger badge
+- Add Dark badge
+- Add Info badge
+- Add Light badge
+- Add Primary badge
+- Add Secondary badge
+- Add Success badge
+- Add Warning badge
+- Update Alert Twig extension
+
 ### [3.3.4](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.4) (2019-09-25)
 
 - Fix Summernote CSS path
