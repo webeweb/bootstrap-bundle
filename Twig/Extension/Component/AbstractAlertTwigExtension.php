@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Alert\AlertRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -25,23 +27,21 @@ abstract class AbstractAlertTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap alert.
      *
-     * @param string $content The content.
-     * @param bool $dismissible Dismissible ?
-     * @param string $class The class.
+     * @param AlertInterface $alert The alert.
      * @return string Returns the Bootstrap alert.
      */
-    protected function bootstrapAlert($content, $dismissible, $class) {
+    protected function bootstrapAlert(AlertInterface $alert) {
 
         $span   = static::coreHTMLElement("span", "&times;", ["aria-hidden" => "true"]);
         $button = static::coreHTMLElement("button", $span, ["class" => "close", "type" => "button", "data-dismiss" => "alert", "aria-label" => "Close"]);
 
         $attributes = [];
 
-        $attributes["class"]   = ["alert", $class];
-        $attributes["class"][] = true === $dismissible ? "alert-dismissible" : null;
+        $attributes["class"]   = ["alert", AlertRenderer::renderType($alert)];
+        $attributes["class"][] = AlertRenderer::renderDismissible($alert);
         $attributes["role"]    = ["alert"];
 
-        $innerHTML = (true === $dismissible ? $button : "") . (null !== $content ? $content : "");
+        $innerHTML = (true === $alert->getDismissible() ? $button : "") . AlertRenderer::renderContent($alert);
 
         return static::coreHTMLElement("div", $innerHTML, $attributes);
     }
