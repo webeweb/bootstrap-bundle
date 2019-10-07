@@ -33,6 +33,7 @@ class AbstractBadgeTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getPill());
+        $this->assertEquals("badge-", $obj->getPrefix());
         $this->assertEquals("danger", $obj->getType());
     }
 
