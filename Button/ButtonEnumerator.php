@@ -22,7 +22,7 @@ class ButtonEnumerator {
     /**
      * Enumerates the sizes.
      *
-     * @return array Returns the sizes enumeration.
+     * @return string[] Returns the sizes enumeration.
      */
     public static function enumSizes() {
         return [
@@ -35,7 +35,7 @@ class ButtonEnumerator {
     /**
      * Enumerates the types.
      *
-     * @return array Returns the types enumeration.
+     * @return string[] Returns the types enumeration.
      */
     public static function enumTypes() {
         return [

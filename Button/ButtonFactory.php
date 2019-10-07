@@ -51,7 +51,7 @@ class ButtonFactory {
     /**
      * Creates a new link button.
      *
-     * @return ButtonInterface Returns the warning button.
+     * @return ButtonInterface Returns the link button.
      */
     public static function newLinkButton() {
         return new LinkButton();
