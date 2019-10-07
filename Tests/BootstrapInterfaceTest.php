@@ -32,9 +32,12 @@ class BootstrapInterfaceTest extends AbstractTestCase {
         $this->assertEquals("4.3.1", BootstrapInterface::BOOTSTRAP_VERSION_4);
 
         $this->assertEquals("danger", BootstrapInterface::BOOTSTRAP_DANGER);
+        $this->assertEquals("dark", BootstrapInterface::BOOTSTRAP_DARK);
         $this->assertEquals("default", BootstrapInterface::BOOTSTRAP_DEFAULT);
         $this->assertEquals("info", BootstrapInterface::BOOTSTRAP_INFO);
+        $this->assertEquals("light", BootstrapInterface::BOOTSTRAP_LIGHT);
         $this->assertEquals("primary", BootstrapInterface::BOOTSTRAP_PRIMARY);
+        $this->assertEquals("secondary", BootstrapInterface::BOOTSTRAP_SECONDARY);
         $this->assertEquals("success", BootstrapInterface::BOOTSTRAP_SUCCESS);
         $this->assertEquals("warning", BootstrapInterface::BOOTSTRAP_WARNING);
     }

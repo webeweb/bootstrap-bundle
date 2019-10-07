@@ -27,6 +27,13 @@ interface BootstrapInterface {
     const BOOTSTRAP_DANGER = "danger";
 
     /**
+     * Bootstrap "dark".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_DARK = "dark";
+
+    /**
      * Bootstrap "default".
      *
      * @var string
@@ -41,11 +48,25 @@ interface BootstrapInterface {
     const BOOTSTRAP_INFO = "info";
 
     /**
+     * Bootstrap "light".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_LIGHT = "light";
+
+    /**
      * Bootstrap "primary".
      *
      * @var string
      */
     const BOOTSTRAP_PRIMARY = "primary";
+
+    /**
+     * Bootstrap "secondary".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_SECONDARY = "secondary";
 
     /**
      * Bootstrap "success".
