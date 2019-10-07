@@ -33,6 +33,7 @@ class AbstractAlertTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getDismissible());
+        $this->assertEquals("alert-", $obj->getPrefix());
         $this->assertEquals("danger", $obj->getType());
     }
 
