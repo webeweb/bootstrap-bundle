@@ -1,4 +1,12 @@
 {# Resources/views/layout/javascript/summernote.html.twig #}
+{% set _locales = [
+    "ar-AR", "bg-BG", "ca-ES", "cs-CZ", "da-DK", "de-DE", "el-GR", "es-ES", "es-EU",
+    "fa-IR", "fi-FI", "fr-FR", "gl-ES", "he-IL", "hr-HR", "hu-HU", "id-ID", "it-IT",
+    "ja-JP", "ko-KR", "lt-LT", "lt-LV", "mn-MN", "nb-NO", "nl-NL", "pl-PL", "pt-BR",
+    "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sl-SI", "sr-RS", "sr-RS-Latin", "sv-SE",
+    "ta-IN", "th-TH", "tr-TR", "uk-UA", "uz-UZ", "vi-VN", "zh-CN", "zh-TW",
+] %}
+{% set _locale  = locale|default("") in _locales ? locale : "en-US" %}
 {% set _versions = {
     "3": "",
     "4": "-bs4",
@@ -6,3 +14,4 @@
 {% set _version = _versions[bootstrapVersion|default("")] is defined ? _versions[bootstrapVersion] : _versions["4"] %}
 <!-- Summernote -->
 <script type="text/javascript" src="{{ asset("bundles/wbwbootstrap/summernote-0.8.12/summernote" ~ _version ~ ".min.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/wbwbootstrap/summernote-0.8.12/lang/summernote-" ~ _locale ~ ".js") }}"></script>
