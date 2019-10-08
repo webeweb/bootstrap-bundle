@@ -107,6 +107,7 @@ class ProgressBarFactory {
 
         $progressBar->setAnimated(ArrayHelper::get($args, "animated", false));
         $progressBar->setContent(ArrayHelper::get($args, "content"));
+        $progressBar->setHeight(ArrayHelper::get($args, "height"));
         $progressBar->setMax(ArrayHelper::get($args, "max", 100));
         $progressBar->setMin(ArrayHelper::get($args, "min", 0));
         $progressBar->setStriped(ArrayHelper::get($args, "striped", false));
