@@ -36,6 +36,7 @@ class AbstractButtonTest extends AbstractTestCase {
         $this->assertNull($obj->getBlock());
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getDisabled());
+        $this->assertNull($obj->getOutline());
         $this->assertEquals("btn-", $obj->getPrefix());
         $this->assertNull($obj->getSize());
         $this->assertNull($obj->getTitle());
@@ -92,6 +93,19 @@ class AbstractButtonTest extends AbstractTestCase {
 
         $obj->setDisabled(true);
         $this->assertTrue($obj->getDisabled());
+    }
+
+    /**
+     * Tests the setOutline() method.
+     *
+     * @return void
+     */
+    public function testSetOutline() {
+
+        $obj = new TestButton("danger");
+
+        $obj->setOutline(true);
+        $this->assertTrue($obj->getOutline());
     }
 
     /**

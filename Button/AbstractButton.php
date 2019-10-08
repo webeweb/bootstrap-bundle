@@ -47,6 +47,12 @@ abstract class AbstractButton implements ButtonInterface {
      * @var bool
      */
     private $disabled;
+    /**
+     * Outline.
+     *
+     * @var bool
+     */
+    private $outline;
 
     /**
      * Size.
@@ -90,6 +96,12 @@ abstract class AbstractButton implements ButtonInterface {
      */
     public function getBlock() {
         return $this->block;
+    }
+    /**
+     * {@inheritDoc}
+     */
+    public function getOutline() {
+        return $this->outline;
     }
 
     /**
@@ -147,6 +159,13 @@ abstract class AbstractButton implements ButtonInterface {
      */
     public function setBlock($block) {
         $this->block = $block;
+        return $this;
+    }
+    /**
+     * {@inheritDoc}
+     */
+    public function setOutline($outline) {
+        $this->outline = $outline;
         return $this;
     }
 
