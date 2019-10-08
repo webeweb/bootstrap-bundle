@@ -35,6 +35,13 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     private $content;
 
     /**
+     * Height.
+     *
+     * @var int
+     */
+    private $height;
+
+    /**
      * Max.
      *
      * @var int
@@ -95,6 +102,13 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
     /**
      * {@inheritDoc}
      */
+    public function getHeight() {
+        return $this->height;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getMax() {
         return $this->max;
     }
@@ -147,6 +161,14 @@ abstract class AbstractProgressBar implements ProgressBarInterface {
      */
     public function setContent($content) {
         $this->content = $content;
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setHeight($height) {
+        $this->height = $height;
         return $this;
     }
 

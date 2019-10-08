@@ -64,6 +64,13 @@ interface ProgressBarInterface {
     public function getContent();
 
     /**
+     * Get the height.
+     *
+     * @return int Returns the height.
+     */
+    public function getHeight();
+
+    /**
      * Get the max.
      *
      * @return int Returns the max.
@@ -120,6 +127,14 @@ interface ProgressBarInterface {
      * @return ProgressBarInterface Returns this progress bar.
      */
     public function setContent($content);
+
+    /**
+     * Set the height.
+     *
+     * @param int $height The height.
+     * @return ProgressBarInterface Returns this progress bar.
+     */
+    public function setHeight($height);
 
     /**
      * Set the max.

@@ -33,6 +33,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
 
         $this->assertNull($obj->getAnimated());
         $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getHeight());
         $this->assertNull($obj->getMax());
         $this->assertNull($obj->getMin());
         $this->assertEquals("progress-bar-", $obj->getPrefix());
@@ -65,6 +66,19 @@ class AbstractProgressBarTest extends AbstractTestCase {
 
         $obj->setContent("content");
         $this->assertEquals("content", $obj->getContent());
+    }
+
+    /**
+     * Tests the setHeight() method.
+     *
+     * @return void
+     */
+    public function testSetHeight() {
+
+        $obj = new TestProgressBar("type");
+
+        $obj->setHeight(1);
+        $this->assertEquals(1, $obj->getHeight());
     }
 
     /**
