@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Glyphicon;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node "Dashboard".
+ * Navigation node "dashboard".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Glyphicon

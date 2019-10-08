@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Glyphicon;
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 
 /**
- * Breadcrumb node action "Import".
+ * Breadcrumb node action "import".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Glyphicon

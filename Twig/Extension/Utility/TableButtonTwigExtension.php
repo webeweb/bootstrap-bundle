@@ -51,7 +51,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      * Displays a Bootstrap row button "default".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap form button "Default".
+     * @return string Returns the Bootstrap form button "default".
      */
     public function bootstrapRowButtonDefaultFunction(array $args = []) {
 
@@ -65,7 +65,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      * Displays a Bootstrap row button "delete".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap row button "Delete".
+     * @return string Returns the Bootstrap row button "delete".
      */
     public function bootstrapRowButtonDeleteFunction(array $args = []) {
 
@@ -79,7 +79,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      * Displays a Bootstrap row button "edit".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap row button "Edit".
+     * @return string Returns the Bootstrap row button "edit".
      */
     public function bootstrapRowButtonEditFunction(array $args = []) {
 

@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Navigation\Glyphicon;
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 
 /**
- * Breadcrumb node action "New users group".
+ * Breadcrumb node action "new users group".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle\Navigation\Glyphicon
