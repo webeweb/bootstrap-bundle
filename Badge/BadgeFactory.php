@@ -31,12 +31,21 @@ class BadgeFactory {
     }
 
     /**
+     * Creates a new dark badge.
+     *
+     * @return BadgeInterface Returns the dark badge.
+     */
+    public static function newDarkBadge() {
+        return new DarkBadge();
+    }
+
+    /**
      * Creates a new default badge.
      *
      * @return BadgeInterface Returns the default badge.
      */
-    public static function newDarkBadge() {
-        return new DarkBadge();
+    public static function newDefaultBadge() {
+        return new DefaultBadge();
     }
 
     /**
@@ -126,6 +135,16 @@ class BadgeFactory {
      */
     public static function parseDarkBadge(array $args) {
         return static::parseBadge(static::newDarkBadge(), $args);
+    }
+
+    /**
+     * Parse a default badge.
+     *
+     * @param array $args The arguments.
+     * @return BadgeInterface Returns the default badge.
+     */
+    public static function parseDefaultBadge(array $args) {
+        return static::parseBadge(static::newDefaultBadge(), $args);
     }
 
     /**

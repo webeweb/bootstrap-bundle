@@ -15,6 +15,7 @@ use WBW\Bundle\BootstrapBundle\Badge\BadgeFactory;
 use WBW\Bundle\BootstrapBundle\Badge\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Badge\DangerBadge;
 use WBW\Bundle\BootstrapBundle\Badge\DarkBadge;
+use WBW\Bundle\BootstrapBundle\Badge\DefaultBadge;
 use WBW\Bundle\BootstrapBundle\Badge\InfoBadge;
 use WBW\Bundle\BootstrapBundle\Badge\LightBadge;
 use WBW\Bundle\BootstrapBundle\Badge\PrimaryBadge;
@@ -73,6 +74,18 @@ class BadgeFactoryTest extends AbstractTestCase {
         $obj = BadgeFactory::newDarkBadge();
 
         $this->assertInstanceOf(DarkBadge::class, $obj);
+    }
+
+    /**
+     * Tests the newDefaultBadge() method.
+     *
+     * @return void
+     */
+    public function testNewDefaultBadge() {
+
+        $obj = BadgeFactory::newDefaultBadge();
+
+        $this->assertInstanceOf(DefaultBadge::class, $obj);
     }
 
     /**
@@ -179,6 +192,23 @@ class BadgeFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["pill"], $obj->getPill());
 
         $this->assertEquals(BadgeInterface::BADGE_TYPE_DARK, $obj->getType());
+    }
+
+    /**
+     * Tests the parseDefaultBadge() method.
+     *
+     * @return void
+     */
+    public function testParseDefaultBadge() {
+
+        $obj = BadgeFactory::parseDefaultBadge($this->args);
+
+        $this->assertInstanceOf(DefaultBadge::class, $obj);
+
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["pill"], $obj->getPill());
+
+        $this->assertNull($obj->getType());
     }
 
     /**
