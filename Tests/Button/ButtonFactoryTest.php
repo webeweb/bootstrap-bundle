@@ -14,10 +14,13 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Button;
 use WBW\Bundle\BootstrapBundle\Button\ButtonFactory;
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Button\DangerButton;
+use WBW\Bundle\BootstrapBundle\Button\DarkButton;
 use WBW\Bundle\BootstrapBundle\Button\DefaultButton;
 use WBW\Bundle\BootstrapBundle\Button\InfoButton;
+use WBW\Bundle\BootstrapBundle\Button\LightButton;
 use WBW\Bundle\BootstrapBundle\Button\LinkButton;
 use WBW\Bundle\BootstrapBundle\Button\PrimaryButton;
+use WBW\Bundle\BootstrapBundle\Button\SecondaryButton;
 use WBW\Bundle\BootstrapBundle\Button\SuccessButton;
 use WBW\Bundle\BootstrapBundle\Button\WarningButton;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
@@ -51,6 +54,7 @@ class ButtonFactoryTest extends AbstractTestCase {
             "block"    => true,
             "active"   => true,
             "disabled" => true,
+            "outline"  => true,
         ];
     }
 
@@ -64,6 +68,18 @@ class ButtonFactoryTest extends AbstractTestCase {
         $obj = ButtonFactory::newDangerButton();
 
         $this->assertInstanceOf(DangerButton::class, $obj);
+    }
+
+    /**
+     * Tests the newDarkButton() method.
+     *
+     * @return void
+     */
+    public function testNewDarkButton() {
+
+        $obj = ButtonFactory::newDarkButton();
+
+        $this->assertInstanceOf(DarkButton::class, $obj);
     }
 
     /**
@@ -91,6 +107,18 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the newLightButton() method.
+     *
+     * @return void
+     */
+    public function testNewLightButton() {
+
+        $obj = ButtonFactory::newLightButton();
+
+        $this->assertInstanceOf(LightButton::class, $obj);
+    }
+
+    /**
      * Tests the newLinkButton() method.
      *
      * @return void
@@ -112,6 +140,18 @@ class ButtonFactoryTest extends AbstractTestCase {
         $obj = ButtonFactory::newPrimaryButton();
 
         $this->assertInstanceOf(PrimaryButton::class, $obj);
+    }
+
+    /**
+     * Tests the newSecondaryButton() method.
+     *
+     * @return void
+     */
+    public function testNewSecondaryButton() {
+
+        $obj = ButtonFactory::newSecondaryButton();
+
+        $this->assertInstanceOf(SecondaryButton::class, $obj);
     }
 
     /**
@@ -153,9 +193,31 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
+    }
+
+    /**
+     * Tests the parseDarkButton() method.
+     *
+     * @return void
+     */
+    public function testParseDarkButton() {
+
+        $obj = ButtonFactory::parseDarkButton($this->args);
+
+        $this->assertInstanceOf(DarkButton::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_DARK, $obj->getType());
     }
 
     /**
@@ -173,6 +235,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_DEFAULT, $obj->getType());
@@ -193,9 +256,31 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
+    }
+
+    /**
+     * Tests the parseLightButton() method.
+     *
+     * @return void
+     */
+    public function testParseLightButton() {
+
+        $obj = ButtonFactory::parseLightButton($this->args);
+
+        $this->assertInstanceOf(LightButton::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_LIGHT, $obj->getType());
     }
 
     /**
@@ -213,6 +298,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_LINK, $obj->getType());
@@ -233,9 +319,31 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_PRIMARY, $obj->getType());
+    }
+
+    /**
+     * Tests the parseSecondaryButton() method.
+     *
+     * @return void
+     */
+    public function testParseSecondaryButton() {
+
+        $obj = ButtonFactory::parseSecondaryButton($this->args);
+
+        $this->assertInstanceOf(SecondaryButton::class, $obj);
+
+        $this->assertEquals($this->args["active"], $obj->getActive());
+        $this->assertEquals($this->args["block"], $obj->getBlock());
+        $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
+        $this->assertEquals($this->args["size"], $obj->getSize());
+        $this->assertEquals($this->args["title"], $obj->getTitle());
+        $this->assertEquals(ButtonInterface::BUTTON_TYPE_SECONDARY, $obj->getType());
     }
 
     /**
@@ -253,6 +361,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
@@ -273,6 +382,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
+        $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
         $this->assertEquals(ButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());

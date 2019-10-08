@@ -31,6 +31,15 @@ class ButtonFactory {
     }
 
     /**
+     * Creates a new dark button.
+     *
+     * @return ButtonInterface Returns the dark button.
+     */
+    public static function newDarkButton() {
+        return new DarkButton();
+    }
+
+    /**
      * Creates a new default button.
      *
      * @return ButtonInterface Returns the default button.
@@ -49,6 +58,15 @@ class ButtonFactory {
     }
 
     /**
+     * Creates a new light button.
+     *
+     * @return ButtonInterface Returns the light button.
+     */
+    public static function newLightButton() {
+        return new LightButton();
+    }
+
+    /**
      * Creates a new link button.
      *
      * @return ButtonInterface Returns the link button.
@@ -64,6 +82,15 @@ class ButtonFactory {
      */
     public static function newPrimaryButton() {
         return new PrimaryButton();
+    }
+
+    /**
+     * Creates a new secondary button.
+     *
+     * @return ButtonInterface Returns the secondary button.
+     */
+    public static function newSecondaryButton() {
+        return new SecondaryButton();
     }
 
     /**
@@ -97,6 +124,7 @@ class ButtonFactory {
         $button->setBlock(ArrayHelper::get($args, "block", false));
         $button->setContent(ArrayHelper::get($args, "content"));
         $button->setDisabled(ArrayHelper::get($args, "disabled", false));
+        $button->setOutline(ArrayHelper::get($args, "outline", false));
         $button->setSize(ArrayHelper::get($args, "size"));
         $button->setTitle(ArrayHelper::get($args, "title"));
 
@@ -111,6 +139,16 @@ class ButtonFactory {
      */
     public static function parseDangerButton(array $args) {
         return static::parseButton(static::newDangerButton(), $args);
+    }
+
+    /**
+     * Parse a dark button.
+     *
+     * @param array $args The arguments.
+     * @return ButtonInterface Returns the dark button.
+     */
+    public static function parseDarkButton(array $args) {
+        return static::parseButton(static::newDarkButton(), $args);
     }
 
     /**
@@ -134,6 +172,16 @@ class ButtonFactory {
     }
 
     /**
+     * Parse a light button.
+     *
+     * @param array $args The arguments.
+     * @return ButtonInterface Returns the light button.
+     */
+    public static function parseLightButton(array $args) {
+        return static::parseButton(static::newLightButton(), $args);
+    }
+
+    /**
      * Parse a link button.
      *
      * @param array $args The arguments.
@@ -151,6 +199,16 @@ class ButtonFactory {
      */
     public static function parsePrimaryButton(array $args) {
         return static::parseButton(static::newPrimaryButton(), $args);
+    }
+
+    /**
+     * Parse a secondary button.
+     *
+     * @param array $args The arguments.
+     * @return ButtonInterface Returns the secondary button.
+     */
+    public static function parseSecondaryButton(array $args) {
+        return static::parseButton(static::newSecondaryButton(), $args);
     }
 
     /**
