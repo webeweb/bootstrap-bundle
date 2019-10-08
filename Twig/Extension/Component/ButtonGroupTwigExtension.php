@@ -30,22 +30,22 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.button_group";
 
     /**
-     * Displays a Bootstrap button group "Basic".
+     * Displays a Bootstrap button group "basic".
      *
      * @param array $args The arguments.
      * @param array $buttons The buttons.
-     * @return string Returns the Bootstrap button group "Basic".
+     * @return string Returns the Bootstrap button group "basic".
      */
     public function bootstrapButtonGroupBasicFunction(array $args = [], array $buttons = []) {
         return $this->bootstrapButtonGroup("btn-group", "group", $buttons);
     }
 
     /**
-     * Displays a Bootstrap button group "Toolbar".
+     * Displays a Bootstrap button group "toolbar".
      *
      * @param array $args The arguments.
      * @param array $buttons The buttons.
-     * @return string Returns the Bootstrap button group "Toolbar".
+     * @return string Returns the Bootstrap button group "toolbar".
      */
     public function bootstrapButtonGroupToolbarFunction(array $args = [], array $buttons = []) {
         return $this->bootstrapButtonGroup("btn-toolbar", "toolbar", $buttons);

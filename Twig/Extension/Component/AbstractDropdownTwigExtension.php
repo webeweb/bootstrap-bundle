@@ -25,13 +25,13 @@ use WBW\Library\Core\Argument\StringHelper;
 abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap dropdown "Button".
+     * Displays a Bootstrap dropdown "button".
      *
      * @param string $content The content.
      * @param string $id The id.
      * @param bool $expanded Expanded ?
      * @param string $class The class.
-     * @return string Returns the Bootstrap dropdown "Button".
+     * @return string Returns the Bootstrap dropdown "button".
      */
     protected function bootstrapDropdownButton($content, $id, $expanded, $class) {
 
@@ -54,9 +54,9 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap dropdown "Divider".
+     * Displays a Bootstrap dropdown "divider".
      *
-     * @return string Returns the Bootstrap dropdown "Divider".
+     * @return string Returns the Bootstrap dropdown "divider".
      */
     protected function bootstrapDropdownDivider() {
 
@@ -69,10 +69,10 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap dropdown "Header".
+     * Displays a Bootstrap dropdown "header".
      *
      * @param string $content The content.
-     * @return string Returns the Bootstrap dropdown "Header".
+     * @return string Returns the Bootstrap dropdown "header".
      */
     protected function bootstrapDropdownHeader($content) {
 

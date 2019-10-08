@@ -32,60 +32,60 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.label";
 
     /**
-     * Displays a Bootstrap label "Danger".
+     * Displays a Bootstrap label "danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap label "Danger".
+     * @return string Returns the Bootstrap label "danger".
      */
     public function bootstrapLabelDangerFunction(array $args = []) {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . BootstrapInterface::BOOTSTRAP_DANGER);
     }
 
     /**
-     * Displays a Bootstrap label "Default".
+     * Displays a Bootstrap label "default".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap label "Default".
+     * @return string Returns the Bootstrap label "default".
      */
     public function bootstrapLabelDefaultFunction(array $args = []) {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . BootstrapInterface::BOOTSTRAP_DEFAULT);
     }
 
     /**
-     * Displays a Bootstrap label "Info".
+     * Displays a Bootstrap label "info".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap label "Info".
+     * @return string Returns the Bootstrap label "info".
      */
     public function bootstrapLabelInfoFunction(array $args = []) {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . BootstrapInterface::BOOTSTRAP_INFO);
     }
 
     /**
-     * Displays a Bootstrap label "Primary".
+     * Displays a Bootstrap label "primary".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap label "Primary".
+     * @return string Returns the Bootstrap label "primary".
      */
     public function bootstrapLabelPrimaryFunction(array $args = []) {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . BootstrapInterface::BOOTSTRAP_PRIMARY);
     }
 
     /**
-     * Displays a Bootstrap label "Success".
+     * Displays a Bootstrap label "success".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap label "Success".
+     * @return string Returns the Bootstrap label "success".
      */
     public function bootstrapLabelSuccessFunction(array $args = []) {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . BootstrapInterface::BOOTSTRAP_SUCCESS);
     }
 
     /**
-     * Displays a Bootstrap label "Warning".
+     * Displays a Bootstrap label "warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap label "Warning".
+     * @return string Returns the Bootstrap label "warning".
      */
     public function bootstrapLabelWarningFunction(array $args = []) {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . BootstrapInterface::BOOTSTRAP_WARNING);

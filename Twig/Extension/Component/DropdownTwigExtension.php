@@ -31,29 +31,29 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.dropdown";
 
     /**
-     * Displays a Bootstrap dropdown "Button".
+     * Displays a Bootstrap dropdown "button".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap dropdown "Button".
+     * @return string Returns the Bootstrap dropdown "button".
      */
     public function bootstrapDropdownButtonFunction(array $args = []) {
         return $this->bootstrapDropdownButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "expanded", true), ArrayHelper::get($args, "class", "default"));
     }
 
     /**
-     * Displays a Bootstrap dropdown "Divider".
+     * Displays a Bootstrap dropdown "divider".
      *
-     * @return string Returns the Bootstrap dropdown "Divider".
+     * @return string Returns the Bootstrap dropdown "divider".
      */
     public function bootstrapDropdownDividerFunction() {
         return $this->bootstrapDropdownDivider();
     }
 
     /**
-     * Displays a Bootstrap dropdown "Header".
+     * Displays a Bootstrap dropdown "header".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap dropdown "Header".
+     * @return string Returns the Bootstrap dropdown "header".
      */
     public function bootstrapDropdownHeaderFunction(array $args = []) {
         return $this->bootstrapDropdownHeader(ArrayHelper::get($args, "content"));

@@ -31,30 +31,30 @@ class NavTwigExtension extends AbstractNavTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.nav";
 
     /**
-     * Displays a Bootstrap navs "Justified".
+     * Displays a Bootstrap navs "justified".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap nav "Justified".
+     * @return string Returns the Bootstrap nav "justified".
      */
     public function bootstrapNavsJustified(array $args = []) {
         return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-justified", false);
     }
 
     /**
-     * Displays a Bootstrap navs "Pills".
+     * Displays a Bootstrap navs "pills".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap nav "Pills".
+     * @return string Returns the Bootstrap nav "pills".
      */
     public function bootstrapNavsPills(array $args = []) {
         return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-pills", ArrayHelper::get($args, "stacked", false));
     }
 
     /**
-     * Displays a Bootstrap navs "Tabs".
+     * Displays a Bootstrap navs "tabs".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap nav "Tabs".
+     * @return string Returns the Bootstrap nav "tabs".
      */
     public function bootstrapNavsTabs(array $args = []) {
         return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-tabs", false);
