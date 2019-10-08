@@ -50,6 +50,13 @@ interface ButtonInterface {
     const BUTTON_TYPE_DANGER = BootstrapInterface::BOOTSTRAP_DANGER;
 
     /**
+     * Button type "dark".
+     *
+     * @var string
+     */
+    const BUTTON_TYPE_DARK = BootstrapInterface::BOOTSTRAP_DARK;
+
+    /**
      * Button type "default".
      *
      * @var string
@@ -64,6 +71,13 @@ interface ButtonInterface {
     const BUTTON_TYPE_INFO = BootstrapInterface::BOOTSTRAP_INFO;
 
     /**
+     * Button type "light".
+     *
+     * @var string
+     */
+    const BUTTON_TYPE_LIGHT = BootstrapInterface::BOOTSTRAP_LIGHT;
+
+    /**
      * Button type "link".
      *
      * @var string
@@ -76,14 +90,18 @@ interface ButtonInterface {
      * @var string
      */
     const BUTTON_TYPE_PRIMARY = BootstrapInterface::BOOTSTRAP_PRIMARY;
-
+    /**
+     * Button type "secondary".
+     *
+     * @var string
+     */
+    const BUTTON_TYPE_SECONDARY = BootstrapInterface::BOOTSTRAP_SECONDARY;
     /**
      * Button type "success".
      *
      * @var string
      */
     const BUTTON_TYPE_SUCCESS = BootstrapInterface::BOOTSTRAP_SUCCESS;
-
     /**
      * Button type "warning".
      *
@@ -118,6 +136,13 @@ interface ButtonInterface {
      * @return boolean Returns the disabled.
      */
     public function getDisabled();
+
+    /**
+     * Get the outline.
+     *
+     * @return boolean Returns the outline.
+     */
+    public function getOutline();
 
     /**
      * Get the prefix.
@@ -178,6 +203,14 @@ interface ButtonInterface {
      * @return ButtonInterface Returns this button.
      */
     public function setDisabled($disabled);
+
+    /**
+     * Set the outline.
+     *
+     * @param boolean $outline The outline.
+     * @return ButtonInterface Returns this button.
+     */
+    public function setOutline($outline);
 
     /**
      * Set the size.

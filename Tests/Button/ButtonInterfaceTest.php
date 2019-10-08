@@ -35,10 +35,13 @@ class ButtonInterfaceTest extends AbstractTestCase {
         $this->assertEquals("xs", ButtonInterface::BUTTON_SIZE_XS);
 
         $this->assertEquals(BootstrapInterface::BOOTSTRAP_DANGER, ButtonInterface::BUTTON_TYPE_DANGER);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DARK, ButtonInterface::BUTTON_TYPE_DARK);
         $this->assertEquals(BootstrapInterface::BOOTSTRAP_DEFAULT, ButtonInterface::BUTTON_TYPE_DEFAULT);
         $this->assertEquals(BootstrapInterface::BOOTSTRAP_INFO, ButtonInterface::BUTTON_TYPE_INFO);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_LIGHT, ButtonInterface::BUTTON_TYPE_LIGHT);
         $this->assertEquals("link", ButtonInterface::BUTTON_TYPE_LINK);
         $this->assertEquals(BootstrapInterface::BOOTSTRAP_PRIMARY, ButtonInterface::BUTTON_TYPE_PRIMARY);
+        $this->assertEquals(BootstrapInterface::BOOTSTRAP_SECONDARY, ButtonInterface::BUTTON_TYPE_SECONDARY);
         $this->assertEquals(BootstrapInterface::BOOTSTRAP_SUCCESS, ButtonInterface::BUTTON_TYPE_SUCCESS);
         $this->assertEquals(BootstrapInterface::BOOTSTRAP_WARNING, ButtonInterface::BUTTON_TYPE_WARNING);
     }
