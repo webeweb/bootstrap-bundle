@@ -146,5 +146,10 @@ class ButtonRendererTest extends AbstractTestCase {
 
         $res = ButtonRenderer::renderType($this->button);
         $this->assertEquals("btn-danger", $res);
+
+        // Set a Button mock.
+        $button = ButtonFactory::parseDangerButton(["outline" => true]);
+
+        $this->assertEquals("btn-outline-danger", ButtonRenderer::renderType($button));
     }
 }

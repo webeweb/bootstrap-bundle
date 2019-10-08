@@ -106,6 +106,7 @@ class ButtonRenderer {
      * @return string|null Returns the rendered type.
      */
     public static function renderType(ButtonInterface $button) {
-        return null !== $button->getType() ? $button->getPrefix() . $button->getType() : null;
+        $prefix = $button->getPrefix() . (true === $button->getOutline() ? "outline-" : "");
+        return null !== $button->getType() ? $prefix . $button->getType() : null;
     }
 }
