@@ -47,6 +47,6 @@ abstract class AbstractImageTwigExtension extends AbstractTwigExtension {
         $attributes["class"]  = $class;
         $attributes["usemap"] = $usemap;
 
-        return StringHelper::replace($template, ["%attributes%"], [StringHelper::parseArray($attributes)]);
+        return str_replace(["%attributes%"], [StringHelper::parseArray($attributes)], $template);
     }
 }

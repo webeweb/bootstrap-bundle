@@ -18,7 +18,6 @@ use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtensionTrait;
-use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Role label Twig extension.
@@ -60,7 +59,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
     private function applyColor($label, $content, $color) {
         $searches = ">" . $content;
         $replaces = " style=\"background-color:" . $color . ";\"" . $searches;
-        return StringHelper::replace($label, [$searches], [$replaces]);
+        return str_replace([$searches], [$replaces], $label);
     }
 
     /**

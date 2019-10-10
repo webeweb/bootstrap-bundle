@@ -95,7 +95,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
         $searches = ["<span", "</span>", "class="];
         $replaces = ["<a", "</a>", StringHelper::parseArray(["href" => $href, "target" => $target]) . " class="];
 
-        return StringHelper::replace($button, $searches, $replaces);
+        return str_replace($searches, $replaces, $button);
     }
 
     /**

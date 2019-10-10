@@ -98,13 +98,13 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             $searches = [" disabled=\"disabled\"", "class=\""];
             $replaces = ["", "class=\"disabled "];
 
-            $button = StringHelper::replace($button, $searches, $replaces);
+            $button = str_replace($searches, $replaces, $button);
         }
 
         $searches = ["<button", "</button>", "type=\"button\""];
         $replaces = ["<a", "</a>", StringHelper::parseArray(["href" => $href, "target" => $target])];
 
-        return StringHelper::replace($button, $searches, $replaces);
+        return str_replace($searches, $replaces, $button);
     }
 
     /**
@@ -140,11 +140,11 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     /**
      * Transforms a Bootstrap button into a submit button.
      *
-     * @param string $bootstrapButton The bootstrap button.
+     * @param string $button The button.
      * @return string Returns the Bootstrap button transformed into a submit button.
      */
-    public function bootstrapButtonSubmitFilter($bootstrapButton) {
-        return StringHelper::replace($bootstrapButton, ["type=\"button\""], ["type=\"submit\""]);
+    public function bootstrapButtonSubmitFilter($button) {
+        return str_replace(["type=\"button\""], ["type=\"submit\""], $button);
     }
 
     /**

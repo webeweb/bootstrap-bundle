@@ -14,7 +14,6 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarFactory;
-use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Progress bar Twig extension.
@@ -40,7 +39,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      */
     public function bootstrapMultipleBars(array $progressBars) {
         $output = implode("", $progressBars);
-        return StringHelper::replace($output, ["</div><div class=\"progress\">"], [""]);
+        return str_replace(["</div><div class=\"progress\">"], [""], $output);
     }
 
     /**
