@@ -33,6 +33,7 @@ class Configuration implements ConfigurationInterface {
         $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWBootstrapExtension::EXTENSION_ALIAS);
         $rootNode->children()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
+            ->integerNode("version")->defaultValue(4)->info("Version")->min(3)->max(4)->end()
             ->end();
 
         return $treeBuilder;
