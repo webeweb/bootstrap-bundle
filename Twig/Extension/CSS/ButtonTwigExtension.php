@@ -34,33 +34,53 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.css.button";
 
     /**
-     * Displays a Bootstrap button "Danger".
+     * Displays a Bootstrap button "danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button "Danger".
+     * @return string Returns the Bootstrap button "danger".
      */
     public function bootstrapButtonDangerFunction(array $args = []) {
         return $this->bootstrapButton(ButtonFactory::parseDangerButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button "Default".
+     * Displays a Bootstrap button "dark".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button "Default".
+     * @return string Returns the Bootstrap button "dark".
+     */
+    public function bootstrapButtonDarkFunction(array $args = []) {
+        return $this->bootstrapButton(ButtonFactory::parseDarkButton($args), ArrayHelper::get($args, "icon"));
+    }
+
+    /**
+     * Displays a Bootstrap button "default".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap button "default".
      */
     public function bootstrapButtonDefaultFunction(array $args = []) {
         return $this->bootstrapButton(ButtonFactory::parseDefaultButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button "Info".
+     * Displays a Bootstrap button "info".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button "Info".
+     * @return string Returns the Bootstrap button "info".
      */
     public function bootstrapButtonInfoFunction(array $args = []) {
         return $this->bootstrapButton(ButtonFactory::parseInfoButton($args), ArrayHelper::get($args, "icon"));
+    }
+
+    /**
+     * Displays a Bootstrap button "light".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap button "light".
+     */
+    public function bootstrapButtonLightFunction(array $args = []) {
+        return $this->bootstrapButton(ButtonFactory::parseLightButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -81,30 +101,40 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             $button = StringHelper::replace($button, $searches, $replaces);
         }
 
-        $searches = ["<button", "type=\"button\"", "</button>"];
-        $replaces = ["<a", "href=\"" . $href . "\"" . (null !== $target ? " target=\"" . $target . "\"" : ""), "</a>"];
+        $searches = ["<button", "</button>", "type=\"button\""];
+        $replaces = ["<a", "</a>", StringHelper::parseArray(["href" => $href, "target" => $target])];
 
         return StringHelper::replace($button, $searches, $replaces);
     }
 
     /**
-     * Displays a Bootstrap button "Link".
+     * Displays a Bootstrap button "link".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button "Link".
+     * @return string Returns the Bootstrap button "link".
      */
     public function bootstrapButtonLinkFunction(array $args = []) {
         return $this->bootstrapButton(ButtonFactory::parseLinkButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button "Primary".
+     * Displays a Bootstrap button "primary".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button "Primary".
+     * @return string Returns the Bootstrap button "primary".
      */
     public function bootstrapButtonPrimaryFunction(array $args = []) {
         return $this->bootstrapButton(ButtonFactory::parsePrimaryButton($args), ArrayHelper::get($args, "icon"));
+    }
+
+    /**
+     * Displays a Bootstrap button "secondary".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap button "secondary".
+     */
+    public function bootstrapButtonSecondaryFunction(array $args = []) {
+        return $this->bootstrapButton(ButtonFactory::parseSecondaryButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
@@ -118,20 +148,20 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap button "Success".
+     * Displays a Bootstrap button "success".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button "Success".
+     * @return string Returns the Bootstrap button "success".
      */
     public function bootstrapButtonSuccessFunction(array $args = []) {
         return $this->bootstrapButton(ButtonFactory::parseSuccessButton($args), ArrayHelper::get($args, "icon"));
     }
 
     /**
-     * Displays a Bootstrap button "Warning".
+     * Displays a Bootstrap button "warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap button "Warning".
+     * @return string Returns the Bootstrap button "warning".
      */
     public function bootstrapButtonWarningFunction(array $args = []) {
         return $this->bootstrapButton(ButtonFactory::parseWarningButton($args), ArrayHelper::get($args, "icon"));
@@ -162,17 +192,26 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             new TwigFunction("bootstrapButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
 
+            new TwigFunction("bootstrapButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
 
             new TwigFunction("bootstrapButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
 
+            new TwigFunction("bootstrapButtonLight", [$this, "bootstrapButtonLightFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonLight", [$this, "bootstrapButtonLightFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
 
             new TwigFunction("bootstrapButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("bootstrapButtonSecondary", [$this, "bootstrapButtonSecondaryFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonSecondary", [$this, "bootstrapButtonSecondaryFunction"], ["is_safe" => ["html"]]),
 
             new TwigFunction("bootstrapButtonSuccess", [$this, "bootstrapButtonSuccessFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonSuccess", [$this, "bootstrapButtonSuccessFunction"], ["is_safe" => ["html"]]),
