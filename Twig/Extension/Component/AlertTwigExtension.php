@@ -33,30 +33,50 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.alert";
 
     /**
-     * Displays a Bootstrap alert "Danger".
+     * Displays a Bootstrap alert "danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert "Danger".
+     * @return string Returns the Bootstrap alert "danger".
      */
     public function bootstrapAlertDangerFunction(array $args = []) {
         return $this->bootstrapAlert(AlertFactory::parseDangerAlert($args));
     }
 
     /**
-     * Displays a Bootstrap alert "Info".
+     * Displays a Bootstrap alert "dark".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert "Info".
+     * @return string Returns the Bootstrap alert "dark".
+     */
+    public function bootstrapAlertDarkFunction(array $args = []) {
+        return $this->bootstrapAlert(AlertFactory::parseDarkAlert($args));
+    }
+
+    /**
+     * Displays a Bootstrap alert "info".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap alert "info".
      */
     public function bootstrapAlertInfoFunction(array $args = []) {
         return $this->bootstrapAlert(AlertFactory::parseInfoAlert($args));
     }
 
     /**
-     * Displays a Bootstrap alert "Link".
+     * Displays a Bootstrap alert "light".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert "Link".
+     * @return string Returns the Bootstrap alert "light".
+     */
+    public function bootstrapAlertLightFunction(array $args = []) {
+        return $this->bootstrapAlert(AlertFactory::parseLightAlert($args));
+    }
+
+    /**
+     * Displays a Bootstrap alert "link".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap alert "link".
      */
     public function bootstrapAlertLinkFunction(array $args = []) {
 
@@ -70,20 +90,30 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap alert "Success".
+     * Displays a Bootstrap alert "secondary".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert "Success".
+     * @return string Returns the Bootstrap alert "secondary".
+     */
+    public function bootstrapAlertSecondaryFunction(array $args = []) {
+        return $this->bootstrapAlert(AlertFactory::parseSecondaryAlert($args));
+    }
+
+    /**
+     * Displays a Bootstrap alert "success".
+     *
+     * @param array $args The arguments.
+     * @return string Returns the Bootstrap alert "success".
      */
     public function bootstrapAlertSuccessFunction(array $args = []) {
         return $this->bootstrapAlert(AlertFactory::parseSuccessAlert($args));
     }
 
     /**
-     * Displays a Bootstrap alert "Warning".
+     * Displays a Bootstrap alert "warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap alert "Warning".
+     * @return string Returns the Bootstrap alert "warning".
      */
     public function bootstrapAlertWarningFunction(array $args = []) {
         return $this->bootstrapAlert(AlertFactory::parseWarningAlert($args));
@@ -99,11 +129,20 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
             new TwigFunction("bootstrapAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
 
+            new TwigFunction("bootstrapAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
 
+            new TwigFunction("bootstrapAlertLight", [$this, "bootstrapAlertLightFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsAlertLight", [$this, "bootstrapAlertLightFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapAlertLink", [$this, "bootstrapAlertLinkFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertLink", [$this, "bootstrapAlertLinkFunction"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("bootstrapAlertSecondary", [$this, "bootstrapAlertSecondaryFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsAlertSecondary", [$this, "bootstrapAlertSecondaryFunction"], ["is_safe" => ["html"]]),
 
             new TwigFunction("bootstrapAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
