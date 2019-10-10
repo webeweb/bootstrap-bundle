@@ -32,7 +32,7 @@ class BreadcrumbNodeActionImportTest extends AbstractTestCase {
 
         $obj = new BreadcrumbNodeActionImport("route");
 
-        $this->assertEquals("navigation.node.action.import", $obj->getId());
+        $this->assertEquals("navigation.node.action.import", $obj->getLabel());
         $this->assertEquals("g:save", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

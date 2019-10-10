@@ -32,7 +32,7 @@ class NavigationNodeEventsTest extends AbstractTestCase {
 
         $obj = new NavigationNodeEvents("route");
 
-        $this->assertEquals("navigation.node.events", $obj->getId());
+        $this->assertEquals("navigation.node.events", $obj->getLabel());
         $this->assertEquals("g:calendar", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

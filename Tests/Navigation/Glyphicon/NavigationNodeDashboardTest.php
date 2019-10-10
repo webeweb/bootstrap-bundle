@@ -32,7 +32,7 @@ class NavigationNodeDashboardTest extends AbstractTestCase {
 
         $obj = new NavigationNodeDashboard("route");
 
-        $this->assertEquals("navigation.node.dashboard", $obj->getId());
+        $this->assertEquals("navigation.node.dashboard", $obj->getLabel());
         $this->assertEquals("g:dashboard", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

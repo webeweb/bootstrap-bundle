@@ -32,7 +32,7 @@ class NavigationNodeSettingsTest extends AbstractTestCase {
 
         $obj = new NavigationNodeSettings("route");
 
-        $this->assertEquals("navigation.node.settings", $obj->getId());
+        $this->assertEquals("navigation.node.settings", $obj->getLabel());
         $this->assertEquals("g:cog", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

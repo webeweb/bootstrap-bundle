@@ -32,7 +32,7 @@ class NavigationNodeUsesrTest extends AbstractTestCase {
 
         $obj = new NavigationNodeUsers("route");
 
-        $this->assertEquals("navigation.node.users", $obj->getId());
+        $this->assertEquals("navigation.node.users", $obj->getLabel());
         $this->assertEquals("g:user", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

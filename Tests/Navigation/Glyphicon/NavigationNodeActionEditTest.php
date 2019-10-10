@@ -32,7 +32,7 @@ class NavigationNodeActionEditTest extends AbstractTestCase {
 
         $obj = new NavigationNodeActionEdit("route");
 
-        $this->assertEquals("navigation.node.action.edit", $obj->getId());
+        $this->assertEquals("navigation.node.action.edit", $obj->getLabel());
         $this->assertEquals("g:pencil", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

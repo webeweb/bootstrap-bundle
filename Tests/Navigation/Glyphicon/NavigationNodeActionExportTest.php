@@ -32,7 +32,7 @@ class NavigationNodeActionExportTest extends AbstractTestCase {
 
         $obj = new NavigationNodeActionExport("route");
 
-        $this->assertEquals("navigation.node.action.export", $obj->getId());
+        $this->assertEquals("navigation.node.action.export", $obj->getLabel());
         $this->assertEquals("g:open", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

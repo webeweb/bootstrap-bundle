@@ -32,7 +32,7 @@ class NavigationNodeParametersTest extends AbstractTestCase {
 
         $obj = new NavigationNodeParameters("route");
 
-        $this->assertEquals("navigation.node.parameters", $obj->getId());
+        $this->assertEquals("navigation.node.parameters", $obj->getLabel());
         $this->assertEquals("g:wrench", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

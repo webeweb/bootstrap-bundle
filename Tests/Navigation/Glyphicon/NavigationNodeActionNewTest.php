@@ -32,7 +32,7 @@ class NavigationNodeActionNewTest extends AbstractTestCase {
 
         $obj = new NavigationNodeActionNew("route");
 
-        $this->assertEquals("navigation.node.action.new", $obj->getId());
+        $this->assertEquals("navigation.node.action.new", $obj->getLabel());
         $this->assertEquals("g:plus", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
