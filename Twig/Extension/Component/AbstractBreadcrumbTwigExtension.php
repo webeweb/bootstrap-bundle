@@ -52,7 +52,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
 
         $attributes = true === $node->getActive() && true === $last ? ["class" => "active"] : [];
 
-        $content   = $this->getTranslator()->trans($node->getId());
+        $content   = $this->getTranslator()->trans($node->getLabel());
         $innerHTML = true === $last ? $content : static::coreHTMLElement("a", $content, ["href" => $node->getUri()]);
 
         return static::coreHTMLElement("li", $innerHTML, $attributes);
