@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use WBW\Bundle\BootstrapBundle\Badge\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Badge\BadgeRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -25,10 +27,19 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap badge.
      *
-     * @param string $content The content.
+     * @param BadgeInterface $badge The badge.
      * @return string Returns the Bootstrap badge.
      */
-    protected function bootstrapBadge($content) {
-        return static::coreHTMLElement("span", $content, ["class" => "badge"]);
+    protected function bootstrapBadge(BadgeInterface $badge) {
+
+        $attributes = [];
+
+        $attributes["class"]   = ["badge"];
+        $attributes["class"][] = BadgeRenderer::renderType($badge);
+        $attributes["class"][] = BadgeRenderer::renderPill($badge);
+
+        $innerHTML = BadgeRenderer::renderContent($badge);
+
+        return static::coreHTMLElement("span", $innerHTML, $attributes);
     }
 }
