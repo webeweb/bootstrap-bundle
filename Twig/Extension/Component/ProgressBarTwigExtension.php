@@ -11,8 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
+use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarFactory;
+use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Progress bar Twig extension.
@@ -31,53 +33,76 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.progress_bar";
 
     /**
-     * Displays a Bootstrap progress bar "Basic".
+     * Displays a Bootstrap multiple bars.
+     *
+     * @param string[] $progressBars The progress bars.
+     * @return string Returns the Bootstrap multiple bars.
+     */
+    public function bootstrapMultipleBars(array $progressBars) {
+        $output = implode("", $progressBars);
+        return StringHelper::replace($output, ["</div><div class=\"progress\">"], [""]);
+    }
+
+    /**
+     * Displays a Bootstrap progress bar "basic".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap progress bar "Basic".
+     * @return string Returns the Bootstrap progress bar "basic".
      */
     public function bootstrapProgressBarBasicFunction(array $args = []) {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseBasicProgressBar($args));
     }
 
     /**
-     * Displays a Bootstrap progress bar "Danger".
+     * Displays a Bootstrap progress bar "danger".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap progress bar "Danger".
+     * @return string Returns the Bootstrap progress bar "danger".
      */
     public function bootstrapProgressBarDangerFunction(array $args = []) {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseDangerProgressBar($args));
     }
 
     /**
-     * Displays a Bootstrap progress bar "Info".
+     * Displays a Bootstrap progress bar "info".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap progress bar "Info".
+     * @return string Returns the Bootstrap progress bar "info".
      */
     public function bootstrapProgressBarInfoFunction(array $args = []) {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseInfoProgressBar($args));
     }
 
     /**
-     * Displays a Bootstrap progress bar "Success".
+     * Displays a Bootstrap progress bar "success".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap progress bar "Success".
+     * @return string Returns the Bootstrap progress bar "success".
      */
     public function bootstrapProgressBarSuccessFunction(array $args = []) {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseSuccessProgressBar($args));
     }
 
     /**
-     * Displays a Bootstrap progress bar "Warning".
+     * Displays a Bootstrap progress bar "warning".
      *
      * @param array $args The arguments.
-     * @return string Returns the Bootstrap progress bar "Warning".
+     * @return string Returns the Bootstrap progress bar "warning".
      */
     public function bootstrapProgressBarWarningFunction(array $args = []) {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseWarningProgressBar($args));
+    }
+
+    /**
+     * Get the Twig filters.
+     *
+     * @return TwigFilter[] Returns the Twig filters.
+     */
+    public function getFilters() {
+        return [
+            new TwigFilter("bootstrapMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
+            new TwigFilter("bsMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
+        ];
     }
 
     /**
@@ -101,6 +126,9 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
 
             new TwigFunction("bootstrapProgressBarWarning", [$this, "bootstrapProgressBarWarningFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsProgressBarWarning", [$this, "bootstrapProgressBarWarningFunction"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("bootstrapMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
         ];
     }
 }

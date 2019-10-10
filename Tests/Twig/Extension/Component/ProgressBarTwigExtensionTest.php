@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
 use Twig\Node\Node;
+use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension;
@@ -151,6 +152,23 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the bootstrapMultipleBars() method.
+     *
+     * @return void
+     */
+    public function testBootstrapMultipleBars() {
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $arg = [
+            $obj->bootstrapProgressBarBasicFunction([]),
+            $obj->bootstrapProgressBarBasicFunction([]),
+        ];
+        $res = '<div class="progress"><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div><div class="progress-bar" style="width: 50%;" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div></div>';
+        $this->assertEquals($res, $obj->bootstrapMultipleBars($arg));
+    }
+
+    /**
      * Tests the bootstrapProgressBarWarningFunction() method.
      *
      * @return void
@@ -188,7 +206,17 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(0, $res);
+        $this->assertCount(2, $res);
+
+        $this->assertInstanceOf(TwigFilter::class, $res[0]);
+        $this->assertEquals("bootstrapMultipleBars", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapMultipleBars"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[1]);
+        $this->assertEquals("bsMultipleBars", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapMultipleBars"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
     }
 
     /**
@@ -201,7 +229,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(10, $res);
+        $this->assertCount(12, $res);
 
         $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("bootstrapProgressBarBasic", $res[0]->getName());
@@ -252,5 +280,15 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsProgressBarWarning", $res[9]->getName());
         $this->assertEquals([$obj, "bootstrapProgressBarWarningFunction"], $res[9]->getCallable());
         $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[10]);
+        $this->assertEquals("bootstrapMultipleBars", $res[10]->getName());
+        $this->assertEquals([$obj, "bootstrapMultipleBars"], $res[10]->getCallable());
+        $this->assertEquals(["html"], $res[10]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[11]);
+        $this->assertEquals("bsMultipleBars", $res[11]->getName());
+        $this->assertEquals([$obj, "bootstrapMultipleBars"], $res[11]->getCallable());
+        $this->assertEquals(["html"], $res[11]->getSafe(new Node()));
     }
 }
