@@ -29,7 +29,13 @@ CHANGELOG
 - Add Secondary badge
 - Add Success badge
 - Add Warning badge
+- Add Dark button
+- Add Light button
+- Add Secondary button
 - Update Alert Twig extension
+- Update Badge Twig extension
+- Update Button interface
+- Update Button Twig extension
 
 ### [3.3.4](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.4) (2019-09-25)
 
