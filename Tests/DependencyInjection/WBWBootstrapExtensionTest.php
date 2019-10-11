@@ -59,7 +59,8 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         // Set a configs array mock.
         $this->configs = [
             WBWBootstrapExtension::EXTENSION_ALIAS => [
-                "twig" => true,
+                "twig"    => true,
+                "version" => 4,
             ],
         ];
     }

@@ -1,15 +1,36 @@
 {# Resources/views/layout/javascripts.html.twig #}
-{% include "@WBWCore/layout/javascripts.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/popper.js.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap.html.twig" with {"bootstrapVersion": bootstrapVersion|default("")} %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-colorpicker.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-datepicker.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-daterangepicker.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-markdown.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-notify.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-select.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-slider.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-tagsinput.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-timepicker.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/bootstrap-wysiwyg.html.twig" %}
-{% include "@WBWBootstrap/layout/javascript/twig-console.html.twig" %}
+{% set _webPath    = "bundles/wbwbootstrap" %}
+{% set _versions   = getContainerParameter("wbw.bootstrap.asset.bootstrap").versions %}
+{% set _plugins    = getContainerParameter("wbw.bootstrap.asset.bootstrap").plugins %}
+{% set _appVersion = getContainerParameter("wbw_bootstrap.version") %}
+{% set _appPlugins = getContainerParameter("wbw_bootstrap.plugins") %}
+{% set _appLocales = getContainerParameter("wbw_bootstrap.locales") %}
+<!-- Bootstrap -->
+<script type="text/javascript" src="{{ asset(_webPath ~ "/popper.js-1.15.0/umd/popper.min.js") }}"></script>
+<script type="text/javascript" src="{{ asset(_webPath ~ "/bootstrap-{{ version }}/js/bootstrap.min.js" | replace({"{{ version }}": _versions[_appVersion]})) }}"></script>
+{% for _appPlugin in _appPlugins %}
+    {% set _replaces = {"{{ version }}": _plugins[_appPlugin].version, "{{ locale }}": _appLocales[_appPlugin]|default("") } %}
+    {% for _javascript in _plugins[_appPlugin].javascripts %}
+        {% if ("prod" != app.environment and true == loop.first) %}
+            <!-- {{ _plugins[_appPlugin].description }} -->
+        {% endif %}
+        {% set _path = (_webPath ~ _javascript) | replace(_replaces) %}
+        <script type="text/javascript" src="{{ asset(_path) }}"></script>
+    {% endfor %}
+{% endfor %}
+{% if ("prod" != app.environment) %}
+    <!-- Bootstrap Twig console -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div#twig-title").css("cursor", "pointer");
+            $("div#twig-title").on("click", function () {
+                var $element = $("div#twig-context");
+                var display  = "none";
+                if ("none" === $element.css("display")) {
+                    display = "block";
+                }
+                $element.css("display", display);
+            });
+        });
+    </script>
+{% endif %}

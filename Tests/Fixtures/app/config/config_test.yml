@@ -41,3 +41,22 @@ monolog:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+
+wbw_bootstrap:
+    locales:
+        bootstrap_markdown: "fr"
+        bootstrap_wysiwyg: "fr-FR"
+        summernote: "fr-FR"
+    plugins:
+        - "bootstrap_colorpicker"
+        - "bootstrap_datepicker"
+        - "bootstrap_daterangepicker"
+        - "bootstrap_markdown"
+        - "bootstrap_notify"
+        - "bootstrap_select"
+        - "bootstrap_slider"
+        - "bootstrap_social"
+        - "bootstrap_tagsinput"
+        - "bootstrap_timepicker"
+        - "bootstrap_wysiwyg"
+        - "summernote"

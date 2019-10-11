@@ -28,12 +28,46 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
+        $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
+        $plugins = $assets["assets"]["wbw.bootstrap.asset.bootstrap"]["plugins"];
+
         $treeBuilder = new TreeBuilder(WBWBootstrapExtension::EXTENSION_ALIAS);
 
         $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWBootstrapExtension::EXTENSION_ALIAS);
-        $rootNode->children()
-            ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
-            ->integerNode("version")->defaultValue(4)->info("Version")->min(3)->max(4)->end()
+        $rootNode
+            ->children()
+                ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
+                ->integerNode("version")->defaultValue(4)->info("Version")->min(3)->max(4)->end()
+                ->arrayNode("plugins")->info("Bootstrap plug-ins")
+                    ->prototype("scalar")
+                        ->validate()
+                            ->ifNotInArray(array_keys($plugins))
+                            ->thenInvalid("The Bootstrap plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
+                        ->end()
+                    ->end()
+                ->end()
+                ->arrayNode("locales")->addDefaultsIfNotSet()
+                    ->children()
+                        ->variableNode("bootstrap_markdown")->defaultValue("en")->info("Bootstrap Markdown locale")
+                            ->validate()
+                                ->ifNotInArray($plugins["bootstrap_markdown"]["locales"])
+                                ->thenInvalid("The Bootstrap Markdown locale %s is not supported. Please choose one of " . json_encode($plugins["bootstrap_markdown"]["locales"]))
+                            ->end()
+                        ->end()
+                        ->variableNode("bootstrap_wysiwyg")->defaultValue("en-US")->info("Bootstrap WYSIWYG locale")
+                            ->validate()
+                                ->ifNotInArray($plugins["bootstrap_wysiwyg"]["locales"])
+                                ->thenInvalid("The Bootstrap WYSIWYG locale %s is not supported. Please choose one of " . json_encode($plugins["bootstrap_wysiwyg"]["locales"]))
+                            ->end()
+                        ->end()
+                        ->variableNode("summernote")->defaultValue("en-US")->info("Summernote locale")
+                            ->validate()
+                                ->ifNotInArray($plugins["summernote"]["locales"])
+                                ->thenInvalid("The Summernote locale %s is not supported. Please choose one of " . json_encode($plugins["summernote"]["locales"]))
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;

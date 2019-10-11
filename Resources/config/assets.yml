@@ -1,0 +1,186 @@
+# Resources/config/assets.yml
+assets:
+
+    wbw.bootstrap.asset.bootstrap:
+        versions: { "3": "3.4.1", "4": "4.3.1" }
+        plugins:
+            bootstrap_colorpicker:
+                version:     "2.5.1"
+                description: "Bootstrap Colorpicker"
+                stylesheets:
+                    - "/bootstrap-colorpicker-{{ version }}/css/bootstrap-colorpicker.min.css"
+                javascripts:
+                    - "/bootstrap-colorpicker-{{ version }}/js/bootstrap-colorpicker.min.js"
+            bootstrap_datepicker:
+                version:     "1.7.1"
+                description: "Bootstrap Datepicker"
+                stylesheets:
+                    - "/bootstrap-datepicker-{{ version }}/css/bootstrap-datepicker.min.css"
+                javascripts:
+                    - "/bootstrap-datepicker-{{ version }}/js/bootstrap-datepicker.min.js"
+            bootstrap_daterangepicker:
+                version:     "2.1.27"
+                description: "Bootstrap Daterangepicker"
+                stylesheets:
+                    - "/bootstrap-daterangepicker-{{ version }}/daterangepicker.css"
+                javascripts:
+                    - "/moment-2.20.1/moment-with-locales.min.js"
+                    - "/bootstrap-daterangepicker-{{ version }}/daterangepicker.js"
+            bootstrap_markdown:
+                version:     "2.10.0"
+                description: "Bootstrap Markdown"
+                stylesheets:
+                    - "/bootstrap-markdown-{{ version }}/css/bootstrap-markdown.min.css"
+                javascripts:
+                    - "/bootstrap-markdown-{{ version }}/js/bootstrap-markdown.js"
+                    - "/bootstrap-markdown-{{ version }}/locale/bootstrap-markdown.{{ locale }}.js"
+                locales:
+                    - "ar"
+                    - "cs"
+                    - "da"
+                    - "de"
+                    - "es"
+                    - "fa"
+                    - "fr"
+                    - "ja"
+                    - "kr"
+                    - "nb"
+                    - "nl"
+                    - "pl"
+                    - "ru"
+                    - "sl"
+                    - "sv"
+                    - "tr"
+                    - "ua"
+                    - "zh"
+            bootstrap_notify:
+                version:     "3.1.3"
+                description: "Bootstrap Notify"
+                stylesheets: []
+                javascripts:
+                    - "/bootstrap-notify-{{ version }}/bootstrap-notify.min.js"
+            bootstrap_select:
+                version:     "1.12.4"
+                description: "Bootstrap Select"
+                stylesheets:
+                    - "/bootstrap-select-{{ version }}/css/bootstrap-select.min.css"
+                javascripts:
+                    - "/bootstrap-select-{{ version }}/js/bootstrap-select.min.js"
+            bootstrap_slider:
+                version:     "10.0.0"
+                description: "Bootstrap Slider"
+                stylesheets: []
+                javascripts:
+                    - "/bootstrap-slider-{{ version }}/bootstrap-slider.min.js"
+            bootstrap_social:
+                version: "5.1.1"
+                description: "Bootstrap Social"
+                stylesheets:
+                    - "/bootstrap-social-{{ version }}/bootstrap-social.css"
+                javascripts:
+            bootstrap_tagsinput:
+                version:     "0.8.0"
+                description: "Bootstrap Tagsinput"
+                stylesheets:
+                    - "/bootstrap-tagsinput-{{ version }}/bootstrap-tagsinput.css"
+                javascripts:
+                    - "/bootstrap-tagsinput-{{ version }}/bootstrap-tagsinput.min.js"
+            bootstrap_timepicker:
+                version:     "0.5.2"
+                description: "Bootstrap Timepicker"
+                stylesheets:
+                    - "/bootstrap-timepicker-{{ version }}/css/bootstrap-timepicker.min.css"
+                javascripts:
+                    - "/bootstrap-timepicker-{{ version }}/js/bootstrap-timepicker.min.js"
+            bootstrap_wysiwyg:
+                version:     "0.3.3"
+                description: "Bootstrap WYSIWYG"
+                stylesheets:
+                    - "/bootstrap-wysiwyg-{{ version }}/bootstrap3-wysihtml5.min.css"
+                javascripts:
+                    - "/wysihtml-0.4.15/wysihtml5x-toolbar.min.js"
+                    - "/handlebars-1.3.0/handlebars.runtime.js"
+                    - "/bootstrap-wysiwyg-{{ version }}/bootstrap3-wysihtml5.min.js"
+                    - "/bootstrap-wysiwyg-{{ version }}/locales/bootstrap-wysihtml5.{{ locale }}.js"
+                locales:
+                    - "ar-AR"
+                    - "bg-BG"
+                    - "ca-CT"
+                    - "cs-CZ"
+                    - "da-DK"
+                    - "de-DE"
+                    - "el-GR"
+                    - "en-US"
+                    - "es-AR"
+                    - "es-ES"
+                    - "fr-FR"
+                    - "hr-HR"
+                    - "hu-HU"
+                    - "il-HE"
+                    - "it-IT"
+                    - "ja-JP"
+                    - "ko-KR"
+                    - "lt-LT"
+                    - "mo-MD"
+                    - "nb-NB"
+                    - "nl-NL"
+                    - "pl-PL"
+                    - "pt-BR"
+                    - "ru-RU"
+                    - "sk-SK"
+                    - "sv-SE"
+                    - "tr-TR"
+                    - "ua-UA"
+                    - "zh-CN"
+                    - "zh-TW"
+            summernote:
+                version:     "0.8.12"
+                description: "Summernote"
+                stylesheets:
+                    - "/summernote-{{ version }}/summernote{{ bootstrap }}.css"
+                javascripts:
+                    - "/summernote-{{ version }}/lang/summernote-{{ locale }}.js"
+                locales:
+                    - "ar-AR"
+                    - "bg-BG"
+                    - "ca-ES"
+                    - "cs-CZ"
+                    - "da-DK"
+                    - "de-DE"
+                    - "el-GR"
+                    - "es-ES"
+                    - "es-EU"
+                    - "fa-IR"
+                    - "fi-FI"
+                    - "fr-FR"
+                    - "gl-ES"
+                    - "he-IL"
+                    - "hr-HR"
+                    - "hu-HU"
+                    - "id-ID"
+                    - "it-IT"
+                    - "ja-JP"
+                    - "ko-KR"
+                    - "lt-LT"
+                    - "lt-LV"
+                    - "mn-MN"
+                    - "nb-NO"
+                    - "nl-NL"
+                    - "pl-PL"
+                    - "pt-BR"
+                    - "pt-PT"
+                    - "ro-RO"
+                    - "ru-RU"
+                    - "sk-SK"
+                    - "sl-SI"
+                    - "sr-RS"
+                    - "sr-RS-Latin"
+                    - "sv-SE"
+                    - "ta-IN"
+                    - "th-TH"
+                    - "tr-TR"
+                    - "uk-UA"
+                    - "uz-UZ"
+                    - "vi-VN"
+                    - "zh-CN"
+                    - "zh-TW"
