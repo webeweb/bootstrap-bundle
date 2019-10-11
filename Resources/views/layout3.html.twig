@@ -1,10 +1,2 @@
 {# Resources/views/layout3.html.twig #}
-{% extends "@WBWBootstrap/layout4.html.twig" %}
-
-{% set bootstrapVersion = "3" %}
-
-{% block bootstrapFormTheme %}
-    {% if (form is defined) %}
-        {% form_theme form "bootstrap_3_layout.html.twig" %}
-    {% endif %}
-{% endblock %}
+{% extends "@WBWBootstrap/layout.html.twig" %}
