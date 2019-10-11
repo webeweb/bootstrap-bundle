@@ -1,6 +1,0 @@
-{# Resources/views/layout/javascript/bootstrap-markdown.html.twig #}
-{% set _locales = ["ar", "cs", "da", "de", "es", "fa", "fr", "ja", "kr", "nb", "nl", "pl", "ru", "sl", "sv", "tr", "ua", "zh"] %}
-{% set _locale  = locale|default("") in _locales ? locale : "en" %}
-<!-- Bootstrap Markdown -->
-<script type="text/javascript" src="{{ asset("bundles/wbwbootstrap/bootstrap-markdown-2.10.0/js/bootstrap-markdown.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/wbwbootstrap/bootstrap-markdown-2.10.0/locale/bootstrap-markdown." ~ _locale ~ ".js") }}"></script>

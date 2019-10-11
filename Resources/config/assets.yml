@@ -73,7 +73,7 @@ assets:
                 javascripts:
                     - "/bootstrap-slider-{{ version }}/bootstrap-slider.min.js"
             bootstrap_social:
-                version: "5.1.1"
+                version:     "5.1.1"
                 description: "Bootstrap Social"
                 stylesheets:
                     - "/bootstrap-social-{{ version }}/bootstrap-social.css"
@@ -136,6 +136,7 @@ assets:
             summernote:
                 version:     "0.8.12"
                 description: "Summernote"
+                bootstrap:   { "3": "", "4": "-bs4" }
                 stylesheets:
                     - "/summernote-{{ version }}/summernote{{ bootstrap }}.css"
                 javascripts:
