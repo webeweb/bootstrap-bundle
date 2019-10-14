@@ -97,6 +97,18 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
+        if (3 === $this->getVersion()) {
+            return $this->getFunctions3();
+        }
+        return [];
+    }
+
+    /**
+     * Get the Twig functions.
+     *
+     * @return TwigFunction[] Returns the Twig functions.
+     */
+    protected function getFunctions3() {
         return [
             new TwigFunction("bootstrapLabelDanger", [$this, "bootstrapLabelDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsLabelDanger", [$this, "bootstrapLabelDangerFunction"], ["is_safe" => ["html"]]),

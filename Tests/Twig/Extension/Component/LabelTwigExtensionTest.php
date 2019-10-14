@@ -230,6 +230,20 @@ class LabelTwigExtensionTest extends AbstractTestCase {
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
+        $this->assertCount(0, $res);
+    }
+
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctionsWithBootstrap3() {
+
+        $obj = new LabelTwigExtension($this->twigEnvironment);
+        $obj->setVersion(3);
+
+        $res = $obj->getFunctions();
         $this->assertCount(12, $res);
 
         $this->assertInstanceOf(TwigFunction::class, $res[0]);
