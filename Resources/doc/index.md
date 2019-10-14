@@ -33,10 +33,10 @@ The different parameters (optionals) are explained below:
 
 | Parameter          | Type     | Description                                                 |
 |:-------------------|:---------|:------------------------------------------------------------|
-| version            | int      | The Bootstrap version. (by default: 4)                      |
-| bootstrap_markdown | string   | The Bootstrap Markdown plug-in locale. (by default: "en")   |
-| bootstrap_wysiwyg  | string   | The Bootstrap WYSISYG plug-in locale. (by default: "en-US") | 
-| summernote         | string   | The Summernote plug-in locale. (by default: "en-US")        |
+| version            | int      | The Bootstrap version (by default: 4)                       |
+| bootstrap_markdown | string   | The Bootstrap Markdown plug-in locale (by default: "en")    |
+| bootstrap_wysiwyg  | string   | The Bootstrap WYSISYG plug-in locale (by default: "en-US")  | 
+| summernote         | string   | The Summernote plug-in locale (by default: "en-US")         |
 | plugins            | string[] | The plugins list                                            |
 
 Available parameters (locales and plug-ins lists) can be found into [assets.yml](../config/assets.yml) 
