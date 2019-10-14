@@ -87,6 +87,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
     public function testGetFunctions() {
 
         $obj = new GlyphiconTwigExtension($this->twigEnvironment);
+        $obj->setVersion(3);
 
         $res = $obj->getFunctions();
         $this->assertCount(2, $res);
