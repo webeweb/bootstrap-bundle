@@ -125,15 +125,47 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
+
+        $functions3 = $this->getFunctions3();
+        if (3 === $this->getVersion()) {
+            return $functions3;
+        }
+
+        $functions4 = $this->getFunctions4();
+
+        return array_merge($functions3, $functions4);
+    }
+
+    /**
+     * Get the Twig functions.
+     *
+     * @return TwigFunction[] Returns the Twig functions.
+     */
+    protected function getFunctions3() {
         return [
             new TwigFunction("bootstrapAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
 
-            new TwigFunction("bootstrapAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
-
             new TwigFunction("bootstrapAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertInfo", [$this, "bootstrapAlertInfoFunction"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("bootstrapAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("bootstrapAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
+
+    /**
+     * Get the Twig functions.
+     *
+     * @return TwigFunction[] Returns the Twig functions.
+     */
+    protected function getFunctions4() {
+        return [
+            new TwigFunction("bootstrapAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
 
             new TwigFunction("bootstrapAlertLight", [$this, "bootstrapAlertLightFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertLight", [$this, "bootstrapAlertLightFunction"], ["is_safe" => ["html"]]),
@@ -143,12 +175,6 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
 
             new TwigFunction("bootstrapAlertSecondary", [$this, "bootstrapAlertSecondaryFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertSecondary", [$this, "bootstrapAlertSecondaryFunction"], ["is_safe" => ["html"]]),
-
-            new TwigFunction("bootstrapAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsAlertSuccess", [$this, "bootstrapAlertSuccessFunction"], ["is_safe" => ["html"]]),
-
-            new TwigFunction("bootstrapAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsAlertWarning", [$this, "bootstrapAlertWarningFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
