@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.4.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.4.1) (2019-10-14)
+
+- Fix favicons
+
 ### [3.4.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.4.0) (2019-10-14)
 
 - Add abstract Alert
