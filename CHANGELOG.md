@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.4.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.4.2) (2019-10-14)
+
+- Fix favicons
+
 ### [3.4.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.4.1) (2019-10-14)
 
 - Fix favicons
