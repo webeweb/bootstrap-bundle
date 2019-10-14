@@ -29,10 +29,10 @@ wbw_bootstrap:
 
 The example below is complete and you can adapt this with your needs.
 
-The different parameters are explained below:
+The different parameters (optionals) are explained below:
 
 | Parameter          | Type     | Description                                                 |
-|--------------------|----------|-------------------------------------------------------------|
+|:-------------------|:---------|:------------------------------------------------------------|
 | version            | int      | The Bootstrap version. (by default: 4)                      |
 | bootstrap_markdown | string   | The Bootstrap Markdown plug-in locale. (by default: "en")   |
 | bootstrap_wysiwyg  | string   | The Bootstrap WYSISYG plug-in locale. (by default: "en-US") | 
