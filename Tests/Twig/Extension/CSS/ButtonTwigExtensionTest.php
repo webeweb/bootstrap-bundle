@@ -390,7 +390,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(20, $res);
+        $this->assertCount(18, $res);
 
         $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("bootstrapButtonDanger", $res[0]->getName());
@@ -403,93 +403,167 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapButtonDark", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonDarkFunction"], $res[2]->getCallable());
+        $this->assertEquals("bootstrapButtonInfo", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("bsButtonDark", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonDarkFunction"], $res[3]->getCallable());
+        $this->assertEquals("bsButtonInfo", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[4]);
-        $this->assertEquals("bootstrapButtonDefault", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonDefaultFunction"], $res[4]->getCallable());
+        $this->assertEquals("bootstrapButtonLink", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[5]);
-        $this->assertEquals("bsButtonDefault", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonDefaultFunction"], $res[5]->getCallable());
+        $this->assertEquals("bsButtonLink", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[6]);
-        $this->assertEquals("bootstrapButtonInfo", $res[6]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[6]->getCallable());
+        $this->assertEquals("bootstrapButtonPrimary", $res[6]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[6]->getCallable());
         $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[7]);
-        $this->assertEquals("bsButtonInfo", $res[7]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[7]->getCallable());
+        $this->assertEquals("bsButtonPrimary", $res[7]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[7]->getCallable());
         $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[8]);
-        $this->assertEquals("bootstrapButtonLight", $res[8]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonLightFunction"], $res[8]->getCallable());
+        $this->assertEquals("bootstrapButtonSuccess", $res[8]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[8]->getCallable());
         $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[9]);
-        $this->assertEquals("bsButtonLight", $res[9]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonLightFunction"], $res[9]->getCallable());
+        $this->assertEquals("bsButtonSuccess", $res[9]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[9]->getCallable());
         $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[10]);
-        $this->assertEquals("bootstrapButtonLink", $res[10]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[10]->getCallable());
+        $this->assertEquals("bootstrapButtonWarning", $res[10]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[10]->getCallable());
         $this->assertEquals(["html"], $res[10]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[11]);
-        $this->assertEquals("bsButtonLink", $res[11]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[11]->getCallable());
+        $this->assertEquals("bsButtonWarning", $res[11]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[11]->getCallable());
         $this->assertEquals(["html"], $res[11]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[12]);
-        $this->assertEquals("bootstrapButtonPrimary", $res[12]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[12]->getCallable());
+        $this->assertEquals("bootstrapButtonDark", $res[12]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonDarkFunction"], $res[12]->getCallable());
         $this->assertEquals(["html"], $res[12]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[13]);
-        $this->assertEquals("bsButtonPrimary", $res[13]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[13]->getCallable());
+        $this->assertEquals("bsButtonDark", $res[13]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonDarkFunction"], $res[13]->getCallable());
         $this->assertEquals(["html"], $res[13]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[14]);
-        $this->assertEquals("bootstrapButtonSecondary", $res[14]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonSecondaryFunction"], $res[14]->getCallable());
+        $this->assertEquals("bootstrapButtonLight", $res[14]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLightFunction"], $res[14]->getCallable());
         $this->assertEquals(["html"], $res[14]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[15]);
-        $this->assertEquals("bsButtonSecondary", $res[15]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonSecondaryFunction"], $res[15]->getCallable());
+        $this->assertEquals("bsButtonLight", $res[15]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLightFunction"], $res[15]->getCallable());
         $this->assertEquals(["html"], $res[15]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[16]);
-        $this->assertEquals("bootstrapButtonSuccess", $res[16]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[16]->getCallable());
+        $this->assertEquals("bootstrapButtonSecondary", $res[16]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSecondaryFunction"], $res[16]->getCallable());
         $this->assertEquals(["html"], $res[16]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[17]);
-        $this->assertEquals("bsButtonSuccess", $res[17]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[17]->getCallable());
+        $this->assertEquals("bsButtonSecondary", $res[17]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSecondaryFunction"], $res[17]->getCallable());
         $this->assertEquals(["html"], $res[17]->getSafe(new Node()));
+    }
 
-        $this->assertInstanceOf(TwigFunction::class, $res[18]);
-        $this->assertEquals("bootstrapButtonWarning", $res[18]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[18]->getCallable());
-        $this->assertEquals(["html"], $res[18]->getSafe(new Node()));
+    /**
+     * Tests the getFunctions() method.
+     *
+     * @return void
+     */
+    public function testGetFunctionsWithBootstrap3() {
 
-        $this->assertInstanceOf(TwigFunction::class, $res[19]);
-        $this->assertEquals("bsButtonWarning", $res[19]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[19]->getCallable());
-        $this->assertEquals(["html"], $res[19]->getSafe(new Node()));
+        $obj = new ButtonTwigExtension($this->twigEnvironment);
+        $obj->setVersion(3);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(14, $res);
+
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
+        $this->assertEquals("bootstrapButtonDanger", $res[0]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonDangerFunction"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[1]);
+        $this->assertEquals("bsButtonDanger", $res[1]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonDangerFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
+        $this->assertEquals("bootstrapButtonDefault", $res[2]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonDefaultFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[3]);
+        $this->assertEquals("bsButtonDefault", $res[3]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonDefaultFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[4]);
+        $this->assertEquals("bootstrapButtonInfo", $res[4]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[5]);
+        $this->assertEquals("bsButtonInfo", $res[5]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonInfoFunction"], $res[5]->getCallable());
+        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[6]);
+        $this->assertEquals("bootstrapButtonLink", $res[6]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[6]->getCallable());
+        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[7]);
+        $this->assertEquals("bsButtonLink", $res[7]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonLinkFunction"], $res[7]->getCallable());
+        $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[8]);
+        $this->assertEquals("bootstrapButtonPrimary", $res[8]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[8]->getCallable());
+        $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[9]);
+        $this->assertEquals("bsButtonPrimary", $res[9]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonPrimaryFunction"], $res[9]->getCallable());
+        $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[10]);
+        $this->assertEquals("bootstrapButtonSuccess", $res[10]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[10]->getCallable());
+        $this->assertEquals(["html"], $res[10]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[11]);
+        $this->assertEquals("bsButtonSuccess", $res[11]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonSuccessFunction"], $res[11]->getCallable());
+        $this->assertEquals(["html"], $res[11]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[12]);
+        $this->assertEquals("bootstrapButtonWarning", $res[12]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[12]->getCallable());
+        $this->assertEquals(["html"], $res[12]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[13]);
+        $this->assertEquals("bsButtonWarning", $res[13]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[13]->getCallable());
+        $this->assertEquals(["html"], $res[13]->getSafe(new Node()));
     }
 }

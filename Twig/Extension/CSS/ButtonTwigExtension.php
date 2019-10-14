@@ -188,21 +188,30 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
-        return [
+
+        $functions3 = $this->getFunctions3();
+        if (3 === $this->getVersion()) {
+            return $functions3;
+        }
+
+        $functions4 = $this->getFunctions4();
+
+        return array_merge($functions3, $functions4);
+    }
+
+    /**
+     * Get the Twig functions.
+     *
+     * @return TwigFunction[] Returns the Twig functions.
+     */
+    protected function getFunctions3() {
+
+        $functions = [
             new TwigFunction("bootstrapButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonDanger", [$this, "bootstrapButtonDangerFunction"], ["is_safe" => ["html"]]),
 
-            new TwigFunction("bootstrapButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),
-
-            new TwigFunction("bootstrapButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
-
             new TwigFunction("bootstrapButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonInfo", [$this, "bootstrapButtonInfoFunction"], ["is_safe" => ["html"]]),
-
-            new TwigFunction("bootstrapButtonLight", [$this, "bootstrapButtonLightFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsButtonLight", [$this, "bootstrapButtonLightFunction"], ["is_safe" => ["html"]]),
 
             new TwigFunction("bootstrapButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonLink", [$this, "bootstrapButtonLinkFunction"], ["is_safe" => ["html"]]),
@@ -210,14 +219,41 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
             new TwigFunction("bootstrapButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonPrimary", [$this, "bootstrapButtonPrimaryFunction"], ["is_safe" => ["html"]]),
 
-            new TwigFunction("bootstrapButtonSecondary", [$this, "bootstrapButtonSecondaryFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsButtonSecondary", [$this, "bootstrapButtonSecondaryFunction"], ["is_safe" => ["html"]]),
-
             new TwigFunction("bootstrapButtonSuccess", [$this, "bootstrapButtonSuccessFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonSuccess", [$this, "bootstrapButtonSuccessFunction"], ["is_safe" => ["html"]]),
 
             new TwigFunction("bootstrapButtonWarning", [$this, "bootstrapButtonWarningFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonWarning", [$this, "bootstrapButtonWarningFunction"], ["is_safe" => ["html"]]),
+        ];
+
+        if (3 === $this->getVersion()) {
+
+            $functions3 = [
+                new TwigFunction("bootstrapButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
+                new TwigFunction("bsButtonDefault", [$this, "bootstrapButtonDefaultFunction"], ["is_safe" => ["html"]]),
+            ];
+
+            array_splice($functions, 2, 0, $functions3);
+        }
+
+        return $functions;
+    }
+
+    /**
+     * Get the Twig functions.
+     *
+     * @return TwigFunction[] Returns the Twig functions.
+     */
+    protected function getFunctions4() {
+        return [
+            new TwigFunction("bootstrapButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("bootstrapButtonLight", [$this, "bootstrapButtonLightFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonLight", [$this, "bootstrapButtonLightFunction"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("bootstrapButtonSecondary", [$this, "bootstrapButtonSecondaryFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsButtonSecondary", [$this, "bootstrapButtonSecondaryFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
