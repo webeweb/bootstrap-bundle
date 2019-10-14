@@ -36,6 +36,9 @@ CHANGELOG
 - Update Badge Twig extension
 - Update Button interface
 - Update Button Twig extension
+- Update DOCUMENTATION
+- Update Label Twig extension
+- Update Progress bar Twig extension
 
 ### [3.3.4](https://github.com/webeweb/bootstrap-bundle/tree/v3.3.4) (2019-09-25)
 
