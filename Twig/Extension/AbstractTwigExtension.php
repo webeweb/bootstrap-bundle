@@ -24,11 +24,38 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension as BaseTwigExtens
 abstract class AbstractTwigExtension extends BaseTwigExtension {
 
     /**
+     * Version.
+     *
+     * @var int
+     */
+    private $version;
+
+    /**
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
      */
     public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
+    }
+
+    /**
+     * Get the version.
+     *
+     * @return int Returns the version.
+     */
+    public function getVersion() {
+        return $this->version;
+    }
+
+    /**
+     * Set the version.
+     *
+     * @param int $version The version.
+     * @return AbstractTwigExtension Returns this Twig extension.
+     */
+    public function setVersion($version) {
+        $this->version = $version;
+        return $this;
     }
 }
