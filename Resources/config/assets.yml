@@ -140,7 +140,7 @@ assets:
                 stylesheets:
                     - "/summernote-{{ version }}/summernote{{ bootstrap }}.css"
                 javascripts:
-                    - "/summernote-{{ version }}/lang/summernote.min.js"
+                    - "/summernote-{{ version }}/summernote.min.js"
                     - "/summernote-{{ version }}/lang/summernote-{{ locale }}.js"
                 locales:
                     - "ar-AR"
