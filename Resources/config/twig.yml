@@ -5,6 +5,8 @@ services:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
         arguments: ["@twig"]
         public:    true
+        calls:
+            - ["setVersion", ["%wbw_bootstrap.version%"]]
         tags:
             - { name: "twig.extension" }
 
@@ -40,6 +42,8 @@ services:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension
         arguments: ["@twig"]
         public:    true
+        calls:
+            - ["setVersion", ["%wbw_bootstrap.version%"]]
         tags:
             - { name: "twig.extension" }
 
@@ -47,6 +51,8 @@ services:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension
         arguments: ["@twig"]
         public:    true
+        calls:
+            - ["setVersion", ["%wbw_bootstrap.version%"]]
         tags:
             - { name: "twig.extension" }
 
@@ -75,6 +81,8 @@ services:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension
         arguments: ["@twig"]
         public:    true
+        calls:
+            - ["setVersion", ["%wbw_bootstrap.version%"]]
         tags:
             - { name: "twig.extension" }
 
@@ -82,6 +90,8 @@ services:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension
         arguments: ["@twig"]
         public:    true
+        calls:
+            - ["setVersion", ["%wbw_bootstrap.version%"]]
         tags:
             - { name: "twig.extension" }
 
@@ -96,6 +106,8 @@ services:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
         arguments: ["@twig"]
         public:    true
+        calls:
+            - ["setVersion", ["%wbw_bootstrap.version%"]]
         tags:
             - { name: "twig.extension" }
 
