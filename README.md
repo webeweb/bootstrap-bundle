@@ -99,17 +99,6 @@ $ php bin/console wbw:core:unzip-assets
 $ php bin/console assets:install
 ```
 
-Add the wiki routing into the `app/config/routing_dev.yml` file of your project:
-
-```yaml
-# ...
-wbw_bootstrap_wiki:
-    prefix:   "/_bootstrap"
-    resource: "@WBWBootstrapBundle/Resources/config/routing/wiki.yml"
-```
-
-Open your browser at http://localhost:8000/app_dev.php/_bootstrap/wiki/twig-extension/css/button
-
 ---
 
 ## Usage
