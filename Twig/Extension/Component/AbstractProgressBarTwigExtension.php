@@ -34,9 +34,14 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
 
         $span = static::coreHTMLElement("span", $progressBar->getValue() . "%", ["class" => "sr-only"]);
 
+        $type = ProgressBarRenderer::renderType($progressBar);
+        if (3 !== $this->getVersion()) {
+            $type = preg_replace("/progress\-bar\-(danger|info|success|warning)/", "bg-$1", $type);
+        }
+
         $attributes = [];
 
-        $attributes["class"]         = ["progress-bar", ProgressBarRenderer::renderType($progressBar)];
+        $attributes["class"]         = ["progress-bar", $type];
         $attributes["class"][]       = ProgressBarRenderer::renderStriped($progressBar);
         $attributes["class"][]       = ProgressBarRenderer::renderAnimated($progressBar);
         $attributes["style"]         = ProgressBarRenderer::renderStyle($progressBar);
