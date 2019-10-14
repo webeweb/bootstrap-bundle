@@ -45,8 +45,8 @@ twig:
 wbw_bootstrap:
     locales:
         bootstrap_markdown: "fr"
-        bootstrap_wysiwyg: "fr-FR"
-        summernote: "fr-FR"
+        bootstrap_wysiwyg:  "fr-FR"
+        summernote:         "fr-FR"
     plugins:
         - "bootstrap_colorpicker"
         - "bootstrap_datepicker"
