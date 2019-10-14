@@ -156,10 +156,31 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
+        if (3 === $this->getVersion()) {
+            return $this->getFunctions3();
+        }
+        return $this->getFunctions4();
+    }
+
+    /**
+     * Get the Twig functions.
+     *
+     * @return TwigFunction[] Returns the Twig functions.
+     */
+    public function getFunctions3() {
         return [
             new TwigFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
 
+    /**
+     * Get the Twig functions.
+     *
+     * @return TwigFunction[] Returns the Twig functions.
+     */
+    public function getFunctions4() {
+        return [
             new TwigFunction("bootstrapBadgeDanger", [$this, "bootstrapBadgeDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBadgeDanger", [$this, "bootstrapBadgeDangerFunction"], ["is_safe" => ["html"]]),
 

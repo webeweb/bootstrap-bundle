@@ -36,7 +36,7 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
 
         $attributes["class"]   = ["badge"];
         $attributes["class"][] = BadgeRenderer::renderType($badge);
-        $attributes["class"][] = BadgeRenderer::renderPill($badge);
+        $attributes["class"][] = 4 === $this->getVersion() ? BadgeRenderer::renderPill($badge) : null;
 
         $innerHTML = BadgeRenderer::renderContent($badge);
 
