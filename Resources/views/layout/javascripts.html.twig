@@ -9,7 +9,10 @@
 <script type="text/javascript" src="{{ asset(_webPath ~ "/popper.js-1.15.0/umd/popper.min.js") }}"></script>
 <script type="text/javascript" src="{{ asset(_webPath ~ "/bootstrap-{{ version }}/js/bootstrap.min.js" | replace({"{{ version }}": _versions[_appVersion]})) }}"></script>
 {% for _appPlugin in _appPlugins %}
-    {% set _replaces = {"{{ version }}": _plugins[_appPlugin].version, "{{ locale }}": _appLocales[_appPlugin]|default("") } %}
+    {% set _replaces = {
+        "{{ version }}": _plugins[_appPlugin].version,
+        "{{ locale }}" : _appLocales[_appPlugin]|default(""),
+    } %}
     {% for _javascript in _plugins[_appPlugin].javascripts %}
         {% if ("prod" != app.environment and true == loop.first) %}
             <!-- {{ _plugins[_appPlugin].description }} -->

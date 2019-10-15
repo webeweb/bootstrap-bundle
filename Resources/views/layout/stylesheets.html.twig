@@ -7,7 +7,10 @@
 <!-- Bootstrap -->
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/bootstrap-{{ version }}/css/bootstrap.min.css" | replace({"{{ version }}": _versions[_appVersion]})) }}">
 {% for _appPlugin in _appPlugins %}
-    {% set _replaces = {"{{ version }}": _plugins[_appPlugin].version, "{{ bootstrap }}": _plugins[_appPlugin].bootstrap[_appVersion]|default("")} %}
+    {% set _replaces = {
+        "{{ version }}"  : _plugins[_appPlugin].version,
+        "{{ bootstrap }}": _plugins[_appPlugin].bootstrap[_appVersion]|default(""),
+    } %}
     {% for _stylesheet in _plugins[_appPlugin].stylesheets %}
         {% if ("prod" != app.environment and true == loop.first) %}
             <!-- {{ _plugins[_appPlugin].description }} -->
