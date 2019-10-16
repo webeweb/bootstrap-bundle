@@ -19,12 +19,3 @@
         <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
     {% endfor %}
 {% endfor %}
-{% if ("prod" != app.environment) %}
-    <!-- Bootstrap Twig console -->
-    <style type="text/css">
-        div#twig-console h3.panel-title span.glyphicon:hover {
-            cursor: pointer;
-        }
-    </style>
-{% endif %}
-
