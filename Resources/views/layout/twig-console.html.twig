@@ -1,13 +1,13 @@
 {# Resources/views/layout/twig-console.html.twig #}
 {% set _version = getContainerParameter("wbw_bootstrap.version") %}
 {% set _console = {
-    "rowClass":     (3 == _version ? "row clearfix" : "row"),
-    "panelClass":   (3 == _version ? "panel" : "card"),
+    "rowClass"    : (3 == _version ? "row clearfix" : "row"),
+    "panelClass"  : (3 == _version ? "panel" : "card"),
     "headingClass": (3 == _version ? "panel-heading" : "card-header"),
-    "titleTag":     (3 == _version ? "h3" : "div"),
-    "titleClass":   (3 == _version ? "panel-title" : "card-title"),
-    "bodyClass":    (3 == _version ? "panel body" : "card-body"),
-    "bodyStyle":    (3 == _version ? "margin: 10px 10px 0px 10px;" : "padding: 16px 16px 0px 16px;"),
+    "titleTag"    : (3 == _version ? "h3" : "div"),
+    "titleClass"  : (3 == _version ? "panel-title" : "card-title"),
+    "bodyClass"   : (3 == _version ? "panel body" : "card-body"),
+    "bodyStyle"   : (3 == _version ? "margin: 10px 10px 0px 10px;" : "padding: 16px 16px 0px 16px;"),
 } %}
 {% if ("dev" == app.environment) %}
     <div class="{{ _console.rowClass }}" id="twig-console">
