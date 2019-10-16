@@ -31,7 +31,6 @@ class TestKernel extends AbstractKernel {
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),
             new WBW\Bundle\CoreBundle\WBWCoreBundle(),
-            new WBW\Bundle\SyntaxHighlighterBundle\WBWSyntaxHighlighterBundle(),
         ];
         return $bundles;
     }
