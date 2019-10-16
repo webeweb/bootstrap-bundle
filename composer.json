@@ -29,8 +29,7 @@
         "symfony/translation": "^2.7|^3.0|^4.0",
         "twig/twig": "^1.0||^2.0",
         "webeweb/core-library": "^5.1",
-        "webeweb/core-bundle": "^2.14",
-        "webeweb/syntaxhighlighter-bundle": "^3.0"
+        "webeweb/core-bundle": "^2.14"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7|^7.0",
