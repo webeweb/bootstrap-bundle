@@ -22,6 +22,7 @@ framework:
     validation:
         enabled: false
 
+# Doctrine configuration
 doctrine:
     dbal:
         driver: "pdo_sqlite"
@@ -31,6 +32,7 @@ doctrine:
         auto_mapping:                true
         naming_strategy:             "doctrine.orm.naming_strategy.underscore"
 
+# Monolog configuration
 monolog:
     handlers:
         main:
@@ -38,10 +40,12 @@ monolog:
             path:  "%kernel.logs_dir%/test.log"
             type:  "stream"
 
+# Twig configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
+# Bootstrap configuration
 wbw_bootstrap:
     locales:
         bootstrap_markdown: "fr"
