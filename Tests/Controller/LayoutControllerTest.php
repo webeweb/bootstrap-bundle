@@ -29,10 +29,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testBlankAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/blank");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -45,14 +43,13 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testFlashbagAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/flashbag");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
+        // Check the response.
         $res = file_get_contents(__DIR__ . "/testFlashbagAction.html.txt") . "    ";
         $this->assertEquals($res, $client->getResponse()->getContent());
     }
@@ -64,10 +61,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testJavascriptsAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/javascripts");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -80,10 +75,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testLayout3Action() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/layout3");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -100,10 +93,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testLayout4Action() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/layout4");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -120,10 +111,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testLayoutAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/layout");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -140,10 +129,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testStylesheetsAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/stylesheets");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -156,10 +143,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testTwigConsoleAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/twig-console");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -172,10 +157,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testWorkInProgressAction() {
 
-        // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/work-in-progress");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
