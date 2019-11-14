@@ -1,7 +1,7 @@
 DOCUMENTATION
 =============
 
-### 1) Configuration
+### Configuration
 
 Add the following lines into the `app/config/config.yml` file of your project:
 
@@ -41,7 +41,7 @@ The different parameters (optionals) are explained below:
 
 Available parameters (locales and plug-ins lists) can be found into [assets.yml](../config/assets.yml) 
 
-### 2) Template
+### Template
 
 ```html
 {# AppBundle/Resources/views/layout.html.twig #}
@@ -75,6 +75,10 @@ Available parameters (locales and plug-ins lists) can be found into [assets.yml]
 {% endblock %}
 ```
 
-### 3) Twig extensions
+### Twig extensions
+
+#### Button Twig extension
+
+- bootstrapButton
 
 Redaction in progress...
