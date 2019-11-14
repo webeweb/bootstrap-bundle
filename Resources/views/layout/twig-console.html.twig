@@ -9,17 +9,15 @@
     "bodyClass"   : (3 == _version ? "panel body" : "card-body"),
     "bodyStyle"   : (3 == _version ? "margin: 10px 10px 0px 10px;" : "padding: 16px 16px 0px 16px;"),
 } %}
-{% if ("dev" == app.environment) %}
-    <div class="{{ _console.rowClass }}" id="twig-console">
-        <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
-            <div class="{{ _console.panelClass }}" style="background-color: #9E9E9E;">
-                <div class="{{ _console.headingClass }}" id="twig-title" style="background-color: #000000; color: #FFFFFF;">
-                    <{{ _console.titleTag }} class="{{ _console.titleClass }}">{{ fontAwesomeIcon({"name": "terminal"}) }} TWIG CONSOLE
-                </{{ _console.titleTag }}>
-            </div>
-            <div class="{{ _console.bodyClass }}" id="twig-context" style="background-color: #9E9E9E; display: none; {{ _console.bodyStyle }}">
-                {{ dump(_context) }}
-            </div>
+<div class="{{ _console.rowClass }}" id="twig-console">
+    <div class="{{ bootstrapGrid({"lg": 12, "recopy": true}) }}">
+        <div class="{{ _console.panelClass }}" style="background-color: #9E9E9E;">
+            <div class="{{ _console.headingClass }}" id="twig-title" style="background-color: #000000; color: #FFFFFF;">
+                <{{ _console.titleTag }} class="{{ _console.titleClass }}">{{ fontAwesomeIcon({"name": "terminal"}) }} TWIG CONSOLE
+            </{{ _console.titleTag }}>
+        </div>
+        <div class="{{ _console.bodyClass }}" id="twig-context" style="background-color: #9E9E9E; display: none; {{ _console.bodyStyle }}">
+            {{ dump(_context) }}
         </div>
     </div>
-{% endif %}
+</div>
