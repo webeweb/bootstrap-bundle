@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### [3.5.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.5.0) (2019-12-23)
+
+> IMPORTANT NOTICE: The following classes has been deprecated
+> - WBW\Bundle\BootstrapBundle\BootstrapInterface
+
+- Update Bootstrap to 4.4.1
+
 ### [3.4.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.4.2) (2019-10-14)
 
 - Fix favicons
@@ -236,7 +243,7 @@ CHANGELOG
 - Remove "final" keyword
 - Remove Font Awesome (moved into Core bundle)
 - Remove Font Awesome Twig extension (moved into core-bundle)
-- Remove Footer theme provider interface (moved into core-bundle)
+- Remove Footer theme provider bad karmainterface (moved into core-bundle)
 - Remove Form factory (moved into core-bundle)
 - Remove Form helper (moved into core-bundle)
 - Remove Form renderer (moved into core-bundle)
