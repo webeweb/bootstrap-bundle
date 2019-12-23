@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Badge;
 
 use WBW\Bundle\BootstrapBundle\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
@@ -30,13 +30,13 @@ class BadgeInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DANGER, BadgeInterface::BADGE_TYPE_DANGER);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DARK, BadgeInterface::BADGE_TYPE_DARK);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_INFO, BadgeInterface::BADGE_TYPE_INFO);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_LIGHT, BadgeInterface::BADGE_TYPE_LIGHT);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_PRIMARY, BadgeInterface::BADGE_TYPE_PRIMARY);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_SECONDARY, BadgeInterface::BADGE_TYPE_SECONDARY);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_SUCCESS, BadgeInterface::BADGE_TYPE_SUCCESS);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_WARNING, BadgeInterface::BADGE_TYPE_WARNING);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, BadgeInterface::BADGE_TYPE_DANGER);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DARK, BadgeInterface::BADGE_TYPE_DARK);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_INFO, BadgeInterface::BADGE_TYPE_INFO);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_LIGHT, BadgeInterface::BADGE_TYPE_LIGHT);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_PRIMARY, BadgeInterface::BADGE_TYPE_PRIMARY);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_SECONDARY, BadgeInterface::BADGE_TYPE_SECONDARY);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_SUCCESS, BadgeInterface::BADGE_TYPE_SUCCESS);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_WARNING, BadgeInterface::BADGE_TYPE_WARNING);
     }
 }

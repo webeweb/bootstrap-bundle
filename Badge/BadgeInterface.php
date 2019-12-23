@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Badge;
 
-use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Badge interface.
@@ -26,56 +26,56 @@ interface BadgeInterface {
      *
      * @var string
      */
-    const BADGE_TYPE_DANGER = BootstrapInterface::BOOTSTRAP_DANGER;
+    const BADGE_TYPE_DANGER = WBWBootstrapInterface::BOOTSTRAP_DANGER;
 
     /**
      * Badge type "dark".
      *
      * @var string
      */
-    const BADGE_TYPE_DARK = BootstrapInterface::BOOTSTRAP_DARK;
+    const BADGE_TYPE_DARK = WBWBootstrapInterface::BOOTSTRAP_DARK;
 
     /**
      * Badge type "info".
      *
      * @var string
      */
-    const BADGE_TYPE_INFO = BootstrapInterface::BOOTSTRAP_INFO;
+    const BADGE_TYPE_INFO = WBWBootstrapInterface::BOOTSTRAP_INFO;
 
     /**
      * Badge type "light".
      *
      * @var string
      */
-    const BADGE_TYPE_LIGHT = BootstrapInterface::BOOTSTRAP_LIGHT;
+    const BADGE_TYPE_LIGHT = WBWBootstrapInterface::BOOTSTRAP_LIGHT;
 
     /**
      * Badge type "primary".
      *
      * @var string
      */
-    const BADGE_TYPE_PRIMARY = BootstrapInterface::BOOTSTRAP_PRIMARY;
+    const BADGE_TYPE_PRIMARY = WBWBootstrapInterface::BOOTSTRAP_PRIMARY;
 
     /**
      * Badge type "secondary".
      *
      * @var string
      */
-    const BADGE_TYPE_SECONDARY = BootstrapInterface::BOOTSTRAP_SECONDARY;
+    const BADGE_TYPE_SECONDARY = WBWBootstrapInterface::BOOTSTRAP_SECONDARY;
 
     /**
      * Badge type "success".
      *
      * @var string
      */
-    const BADGE_TYPE_SUCCESS = BootstrapInterface::BOOTSTRAP_SUCCESS;
+    const BADGE_TYPE_SUCCESS = WBWBootstrapInterface::BOOTSTRAP_SUCCESS;
 
     /**
      * Badge type "warning".
      *
      * @var string
      */
-    const BADGE_TYPE_WARNING = BootstrapInterface::BOOTSTRAP_WARNING;
+    const BADGE_TYPE_WARNING = WBWBootstrapInterface::BOOTSTRAP_WARNING;
 
     /**
      * Get the content.

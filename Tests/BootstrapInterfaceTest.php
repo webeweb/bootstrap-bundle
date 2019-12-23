@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
 use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Bootstrap interface test.
@@ -28,17 +29,17 @@ class BootstrapInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("3.4.1", BootstrapInterface::BOOTSTRAP_VERSION_3);
-        $this->assertEquals("4.3.1", BootstrapInterface::BOOTSTRAP_VERSION_4);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_VERSION_3, BootstrapInterface::BOOTSTRAP_VERSION_3);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_VERSION_4, BootstrapInterface::BOOTSTRAP_VERSION_4);
 
-        $this->assertEquals("danger", BootstrapInterface::BOOTSTRAP_DANGER);
-        $this->assertEquals("dark", BootstrapInterface::BOOTSTRAP_DARK);
-        $this->assertEquals("default", BootstrapInterface::BOOTSTRAP_DEFAULT);
-        $this->assertEquals("info", BootstrapInterface::BOOTSTRAP_INFO);
-        $this->assertEquals("light", BootstrapInterface::BOOTSTRAP_LIGHT);
-        $this->assertEquals("primary", BootstrapInterface::BOOTSTRAP_PRIMARY);
-        $this->assertEquals("secondary", BootstrapInterface::BOOTSTRAP_SECONDARY);
-        $this->assertEquals("success", BootstrapInterface::BOOTSTRAP_SUCCESS);
-        $this->assertEquals("warning", BootstrapInterface::BOOTSTRAP_WARNING);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, BootstrapInterface::BOOTSTRAP_DANGER);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DARK, BootstrapInterface::BOOTSTRAP_DARK);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DEFAULT, BootstrapInterface::BOOTSTRAP_DEFAULT);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_INFO, BootstrapInterface::BOOTSTRAP_INFO);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_LIGHT, BootstrapInterface::BOOTSTRAP_LIGHT);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_PRIMARY, BootstrapInterface::BOOTSTRAP_PRIMARY);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_SECONDARY, BootstrapInterface::BOOTSTRAP_SECONDARY);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_SUCCESS, BootstrapInterface::BOOTSTRAP_SUCCESS);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_WARNING, BootstrapInterface::BOOTSTRAP_WARNING);
     }
 }

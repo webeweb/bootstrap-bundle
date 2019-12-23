@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Alert;
 
-use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Alert interface.
@@ -26,56 +26,56 @@ interface AlertInterface {
      *
      * @var string
      */
-    const ALERT_TYPE_DANGER = BootstrapInterface::BOOTSTRAP_DANGER;
+    const ALERT_TYPE_DANGER = WBWBootstrapInterface::BOOTSTRAP_DANGER;
 
     /**
      * Alert type "dark".
      *
      * @var string
      */
-    const ALERT_TYPE_DARK = BootstrapInterface::BOOTSTRAP_DARK;
+    const ALERT_TYPE_DARK = WBWBootstrapInterface::BOOTSTRAP_DARK;
 
     /**
      * Alert type "info".
      *
      * @var string
      */
-    const ALERT_TYPE_INFO = BootstrapInterface::BOOTSTRAP_INFO;
+    const ALERT_TYPE_INFO = WBWBootstrapInterface::BOOTSTRAP_INFO;
 
     /**
      * Alert type "light".
      *
      * @var string
      */
-    const ALERT_TYPE_LIGHT = BootstrapInterface::BOOTSTRAP_LIGHT;
+    const ALERT_TYPE_LIGHT = WBWBootstrapInterface::BOOTSTRAP_LIGHT;
 
     /**
      * Alert type "primary".
      *
      * @var string
      */
-    const ALERT_TYPE_PRIMARY = BootstrapInterface::BOOTSTRAP_PRIMARY;
+    const ALERT_TYPE_PRIMARY = WBWBootstrapInterface::BOOTSTRAP_PRIMARY;
 
     /**
      * Alert type "secondary".
      *
      * @var string
      */
-    const ALERT_TYPE_SECONDARY = BootstrapInterface::BOOTSTRAP_SECONDARY;
+    const ALERT_TYPE_SECONDARY = WBWBootstrapInterface::BOOTSTRAP_SECONDARY;
 
     /**
      * Alert type "success".
      *
      * @var string
      */
-    const ALERT_TYPE_SUCCESS = BootstrapInterface::BOOTSTRAP_SUCCESS;
+    const ALERT_TYPE_SUCCESS = WBWBootstrapInterface::BOOTSTRAP_SUCCESS;
 
     /**
      * Alert type "warning".
      *
      * @var string
      */
-    const ALERT_TYPE_WARNING = BootstrapInterface::BOOTSTRAP_WARNING;
+    const ALERT_TYPE_WARNING = WBWBootstrapInterface::BOOTSTRAP_WARNING;
 
     /**
      * Get the content.

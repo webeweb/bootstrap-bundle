@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
 
 use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
@@ -30,13 +30,13 @@ class AlertInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DANGER, AlertInterface::ALERT_TYPE_DANGER);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_DARK, AlertInterface::ALERT_TYPE_DARK);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_INFO, AlertInterface::ALERT_TYPE_INFO);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_LIGHT, AlertInterface::ALERT_TYPE_LIGHT);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_PRIMARY, AlertInterface::ALERT_TYPE_PRIMARY);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_SECONDARY, AlertInterface::ALERT_TYPE_SECONDARY);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_SUCCESS, AlertInterface::ALERT_TYPE_SUCCESS);
-        $this->assertEquals(BootstrapInterface::BOOTSTRAP_WARNING, AlertInterface::ALERT_TYPE_WARNING);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, AlertInterface::ALERT_TYPE_DANGER);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DARK, AlertInterface::ALERT_TYPE_DARK);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_INFO, AlertInterface::ALERT_TYPE_INFO);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_LIGHT, AlertInterface::ALERT_TYPE_LIGHT);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_PRIMARY, AlertInterface::ALERT_TYPE_PRIMARY);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_SECONDARY, AlertInterface::ALERT_TYPE_SECONDARY);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_SUCCESS, AlertInterface::ALERT_TYPE_SUCCESS);
+        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_WARNING, AlertInterface::ALERT_TYPE_WARNING);
     }
 }

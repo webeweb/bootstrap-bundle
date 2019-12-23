@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Progress bar interface.
@@ -26,28 +26,28 @@ interface ProgressBarInterface {
      *
      * @var string
      */
-    const PROGRESS_BAR_TYPE_DANGER = BootstrapInterface::BOOTSTRAP_DANGER;
+    const PROGRESS_BAR_TYPE_DANGER = WBWBootstrapInterface::BOOTSTRAP_DANGER;
 
     /**
      * Progress bar type "info".
      *
      * @var string
      */
-    const PROGRESS_BAR_TYPE_INFO = BootstrapInterface::BOOTSTRAP_INFO;
+    const PROGRESS_BAR_TYPE_INFO = WBWBootstrapInterface::BOOTSTRAP_INFO;
 
     /**
      * Progress bar type "success".
      *
      * @var string
      */
-    const PROGRESS_BAR_TYPE_SUCCESS = BootstrapInterface::BOOTSTRAP_SUCCESS;
+    const PROGRESS_BAR_TYPE_SUCCESS = WBWBootstrapInterface::BOOTSTRAP_SUCCESS;
 
     /**
      * Progress bar type "warning".
      *
      * @var string
      */
-    const PROGRESS_BAR_TYPE_WARNING = BootstrapInterface::BOOTSTRAP_WARNING;
+    const PROGRESS_BAR_TYPE_WARNING = WBWBootstrapInterface::BOOTSTRAP_WARNING;
 
     /**
      * Get the animated.

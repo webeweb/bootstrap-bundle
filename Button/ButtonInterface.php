@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Button;
 
-use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Button interface.
@@ -47,35 +47,35 @@ interface ButtonInterface {
      *
      * @var string
      */
-    const BUTTON_TYPE_DANGER = BootstrapInterface::BOOTSTRAP_DANGER;
+    const BUTTON_TYPE_DANGER = WBWBootstrapInterface::BOOTSTRAP_DANGER;
 
     /**
      * Button type "dark".
      *
      * @var string
      */
-    const BUTTON_TYPE_DARK = BootstrapInterface::BOOTSTRAP_DARK;
+    const BUTTON_TYPE_DARK = WBWBootstrapInterface::BOOTSTRAP_DARK;
 
     /**
      * Button type "default".
      *
      * @var string
      */
-    const BUTTON_TYPE_DEFAULT = BootstrapInterface::BOOTSTRAP_DEFAULT;
+    const BUTTON_TYPE_DEFAULT = WBWBootstrapInterface::BOOTSTRAP_DEFAULT;
 
     /**
      * Button type "info".
      *
      * @var string
      */
-    const BUTTON_TYPE_INFO = BootstrapInterface::BOOTSTRAP_INFO;
+    const BUTTON_TYPE_INFO = WBWBootstrapInterface::BOOTSTRAP_INFO;
 
     /**
      * Button type "light".
      *
      * @var string
      */
-    const BUTTON_TYPE_LIGHT = BootstrapInterface::BOOTSTRAP_LIGHT;
+    const BUTTON_TYPE_LIGHT = WBWBootstrapInterface::BOOTSTRAP_LIGHT;
 
     /**
      * Button type "link".
@@ -89,25 +89,25 @@ interface ButtonInterface {
      *
      * @var string
      */
-    const BUTTON_TYPE_PRIMARY = BootstrapInterface::BOOTSTRAP_PRIMARY;
+    const BUTTON_TYPE_PRIMARY = WBWBootstrapInterface::BOOTSTRAP_PRIMARY;
     /**
      * Button type "secondary".
      *
      * @var string
      */
-    const BUTTON_TYPE_SECONDARY = BootstrapInterface::BOOTSTRAP_SECONDARY;
+    const BUTTON_TYPE_SECONDARY = WBWBootstrapInterface::BOOTSTRAP_SECONDARY;
     /**
      * Button type "success".
      *
      * @var string
      */
-    const BUTTON_TYPE_SUCCESS = BootstrapInterface::BOOTSTRAP_SUCCESS;
+    const BUTTON_TYPE_SUCCESS = WBWBootstrapInterface::BOOTSTRAP_SUCCESS;
     /**
      * Button type "warning".
      *
      * @var string
      */
-    const BUTTON_TYPE_WARNING = BootstrapInterface::BOOTSTRAP_WARNING;
+    const BUTTON_TYPE_WARNING = WBWBootstrapInterface::BOOTSTRAP_WARNING;
 
     /**
      * Get the active.

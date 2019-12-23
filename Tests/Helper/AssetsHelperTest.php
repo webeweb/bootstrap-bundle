@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 
 use Exception;
-use WBW\Bundle\BootstrapBundle\BootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
 
@@ -52,8 +52,8 @@ class AssetsHelperTest extends AbstractTestCase {
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
         $this->assertCount(19, $res);
 
-        $this->assertRegExp("/bootstrap\-" . preg_quote(BootstrapInterface::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[0]);
-        $this->assertRegExp("/bootstrap\-" . preg_quote(BootstrapInterface::BOOTSTRAP_VERSION_4, ".") . "\.zip$/", $res[1]);
+        $this->assertRegExp("/bootstrap\-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[0]);
+        $this->assertRegExp("/bootstrap\-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_4, ".") . "\.zip$/", $res[1]);
         $this->assertRegExp("/bootstrap\-colorpicker\-.*\.zip$/", $res[2]);
         $this->assertRegExp("/bootstrap\-datepicker\-.*\.zip$/", $res[3]);
         $this->assertRegExp("/bootstrap\-daterangepicker\-.*\.zip$/", $res[4]);
