@@ -16,7 +16,7 @@ namespace WBW\Bundle\BootstrapBundle;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\BootstrapBundle
- * @deprecated since 3.5.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface}
+ * @deprecated since 3.5.0, use {@see WBW\Bundle\BootstrapBundle\BootstrapInterface} instead.
  */
 interface BootstrapInterface {
 
