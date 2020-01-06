@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Badge;
 
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Badge factory.

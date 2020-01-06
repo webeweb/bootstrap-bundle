@@ -14,8 +14,8 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Button\ButtonFactory;
-use WBW\Library\Core\Argument\ArrayHelper;
-use WBW\Library\Core\Argument\StringHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\StringHelper;
 
 /**
  * Button Twig extension.

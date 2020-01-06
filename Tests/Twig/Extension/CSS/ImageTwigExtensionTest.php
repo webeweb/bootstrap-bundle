@@ -16,7 +16,6 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
-use WBW\Library\Core\FileSystem\FileHelper;
 
 /**
  * Image Twig extension.
@@ -35,7 +34,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     public function testBootstrapImageBase64Function() {
 
         // Set the mocks.
-        $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
+        $ref = file_get_contents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
         $src = getcwd() . "/Resources/doc/screenshot_1024x0860.png";
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
@@ -96,7 +95,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     public function testBootstrapImageBase64FunctionWithSrc() {
 
         // Set the mocks.
-        $ref = FileHelper::getContents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
+        $ref = file_get_contents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
         $src = getcwd() . "/Resources/doc/screenshot_1024x0860.png";
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
@@ -110,6 +109,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * Tests the bootstrapImageBase64Function() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testBootstrapImageBase64FunctionWithUsemap() {
 
@@ -124,6 +124,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * Tests the bootstrapImageBase64Function() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testBootstrapImageBase64FunctionWithWidth() {
 
@@ -138,6 +139,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * Tests the bootstrapImageBase64Function() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testBootstrapImageBase64FunctionWithoutArguments() {
 

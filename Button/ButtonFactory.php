@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Button;
 
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Button factory.
