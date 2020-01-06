@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.6.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.6.0) (2020-01-06)
+
+- Update dependencies
+
 ### [3.5.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.5.0) (2019-12-23)
 
 > IMPORTANT NOTICE: The following classes has been deprecated
