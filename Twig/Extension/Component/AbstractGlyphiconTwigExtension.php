@@ -26,6 +26,7 @@ abstract class AbstractGlyphiconTwigExtension extends AbstractTwigExtension {
      * Displays a Bootstrap glyphicon.
      *
      * @param string $name The name.
+     * @param string $style The style.
      * @return string Returns the Bootstrap glyphicon.
      */
     protected function bootstrapGlyphicon($name, $style) {

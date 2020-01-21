@@ -78,6 +78,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
 
         $output = [];
 
+        /** @var Role|string $current */
         foreach ($user->getRoles() as $current) {
 
             $role = true === $current instanceof Role ? $current->getRole() : $current;
