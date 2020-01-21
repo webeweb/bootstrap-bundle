@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 
 use WBW\Bundle\CoreBundle\Controller\AbstractController as BaseController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Event\NotificationEvents;
 use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
+use WBW\Bundle\CoreBundle\WBWCoreEvents;
 
 /**
  * Abstract controller.
@@ -33,7 +33,7 @@ abstract class AbstractController extends BaseController {
      */
     protected function notifyDanger($content) {
         $notification = NotificationFactory::newDangerNotification($content);
-        return $this->notify(NotificationEvents::NOTIFICATION_DANGER, $notification);
+        return $this->notify(WBWCoreEvents::NOTIFICATION_DANGER, $notification);
     }
 
     /**
@@ -44,7 +44,7 @@ abstract class AbstractController extends BaseController {
      */
     protected function notifyInfo($content) {
         $notification = NotificationFactory::newInfoNotification($content);
-        return $this->notify(NotificationEvents::NOTIFICATION_INFO, $notification);
+        return $this->notify(WBWCoreEvents::NOTIFICATION_INFO, $notification);
     }
 
     /**
@@ -55,7 +55,7 @@ abstract class AbstractController extends BaseController {
      */
     protected function notifySuccess($content) {
         $notification = NotificationFactory::newSuccessNotification($content);
-        return $this->notify(NotificationEvents::NOTIFICATION_SUCCESS, $notification);
+        return $this->notify(WBWCoreEvents::NOTIFICATION_SUCCESS, $notification);
     }
 
     /**
@@ -66,6 +66,6 @@ abstract class AbstractController extends BaseController {
      */
     protected function notifyWarning($content) {
         $notification = NotificationFactory::newWarningNotification($content);
-        return $this->notify(NotificationEvents::NOTIFICATION_WARNING, $notification);
+        return $this->notify(WBWCoreEvents::NOTIFICATION_WARNING, $notification);
     }
 }
