@@ -1,4 +1,4 @@
-# .scutinizer.yml
+# .scrutinizer.yml
 checks:
     php:
         code_rating: true
