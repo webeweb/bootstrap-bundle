@@ -5,7 +5,9 @@
 {% set _appVersion = getContainerParameter("wbw_bootstrap.version") %}
 {% set _appPlugins = getContainerParameter("wbw_bootstrap.plugins") %}
 {% set _appLocales = getContainerParameter("wbw_bootstrap.locales") %}
-<!-- Bootstrap -->
+{% if ("prod" != app.environment) %}
+    <!-- Bootstrap -->
+{% endif %}
 <script type="text/javascript" src="{{ asset(_webPath ~ "/popper.js-1.15.0/umd/popper.min.js") }}"></script>
 <script type="text/javascript" src="{{ asset(_webPath ~ "/bootstrap-{{ version }}/js/bootstrap.min.js" | replace({"{{ version }}": _versions[_appVersion]})) }}"></script>
 {% for _appPlugin in _appPlugins %}
