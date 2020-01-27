@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\CoreBundle\Navigation\AbstractNavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
@@ -44,11 +45,11 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap breadcrumb.
      *
-     * @param NavigationNode $node The node.
+     * @param AbstractNavigationNode $node The node.
      * @param bool $last Last node ?.
      * @return string Returns the Bootstrap breadcrumb.
      */
-    private function bootstrapBreadcrumb(NavigationNode $node, $last) {
+    private function bootstrapBreadcrumb(AbstractNavigationNode $node, $last) {
 
         $attributes = true === $node->getActive() && true === $last ? ["class" => "active"] : [];
 
