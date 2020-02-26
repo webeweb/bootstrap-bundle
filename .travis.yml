@@ -10,7 +10,7 @@ php:
     - "7.4"
     - "nightly"
 
-matrix:
+jobs:
     include:
         -   php: "5.6"
             env: "SYMFONY_VERSION=2.7.*"
@@ -39,10 +39,10 @@ matrix:
     allow_failures:
         -   php: "nightly"
 
-sudo: required
+os: linux
 
 before_install:
-    - sudo /bin/dd if=/dev/zero of=/var/swap bs=1M count=8192
+    - sudo /bin/dd if=/dev/zero of=/var/swap bs=1M count=1024
     - sudo /sbin/mkswap /var/swap
     - sudo /sbin/swapon /var/swap
     #- echo "memory_limit=4096M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
