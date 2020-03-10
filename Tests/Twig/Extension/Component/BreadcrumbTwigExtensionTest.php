@@ -53,7 +53,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
 
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
-        $res = file_get_contents(__DIR__ . "/testBootstrapBreadcrumbsFunction.html.txt");
+        $res = file_get_contents(__DIR__ . "/BreadcrumbTwigExtensionTest.testBootstrapBreadcrumbsFunction.html.txt");
         $this->assertEquals($res, $obj->bootstrapBreadcrumbsFunction([], $this->tree, Request::create("https://github.com/webeweb/bootstrap-bundle")) . "\n");
     }
 

@@ -65,7 +65,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = file_get_contents(__DIR__ . "/testBootstrapButtonGroupBasicFunction.html.txt");
+        $res = file_get_contents(__DIR__ . "/ButtonGroupTwigExtensionTest.testBootstrapButtonGroupBasicFunction.html.txt");
         $this->assertEquals($res, $obj->bootstrapButtonGroupBasicFunction($arg, [$this->editButton, $this->deleteButton]) . "\n");
     }
 
@@ -79,7 +79,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = file_get_contents(__DIR__ . "/testBootstrapButtonGroupToolbarFunction.html.txt");
+        $res = file_get_contents(__DIR__ . "/ButtonGroupTwigExtensionTest.testBootstrapButtonGroupToolbarFunction.html.txt");
         $this->assertEquals($res, $obj->bootstrapButtonGroupToolbarFunction($arg, [$this->editButton, $this->deleteButton]) . "\n");
     }
 

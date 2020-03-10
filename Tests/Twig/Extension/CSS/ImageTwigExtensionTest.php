@@ -34,7 +34,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     public function testBootstrapImageBase64Function() {
 
         // Set the mocks.
-        $ref = file_get_contents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
+        $ref = file_get_contents(__DIR__ . "/ImageTwigExtensionTest.txt");
         $src = getcwd() . "/Resources/doc/screenshot_1024x0860.png";
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
@@ -95,7 +95,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     public function testBootstrapImageBase64FunctionWithSrc() {
 
         // Set the mocks.
-        $ref = file_get_contents(getcwd() . "/Tests/Twig/Extension/CSS/ImageTwigExtensionTest.txt");
+        $ref = file_get_contents(__DIR__ . "/ImageTwigExtensionTest.txt");
         $src = getcwd() . "/Resources/doc/screenshot_1024x0860.png";
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
