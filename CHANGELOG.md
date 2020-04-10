@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### [3.6.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.6.0) (2020-01-06)
 
 - Update dependencies
