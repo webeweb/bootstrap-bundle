@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class NavTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestNavTwigExtensionTrait();
-
-        $this->assertNull($obj->getNavTwigExtension());
-    }
-
-    /**
      * Tests the setNavTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class NavTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setNavTwigExtension($navTwigExtension);
         $this->assertSame($navTwigExtension, $obj->getNavTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestNavTwigExtensionTrait();
+
+        $this->assertNull($obj->getNavTwigExtension());
     }
 }

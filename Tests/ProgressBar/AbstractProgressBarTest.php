@@ -23,26 +23,6 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\ProgressBar\TestProgressBar;
 class AbstractProgressBarTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestProgressBar("type");
-
-        $this->assertNull($obj->getAnimated());
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getHeight());
-        $this->assertNull($obj->getMax());
-        $this->assertNull($obj->getMin());
-        $this->assertEquals("progress-bar-", $obj->getPrefix());
-        $this->assertNull($obj->getStriped());
-        $this->assertEquals("type", $obj->getType());
-        $this->assertNull($obj->getValue());
-    }
-
-    /**
      * Tests the setAnimated() method.
      *
      * @return void
@@ -131,5 +111,25 @@ class AbstractProgressBarTest extends AbstractTestCase {
 
         $obj->setValue(50);
         $this->assertEquals(50, $obj->getValue());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestProgressBar("type");
+
+        $this->assertNull($obj->getAnimated());
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getHeight());
+        $this->assertNull($obj->getMax());
+        $this->assertNull($obj->getMin());
+        $this->assertEquals("progress-bar-", $obj->getPrefix());
+        $this->assertNull($obj->getStriped());
+        $this->assertEquals("type", $obj->getType());
+        $this->assertNull($obj->getValue());
     }
 }

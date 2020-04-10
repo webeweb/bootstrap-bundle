@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
 
 use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Alert interface test.
@@ -28,7 +28,7 @@ class AlertInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, AlertInterface::ALERT_TYPE_DANGER);
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DARK, AlertInterface::ALERT_TYPE_DARK);

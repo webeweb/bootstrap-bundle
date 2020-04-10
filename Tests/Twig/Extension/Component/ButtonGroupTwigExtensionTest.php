@@ -84,20 +84,6 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
-
-        $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -141,5 +127,19 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsButtonGroupToolbar", $res[3]->getName());
         $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
+
+        $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

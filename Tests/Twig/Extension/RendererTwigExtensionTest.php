@@ -23,20 +23,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
 class RendererTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
-
-        $obj = new RendererTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -91,5 +77,19 @@ class RendererTwigExtensionTest extends AbstractTestCase {
 
         $res = "";
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

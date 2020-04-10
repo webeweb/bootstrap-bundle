@@ -1061,20 +1061,6 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.css.grid", GridTwigExtension::SERVICE_NAME);
-
-        $obj = new GridTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -1111,5 +1097,19 @@ class GridTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bootstrapGridStacked", $res[4]->getName());
         $this->assertEquals([$obj, "bootstrapGridStackedFunction"], $res[4]->getCallable());
         $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.css.grid", GridTwigExtension::SERVICE_NAME);
+
+        $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

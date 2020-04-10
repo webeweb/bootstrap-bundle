@@ -25,18 +25,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
 class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestRoleLabelTwigExtensionTrait();
-
-        $this->assertNull($obj->getRoleLabelTwigExtension());
-    }
-
-    /**
      * Tests the setRoleLabelTwigExtension() method.
      *
      * @return void
@@ -53,5 +41,17 @@ class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setRoleLabelTwigExtension($formButtonTwigExtension);
         $this->assertSame($formButtonTwigExtension, $obj->getRoleLabelTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestRoleLabelTwigExtensionTrait();
+
+        $this->assertNull($obj->getRoleLabelTwigExtension());
     }
 }

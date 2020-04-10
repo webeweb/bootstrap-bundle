@@ -24,26 +24,6 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Button\TestButton;
 class AbstractButtonTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestButton("danger");
-
-        $this->assertNull($obj->getActive());
-        $this->assertNull($obj->getBlock());
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getDisabled());
-        $this->assertNull($obj->getOutline());
-        $this->assertEquals("btn-", $obj->getPrefix());
-        $this->assertNull($obj->getSize());
-        $this->assertNull($obj->getTitle());
-        $this->assertEquals("danger", $obj->getType());
-    }
-
-    /**
      * Tests the setActive() method.
      *
      * @return void
@@ -132,5 +112,25 @@ class AbstractButtonTest extends AbstractTestCase {
 
         $obj->setTitle("title");
         $this->assertEquals("title", $obj->getTitle());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestButton("danger");
+
+        $this->assertNull($obj->getActive());
+        $this->assertNull($obj->getBlock());
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getDisabled());
+        $this->assertNull($obj->getOutline());
+        $this->assertEquals("btn-", $obj->getPrefix());
+        $this->assertNull($obj->getSize());
+        $this->assertNull($obj->getTitle());
+        $this->assertEquals("danger", $obj->getType());
     }
 }

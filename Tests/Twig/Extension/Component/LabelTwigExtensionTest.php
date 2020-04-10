@@ -194,20 +194,6 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.label", LabelTwigExtension::SERVICE_NAME);
-
-        $obj = new LabelTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -305,5 +291,19 @@ class LabelTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsLabelWarning", $res[11]->getName());
         $this->assertEquals([$obj, "bootstrapLabelWarningFunction"], $res[11]->getCallable());
         $this->assertEquals(["html"], $res[11]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.label", LabelTwigExtension::SERVICE_NAME);
+
+        $obj = new LabelTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

@@ -243,20 +243,6 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.progress_bar", ProgressBarTwigExtension::SERVICE_NAME);
-
-        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -350,5 +336,19 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsMultipleBars", $res[11]->getName());
         $this->assertEquals([$obj, "bootstrapMultipleBars"], $res[11]->getCallable());
         $this->assertEquals(["html"], $res[11]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.progress_bar", ProgressBarTwigExtension::SERVICE_NAME);
+
+        $obj = new ProgressBarTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

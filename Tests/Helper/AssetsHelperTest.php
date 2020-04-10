@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 
 use Exception;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
 
 /**

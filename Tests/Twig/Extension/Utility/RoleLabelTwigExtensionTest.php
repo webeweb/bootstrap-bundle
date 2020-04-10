@@ -101,22 +101,6 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.utility.role_label", RoleLabelTwigExtension::SERVICE_NAME);
-
-        $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->translator, $obj->getTranslator());
-        $this->assertSame($this->labelTwigExtension, $obj->getLabelTwigExtension());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -132,5 +116,21 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bootstrapRoleLabel", $res[0]->getName());
         $this->assertEquals([$obj, "bootstrapRoleLabelFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.utility.role_label", RoleLabelTwigExtension::SERVICE_NAME);
+
+        $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
+        $this->assertSame($this->labelTwigExtension, $obj->getLabelTwigExtension());
     }
 }

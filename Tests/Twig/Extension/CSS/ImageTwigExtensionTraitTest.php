@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ImageTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestImageTwigExtensionTrait();
-
-        $this->assertNull($obj->getImageTwigExtension());
-    }
-
-    /**
      * Tests the setImageTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class ImageTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setImageTwigExtension($imageTwigExtension);
         $this->assertSame($imageTwigExtension, $obj->getImageTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestImageTwigExtensionTrait();
+
+        $this->assertNull($obj->getImageTwigExtension());
     }
 }

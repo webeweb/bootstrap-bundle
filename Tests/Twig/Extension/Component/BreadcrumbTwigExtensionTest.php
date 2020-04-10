@@ -58,21 +58,6 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
-
-        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->translator, $obj->getTranslator());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -106,5 +91,20 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsBreadcrumbs", $res[1]->getName());
         $this->assertEquals([$obj, "bootstrapBreadcrumbsFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
+
+        $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
     }
 }

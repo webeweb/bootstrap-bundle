@@ -151,20 +151,6 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
-
-        $obj = new DropdownTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -218,5 +204,19 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsDropdownHeader", $res[5]->getName());
         $this->assertEquals([$obj, "bootstrapDropdownHeaderFunction"], $res[5]->getCallable());
         $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
+
+        $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

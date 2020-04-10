@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ProgressBarTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestProgressBarTwigExtensionTrait();
-
-        $this->assertNull($obj->getProgressBarTwigExtension());
-    }
-
-    /**
      * Tests the setProgressBarTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class ProgressBarTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setProgressBarTwigExtension($progressBarTwigExtension);
         $this->assertSame($progressBarTwigExtension, $obj->getProgressBarTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestProgressBarTwigExtensionTrait();
+
+        $this->assertNull($obj->getProgressBarTwigExtension());
     }
 }

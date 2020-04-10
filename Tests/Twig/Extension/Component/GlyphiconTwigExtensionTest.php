@@ -53,20 +53,6 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.glyphicon", GlyphiconTwigExtension::SERVICE_NAME);
-
-        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -101,5 +87,19 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsGlyphicon", $res[1]->getName());
         $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.glyphicon", GlyphiconTwigExtension::SERVICE_NAME);
+
+        $obj = new GlyphiconTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

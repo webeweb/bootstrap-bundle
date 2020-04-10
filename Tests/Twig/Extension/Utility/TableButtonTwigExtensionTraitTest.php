@@ -25,18 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class TableButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestTableButtonTwigExtensionTrait();
-
-        $this->assertNull($obj->getTableButtonTwigExtension());
-    }
-
-    /**
      * Tests the setTableButtonTwigExtension() method.
      *
      * @return void
@@ -53,5 +41,17 @@ class TableButtonTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setTableButtonTwigExtension($tableButtonTwigExtension);
         $this->assertSame($tableButtonTwigExtension, $obj->getTableButtonTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestTableButtonTwigExtensionTrait();
+
+        $this->assertNull($obj->getTableButtonTwigExtension());
     }
 }

@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Badge;
 
 use WBW\Bundle\BootstrapBundle\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Badge interface test.
@@ -28,7 +28,7 @@ class BadgeInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, BadgeInterface::BADGE_TYPE_DANGER);
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DARK, BadgeInterface::BADGE_TYPE_DARK);

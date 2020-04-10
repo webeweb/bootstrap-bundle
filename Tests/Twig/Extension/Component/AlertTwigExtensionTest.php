@@ -277,20 +277,6 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.component.alert", AlertTwigExtension::SERVICE_NAME);
-
-        $obj = new AlertTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -448,5 +434,19 @@ class AlertTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsAlertWarning", $res[7]->getName());
         $this->assertEquals([$obj, "bootstrapAlertWarningFunction"], $res[7]->getCallable());
         $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.component.alert", AlertTwigExtension::SERVICE_NAME);
+
+        $obj = new AlertTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

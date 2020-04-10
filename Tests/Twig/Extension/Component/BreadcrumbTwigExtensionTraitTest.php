@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class BreadcrumbTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestBreadcrumbTwigExtensionTrait();
-
-        $this->assertNull($obj->getBreadcrumbTwigExtension());
-    }
-
-    /**
      * Tests the setBreadcrumbTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class BreadcrumbTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setBreadcrumbTwigExtension($breadcrumbTwigExtension);
         $this->assertSame($breadcrumbTwigExtension, $obj->getBreadcrumbTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestBreadcrumbTwigExtensionTrait();
+
+        $this->assertNull($obj->getBreadcrumbTwigExtension());
     }
 }

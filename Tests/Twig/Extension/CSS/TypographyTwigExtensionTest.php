@@ -669,20 +669,6 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.css.typography", TypographyTwigExtension::SERVICE_NAME);
-
-        $obj = new TypographyTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -833,5 +819,19 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsUnderlined", $res[27]->getName());
         $this->assertEquals([$obj, "bootstrapUnderlinedFunction"], $res[27]->getCallable());
         $this->assertEquals(["html"], $res[27]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.css.typography", TypographyTwigExtension::SERVICE_NAME);
+
+        $obj = new TypographyTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

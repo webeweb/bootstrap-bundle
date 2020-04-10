@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class DropdownTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestDropdownTwigExtensionTrait();
-
-        $this->assertNull($obj->getDropdownTwigExtension());
-    }
-
-    /**
      * Tests the setDropdownTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class DropdownTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setDropdownTwigExtension($dropdownTwigExtension);
         $this->assertSame($dropdownTwigExtension, $obj->getDropdownTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestDropdownTwigExtensionTrait();
+
+        $this->assertNull($obj->getDropdownTwigExtension());
     }
 }

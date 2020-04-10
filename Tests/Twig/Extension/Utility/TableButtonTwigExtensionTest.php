@@ -88,22 +88,6 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.utility.table_button", TableButtonTwigExtension::SERVICE_NAME);
-
-        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->translator, $obj->getTranslator());
-        $this->assertSame($this->buttonTwigExtension, $obj->getButtonTwigExtension());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -129,5 +113,21 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bootstrapRowButtonEdit", $res[2]->getName());
         $this->assertEquals([$obj, "bootstrapRowButtonEditFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.utility.table_button", TableButtonTwigExtension::SERVICE_NAME);
+
+        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
+        $this->assertSame($this->buttonTwigExtension, $obj->getButtonTwigExtension());
     }
 }

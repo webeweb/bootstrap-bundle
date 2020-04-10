@@ -334,20 +334,6 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.css.button", ButtonTwigExtension::SERVICE_NAME);
-
-        $obj = new ButtonTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -565,5 +551,19 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsButtonWarning", $res[13]->getName());
         $this->assertEquals([$obj, "bootstrapButtonWarningFunction"], $res[13]->getCallable());
         $this->assertEquals(["html"], $res[13]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.css.button", ButtonTwigExtension::SERVICE_NAME);
+
+        $obj = new ButtonTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

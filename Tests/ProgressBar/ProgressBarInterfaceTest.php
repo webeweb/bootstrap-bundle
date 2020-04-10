@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * ProgressBar interface test.
@@ -28,7 +28,7 @@ class ProgressBarInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, ProgressBarInterface::PROGRESS_BAR_TYPE_DANGER);
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_INFO, ProgressBarInterface::PROGRESS_BAR_TYPE_INFO);

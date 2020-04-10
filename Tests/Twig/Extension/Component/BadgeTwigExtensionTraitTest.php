@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class BadgeTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestBadgeTwigExtensionTrait();
-
-        $this->assertNull($obj->getBadgeTwigExtension());
-    }
-
-    /**
      * Tests the setBadgeTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class BadgeTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setBadgeTwigExtension($badgeTwigExtension);
         $this->assertSame($badgeTwigExtension, $obj->getBadgeTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestBadgeTwigExtensionTrait();
+
+        $this->assertNull($obj->getBadgeTwigExtension());
     }
 }

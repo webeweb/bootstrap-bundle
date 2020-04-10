@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class GlyphiconTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestGlyphiconTwigExtensionTrait();
-
-        $this->assertNull($obj->getGlyphiconTwigExtension());
-    }
-
-    /**
      * Tests the setGlyphiconTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class GlyphiconTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setGlyphiconTwigExtension($glyphiconTwigExtension);
         $this->assertSame($glyphiconTwigExtension, $obj->getGlyphiconTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestGlyphiconTwigExtensionTrait();
+
+        $this->assertNull($obj->getGlyphiconTwigExtension());
     }
 }

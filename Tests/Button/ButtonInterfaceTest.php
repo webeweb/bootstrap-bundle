@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Button;
 
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Button interface test.
@@ -28,7 +28,7 @@ class ButtonInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals("lg", ButtonInterface::BUTTON_SIZE_LG);
         $this->assertEquals("sm", ButtonInterface::BUTTON_SIZE_SM);

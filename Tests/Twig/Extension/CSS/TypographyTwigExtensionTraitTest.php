@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class TypographyTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestTypographyTwigExtensionTrait();
-
-        $this->assertNull($obj->getTypographyTwigExtension());
-    }
-
-    /**
      * Tests the setTypographyTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class TypographyTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setTypographyTwigExtension($typographyTwigExtension);
         $this->assertSame($typographyTwigExtension, $obj->getTypographyTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestTypographyTwigExtensionTrait();
+
+        $this->assertNull($obj->getTypographyTwigExtension());
     }
 }

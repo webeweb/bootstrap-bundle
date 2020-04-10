@@ -23,21 +23,6 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Badge\TestBadge;
 class AbstractBadgeTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestBadge("danger");
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getPill());
-        $this->assertEquals("badge-", $obj->getPrefix());
-        $this->assertEquals("danger", $obj->getType());
-    }
-
-    /**
      * Tests the setContent() method.
      *
      * @return void
@@ -61,6 +46,21 @@ class AbstractBadgeTest extends AbstractTestCase {
 
         $obj->setPill(true);
         $this->assertTrue($obj->getPill());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestBadge("danger");
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getPill());
+        $this->assertEquals("badge-", $obj->getPrefix());
+        $this->assertEquals("danger", $obj->getType());
     }
 
 }

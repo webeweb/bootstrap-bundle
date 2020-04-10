@@ -87,22 +87,6 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.utility.form_button", FormButtonTwigExtension::SERVICE_NAME);
-
-        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->translator, $obj->getTranslator());
-        $this->assertSame($this->buttonTwigExtension, $obj->getButtonTwigExtension());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -128,5 +112,21 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bootstrapFormButtonSubmit", $res[2]->getName());
         $this->assertEquals([$obj, "bootstrapFormButtonSubmitFunction"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.utility.form_button", FormButtonTwigExtension::SERVICE_NAME);
+
+        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->translator, $obj->getTranslator());
+        $this->assertSame($this->buttonTwigExtension, $obj->getButtonTwigExtension());
     }
 }

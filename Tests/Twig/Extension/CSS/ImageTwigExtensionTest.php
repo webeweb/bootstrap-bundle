@@ -151,20 +151,6 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
-
-        $obj = new ImageTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -185,5 +171,19 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("bsImageBase64", $res[1]->getName());
         $this->assertEquals([$obj, "bootstrapImageBase64Function"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
+
+        $obj = new ImageTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

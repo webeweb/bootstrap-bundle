@@ -23,21 +23,6 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Alert\TestAlert;
 class AbstractAlertTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestAlert("danger");
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getDismissible());
-        $this->assertEquals("alert-", $obj->getPrefix());
-        $this->assertEquals("danger", $obj->getType());
-    }
-
-    /**
      * Tests the setContent() method.
      *
      * @return void
@@ -61,6 +46,21 @@ class AbstractAlertTest extends AbstractTestCase {
 
         $obj->setDismissible(true);
         $this->assertTrue($obj->getDismissible());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestAlert("danger");
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getDismissible());
+        $this->assertEquals("alert-", $obj->getPrefix());
+        $this->assertEquals("danger", $obj->getType());
     }
 
 }
