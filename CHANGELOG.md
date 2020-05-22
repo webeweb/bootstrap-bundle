@@ -4,6 +4,7 @@ CHANGELOG
 ### master
 
 - Improve unit tests
+- Update Bootstrap to 4.5.0
 
 ### [3.6.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.6.0) (2020-01-06)
 
