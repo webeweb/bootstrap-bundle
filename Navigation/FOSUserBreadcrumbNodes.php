@@ -23,18 +23,18 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 class FOSUserBreadcrumbNodes {
 
     /**
-     * Get a FOSUser breadcrumb node with Glyphicon icons.
+     * Get the FOSUser breadcrumb nodes with Glyphicon icons.
      *
-     * @return BreadcrumbNode[] Returns the FOSUser breadcrumb node.
+     * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
     public static function getGlyphiconBreadcrumbNodes() {
 
-        $breadcrumbNodes = [];
+        $nodes = [];
 
-        $breadcrumbNodes[] = new BreadcrumbNode("label.edit_profile", "g:user", "fos_user_profile_edit", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-        $breadcrumbNodes[] = new BreadcrumbNode("label.show_profile", "g:user", "fos_user_profile_show", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-        $breadcrumbNodes[] = new BreadcrumbNode("label.change_password", "g:lock", "fos_user_change_password", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
+        $nodes[] = new BreadcrumbNode("label.edit_profile", "g:user", "fos_user_profile_edit", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
+        $nodes[] = new BreadcrumbNode("label.show_profile", "g:user", "fos_user_profile_show", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
+        $nodes[] = new BreadcrumbNode("label.change_password", "g:lock", "fos_user_change_password", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
 
-        return $breadcrumbNodes;
+        return $nodes;
     }
 }
