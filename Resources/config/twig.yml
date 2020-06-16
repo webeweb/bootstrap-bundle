@@ -4,9 +4,9 @@ services:
     wbw.bootstrap.twig.extension.css.button:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
         arguments: ["@twig"]
-        public:    true
         calls:
             - ["setVersion", ["%wbw_bootstrap.version%"]]
+        public:    true
         tags:
             - { name: "twig.extension" }
 
@@ -41,18 +41,18 @@ services:
     wbw.bootstrap.twig.extension.component.alert:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension
         arguments: ["@twig"]
-        public:    true
         calls:
             - ["setVersion", ["%wbw_bootstrap.version%"]]
+        public:    true
         tags:
             - { name: "twig.extension" }
 
     wbw.bootstrap.twig.extension.component.badge:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension
         arguments: ["@twig"]
-        public:    true
         calls:
             - ["setVersion", ["%wbw_bootstrap.version%"]]
+        public:    true
         tags:
             - { name: "twig.extension" }
 
@@ -80,18 +80,18 @@ services:
     wbw.bootstrap.twig.extension.component.glyphicon:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension
         arguments: ["@twig"]
-        public:    true
         calls:
             - ["setVersion", ["%wbw_bootstrap.version%"]]
+        public:    true
         tags:
             - { name: "twig.extension" }
 
     wbw.bootstrap.twig.extension.component.label:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension
         arguments: ["@twig"]
-        public:    true
         calls:
             - ["setVersion", ["%wbw_bootstrap.version%"]]
+        public:    true
         tags:
             - { name: "twig.extension" }
 
@@ -105,9 +105,9 @@ services:
     wbw.bootstrap.twig.extension.component.progress_bar:
         class:     WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
         arguments: ["@twig"]
-        public:    true
         calls:
             - ["setVersion", ["%wbw_bootstrap.version%"]]
+        public:    true
         tags:
             - { name: "twig.extension" }
 
