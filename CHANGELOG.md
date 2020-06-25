@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [3.7.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.7.0) (2020-06-25)
 
+- Improve code quality
 - Improve unit tests
 - Update Bootstrap to 4.5.0
 
