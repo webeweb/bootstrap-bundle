@@ -58,7 +58,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      */
     private function applyColor($label, $content, $color) {
         $searches = ">" . $content;
-        $replaces = " style=\"background-color:" . $color . ";\"" . $searches;
+        $replaces = ' style="background-color:' . $color . ';"' . $searches;
         return str_replace([$searches], [$replaces], $label);
     }
 

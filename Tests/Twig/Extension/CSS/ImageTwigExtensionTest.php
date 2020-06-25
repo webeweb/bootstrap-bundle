@@ -40,7 +40,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $arg = ["src" => $src, "alt" => "Bootstrap stack", "width" => 1024, "height" => 860, "class" => "class", "usemap" => "#usemap"];
-        $res = "<img src=\"" . $ref . "\" alt=\"Bootstrap stack\" width=\"1024\" height=\"860\" class=\"class\" usemap=\"#usemap\"/>";
+        $res = '<img src="' . $ref . '" alt="Bootstrap stack" width="1024" height="860" class="class" usemap="#usemap"/>';
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
@@ -54,7 +54,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $arg = ["alt" => "Bootstrap stack"];
-        $res = "<img alt=\"Bootstrap stack\"/>";
+        $res = '<img alt="Bootstrap stack"/>';
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
@@ -68,7 +68,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $arg = ["class" => "class"];
-        $res = "<img class=\"class\"/>";
+        $res = '<img class="class"/>';
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
@@ -82,7 +82,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $arg = ["height" => 860];
-        $res = "<img height=\"860\"/>";
+        $res = '<img height="860"/>';
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
@@ -101,7 +101,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $arg = ["src" => $src];
-        $res = "<img src=\"" . $ref . "\"/>";
+        $res = '<img src="' . $ref . '"/>';
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
@@ -116,7 +116,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $arg = ["usemap" => "#usemap"];
-        $res = "<img usemap=\"#usemap\"/>";
+        $res = '<img usemap="#usemap"/>';
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 
@@ -131,7 +131,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
         $arg = ["width" => 1024];
-        $res = "<img width=\"1024\"/>";
+        $res = '<img width="1024"/>';
         $this->assertEquals($res, $obj->bootstrapImageBase64Function($arg));
     }
 

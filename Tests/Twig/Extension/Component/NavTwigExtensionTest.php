@@ -40,9 +40,9 @@ class NavTwigExtensionTest extends AbstractTestCase {
         // Set the Items mock.
         $this->items = [];
 
-        $this->items[] = "<a href=\"#\">Home</a>";
-        $this->items[] = "<a href=\"#\">Profile</a>";
-        $this->items[] = "<a href=\"#\">Message</a>";
+        $this->items[] = '<a href="#">Home</a>';
+        $this->items[] = '<a href="#">Profile</a>';
+        $this->items[] = '<a href="#">Message</a>';
     }
 
     /**

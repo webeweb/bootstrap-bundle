@@ -39,7 +39,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      */
     public function bootstrapMultipleBars(array $progressBars) {
         $output = implode("", $progressBars);
-        return str_replace(["</div><div class=\"progress\">"], [""], $output);
+        return str_replace(['</div><div class="progress">'], [""], $output);
     }
 
     /**

@@ -48,7 +48,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
         $attributes["aria-haspopup"][] = "true";
         $attributes["aria-expanded"][] = StringHelper::parseBoolean($expanded);
 
-        $innerHTML = (null !== $content ? $content : "") . "<span class=\"caret\"></span>";
+        $innerHTML = (null !== $content ? $content : "") . '<span class="caret"></span>';
 
         return static::coreHTMLElement("button", $innerHTML, $attributes);
     }
