@@ -42,7 +42,7 @@ jobs:
 os: linux
 
 before_install:
-    - sudo /bin/dd if=/dev/zero of=/var/swap bs=1M count=1024
+    - sudo /bin/dd if=/dev/zero of=/var/swap bs=1M count=2048
     - sudo /sbin/mkswap /var/swap
     - sudo /sbin/swapon /var/swap
     #- echo "memory_limit=4096M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
