@@ -29,7 +29,7 @@ class WBWBootstrapInterfaceTest extends AbstractTestCase {
     public function test__construct() {
 
         $this->assertEquals("3.4.1", WBWBootstrapInterface::BOOTSTRAP_VERSION_3);
-        $this->assertEquals("4.5.1", WBWBootstrapInterface::BOOTSTRAP_VERSION_4);
+        $this->assertEquals("4.5.2", WBWBootstrapInterface::BOOTSTRAP_VERSION_4);
 
         $this->assertEquals("danger", WBWBootstrapInterface::BOOTSTRAP_DANGER);
         $this->assertEquals("dark", WBWBootstrapInterface::BOOTSTRAP_DARK);
