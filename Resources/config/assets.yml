@@ -2,7 +2,7 @@
 assets:
 
     wbw.bootstrap.asset.bootstrap:
-        versions: { "3": "3.4.1", "4": "4.5.2" }
+        versions: { "3": "3.4.1", "4": "4.5.3" }
         plugins:
             bootstrap_colorpicker:
                 version:     "2.5.1"
