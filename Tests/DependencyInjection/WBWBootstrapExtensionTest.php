@@ -148,7 +148,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(RendererTwigExtension::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(RendererTwigExtension::SERVICE_NAME, $ex->getMessage());
         }
     }
 

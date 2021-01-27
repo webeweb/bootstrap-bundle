@@ -91,8 +91,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the Bootstrap version.
-        //$this->assertContains(WBWBootstrapInterface::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
-        //$this->assertContains(WBWBootstrapInterface::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
+        //$this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
+        //$this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
     }
 
     /**
@@ -109,8 +109,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the Bootstrap version.
-        $this->assertContains(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
-        $this->assertContains(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
+        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
+        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
     }
 
     /**
@@ -127,8 +127,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the Bootstrap version.
-        $this->assertContains(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
-        $this->assertContains(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
+        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
+        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
     }
 
     /**
