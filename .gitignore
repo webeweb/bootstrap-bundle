@@ -1,6 +1,7 @@
 # Composer
-/composer.lock
 /vendor/*
+/.phpunit.result.cache
+/composer.lock
 
 # Resources
 /Resources/public/*
