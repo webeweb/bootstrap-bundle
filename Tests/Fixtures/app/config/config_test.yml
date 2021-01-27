@@ -16,9 +16,9 @@ framework:
     session:
         storage_id: "session.storage.mock_file"
     templating:
-        engines: ["twig"]
+        engines: [ "twig" ]
     test:           ~
-    translator:     { fallbacks: ["%locale%"] }
+    translator: { fallbacks: [ "%locale%" ] }
     validation:
         enabled: false
 

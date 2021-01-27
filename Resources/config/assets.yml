@@ -56,7 +56,7 @@ assets:
             bootstrap_notify:
                 version:     "3.1.3"
                 description: "Bootstrap Notify"
-                stylesheets: []
+                stylesheets: [ ]
                 javascripts:
                     - "/bootstrap-notify-{{ version }}/bootstrap-notify.min.js"
             bootstrap_select:
@@ -69,7 +69,7 @@ assets:
             bootstrap_slider:
                 version:     "10.0.0"
                 description: "Bootstrap Slider"
-                stylesheets: []
+                stylesheets: [ ]
                 javascripts:
                     - "/bootstrap-slider-{{ version }}/bootstrap-slider.min.js"
             bootstrap_social:
@@ -136,7 +136,7 @@ assets:
             summernote:
                 version:     "0.8.12"
                 description: "Summernote"
-                bootstrap:   { "3": "", "4": "-bs4" }
+                bootstrap: { "3": "", "4": "-bs4" }
                 stylesheets:
                     - "/summernote-{{ version }}/summernote{{ bootstrap }}.css"
                 javascripts:

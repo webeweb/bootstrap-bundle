@@ -1,45 +1,45 @@
 # Tests/Fixtures/app/config/routing_test.yml
 wbw_bootstrap_layout:
-    path:     "/layout"
+    path: "/layout"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layoutAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_layout3:
-    path:     "/layout3"
+    path: "/layout3"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout3Action" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_layout4:
-    path:     "/layout4"
+    path: "/layout4"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout4Action" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_blank:
-    path:     "/blank"
+    path: "/blank"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_flashbag:
-    path:     "/flashbag"
+    path: "/flashbag"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_javascripts:
-    path:     "/javascripts"
+    path: "/javascripts"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::javascriptsAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_stylesheets:
-    path:     "/stylesheets"
+    path: "/stylesheets"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::stylesheetsAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_twig_console:
-    path:     "/twig-console"
+    path: "/twig-console"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::twigConsoleAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
 
 wbw_bootstrap_work_in_progress:
-    path:     "/work-in-progress"
+    path: "/work-in-progress"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::workInProgressAction" }
-    methods:  ["GET"]
+    methods: [ "GET" ]
