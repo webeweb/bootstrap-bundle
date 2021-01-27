@@ -1,6 +1,28 @@
 CHANGELOG
 =========
 
+### master
+
+> IMPORTANT NOTICE: The following Symfony versions are now not supported
+> - Symfony 2.7
+> - Symfony 2.8
+> - Symfony 3.0
+> - Symfony 3.1
+> - Symfony 3.2
+> - Symfony 3.3
+
+> IMPORTANT NOTICE: The following PHP versions are now not supported
+> - PHP 5.6
+> - PHP 7.0
+
+> IMPORTANT NOTICE: The following deprecated classes has been removed
+> - WBW\Bundle\BootstrapBundle\BootstrapInterface
+
+- Add PHP 8.0 support
+- Improve PHP doc
+- Improve unit tests
+- Migrating from PHP 5.6 to PHP 7.1
+
 ### [3.10.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.10.0) (2020-10-15)
 
 - Update Bootstrap to 4.5.3
@@ -159,7 +181,7 @@ CHANGELOG
 ### [2.1.1](https://github.com/webeweb/bootstrap-bundle/tree/v2.1.1) (2019-02-15)
 
 - Fix CSS overload into buttons (by setting unknown Bootstrap types and sizes)
-- Remove all unnecessary Twig extension constructors 
+- Remove all unnecessary Twig extension constructors
 
 ### [2.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v2.1.0) (2019-02-14)
 
@@ -171,19 +193,19 @@ CHANGELOG
 - Add Button factory
 - Add Button interface
 - Add Code Twig function aliases
-- Add Danger button 
-- Add Default button 
+- Add Danger button
+- Add Default button
 - Add Dropdown Twig function aliases
 - Add Glyphicon Twig function aliases
 - Add Image Twig function aliases
-- Add Info button 
+- Add Info button
 - Add Label Twig function aliases
 - Add Nav Twig function aliases
-- Add Primary button 
+- Add Primary button
 - Add Progress bar Twig function aliases
-- Add Success button 
+- Add Success button
 - Add Typography Twig function aliases
-- Add Warning button 
+- Add Warning button
 - Add Grid helper
 - Fix disable state with button link filter
 - Fix multiple filter declarations into Renderer Twig extension
