@@ -50,7 +50,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a User mock.
@@ -79,7 +79,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapRoleLabelFunction() {
+    public function testBootstrapRoleLabelFunction(): void {
 
         $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
 
@@ -92,7 +92,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapRoleLabelFunctionWithNull() {
+    public function testBootstrapRoleLabelFunctionWithNull(): void {
 
         $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
 
@@ -105,7 +105,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
 
@@ -123,7 +123,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.utility.role_label", RoleLabelTwigExtension::SERVICE_NAME);
 

@@ -37,7 +37,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @param string[] $progressBars The progress bars.
      * @return string Returns the Bootstrap multiple bars.
      */
-    public function bootstrapMultipleBars(array $progressBars) {
+    public function bootstrapMultipleBars(array $progressBars): string {
         $output = implode("", $progressBars);
         return str_replace(['</div><div class="progress">'], [""], $output);
     }
@@ -48,7 +48,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "basic".
      */
-    public function bootstrapProgressBarBasicFunction(array $args = []) {
+    public function bootstrapProgressBarBasicFunction(array $args = []): string {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseBasicProgressBar($args));
     }
 
@@ -58,7 +58,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "danger".
      */
-    public function bootstrapProgressBarDangerFunction(array $args = []) {
+    public function bootstrapProgressBarDangerFunction(array $args = []): string {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseDangerProgressBar($args));
     }
 
@@ -68,7 +68,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "info".
      */
-    public function bootstrapProgressBarInfoFunction(array $args = []) {
+    public function bootstrapProgressBarInfoFunction(array $args = []): string {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseInfoProgressBar($args));
     }
 
@@ -78,7 +78,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "success".
      */
-    public function bootstrapProgressBarSuccessFunction(array $args = []) {
+    public function bootstrapProgressBarSuccessFunction(array $args = []): string {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseSuccessProgressBar($args));
     }
 
@@ -88,7 +88,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "warning".
      */
-    public function bootstrapProgressBarWarningFunction(array $args = []) {
+    public function bootstrapProgressBarWarningFunction(array $args = []): string {
         return $this->bootstrapProgressBar(ProgressBarFactory::parseWarningProgressBar($args));
     }
 
@@ -97,7 +97,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("bootstrapMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
             new TwigFilter("bsMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
@@ -109,7 +109,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),

@@ -29,7 +29,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownButtonFunction() {
+    public function testBootstrapDropdownButtonFunction(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownButtonFunctionWithClass() {
+    public function testBootstrapDropdownButtonFunctionWithClass(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownButtonFunctionWithContent() {
+    public function testBootstrapDropdownButtonFunctionWithContent(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -71,7 +71,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownButtonFunctionWithExpanded() {
+    public function testBootstrapDropdownButtonFunctionWithExpanded(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -85,7 +85,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownButtonFunctionWithId() {
+    public function testBootstrapDropdownButtonFunctionWithId(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -99,7 +99,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownButtonFunctionWithoutArguments() {
+    public function testBootstrapDropdownButtonFunctionWithoutArguments(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -113,7 +113,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownDividerFunction() {
+    public function testBootstrapDropdownDividerFunction(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -127,7 +127,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownHeaderFunction() {
+    public function testBootstrapDropdownHeaderFunction(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDropdownHeaderFunctionWithoutArguments() {
+    public function testBootstrapDropdownHeaderFunctionWithoutArguments(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -168,7 +168,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
@@ -211,7 +211,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
 

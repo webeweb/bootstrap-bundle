@@ -23,13 +23,13 @@ class GridHelper {
      * Get a CSS classname.
      *
      * @param string $size The size.
-     * @param int $value The value.
+     * @param int|null $value The value.
      * @param string $suffix The suffix.
      * @param int $min The min value.
      * @param int $max The max value.
      * @return string|null Returns the CSS classname.
      */
-    public static function getCSSClassname($size, $value, $suffix, $min = 1, $max = 12) {
+    public static function getCSSClassname(string $size, ?int $value, string $suffix, int $min = 1, int $max = 12): ?string {
 
         if ($value < $min || $max < $value) {
             return null;

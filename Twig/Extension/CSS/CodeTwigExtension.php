@@ -36,7 +36,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap basic block.
      */
-    public function bootstrapBasicBlockFunction(array $args = []) {
+    public function bootstrapBasicBlockFunction(array $args = []): string {
         return $this->bootstrapBasicBlock(ArrayHelper::get($args, "content"));
     }
 
@@ -46,7 +46,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap inline.
      */
-    public function bootstrapInlineFunction(array $args = []) {
+    public function bootstrapInlineFunction(array $args = []): string {
         return $this->bootstrapInline(ArrayHelper::get($args, "content"));
     }
 
@@ -56,7 +56,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap smaple output.
      */
-    public function bootstrapSampleOutputFunction(array $args = []) {
+    public function bootstrapSampleOutputFunction(array $args = []): string {
         return $this->bootstrapSampleOutput(ArrayHelper::get($args, "content"));
     }
 
@@ -66,7 +66,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap user input.
      */
-    public function bootstrapUserInputFunction(array $args = []) {
+    public function bootstrapUserInputFunction(array $args = []): string {
         return $this->bootstrapUserInput(ArrayHelper::get($args, "content"));
     }
 
@@ -76,7 +76,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap variable.
      */
-    public function bootstrapVariableFunction(array $args = []) {
+    public function bootstrapVariableFunction(array $args = []): string {
         return $this->bootstrapVariable(ArrayHelper::get($args, "content"));
     }
 
@@ -85,7 +85,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapBasicBlock", [$this, "bootstrapBasicBlockFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBasicBlock", [$this, "bootstrapBasicBlockFunction"], ["is_safe" => ["html"]]),

@@ -28,7 +28,7 @@ class BadgeEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumTypes() {
+    public function testEnumTypes(): void {
 
         $res = [
             BadgeInterface::BADGE_TYPE_DANGER,

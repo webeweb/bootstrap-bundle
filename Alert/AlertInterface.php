@@ -80,52 +80,52 @@ interface AlertInterface {
     /**
      * Get the content.
      *
-     * @return string Returns the content.
+     * @return string|null Returns the content.
      */
-    public function getContent();
+    public function getContent(): ?string;
 
     /**
      * Get the dismissible.
      *
-     * @return bool Returns the dismissible.
+     * @return bool|null Returns the dismissible.
      */
-    public function getDismissible();
+    public function getDismissible(): ?bool;
 
     /**
      * Get the prefix.
      *
-     * @return string Returns the prefix.
+     * @return string|null Returns the prefix.
      */
-    public function getPrefix();
+    public function getPrefix(): ?string;
 
     /**
      * Get the type.
      *
-     * @return string Returns the type.
+     * @return string|null Returns the type.
      */
-    public function getType();
+    public function getType(): ?string;
 
     /**
      * Set the content.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return AlertInterface Returns this alert.
      */
-    public function setContent($content);
+    public function setContent(?string $content): AlertInterface;
 
     /**
      * Set the dismissible.
      *
-     * @param bool $dismissible The dismissible.
+     * @param bool|null $dismissible The dismissible.
      * @return AlertInterface Returns this alert.
      */
-    public function setDismissible($dismissible);
+    public function setDismissible(?bool $dismissible): AlertInterface;
 
     /**
      * Set the type.
      *
-     * @param string $class The type.
+     * @param string|null $type The type.
      * @return AlertInterface Returns this alert.
      */
-    public function setType($class);
+    public function setType(?string $type): AlertInterface;
 }

@@ -27,7 +27,7 @@ class FOSUserBreadcrumbNodes {
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
-    public static function getGlyphiconBreadcrumbNodes() {
+    public static function getGlyphiconBreadcrumbNodes(): array {
 
         $nodes = [];
 

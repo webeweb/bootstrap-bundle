@@ -26,7 +26,7 @@ class ProgressBarFactory {
      *
      * @return ProgressBarInterface Returns the success progress bar.
      */
-    public static function newBasicProgressBar() {
+    public static function newBasicProgressBar(): ProgressBarInterface {
         return new BasicProgressBar();
     }
 
@@ -35,7 +35,7 @@ class ProgressBarFactory {
      *
      * @return ProgressBarInterface Returns the danger progress bar.
      */
-    public static function newDangerProgressBar() {
+    public static function newDangerProgressBar(): ProgressBarInterface {
         return new DangerProgressBar();
     }
 
@@ -44,7 +44,7 @@ class ProgressBarFactory {
      *
      * @return ProgressBarInterface Returns the info progress bar.
      */
-    public static function newInfoProgressBar() {
+    public static function newInfoProgressBar(): ProgressBarInterface {
         return new InfoProgressBar();
     }
 
@@ -53,7 +53,7 @@ class ProgressBarFactory {
      *
      * @return ProgressBarInterface Returns the success progress bar.
      */
-    public static function newSuccessProgressBar() {
+    public static function newSuccessProgressBar(): ProgressBarInterface {
         return new SuccessProgressBar();
     }
 
@@ -62,7 +62,7 @@ class ProgressBarFactory {
      *
      * @return ProgressBarInterface Returns the warning progress bar.
      */
-    public static function newWarningProgressBar() {
+    public static function newWarningProgressBar(): ProgressBarInterface {
         return new WarningProgressBar();
     }
 
@@ -72,7 +72,7 @@ class ProgressBarFactory {
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the basic progress bar.
      */
-    public static function parseBasicProgressBar(array $args) {
+    public static function parseBasicProgressBar(array $args): ProgressBarInterface {
         return static::parseProgressBar(static::newBasicProgressBar(), $args);
     }
 
@@ -82,7 +82,7 @@ class ProgressBarFactory {
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the danger progress bar.
      */
-    public static function parseDangerProgressBar(array $args) {
+    public static function parseDangerProgressBar(array $args): ProgressBarInterface {
         return static::parseProgressBar(static::newDangerProgressBar(), $args);
     }
 
@@ -92,7 +92,7 @@ class ProgressBarFactory {
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the info progress bar.
      */
-    public static function parseInfoProgressBar(array $args) {
+    public static function parseInfoProgressBar(array $args): ProgressBarInterface {
         return static::parseProgressBar(static::newInfoProgressBar(), $args);
     }
 
@@ -103,7 +103,7 @@ class ProgressBarFactory {
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the progress bar.
      */
-    protected static function parseProgressBar(ProgressBarInterface $progressBar, array $args) {
+    protected static function parseProgressBar(ProgressBarInterface $progressBar, array $args): ProgressBarInterface {
 
         $progressBar->setAnimated(ArrayHelper::get($args, "animated", false));
         $progressBar->setContent(ArrayHelper::get($args, "content"));
@@ -122,7 +122,7 @@ class ProgressBarFactory {
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the success progress bar.
      */
-    public static function parseSuccessProgressBar(array $args) {
+    public static function parseSuccessProgressBar(array $args): ProgressBarInterface {
         return static::parseProgressBar(static::newSuccessProgressBar(), $args);
     }
 
@@ -132,7 +132,7 @@ class ProgressBarFactory {
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the warning progress bar.
      */
-    public static function parseWarningProgressBar(array $args) {
+    public static function parseWarningProgressBar(array $args): ProgressBarInterface {
         return static::parseProgressBar(static::newWarningProgressBar(), $args);
     }
 }

@@ -22,25 +22,26 @@ trait TypographyTwigExtensionTrait {
     /**
      * Typography Twig extension.
      *
-     * @var TypographyTwigExtension
+     * @var TypographyTwigExtension|null
      */
     private $typographyTwigExtension;
 
     /**
-     * Get the typography Twig extention.
+     * Get the typography Twig extension.
      *
-     * @return TypographyTwigExtension Returns the typography Twig extension.
+     * @return TypographyTwigExtension|null Returns the typography Twig extension.
      */
-    public function getTypographyTwigExtension() {
+    public function getTypographyTwigExtension(): ?TypographyTwigExtension {
         return $this->typographyTwigExtension;
     }
 
     /**
      * Set the typography Twig extension.
      *
-     * @param TypographyTwigExtension $typographyTwigExtension The typography Twig extension.
+     * @param TypographyTwigExtension|null $typographyTwigExtension The typography Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setTypographyTwigExtension(TypographyTwigExtension $typographyTwigExtension = null) {
+    protected function setTypographyTwigExtension(?TypographyTwigExtension $typographyTwigExtension): self {
         $this->typographyTwigExtension = $typographyTwigExtension;
         return $this;
     }

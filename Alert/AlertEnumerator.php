@@ -24,7 +24,7 @@ class AlertEnumerator {
      *
      * @return string[] Returns the types enumeration.
      */
-    public static function enumTypes() {
+    public static function enumTypes(): array {
         return [
             AlertInterface::ALERT_TYPE_DANGER,
             AlertInterface::ALERT_TYPE_DARK,

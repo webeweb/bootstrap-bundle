@@ -28,7 +28,7 @@ class ProgressBarTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetProgressBarTwigExtension() {
+    public function testSetProgressBarTwigExtension(): void {
 
         // Set a Progress bar Twig extension mock.
         $progressBarTwigExtension = new ProgressBarTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class ProgressBarTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestProgressBarTwigExtensionTrait();
 

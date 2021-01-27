@@ -30,7 +30,7 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
      * @param ProgressBarInterface $progressBar The progress bar.
      * @return string Returns the Bootstrap progress bar.
      */
-    protected function bootstrapProgressBar(ProgressBarInterface $progressBar) {
+    protected function bootstrapProgressBar(ProgressBarInterface $progressBar): string {
 
         $span = static::coreHTMLElement("span", $progressBar->getValue() . "%", ["class" => "sr-only"]);
 

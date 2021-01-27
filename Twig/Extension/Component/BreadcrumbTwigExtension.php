@@ -40,7 +40,7 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
      * @param Request $request The request.
      * @return string Returns the Bootstrap breadcrumbs.
      */
-    public function bootstrapBreadcrumbsFunction(array $args = [], NavigationTree $tree, Request $request) {
+    public function bootstrapBreadcrumbsFunction(array $args = [], NavigationTree $tree, Request $request): string {
         NavigationTreeHelper::activeTree($tree, $request);
         return $this->bootstrapBreadcrumbs($tree);
     }
@@ -50,7 +50,7 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBreadcrumbs", [$this, "bootstrapBreadcrumbsFunction"], ["is_safe" => ["html"]]),

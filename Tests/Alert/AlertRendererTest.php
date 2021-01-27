@@ -34,7 +34,7 @@ class AlertRendererTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Alert mock.
@@ -50,7 +50,7 @@ class AlertRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderContent() {
+    public function testRenderContent(): void {
 
         $res = AlertRenderer::renderContent($this->alert);
         $this->assertEquals("content", $res);
@@ -61,7 +61,7 @@ class AlertRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderDismissible() {
+    public function testRenderDismissible(): void {
 
         $res = AlertRenderer::renderDismissible($this->alert);
         $this->assertEquals("alert-dismissible", $res);
@@ -72,7 +72,7 @@ class AlertRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderType() {
+    public function testRenderType(): void {
 
         $res = AlertRenderer::renderType($this->alert);
         $this->assertEquals("alert-danger", $res);

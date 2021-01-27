@@ -42,7 +42,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the Arguments mock.
@@ -57,7 +57,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDangerBadge() {
+    public function testNewDangerBadge(): void {
 
         $obj = BadgeFactory::newDangerBadge();
 
@@ -69,7 +69,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDarkBadge() {
+    public function testNewDarkBadge(): void {
 
         $obj = BadgeFactory::newDarkBadge();
 
@@ -81,7 +81,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDefaultBadge() {
+    public function testNewDefaultBadge(): void {
 
         $obj = BadgeFactory::newDefaultBadge();
 
@@ -93,7 +93,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewInfoBadge() {
+    public function testNewInfoBadge(): void {
 
         $obj = BadgeFactory::newInfoBadge();
 
@@ -105,7 +105,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewLightBadge() {
+    public function testNewLightBadge(): void {
 
         $obj = BadgeFactory::newLightBadge();
 
@@ -117,7 +117,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewPrimaryBadge() {
+    public function testNewPrimaryBadge(): void {
 
         $obj = BadgeFactory::newPrimaryBadge();
 
@@ -129,7 +129,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSecondaryBadge() {
+    public function testNewSecondaryBadge(): void {
 
         $obj = BadgeFactory::newSecondaryBadge();
 
@@ -141,7 +141,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSuccessBadge() {
+    public function testNewSuccessBadge(): void {
 
         $obj = BadgeFactory::newSuccessBadge();
 
@@ -153,7 +153,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewWarningBadge() {
+    public function testNewWarningBadge(): void {
 
         $obj = BadgeFactory::newWarningBadge();
 
@@ -165,7 +165,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDangerBadge() {
+    public function testParseDangerBadge(): void {
 
         $obj = BadgeFactory::parseDangerBadge($this->args);
 
@@ -182,7 +182,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDarkBadge() {
+    public function testParseDarkBadge(): void {
 
         $obj = BadgeFactory::parseDarkBadge($this->args);
 
@@ -199,7 +199,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDefaultBadge() {
+    public function testParseDefaultBadge(): void {
 
         $obj = BadgeFactory::parseDefaultBadge($this->args);
 
@@ -216,7 +216,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseInfoBadge() {
+    public function testParseInfoBadge(): void {
 
         $obj = BadgeFactory::parseInfoBadge($this->args);
 
@@ -233,7 +233,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseLightBadge() {
+    public function testParseLightBadge(): void {
 
         $obj = BadgeFactory::parseLightBadge($this->args);
 
@@ -250,7 +250,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParsePrimaryBadge() {
+    public function testParsePrimaryBadge(): void {
 
         $obj = BadgeFactory::parsePrimaryBadge($this->args);
 
@@ -267,7 +267,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseSecondaryBadge() {
+    public function testParseSecondaryBadge(): void {
 
         $obj = BadgeFactory::parseSecondaryBadge($this->args);
 
@@ -284,7 +284,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseSuccessBadge() {
+    public function testParseSuccessBadge(): void {
 
         $obj = BadgeFactory::parseSuccessBadge($this->args);
 
@@ -301,7 +301,7 @@ class BadgeFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseWarningBadge() {
+    public function testParseWarningBadge(): void {
 
         $obj = BadgeFactory::parseWarningBadge($this->args);
 

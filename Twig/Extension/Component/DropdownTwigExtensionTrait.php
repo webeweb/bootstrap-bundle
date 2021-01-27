@@ -22,25 +22,26 @@ trait DropdownTwigExtensionTrait {
     /**
      * Dropdown Twig extension.
      *
-     * @var DropdownTwigExtension
+     * @var DropdownTwigExtension|null
      */
     private $dropdownTwigExtension;
 
     /**
-     * Get the dropdown Twig extention.
+     * Get the dropdown Twig extension.
      *
-     * @return DropdownTwigExtension Returns the dropdown Twig extension.
+     * @return DropdownTwigExtension|null Returns the dropdown Twig extension.
      */
-    public function getDropdownTwigExtension() {
+    public function getDropdownTwigExtension(): ?DropdownTwigExtension {
         return $this->dropdownTwigExtension;
     }
 
     /**
      * Set the dropdown Twig extension.
      *
-     * @param DropdownTwigExtension $dropdownTwigExtension The dropdown Twig extension.
+     * @param DropdownTwigExtension|null $dropdownTwigExtension The dropdown Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setDropdownTwigExtension(DropdownTwigExtension $dropdownTwigExtension = null) {
+    protected function setDropdownTwigExtension(?DropdownTwigExtension $dropdownTwigExtension): self {
         $this->dropdownTwigExtension = $dropdownTwigExtension;
         return $this;
     }

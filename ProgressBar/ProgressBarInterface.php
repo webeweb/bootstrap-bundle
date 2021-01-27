@@ -52,127 +52,127 @@ interface ProgressBarInterface {
     /**
      * Get the animated.
      *
-     * @return bool Returns the animated.
+     * @return bool|null Returns the animated.
      */
-    public function getAnimated();
+    public function getAnimated(): ?bool;
 
     /**
      * Get the content.
      *
-     * @return string Returns the content.
+     * @return string|null Returns the content.
      */
-    public function getContent();
+    public function getContent(): ?string;
 
     /**
      * Get the height.
      *
-     * @return int Returns the height.
+     * @return int|null Returns the height.
      */
-    public function getHeight();
+    public function getHeight(): ?int;
 
     /**
      * Get the max.
      *
-     * @return int Returns the max.
+     * @return int|null Returns the max.
      */
-    public function getMax();
+    public function getMax(): ?int;
 
     /**
      * Get the min.
      *
-     * @return int Returns the min.
+     * @return int|null Returns the min.
      */
-    public function getMin();
+    public function getMin(): ?int;
 
     /**
      * Get the prefix.
      *
-     * @return string Returns the prefix.
+     * @return string|null Returns the prefix.
      */
-    public function getPrefix();
+    public function getPrefix(): ?string;
 
     /**
      * Get the striped.
      *
-     * @return bool Returns the striped.
+     * @return bool|null Returns the striped.
      */
-    public function getStriped();
+    public function getStriped(): ?bool;
 
     /**
      * Get the type.
      *
-     * @return string Returns the type.
+     * @return string|null Returns the type.
      */
-    public function getType();
+    public function getType(): ?string;
 
     /**
      * Get the value.
      *
-     * @return int Returns the value.
+     * @return int|null Returns the value.
      */
-    public function getValue();
+    public function getValue(): ?int;
 
     /**
      * Set the animated.
      *
-     * @param bool $animated The animated.
+     * @param bool|null $animated The animated.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setAnimated($animated);
+    public function setAnimated(?bool $animated): ProgressBarInterface;
 
     /**
      * Set the content.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setContent($content);
+    public function setContent(?string $content): ProgressBarInterface;
 
     /**
      * Set the height.
      *
-     * @param int $height The height.
+     * @param int|null $height The height.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setHeight($height);
+    public function setHeight(?int $height): ProgressBarInterface;
 
     /**
      * Set the max.
      *
-     * @param int $max The max.
+     * @param int|null $max The max.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setMax($max);
+    public function setMax(?int $max): ProgressBarInterface;
 
     /**
      * Set the min.
      *
-     * @param int $min The min.
+     * @param int|null $min The min.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setMin($min);
+    public function setMin(?int $min): ProgressBarInterface;
 
     /**
      * Set the striped.
      *
-     * @param bool $striped The striped.
+     * @param bool|null $striped The striped.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setStriped($striped);
+    public function setStriped(?bool $striped): ProgressBarInterface;
 
     /**
      * Set the type.
      *
-     * @param string $class The type.
+     * @param string|null $type The type.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setType($class);
+    public function setType(?string $type): ProgressBarInterface;
 
     /**
      * Set the value.
      *
-     * @param int $value The value.
+     * @param int|null $value The value.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setValue($value);
+    public function setValue(?int $value): ProgressBarInterface;
 }

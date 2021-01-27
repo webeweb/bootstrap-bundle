@@ -30,7 +30,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeDangerFunction() {
+    public function testBootstrapBadgeDangerFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -45,7 +45,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeDarkFunction() {
+    public function testBootstrapBadgeDarkFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -60,7 +60,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeFunction() {
+    public function testBootstrapBadgeFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -75,7 +75,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeFunctionWithoutArguments() {
+    public function testBootstrapBadgeFunctionWithoutArguments(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -90,7 +90,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeInfoFunction() {
+    public function testBootstrapBadgeInfoFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -105,7 +105,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeLightFunction() {
+    public function testBootstrapBadgeLightFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -120,7 +120,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeLinkFilter() {
+    public function testBootstrapBadgeLinkFilter(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -135,7 +135,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgePrimaryFunction() {
+    public function testBootstrapBadgePrimaryFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -150,7 +150,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeSecondaryFunction() {
+    public function testBootstrapBadgeSecondaryFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -165,7 +165,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeSuccessFunction() {
+    public function testBootstrapBadgeSuccessFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -180,7 +180,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBadgeWarningFunction() {
+    public function testBootstrapBadgeWarningFunction(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(4);
@@ -195,7 +195,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -218,7 +218,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
 
@@ -311,7 +311,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctionsWithBootstrap3() {
+    public function testGetFunctionsWithBootstrap3(): void {
 
         $obj = new BadgeTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -335,7 +335,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.badge", BadgeTwigExtension::SERVICE_NAME);
 

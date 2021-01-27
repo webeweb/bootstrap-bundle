@@ -29,7 +29,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridFunction() {
+    public function testBootstrapGridFunction(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridFunctionWithoutArguments() {
+    public function testBootstrapGridFunctionWithoutArguments(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunction() {
+    public function testBootstrapGridOffsetFunction(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -71,7 +71,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithLgOffset() {
+    public function testBootstrapGridOffsetFunctionWithLgOffset(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -85,7 +85,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithLgOffsetAndRecopy() {
+    public function testBootstrapGridOffsetFunctionWithLgOffsetAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -99,7 +99,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithLgOffsetMax() {
+    public function testBootstrapGridOffsetFunctionWithLgOffsetMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -113,7 +113,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithLgOffsetMin() {
+    public function testBootstrapGridOffsetFunctionWithLgOffsetMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -127,7 +127,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithMdOffset() {
+    public function testBootstrapGridOffsetFunctionWithMdOffset(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithMdOffsetAndRecopy() {
+    public function testBootstrapGridOffsetFunctionWithMdOffsetAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithMdOffsetMax() {
+    public function testBootstrapGridOffsetFunctionWithMdOffsetMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithMdOffsetMin() {
+    public function testBootstrapGridOffsetFunctionWithMdOffsetMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -183,7 +183,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithSmOffset() {
+    public function testBootstrapGridOffsetFunctionWithSmOffset(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -197,7 +197,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithSmOffsetAndRecopy() {
+    public function testBootstrapGridOffsetFunctionWithSmOffsetAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -211,7 +211,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithSmOffsetMax() {
+    public function testBootstrapGridOffsetFunctionWithSmOffsetMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -225,7 +225,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithSmOffsetMin() {
+    public function testBootstrapGridOffsetFunctionWithSmOffsetMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -239,7 +239,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithXsOffestAndRecopy() {
+    public function testBootstrapGridOffsetFunctionWithXsOffestAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -253,7 +253,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithXsOffset() {
+    public function testBootstrapGridOffsetFunctionWithXsOffset(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -267,7 +267,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithXsOffsetMax() {
+    public function testBootstrapGridOffsetFunctionWithXsOffsetMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -281,7 +281,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithXsOffsetMin() {
+    public function testBootstrapGridOffsetFunctionWithXsOffsetMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -295,7 +295,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridOffsetFunctionWithoutArguments() {
+    public function testBootstrapGridOffsetFunctionWithoutArguments(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -309,7 +309,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunction() {
+    public function testBootstrapGridPullFunction(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -323,7 +323,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithLgPull() {
+    public function testBootstrapGridPullFunctionWithLgPull(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -337,7 +337,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithLgPullAndRecopy() {
+    public function testBootstrapGridPullFunctionWithLgPullAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -351,7 +351,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithLgPullMax() {
+    public function testBootstrapGridPullFunctionWithLgPullMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -365,7 +365,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithLgPullMin() {
+    public function testBootstrapGridPullFunctionWithLgPullMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -379,7 +379,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithMdPull() {
+    public function testBootstrapGridPullFunctionWithMdPull(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -393,7 +393,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithMdPullAndRecopy() {
+    public function testBootstrapGridPullFunctionWithMdPullAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -407,7 +407,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithMdPullMax() {
+    public function testBootstrapGridPullFunctionWithMdPullMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -421,7 +421,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithMdPullMin() {
+    public function testBootstrapGridPullFunctionWithMdPullMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -435,7 +435,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithSmPull() {
+    public function testBootstrapGridPullFunctionWithSmPull(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -449,7 +449,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithSmPullAndRecopy() {
+    public function testBootstrapGridPullFunctionWithSmPullAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -463,7 +463,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithSmPullMax() {
+    public function testBootstrapGridPullFunctionWithSmPullMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -477,7 +477,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithSmPullMin() {
+    public function testBootstrapGridPullFunctionWithSmPullMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -491,7 +491,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithXsPull() {
+    public function testBootstrapGridPullFunctionWithXsPull(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -505,7 +505,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithXsPullAndRecopy() {
+    public function testBootstrapGridPullFunctionWithXsPullAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -519,7 +519,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithXsPullMax() {
+    public function testBootstrapGridPullFunctionWithXsPullMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -533,7 +533,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithXsPullMin() {
+    public function testBootstrapGridPullFunctionWithXsPullMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -547,7 +547,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPullFunctionWithoutArguments() {
+    public function testBootstrapGridPullFunctionWithoutArguments(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -561,7 +561,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunction() {
+    public function testBootstrapGridPushFunction(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -575,7 +575,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithLgPush() {
+    public function testBootstrapGridPushFunctionWithLgPush(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -589,7 +589,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithLgPushAndRecopy() {
+    public function testBootstrapGridPushFunctionWithLgPushAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -603,7 +603,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithLgPushMax() {
+    public function testBootstrapGridPushFunctionWithLgPushMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -617,7 +617,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithLgPushMin() {
+    public function testBootstrapGridPushFunctionWithLgPushMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -631,7 +631,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithMdPush() {
+    public function testBootstrapGridPushFunctionWithMdPush(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -645,7 +645,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithMdPushAndRecopy() {
+    public function testBootstrapGridPushFunctionWithMdPushAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -659,7 +659,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithMdPushMax() {
+    public function testBootstrapGridPushFunctionWithMdPushMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -673,7 +673,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithMdPushMin() {
+    public function testBootstrapGridPushFunctionWithMdPushMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -687,7 +687,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithSmPush() {
+    public function testBootstrapGridPushFunctionWithSmPush(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -701,7 +701,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithSmPushAndRecopy() {
+    public function testBootstrapGridPushFunctionWithSmPushAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -715,7 +715,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithSmPushMax() {
+    public function testBootstrapGridPushFunctionWithSmPushMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -729,7 +729,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithSmPushMin() {
+    public function testBootstrapGridPushFunctionWithSmPushMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -743,7 +743,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithXsPush() {
+    public function testBootstrapGridPushFunctionWithXsPush(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -757,7 +757,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithXsPushAndRecopy() {
+    public function testBootstrapGridPushFunctionWithXsPushAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -771,7 +771,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithXsPushMax() {
+    public function testBootstrapGridPushFunctionWithXsPushMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -785,7 +785,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithXsPushMin() {
+    public function testBootstrapGridPushFunctionWithXsPushMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -799,7 +799,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridPushFunctionWithoutArguments() {
+    public function testBootstrapGridPushFunctionWithoutArguments(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -813,7 +813,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunction() {
+    public function testBootstrapGridStackedFunction(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -827,7 +827,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithLg() {
+    public function testBootstrapGridStackedFunctionWithLg(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -841,7 +841,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithLgAndRecopy() {
+    public function testBootstrapGridStackedFunctionWithLgAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -855,7 +855,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithLgMax() {
+    public function testBootstrapGridStackedFunctionWithLgMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -869,7 +869,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithLgMin() {
+    public function testBootstrapGridStackedFunctionWithLgMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -883,7 +883,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithMd() {
+    public function testBootstrapGridStackedFunctionWithMd(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -897,7 +897,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithMdAndRecopy() {
+    public function testBootstrapGridStackedFunctionWithMdAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -911,7 +911,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithMdMax() {
+    public function testBootstrapGridStackedFunctionWithMdMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -925,7 +925,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithMdMin() {
+    public function testBootstrapGridStackedFunctionWithMdMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -939,7 +939,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithSm() {
+    public function testBootstrapGridStackedFunctionWithSm(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -953,7 +953,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithSmAndRecopy() {
+    public function testBootstrapGridStackedFunctionWithSmAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -967,7 +967,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithSmMax() {
+    public function testBootstrapGridStackedFunctionWithSmMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -981,7 +981,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithSmMin() {
+    public function testBootstrapGridStackedFunctionWithSmMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -995,7 +995,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithXs() {
+    public function testBootstrapGridStackedFunctionWithXs(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -1009,7 +1009,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithXsAndRecopy() {
+    public function testBootstrapGridStackedFunctionWithXsAndRecopy(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -1023,7 +1023,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithXsMax() {
+    public function testBootstrapGridStackedFunctionWithXsMax(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -1037,7 +1037,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithXsMin() {
+    public function testBootstrapGridStackedFunctionWithXsMin(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -1051,7 +1051,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGridStackedFunctionWithoutArguments() {
+    public function testBootstrapGridStackedFunctionWithoutArguments(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -1065,7 +1065,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new GridTwigExtension($this->twigEnvironment);
 
@@ -1104,7 +1104,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.css.grid", GridTwigExtension::SERVICE_NAME);
 

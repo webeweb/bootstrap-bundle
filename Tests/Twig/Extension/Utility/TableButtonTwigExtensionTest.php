@@ -35,7 +35,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Button Twig extension.
@@ -47,7 +47,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapRowButtonDefaultFunction() {
+    public function testBootstrapRowButtonDefaultFunction(): void {
 
         $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -64,7 +64,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapRowButtonDeleteFunction() {
+    public function testBootstrapRowButtonDeleteFunction(): void {
 
         $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -78,7 +78,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapRowButtonEditFunction() {
+    public function testBootstrapRowButtonEditFunction(): void {
 
         $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -92,7 +92,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -120,7 +120,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.utility.table_button", TableButtonTwigExtension::SERVICE_NAME);
 

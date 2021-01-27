@@ -28,7 +28,7 @@ class ProgressBarInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, ProgressBarInterface::PROGRESS_BAR_TYPE_DANGER);
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_INFO, ProgressBarInterface::PROGRESS_BAR_TYPE_INFO);

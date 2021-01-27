@@ -30,7 +30,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonDangerFunction() {
+    public function testBootstrapButtonDangerFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -44,7 +44,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonDangerFunctionWithoutArguments() {
+    public function testBootstrapButtonDangerFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -58,7 +58,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonDarkFunction() {
+    public function testBootstrapButtonDarkFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -72,7 +72,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonDarkFunctionWithoutArguments() {
+    public function testBootstrapButtonDarkFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -86,7 +86,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonDefaultFunction() {
+    public function testBootstrapButtonDefaultFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -100,7 +100,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonDefaultFunctionWithoutArguments() {
+    public function testBootstrapButtonDefaultFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -114,7 +114,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonInfoFunction() {
+    public function testBootstrapButtonInfoFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -128,7 +128,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonInfoFunctionWithoutArguments() {
+    public function testBootstrapButtonInfoFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -142,7 +142,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonLightFunction() {
+    public function testBootstrapButtonLightFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -156,7 +156,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonLightFunctionWithoutArguments() {
+    public function testBootstrapButtonLightFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -170,7 +170,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonLinkFilter() {
+    public function testBootstrapButtonLinkFilter(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -184,7 +184,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonLinkFilterWithoutArguments() {
+    public function testBootstrapButtonLinkFilterWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -198,7 +198,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonLinkFunction() {
+    public function testBootstrapButtonLinkFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -212,7 +212,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonPrimaryFunction() {
+    public function testBootstrapButtonPrimaryFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -226,7 +226,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonPrimaryFunctionWithoutArguments() {
+    public function testBootstrapButtonPrimaryFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -240,7 +240,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonSecondaryFunction() {
+    public function testBootstrapButtonSecondaryFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -254,7 +254,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonSecondaryFunctionWithoutArguments() {
+    public function testBootstrapButtonSecondaryFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -268,7 +268,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonSubmitFilter() {
+    public function testBootstrapButtonSubmitFilter(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -282,7 +282,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonSuccessFunction() {
+    public function testBootstrapButtonSuccessFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -296,7 +296,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonSuccessFunctionWithoutArguments() {
+    public function testBootstrapButtonSuccessFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -310,7 +310,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonWarningFunction() {
+    public function testBootstrapButtonWarningFunction(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -324,7 +324,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonWarningFunctionWithoutArguments() {
+    public function testBootstrapButtonWarningFunctionWithoutArguments(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -338,7 +338,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -371,7 +371,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
@@ -474,7 +474,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctionsWithBootstrap3() {
+    public function testGetFunctionsWithBootstrap3(): void {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -558,7 +558,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.css.button", ButtonTwigExtension::SERVICE_NAME);
 

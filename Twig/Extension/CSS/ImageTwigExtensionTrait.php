@@ -22,25 +22,26 @@ trait ImageTwigExtensionTrait {
     /**
      * Image Twig extension.
      *
-     * @var ImageTwigExtension
+     * @var ImageTwigExtension|null
      */
     private $imageTwigExtension;
 
     /**
-     * Get the image Twig extention.
+     * Get the image Twig extension.
      *
      * @return ImageTwigExtension Returns the image Twig extension.
      */
-    public function getImageTwigExtension() {
+    public function getImageTwigExtension(): ?ImageTwigExtension {
         return $this->imageTwigExtension;
     }
 
     /**
      * Set the image Twig extension.
      *
-     * @param ImageTwigExtension $imageTwigExtension The image Twig extension.
+     * @param ImageTwigExtension|null $imageTwigExtension The image Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setImageTwigExtension(ImageTwigExtension $imageTwigExtension = null) {
+    protected function setImageTwigExtension(?ImageTwigExtension $imageTwigExtension): self {
         $this->imageTwigExtension = $imageTwigExtension;
         return $this;
     }

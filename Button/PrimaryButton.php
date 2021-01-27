@@ -11,6 +11,12 @@
 
 namespace WBW\Bundle\BootstrapBundle\Button;
 
+/**
+ * Primary button.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\BootstrapBundle\Button
+ */
 class PrimaryButton extends AbstractButton {
 
     /**

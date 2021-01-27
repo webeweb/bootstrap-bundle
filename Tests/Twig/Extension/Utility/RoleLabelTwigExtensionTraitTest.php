@@ -29,7 +29,7 @@ class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRoleLabelTwigExtension() {
+    public function testSetRoleLabelTwigExtension(): void {
 
         // Set a Label Twig extension mock.
         $labelTwigExtension = new LabelTwigExtension($this->twigEnvironment);
@@ -48,7 +48,7 @@ class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestRoleLabelTwigExtensionTrait();
 

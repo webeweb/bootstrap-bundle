@@ -28,7 +28,7 @@ class ButtonTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetButtonTwigExtension() {
+    public function testSetButtonTwigExtension(): void {
 
         // Set a Button Twig extension mock.
         $buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class ButtonTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestButtonTwigExtensionTrait();
 

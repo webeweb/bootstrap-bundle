@@ -23,133 +23,135 @@ abstract class AbstractButton implements ButtonInterface {
     /**
      * Active
      *
-     * @var bool
+     * @var bool|null
      */
     private $active;
 
     /**
      * Block.
      *
-     * @var bool
+     * @var bool|null
      */
     private $block;
 
     /**
      * Content.
      *
-     * @var string
+     * @var string|null
      */
     private $content;
 
     /**
      * Disabled.
      *
-     * @var bool
+     * @var bool|null
      */
     private $disabled;
+
     /**
      * Outline.
      *
-     * @var bool
+     * @var bool|null
      */
     private $outline;
 
     /**
      * Size.
      *
-     * @var string
+     * @var string|null
      */
     private $size;
 
     /**
      * Title.
      *
-     * @var string
+     * @var string|null
      */
     private $title;
 
     /**
      * Type.
      *
-     * @var string
+     * @var string|null
      */
     private $type;
 
     /**
      * Constructor.
      *
-     * @param string type.
+     * @param string|null $type The type.
      */
-    protected function __construct($type) {
+    protected function __construct(?string $type) {
         $this->setType($type);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getActive() {
+    public function getActive(): ?bool {
         return $this->active;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getBlock() {
+    public function getBlock(): ?bool {
         return $this->block;
-    }
-    /**
-     * {@inheritDoc}
-     */
-    public function getOutline() {
-        return $this->outline;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getContent() {
+    public function getContent(): ?string {
         return $this->content;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getDisabled() {
+    public function getDisabled(): ?bool {
         return $this->disabled;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getPrefix() {
+    public function getOutline(): ?bool {
+        return $this->outline;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPrefix(): ?string {
         return "btn-";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSize() {
+    public function getSize(): ?string {
         return $this->size;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getTitle() {
+    public function getTitle(): ?string {
         return $this->title;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getType() {
+    public function getType(): ?string {
         return $this->type;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setActive($active) {
+    public function setActive(?bool $active): ButtonInterface {
         $this->active = $active;
         return $this;
     }
@@ -157,22 +159,15 @@ abstract class AbstractButton implements ButtonInterface {
     /**
      * {@inheritDoc}
      */
-    public function setBlock($block) {
+    public function setBlock(?bool $block): ButtonInterface {
         $this->block = $block;
-        return $this;
-    }
-    /**
-     * {@inheritDoc}
-     */
-    public function setOutline($outline) {
-        $this->outline = $outline;
         return $this;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setContent($content) {
+    public function setContent(?string $content): ButtonInterface {
         $this->content = $content;
         return $this;
     }
@@ -180,7 +175,7 @@ abstract class AbstractButton implements ButtonInterface {
     /**
      * {@inheritDoc}
      */
-    public function setDisabled($disabled) {
+    public function setDisabled(?bool $disabled): ButtonInterface {
         $this->disabled = $disabled;
         return $this;
     }
@@ -188,7 +183,15 @@ abstract class AbstractButton implements ButtonInterface {
     /**
      * {@inheritDoc}
      */
-    public function setSize($size) {
+    public function setOutline(?bool $outline): ButtonInterface {
+        $this->outline = $outline;
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSize(?string $size): ButtonInterface {
         $this->size = $size;
         return $this;
     }
@@ -196,7 +199,7 @@ abstract class AbstractButton implements ButtonInterface {
     /**
      * {@inheritDoc}
      */
-    public function setTitle($title) {
+    public function setTitle(?string $title): ButtonInterface {
         $this->title = $title;
         return $this;
     }
@@ -204,7 +207,7 @@ abstract class AbstractButton implements ButtonInterface {
     /**
      * {@inheritDoc}
      */
-    public function setType($type) {
+    public function setType(?string $type): ButtonInterface {
         $this->type = $type;
         return $this;
     }

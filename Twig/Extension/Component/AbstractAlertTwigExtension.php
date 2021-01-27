@@ -30,7 +30,7 @@ abstract class AbstractAlertTwigExtension extends AbstractTwigExtension {
      * @param AlertInterface $alert The alert.
      * @return string Returns the Bootstrap alert.
      */
-    protected function bootstrapAlert(AlertInterface $alert) {
+    protected function bootstrapAlert(AlertInterface $alert): string {
 
         $span   = static::coreHTMLElement("span", "&times;", ["aria-hidden" => "true"]);
         $button = static::coreHTMLElement("button", $span, ["class" => "close", "type" => "button", "data-dismiss" => "alert", "aria-label" => "Close"]);

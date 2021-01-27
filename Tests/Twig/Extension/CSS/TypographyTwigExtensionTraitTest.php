@@ -28,7 +28,7 @@ class TypographyTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTypographyTwigExtension() {
+    public function testSetTypographyTwigExtension(): void {
 
         // Set a Typography Twig extension mock.
         $typographyTwigExtension = new TypographyTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class TypographyTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestTypographyTwigExtensionTrait();
 

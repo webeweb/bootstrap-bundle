@@ -37,7 +37,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set up a Navigation tree mock.
@@ -49,7 +49,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBreadcrumbsFunction() {
+    public function testBootstrapBreadcrumbsFunction(): void {
 
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -62,7 +62,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -75,7 +75,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
@@ -98,7 +98,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
 

@@ -34,7 +34,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the Items mock.
@@ -50,7 +50,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapNavsJustified() {
+    public function testBootstrapNavsJustified(): void {
 
         $obj = new NavTwigExtension($this->twigEnvironment);
 
@@ -64,7 +64,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapNavsPills() {
+    public function testBootstrapNavsPills(): void {
 
         $obj = new NavTwigExtension($this->twigEnvironment);
 
@@ -78,7 +78,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapNavsPillsWithItems() {
+    public function testBootstrapNavsPillsWithItems(): void {
 
         $obj = new NavTwigExtension($this->twigEnvironment);
 
@@ -92,7 +92,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapNavsTabs() {
+    public function testBootstrapNavsTabs(): void {
 
         $obj = new NavTwigExtension($this->twigEnvironment);
 
@@ -106,7 +106,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new NavTwigExtension($this->twigEnvironment);
 
@@ -119,7 +119,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new NavTwigExtension($this->twigEnvironment);
 
@@ -162,7 +162,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.nav", NavTwigExtension::SERVICE_NAME);
 

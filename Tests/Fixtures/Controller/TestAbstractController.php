@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller;
 
 use WBW\Bundle\BootstrapBundle\Controller\AbstractController;
+use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 
 /**
  * Test abstract controller.
@@ -24,28 +25,28 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritDoc}
      */
-    public function notifyDanger($content) {
+    public function notifyDanger(string $content): NotificationEvent {
         return parent::notifyDanger($content);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function notifyInfo($content) {
+    public function notifyInfo(string $content): NotificationEvent {
         return parent::notifyInfo($content);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function notifySuccess($content) {
+    public function notifySuccess(string $content): NotificationEvent {
         return parent::notifySuccess($content);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function notifyWarning($content) {
+    public function notifyWarning(string $content): NotificationEvent {
         return parent::notifyWarning($content);
     }
 }

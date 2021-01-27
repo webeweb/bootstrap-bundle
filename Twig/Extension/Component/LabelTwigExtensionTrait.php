@@ -22,25 +22,26 @@ trait LabelTwigExtensionTrait {
     /**
      * Label Twig extension.
      *
-     * @var LabelTwigExtension
+     * @var LabelTwigExtension|null
      */
     private $labelTwigExtension;
 
     /**
-     * Get the label Twig extention.
+     * Get the label Twig extension.
      *
-     * @return LabelTwigExtension Returns the label Twig extension.
+     * @return LabelTwigExtension|null Returns the label Twig extension.
      */
-    public function getLabelTwigExtension() {
+    public function getLabelTwigExtension(): ?LabelTwigExtension {
         return $this->labelTwigExtension;
     }
 
     /**
      * Set the label Twig extension.
      *
-     * @param LabelTwigExtension $labelTwigExtension The label Twig extension.
+     * @param LabelTwigExtension|null $labelTwigExtension The label Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setLabelTwigExtension(LabelTwigExtension $labelTwigExtension = null) {
+    protected function setLabelTwigExtension(?LabelTwigExtension $labelTwigExtension): self {
         $this->labelTwigExtension = $labelTwigExtension;
         return $this;
     }

@@ -36,7 +36,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "justified".
      */
-    public function bootstrapNavsJustified(array $args = []) {
+    public function bootstrapNavsJustified(array $args = []): string {
         return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-justified", false);
     }
 
@@ -46,7 +46,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "pills".
      */
-    public function bootstrapNavsPills(array $args = []) {
+    public function bootstrapNavsPills(array $args = []): string {
         return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-pills", ArrayHelper::get($args, "stacked", false));
     }
 
@@ -56,7 +56,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "tabs".
      */
-    public function bootstrapNavsTabs(array $args = []) {
+    public function bootstrapNavsTabs(array $args = []): string {
         return $this->bootstrapNavs(ArrayHelper::get($args, "items", []), "nav-tabs", false);
     }
 
@@ -65,7 +65,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),

@@ -13,11 +13,11 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtensionTrait;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 
 /**
  * Role label Twig extension.
@@ -40,10 +40,10 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
+     * @param BaseTranslatorInterface $translator The translator.
      * @param LabelTwigExtension $extension The label component Twig extension.
      */
-    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator, LabelTwigExtension $extension) {
+    public function __construct(Environment $twigEnvironment, BaseTranslatorInterface $translator, LabelTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
         $this->setLabelTwigExtension($extension);
     }
@@ -56,7 +56,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      * @param string $color The color.
      * @return string Returns the label with applied color.
      */
-    private function applyColor($label, $content, $color) {
+    private function applyColor(string $label, string $content, string $color): string {
         $searches = ">" . $content;
         $replaces = ' style="background-color:' . $color . ';"' . $searches;
         return str_replace([$searches], [$replaces], $label);
@@ -65,12 +65,12 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
     /**
      * Display a Bootstrap role label.
      *
-     * @param UserInterface $user The user.
+     * @param UserInterface|null $user The user.
      * @param array $roleColors The role colors.
      * @param array $roleTrans The role translations.
      * @return string Returns the Bootstrap role label.
      */
-    public function bootstrapRoleLabelFunction(UserInterface $user = null, array $roleColors = [], array $roleTrans = []) {
+    public function bootstrapRoleLabelFunction(?UserInterface $user, array $roleColors = [], array $roleTrans = []): string {
 
         if (null === $user) {
             return "";
@@ -104,7 +104,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapRoleLabel", [$this, "bootstrapRoleLabelFunction"], ["is_safe" => ["html"]]),
         ];

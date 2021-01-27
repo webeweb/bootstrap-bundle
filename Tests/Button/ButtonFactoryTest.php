@@ -43,7 +43,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the Arguments mock.
@@ -63,7 +63,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDangerButton() {
+    public function testNewDangerButton(): void {
 
         $obj = ButtonFactory::newDangerButton();
 
@@ -75,7 +75,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDarkButton() {
+    public function testNewDarkButton(): void {
 
         $obj = ButtonFactory::newDarkButton();
 
@@ -87,7 +87,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDefaultButton() {
+    public function testNewDefaultButton(): void {
 
         $obj = ButtonFactory::newDefaultButton();
 
@@ -99,7 +99,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewInfoButton() {
+    public function testNewInfoButton(): void {
 
         $obj = ButtonFactory::newInfoButton();
 
@@ -111,7 +111,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewLightButton() {
+    public function testNewLightButton(): void {
 
         $obj = ButtonFactory::newLightButton();
 
@@ -123,7 +123,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewLinkButton() {
+    public function testNewLinkButton(): void {
 
         $obj = ButtonFactory::newLinkButton();
 
@@ -135,7 +135,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewPrimaryButton() {
+    public function testNewPrimaryButton(): void {
 
         $obj = ButtonFactory::newPrimaryButton();
 
@@ -147,7 +147,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSecondaryButton() {
+    public function testNewSecondaryButton(): void {
 
         $obj = ButtonFactory::newSecondaryButton();
 
@@ -159,7 +159,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSuccessButton() {
+    public function testNewSuccessButton(): void {
 
         $obj = ButtonFactory::newSuccessButton();
 
@@ -171,7 +171,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewWarningButton() {
+    public function testNewWarningButton(): void {
 
         $obj = ButtonFactory::newWarningButton();
 
@@ -183,7 +183,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDangerButton() {
+    public function testParseDangerButton(): void {
 
         $obj = ButtonFactory::parseDangerButton($this->args);
 
@@ -204,7 +204,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDarkButton() {
+    public function testParseDarkButton(): void {
 
         $obj = ButtonFactory::parseDarkButton($this->args);
 
@@ -225,7 +225,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDefaultButton() {
+    public function testParseDefaultButton(): void {
 
         $obj = ButtonFactory::parseDefaultButton($this->args);
 
@@ -246,7 +246,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseInfoButton() {
+    public function testParseInfoButton(): void {
 
         $obj = ButtonFactory::parseInfoButton($this->args);
 
@@ -267,7 +267,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseLightButton() {
+    public function testParseLightButton(): void {
 
         $obj = ButtonFactory::parseLightButton($this->args);
 
@@ -288,7 +288,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseLinkButton() {
+    public function testParseLinkButton(): void {
 
         $obj = ButtonFactory::parseLinkButton($this->args);
 
@@ -309,7 +309,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParsePrimaryButton() {
+    public function testParsePrimaryButton(): void {
 
         $obj = ButtonFactory::parsePrimaryButton($this->args);
 
@@ -330,7 +330,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseSecondaryButton() {
+    public function testParseSecondaryButton(): void {
 
         $obj = ButtonFactory::parseSecondaryButton($this->args);
 
@@ -351,7 +351,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseSuccessButton() {
+    public function testParseSuccessButton(): void {
 
         $obj = ButtonFactory::parseSuccessButton($this->args);
 
@@ -372,7 +372,7 @@ class ButtonFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseWarningButton() {
+    public function testParseWarningButton(): void {
 
         $obj = ButtonFactory::parseWarningButton($this->args);
 

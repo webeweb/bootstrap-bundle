@@ -22,25 +22,26 @@ trait RoleLabelTwigExtensionTrait {
     /**
      * Role label Twig extension.
      *
-     * @var RoleLabelTwigExtension
+     * @var RoleLabelTwigExtension|null
      */
     private $roleLabelTwigExtension;
 
     /**
-     * Get the role label Twig extention.
+     * Get the role label Twig extension.
      *
-     * @return RoleLabelTwigExtension Returns the role label Twig extension.
+     * @return RoleLabelTwigExtension|null Returns the role label Twig extension.
      */
-    public function getRoleLabelTwigExtension() {
+    public function getRoleLabelTwigExtension(): ?RoleLabelTwigExtension {
         return $this->roleLabelTwigExtension;
     }
 
     /**
      * Set the role label Twig extension.
      *
-     * @param RoleLabelTwigExtension $roleLabelTwigExtension The role label Twig extension.
+     * @param RoleLabelTwigExtension|null $roleLabelTwigExtension The role label Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setRoleLabelTwigExtension(RoleLabelTwigExtension $roleLabelTwigExtension = null) {
+    protected function setRoleLabelTwigExtension(?RoleLabelTwigExtension $roleLabelTwigExtension): self {
         $this->roleLabelTwigExtension = $roleLabelTwigExtension;
         return $this;
     }

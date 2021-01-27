@@ -25,10 +25,10 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap nav item.
      *
-     * @param string $item The item.
+     * @param string|null $item The item.
      * @return string Returns the Bootstrap nav item.
      */
-    private function bootstrapNav($item) {
+    private function bootstrapNav(?string $item): string {
         return static::coreHTMLElement("li", $item, ["role" => "presentation"]);
     }
 
@@ -36,11 +36,11 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
      * Displays a Bootstrap navs.
      *
      * @param array $items The items.
-     * @param string $class The class.
-     * @param bool $stacked Stacked ?
+     * @param string|null $class The class.
+     * @param bool|null $stacked Stacked ?
      * @return string Returns the Bootstrap nav.
      */
-    protected function bootstrapNavs(array $items, $class, $stacked) {
+    protected function bootstrapNavs(array $items, ?string $class, ?bool $stacked): string {
 
         $attributes = [];
 

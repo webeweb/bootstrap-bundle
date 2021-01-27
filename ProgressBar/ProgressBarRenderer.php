@@ -25,7 +25,7 @@ class ProgressBarRenderer {
      * @param ProgressBarInterface $progressBar The progress bar.
      * @return string|null Returns the rendered animated.
      */
-    public static function renderAnimated(ProgressBarInterface $progressBar) {
+    public static function renderAnimated(ProgressBarInterface $progressBar): ?string {
         return true === $progressBar->getAnimated() ? "active" : null;
     }
 
@@ -36,7 +36,7 @@ class ProgressBarRenderer {
      * @param string $default The default content.
      * @return string|null Returns the rendered content.
      */
-    public static function renderContent(ProgressBarInterface $progressBar, $default) {
+    public static function renderContent(ProgressBarInterface $progressBar, string $default): ?string {
         return null !== $progressBar->getContent() ? $progressBar->getContent() : $default;
     }
 
@@ -46,7 +46,7 @@ class ProgressBarRenderer {
      * @param ProgressBarInterface $progressBar The progress bar.
      * @return string|null Returns the rendered striped.
      */
-    public static function renderStriped(ProgressBarInterface $progressBar) {
+    public static function renderStriped(ProgressBarInterface $progressBar): ?string {
         return true === $progressBar->getStriped() ? "progress-bar-striped" : null;
     }
 
@@ -56,7 +56,7 @@ class ProgressBarRenderer {
      * @param ProgressBarInterface $progressBar The progress bar.
      * @return string|null Returns the rendered style.
      */
-    public static function renderStyle(ProgressBarInterface $progressBar) {
+    public static function renderStyle(ProgressBarInterface $progressBar): ?string {
         return null !== $progressBar->getValue() ? "width: " . $progressBar->getValue() . "%;" : null;
     }
 
@@ -66,7 +66,7 @@ class ProgressBarRenderer {
      * @param ProgressBarInterface $progressBar The progress bar.
      * @return string|null Returns the rendered type.
      */
-    public static function renderType(ProgressBarInterface $progressBar) {
+    public static function renderType(ProgressBarInterface $progressBar): ?string {
         return null !== $progressBar->getType() ? $progressBar->getPrefix() . $progressBar->getType() : null;
     }
 }

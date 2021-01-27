@@ -29,7 +29,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelDangerFunction() {
+    public function testBootstrapLabelDangerFunction(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -44,7 +44,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelDangerFunctionWithoutArguments() {
+    public function testBootstrapLabelDangerFunctionWithoutArguments(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -58,7 +58,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelDefaultFunction() {
+    public function testBootstrapLabelDefaultFunction(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -72,7 +72,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelDefaultFunctionWithoutArguments() {
+    public function testBootstrapLabelDefaultFunctionWithoutArguments(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -86,7 +86,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelInfoFunction() {
+    public function testBootstrapLabelInfoFunction(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -100,7 +100,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelInfoFunctionWithoutArguments() {
+    public function testBootstrapLabelInfoFunctionWithoutArguments(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -114,7 +114,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelPrimaryFunction() {
+    public function testBootstrapLabelPrimaryFunction(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -128,7 +128,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelPrimaryFunctionWithoutArguments() {
+    public function testBootstrapLabelPrimaryFunctionWithoutArguments(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -142,7 +142,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelSuccessFunction() {
+    public function testBootstrapLabelSuccessFunction(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -156,7 +156,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelSuccessFunctionWithoutArguments() {
+    public function testBootstrapLabelSuccessFunctionWithoutArguments(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -170,7 +170,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelWarningFunction() {
+    public function testBootstrapLabelWarningFunction(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -184,7 +184,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapLabelWarningFunctionWithoutArguments() {
+    public function testBootstrapLabelWarningFunctionWithoutArguments(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -198,7 +198,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -211,7 +211,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
 
@@ -224,7 +224,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctionsWithBootstrap3() {
+    public function testGetFunctionsWithBootstrap3(): void {
 
         $obj = new LabelTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -298,7 +298,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.label", LabelTwigExtension::SERVICE_NAME);
 

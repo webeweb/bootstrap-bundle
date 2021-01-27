@@ -24,7 +24,7 @@ class BadgeEnumerator {
      *
      * @return string[] Returns the types enumeration.
      */
-    public static function enumTypes() {
+    public static function enumTypes(): array {
         return [
             BadgeInterface::BADGE_TYPE_DANGER,
             BadgeInterface::BADGE_TYPE_DARK,

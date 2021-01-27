@@ -27,7 +27,7 @@ class AbstractBadgeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetContent() {
+    public function testSetContent(): void {
 
         $obj = new TestBadge("danger");
 
@@ -40,7 +40,7 @@ class AbstractBadgeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPill() {
+    public function testSetPill(): void {
 
         $obj = new TestBadge("danger");
 
@@ -53,7 +53,7 @@ class AbstractBadgeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestBadge("danger");
 

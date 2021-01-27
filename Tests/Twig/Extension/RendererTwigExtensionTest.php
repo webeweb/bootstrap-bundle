@@ -27,7 +27,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new RendererTwigExtension($this->twigEnvironment);
         $res = $obj->getFilters();
@@ -39,7 +39,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithDefault() {
+    public function testRenderIconWithDefault(): void {
 
         $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "home"));
@@ -50,7 +50,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithGlyphicon() {
+    public function testRenderIconWithGlyphicon(): void {
 
         $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "b:home"));
@@ -62,7 +62,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithOther() {
+    public function testRenderIconWithOther(): void {
 
         $res = '<i class="fa fa-home"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "fa:home"));
@@ -73,7 +73,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithoutArguments() {
+    public function testRenderIconWithoutArguments(): void {
 
         $res = "";
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
@@ -84,7 +84,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
 

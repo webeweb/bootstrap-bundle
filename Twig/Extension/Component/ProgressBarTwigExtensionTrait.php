@@ -22,25 +22,26 @@ trait ProgressBarTwigExtensionTrait {
     /**
      * Progress bar Twig extension.
      *
-     * @var ProgressBarTwigExtension
+     * @var ProgressBarTwigExtension|null
      */
     private $progressBarTwigExtension;
 
     /**
-     * Get the progress bar Twig extention.
+     * Get the progress bar Twig extension.
      *
-     * @return ProgressBarTwigExtension Returns the progress bar Twig extension.
+     * @return ProgressBarTwigExtension|null Returns the progress bar Twig extension.
      */
-    public function getProgressBarTwigExtension() {
+    public function getProgressBarTwigExtension(): ?ProgressBarTwigExtension {
         return $this->progressBarTwigExtension;
     }
 
     /**
      * Set the progress bar Twig extension.
      *
-     * @param ProgressBarTwigExtension $progressBarTwigExtension The progress bar Twig extension.
+     * @param ProgressBarTwigExtension|null $progressBarTwigExtension The progress bar Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setProgressBarTwigExtension(ProgressBarTwigExtension $progressBarTwigExtension = null) {
+    protected function setProgressBarTwigExtension(?ProgressBarTwigExtension $progressBarTwigExtension): self {
         $this->progressBarTwigExtension = $progressBarTwigExtension;
         return $this;
     }

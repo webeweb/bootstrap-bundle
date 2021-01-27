@@ -22,25 +22,26 @@ trait GlyphiconTwigExtensionTrait {
     /**
      * Glyphicon Twig extension.
      *
-     * @var GlyphiconTwigExtension
+     * @var GlyphiconTwigExtension|null
      */
     private $glyphiconTwigExtension;
 
     /**
-     * Get the glyphicon Twig extention.
+     * Get the glyphicon Twig extension.
      *
      * @return GlyphiconTwigExtension Returns the glyphicon Twig extension.
      */
-    public function getGlyphiconTwigExtension() {
+    public function getGlyphiconTwigExtension(): ?GlyphiconTwigExtension {
         return $this->glyphiconTwigExtension;
     }
 
     /**
      * Set the glyphicon Twig extension.
      *
-     * @param GlyphiconTwigExtension $glyphiconTwigExtension The glyphicon Twig extension.
+     * @param GlyphiconTwigExtension|null $glyphiconTwigExtension The glyphicon Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setGlyphiconTwigExtension(GlyphiconTwigExtension $glyphiconTwigExtension = null) {
+    protected function setGlyphiconTwigExtension(?GlyphiconTwigExtension $glyphiconTwigExtension): self {
         $this->glyphiconTwigExtension = $glyphiconTwigExtension;
         return $this;
     }

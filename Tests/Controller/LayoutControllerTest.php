@@ -23,11 +23,20 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
+     * {@inheritDoc}
+     */
+    public static function setUpBeforeClass(): void {
+        parent::setUpBeforeClass();
+
+        static::$kernel->getContainer()->set("swiftmailer.mailer", null);
+    }
+
+    /**
      * Tests the blankAction() method.
      *
      * @return void
      */
-    public function testBlankAction() {
+    public function testBlankAction(): void {
 
         $client = $this->client;
 
@@ -41,7 +50,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testFlashbagAction() {
+    public function testFlashbagAction(): void {
 
         $client = $this->client;
 
@@ -59,7 +68,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testJavascriptsAction() {
+    public function testJavascriptsAction(): void {
 
         $client = $this->client;
 
@@ -73,7 +82,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testLayout3Action() {
+    public function testLayout3Action(): void {
 
         $client = $this->client;
 
@@ -91,7 +100,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testLayout4Action() {
+    public function testLayout4Action(): void {
 
         $client = $this->client;
 
@@ -109,7 +118,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testLayoutAction() {
+    public function testLayoutAction(): void {
 
         $client = $this->client;
 
@@ -127,7 +136,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testStylesheetsAction() {
+    public function testStylesheetsAction(): void {
 
         $client = $this->client;
 
@@ -141,7 +150,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testTwigConsoleAction() {
+    public function testTwigConsoleAction(): void {
 
         $client = $this->client;
 
@@ -155,7 +164,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testWorkInProgressAction() {
+    public function testWorkInProgressAction(): void {
 
         $client = $this->client;
 

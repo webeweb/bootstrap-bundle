@@ -22,25 +22,26 @@ trait BreadcrumbTwigExtensionTrait {
     /**
      * Breadcrumb Twig extension.
      *
-     * @var BreadcrumbTwigExtension
+     * @var BreadcrumbTwigExtension|null
      */
     private $breadcrumbTwigExtension;
 
     /**
-     * Get the breadcrumb Twig extention.
+     * Get the breadcrumb Twig extension.
      *
-     * @return BreadcrumbTwigExtension Returns the breadcrumb Twig extension.
+     * @return BreadcrumbTwigExtension|null Returns the breadcrumb Twig extension.
      */
-    public function getBreadcrumbTwigExtension() {
+    public function getBreadcrumbTwigExtension(): ?BreadcrumbTwigExtension {
         return $this->breadcrumbTwigExtension;
     }
 
     /**
      * Set the breadcrumb Twig extension.
      *
-     * @param BreadcrumbTwigExtension $breadcrumbTwigExtension The breadcrumb Twig extension.
+     * @param BreadcrumbTwigExtension|null $breadcrumbTwigExtension The breadcrumb Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setBreadcrumbTwigExtension(BreadcrumbTwigExtension $breadcrumbTwigExtension = null) {
+    protected function setBreadcrumbTwigExtension(?BreadcrumbTwigExtension $breadcrumbTwigExtension): self {
         $this->breadcrumbTwigExtension = $breadcrumbTwigExtension;
         return $this;
     }

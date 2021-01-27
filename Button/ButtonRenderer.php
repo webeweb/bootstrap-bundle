@@ -25,7 +25,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string|null Returns the rendered active.
      */
-    public static function renderActive(ButtonInterface $button) {
+    public static function renderActive(ButtonInterface $button): ?string {
         return true === $button->getActive() ? "active" : null;
     }
 
@@ -35,7 +35,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string|null Returns the rendered block.
      */
-    public static function renderBlock(ButtonInterface $button) {
+    public static function renderBlock(ButtonInterface $button): ?string {
         return true === $button->getBlock() ? "btn-block" : null;
     }
 
@@ -45,7 +45,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string Returns the rendered block.
      */
-    public static function renderContent(ButtonInterface $button) {
+    public static function renderContent(ButtonInterface $button): ?string {
         return null !== $button->getContent() ? $button->getContent() : "";
     }
 
@@ -55,7 +55,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string|null Returns the rendered data placement.
      */
-    public static function renderDataPlacement(ButtonInterface $button) {
+    public static function renderDataPlacement(ButtonInterface $button): ?string {
         return null !== $button->getTitle() ? "top" : null;
     }
 
@@ -65,7 +65,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string|null Returns the rendered data toggle.
      */
-    public static function renderDataToggle(ButtonInterface $button) {
+    public static function renderDataToggle(ButtonInterface $button): ?string {
         return null !== $button->getTitle() ? "tooltip" : null;
     }
 
@@ -75,7 +75,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string|null Returns the rendered disabled.
      */
-    public static function renderDisabled(ButtonInterface $button) {
+    public static function renderDisabled(ButtonInterface $button): ?string {
         return true === $button->getDisabled() ? "disabled" : null;
     }
 
@@ -85,7 +85,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string|null Returns the rendered size.
      */
-    public static function renderSize(ButtonInterface $button) {
+    public static function renderSize(ButtonInterface $button): ?string {
         return null !== $button->getSize() ? "btn-" . $button->getSize() : null;
     }
 
@@ -93,9 +93,9 @@ class ButtonRenderer {
      * Render a title.
      *
      * @param ButtonInterface $button The button.
-     * @return string Returns the rendered title.
+     * @return string|null Returns the rendered title.
      */
-    public static function renderTitle(ButtonInterface $button) {
+    public static function renderTitle(ButtonInterface $button): ?string {
         return $button->getTitle();
     }
 
@@ -105,7 +105,7 @@ class ButtonRenderer {
      * @param ButtonInterface $button The button.
      * @return string|null Returns the rendered type.
      */
-    public static function renderType(ButtonInterface $button) {
+    public static function renderType(ButtonInterface $button): ?string {
         $prefix = $button->getPrefix() . (true === $button->getOutline() ? "outline-" : "");
         return null !== $button->getType() ? $prefix . $button->getType() : null;
     }

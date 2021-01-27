@@ -28,7 +28,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetAssetsRelativeDirectory() {
+    public function testGetAssetsRelativeDirectory(): void {
 
         $obj = new WBWBootstrapBundle();
 
@@ -40,7 +40,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetContainerExtension() {
+    public function testGetContainerExtension(): void {
 
         $obj = new WBWBootstrapBundle();
 

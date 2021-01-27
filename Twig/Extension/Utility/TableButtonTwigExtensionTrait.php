@@ -22,25 +22,26 @@ trait TableButtonTwigExtensionTrait {
     /**
      * Table button Twig extension.
      *
-     * @var TableButtonTwigExtension
+     * @var TableButtonTwigExtension|null
      */
     private $tableButtonTwigExtension;
 
     /**
-     * Get the table button Twig extention.
+     * Get the table button Twig extension.
      *
-     * @return TableButtonTwigExtension Returns the table button Twig extension.
+     * @return TableButtonTwigExtension|null Returns the table button Twig extension.
      */
-    public function getTableButtonTwigExtension() {
+    public function getTableButtonTwigExtension(): ?TableButtonTwigExtension {
         return $this->tableButtonTwigExtension;
     }
 
     /**
      * Set the table button Twig extension.
      *
-     * @param TableButtonTwigExtension $tableButtonTwigExtension The table button Twig extension.
+     * @param TableButtonTwigExtension|null $tableButtonTwigExtension The table button Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setTableButtonTwigExtension(TableButtonTwigExtension $tableButtonTwigExtension = null) {
+    protected function setTableButtonTwigExtension(?TableButtonTwigExtension $tableButtonTwigExtension): self {
         $this->tableButtonTwigExtension = $tableButtonTwigExtension;
         return $this;
     }

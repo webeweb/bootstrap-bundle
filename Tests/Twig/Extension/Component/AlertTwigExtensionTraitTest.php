@@ -28,7 +28,7 @@ class AlertTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAlertTwigExtension() {
+    public function testSetAlertTwigExtension(): void {
 
         // Set an Alert Twig extension mock.
         $alertTwigExtension = new AlertTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class AlertTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestAlertTwigExtensionTrait();
 

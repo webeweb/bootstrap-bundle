@@ -28,7 +28,7 @@ class CodeTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCodeTwigExtension() {
+    public function testSetCodeTwigExtension(): void {
 
         // Set a Code Twig extension mock.
         $codeTwigExtension = new CodeTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class CodeTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestCodeTwigExtensionTrait();
 

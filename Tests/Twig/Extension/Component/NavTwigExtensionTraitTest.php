@@ -28,7 +28,7 @@ class NavTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetNavTwigExtension() {
+    public function testSetNavTwigExtension(): void {
 
         // Set a Nav Twig extension mock.
         $navTwigExtension = new NavTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class NavTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestNavTwigExtensionTrait();
 

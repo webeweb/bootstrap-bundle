@@ -29,7 +29,7 @@ class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetGlyphiconBreadcrumbNodes() {
+    public function testGetGlyphiconBreadcrumbNodes(): void {
 
         $res = FOSUserBreadcrumbNodes::getGlyphiconBreadcrumbNodes();
         $this->assertCount(3, $res);

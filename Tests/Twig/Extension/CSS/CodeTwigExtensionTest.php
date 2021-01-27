@@ -29,7 +29,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBasicBlockFunction() {
+    public function testBootstrapBasicBlockFunction(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBasicBlockFunctionWithoutArguments() {
+    public function testBootstrapBasicBlockFunctionWithoutArguments(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapInlineFunction() {
+    public function testBootstrapInlineFunction(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -71,7 +71,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapInlineFunctionWithoutArguments() {
+    public function testBootstrapInlineFunctionWithoutArguments(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -85,7 +85,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapSampleOutputFunction() {
+    public function testBootstrapSampleOutputFunction(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -99,7 +99,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapSampleOutputFunctionWithoutArguments() {
+    public function testBootstrapSampleOutputFunctionWithoutArguments(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -113,7 +113,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapUserInputFunction() {
+    public function testBootstrapUserInputFunction(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -127,7 +127,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapUserInputFunctionWithoutArguments() {
+    public function testBootstrapUserInputFunctionWithoutArguments(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapVariableFunction() {
+    public function testBootstrapVariableFunction(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapVariableFunctionWithoutArguments() {
+    public function testBootstrapVariableFunctionWithoutArguments(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new CodeTwigExtension($this->twigEnvironment);
 
@@ -232,7 +232,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.css.code", CodeTwigExtension::SERVICE_NAME);
 

@@ -26,7 +26,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the danger alert.
      */
-    public static function newDangerAlert() {
+    public static function newDangerAlert(): AlertInterface {
         return new DangerAlert();
     }
 
@@ -35,7 +35,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the default alert.
      */
-    public static function newDarkAlert() {
+    public static function newDarkAlert(): AlertInterface {
         return new DarkAlert();
     }
 
@@ -44,7 +44,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the info alert.
      */
-    public static function newInfoAlert() {
+    public static function newInfoAlert(): AlertInterface {
         return new InfoAlert();
     }
 
@@ -53,7 +53,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the light alert.
      */
-    public static function newLightAlert() {
+    public static function newLightAlert(): AlertInterface {
         return new LightAlert();
     }
 
@@ -62,7 +62,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the primary alert.
      */
-    public static function newPrimaryAlert() {
+    public static function newPrimaryAlert(): AlertInterface {
         return new PrimaryAlert();
     }
 
@@ -71,7 +71,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the secondary alert.
      */
-    public static function newSecondaryAlert() {
+    public static function newSecondaryAlert(): AlertInterface {
         return new SecondaryAlert();
     }
 
@@ -80,7 +80,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the success alert.
      */
-    public static function newSuccessAlert() {
+    public static function newSuccessAlert(): AlertInterface {
         return new SuccessAlert();
     }
 
@@ -89,7 +89,7 @@ class AlertFactory {
      *
      * @return AlertInterface Returns the warning alert.
      */
-    public static function newWarningAlert() {
+    public static function newWarningAlert(): AlertInterface {
         return new WarningAlert();
     }
 
@@ -100,7 +100,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the alert.
      */
-    protected static function parseAlert(AlertInterface $alert, array $args) {
+    protected static function parseAlert(AlertInterface $alert, array $args): AlertInterface {
 
         $alert->setContent(ArrayHelper::get($args, "content"));
         $alert->setDismissible(ArrayHelper::get($args, "dismissible", false));
@@ -114,7 +114,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the danger alert.
      */
-    public static function parseDangerAlert(array $args) {
+    public static function parseDangerAlert(array $args): AlertInterface {
         return static::parseAlert(static::newDangerAlert(), $args);
     }
 
@@ -124,7 +124,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the dark alert.
      */
-    public static function parseDarkAlert(array $args) {
+    public static function parseDarkAlert(array $args): AlertInterface {
         return static::parseAlert(static::newDarkAlert(), $args);
     }
 
@@ -134,7 +134,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the info alert.
      */
-    public static function parseInfoAlert(array $args) {
+    public static function parseInfoAlert(array $args): AlertInterface {
         return static::parseAlert(static::newInfoAlert(), $args);
     }
 
@@ -144,7 +144,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the light alert.
      */
-    public static function parseLightAlert(array $args) {
+    public static function parseLightAlert(array $args): AlertInterface {
         return static::parseAlert(static::newLightAlert(), $args);
     }
 
@@ -154,7 +154,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the primary alert.
      */
-    public static function parsePrimaryAlert(array $args) {
+    public static function parsePrimaryAlert(array $args): AlertInterface {
         return static::parseAlert(static::newPrimaryAlert(), $args);
     }
 
@@ -164,7 +164,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the secondary alert.
      */
-    public static function parseSecondaryAlert(array $args) {
+    public static function parseSecondaryAlert(array $args): AlertInterface {
         return static::parseAlert(static::newSecondaryAlert(), $args);
     }
 
@@ -174,7 +174,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the success alert.
      */
-    public static function parseSuccessAlert(array $args) {
+    public static function parseSuccessAlert(array $args): AlertInterface {
         return static::parseAlert(static::newSuccessAlert(), $args);
     }
 
@@ -184,7 +184,7 @@ class AlertFactory {
      * @param array $args The arguments.
      * @return AlertInterface Returns the warning alert.
      */
-    public static function parseWarningAlert(array $args) {
+    public static function parseWarningAlert(array $args): AlertInterface {
         return static::parseAlert(static::newWarningAlert(), $args);
     }
 }

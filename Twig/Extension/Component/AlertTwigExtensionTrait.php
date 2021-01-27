@@ -22,25 +22,26 @@ trait AlertTwigExtensionTrait {
     /**
      * Alert Twig extension.
      *
-     * @var AlertTwigExtension
+     * @var AlertTwigExtension|null
      */
     private $alertTwigExtension;
 
     /**
-     * Get the alert Twig extention.
+     * Get the alert Twig extension.
      *
-     * @return AlertTwigExtension Returns the alert Twig extension.
+     * @return AlertTwigExtension|null Returns the alert Twig extension.
      */
-    public function getAlertTwigExtension() {
+    public function getAlertTwigExtension(): ?AlertTwigExtension {
         return $this->alertTwigExtension;
     }
 
     /**
      * Set the alert Twig extension.
      *
-     * @param AlertTwigExtension $alertTwigExtension The alert Twig extension.
+     * @param AlertTwigExtension|null $alertTwigExtension The alert Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setAlertTwigExtension(AlertTwigExtension $alertTwigExtension = null) {
+    protected function setAlertTwigExtension(?AlertTwigExtension $alertTwigExtension): self {
         $this->alertTwigExtension = $alertTwigExtension;
         return $this;
     }

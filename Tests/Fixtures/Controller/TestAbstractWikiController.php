@@ -24,35 +24,35 @@ class TestAbstractWikiController extends AbstractWikiController {
     /**
      * {@inheritDoc}
      */
-    public function getSampleUser() {
+    public function getSampleUser(): void {
         return parent::getSampleUser();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSampleUserRoleColors() {
+    public function getSampleUserRoleColors(): void {
         return parent::getSampleUserRoleColors();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSampleUserRoleTranslations() {
+    public function getSampleUserRoleTranslations(): void {
         return parent::getSampleUserRoleTranslations();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSyntaxHighlighterConfig() {
+    public function getSyntaxHighlighterConfig(): void {
         return parent::getSyntaxHighlighterConfig();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSyntaxHighlighterDefaults() {
+    public function getSyntaxHighlighterDefaults(): void {
         return parent::getSyntaxHighlighterDefaults();
     }
 }

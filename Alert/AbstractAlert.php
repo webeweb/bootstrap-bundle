@@ -23,65 +23,65 @@ abstract class AbstractAlert implements AlertInterface {
     /**
      * Content.
      *
-     * @var string
+     * @var string|null
      */
     private $content;
 
     /**
      * Dismissible.
      *
-     * @var bool
+     * @var bool|null
      */
     private $dismissible;
 
     /**
      * Type.
      *
-     * @var string
+     * @var string|null
      */
     private $type;
 
     /**
      * Constructor.
      *
-     * @param string type.
+     * @param string|null type.
      */
-    protected function __construct($type) {
+    protected function __construct(?string $type) {
         $this->setType($type);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getContent() {
+    public function getContent(): ?string {
         return $this->content;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getDismissible() {
+    public function getDismissible(): ?bool {
         return $this->dismissible;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getPrefix() {
+    public function getPrefix(): ?string {
         return "alert-";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getType() {
+    public function getType(): ?string {
         return $this->type;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setContent($content) {
+    public function setContent(?string $content): AlertInterface {
         $this->content = $content;
         return $this;
     }
@@ -89,7 +89,7 @@ abstract class AbstractAlert implements AlertInterface {
     /**
      * {@inheritDoc}
      */
-    public function setDismissible($dismissible) {
+    public function setDismissible(?bool $dismissible): ALertInterface {
         $this->dismissible = $dismissible;
         return $this;
     }
@@ -97,7 +97,7 @@ abstract class AbstractAlert implements AlertInterface {
     /**
      * {@inheritDoc}
      */
-    public function setType($type) {
+    public function setType(?string $type): AlertInterface {
         $this->type = $type;
         return $this;
     }

@@ -27,7 +27,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithBadSize() {
+    public function testGetCSSClassnameWithBadSize(): void {
 
         $this->assertNull(GridHelper::getCSSClassname("", 6, ""));
     }
@@ -37,7 +37,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithBadSuffix() {
+    public function testGetCSSClassnameWithBadSuffix(): void {
 
         $this->assertNull(GridHelper::getCSSClassname("lg", 6, "suffix"));
     }
@@ -47,7 +47,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithBadValue() {
+    public function testGetCSSClassnameWithBadValue(): void {
 
         $this->assertNull(GridHelper::getCSSClassname("lg", 0, ""));
         $this->assertNull(GridHelper::getCSSClassname("lg", 13, ""));
@@ -58,7 +58,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithSizeLg() {
+    public function testGetCSSClassnameWithSizeLg(): void {
 
         $res = "col-lg-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("lg", 6, ""));
@@ -69,7 +69,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithSizeMd() {
+    public function testGetCSSClassnameWithSizeMd(): void {
 
         $res = "col-md-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("md", 6, ""));
@@ -80,7 +80,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithSizeSm() {
+    public function testGetCSSClassnameWithSizeSm(): void {
 
         $res = "col-sm-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("sm", 6, ""));
@@ -91,7 +91,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithSizeXs() {
+    public function testGetCSSClassnameWithSizeXs(): void {
 
         $res = "col-xs-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("xs", 6, ""));
@@ -102,7 +102,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithSuffixOffset() {
+    public function testGetCSSClassnameWithSuffixOffset(): void {
 
         $res = "col-lg-offset-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("lg", 6, "offset"));
@@ -113,7 +113,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithSuffixPull() {
+    public function testGetCSSClassnameWithSuffixPull(): void {
 
         $res = "col-lg-pull-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("lg", 6, "pull"));
@@ -124,7 +124,7 @@ class GridHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCSSClassnameWithSuffixPush() {
+    public function testGetCSSClassnameWithSuffixPush(): void {
 
         $res = "col-lg-push-6";
         $this->assertEquals($res, GridHelper::getCSSClassname("lg", 6, "push"));

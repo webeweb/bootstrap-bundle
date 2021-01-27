@@ -30,7 +30,7 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
      * @param BadgeInterface $badge The badge.
      * @return string Returns the Bootstrap badge.
      */
-    protected function bootstrapBadge(BadgeInterface $badge) {
+    protected function bootstrapBadge(BadgeInterface $badge): string {
 
         $attributes = [];
 

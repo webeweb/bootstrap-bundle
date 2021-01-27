@@ -29,10 +29,10 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
      * Displays a Bootstrap button.
      *
      * @param ButtonInterface $button The button.
-     * @param string $icon The icon.
+     * @param string|null $icon The icon.
      * @return string Returns the Bootstrap button.
      */
-    protected function bootstrapButton(ButtonInterface $button, $icon) {
+    protected function bootstrapButton(ButtonInterface $button, ?string $icon): string {
 
         $attributes = [];
 

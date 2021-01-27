@@ -22,8 +22,8 @@ class TestKernel extends AbstractKernel {
     /**
      * {@inheritDoc}
      */
-    public function registerBundles() {
-        $bundles = [
+    public function registerBundles(): array {
+        return [
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
@@ -32,6 +32,5 @@ class TestKernel extends AbstractKernel {
             new WBW\Bundle\BootstrapBundle\WBWBootstrapBundle(),
             new WBW\Bundle\CoreBundle\WBWCoreBundle(),
         ];
-        return $bundles;
     }
 }

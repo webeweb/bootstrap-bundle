@@ -22,25 +22,26 @@ trait GridTwigExtensionTrait {
     /**
      * Grid Twig extension.
      *
-     * @var GridTwigExtension
+     * @var GridTwigExtension|null
      */
     private $gridTwigExtension;
 
     /**
-     * Get the grid Twig extention.
+     * Get the grid Twig extension.
      *
-     * @return GridTwigExtension Returns the grid Twig extension.
+     * @return GridTwigExtension|null Returns the grid Twig extension.
      */
-    public function getGridTwigExtension() {
+    public function getGridTwigExtension(): ?GridTwigExtension {
         return $this->gridTwigExtension;
     }
 
     /**
      * Set the grid Twig extension.
      *
-     * @param GridTwigExtension $gridTwigExtension The grid Twig extension.
+     * @param GridTwigExtension|null $gridTwigExtension The grid Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setGridTwigExtension(GridTwigExtension $gridTwigExtension = null) {
+    protected function setGridTwigExtension(?GridTwigExtension $gridTwigExtension): self {
         $this->gridTwigExtension = $gridTwigExtension;
         return $this;
     }

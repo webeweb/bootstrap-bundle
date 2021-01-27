@@ -29,7 +29,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBoldFunction() {
+    public function testBootstrapBoldFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapBoldFunctionWithoutArguments() {
+    public function testBootstrapBoldFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDeletedFunction() {
+    public function testBootstrapDeletedFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -71,7 +71,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapDeletedFunctionWithoutArguments() {
+    public function testBootstrapDeletedFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -85,7 +85,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapEmFunction() {
+    public function testBootstrapEmFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -99,7 +99,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapEmFunctionWithoutArguments() {
+    public function testBootstrapEmFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -113,7 +113,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading1Function() {
+    public function testBootstrapHeading1Function(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -127,7 +127,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading1FunctionWithClass() {
+    public function testBootstrapHeading1FunctionWithClass(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading1FunctionWithContent() {
+    public function testBootstrapHeading1FunctionWithContent(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading1FunctionWithDescription() {
+    public function testBootstrapHeading1FunctionWithDescription(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading1FunctionWithoutArguments() {
+    public function testBootstrapHeading1FunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -183,7 +183,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading2Function() {
+    public function testBootstrapHeading2Function(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -197,7 +197,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading2FunctionWithClass() {
+    public function testBootstrapHeading2FunctionWithClass(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -211,7 +211,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading2FunctionWithContent() {
+    public function testBootstrapHeading2FunctionWithContent(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -225,7 +225,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading2FunctionWithDescription() {
+    public function testBootstrapHeading2FunctionWithDescription(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -239,7 +239,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading2FunctionWithoutArguments() {
+    public function testBootstrapHeading2FunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -253,7 +253,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading3Function() {
+    public function testBootstrapHeading3Function(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -267,7 +267,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading3FunctionWithClass() {
+    public function testBootstrapHeading3FunctionWithClass(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -281,7 +281,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading3FunctionWithContent() {
+    public function testBootstrapHeading3FunctionWithContent(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -295,7 +295,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading3FunctionWithDescription() {
+    public function testBootstrapHeading3FunctionWithDescription(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -309,7 +309,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading3FunctionWithoutArguments() {
+    public function testBootstrapHeading3FunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -323,7 +323,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading4Function() {
+    public function testBootstrapHeading4Function(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -337,7 +337,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading4FunctionWithClass() {
+    public function testBootstrapHeading4FunctionWithClass(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -351,7 +351,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading4FunctionWithContent() {
+    public function testBootstrapHeading4FunctionWithContent(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -365,7 +365,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading4FunctionWithDescription() {
+    public function testBootstrapHeading4FunctionWithDescription(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -379,7 +379,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading4FunctionWithoutArguments() {
+    public function testBootstrapHeading4FunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -393,7 +393,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading5Function() {
+    public function testBootstrapHeading5Function(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -407,7 +407,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading5FunctionWithClass() {
+    public function testBootstrapHeading5FunctionWithClass(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -421,7 +421,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading5FunctionWithContent() {
+    public function testBootstrapHeading5FunctionWithContent(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -435,7 +435,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading5FunctionWithDescription() {
+    public function testBootstrapHeading5FunctionWithDescription(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -449,7 +449,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading5FunctionWithoutArguments() {
+    public function testBootstrapHeading5FunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -463,7 +463,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading6Function() {
+    public function testBootstrapHeading6Function(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -477,7 +477,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading6FunctionWithClass() {
+    public function testBootstrapHeading6FunctionWithClass(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -491,7 +491,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading6FunctionWithContent() {
+    public function testBootstrapHeading6FunctionWithContent(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -505,7 +505,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading6FunctionWithDescription() {
+    public function testBootstrapHeading6FunctionWithDescription(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -519,7 +519,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapHeading6FunctionWithoutArguments() {
+    public function testBootstrapHeading6FunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -533,7 +533,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapInsFunction() {
+    public function testBootstrapInsFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -547,7 +547,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapInsFunctionWithoutArguments() {
+    public function testBootstrapInsFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -561,7 +561,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapMarkedFunction() {
+    public function testBootstrapMarkedFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -575,7 +575,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapMarkedFunctionWithoutArguments() {
+    public function testBootstrapMarkedFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -589,7 +589,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapSmallFunction() {
+    public function testBootstrapSmallFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -603,7 +603,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapSmallFunctionWithoutArguments() {
+    public function testBootstrapSmallFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -617,7 +617,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapStrikethroughFunction() {
+    public function testBootstrapStrikethroughFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -631,7 +631,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapStrikethroughFunctionWithoutArguments() {
+    public function testBootstrapStrikethroughFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -645,7 +645,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapUnderlinedFunction() {
+    public function testBootstrapUnderlinedFunction(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -659,7 +659,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapUnderlinedFunctionWithoutArguments() {
+    public function testBootstrapUnderlinedFunctionWithoutArguments(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -673,7 +673,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new TypographyTwigExtension($this->twigEnvironment);
 
@@ -826,7 +826,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.css.typography", TypographyTwigExtension::SERVICE_NAME);
 

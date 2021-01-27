@@ -25,33 +25,33 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap bold text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap bold text.
      */
-    protected function bootstrapBold($content) {
+    protected function bootstrapBold(?string $content): string {
         return static::coreHTMLElement("strong", $content);
     }
 
     /**
      * Displays a Bootstrap deleted text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap deleted text.
      */
-    protected function bootstrapDeleted($content) {
+    protected function bootstrapDeleted(?string $content): string {
         return static::coreHTMLElement("del", $content);
     }
 
     /**
      * Displays a Bootstrap heading.
      *
-     * @param int $size The size.
-     * @param string $content The content.
-     * @param string $description The description.
-     * @param string $class The class.
+     * @param int|null $size The size.
+     * @param string|null $content The content.
+     * @param string|null $description The description.
+     * @param string|null $class The class.
      * @return string Returns the Bootstrap heading.
      */
-    protected function bootstrapHeading($size, $content, $description, $class) {
+    protected function bootstrapHeading(?int $size, ?string $content, ?string $description, ?string $class): string {
 
         $sizes = [1, 2, 3, 4, 5, 6];
 
@@ -69,60 +69,60 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap inserted text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap inserted text.
      */
-    protected function bootstrapInserted($content) {
+    protected function bootstrapInserted(?string $content): string {
         return static::coreHTMLElement("ins", $content);
     }
 
     /**
      * Displays a Bootstrap italic text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap italic text.
      */
-    protected function bootstrapItalic($content) {
+    protected function bootstrapItalic(?string $content): string {
         return static::coreHTMLElement("em", $content);
     }
 
     /**
      * Displays a Bootstrap marked text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap marked text.
      */
-    protected function bootstrapMarked($content) {
+    protected function bootstrapMarked(?string $content): string {
         return static::coreHTMLElement("mark", $content);
     }
 
     /**
      * Displays a Bootstrap small text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap small text.
      */
-    protected function bootstrapSmall($content) {
+    protected function bootstrapSmall(?string $content): string {
         return static::coreHTMLElement("small", $content);
     }
 
     /**
      * Displays a Bootstrap strike through text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap strike through text.
      */
-    protected function bootstrapStrikeThrough($content) {
+    protected function bootstrapStrikeThrough(?string $content): string {
         return static::coreHTMLElement("s", $content);
     }
 
     /**
      * Displays a Bootstrap underlined text.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap underlined text.
      */
-    protected function bootstrapUnderlined($content) {
+    protected function bootstrapUnderlined(?string $content): string {
         return static::coreHTMLElement("u", $content);
     }
 }

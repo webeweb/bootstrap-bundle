@@ -28,7 +28,7 @@ class ButtonEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumSizes() {
+    public function testEnumSizes(): void {
 
         $res = [
             ButtonInterface::BUTTON_SIZE_LG,
@@ -43,7 +43,7 @@ class ButtonEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumTypes() {
+    public function testEnumTypes(): void {
 
         $res = [
             ButtonInterface::BUTTON_TYPE_DANGER,

@@ -24,7 +24,7 @@ class ButtonEnumerator {
      *
      * @return string[] Returns the sizes enumeration.
      */
-    public static function enumSizes() {
+    public static function enumSizes(): array {
         return [
             ButtonInterface::BUTTON_SIZE_LG,
             ButtonInterface::BUTTON_SIZE_SM,
@@ -37,7 +37,7 @@ class ButtonEnumerator {
      *
      * @return string[] Returns the types enumeration.
      */
-    public static function enumTypes() {
+    public static function enumTypes(): array {
         return [
             ButtonInterface::BUTTON_TYPE_DANGER,
             ButtonInterface::BUTTON_TYPE_DARK,

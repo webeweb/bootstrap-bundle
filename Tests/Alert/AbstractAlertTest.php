@@ -27,7 +27,7 @@ class AbstractAlertTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetContent() {
+    public function testSetContent(): void {
 
         $obj = new TestAlert("danger");
 
@@ -40,7 +40,7 @@ class AbstractAlertTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetDismissible() {
+    public function testSetDismissible(): void {
 
         $obj = new TestAlert("danger");
 
@@ -53,7 +53,7 @@ class AbstractAlertTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestAlert("danger");
 

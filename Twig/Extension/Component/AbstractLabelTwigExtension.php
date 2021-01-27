@@ -25,11 +25,11 @@ abstract class AbstractLabelTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap label.
      *
-     * @param string $content The content.
-     * @param string $class The class.
+     * @param string|null $content The content.
+     * @param string|null $class The class.
      * @return string Returns the Bootstrap label.
      */
-    protected function bootstrapLabel($content, $class) {
+    protected function bootstrapLabel(?string $content, ?string $class): string {
 
         $attributes = [];
 

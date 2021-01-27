@@ -28,7 +28,7 @@ class BreadcrumbTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetBreadcrumbTwigExtension() {
+    public function testSetBreadcrumbTwigExtension(): void {
 
         // Set a Breadcrumb Twig extension mock.
         $breadcrumbTwigExtension = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
@@ -44,7 +44,7 @@ class BreadcrumbTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestBreadcrumbTwigExtensionTrait();
 

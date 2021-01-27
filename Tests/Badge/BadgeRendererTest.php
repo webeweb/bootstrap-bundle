@@ -34,7 +34,7 @@ class BadgeRendererTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Badge mock.
@@ -50,7 +50,7 @@ class BadgeRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderContent() {
+    public function testRenderContent(): void {
 
         $res = BadgeRenderer::renderContent($this->badge);
         $this->assertEquals("content", $res);
@@ -61,7 +61,7 @@ class BadgeRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderPill() {
+    public function testRenderPill(): void {
 
         $res = BadgeRenderer::renderPill($this->badge);
         $this->assertEquals("badge-pill", $res);
@@ -72,7 +72,7 @@ class BadgeRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderType() {
+    public function testRenderType(): void {
 
         $res = BadgeRenderer::renderType($this->badge);
         $this->assertEquals("badge-danger", $res);

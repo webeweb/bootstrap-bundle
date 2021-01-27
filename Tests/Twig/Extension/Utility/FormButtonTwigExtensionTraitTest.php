@@ -29,7 +29,7 @@ class FormButtonTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFormButtonTwigExtension() {
+    public function testSetFormButtonTwigExtension(): void {
 
         // Set a Button Twig extension mock.
         $buttonTwigExtension = new ButtonTwigExtension($this->twigEnvironment);
@@ -48,7 +48,7 @@ class FormButtonTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestFormButtonTwigExtensionTrait();
 

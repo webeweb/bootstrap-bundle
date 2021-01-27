@@ -28,7 +28,7 @@ class AlertInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DANGER, AlertInterface::ALERT_TYPE_DANGER);
         $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_DARK, AlertInterface::ALERT_TYPE_DARK);

@@ -26,7 +26,7 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
     /**
      * Version.
      *
-     * @var int
+     * @var int|null
      */
     private $version;
 
@@ -42,19 +42,19 @@ abstract class AbstractTwigExtension extends BaseTwigExtension {
     /**
      * Get the version.
      *
-     * @return int Returns the version.
+     * @return int|null Returns the version.
      */
-    public function getVersion() {
+    public function getVersion(): ?int {
         return $this->version;
     }
 
     /**
      * Set the version.
      *
-     * @param int $version The version.
+     * @param int|null $version The version.
      * @return AbstractTwigExtension Returns this Twig extension.
      */
-    public function setVersion($version) {
+    public function setVersion(?int $version): AbstractTwigExtension {
         $this->version = $version;
         return $this;
     }

@@ -37,7 +37,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
      * @param array $args The arguments.
      * @return string Returns the Bootstrap glyphicon.
      */
-    public function bootstrapGlyphiconFunction(array $args = []) {
+    public function bootstrapGlyphiconFunction(array $args = []): string {
         return $this->bootstrapGlyphicon(ArrayHelper::get($args, "name", "home"), ArrayHelper::get($args, "style"));
     }
 
@@ -46,7 +46,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         if (3 === $this->getVersion()) {
             return $this->getFunctions3();
         }
@@ -58,7 +58,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    protected function getFunctions3() {
+    protected function getFunctions3(): array {
         return [
             new TwigFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
@@ -68,7 +68,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
     /**
      * {@inheritDoc}
      */
-    public function renderIcon($name, $style) {
+    public function renderIcon(?string $name, ?string $style): string {
         return $this->bootstrapGlyphiconFunction(["name" => $name, "style" => $style]);
     }
 }

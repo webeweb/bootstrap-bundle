@@ -27,13 +27,13 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap dropdown "button".
      *
-     * @param string $content The content.
-     * @param string $id The id.
-     * @param bool $expanded Expanded ?
-     * @param string $class The class.
+     * @param string|null $content The content.
+     * @param string|null $id The id.
+     * @param bool|null $expanded Expanded ?
+     * @param string|null $class The class.
      * @return string Returns the Bootstrap dropdown "button".
      */
-    protected function bootstrapDropdownButton($content, $id, $expanded, $class) {
+    protected function bootstrapDropdownButton(?string $content, ?string $id, ?bool $expanded, ?string $class): string {
 
         $classes = ButtonEnumerator::enumTypes();
 
@@ -58,7 +58,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
      *
      * @return string Returns the Bootstrap dropdown "divider".
      */
-    protected function bootstrapDropdownDivider() {
+    protected function bootstrapDropdownDivider(): string {
 
         $attributes = [];
 
@@ -71,10 +71,10 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap dropdown "header".
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the Bootstrap dropdown "header".
      */
-    protected function bootstrapDropdownHeader($content) {
+    protected function bootstrapDropdownHeader(?string $content): string {
 
         $attributes = [];
 

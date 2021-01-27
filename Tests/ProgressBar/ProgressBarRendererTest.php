@@ -34,7 +34,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Progress bar mock.
@@ -53,7 +53,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderAnimated() {
+    public function testRenderAnimated(): void {
 
         $res = ProgressBarRenderer::renderAnimated($this->progressBar);
         $this->assertEquals("active", $res);
@@ -64,7 +64,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderContent() {
+    public function testRenderContent(): void {
 
         $res = ProgressBarRenderer::renderContent($this->progressBar, "default");
         $this->assertEquals("content", $res);
@@ -75,7 +75,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderStriped() {
+    public function testRenderStriped(): void {
 
         $res = ProgressBarRenderer::renderStriped($this->progressBar);
         $this->assertEquals("progress-bar-striped", $res);
@@ -86,7 +86,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderStyle() {
+    public function testRenderStyle(): void {
 
         $res = ProgressBarRenderer::renderStyle($this->progressBar);
         $this->assertEquals("width: 25%;", $res);
@@ -97,7 +97,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderType() {
+    public function testRenderType(): void {
 
         $res = ProgressBarRenderer::renderType($this->progressBar);
         $this->assertEquals("progress-bar-danger", $res);

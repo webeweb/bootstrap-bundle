@@ -37,7 +37,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "danger".
      */
-    public function bootstrapLabelDangerFunction(array $args = []) {
+    public function bootstrapLabelDangerFunction(array $args = []): string {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_DANGER);
     }
 
@@ -47,7 +47,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "default".
      */
-    public function bootstrapLabelDefaultFunction(array $args = []) {
+    public function bootstrapLabelDefaultFunction(array $args = []): string {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_DEFAULT);
     }
 
@@ -57,7 +57,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "info".
      */
-    public function bootstrapLabelInfoFunction(array $args = []) {
+    public function bootstrapLabelInfoFunction(array $args = []): string {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_INFO);
     }
 
@@ -67,7 +67,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "primary".
      */
-    public function bootstrapLabelPrimaryFunction(array $args = []) {
+    public function bootstrapLabelPrimaryFunction(array $args = []): string {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_PRIMARY);
     }
 
@@ -77,7 +77,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "success".
      */
-    public function bootstrapLabelSuccessFunction(array $args = []) {
+    public function bootstrapLabelSuccessFunction(array $args = []): string {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_SUCCESS);
     }
 
@@ -87,7 +87,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "warning".
      */
-    public function bootstrapLabelWarningFunction(array $args = []) {
+    public function bootstrapLabelWarningFunction(array $args = []): string {
         return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_WARNING);
     }
 
@@ -96,7 +96,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         if (3 === $this->getVersion()) {
             return $this->getFunctions3();
         }
@@ -108,7 +108,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    protected function getFunctions3() {
+    protected function getFunctions3(): array {
         return [
             new TwigFunction("bootstrapLabelDanger", [$this, "bootstrapLabelDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsLabelDanger", [$this, "bootstrapLabelDangerFunction"], ["is_safe" => ["html"]]),

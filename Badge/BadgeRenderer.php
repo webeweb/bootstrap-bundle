@@ -25,7 +25,7 @@ class BadgeRenderer {
      * @param BadgeInterface $badge The badge.
      * @return string Returns the rendered block.
      */
-    public static function renderContent(BadgeInterface $badge) {
+    public static function renderContent(BadgeInterface $badge): string {
         return null !== $badge->getContent() ? $badge->getContent() : "";
     }
 
@@ -35,7 +35,7 @@ class BadgeRenderer {
      * @param BadgeInterface $badge The badge.
      * @return string|null Returns the rendered pill.
      */
-    public static function renderPill(BadgeInterface $badge) {
+    public static function renderPill(BadgeInterface $badge): ?string {
         return true === $badge->getPill() ? "badge-pill" : null;
     }
 
@@ -45,7 +45,7 @@ class BadgeRenderer {
      * @param BadgeInterface $badge The badge.
      * @return string|null Returns the rendered type.
      */
-    public static function renderType(BadgeInterface $badge) {
+    public static function renderType(BadgeInterface $badge): ?string {
         return null !== $badge->getType() ? $badge->getPrefix() . $badge->getType() : null;
     }
 }

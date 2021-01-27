@@ -28,7 +28,7 @@ class NavigationNodeParametersTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new NavigationNodeParameters("route");
 

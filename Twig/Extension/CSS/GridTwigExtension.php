@@ -36,7 +36,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid.
      */
-    public function bootstrapGridFunction(array $args = []) {
+    public function bootstrapGridFunction(array $args = []): string {
 
         $output = [];
 
@@ -54,7 +54,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with offset.
      */
-    public function bootstrapGridOffsetFunction(array $args = []) {
+    public function bootstrapGridOffsetFunction(array $args = []): string {
         return $this->bootstrapGrid(ArrayHelper::get($args, "lgOffset"), ArrayHelper::get($args, "mdOffset"), ArrayHelper::get($args, "smOffset"), ArrayHelper::get($args, "xsOffset"), ArrayHelper::get($args, "recopyOffset", false), "offset");
     }
 
@@ -64,7 +64,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with pull.
      */
-    public function bootstrapGridPullFunction(array $args = []) {
+    public function bootstrapGridPullFunction(array $args = []): string {
         return $this->bootstrapGrid(ArrayHelper::get($args, "lgPull"), ArrayHelper::get($args, "mdPull"), ArrayHelper::get($args, "smPull"), ArrayHelper::get($args, "xsPull"), ArrayHelper::get($args, "recopyPull", false), "pull");
     }
 
@@ -74,7 +74,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with push.
      */
-    public function bootstrapGridPushFunction(array $args = []) {
+    public function bootstrapGridPushFunction(array $args = []): string {
         return $this->bootstrapGrid(ArrayHelper::get($args, "lgPush"), ArrayHelper::get($args, "mdPush"), ArrayHelper::get($args, "smPush"), ArrayHelper::get($args, "xsPush"), ArrayHelper::get($args, "recopyPush", false), "push");
     }
 
@@ -84,7 +84,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with stacked-to-horizontal.
      */
-    public function bootstrapGridStackedFunction(array $args = []) {
+    public function bootstrapGridStackedFunction(array $args = []): string {
         return $this->bootstrapGrid(ArrayHelper::get($args, "lg"), ArrayHelper::get($args, "md"), ArrayHelper::get($args, "sm"), ArrayHelper::get($args, "xs"), ArrayHelper::get($args, "recopy", false), "");
     }
 
@@ -93,7 +93,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bootstrapGridOffset", [$this, "bootstrapGridOffsetFunction"], ["is_safe" => ["html"]]),

@@ -43,7 +43,7 @@ class TestFixtures {
      *
      * @return NavigationTree Returns the navigation tree.
      */
-    public static function getNavigationTree() {
+    public static function getNavigationTree(): NavigationTree {
 
         // Initialize the tree.
         $tree = new NavigationTree("tree");

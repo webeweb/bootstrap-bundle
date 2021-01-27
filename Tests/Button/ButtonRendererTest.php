@@ -34,7 +34,7 @@ class ButtonRendererTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Button mock.
@@ -54,7 +54,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderActive() {
+    public function testRenderActive(): void {
 
         $res = ButtonRenderer::renderActive($this->button);
         $this->assertEquals("active", $res);
@@ -65,7 +65,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderBlock() {
+    public function testRenderBlock(): void {
 
         $res = ButtonRenderer::renderBlock($this->button);
         $this->assertEquals("btn-block", $res);
@@ -76,7 +76,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderContent() {
+    public function testRenderContent(): void {
 
         $res = ButtonRenderer::renderContent($this->button);
         $this->assertEquals("content", $res);
@@ -87,7 +87,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderDataPlacement() {
+    public function testRenderDataPlacement(): void {
 
         $res = ButtonRenderer::renderDataPlacement($this->button);
         $this->assertEquals("top", $res);
@@ -98,7 +98,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderDataToggle() {
+    public function testRenderDataToggle(): void {
 
         $res = ButtonRenderer::renderDataToggle($this->button);
         $this->assertEquals("tooltip", $res);
@@ -109,7 +109,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderDisabled() {
+    public function testRenderDisabled(): void {
 
         $res = ButtonRenderer::renderDisabled($this->button);
         $this->assertEquals("disabled", $res);
@@ -120,7 +120,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderSize() {
+    public function testRenderSize(): void {
 
         $res = ButtonRenderer::renderSize($this->button);
         $this->assertEquals("btn-lg", $res);
@@ -131,7 +131,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderTitle() {
+    public function testRenderTitle(): void {
 
         $res = ButtonRenderer::renderTitle($this->button);
         $this->assertEquals("title", $res);
@@ -142,7 +142,7 @@ class ButtonRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderType() {
+    public function testRenderType(): void {
 
         $res = ButtonRenderer::renderType($this->button);
         $this->assertEquals("btn-danger", $res);

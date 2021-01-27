@@ -27,7 +27,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function blankAction() {
+    public function blankAction(): Response {
         return $this->render("@WBWBootstrap/layout/blank.html.twig");
     }
 
@@ -36,7 +36,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function flashbagAction() {
+    public function flashbagAction(): Response {
 
         $this->notifyDanger("Danger");
         $this->notifyInfo("Info");
@@ -51,7 +51,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function javascriptsAction() {
+    public function javascriptsAction(): Response {
         return $this->render("@WBWBootstrap/layout/javascripts.html.twig");
     }
 
@@ -60,7 +60,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function layout3Action() {
+    public function layout3Action(): Response {
         return $this->render("@WBWBootstrap/layout3.html.twig");
     }
 
@@ -69,7 +69,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function layout4Action() {
+    public function layout4Action(): Response {
         return $this->render("@WBWBootstrap/layout4.html.twig");
     }
 
@@ -78,7 +78,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function layoutAction() {
+    public function layoutAction(): Response {
         return $this->render("@WBWBootstrap/layout.html.twig");
     }
 
@@ -87,7 +87,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function stylesheetsAction() {
+    public function stylesheetsAction(): Response {
         return $this->render("@WBWBootstrap/layout/stylesheets.html.twig");
     }
 
@@ -96,7 +96,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function twigConsoleAction() {
+    public function twigConsoleAction(): Response {
         return $this->render("@WBWBootstrap/layout/twig-console.html.twig");
     }
 
@@ -105,7 +105,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function workInProgressAction() {
+    public function workInProgressAction(): Response {
         return $this->render("@WBWBootstrap/layout/work-in-progress.html.twig");
     }
 }

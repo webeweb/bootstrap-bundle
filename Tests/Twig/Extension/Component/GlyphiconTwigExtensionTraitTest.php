@@ -28,7 +28,7 @@ class GlyphiconTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetGlyphiconTwigExtension() {
+    public function testSetGlyphiconTwigExtension(): void {
 
         // Set a Glyphicon Twig extension mock.
         $glyphiconTwigExtension = new GlyphiconTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class GlyphiconTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestGlyphiconTwigExtensionTrait();
 

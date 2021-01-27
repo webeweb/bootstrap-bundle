@@ -22,25 +22,26 @@ trait BadgeTwigExtensionTrait {
     /**
      * Badge Twig extension.
      *
-     * @var BadgeTwigExtension
+     * @var BadgeTwigExtension|null
      */
     private $badgeTwigExtension;
 
     /**
-     * Get the badge Twig extention.
+     * Get the badge Twig extension.
      *
-     * @return BadgeTwigExtension Returns the badge Twig extension.
+     * @return BadgeTwigExtension|null Returns the badge Twig extension.
      */
-    public function getBadgeTwigExtension() {
+    public function getBadgeTwigExtension(): ?BadgeTwigExtension {
         return $this->badgeTwigExtension;
     }
 
     /**
      * Set the badge Twig extension.
      *
-     * @param BadgeTwigExtension $badgeTwigExtension The badge Twig extension.
+     * @param BadgeTwigExtension|null $badgeTwigExtension The badge Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setBadgeTwigExtension(BadgeTwigExtension $badgeTwigExtension = null) {
+    protected function setBadgeTwigExtension(?BadgeTwigExtension $badgeTwigExtension): self {
         $this->badgeTwigExtension = $badgeTwigExtension;
         return $this;
     }

@@ -42,7 +42,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Button Twig extension mock.
@@ -60,7 +60,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonGroupBasicFunction() {
+    public function testBootstrapButtonGroupBasicFunction(): void {
 
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
@@ -74,7 +74,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapButtonGroupToolbarFunction() {
+    public function testBootstrapButtonGroupToolbarFunction(): void {
 
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
@@ -88,7 +88,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
@@ -101,7 +101,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ButtonGroupTwigExtension($this->twigEnvironment);
 
@@ -134,7 +134,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.button_group", ButtonGroupTwigExtension::SERVICE_NAME);
 

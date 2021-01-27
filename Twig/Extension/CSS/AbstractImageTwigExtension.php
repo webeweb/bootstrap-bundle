@@ -26,15 +26,15 @@ abstract class AbstractImageTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap image.
      *
-     * @param string $src The source
-     * @param string $alt The alternative text.
-     * @param string $width The width.
-     * @param string $height The height.
-     * @param string $class The class.
-     * @param string $usemap The usemap.
+     * @param string|null $src The source
+     * @param string|null $alt The alternative text.
+     * @param string|null $width The width.
+     * @param string|null $height The height.
+     * @param string|null $class The class.
+     * @param string|null $useMap The use map.
      * @return string Returns the Bootstrap image.
      */
-    protected function bootstrapImage($src, $alt, $width, $height, $class, $usemap) {
+    protected function bootstrapImage(?string $src, ?string $alt, ?string $width, ?string $height, ?string $class, ?string $useMap): string {
 
         $template = "<img %attributes%/>";
 
@@ -45,7 +45,7 @@ abstract class AbstractImageTwigExtension extends AbstractTwigExtension {
         $attributes["width"]  = $width;
         $attributes["height"] = $height;
         $attributes["class"]  = $class;
-        $attributes["usemap"] = $usemap;
+        $attributes["usemap"] = $useMap;
 
         return str_replace(["%attributes%"], [StringHelper::parseArray($attributes)], $template);
     }

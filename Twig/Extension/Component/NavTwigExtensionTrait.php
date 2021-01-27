@@ -22,25 +22,26 @@ trait NavTwigExtensionTrait {
     /**
      * Nav Twig extension.
      *
-     * @var NavTwigExtension
+     * @var NavTwigExtension|null
      */
     private $navTwigExtension;
 
     /**
-     * Get the nav Twig extention.
+     * Get the nav Twig extension.
      *
-     * @return NavTwigExtension Returns the nav Twig extension.
+     * @return NavTwigExtension|null Returns the nav Twig extension.
      */
-    public function getNavTwigExtension() {
+    public function getNavTwigExtension(): ?NavTwigExtension {
         return $this->navTwigExtension;
     }
 
     /**
      * Set the nav Twig extension.
      *
-     * @param NavTwigExtension $navTwigExtension The nav Twig extension.
+     * @param NavTwigExtension|null $navTwigExtension The nav Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setNavTwigExtension(NavTwigExtension $navTwigExtension = null) {
+    protected function setNavTwigExtension(?NavTwigExtension $navTwigExtension): self {
         $this->navTwigExtension = $navTwigExtension;
         return $this;
     }

@@ -30,7 +30,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapMultipleBars() {
+    public function testBootstrapMultipleBars(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -47,7 +47,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarBasicFunction() {
+    public function testBootstrapProgressBarBasicFunction(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -61,7 +61,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarBasicFunctionWithoutArguments() {
+    public function testBootstrapProgressBarBasicFunctionWithoutArguments(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -75,7 +75,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarDangerFunction() {
+    public function testBootstrapProgressBarDangerFunction(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -89,7 +89,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarDangerFunctionWithBootstrap3() {
+    public function testBootstrapProgressBarDangerFunctionWithBootstrap3(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -104,7 +104,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarDangerFunctionWithoutArguments() {
+    public function testBootstrapProgressBarDangerFunctionWithoutArguments(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -118,7 +118,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarInfoFunction() {
+    public function testBootstrapProgressBarInfoFunction(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -132,7 +132,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarInfoFunctionWithBootstrap3() {
+    public function testBootstrapProgressBarInfoFunctionWithBootstrap3(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -147,7 +147,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarInfoFunctionWithoutArguments() {
+    public function testBootstrapProgressBarInfoFunctionWithoutArguments(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -161,7 +161,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarSuccessFunction() {
+    public function testBootstrapProgressBarSuccessFunction(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -175,7 +175,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarSuccessFunctionWithBootstrap3() {
+    public function testBootstrapProgressBarSuccessFunctionWithBootstrap3(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -190,7 +190,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarSuccessFunctionWithoutArguments() {
+    public function testBootstrapProgressBarSuccessFunctionWithoutArguments(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -204,7 +204,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarWarningFunction() {
+    public function testBootstrapProgressBarWarningFunction(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -218,7 +218,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarWarningFunctionWithBootstrap3() {
+    public function testBootstrapProgressBarWarningFunctionWithBootstrap3(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -233,7 +233,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapProgressBarWarningFunctionWithoutArguments() {
+    public function testBootstrapProgressBarWarningFunctionWithoutArguments(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -247,7 +247,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -270,7 +270,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ProgressBarTwigExtension($this->twigEnvironment);
 
@@ -343,7 +343,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.progress_bar", ProgressBarTwigExtension::SERVICE_NAME);
 

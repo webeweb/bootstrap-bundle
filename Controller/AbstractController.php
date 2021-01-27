@@ -31,7 +31,7 @@ abstract class AbstractController extends BaseController {
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
      */
-    protected function notifyDanger($content) {
+    protected function notifyDanger(string $content): NotificationEvent {
         $notification = NotificationFactory::newDangerNotification($content);
         return $this->notify(WBWCoreEvents::NOTIFICATION_DANGER, $notification);
     }
@@ -42,7 +42,7 @@ abstract class AbstractController extends BaseController {
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
      */
-    protected function notifyInfo($content) {
+    protected function notifyInfo(string $content): NotificationEvent {
         $notification = NotificationFactory::newInfoNotification($content);
         return $this->notify(WBWCoreEvents::NOTIFICATION_INFO, $notification);
     }
@@ -53,7 +53,7 @@ abstract class AbstractController extends BaseController {
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
      */
-    protected function notifySuccess($content) {
+    protected function notifySuccess(string $content): NotificationEvent {
         $notification = NotificationFactory::newSuccessNotification($content);
         return $this->notify(WBWCoreEvents::NOTIFICATION_SUCCESS, $notification);
     }
@@ -64,7 +64,7 @@ abstract class AbstractController extends BaseController {
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
      */
-    protected function notifyWarning($content) {
+    protected function notifyWarning(string $content): NotificationEvent {
         $notification = NotificationFactory::newWarningNotification($content);
         return $this->notify(WBWCoreEvents::NOTIFICATION_WARNING, $notification);
     }

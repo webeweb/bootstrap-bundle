@@ -35,7 +35,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Button Twig extension mock.
@@ -47,7 +47,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapFormButtonCancelFunction() {
+    public function testBootstrapFormButtonCancelFunction(): void {
 
         $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -61,7 +61,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapFormButtonDefaultFunction() {
+    public function testBootstrapFormButtonDefaultFunction(): void {
 
         $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -78,7 +78,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapFormButtonSubmitFunction() {
+    public function testBootstrapFormButtonSubmitFunction(): void {
 
         $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -91,7 +91,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
@@ -119,7 +119,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.utility.form_button", FormButtonTwigExtension::SERVICE_NAME);
 

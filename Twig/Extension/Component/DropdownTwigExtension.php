@@ -36,7 +36,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap dropdown "button".
      */
-    public function bootstrapDropdownButtonFunction(array $args = []) {
+    public function bootstrapDropdownButtonFunction(array $args = []): string {
         return $this->bootstrapDropdownButton(ArrayHelper::get($args, "content"), ArrayHelper::get($args, "id"), ArrayHelper::get($args, "expanded", true), ArrayHelper::get($args, "class", "default"));
     }
 
@@ -45,7 +45,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
      *
      * @return string Returns the Bootstrap dropdown "divider".
      */
-    public function bootstrapDropdownDividerFunction() {
+    public function bootstrapDropdownDividerFunction(): string {
         return $this->bootstrapDropdownDivider();
     }
 
@@ -55,7 +55,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap dropdown "header".
      */
-    public function bootstrapDropdownHeaderFunction(array $args = []) {
+    public function bootstrapDropdownHeaderFunction(array $args = []): string {
         return $this->bootstrapDropdownHeader(ArrayHelper::get($args, "content"));
     }
 
@@ -64,7 +64,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsDropdownButton", [$this, "bootstrapDropdownButtonFunction"], ["is_safe" => ["html"]]),

@@ -22,25 +22,26 @@ trait CodeTwigExtensionTrait {
     /**
      * Code Twig extension.
      *
-     * @var CodeTwigExtension
+     * @var CodeTwigExtension|null
      */
     private $codeTwigExtension;
 
     /**
-     * Get the code Twig extention.
+     * Get the code Twig extension.
      *
-     * @return CodeTwigExtension Returns the code Twig extension.
+     * @return CodeTwigExtension|null Returns the code Twig extension.
      */
-    public function getCodeTwigExtension() {
+    public function getCodeTwigExtension(): ?CodeTwigExtension {
         return $this->codeTwigExtension;
     }
 
     /**
      * Set the code Twig extension.
      *
-     * @param CodeTwigExtension $codeTwigExtension The code Twig extension.
+     * @param CodeTwigExtension|null $codeTwigExtension The code Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setCodeTwigExtension(CodeTwigExtension $codeTwigExtension = null) {
+    protected function setCodeTwigExtension(?CodeTwigExtension $codeTwigExtension): self {
         $this->codeTwigExtension = $codeTwigExtension;
         return $this;
     }

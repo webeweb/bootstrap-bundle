@@ -28,7 +28,7 @@ class ImageTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetImageTwigExtension() {
+    public function testSetImageTwigExtension(): void {
 
         // Set an Image Twig extension mock.
         $imageTwigExtension = new ImageTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class ImageTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestImageTwigExtensionTrait();
 

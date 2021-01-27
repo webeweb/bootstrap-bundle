@@ -28,7 +28,7 @@ class LabelTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLabelTwigExtension() {
+    public function testSetLabelTwigExtension(): void {
 
         // Set a Label Twig extension mock.
         $labelTwigExtension = new LabelTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class LabelTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestLabelTwigExtensionTrait();
 

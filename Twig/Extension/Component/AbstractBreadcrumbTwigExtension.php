@@ -11,11 +11,10 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Navigation\AbstractNavigationNode;
-use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
@@ -35,9 +34,9 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
+     * @param BaseTranslatorInterface $translator The translator.
      */
-    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator) {
+    public function __construct(Environment $twigEnvironment, BaseTranslatorInterface $translator) {
         parent::__construct($twigEnvironment);
         $this->setTranslator($translator);
     }
@@ -46,10 +45,10 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
      * Displays a Bootstrap breadcrumb.
      *
      * @param AbstractNavigationNode $node The node.
-     * @param bool $last Last node ?.
+     * @param bool|null $last Last node ?.
      * @return string Returns the Bootstrap breadcrumb.
      */
-    private function bootstrapBreadcrumb(AbstractNavigationNode $node, $last) {
+    private function bootstrapBreadcrumb(AbstractNavigationNode $node, ?bool $last): string {
 
         $attributes = true === $node->getActive() && true === $last ? ["class" => "active"] : [];
 
@@ -65,7 +64,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
      * @param NavigationTree $tree The tree.
      * @return string Returns the Bootstrap breadcrumbs.
      */
-    protected function bootstrapBreadcrumbs(NavigationTree $tree) {
+    protected function bootstrapBreadcrumbs(NavigationTree $tree): string {
 
         $attributes = [];
 

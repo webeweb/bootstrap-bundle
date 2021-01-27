@@ -90,18 +90,21 @@ interface ButtonInterface {
      * @var string
      */
     const BUTTON_TYPE_PRIMARY = WBWBootstrapInterface::BOOTSTRAP_PRIMARY;
+
     /**
      * Button type "secondary".
      *
      * @var string
      */
     const BUTTON_TYPE_SECONDARY = WBWBootstrapInterface::BOOTSTRAP_SECONDARY;
+
     /**
      * Button type "success".
      *
      * @var string
      */
     const BUTTON_TYPE_SUCCESS = WBWBootstrapInterface::BOOTSTRAP_SUCCESS;
+
     /**
      * Button type "warning".
      *
@@ -112,127 +115,127 @@ interface ButtonInterface {
     /**
      * Get the active.
      *
-     * @return boolean Returns the active.
+     * @return bool|null Returns the active.
      */
-    public function getActive();
+    public function getActive(): ?bool;
 
     /**
      * Get the block.
      *
-     * @return boolean Returns the block.
+     * @return bool|null Returns the block.
      */
-    public function getBlock();
+    public function getBlock(): ?bool;
 
     /**
      * Get the content.
      *
-     * @return string Returns the content.
+     * @return string|null Returns the content.
      */
-    public function getContent();
+    public function getContent(): ?string;
 
     /**
      * Get the disabled.
      *
-     * @return boolean Returns the disabled.
+     * @return bool|null Returns the disabled.
      */
-    public function getDisabled();
+    public function getDisabled(): ?bool;
 
     /**
      * Get the outline.
      *
-     * @return boolean Returns the outline.
+     * @return bool|null Returns the outline.
      */
-    public function getOutline();
+    public function getOutline(): ?bool;
 
     /**
      * Get the prefix.
      *
-     * @return string Returns the prefix.
+     * @return string|null Returns the prefix.
      */
-    public function getPrefix();
+    public function getPrefix(): ?string;
 
     /**
      * Get the size.
      *
-     * @return string Returns the size.
+     * @return string|null Returns the size.
      */
-    public function getSize();
+    public function getSize(): ?string;
 
     /**
      * Get the title.
      *
-     * @return string Returns the title.
+     * @return string|null Returns the title.
      */
-    public function getTitle();
+    public function getTitle(): ?string;
 
     /**
      * Get the type.
      *
-     * @return string Returns the type.
+     * @return string|null Returns the type.
      */
-    public function getType();
+    public function getType(): ?string;
 
     /**
      * Set the active.
      *
-     * @param boolean $active The active.
+     * @param bool|null $active The active.
      * @return ButtonInterface Returns this button.
      */
-    public function setActive($active);
+    public function setActive(?bool $active): ButtonInterface;
 
     /**
      * Set the block.
      *
-     * @param boolean $block The block.
+     * @param bool|null $block The block.
      * @return ButtonInterface Returns this button.
      */
-    public function setBlock($block);
+    public function setBlock(?bool $block): ButtonInterface;
 
     /**
      * Set the content.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return ButtonInterface Returns this button.
      */
-    public function setContent($content);
+    public function setContent(?string $content): ButtonInterface;
 
     /**
      * Set the disabled.
      *
-     * @param boolean $disabled The disabled.
+     * @param bool|null $disabled The disabled.
      * @return ButtonInterface Returns this button.
      */
-    public function setDisabled($disabled);
+    public function setDisabled(?bool $disabled): ?ButtonInterface;
 
     /**
      * Set the outline.
      *
-     * @param boolean $outline The outline.
+     * @param bool|null $outline The outline.
      * @return ButtonInterface Returns this button.
      */
-    public function setOutline($outline);
+    public function setOutline(?bool $outline): ButtonInterface;
 
     /**
      * Set the size.
      *
-     * @param string $size The size.
+     * @param string|null $size The size.
      * @return ButtonInterface Returns this button.
      */
-    public function setSize($size);
+    public function setSize(?string $size): ButtonInterface;
 
     /**
      * Set the title.
      *
-     * @param string $title The title.
+     * @param string|null $title The title.
      * @return ButtonInterface Returns this button.
      */
-    public function setTitle($title);
+    public function setTitle(?string $title): ButtonInterface;
 
     /**
      * Set the type.
      *
-     * @param string $class The type.
+     * @param string|null $type The type.
      * @return ButtonInterface Returns this button.
      */
-    public function setType($class);
+    public function setType(?string $type): ButtonInterface;
 }

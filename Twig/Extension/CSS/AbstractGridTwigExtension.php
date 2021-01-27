@@ -26,15 +26,15 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap grid.
      *
-     * @param string $lg The large column size.
-     * @param string $md The medium column size.
-     * @param string $sm The small column size.
-     * @param string $xs The extra-small column size.
-     * @param string $recopy Recopy ?
-     * @param string $prefix The column prefix.
+     * @param string|null $lg The large column size.
+     * @param string|null $md The medium column size.
+     * @param string|null $sm The small column size.
+     * @param string|null $xs The extra-small column size.
+     * @param bool|null $recopy Recopy ?
+     * @param string|null $prefix The column prefix.
      * @return string Returns the Bootstrap grid.
      */
-    protected function bootstrapGrid($lg, $md, $sm, $xs, $recopy, $prefix) {
+    protected function bootstrapGrid(?string $lg, ?string $md, ?string $sm, ?string $xs, ?bool $recopy, ?string $prefix): string {
 
         $found  = null;
         $values = [&$lg, &$md, &$sm, &$xs];
@@ -50,10 +50,10 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
 
         $columns = [];
 
-        $columns[] = GridHelper::getCSSClassname("lg", $lg, $prefix, 1, 12);
-        $columns[] = GridHelper::getCSSClassname("md", $md, $prefix, 1, 12);;
-        $columns[] = GridHelper::getCSSClassname("sm", $sm, $prefix, 1, 12);;
-        $columns[] = GridHelper::getCSSClassname("xs", $xs, $prefix, 1, 12);;
+        $columns[] = GridHelper::getCSSClassname("lg", $lg, $prefix);
+        $columns[] = GridHelper::getCSSClassname("md", $md, $prefix);
+        $columns[] = GridHelper::getCSSClassname("sm", $sm, $prefix);
+        $columns[] = GridHelper::getCSSClassname("xs", $xs, $prefix);
 
         return trim(implode(" ", $columns));
     }

@@ -25,12 +25,12 @@ abstract class AbstractButtonGroupTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap button group.
      *
-     * @param string $class The class.
-     * @param string $role The role.
+     * @param string|null $class The class.
+     * @param string|null $role The role.
      * @param array $buttons The buttons.
      * @return string Returns the Bootstrap button group.
      */
-    protected function bootstrapButtonGroup($class, $role, array $buttons) {
+    protected function bootstrapButtonGroup(?string $class, ?string $role, array $buttons): string {
 
         $attributes = [];
 

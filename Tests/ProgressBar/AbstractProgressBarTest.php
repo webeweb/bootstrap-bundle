@@ -27,7 +27,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAnimated() {
+    public function testSetAnimated(): void {
 
         $obj = new TestProgressBar("type");
 
@@ -40,7 +40,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetContent() {
+    public function testSetContent(): void {
 
         $obj = new TestProgressBar("type");
 
@@ -53,7 +53,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetHeight() {
+    public function testSetHeight(): void {
 
         $obj = new TestProgressBar("type");
 
@@ -66,7 +66,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMax() {
+    public function testSetMax(): void {
 
         $obj = new TestProgressBar("type");
 
@@ -79,7 +79,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMin() {
+    public function testSetMin(): void {
 
         $obj = new TestProgressBar("type");
 
@@ -92,7 +92,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetStriped() {
+    public function testSetStriped(): void {
 
         $obj = new TestProgressBar("type");
 
@@ -105,7 +105,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetValue() {
+    public function testSetValue(): void {
 
         $obj = new TestProgressBar("type");
 
@@ -118,7 +118,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestProgressBar("type");
 

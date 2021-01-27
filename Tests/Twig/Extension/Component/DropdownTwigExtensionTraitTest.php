@@ -28,7 +28,7 @@ class DropdownTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetDropdownTwigExtension() {
+    public function testSetDropdownTwigExtension(): void {
 
         // Set a Dropdown Twig extension mock.
         $dropdownTwigExtension = new DropdownTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class DropdownTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestDropdownTwigExtensionTrait();
 

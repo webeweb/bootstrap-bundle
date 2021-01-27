@@ -28,7 +28,7 @@ class ButtonInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("lg", ButtonInterface::BUTTON_SIZE_LG);
         $this->assertEquals("sm", ButtonInterface::BUTTON_SIZE_SM);

@@ -36,7 +36,7 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
      * @param array $buttons The buttons.
      * @return string Returns the Bootstrap button group "basic".
      */
-    public function bootstrapButtonGroupBasicFunction(array $args = [], array $buttons = []) {
+    public function bootstrapButtonGroupBasicFunction(array $args = [], array $buttons = []): string {
         return $this->bootstrapButtonGroup("btn-group", "group", $buttons);
     }
 
@@ -47,7 +47,7 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
      * @param array $buttons The buttons.
      * @return string Returns the Bootstrap button group "toolbar".
      */
-    public function bootstrapButtonGroupToolbarFunction(array $args = [], array $buttons = []) {
+    public function bootstrapButtonGroupToolbarFunction(array $args = [], array $buttons = []): string {
         return $this->bootstrapButtonGroup("btn-toolbar", "toolbar", $buttons);
     }
 
@@ -56,7 +56,7 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonGroupBasic", [$this, "bootstrapButtonGroupBasicFunction"], ["is_safe" => ["html"]]),

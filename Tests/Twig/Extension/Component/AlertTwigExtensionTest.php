@@ -29,7 +29,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertDangerFunction() {
+    public function testBootstrapAlertDangerFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertDangerFunctionWithoutArguments() {
+    public function testBootstrapAlertDangerFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertDarkFunction() {
+    public function testBootstrapAlertDarkFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -71,7 +71,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertDarkFunctionWithoutArguments() {
+    public function testBootstrapAlertDarkFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -85,7 +85,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertInfoFunction() {
+    public function testBootstrapAlertInfoFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -99,7 +99,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertInfoFunctionWithoutArguments() {
+    public function testBootstrapAlertInfoFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -113,7 +113,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertLightFunction() {
+    public function testBootstrapAlertLightFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -127,7 +127,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertLightFunctionWithoutArguments() {
+    public function testBootstrapAlertLightFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertLinkFunction() {
+    public function testBootstrapAlertLinkFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertLinkFunctionWithContent() {
+    public function testBootstrapAlertLinkFunctionWithContent(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertLinkFunctionWithHref() {
+    public function testBootstrapAlertLinkFunctionWithHref(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -183,7 +183,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertLinkFunctionWithoutArguments() {
+    public function testBootstrapAlertLinkFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -197,7 +197,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertSecondaryFunction() {
+    public function testBootstrapAlertSecondaryFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -211,7 +211,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertSecondaryFunctionWithoutArguments() {
+    public function testBootstrapAlertSecondaryFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -225,7 +225,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertSuccessFunction() {
+    public function testBootstrapAlertSuccessFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -239,7 +239,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertSuccessFunctionWithoutArguments() {
+    public function testBootstrapAlertSuccessFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -253,7 +253,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertWarningFunction() {
+    public function testBootstrapAlertWarningFunction(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -267,7 +267,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapAlertWarningFunctionWithoutArguments() {
+    public function testBootstrapAlertWarningFunctionWithoutArguments(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -281,7 +281,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -294,7 +294,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
@@ -387,7 +387,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctionsWithBootstrap3() {
+    public function testGetFunctionsWithBootstrap3(): void {
 
         $obj = new AlertTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -441,7 +441,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.alert", AlertTwigExtension::SERVICE_NAME);
 

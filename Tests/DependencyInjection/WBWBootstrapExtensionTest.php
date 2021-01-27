@@ -53,7 +53,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a configs array mock.
@@ -70,7 +70,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetAlias() {
+    public function testGetAlias(): void {
 
         $obj = new WBWBootstrapExtension();
 
@@ -82,7 +82,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetConfiguration() {
+    public function testGetConfiguration(): void {
 
         $obj = new WBWBootstrapExtension();
 
@@ -95,7 +95,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoad() {
+    public function testLoad(): void {
 
         $obj = new WBWBootstrapExtension();
 
@@ -133,7 +133,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testLoadWithoutTwig() {
+    public function testLoadWithoutTwig(): void {
 
         // Set the configs mock.
         $this->configs[WBWBootstrapExtension::EXTENSION_ALIAS]["twig"] = false;
@@ -157,7 +157,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw_bootstrap", WBWBootstrapExtension::EXTENSION_ALIAS);
     }

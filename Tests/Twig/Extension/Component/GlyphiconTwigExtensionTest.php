@@ -29,7 +29,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGlyphiconFunction() {
+    public function testBootstrapGlyphiconFunction(): void {
 
         $obj = new GlyphiconTwigExtension($this->twigEnvironment);
 
@@ -43,7 +43,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapGlyphiconFunctionWithoutArguments() {
+    public function testBootstrapGlyphiconFunctionWithoutArguments(): void {
 
         $obj = new GlyphiconTwigExtension($this->twigEnvironment);
 
@@ -57,7 +57,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new GlyphiconTwigExtension($this->twigEnvironment);
 
@@ -70,7 +70,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new GlyphiconTwigExtension($this->twigEnvironment);
         $obj->setVersion(3);
@@ -94,7 +94,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.component.glyphicon", GlyphiconTwigExtension::SERVICE_NAME);
 

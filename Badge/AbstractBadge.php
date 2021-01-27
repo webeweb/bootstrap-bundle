@@ -23,65 +23,65 @@ abstract class AbstractBadge implements BadgeInterface {
     /**
      * Content.
      *
-     * @var string
+     * @var string|null
      */
     private $content;
 
     /**
      * Pill.
      *
-     * @var bool
+     * @var bool|null
      */
     private $pill;
 
     /**
      * Type.
      *
-     * @var string
+     * @var string|null
      */
     private $type;
 
     /**
      * Constructor.
      *
-     * @param string type.
+     * @param string|null type.
      */
-    protected function __construct($type) {
+    protected function __construct(?string $type) {
         $this->setType($type);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getContent() {
+    public function getContent(): ?string {
         return $this->content;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getPill() {
+    public function getPill(): ?bool {
         return $this->pill;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getPrefix() {
+    public function getPrefix(): ?string {
         return "badge-";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getType() {
+    public function getType(): ?string {
         return $this->type;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setContent($content) {
+    public function setContent(?string $content): BadgeInterface {
         $this->content = $content;
         return $this;
     }
@@ -89,7 +89,7 @@ abstract class AbstractBadge implements BadgeInterface {
     /**
      * {@inheritDoc}
      */
-    public function setPill($pill) {
+    public function setPill(?bool $pill): BadgeInterface {
         $this->pill = $pill;
         return $this;
     }
@@ -97,7 +97,7 @@ abstract class AbstractBadge implements BadgeInterface {
     /**
      * {@inheritDoc}
      */
-    public function setType($type) {
+    public function setType(?string $type): BadgeInterface {
         $this->type = $type;
         return $this;
     }

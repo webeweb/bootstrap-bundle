@@ -38,7 +38,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "danger".
      */
-    public function bootstrapBadgeDangerFunction(array $args = []) {
+    public function bootstrapBadgeDangerFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseDangerBadge($args));
     }
 
@@ -48,7 +48,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "dark".
      */
-    public function bootstrapBadgeDarkFunction(array $args = []) {
+    public function bootstrapBadgeDarkFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseDarkBadge($args));
     }
 
@@ -58,7 +58,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge.
      */
-    public function bootstrapBadgeFunction(array $args = []) {
+    public function bootstrapBadgeFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseDefaultBadge($args));
     }
 
@@ -68,7 +68,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "info".
      */
-    public function bootstrapBadgeInfoFunction(array $args = []) {
+    public function bootstrapBadgeInfoFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseInfoBadge($args));
     }
 
@@ -78,7 +78,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "light".
      */
-    public function bootstrapBadgeLightFunction(array $args = []) {
+    public function bootstrapBadgeLightFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseLightBadge($args));
     }
 
@@ -87,10 +87,10 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @param string $button The button.
      * @param string $href The href attribute.
-     * @param string $target The target attribute.
+     * @param string|null $target The target attribute.
      * @return string Returns the Bootstrap badge transformed into an anchor.
      */
-    public function bootstrapBadgeLinkFilter($button, $href = self::DEFAULT_HREF, $target = null) {
+    public function bootstrapBadgeLinkFilter(string $button, string $href = self::DEFAULT_HREF, string $target = null): string {
 
         $searches = ["<span", "</span>", "class="];
         $replaces = ["<a", "</a>", StringHelper::parseArray(["href" => $href, "target" => $target]) . " class="];
@@ -104,7 +104,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "primary".
      */
-    public function bootstrapBadgePrimaryFunction(array $args = []) {
+    public function bootstrapBadgePrimaryFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parsePrimaryBadge($args));
     }
 
@@ -114,7 +114,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "secondary".
      */
-    public function bootstrapBadgeSecondaryFunction(array $args = []) {
+    public function bootstrapBadgeSecondaryFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseSecondaryBadge($args));
     }
 
@@ -124,7 +124,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "success".
      */
-    public function bootstrapBadgeSuccessFunction(array $args = []) {
+    public function bootstrapBadgeSuccessFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseSuccessBadge($args));
     }
 
@@ -134,7 +134,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "warning".
      */
-    public function bootstrapBadgeWarningFunction(array $args = []) {
+    public function bootstrapBadgeWarningFunction(array $args = []): string {
         return $this->bootstrapBadge(BadgeFactory::parseWarningBadge($args));
     }
 
@@ -143,7 +143,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("bootstrapBadgeLink", [$this, "bootstrapBadgeLinkFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("bsBadgeLink", [$this, "bootstrapBadgeLinkFilter"], ["is_safe" => ["html"]]),
@@ -155,7 +155,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         if (3 === $this->getVersion()) {
             return $this->getFunctions3();
         }
@@ -167,7 +167,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions3() {
+    public function getFunctions3(): array {
         return [
             new TwigFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
@@ -179,7 +179,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions4() {
+    public function getFunctions4(): array {
         return [
             new TwigFunction("bootstrapBadgeDanger", [$this, "bootstrapBadgeDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBadgeDanger", [$this, "bootstrapBadgeDangerFunction"], ["is_safe" => ["html"]]),

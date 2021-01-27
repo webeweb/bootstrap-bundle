@@ -22,25 +22,26 @@ trait RendererTwigExtensionTrait {
     /**
      * Renderer Twig extension.
      *
-     * @var RendererTwigExtension
+     * @var RendererTwigExtension|null
      */
     private $rendererTwigExtension;
 
     /**
      * Get the renderer Twig extension.
      *
-     * @return RendererTwigExtension Returns the renderer Twig extension.
+     * @return RendererTwigExtension|null Returns the renderer Twig extension.
      */
-    public function getRendererTwigExtension() {
+    public function getRendererTwigExtension(): ?RendererTwigExtension {
         return $this->rendererTwigExtension;
     }
 
     /**
      * Set the renderer twig extension.
      *
-     * @param RendererTwigExtension $rendererTwigExtension The renderer twig extension.
+     * @param RendererTwigExtension|null $rendererTwigExtension The renderer twig extension.
+     * @return self Returns this instance.
      */
-    protected function setRendererTwigExtension(RendererTwigExtension $rendererTwigExtension = null) {
+    protected function setRendererTwigExtension(?RendererTwigExtension $rendererTwigExtension): self {
         $this->rendererTwigExtension = $rendererTwigExtension;
         return $this;
     }

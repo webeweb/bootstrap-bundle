@@ -28,7 +28,7 @@ class AlertEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumTypes() {
+    public function testEnumTypes(): void {
 
         $res = [
             AlertInterface::ALERT_TYPE_DANGER,

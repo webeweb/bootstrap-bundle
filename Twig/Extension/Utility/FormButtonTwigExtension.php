@@ -11,11 +11,11 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtensionTrait;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
@@ -39,10 +39,10 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param TranslatorInterface $translator The translator.
+     * @param BaseTranslatorInterface $translator The translator.
      * @param ButtonTwigExtension $extension The button component Twig extension.
      */
-    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator, ButtonTwigExtension $extension) {
+    public function __construct(Environment $twigEnvironment, BaseTranslatorInterface $translator, ButtonTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
         $this->setButtonTwigExtension($extension);
     }
@@ -53,7 +53,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap form button "cancel".
      */
-    public function bootstrapFormButtonCancelFunction(array $args = []) {
+    public function bootstrapFormButtonCancelFunction(array $args = []): string {
 
         $txt = $this->getTranslator()->trans("label.cancel", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "fa:times"]);
@@ -67,7 +67,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      * @param array $args The arguments.
      * @return string Returns the Bootstrap form button "default".
      */
-    public function bootstrapFormButtonDefaultFunction(array $args = []) {
+    public function bootstrapFormButtonDefaultFunction(array $args = []): string {
 
         $cancelButton = $this->bootstrapFormButtonCancelFunction(["href" => ArrayHelper::get($args, "cancel_href")]);
         $submitButton = $this->bootstrapFormButtonSubmitFunction();
@@ -81,7 +81,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      *
      * @return string Returns the Bootstrap form button "sSubmit".
      */
-    public function bootstrapFormButtonSubmitFunction() {
+    public function bootstrapFormButtonSubmitFunction(): string {
 
         $txt = $this->getTranslator()->trans("label.submit", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "fa:check"]);
@@ -94,7 +94,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapFormButtonCancel", [$this, "bootstrapFormButtonCancelFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bootstrapFormButtonDefault", [$this, "bootstrapFormButtonDefaultFunction"], ["is_safe" => ["html"]]),

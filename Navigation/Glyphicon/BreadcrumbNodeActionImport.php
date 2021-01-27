@@ -24,10 +24,10 @@ class BreadcrumbNodeActionImport extends BreadcrumbNode {
     /**
      * Constructor.
      *
-     * @param string $route The route.
+     * @param string|null $route The route.
      * @param string $matcher The matcher.
      */
-    public function __construct($route = null, $matcher = self::NAVIGATION_MATCHER_URL) {
+    public function __construct(string $route = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct("navigation.node.action.import", "g:save", $route, $matcher);
     }
 }

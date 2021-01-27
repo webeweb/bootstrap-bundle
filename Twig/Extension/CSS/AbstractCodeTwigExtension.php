@@ -25,50 +25,50 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Bootstrap basic block.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap basic block.
      */
-    protected function bootstrapBasicBlock($content) {
+    protected function bootstrapBasicBlock(?string $content): string {
         return static::coreHTMLElement("pre", $content);
     }
 
     /**
      * Displays a Bootstrap inline.
      *
-     * @param string $content The inline content.
+     * @param string|null $content The inline content.
      * @return string  Returns the Bootstrap inline.
      */
-    protected function bootstrapInline($content) {
+    protected function bootstrapInline(?string $content): string {
         return static::coreHTMLElement("code", $content);
     }
 
     /**
      * Displays a Bootstrap sample output.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap sample output.
      */
-    protected function bootstrapSampleOutput($content) {
+    protected function bootstrapSampleOutput(?string $content): string {
         return static::coreHTMLElement("samp", $content);
     }
 
     /**
      * Displays a Bootstrap user input.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap user input.
      */
-    protected function bootstrapUserInput($content) {
+    protected function bootstrapUserInput(?string $content): string {
         return static::coreHTMLElement("kbd", $content);
     }
 
     /**
      * Displays a Bootstrap variable.
      *
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string  Returns the Bootstrap variable.
      */
-    protected function bootstrapVariable($content) {
+    protected function bootstrapVariable(?string $content): string {
         return static::coreHTMLElement("var", $content);
     }
 }

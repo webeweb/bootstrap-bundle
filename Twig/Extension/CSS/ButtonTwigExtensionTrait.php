@@ -22,25 +22,26 @@ trait ButtonTwigExtensionTrait {
     /**
      * Button Twig extension.
      *
-     * @var ButtonTwigExtension
+     * @var ButtonTwigExtension|null
      */
     private $buttonTwigExtension;
 
     /**
-     * Get the button Twig extention.
+     * Get the button Twig extension.
      *
-     * @return ButtonTwigExtension Returns the button Twig extension.
+     * @return ButtonTwigExtension|null Returns the button Twig extension.
      */
-    public function getButtonTwigExtension() {
+    public function getButtonTwigExtension(): ?ButtonTwigExtension {
         return $this->buttonTwigExtension;
     }
 
     /**
      * Set the button Twig extension.
      *
-     * @param ButtonTwigExtension $buttonTwigExtension The button Twig extension.
+     * @param ButtonTwigExtension|null $buttonTwigExtension The button Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setButtonTwigExtension(ButtonTwigExtension $buttonTwigExtension = null) {
+    protected function setButtonTwigExtension(?ButtonTwigExtension $buttonTwigExtension): self {
         $this->buttonTwigExtension = $buttonTwigExtension;
         return $this;
     }

@@ -37,14 +37,14 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
     /**
      * Encode an URI into base 64.
      *
-     * @param string $uri The URI.
+     * @param string|null $uri The URI.
      * @return string Returns the URI encoded into base 64.
      * @throws ExceptionInterface Throws an exception if an error occurs
      */
-    private function base64Encode($uri) {
+    private function base64Encode(?string $uri): string {
 
         if (null === $uri) {
-            return null;
+            return "";
         }
 
         $splFileObject = new SplFileObject($uri);
@@ -68,7 +68,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      * @return string Returns the Bootstrap base 64 image.
      * @throws ExceptionInterface Throws an exception if an error occurs
      */
-    public function bootstrapImageBase64Function(array $args = []) {
+    public function bootstrapImageBase64Function(array $args = []): string {
 
         $src = $this->base64Encode(ArrayHelper::get($args, "src"));
 
@@ -80,7 +80,7 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),
             new TwigFunction("bsImageBase64", [$this, "bootstrapImageBase64Function"], ["is_safe" => ["html"]]),

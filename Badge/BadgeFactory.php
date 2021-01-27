@@ -26,7 +26,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the danger badge.
      */
-    public static function newDangerBadge() {
+    public static function newDangerBadge(): BadgeInterface {
         return new DangerBadge();
     }
 
@@ -35,7 +35,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the dark badge.
      */
-    public static function newDarkBadge() {
+    public static function newDarkBadge(): BadgeInterface {
         return new DarkBadge();
     }
 
@@ -44,7 +44,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the default badge.
      */
-    public static function newDefaultBadge() {
+    public static function newDefaultBadge(): BadgeInterface {
         return new DefaultBadge();
     }
 
@@ -53,7 +53,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the info badge.
      */
-    public static function newInfoBadge() {
+    public static function newInfoBadge(): BadgeInterface {
         return new InfoBadge();
     }
 
@@ -62,7 +62,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the light badge.
      */
-    public static function newLightBadge() {
+    public static function newLightBadge(): BadgeInterface {
         return new LightBadge();
     }
 
@@ -71,7 +71,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the primary badge.
      */
-    public static function newPrimaryBadge() {
+    public static function newPrimaryBadge(): BadgeInterface {
         return new PrimaryBadge();
     }
 
@@ -80,7 +80,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the secondary badge.
      */
-    public static function newSecondaryBadge() {
+    public static function newSecondaryBadge(): BadgeInterface {
         return new SecondaryBadge();
     }
 
@@ -89,7 +89,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the success badge.
      */
-    public static function newSuccessBadge() {
+    public static function newSuccessBadge(): BadgeInterface {
         return new SuccessBadge();
     }
 
@@ -98,7 +98,7 @@ class BadgeFactory {
      *
      * @return BadgeInterface Returns the warning badge.
      */
-    public static function newWarningBadge() {
+    public static function newWarningBadge(): BadgeInterface {
         return new WarningBadge();
     }
 
@@ -109,7 +109,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the badge.
      */
-    protected static function parseBadge(BadgeInterface $badge, array $args) {
+    protected static function parseBadge(BadgeInterface $badge, array $args): BadgeInterface {
 
         $badge->setContent(ArrayHelper::get($args, "content"));
         $badge->setPill(ArrayHelper::get($args, "pill", false));
@@ -123,7 +123,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the danger badge.
      */
-    public static function parseDangerBadge(array $args) {
+    public static function parseDangerBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newDangerBadge(), $args);
     }
 
@@ -133,7 +133,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the dark badge.
      */
-    public static function parseDarkBadge(array $args) {
+    public static function parseDarkBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newDarkBadge(), $args);
     }
 
@@ -143,7 +143,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the default badge.
      */
-    public static function parseDefaultBadge(array $args) {
+    public static function parseDefaultBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newDefaultBadge(), $args);
     }
 
@@ -153,7 +153,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the info badge.
      */
-    public static function parseInfoBadge(array $args) {
+    public static function parseInfoBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newInfoBadge(), $args);
     }
 
@@ -163,7 +163,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the light badge.
      */
-    public static function parseLightBadge(array $args) {
+    public static function parseLightBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newLightBadge(), $args);
     }
 
@@ -173,7 +173,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the primary badge.
      */
-    public static function parsePrimaryBadge(array $args) {
+    public static function parsePrimaryBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newPrimaryBadge(), $args);
     }
 
@@ -183,7 +183,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the secondary badge.
      */
-    public static function parseSecondaryBadge(array $args) {
+    public static function parseSecondaryBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newSecondaryBadge(), $args);
     }
 
@@ -193,7 +193,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the success badge.
      */
-    public static function parseSuccessBadge(array $args) {
+    public static function parseSuccessBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newSuccessBadge(), $args);
     }
 
@@ -203,7 +203,7 @@ class BadgeFactory {
      * @param array $args The arguments.
      * @return BadgeInterface Returns the warning badge.
      */
-    public static function parseWarningBadge(array $args) {
+    public static function parseWarningBadge(array $args): BadgeInterface {
         return static::parseBadge(static::newWarningBadge(), $args);
     }
 }

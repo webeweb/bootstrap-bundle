@@ -41,7 +41,7 @@ class AlertFactoryTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the Arguments mock.
@@ -56,7 +56,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDangerAlert() {
+    public function testNewDangerAlert(): void {
 
         $obj = AlertFactory::newDangerAlert();
 
@@ -68,7 +68,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDarkAlert() {
+    public function testNewDarkAlert(): void {
 
         $obj = AlertFactory::newDarkAlert();
 
@@ -80,7 +80,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewInfoAlert() {
+    public function testNewInfoAlert(): void {
 
         $obj = AlertFactory::newInfoAlert();
 
@@ -92,7 +92,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewLightAlert() {
+    public function testNewLightAlert(): void {
 
         $obj = AlertFactory::newLightAlert();
 
@@ -104,7 +104,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewPrimaryAlert() {
+    public function testNewPrimaryAlert(): void {
 
         $obj = AlertFactory::newPrimaryAlert();
 
@@ -116,7 +116,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSecondaryAlert() {
+    public function testNewSecondaryAlert(): void {
 
         $obj = AlertFactory::newSecondaryAlert();
 
@@ -128,7 +128,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSuccessAlert() {
+    public function testNewSuccessAlert(): void {
 
         $obj = AlertFactory::newSuccessAlert();
 
@@ -140,7 +140,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewWarningAlert() {
+    public function testNewWarningAlert(): void {
 
         $obj = AlertFactory::newWarningAlert();
 
@@ -152,7 +152,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDangerAlert() {
+    public function testParseDangerAlert(): void {
 
         $obj = AlertFactory::parseDangerAlert($this->args);
 
@@ -169,7 +169,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDarkAlert() {
+    public function testParseDarkAlert(): void {
 
         $obj = AlertFactory::parseDarkAlert($this->args);
 
@@ -186,7 +186,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseInfoAlert() {
+    public function testParseInfoAlert(): void {
 
         $obj = AlertFactory::parseInfoAlert($this->args);
 
@@ -203,7 +203,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseLightAlert() {
+    public function testParseLightAlert(): void {
 
         $obj = AlertFactory::parseLightAlert($this->args);
 
@@ -220,7 +220,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParsePrimaryAlert() {
+    public function testParsePrimaryAlert(): void {
 
         $obj = AlertFactory::parsePrimaryAlert($this->args);
 
@@ -237,7 +237,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseSecondaryAlert() {
+    public function testParseSecondaryAlert(): void {
 
         $obj = AlertFactory::parseSecondaryAlert($this->args);
 
@@ -254,7 +254,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseSuccessAlert() {
+    public function testParseSuccessAlert(): void {
 
         $obj = AlertFactory::parseSuccessAlert($this->args);
 
@@ -271,7 +271,7 @@ class AlertFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseWarningAlert() {
+    public function testParseWarningAlert(): void {
 
         $obj = AlertFactory::parseWarningAlert($this->args);
 

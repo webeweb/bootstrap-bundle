@@ -22,25 +22,26 @@ trait FormButtonTwigExtensionTrait {
     /**
      * Form button Twig extension.
      *
-     * @var FormButtonTwigExtension
+     * @var FormButtonTwigExtension|null
      */
     private $formButtonTwigExtension;
 
     /**
-     * Get the form button Twig extention.
+     * Get the form button Twig extension.
      *
-     * @return FormButtonTwigExtension Returns the form button Twig extension.
+     * @return FormButtonTwigExtension|null Returns the form button Twig extension.
      */
-    public function getFormButtonTwigExtension() {
+    public function getFormButtonTwigExtension(): ?FormButtonTwigExtension {
         return $this->formButtonTwigExtension;
     }
 
     /**
      * Set the form button Twig extension.
      *
-     * @param FormButtonTwigExtension $formButtonTwigExtension The form button Twig extension.
+     * @param FormButtonTwigExtension|null $formButtonTwigExtension The form button Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setFormButtonTwigExtension(FormButtonTwigExtension $formButtonTwigExtension = null) {
+    protected function setFormButtonTwigExtension(?FormButtonTwigExtension $formButtonTwigExtension): self {
         $this->formButtonTwigExtension = $formButtonTwigExtension;
         return $this;
     }

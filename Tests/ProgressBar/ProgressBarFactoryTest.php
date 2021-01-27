@@ -38,7 +38,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the Arguments mock.
@@ -57,7 +57,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewBasicProgressBar() {
+    public function testNewBasicProgressBar(): void {
 
         $obj = ProgressBarFactory::newBasicProgressBar();
 
@@ -69,7 +69,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDangerProgressBar() {
+    public function testNewDangerProgressBar(): void {
 
         $obj = ProgressBarFactory::newDangerProgressBar();
 
@@ -81,7 +81,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewInfoProgressBar() {
+    public function testNewInfoProgressBar(): void {
 
         $obj = ProgressBarFactory::newInfoProgressBar();
 
@@ -93,7 +93,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSuccessProgressBar() {
+    public function testNewSuccessProgressBar(): void {
 
         $obj = ProgressBarFactory::newSuccessProgressBar();
 
@@ -105,7 +105,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewWarningProgressBar() {
+    public function testNewWarningProgressBar(): void {
 
         $obj = ProgressBarFactory::newWarningProgressBar();
 
@@ -117,7 +117,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseBasicProgressBar() {
+    public function testParseBasicProgressBar(): void {
 
         $obj = ProgressBarFactory::parseBasicProgressBar($this->args);
 
@@ -137,7 +137,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseDangerProgressBar() {
+    public function testParseDangerProgressBar(): void {
 
         $obj = ProgressBarFactory::parseDangerProgressBar($this->args);
 
@@ -157,7 +157,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseInfoProgressBar() {
+    public function testParseInfoProgressBar(): void {
 
         $obj = ProgressBarFactory::parseInfoProgressBar($this->args);
 
@@ -177,7 +177,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseSuccessProgressBar() {
+    public function testParseSuccessProgressBar(): void {
 
         $obj = ProgressBarFactory::parseSuccessProgressBar($this->args);
 
@@ -197,7 +197,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseWarningProgressBar() {
+    public function testParseWarningProgressBar(): void {
 
         $obj = ProgressBarFactory::parseWarningProgressBar($this->args);
 

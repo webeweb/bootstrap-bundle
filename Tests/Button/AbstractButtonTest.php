@@ -28,7 +28,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetActive() {
+    public function testSetActive(): void {
 
         $obj = new TestButton("danger");
 
@@ -41,7 +41,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetBlock() {
+    public function testSetBlock(): void {
 
         $obj = new TestButton("danger");
 
@@ -54,7 +54,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetContent() {
+    public function testSetContent(): void {
 
         $obj = new TestButton("danger");
 
@@ -67,7 +67,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetDisabled() {
+    public function testSetDisabled(): void {
 
         $obj = new TestButton("danger");
 
@@ -80,7 +80,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetOutline() {
+    public function testSetOutline(): void {
 
         $obj = new TestButton("danger");
 
@@ -93,7 +93,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSize() {
+    public function testSetSize(): void {
 
         $obj = new TestButton("danger");
 
@@ -106,7 +106,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTitle() {
+    public function testSetTitle(): void {
 
         $obj = new TestButton("danger");
 
@@ -119,7 +119,7 @@ class AbstractButtonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestButton("danger");
 

@@ -25,7 +25,7 @@ class AlertRenderer {
      * @param AlertInterface $alert The alert.
      * @return string Returns the rendered block.
      */
-    public static function renderContent(AlertInterface $alert) {
+    public static function renderContent(AlertInterface $alert): string {
         return null !== $alert->getContent() ? $alert->getContent() : "";
     }
 
@@ -35,7 +35,7 @@ class AlertRenderer {
      * @param AlertInterface $alert The alert.
      * @return string|null Returns the rendered dismissible.
      */
-    public static function renderDismissible(AlertInterface $alert) {
+    public static function renderDismissible(AlertInterface $alert): ?string {
         return true === $alert->getDismissible() ? "alert-dismissible" : null;
     }
 
@@ -45,7 +45,7 @@ class AlertRenderer {
      * @param AlertInterface $alert The alert.
      * @return string|null Returns the rendered type.
      */
-    public static function renderType(AlertInterface $alert) {
+    public static function renderType(AlertInterface $alert): ?string {
         return null !== $alert->getType() ? $alert->getPrefix() . $alert->getType() : null;
     }
 }

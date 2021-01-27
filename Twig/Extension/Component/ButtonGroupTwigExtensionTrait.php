@@ -22,25 +22,26 @@ trait ButtonGroupTwigExtensionTrait {
     /**
      * Button group Twig extension.
      *
-     * @var ButtonGroupTwigExtension
+     * @var ButtonGroupTwigExtension|null
      */
     private $buttonGroupTwigExtension;
 
     /**
-     * Get the button group Twig extention.
+     * Get the button group Twig extension.
      *
-     * @return ButtonGroupTwigExtension Returns the button group Twig extension.
+     * @return ButtonGroupTwigExtension|null Returns the button group Twig extension.
      */
-    public function getButtonGroupTwigExtension() {
+    public function getButtonGroupTwigExtension(): ?ButtonGroupTwigExtension {
         return $this->buttonGroupTwigExtension;
     }
 
     /**
      * Set the button group Twig extension.
      *
-     * @param ButtonGroupTwigExtension $buttonGroupTwigExtension The button group Twig extension.
+     * @param ButtonGroupTwigExtension|null $buttonGroupTwigExtension The button group Twig extension.
+     * @return self Returns this instance.
      */
-    protected function setButtonGroupTwigExtension(ButtonGroupTwigExtension $buttonGroupTwigExtension = null) {
+    protected function setButtonGroupTwigExtension(?ButtonGroupTwigExtension $buttonGroupTwigExtension): self {
         $this->buttonGroupTwigExtension = $buttonGroupTwigExtension;
         return $this;
     }

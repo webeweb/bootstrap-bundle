@@ -31,7 +31,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testBootstrapImageBase64Function() {
+    public function testBootstrapImageBase64Function(): void {
 
         // Set the mocks.
         $ref = file_get_contents(__DIR__ . "/ImageTwigExtensionTest.txt");
@@ -49,7 +49,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapImageBase64FunctionWithAlt() {
+    public function testBootstrapImageBase64FunctionWithAlt(): void {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -63,7 +63,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapImageBase64FunctionWithClass() {
+    public function testBootstrapImageBase64FunctionWithClass(): void {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -77,7 +77,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testBootstrapImageBase64FunctionWithHeight() {
+    public function testBootstrapImageBase64FunctionWithHeight(): void {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -92,7 +92,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testBootstrapImageBase64FunctionWithSrc() {
+    public function testBootstrapImageBase64FunctionWithSrc(): void {
 
         // Set the mocks.
         $ref = file_get_contents(__DIR__ . "/ImageTwigExtensionTest.txt");
@@ -111,7 +111,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testBootstrapImageBase64FunctionWithUsemap() {
+    public function testBootstrapImageBase64FunctionWithUsemap(): void {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -126,7 +126,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testBootstrapImageBase64FunctionWithWidth() {
+    public function testBootstrapImageBase64FunctionWithWidth(): void {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -141,7 +141,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testBootstrapImageBase64FunctionWithoutArguments() {
+    public function testBootstrapImageBase64FunctionWithoutArguments(): void {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -155,7 +155,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
@@ -178,7 +178,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.twig.extension.css.image", ImageTwigExtension::SERVICE_NAME);
 
