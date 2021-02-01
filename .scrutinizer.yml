@@ -43,6 +43,9 @@ build:
                 php: 7.1.27
                 variables:
                     SYMFONY_VERSION: 4.4.*
+        analysis:
+            environment:
+                php: 7.1.27
     environment:
         php:
             ini:
