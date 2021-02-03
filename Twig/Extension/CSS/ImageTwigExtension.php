@@ -47,13 +47,9 @@ class ImageTwigExtension extends AbstractImageTwigExtension {
             return "";
         }
 
-        $splFileObject = new SplFileObject($uri);
-
-        if (30100 < Kernel::VERSION_ID) {
-            return (new DataUriNormalizer())->normalize($splFileObject);
-        }
-
         $data = "";
+
+        $splFileObject = new SplFileObject($uri);
         while (false === $splFileObject->eof()) {
             $data .= $splFileObject->fgets();
         }
