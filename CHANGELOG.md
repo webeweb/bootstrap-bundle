@@ -18,7 +18,6 @@ CHANGELOG
 > IMPORTANT NOTICE: The following deprecated classes has been removed
 > - WBW\Bundle\BootstrapBundle\BootstrapInterface
 
-- Add PHP 8.0 support
 - Improve PHP doc
 - Improve unit tests
 - Migrating from PHP 5.6 to PHP 7.1
