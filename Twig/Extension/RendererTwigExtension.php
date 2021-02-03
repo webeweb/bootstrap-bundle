@@ -44,11 +44,11 @@ class RendererTwigExtension extends BaseTwigExtension {
      * Render an icon.
      *
      * @param Environment $twigEnvironment The twig environment.
-     * @param string|null $name The icon name.
+     * @param string $name The icon name.
      * @param string|null $style The icon style.
      * @return string Returns a rendered icon.
      */
-    public static function renderIcon(Environment $twigEnvironment, ?string $name, ?string $style = null): string {
+    public static function renderIcon(Environment $twigEnvironment, string $name, ?string $style = null): string {
 
         // Determines the handler.
         $handler = explode(":", $name);

@@ -89,7 +89,7 @@ abstract class AbstractAlert implements AlertInterface {
     /**
      * {@inheritDoc}
      */
-    public function setDismissible(?bool $dismissible): ALertInterface {
+    public function setDismissible(?bool $dismissible): AlertInterface {
         $this->dismissible = $dismissible;
         return $this;
     }
