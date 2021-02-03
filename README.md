@@ -1,8 +1,8 @@
 bootstrap-bundle
 ================
 
-[![Build Status](https://img.shields.io/travis/webeweb/bootstrap-bundle/master.svg?style=flat-square)](https://travis-ci.com/webeweb/bootstrap-bundle)
-[![Coverage Status](https://img.shields.io/coveralls/webeweb/bootstrap-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/bootstrap-bundle?branch=master)
+[![Build Status](https://img.shields.io/github/workflow/status/webeweb/bootstrap-bundle/build?style=flat-square)](https://github.com/webeweb/bootstrap-bundle/actions)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/webeweb/bootstrap-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/bootstrap-bundle?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/bootstrap-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/bootstrap-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/bootstrap-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/bootstrap-bundle)
 [![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/bootstrap-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/bootstrap-bundle)
