@@ -4,39 +4,9 @@ wbw_bootstrap_layout:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layoutAction" }
     methods: [ "GET" ]
 
-wbw_bootstrap_layout3:
-    path: "/layout3"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout3Action" }
-    methods: [ "GET" ]
-
-wbw_bootstrap_layout4:
-    path: "/layout4"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layout4Action" }
-    methods: [ "GET" ]
-
-wbw_bootstrap_blank:
-    path: "/blank"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::blankAction" }
-    methods: [ "GET" ]
-
 wbw_bootstrap_flashbag:
     path: "/flashbag"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
-    methods: [ "GET" ]
-
-wbw_bootstrap_javascripts:
-    path: "/javascripts"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::javascriptsAction" }
-    methods: [ "GET" ]
-
-wbw_bootstrap_stylesheets:
-    path: "/stylesheets"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::stylesheetsAction" }
-    methods: [ "GET" ]
-
-wbw_bootstrap_twig_console:
-    path: "/twig-console"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::twigConsoleAction" }
     methods: [ "GET" ]
 
 wbw_bootstrap_work_in_progress:

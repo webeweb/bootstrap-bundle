@@ -47,57 +47,12 @@ class TestLayoutController extends AbstractController {
     }
 
     /**
-     * Displays a javascripts page.
-     *
-     * @return Response Returns the response.
-     */
-    public function javascriptsAction(): Response {
-        return $this->render("@WBWBootstrap/layout/javascripts.html.twig");
-    }
-
-    /**
-     * Displays a layout3 page.
-     *
-     * @return Response Returns the response.
-     */
-    public function layout3Action(): Response {
-        return $this->render("@WBWBootstrap/layout3.html.twig");
-    }
-
-    /**
-     * Displays a layout4 page.
-     *
-     * @return Response Returns the response.
-     */
-    public function layout4Action(): Response {
-        return $this->render("@WBWBootstrap/layout4.html.twig");
-    }
-
-    /**
      * Displays a layout page.
      *
      * @return Response Returns the response.
      */
     public function layoutAction(): Response {
         return $this->render("@WBWBootstrap/layout.html.twig");
-    }
-
-    /**
-     * Displays a stylesheets page.
-     *
-     * @return Response Returns the response.
-     */
-    public function stylesheetsAction(): Response {
-        return $this->render("@WBWBootstrap/layout/stylesheets.html.twig");
-    }
-
-    /**
-     * Displays a work in progress page.
-     *
-     * @return Response Returns the response.
-     */
-    public function twigConsoleAction(): Response {
-        return $this->render("@WBWBootstrap/layout/twig-console.html.twig");
     }
 
     /**

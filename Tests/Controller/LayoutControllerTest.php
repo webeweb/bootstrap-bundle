@@ -32,20 +32,6 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the blankAction() method.
-     *
-     * @return void
-     */
-    public function testBlankAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/blank");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-    }
-
-    /**
      * Tests the flashbagAction() method.
      *
      * @return void
@@ -59,58 +45,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the response.
-        $res = file_get_contents(__DIR__ . "/testFlashbagAction.html.txt") . "    ";
+        $res = file_get_contents(__DIR__ . "/LayoutControllerTest.testFlashbagAction.html.txt") . "    ";
         $this->assertEquals($res, $client->getResponse()->getContent());
-    }
-
-    /**
-     * Tests the javascriptsAction() method.
-     *
-     * @return void
-     */
-    public function testJavascriptsAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/javascripts");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-    }
-
-    /**
-     * Tests the layout3Action() method.
-     *
-     * @return void
-     */
-    public function testLayout3Action(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/layout3");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the Bootstrap version.
-        //$this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_3 . "/css", $client->getResponse()->getContent());
-        //$this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_3 . "/js", $client->getResponse()->getContent());
-    }
-
-    /**
-     * Tests the layout4Action() method.
-     *
-     * @return void
-     */
-    public function testLayout4Action(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/layout4");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the Bootstrap version.
-        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
-        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
     }
 
     /**
@@ -129,34 +65,6 @@ class LayoutControllerTest extends AbstractWebTestCase {
         // Check the Bootstrap version.
         $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
         $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
-    }
-
-    /**
-     * Tests the stylesheetsAction() method.
-     *
-     * @return void
-     */
-    public function testStylesheetsAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/stylesheets");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-    }
-
-    /**
-     * Tests the twigConsoleAction() method.
-     *
-     * @return void
-     */
-    public function testTwigConsoleAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/twig-console");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }
 
     /**
