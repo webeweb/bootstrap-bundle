@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.11.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.0) (2021-02-03)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
 > - Symfony 2.7
