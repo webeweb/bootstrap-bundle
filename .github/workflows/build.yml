@@ -73,6 +73,8 @@ jobs:
     coverage:
         name:    "Coverage"
         runs-on: ubuntu-18.04
+        needs:   "build"
+        if:      always()
 
         steps:
             -   name: "Coverage"
