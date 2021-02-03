@@ -73,7 +73,6 @@ jobs:
     coverage:
         name:    "Coverage"
         runs-on: ubuntu-18.04
-        needs:   "build"
 
         steps:
             -   name: "Coverage"
