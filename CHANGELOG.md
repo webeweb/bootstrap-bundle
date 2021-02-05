@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.11.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.1) (2021-02-05)
+
+- Replace Class:: by static::
+
 ### [3.11.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.0) (2021-02-03)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
