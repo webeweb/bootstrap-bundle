@@ -23,6 +23,6 @@ class DarkAlert extends AbstractAlert {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::ALERT_TYPE_DARK);
+        parent::__construct(static::ALERT_TYPE_DARK);
     }
 }

@@ -23,6 +23,6 @@ class PrimaryAlert extends AbstractAlert {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::ALERT_TYPE_PRIMARY);
+        parent::__construct(static::ALERT_TYPE_PRIMARY);
     }
 }

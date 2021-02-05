@@ -23,6 +23,6 @@ class LinkButton extends AbstractButton {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::BUTTON_TYPE_LINK);
+        parent::__construct(static::BUTTON_TYPE_LINK);
     }
 }

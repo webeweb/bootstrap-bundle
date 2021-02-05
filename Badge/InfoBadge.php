@@ -23,6 +23,6 @@ class InfoBadge extends AbstractBadge {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::BADGE_TYPE_INFO);
+        parent::__construct(static::BADGE_TYPE_INFO);
     }
 }

@@ -23,6 +23,6 @@ class WarningProgressBar extends AbstractProgressBar {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::PROGRESS_BAR_TYPE_WARNING);
+        parent::__construct(static::PROGRESS_BAR_TYPE_WARNING);
     }
 }

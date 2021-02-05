@@ -23,6 +23,6 @@ class SecondaryBadge extends AbstractBadge {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::BADGE_TYPE_SECONDARY);
+        parent::__construct(static::BADGE_TYPE_SECONDARY);
     }
 }
