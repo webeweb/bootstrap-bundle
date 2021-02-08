@@ -43,7 +43,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      * @param BaseTranslatorInterface $translator The translator.
      * @param LabelTwigExtension $extension The label component Twig extension.
      */
-    public function __construct(Environment $twigEnvironment, BaseTranslatorInterface $translator, LabelTwigExtension $extension) {
+    public function __construct(Environment $twigEnvironment, $translator, LabelTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
         $this->setLabelTwigExtension($extension);
     }
