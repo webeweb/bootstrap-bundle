@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.11.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.2) (2021-02-08)
+
+- Fix some class_alias uses
+
 ### [3.11.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.1) (2021-02-05)
 
 - Replace Class:: by static::
