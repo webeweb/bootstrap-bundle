@@ -38,16 +38,4 @@ class DropdownTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setDropdownTwigExtension($dropdownTwigExtension);
         $this->assertSame($dropdownTwigExtension, $obj->getDropdownTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestDropdownTwigExtensionTrait();
-
-        $this->assertNull($obj->getDropdownTwigExtension());
-    }
 }

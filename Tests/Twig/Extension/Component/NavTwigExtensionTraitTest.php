@@ -38,16 +38,4 @@ class NavTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setNavTwigExtension($navTwigExtension);
         $this->assertSame($navTwigExtension, $obj->getNavTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestNavTwigExtensionTrait();
-
-        $this->assertNull($obj->getNavTwigExtension());
-    }
 }

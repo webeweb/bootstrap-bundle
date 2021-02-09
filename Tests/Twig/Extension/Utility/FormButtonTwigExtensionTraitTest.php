@@ -42,16 +42,4 @@ class FormButtonTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setFormButtonTwigExtension($formButtonTwigExtension);
         $this->assertSame($formButtonTwigExtension, $obj->getFormButtonTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestFormButtonTwigExtensionTrait();
-
-        $this->assertNull($obj->getFormButtonTwigExtension());
-    }
 }

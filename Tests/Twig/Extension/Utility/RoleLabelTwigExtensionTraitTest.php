@@ -42,16 +42,4 @@ class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setRoleLabelTwigExtension($formButtonTwigExtension);
         $this->assertSame($formButtonTwigExtension, $obj->getRoleLabelTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestRoleLabelTwigExtensionTrait();
-
-        $this->assertNull($obj->getRoleLabelTwigExtension());
-    }
 }

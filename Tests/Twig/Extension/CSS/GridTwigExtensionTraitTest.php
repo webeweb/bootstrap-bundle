@@ -38,16 +38,4 @@ class GridTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setGridTwigExtension($gridTwigExtension);
         $this->assertSame($gridTwigExtension, $obj->getGridTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestGridTwigExtensionTrait();
-
-        $this->assertNull($obj->getGridTwigExtension());
-    }
 }

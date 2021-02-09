@@ -38,16 +38,4 @@ class ButtonGroupTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setButtonGroupTwigExtension($buttonGroupTwigExtension);
         $this->assertSame($buttonGroupTwigExtension, $obj->getButtonGroupTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestButtonGroupTwigExtensionTrait();
-
-        $this->assertNull($obj->getButtonGroupTwigExtension());
-    }
 }

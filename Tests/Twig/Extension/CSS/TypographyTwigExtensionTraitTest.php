@@ -38,16 +38,4 @@ class TypographyTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setTypographyTwigExtension($typographyTwigExtension);
         $this->assertSame($typographyTwigExtension, $obj->getTypographyTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestTypographyTwigExtensionTrait();
-
-        $this->assertNull($obj->getTypographyTwigExtension());
-    }
 }

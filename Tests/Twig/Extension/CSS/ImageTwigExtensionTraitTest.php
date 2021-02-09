@@ -38,16 +38,4 @@ class ImageTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setImageTwigExtension($imageTwigExtension);
         $this->assertSame($imageTwigExtension, $obj->getImageTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestImageTwigExtensionTrait();
-
-        $this->assertNull($obj->getImageTwigExtension());
-    }
 }

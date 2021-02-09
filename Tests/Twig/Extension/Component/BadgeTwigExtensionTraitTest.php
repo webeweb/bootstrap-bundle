@@ -38,16 +38,4 @@ class BadgeTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setBadgeTwigExtension($badgeTwigExtension);
         $this->assertSame($badgeTwigExtension, $obj->getBadgeTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestBadgeTwigExtensionTrait();
-
-        $this->assertNull($obj->getBadgeTwigExtension());
-    }
 }

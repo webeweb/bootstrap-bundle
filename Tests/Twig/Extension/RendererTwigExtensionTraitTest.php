@@ -38,16 +38,4 @@ class RendererTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setRendererTwigExtension($rendererTwigExtension);
         $this->assertSame($rendererTwigExtension, $obj->getRendererTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestRendererTwigExtensionTrait();
-
-        $this->assertNull($obj->getRendererTwigExtension());
-    }
 }

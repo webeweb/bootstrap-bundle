@@ -42,16 +42,4 @@ class TableButtonTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setTableButtonTwigExtension($tableButtonTwigExtension);
         $this->assertSame($tableButtonTwigExtension, $obj->getTableButtonTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestTableButtonTwigExtensionTrait();
-
-        $this->assertNull($obj->getTableButtonTwigExtension());
-    }
 }

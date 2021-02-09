@@ -38,16 +38,4 @@ class CodeTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setCodeTwigExtension($codeTwigExtension);
         $this->assertSame($codeTwigExtension, $obj->getCodeTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestCodeTwigExtensionTrait();
-
-        $this->assertNull($obj->getCodeTwigExtension());
-    }
 }

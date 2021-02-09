@@ -38,16 +38,4 @@ class GlyphiconTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setGlyphiconTwigExtension($glyphiconTwigExtension);
         $this->assertSame($glyphiconTwigExtension, $obj->getGlyphiconTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestGlyphiconTwigExtensionTrait();
-
-        $this->assertNull($obj->getGlyphiconTwigExtension());
-    }
 }

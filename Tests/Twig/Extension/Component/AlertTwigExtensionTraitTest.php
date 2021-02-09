@@ -38,16 +38,4 @@ class AlertTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setAlertTwigExtension($alertTwigExtension);
         $this->assertSame($alertTwigExtension, $obj->getAlertTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestAlertTwigExtensionTrait();
-
-        $this->assertNull($obj->getAlertTwigExtension());
-    }
 }
