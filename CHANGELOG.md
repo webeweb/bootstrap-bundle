@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.11.3](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.3) (2021-02-09)
+
+- Improve unit tests
+
 ### [3.11.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.2) (2021-02-08)
 
 - Fix some class_alias uses
