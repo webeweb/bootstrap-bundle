@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.12.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.12.0) (2021-02-15)
+
+- Update Bootstrap to 4.6.0
+
 ### [3.11.4](https://github.com/webeweb/bootstrap-bundle/tree/v3.11.4) (2021-02-10)
 
 - Improve code quality
