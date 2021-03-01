@@ -26,6 +26,6 @@ class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {
      * {@inheritDoc}
      */
     public function getAssetsRelativeDirectory(): string {
-        return static::ASSETS_RELATIVE_DIRECTORY;
+        return self::ASSETS_RELATIVE_DIRECTORY;
     }
 }

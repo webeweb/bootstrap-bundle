@@ -23,6 +23,6 @@ class WarningBadge extends AbstractBadge {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::BADGE_TYPE_WARNING);
+        parent::__construct(self::BADGE_TYPE_WARNING);
     }
 }

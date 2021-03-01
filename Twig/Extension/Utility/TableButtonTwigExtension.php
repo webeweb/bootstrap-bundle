@@ -72,7 +72,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
         $txt = $this->getTranslator()->trans("label.delete", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonDangerFunction(["title" => $txt, "icon" => "g:trash"]);
 
-        return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", static::DEFAULT_HREF));
+        return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**
@@ -86,7 +86,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
         $txt = $this->getTranslator()->trans("label.edit", [], "WBWBootstrapBundle");
         $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction(["title" => $txt, "icon" => "g:pencil"]);
 
-        return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", static::DEFAULT_HREF));
+        return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
 
     /**

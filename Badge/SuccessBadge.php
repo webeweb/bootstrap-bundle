@@ -23,6 +23,6 @@ class SuccessBadge extends AbstractBadge {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::BADGE_TYPE_SUCCESS);
+        parent::__construct(self::BADGE_TYPE_SUCCESS);
     }
 }

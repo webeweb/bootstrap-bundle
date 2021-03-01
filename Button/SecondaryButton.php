@@ -23,6 +23,6 @@ class SecondaryButton extends AbstractButton {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::BUTTON_TYPE_SECONDARY);
+        parent::__construct(self::BUTTON_TYPE_SECONDARY);
     }
 }

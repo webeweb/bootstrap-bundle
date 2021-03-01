@@ -23,6 +23,6 @@ class DangerAlert extends AbstractAlert {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::ALERT_TYPE_DANGER);
+        parent::__construct(self::ALERT_TYPE_DANGER);
     }
 }
