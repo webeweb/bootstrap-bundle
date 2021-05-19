@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.13.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.13.0) (2021-05-19)
+
+- Add Bootstrap 5.0.1
+
 ### [3.12.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.12.1) (2021-03-01)
 
 - Improve code quality
