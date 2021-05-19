@@ -89,6 +89,13 @@ interface WBWBootstrapInterface {
     const BOOTSTRAP_VERSION_4 = "4.6.0";
 
     /**
+     * Bootstrap version 5.
+     *
+     * @var string
+     */
+    const BOOTSTRAP_VERSION_5 = "5.0.1";
+
+    /**
      * Bootstrap "warning".
      *
      * @var string

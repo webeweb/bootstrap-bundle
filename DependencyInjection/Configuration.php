@@ -37,7 +37,7 @@ class Configuration implements ConfigurationInterface {
         $rootNode
             ->children()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
-                ->integerNode("version")->defaultValue(4)->info("Version")->min(3)->max(4)->end()
+                ->integerNode("version")->defaultValue(4)->info("Version")->min(3)->max(5)->end()
                 ->arrayNode("plugins")->info("Bootstrap plug-ins")
                     ->prototype("scalar")
                         ->validate()
