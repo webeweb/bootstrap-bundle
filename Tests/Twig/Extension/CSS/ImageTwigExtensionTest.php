@@ -35,7 +35,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
 
         // Set the mocks.
         $ref = file_get_contents(__DIR__ . "/ImageTwigExtensionTest.testBootstrapImageBase64Function.txt");
-        $src = getcwd() . "/Resources/doc/screenshot_1024x0860.png";
+        $src = realpath(__DIR__ . "/../../../../Resources/doc/screenshot_1024x0860.png");
 
         $obj = new ImageTwigExtension($this->twigEnvironment);
 
