@@ -1,12 +1,9 @@
-# Composer
 /vendor/*
 /.phpunit.result.cache
 /composer.lock
 
-# Resources
 /Resources/public/*
 !/Resources/public/.gitkeep
 
-# Fixtures
 /Tests/Fixtures/app/var/*
 !/Tests/Fixtures/app/var/.gitkeep
