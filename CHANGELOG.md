@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [3.14.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.14.0) (2021-08-16)
 
 - Improve unit tests
+- Update Bootstrap to 5.1.0
 
 ### [3.13.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.13.0) (2021-05-19)
 
