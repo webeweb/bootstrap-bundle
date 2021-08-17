@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 use SplFileObject;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Twig\TwigFunction;
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Image Twig extension.

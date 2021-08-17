@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Library\Core\Argument\Helper\StringHelper;
+use WBW\Library\Types\Helper\StringHelper;
 
 /**
  * Abstract image Twig extension.
