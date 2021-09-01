@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Alert;
+namespace WBW\Bundle\BootstrapBundle\Asset\Alert;
 
 /**
  * Alert renderer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Alert
+ * @package WBW\Bundle\BootstrapBundle\Asset\Alert
  */
 class AlertRenderer {
 

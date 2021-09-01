@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Alert;
 
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Alert\TestAlert;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Alert\TestAlert;
 
 /**
  * Abstract alert test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
 class AbstractAlertTest extends AbstractTestCase {
 

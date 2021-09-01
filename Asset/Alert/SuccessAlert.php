@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Alert;
+namespace WBW\Bundle\BootstrapBundle\Asset\Alert;
 
 /**
- * Info alert.
+ * Success alert.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Alert
+ * @package WBW\Bundle\BootstrapBundle\Asset\Alert
  */
-class InfoAlert extends AbstractAlert {
+class SuccessAlert extends AbstractAlert {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::ALERT_TYPE_INFO);
+        parent::__construct(self::ALERT_TYPE_SUCCESS);
     }
 }

@@ -9,25 +9,25 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Alert;
 
-use WBW\Bundle\BootstrapBundle\Alert\AlertFactory;
-use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\Alert\DangerAlert;
-use WBW\Bundle\BootstrapBundle\Alert\DarkAlert;
-use WBW\Bundle\BootstrapBundle\Alert\InfoAlert;
-use WBW\Bundle\BootstrapBundle\Alert\LightAlert;
-use WBW\Bundle\BootstrapBundle\Alert\PrimaryAlert;
-use WBW\Bundle\BootstrapBundle\Alert\SecondaryAlert;
-use WBW\Bundle\BootstrapBundle\Alert\SuccessAlert;
-use WBW\Bundle\BootstrapBundle\Alert\WarningAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertFactory;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\DangerAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\DarkAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\InfoAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\LightAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\PrimaryAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\SecondaryAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\SuccessAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\WarningAlert;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Alert factory test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
 class AlertFactoryTest extends AbstractTestCase {
 

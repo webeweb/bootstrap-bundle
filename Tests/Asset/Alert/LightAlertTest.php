@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Alert;
 
-use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\Alert\SecondaryAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\LightAlert;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Secondary alert test.
+ * Light alert test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
-class SecondaryAlertTest extends AbstractTestCase {
+class LightAlertTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,8 +30,8 @@ class SecondaryAlertTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new SecondaryAlert();
+        $obj = new LightAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_SECONDARY, $obj->getType());
+        $this->assertEquals(AlertInterface::ALERT_TYPE_LIGHT, $obj->getType());
     }
 }

@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Alert;
 
-use WBW\Bundle\BootstrapBundle\Alert\AlertFactory;
-use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\Alert\AlertRenderer;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertFactory;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertRenderer;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Alert renderer test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
 class AlertRendererTest extends AbstractTestCase {
 

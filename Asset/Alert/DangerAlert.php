@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Alert;
+namespace WBW\Bundle\BootstrapBundle\Asset\Alert;
 
 /**
- * Secondary alert.
+ * Danger alert.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Alert
+ * @package WBW\Bundle\BootstrapBundle\Asset\Alert
  */
-class SecondaryAlert extends AbstractAlert {
+class DangerAlert extends AbstractAlert {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::ALERT_TYPE_SECONDARY);
+        parent::__construct(self::ALERT_TYPE_DANGER);
     }
 }

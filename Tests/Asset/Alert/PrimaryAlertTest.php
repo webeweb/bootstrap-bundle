@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Alert;
 
-use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\Alert\InfoAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\PrimaryAlert;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Info alert test.
+ * Primary alert test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
-class InfoAlertTest extends AbstractTestCase {
+class PrimaryAlertTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,8 +30,8 @@ class InfoAlertTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new InfoAlert();
+        $obj = new PrimaryAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_INFO, $obj->getType());
+        $this->assertEquals(AlertInterface::ALERT_TYPE_PRIMARY, $obj->getType());
     }
 }

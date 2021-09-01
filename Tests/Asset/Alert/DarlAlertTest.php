@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Alert;
 
-use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\Alert\WarningAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\DarkAlert;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Warning alert test.
+ * Dark alert test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
-class WarningAlertTest extends AbstractTestCase {
+class DarkAlertTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,8 +30,8 @@ class WarningAlertTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new WarningAlert();
+        $obj = new DarkAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(AlertInterface::ALERT_TYPE_DARK, $obj->getType());
     }
 }

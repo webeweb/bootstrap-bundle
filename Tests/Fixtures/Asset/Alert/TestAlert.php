@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Alert;
 
-use WBW\Bundle\BootstrapBundle\Alert\AbstractAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AbstractAlert;
 
 /**
  * Test alert.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Alert
  */
 class TestAlert extends AbstractAlert {
 

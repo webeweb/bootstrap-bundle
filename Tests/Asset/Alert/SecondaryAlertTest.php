@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Alert;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Alert;
 
-use WBW\Bundle\BootstrapBundle\Alert\AlertInterface;
-use WBW\Bundle\BootstrapBundle\Alert\DangerAlert;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Alert\SecondaryAlert;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Danger alert test.
+ * Secondary alert test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Alert
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
-class DangerAlertTest extends AbstractTestCase {
+class SecondaryAlertTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,8 +30,8 @@ class DangerAlertTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DangerAlert();
+        $obj = new SecondaryAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(AlertInterface::ALERT_TYPE_SECONDARY, $obj->getType());
     }
 }

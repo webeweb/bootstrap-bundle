@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Alert;
+namespace WBW\Bundle\BootstrapBundle\Asset\Alert;
 
 /**
- * Light alert.
+ * Secondary alert.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Alert
+ * @package WBW\Bundle\BootstrapBundle\Asset\Alert
  */
-class LightAlert extends AbstractAlert {
+class SecondaryAlert extends AbstractAlert {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::ALERT_TYPE_LIGHT);
+        parent::__construct(self::ALERT_TYPE_SECONDARY);
     }
 }
