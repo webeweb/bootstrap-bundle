@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Theme;
+namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider as BaseTasksDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultSearchThemeProvider as BaseSearchThemeProvider;
 
 /**
- * Default tasks drop down theme provider.
+ * Default search theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Theme
+ * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
-class DefaultTasksDropDownThemeProvider extends BaseTasksDropDownThemeProvider {
+class DefaultSearchThemeProvider extends BaseSearchThemeProvider {
 
     /**
      * Constructor.

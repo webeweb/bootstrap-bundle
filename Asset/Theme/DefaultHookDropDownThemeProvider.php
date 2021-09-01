@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Theme;
+namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider as BaseNavigationThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider as BaseHookDropDownThemeProvider;
 
 /**
- * Default navigation theme provider.
+ * Default hook drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Theme
+ * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
-class DefaultNavigationThemeProvider extends BaseNavigationThemeProvider {
+class DefaultHookDropDownThemeProvider extends BaseHookDropDownThemeProvider {
 
     /**
      * Constructor.

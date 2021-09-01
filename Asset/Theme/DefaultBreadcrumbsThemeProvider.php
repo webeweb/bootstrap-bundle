@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Theme;
+namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider as BaseNotificationsDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider as BaseBreadcrumbsThemeProvider;
 
 /**
- * Default notifications drop down theme provider.
+ * Default breadcrumbs theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Theme
+ * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
-class DefaultNotificationsDropDownThemeProvider extends BaseNotificationsDropDownThemeProvider {
+class DefaultBreadcrumbsThemeProvider extends BaseBreadcrumbsThemeProvider {
 
     /**
      * Constructor.

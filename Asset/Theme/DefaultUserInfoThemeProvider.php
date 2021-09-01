@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Theme;
+namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider as BaseBreadcrumbsThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultUserInfoThemeProvider as BaseUserInfoThemeProvider;
 
 /**
- * Default breadcrumbs theme provider.
+ * Default user info theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Theme
+ * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
-class DefaultBreadcrumbsThemeProvider extends BaseBreadcrumbsThemeProvider {
+class DefaultUserInfoThemeProvider extends BaseUserInfoThemeProvider {
 
     /**
      * Constructor.

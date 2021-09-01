@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Theme;
+namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider as BaseApplicationThemeProvider;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider as BaseApplicati
  * Default application theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Theme
+ * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
 class DefaultApplicationThemeProvider extends BaseApplicationThemeProvider {
 

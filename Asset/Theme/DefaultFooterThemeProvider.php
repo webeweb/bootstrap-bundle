@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Theme;
+namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultUserInfoThemeProvider as BaseUserInfoThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultFooterThemeProvider as BaseFooterThemeProvider;
 
 /**
- * Default user info theme provider.
+ * Default footer theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Theme
+ * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
-class DefaultUserInfoThemeProvider extends BaseUserInfoThemeProvider {
+class DefaultFooterThemeProvider extends BaseFooterThemeProvider {
 
     /**
      * Constructor.

@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\BootstrapBundle\Theme\DefaultHookDropDownThemeProvider;
+use WBW\Bundle\BootstrapBundle\Asset\Theme\DefaultNavigationThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Default hook drop down theme provider test.
+ * Default navigation theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Theme
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Theme
  */
-class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
+class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,7 +29,7 @@ class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultHookDropDownThemeProvider();
+        $obj = new DefaultNavigationThemeProvider();
 
         $this->assertNotNull($obj);
     }

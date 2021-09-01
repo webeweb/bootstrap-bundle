@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Theme;
+namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider as BaseHookDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider as BaseNotificationsDropDownThemeProvider;
 
 /**
- * Default hook drop down theme provider.
+ * Default notifications drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Theme
+ * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
-class DefaultHookDropDownThemeProvider extends BaseHookDropDownThemeProvider {
+class DefaultNotificationsDropDownThemeProvider extends BaseNotificationsDropDownThemeProvider {
 
     /**
      * Constructor.

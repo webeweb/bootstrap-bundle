@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Theme;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\BootstrapBundle\Theme\DefaultTasksDropDownThemeProvider;
+use WBW\Bundle\BootstrapBundle\Asset\Theme\DefaultNotificationsDropDownThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Default tasks drop down theme provider test.
+ * Default notifications drop down theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\Theme
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Theme
  */
-class DefaultTasksDropDownThemeProviderTest extends AbstractTestCase {
+class DefaultNotificationsDropDownThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,7 +29,7 @@ class DefaultTasksDropDownThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultTasksDropDownThemeProvider();
+        $obj = new DefaultNotificationsDropDownThemeProvider();
 
         $this->assertNotNull($obj);
     }
