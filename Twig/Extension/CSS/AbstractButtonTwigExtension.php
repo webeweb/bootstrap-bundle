@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
-use WBW\Bundle\BootstrapBundle\Button\ButtonInterface;
-use WBW\Bundle\BootstrapBundle\Button\ButtonRenderer;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
 

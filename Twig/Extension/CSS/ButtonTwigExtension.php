@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\BootstrapBundle\Button\ButtonFactory;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonFactory;
 use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\Types\Helper\StringHelper;
 
