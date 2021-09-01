@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\Button\ButtonEnumerator;
+use WBW\Bundle\BootstrapBundle\Asset\Button\ButtonEnumerator;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Types\Helper\StringHelper;
 
