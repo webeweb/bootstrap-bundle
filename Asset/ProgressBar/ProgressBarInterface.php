@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Asset\ProgressBar;
 
 use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
  * Progress bar interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
  */
 interface ProgressBarInterface {
 

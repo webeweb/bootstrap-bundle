@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Asset\ProgressBar;
 
 /**
- * Info progress bar.
+ * Success progress bar.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
  */
-class InfoProgressBar extends AbstractProgressBar {
+class SuccessProgressBar extends AbstractProgressBar {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::PROGRESS_BAR_TYPE_INFO);
+        parent::__construct(self::PROGRESS_BAR_TYPE_SUCCESS);
     }
 }

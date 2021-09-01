@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\ProgressBar\DangerProgressBar;
-use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\DangerProgressBar;
+use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Danger progress bar test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar
  */
 class DangerProgressBarTest extends AbstractTestCase {
 

@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\ProgressBar\ProgressBarInterface;
-use WBW\Bundle\BootstrapBundle\ProgressBar\SuccessProgressBar;
+use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\InfoProgressBar;
+use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Success progress bar test.
+ * Info progress bar test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\BootstrapBundle\Tests\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar
  */
-class SuccessProgressBarTest extends AbstractTestCase {
+class InfoProgressBarTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,8 +30,8 @@ class SuccessProgressBarTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new SuccessProgressBar();
+        $obj = new InfoProgressBar();
 
-        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_INFO, $obj->getType());
     }
 }
