@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\Badge\BadgeRenderer;
+use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
