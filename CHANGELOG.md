@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+### master
+
+> IMPORTANT NOTICE: The following packages has been moved
+> - WBW\Bundle\BootstrapBundle\Alert
+> - WBW\Bundle\BootstrapBundle\Badge
+> - WBW\Bundle\BootstrapBundle\Button
+> - WBW\Bundle\BootstrapBundle\Navigation
+> - WBW\Bundle\BootstrapBundle\ProgressBar
+> - WBW\Bundle\BootstrapBundle\Theme
+
 ### [3.15.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.15.0) (2021-08-17)
 
 - Update dependencies
