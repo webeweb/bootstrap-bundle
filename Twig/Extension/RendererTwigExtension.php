@@ -12,7 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig\Environment;
-use Twig\TwigFilter;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension as BaseTwigExtension;
 
@@ -30,15 +29,6 @@ class RendererTwigExtension extends BaseTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.renderer";
-
-    /**
-     * Get the Twig filters.
-     *
-     * @return TwigFilter[] Returns the Twig filters.
-     */
-    public function getFilters(): array {
-        return [];
-    }
 
     /**
      * Render an icon.
