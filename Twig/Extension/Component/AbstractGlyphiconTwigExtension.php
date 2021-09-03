@@ -31,12 +31,14 @@ abstract class AbstractGlyphiconTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapGlyphicon(?string $name, ?string $style): string {
 
-        $attributes = [];
-
-        $attributes["class"][]     = "glyphicon";
-        $attributes["class"][]     = null !== $name ? "glyphicon-" . $name : null;
-        $attributes["aria-hidden"] = "true";
-        $attributes["style"]       = $style;
+        $attributes = [
+            "class"       => [
+                "glyphicon",
+                null !== $name ? "glyphicon-" . $name : null,
+            ],
+            "aria-hidden" => "true",
+            "style"       => $style,
+        ];
 
         return static::coreHTMLElement("span", null, $attributes);
     }

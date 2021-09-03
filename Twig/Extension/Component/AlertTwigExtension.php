@@ -80,9 +80,9 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      */
     public function bootstrapAlertLinkFunction(array $args = []): string {
 
-        $attributes = [];
-
-        $attributes["href"] = ArrayHelper::get($args, "href", NavigationInterface::NAVIGATION_HREF_DEFAULT);
+        $attributes = [
+            "href" => ArrayHelper::get($args, "href", NavigationInterface::NAVIGATION_HREF_DEFAULT),
+        ];
 
         $innerHTML = ArrayHelper::get($args, "content");
 

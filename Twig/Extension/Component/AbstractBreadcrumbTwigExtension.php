@@ -66,9 +66,11 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapBreadcrumbs(NavigationTree $tree): string {
 
-        $attributes = [];
-
-        $attributes["class"] = ["breadcrumb"];
+        $attributes = [
+            "class" => [
+                "breadcrumb",
+            ],
+        ];
 
         $innerHTML = [];
 

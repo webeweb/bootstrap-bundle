@@ -37,16 +37,18 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
 
         $classes = ButtonEnumerator::enumTypes();
 
-        $attributes = [];
-
-        $attributes["class"][]         = "btn";
-        $attributes["class"][]         = true === in_array($class, $classes) ? "btn-" . $class : "btn-default";
-        $attributes["class"][]         = "dropdown-toggle";
-        $attributes["type"][]          = "button";
-        $attributes["id"][]            = null !== $id ? $id : "";
-        $attributes["data-toggle"][]   = "dropdown";
-        $attributes["aria-haspopup"][] = "true";
-        $attributes["aria-expanded"][] = StringHelper::parseBoolean($expanded);
+        $attributes = [
+            "class"         => [
+                "btn",
+                true === in_array($class, $classes) ? "btn-" . $class : "btn-default",
+                "dropdown-toggle",
+            ],
+            "type"          => "button",
+            "id"            => null !== $id ? $id : "",
+            "data-toggle"   => "dropdown",
+            "aria-haspopup" => "true",
+            "aria-expanded" => StringHelper::parseBoolean($expanded),
+        ];
 
         $innerHTML = (null !== $content ? $content : "") . '<span class="caret"></span>';
 
@@ -60,10 +62,10 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapDropdownDivider(): string {
 
-        $attributes = [];
-
-        $attributes["class"] = "divider";
-        $attributes["role"]  = "separator";
+        $attributes = [
+            "class" => "divider",
+            "role"  => "separator",
+        ];
 
         return static::coreHTMLElement("li", null, $attributes);
     }
@@ -76,9 +78,9 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapDropdownHeader(?string $content): string {
 
-        $attributes = [];
-
-        $attributes["class"] = "dropdown-header";
+        $attributes = [
+            "class" => "dropdown-header",
+        ];
 
         return static::coreHTMLElement("li", $content, $attributes);
     }

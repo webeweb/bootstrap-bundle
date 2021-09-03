@@ -42,11 +42,13 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapNavs(array $items, ?string $class, ?bool $stacked): string {
 
-        $attributes = [];
-
-        $attributes["class"][] = "nav";
-        $attributes["class"][] = $class;
-        $attributes["class"][] = true === $stacked ? "nav-stacked" : null;
+        $attributes = [
+            "class" => [
+                "nav",
+                $class,
+                true === $stacked ? "nav-stacked" : null,
+            ],
+        ];
 
         $innerHTML = [];
         foreach ($items as $current) {

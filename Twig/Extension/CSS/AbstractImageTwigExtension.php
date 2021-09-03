@@ -38,14 +38,14 @@ abstract class AbstractImageTwigExtension extends AbstractTwigExtension {
 
         $template = "<img %attributes%/>";
 
-        $attributes = [];
-
-        $attributes["src"]    = $src;
-        $attributes["alt"]    = $alt;
-        $attributes["width"]  = $width;
-        $attributes["height"] = $height;
-        $attributes["class"]  = $class;
-        $attributes["usemap"] = $useMap;
+        $attributes = [
+            "src"    => $src,
+            "alt"    => $alt,
+            "width"  => $width,
+            "height" => $height,
+            "class"  => $class,
+            "usemap" => $useMap,
+        ];
 
         return str_replace(["%attributes%"], [StringHelper::parseArray($attributes)], $template);
     }

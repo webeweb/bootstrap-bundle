@@ -34,17 +34,20 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapButton(ButtonInterface $button, ?string $icon): string {
 
-        $attributes = [];
-
-        $attributes["class"]          = ["btn", ButtonRenderer::renderType($button)];
-        $attributes["class"][]        = ButtonRenderer::renderBlock($button);
-        $attributes["class"][]        = ButtonRenderer::renderSize($button);
-        $attributes["class"][]        = ButtonRenderer::renderActive($button);
-        $attributes["title"]          = ButtonRenderer::renderTitle($button);
-        $attributes["type"]           = "button";
-        $attributes["data-toggle"]    = ButtonRenderer::renderDataToggle($button);
-        $attributes["data-placement"] = ButtonRenderer::renderDataPLacement($button);
-        $attributes["disabled"]       = ButtonRenderer::renderDisabled($button);
+        $attributes = [
+            "class"          => [
+                "btn",
+                ButtonRenderer::renderType($button),
+                ButtonRenderer::renderBlock($button),
+                ButtonRenderer::renderSize($button),
+                ButtonRenderer::renderActive($button),
+            ],
+            "title"          => ButtonRenderer::renderTitle($button),
+            "type"           => "button",
+            "data-toggle"    => ButtonRenderer::renderDataToggle($button),
+            "data-placement" => ButtonRenderer::renderDataPLacement($button),
+            "disabled"       => ButtonRenderer::renderDisabled($button),
+        ];
 
         $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon) : "";
         $innerHTML = ButtonRenderer::renderContent($button);

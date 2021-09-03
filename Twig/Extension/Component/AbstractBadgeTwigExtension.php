@@ -32,11 +32,13 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapBadge(BadgeInterface $badge): string {
 
-        $attributes = [];
-
-        $attributes["class"]   = ["badge"];
-        $attributes["class"][] = BadgeRenderer::renderType($badge);
-        $attributes["class"][] = 4 === $this->getVersion() ? BadgeRenderer::renderPill($badge) : null;
+        $attributes = [
+            "class" => [
+                "badge",
+                BadgeRenderer::renderType($badge),
+                4 === $this->getVersion() ? BadgeRenderer::renderPill($badge) : null,
+            ],
+        ];
 
         $innerHTML = BadgeRenderer::renderContent($badge);
 

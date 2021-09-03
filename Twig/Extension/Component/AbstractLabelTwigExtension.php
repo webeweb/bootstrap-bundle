@@ -31,9 +31,12 @@ abstract class AbstractLabelTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapLabel(?string $content, ?string $class): string {
 
-        $attributes = [];
-
-        $attributes["class"] = ["label", $class];
+        $attributes = [
+            "class" => [
+                "label",
+                $class,
+            ],
+        ];
 
         return static::coreHTMLElement("span", $content, $attributes);
     }

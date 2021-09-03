@@ -39,16 +39,19 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
             $type = preg_replace("/progress-bar-(danger|info|success|warning)/", "bg-$1", $type);
         }
 
-        $attributes = [];
-
-        $attributes["class"]         = ["progress-bar", $type];
-        $attributes["class"][]       = ProgressBarRenderer::renderStriped($progressBar);
-        $attributes["class"][]       = ProgressBarRenderer::renderAnimated($progressBar);
-        $attributes["style"]         = ProgressBarRenderer::renderStyle($progressBar);
-        $attributes["role"]          = "progressbar";
-        $attributes["aria-valuenow"] = $progressBar->getValue();
-        $attributes["aria-valuemin"] = $progressBar->getMin();
-        $attributes["aria-valuemax"] = $progressBar->getMax();
+        $attributes = [
+            "class"         => [
+                "progress-bar",
+                $type,
+                ProgressBarRenderer::renderStriped($progressBar),
+                ProgressBarRenderer::renderAnimated($progressBar),
+            ],
+            "style"         => ProgressBarRenderer::renderStyle($progressBar),
+            "role"          => "progressbar",
+            "aria-valuenow" => $progressBar->getValue(),
+            "aria-valuemin" => $progressBar->getMin(),
+            "aria-valuemax" => $progressBar->getMax(),
+        ];
 
         $innerHTML = ProgressBarRenderer::renderContent($progressBar, $span);
 

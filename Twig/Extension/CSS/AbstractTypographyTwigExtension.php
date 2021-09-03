@@ -55,9 +55,11 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
 
         $sizes = [1, 2, 3, 4, 5, 6];
 
-        $attributes = [];
-
-        $attributes["class"] = [$class];
+        $attributes = [
+            "class" => [
+                $class,
+            ],
+        ];
 
         $element   = "h" . (true === in_array($size, $sizes) ? $size : 1);
         $secondary = null !== $description ? " <small>" . $description . "</small>" : "";
