@@ -49,6 +49,7 @@ twig:
 wbw_bootstrap:
     locales:
         bootstrap_markdown: "fr"
+        bootstrap_select:   "fr_FR"
         bootstrap_wysiwyg:  "fr-FR"
         summernote:         "fr-FR"
     plugins:
