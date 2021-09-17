@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.17.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.17.0) (2021-09-17)
+
+- Add Bootstrap Select locale support
+
 ### [3.16.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.16.0) (2021-09-03)
 
 > IMPORTANT NOTICE: The following packages has been moved
