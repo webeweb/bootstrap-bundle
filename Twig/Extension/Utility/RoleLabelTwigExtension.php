@@ -70,9 +70,10 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      * @param UserInterface|null $user The user.
      * @param array $roleColors The role colors.
      * @param array $roleTrans The role translations.
+     * @param string|null $domain The translation domain.
      * @return string Returns the Bootstrap role label.
      */
-    public function bootstrapRoleLabelFunction(?UserInterface $user, array $roleColors = [], array $roleTrans = []): string {
+    public function bootstrapRoleLabelFunction(?UserInterface $user, array $roleColors = [], array $roleTrans = [], string $domain = null): string {
 
         if (null === $user) {
             return "";
@@ -87,7 +88,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
 
             $trans = $role;
             if (true === array_key_exists($role, $roleTrans)) {
-                $trans = $this->getTranslator()->trans($roleTrans[$role]);
+                $trans = $this->getTranslator()->trans($roleTrans[$role], [], $domain);
             }
 
             $label = $this->getLabelTwigExtension()->bootstrapLabelDefaultFunction(["content" => $trans]);
