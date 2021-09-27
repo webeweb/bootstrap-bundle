@@ -48,12 +48,12 @@ abstract class AbstractGridTwigExtension extends AbstractTwigExtension {
             }
         }
 
-        $columns = [];
-
-        $columns[] = GridHelper::getCSSClassname("lg", $lg, $prefix);
-        $columns[] = GridHelper::getCSSClassname("md", $md, $prefix);
-        $columns[] = GridHelper::getCSSClassname("sm", $sm, $prefix);
-        $columns[] = GridHelper::getCSSClassname("xs", $xs, $prefix);
+        $columns = [
+            GridHelper::getCSSClassname("lg", $lg, $prefix),
+            GridHelper::getCSSClassname("md", $md, $prefix),
+            GridHelper::getCSSClassname("sm", $sm, $prefix),
+            GridHelper::getCSSClassname("xs", $xs, $prefix),
+        ];
 
         return trim(implode(" ", $columns));
     }

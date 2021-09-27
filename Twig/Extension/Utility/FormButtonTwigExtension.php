@@ -56,7 +56,11 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     public function bootstrapFormButtonCancelFunction(array $args = []): string {
 
         $txt = $this->getTranslator()->trans("label.cancel", [], "WBWBootstrapBundle");
-        $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction(["content" => $txt, "title" => $txt, "icon" => "fa:times"]);
+        $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction([
+            "content" => $txt,
+            "title"   => $txt,
+            "icon"    => "fa:times",
+        ]);
 
         return $this->getButtonTwigExtension()->bootstrapButtonLinkFilter($but, ArrayHelper::get($args, "href", self::DEFAULT_HREF));
     }
@@ -84,7 +88,11 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     public function bootstrapFormButtonSubmitFunction(): string {
 
         $txt = $this->getTranslator()->trans("label.submit", [], "WBWBootstrapBundle");
-        $but = $this->getButtonTwigExtension()->bootstrapButtonPrimaryFunction(["content" => $txt, "title" => $txt, "icon" => "fa:check"]);
+        $but = $this->getButtonTwigExtension()->bootstrapButtonPrimaryFunction([
+            "content" => $txt,
+            "title"   => $txt,
+            "icon"    => "fa:check",
+        ]);
 
         return $this->getButtonTwigExtension()->bootstrapButtonSubmitFilter($but);
     }
