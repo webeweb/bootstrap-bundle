@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.18.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.18.0) (2021-09-27)
+
+- Add domain translation into Role label Twig extension
+
 ### [3.17.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.17.0) (2021-09-17)
 
 - Add Bootstrap Select locale support
