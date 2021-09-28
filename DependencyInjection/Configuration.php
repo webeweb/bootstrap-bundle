@@ -147,10 +147,9 @@ class Configuration implements ConfigurationInterface {
                         ->end()
                     ->end()
                 ->end()
-                ->arrayNode("locales")->addDefaultsIfNotSet()
             ->end();
 
-        $localesNode = $rootNode->find("locales");
+        $localesNode = $rootNode->children()->arrayNode("locales")->addDefaultsIfNotSet();
         $this->addBootstrapDatepickerLocales($localesNode, $plugins);
         $this->addBootstrapMarkdownLocales($localesNode, $plugins);
         $this->addBootstrapSelectLocales($localesNode, $plugins);
