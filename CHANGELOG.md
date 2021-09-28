@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.19.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.19.0) (2021-09-28)
+
+- Add Bootstrap Datepicker locale support
+
 ### [3.18.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.18.0) (2021-09-27)
 
 - Add domain translation into Role label Twig extension
