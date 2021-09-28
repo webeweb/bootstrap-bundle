@@ -48,6 +48,7 @@ twig:
 # Bootstrap configuration
 wbw_bootstrap:
     locales:
+        bootstrap_datepicker: "fr"
         bootstrap_markdown: "fr"
         bootstrap_select:   "fr_FR"
         bootstrap_wysiwyg:  "fr-FR"
