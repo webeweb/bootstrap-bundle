@@ -8,7 +8,7 @@
 {% if ("prod" != app.environment) %}
     <!-- Bootstrap -->
 {% endif %}
-<link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/bootstrap-{{ version }}/css/bootstrap.min.css" | replace({"{{ version }}": _versions[_appVersion]})) }}">
+<link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/bootstrap-{{ version }}/css/bootstrap.min.css"|replace({"{{ version }}": _versions[_appVersion]})) }}">
 
 {% for _appPlugin in _appPlugins %}
 
@@ -23,7 +23,7 @@
             <!-- {{ _plugins[_appPlugin].description }} -->
         {% endif %}
 
-        {% set _path = (_webPath ~ _stylesheet) | replace(_replaces) %}
+        {% set _path = (_webPath ~ _stylesheet)|replace(_replaces) %}
         <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
     {% endfor %}
 {% endfor %}

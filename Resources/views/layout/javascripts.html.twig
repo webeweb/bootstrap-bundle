@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
 {% endif %}
 <script type="text/javascript" src="{{ asset(_webPath ~ "/popper.js-1.15.0/umd/popper.min.js") }}"></script>
-<script type="text/javascript" src="{{ asset(_webPath ~ "/bootstrap-{{ version }}/js/bootstrap.min.js" | replace({"{{ version }}": _versions[_appVersion]})) }}"></script>
+<script type="text/javascript" src="{{ asset(_webPath ~ "/bootstrap-{{ version }}/js/bootstrap.min.js"|replace({"{{ version }}": _versions[_appVersion]})) }}"></script>
 
 {% for _appPlugin in _appPlugins %}
 
@@ -25,7 +25,7 @@
             <!-- {{ _plugins[_appPlugin].description }} -->
         {% endif %}
 
-        {% set _path = (_webPath ~ _javascript) | replace(_replaces) %}
+        {% set _path = (_webPath ~ _javascript)|replace(_replaces) %}
         <script type="text/javascript" src="{{ asset(_path) }}"></script>
     {% endfor %}
 {% endfor %}
