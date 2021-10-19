@@ -9,9 +9,11 @@ Add the following lines into the `app/config/config.yml` file of your project:
 wbw_bootstrap:
     version: 4
     locales:
-        bootstrap_markdown: "fr"
-        bootstrap_wysiwyg:  "fr-FR"
-        summernote:         "fr-FR"
+        bootstrap_datepicker: "fr"
+        bootstrap_markdown:   "fr"
+        bootstrap_select:     "fr_FR"
+        bootstrap_wysiwyg:    "fr-FR"
+        summernote:           "fr-FR"
     plugins:
         - "bootstrap_colorpicker"
         - "bootstrap_datepicker"
@@ -31,13 +33,15 @@ The example below is complete and you can adapt this with your needs.
 
 The different parameters (optionals) are explained below:
 
-| Parameter          | Type     | Description                                                 |
-|:-------------------|:---------|:------------------------------------------------------------|
-| version            | int      | The Bootstrap version (by default: 4)                       |
-| bootstrap_markdown | string   | The Bootstrap Markdown plug-in locale (by default: "en")    |
-| bootstrap_wysiwyg  | string   | The Bootstrap WYSISYG plug-in locale (by default: "en-US")  | 
-| summernote         | string   | The Summernote plug-in locale (by default: "en-US")         |
-| plugins            | string[] | The plugins list                                            |
+| Parameter            | Type     | Description                                                 |
+|:---------------------|:---------|:------------------------------------------------------------|
+| version              | int      | The Bootstrap version (by default: 4)                       |
+| bootstrap_datepicker | string   | The Bootstrap DatePicker plug-in locale (by default: "en")  |
+| bootstrap_markdown   | string   | The Bootstrap Markdown plug-in locale (by default: "en")    |
+| bootstrap_select     | string   | The Bootstrap Select plug-in locale (by default: "en-US")   | 
+| bootstrap_wysiwyg    | string   | The Bootstrap WYSISYG plug-in locale (by default: "en-US")  | 
+| summernote           | string   | The Summernote plug-in locale (by default: "en-US")         |
+| plugins              | string[] | The plugins list                                            |
 
 Available parameters (locales and plug-ins lists) can be found into [assets.yml](../config/assets.yml) 
 
