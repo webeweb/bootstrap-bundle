@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### matser
+
+- Improve documentation
+
 ### [3.19.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.19.0) (2021-09-28)
 
 - Add Bootstrap Datepicker locale support
