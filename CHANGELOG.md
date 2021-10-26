@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### matser
+### [3.20.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.20.0) (2021-10-26)
 
+- Improve code quality
 - Improve documentation
 
 ### [3.19.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.19.0) (2021-09-28)
