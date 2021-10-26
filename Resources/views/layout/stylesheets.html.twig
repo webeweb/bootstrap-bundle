@@ -9,7 +9,6 @@
     <!-- Bootstrap -->
 {% endif %}
 <link type="text/css" rel="stylesheet" href="{{ asset(_webPath ~ "/bootstrap-{{ version }}/css/bootstrap.min.css"|replace({"{{ version }}": _versions[_appVersion]})) }}">
-
 {% for _appPlugin in _appPlugins %}
 
     {% set _replaces = {

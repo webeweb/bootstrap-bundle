@@ -11,7 +11,6 @@
 {% endif %}
 <script type="text/javascript" src="{{ asset(_webPath ~ "/popper.js-1.15.0/umd/popper.min.js") }}"></script>
 <script type="text/javascript" src="{{ asset(_webPath ~ "/bootstrap-{{ version }}/js/bootstrap.min.js"|replace({"{{ version }}": _versions[_appVersion]})) }}"></script>
-
 {% for _appPlugin in _appPlugins %}
 
     {% set _replaces = {

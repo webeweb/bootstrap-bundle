@@ -56,6 +56,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["items" => $this->items];
         $res = file_get_contents(__DIR__ . "/NavTwigExtensionTest.testBootstrapNavsJustified.html.txt");
+
         $this->assertEquals($res, $obj->bootstrapNavsJustified($arg) . "\n");
     }
 
@@ -70,6 +71,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["items" => $this->items, "stacked" => true];
         $res = file_get_contents(__DIR__ . "/NavTwigExtensionTest.testBootstrapNavsPills.html.txt");
+
         $this->assertEquals($res, $obj->bootstrapNavsPills($arg) . "\n");
     }
 
@@ -84,6 +86,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["items" => $this->items];
         $res = file_get_contents(__DIR__ . "/NavTwigExtensionTest.testBootstrapNavsPillsWithItems.html.txt");
+
         $this->assertEquals($res, $obj->bootstrapNavsPills($arg) . "\n");
     }
 
@@ -98,6 +101,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["items" => $this->items];
         $res = file_get_contents(__DIR__ . "/NavTwigExtensionTest.testBootstrapNavsTabs.html.txt");
+
         $this->assertEquals($res, $obj->bootstrapNavsTabs($arg) . "\n");
     }
 

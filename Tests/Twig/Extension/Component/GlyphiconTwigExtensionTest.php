@@ -35,6 +35,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["name" => "asterisk"];
         $res = '<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>';
+
         $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+
         $this->assertEquals($res, $obj->bootstrapGlyphiconFunction($arg));
     }
 

@@ -35,6 +35,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content", "id" => "id", "expanded" => false, "class" => "danger"];
         $res = '<button class="btn btn-danger dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">content<span class="caret"></span></button>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["class" => "primary"];
         $res = '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">content<span class="caret"></span></button>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
     }
 
@@ -77,6 +80,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["expanded" => false];
         $res = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
     }
 
@@ -91,6 +95,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["id" => "id"];
         $res = '<button class="btn btn-default dropdown-toggle" type="button" id="id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
     }
 
@@ -105,6 +110,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="caret"></span></button>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownButtonFunction($arg));
     }
 
@@ -119,6 +125,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<li class="divider" role="separator"></li>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownDividerFunction($arg));
     }
 
@@ -133,6 +140,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<li class="dropdown-header">content</li>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownHeaderFunction($arg));
     }
 
@@ -147,6 +155,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<li class="dropdown-header"></li>';
+
         $this->assertEquals($res, $obj->bootstrapDropdownHeaderFunction($arg));
     }
 

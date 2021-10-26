@@ -84,6 +84,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
         $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
 
         $res = '<span class="label label-default" style="background-color:#D9534F;">label.role.root</span> <span class="label label-default" style="background-color:#337AB7;">label.role.admin</span> <span class="label label-default">label.role.user</span>';
+
         $this->assertEquals($res, $obj->bootstrapRoleLabelFunction($this->user, $this->colorChoices, $this->transChoices));
     }
 
@@ -97,6 +98,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
         $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
 
         $res = "";
+
         $this->assertEquals($res, $obj->bootstrapRoleLabelFunction(null, $this->colorChoices, $this->transChoices));
     }
 

@@ -35,6 +35,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = "<pre>content</pre>";
+
         $this->assertEquals($res, $obj->bootstrapBasicBlockFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = "<pre></pre>";
+
         $this->assertEquals($res, $obj->bootstrapBasicBlockFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = "<code>content</code>";
+
         $this->assertEquals($res, $obj->bootstrapInlineFunction($arg));
     }
 
@@ -77,6 +80,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = "<code></code>";
+
         $this->assertEquals($res, $obj->bootstrapInlineFunction($arg));
     }
 
@@ -91,6 +95,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = "<samp>content</samp>";
+
         $this->assertEquals($res, $obj->bootstrapSampleOutputFunction($arg));
     }
 
@@ -105,6 +110,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = "<samp></samp>";
+
         $this->assertEquals($res, $obj->bootstrapSampleOutputFunction($arg));
     }
 
@@ -119,6 +125,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = "<kbd>content</kbd>";
+
         $this->assertEquals($res, $obj->bootstrapUserInputFunction($arg));
     }
 
@@ -133,6 +140,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = "<kbd></kbd>";
+
         $this->assertEquals($res, $obj->bootstrapUserInputFunction($arg));
     }
 
@@ -147,6 +155,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = "<var>content</var>";
+
         $this->assertEquals($res, $obj->bootstrapVariableFunction($arg));
     }
 
@@ -161,6 +170,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = "<var></var>";
+
         $this->assertEquals($res, $obj->bootstrapVariableFunction($arg));
     }
 

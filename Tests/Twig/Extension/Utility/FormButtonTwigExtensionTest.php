@@ -53,6 +53,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><i class="fa fa-times"></i> label.cancel</a>';
+
         $this->assertEquals($res, $obj->bootstrapFormButtonCancelFunction($arg));
     }
 
@@ -63,13 +64,14 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
      */
     public function testBootstrapFormButtonDefaultFunction(): void {
 
-        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
-
         $cnl = '<a class="btn btn-default" title="label.cancel" href="https://github.com/" data-toggle="tooltip" data-placement="top"><i class="fa fa-times"></i> label.cancel</a>';
         $sbt = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><i class="fa fa-check"></i> label.submit</button>';
 
+        $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
+
         $arg = ["cancel_href" => "https://github.com/"];
         $res = implode(" ", [$cnl, $sbt]);
+
         $this->assertEquals($res, $obj->bootstrapFormButtonDefaultFunction($arg));
     }
 
@@ -83,6 +85,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
         $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $res = '<button class="btn btn-primary" title="label.submit" type="submit" data-toggle="tooltip" data-placement="top"><i class="fa fa-check"></i> label.submit</button>';
+
         $this->assertEquals($res, $obj->bootstrapFormButtonSubmitFunction());
     }
 

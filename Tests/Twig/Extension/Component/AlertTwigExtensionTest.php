@@ -35,6 +35,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<div class="alert alert-danger" role="alert">content</div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertDangerFunction($arg));
     }
 
@@ -49,6 +50,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="alert alert-danger" role="alert"></div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertDangerFunction($arg));
     }
 
@@ -63,6 +65,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<div class="alert alert-dark" role="alert">content</div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertDarkFunction($arg));
     }
 
@@ -77,6 +80,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="alert alert-dark" role="alert"></div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertDarkFunction($arg));
     }
 
@@ -91,6 +95,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<div class="alert alert-info" role="alert">content</div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertInfoFunction($arg));
     }
 
@@ -105,6 +110,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="alert alert-info" role="alert"></div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertInfoFunction($arg));
     }
 
@@ -119,6 +125,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<div class="alert alert-light" role="alert">content</div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertLightFunction($arg));
     }
 
@@ -133,6 +140,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="alert alert-light" role="alert"></div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertLightFunction($arg));
     }
 
@@ -147,6 +155,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["href" => "https://github.com/", "content" => "content"];
         $res = '<a href="https://github.com/">content</a>';
+
         $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
     }
 
@@ -161,6 +170,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<a href="javascript:void(0);">content</a>';
+
         $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
     }
 
@@ -175,6 +185,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a href="https://github.com/"></a>';
+
         $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
     }
 
@@ -189,6 +200,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<a href="javascript:void(0);"></a>';
+
         $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
     }
 
@@ -203,6 +215,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<div class="alert alert-secondary" role="alert">content</div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertSecondaryFunction($arg));
     }
 
@@ -217,6 +230,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="alert alert-secondary" role="alert"></div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertSecondaryFunction($arg));
     }
 
@@ -231,6 +245,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<div class="alert alert-success" role="alert">content</div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertSuccessFunction($arg));
     }
 
@@ -245,6 +260,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="alert alert-success" role="alert"></div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertSuccessFunction($arg));
     }
 
@@ -259,6 +275,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["content" => "content"];
         $res = '<div class="alert alert-warning" role="alert">content</div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
     }
 
@@ -273,6 +290,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
 
         $arg = [];
         $res = '<div class="alert alert-warning" role="alert"></div>';
+
         $this->assertEquals($res, $obj->bootstrapAlertWarningFunction($arg));
     }
 

@@ -49,13 +49,14 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
      */
     public function testBootstrapRowButtonDefaultFunction(): void {
 
-        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
-
         $edt = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
         $dlt = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
 
+        $obj = new TableButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
+
         $arg = ["edit_href" => "https://github.com/", "delete_href" => "https://github.com/"];
         $res = implode(" ", [$edt, $dlt]);
+
         $this->assertEquals($res, $obj->bootstrapRowButtonDefaultFunction($arg));
     }
 
@@ -70,6 +71,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-danger" title="label.delete" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+
         $this->assertEquals($res, $obj->bootstrapRowButtonDeleteFunction($arg));
     }
 
@@ -84,6 +86,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
 
         $arg = ["href" => "https://github.com/"];
         $res = '<a class="btn btn-default" title="label.edit" href="https://github.com/" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
+
         $this->assertEquals($res, $obj->bootstrapRowButtonEditFunction($arg));
     }
 
