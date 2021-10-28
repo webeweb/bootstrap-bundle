@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.20.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.20.1) (2021-10-28)
+
+- Fix default locales configuration
+
 ### [3.20.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.20.0) (2021-10-26)
 
 - Improve code quality
