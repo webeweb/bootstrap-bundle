@@ -55,7 +55,7 @@ class Configuration implements ConfigurationInterface {
 
         $node
             ->children()
-                ->variableNode("bootstrap_markdown")->defaultValue("en")->info("Bootstrap Markdown locale")
+                ->variableNode("bootstrap_markdown")->info("Bootstrap Markdown locale")
                     ->validate()
                         ->ifNotInArray($plugins["bootstrap_markdown"]["locales"])
                         ->thenInvalid("The Bootstrap Markdown locale %s is not supported. Please choose one of " . json_encode($plugins["bootstrap_markdown"]["locales"]))
@@ -115,7 +115,7 @@ class Configuration implements ConfigurationInterface {
 
         $node
             ->children()
-                ->variableNode("summernote")->defaultValue("en-US")->info("Summernote locale")
+                ->variableNode("summernote")->info("Summernote locale")
                     ->validate()
                         ->ifNotInArray($plugins["summernote"]["locales"])
                         ->thenInvalid("The Summernote locale %s is not supported. Please choose one of " . json_encode($plugins["summernote"]["locales"]))
