@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [3.21.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.21.0) (2021-10-29)
+
+- Update Bootstrap to 4.6.1
+- Update Bootstrap to 5.1.3
+
 ### [3.20.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.20.1) (2021-10-28)
 
 - Fix default locales configuration
