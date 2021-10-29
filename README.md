@@ -21,8 +21,8 @@ and some useful plugins.
 Includes:
 
 - [Bootstrap 3.4.1](https://getbootstrap.com/docs/3.4/)
-- [Bootstrap 4.6.0](https://getbootstrap.com/docs/4.6/)
-- [Bootstrap 5.1.0](https://getbootstrap.com/docs/5.1/)
+- [Bootstrap 4.6.1](https://getbootstrap.com/docs/4.6/)
+- [Bootstrap 5.1.3](https://getbootstrap.com/docs/5.1/)
 - [Bootstrap Colorpicker 2.5.1](https://farbelous.io/bootstrap-colorpicker/) (Bootstrap plug-in)
 - [Bootstrap Datepicker 1.7.1](https://uxsolutions.github.io/bootstrap-datepicker/) (Bootstrap plug-in)
 - [Bootstrap Daterangepicker 2.1.27](http://www.daterangepicker.com/) (Bootstrap plug-in)
