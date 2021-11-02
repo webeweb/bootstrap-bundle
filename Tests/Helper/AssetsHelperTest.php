@@ -50,7 +50,7 @@ class AssetsHelperTest extends AbstractTestCase {
     public function testListAssets(): void {
 
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
-        $this->assertCount(20, $res);
+        $this->assertCount(21, $res);
 
         $i = -1;
         $this->assertRegExp("/bootstrap\-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[++$i]);
@@ -59,6 +59,7 @@ class AssetsHelperTest extends AbstractTestCase {
         $this->assertRegExp("/bootstrap\-colorpicker\-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap\-datepicker\-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap\-daterangepicker\-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap\-icons\-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap\-markdown\-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap\-notify\-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap\-select\-.*\.zip$/", $res[++$i]);
