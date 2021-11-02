@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Bootstrap Icons 1.7.0
+
 ### [3.21.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.21.0) (2021-10-29)
 
 - Update Bootstrap to 4.6.1
