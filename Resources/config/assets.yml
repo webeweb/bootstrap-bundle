@@ -113,6 +113,7 @@ assets:
                 description: "Bootstrap Icons"
                 stylesheets:
                     - "/bootstrap-icons-{{ version }}/bootstrap-icons.css"
+                javascripts: [ ]
             bootstrap_markdown:
                 version:     "2.10.0"
                 description: "Bootstrap Markdown"
