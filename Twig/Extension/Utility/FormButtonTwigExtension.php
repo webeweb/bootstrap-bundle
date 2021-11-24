@@ -44,6 +44,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function __construct(Environment $twigEnvironment, $translator, ButtonTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
+
         $this->setButtonTwigExtension($extension);
     }
 

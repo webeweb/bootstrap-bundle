@@ -45,6 +45,7 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function __construct(Environment $twigEnvironment, $translator, LabelTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
+
         $this->setLabelTwigExtension($extension);
     }
 

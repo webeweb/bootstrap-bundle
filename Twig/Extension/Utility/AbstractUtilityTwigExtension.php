@@ -35,6 +35,7 @@ abstract class AbstractUtilityTwigExtension extends AbstractTwigExtension {
      */
     public function __construct(Environment $twigEnvironment, $translator) {
         parent::__construct($twigEnvironment);
+
         $this->setTranslator($translator);
     }
 }
