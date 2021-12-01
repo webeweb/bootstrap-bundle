@@ -1,9 +1,11 @@
 CHANGELOG
 =========
 
-### master
+### [3.22.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.22.0) (2021-12-01)
 
 - Add Bootstrap Icons 1.7.0
+- Add output view (simple HTML rendering for AJAX request by example)
+- Improve code quality
 
 ### [3.21.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.21.0) (2021-10-29)
 
