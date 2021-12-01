@@ -1,0 +1,16 @@
+{# Resources/views/output.html.twig #}
+{% block bootstrapFormTheme %}
+    {% set _appVersion = getContainerParameter("wbw_bootstrap.version") %}
+    {% if (form is defined) %}
+        {% form_theme form "bootstrap_" ~ _appVersion ~ "_layout.html.twig" %}
+    {% endif %}
+{% endblock %}
+
+{% block bootstrapContainer %}
+{% endblock %}
+
+{% block bootstrapStylesheets %}
+{% endblock %}
+
+{% block bootstrapJavascripts %}
+{% endblock %}
