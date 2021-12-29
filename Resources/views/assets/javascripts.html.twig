@@ -1,4 +1,4 @@
-{# Resources/views/layout/javascripts.html.twig #}
+{# Resources/views/assets/javascripts.html.twig #}
 {% set _rootPath   = "bundles/wbwbootstrap" %}
 {% set _versions   = getContainerParameter("wbw.bootstrap.asset.bootstrap").versions %}
 {% set _plugins    = getContainerParameter("wbw.bootstrap.asset.bootstrap").plugins %}
@@ -6,9 +6,7 @@
 {% set _appPlugins = getContainerParameter("wbw_bootstrap.plugins") %}
 {% set _appLocales = getContainerParameter("wbw_bootstrap.locales") %}
 
-{% if ("prod" != app.environment) %}
-    <!-- Bootstrap -->
-{% endif %}
+{% if ("prod" != app.environment) %}<!-- Bootstrap -->{% endif %}
 <script type="text/javascript" src="{{ asset(_rootPath ~ "/popper.js-1.15.0/umd/popper.min.js") }}"></script>
 <script type="text/javascript" src="{{ asset(_rootPath ~ "/bootstrap-{{ version }}/js/bootstrap.min.js"|replace({"{{ version }}": _versions[_appVersion]})) }}"></script>
 {% for _appPlugin in _appPlugins %}
@@ -20,11 +18,10 @@
 
     {% for _javascript in _plugins[_appPlugin].javascripts %}
 
-        {% if ("prod" != app.environment and true == loop.first) %}
-            <!-- {{ _plugins[_appPlugin].description }} -->
-        {% endif %}
+        {% if ("prod" != app.environment and true == loop.first) %}<!-- {{ _plugins[_appPlugin].description }} -->{% endif %}
 
         {% if ("{{ locale }}" not in _javascript or ("{{ locale }}" in _javascript and _appLocales[_appPlugin] is defined)) %}
+
             {% set _path = (_rootPath ~ _javascript)|replace(_replaces) %}
             <script type="text/javascript" src="{{ asset(_path) }}"></script>
         {% endif %}
@@ -34,14 +31,18 @@
 {% if ("prod" != app.environment) %}
     <!-- Bootstrap Twig console -->
     <script type="text/javascript">
-        $(document).ready(function () {
+        document.addEventListener("DOMContentLoaded", () => {
+
             $("div#twig-title").css("cursor", "pointer");
             $("div#twig-title").on("click", function () {
+
                 var $element = $("div#twig-context");
                 var display  = "none";
+
                 if ("none" === $element.css("display")) {
                     display = "block";
                 }
+
                 $element.css("display", display);
             });
         });

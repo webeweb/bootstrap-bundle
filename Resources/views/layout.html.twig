@@ -1,6 +1,8 @@
 {# Resources/views/layout.html.twig #}
 {% block bootstrapFormTheme %}
+
     {% set _appVersion = getContainerParameter("wbw_bootstrap.version") %}
+
     {% if (form is defined) %}
         {% form_theme form "bootstrap_" ~ _appVersion ~ "_layout.html.twig" %}
     {% endif %}
@@ -10,9 +12,7 @@
     <head>
         {% block bootstrapFavicons %}
             {% set _webPath = "bundles/wbwbootstrap" %}
-            {% if ("prod" != app.environment) %}
-                <!-- Favicons -->
-            {% endif %}
+            {% if ("prod" != app.environment) %}<!-- Favicons -->{% endif %}
             <link rel="apple-touch-icon" href="{{ asset(_webPath ~ "/favicons/apple-icon-57x57.png") }}" sizes="57x57">
             <link rel="apple-touch-icon" href="{{ asset(_webPath ~ "/favicons/apple-icon-60x60.png") }}" sizes="60x60">
             <link rel="apple-touch-icon" href="{{ asset(_webPath ~ "/favicons/apple-icon-72x72.png") }}" sizes="72x72">
@@ -33,7 +33,7 @@
         {% endblock %}
         {% block bootstrapStylesheets %}
             {% include "@WBWCore/layout/stylesheets.html.twig" %}
-            {% include "@WBWBootstrap/layout/stylesheets.html.twig" %}
+            {% include "@WBWBootstrap/assets/stylesheets.html.twig" %}
         {% endblock %}
         <meta http-equiv="Content-Type" content="text/html; charset=utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -45,7 +45,7 @@
         <div id="asynchronous-output"></div>
         {% block bootstrapJavascripts %}
             {% include "@WBWCore/layout/javascripts.html.twig" %}
-            {% include "@WBWBootstrap/layout/javascripts.html.twig" %}
+            {% include "@WBWBootstrap/assets/javascripts.html.twig" %}
         {% endblock %}
     </body>
 </html>

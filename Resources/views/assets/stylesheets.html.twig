@@ -1,13 +1,11 @@
-{# Resources/views/layout/stylesheets.html.twig #}
+{# Resources/views/assets/stylesheets.html.twig #}
 {% set _rootPath   = "bundles/wbwbootstrap" %}
 {% set _versions   = getContainerParameter("wbw.bootstrap.asset.bootstrap").versions %}
 {% set _plugins    = getContainerParameter("wbw.bootstrap.asset.bootstrap").plugins %}
 {% set _appVersion = getContainerParameter("wbw_bootstrap.version") %}
 {% set _appPlugins = getContainerParameter("wbw_bootstrap.plugins") %}
 
-{% if ("prod" != app.environment) %}
-    <!-- Bootstrap -->
-{% endif %}
+{% if ("prod" != app.environment) %}<!-- Bootstrap -->{% endif %}
 <link type="text/css" rel="stylesheet" href="{{ asset(_rootPath ~ "/bootstrap-{{ version }}/css/bootstrap.min.css"|replace({"{{ version }}": _versions[_appVersion]})) }}">
 {% for _appPlugin in _appPlugins %}
 
@@ -18,9 +16,7 @@
 
     {% for _stylesheet in _plugins[_appPlugin].stylesheets %}
 
-        {% if ("prod" != app.environment and true == loop.first) %}
-            <!-- {{ _plugins[_appPlugin].description }} -->
-        {% endif %}
+        {% if ("prod" != app.environment and true == loop.first) %}<!-- {{ _plugins[_appPlugin].description }} -->{% endif %}
 
         {% set _path = (_rootPath ~ _stylesheet)|replace(_replaces) %}
         <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
