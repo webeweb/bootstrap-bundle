@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.23.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.23.2) (2021-12-30)
+
+- Fix animation into Work in progress view
+
 ### [3.23.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.23.1) (2021-12-29)
 
 - Fix dependencies
