@@ -1143,33 +1143,59 @@ class GridTwigExtensionTest extends AbstractTestCase {
         $obj = new GridTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
+        $this->assertCount(10, $res);
 
-        $this->assertCount(5, $res);
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapGrid", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapGridFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapGrid", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bootstrapGridOffset", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapGridOffsetFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsGrid", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapGridPull", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapGridPullFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapGridOffset", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridOffsetFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("bootstrapGridPush", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapGridPushFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsGridOffset", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridOffsetFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[4]);
-        $this->assertEquals("bootstrapGridStacked", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapGridStackedFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapGridPull", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridPullFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsGridPull", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridPullFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapGridPush", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridPushFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsGridPush", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridPushFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapGridStacked", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridStackedFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsGridStacked", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGridStackedFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

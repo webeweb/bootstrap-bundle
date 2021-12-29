@@ -96,10 +96,19 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     public function getFunctions(): array {
         return [
             new TwigFunction("bootstrapGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapGridOffset", [$this, "bootstrapGridOffsetFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsGridOffset", [$this, "bootstrapGridOffsetFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapGridPull", [$this, "bootstrapGridPullFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsGridPull", [$this, "bootstrapGridPullFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapGridPush", [$this, "bootstrapGridPushFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsGridPush", [$this, "bootstrapGridPushFunction"], ["is_safe" => ["html"]]),
+
             new TwigFunction("bootstrapGridStacked", [$this, "bootstrapGridStackedFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsGridStacked", [$this, "bootstrapGridStackedFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
