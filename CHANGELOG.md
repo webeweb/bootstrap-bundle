@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.23.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.23.0) (2021-12-29)
+
+- Improve views organization
+
 ### [3.22.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.22.0) (2021-12-01)
 
 - Add Bootstrap Icons 1.7.0
