@@ -112,12 +112,17 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
         $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
 
         $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $i = -1;
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("bootstrapRoleLabel", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapRoleLabelFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsRoleLabel", $res[$i]->getName());
         $this->assertEquals([$obj, "bootstrapRoleLabelFunction"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
