@@ -99,7 +99,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
         $obj = new FormButtonTwigExtension($this->twigEnvironment, $this->translator, $this->buttonTwigExtension);
 
         $res = $obj->getFunctions();
-        $this->assertCount(3, $res);
+        $this->assertCount(6, $res);
 
         $i = -1;
 
@@ -109,12 +109,27 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsFormButtonCancel", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonCancelFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("bootstrapFormButtonDefault", $res[$i]->getName());
         $this->assertEquals([$obj, "bootstrapFormButtonDefaultFunction"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsFormButtonDefault", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonDefaultFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("bootstrapFormButtonSubmit", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonSubmitFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsFormButtonSubmit", $res[$i]->getName());
         $this->assertEquals([$obj, "bootstrapFormButtonSubmitFunction"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
