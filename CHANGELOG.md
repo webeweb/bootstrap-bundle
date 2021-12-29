@@ -1,7 +1,12 @@
 CHANGELOG
 =========
 
-### [3.23.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.23.2) (2021-12-30)
+### [3.24.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.24.0) (2021-12-29)
+
+- Add Grip Twig functions aliases
+- Improve unit tests
+
+### [3.23.2](https://github.com/webeweb/bootstrap-bundle/tree/v3.23.2) (2021-12-29)
 
 - Fix animation into Work in progress view
 
