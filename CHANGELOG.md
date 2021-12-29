@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.23.1](https://github.com/webeweb/bootstrap-bundle/tree/v3.23.1) (2021-12-29)
+
+- Fix dependencies
+
 ### [3.23.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.23.0) (2021-12-29)
 
 - Improve views organization
