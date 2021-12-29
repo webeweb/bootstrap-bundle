@@ -244,65 +244,67 @@ class LabelTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(12, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapLabelDanger", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelDangerFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bsLabelDanger", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelDangerFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapLabelDanger", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelDangerFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapLabelDefault", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelDefaultFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsLabelDanger", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelDangerFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("bsLabelDefault", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelDefaultFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapLabelDefault", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelDefaultFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[4]);
-        $this->assertEquals("bootstrapLabelInfo", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelInfoFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsLabelDefault", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelDefaultFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[5]);
-        $this->assertEquals("bsLabelInfo", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelInfoFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapLabelInfo", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelInfoFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[6]);
-        $this->assertEquals("bootstrapLabelPrimary", $res[6]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelPrimaryFunction"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsLabelInfo", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelInfoFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[7]);
-        $this->assertEquals("bsLabelPrimary", $res[7]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelPrimaryFunction"], $res[7]->getCallable());
-        $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapLabelPrimary", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelPrimaryFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[8]);
-        $this->assertEquals("bootstrapLabelSuccess", $res[8]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelSuccessFunction"], $res[8]->getCallable());
-        $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsLabelPrimary", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelPrimaryFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[9]);
-        $this->assertEquals("bsLabelSuccess", $res[9]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelSuccessFunction"], $res[9]->getCallable());
-        $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapLabelSuccess", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelSuccessFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[10]);
-        $this->assertEquals("bootstrapLabelWarning", $res[10]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelWarningFunction"], $res[10]->getCallable());
-        $this->assertEquals(["html"], $res[10]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsLabelSuccess", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelSuccessFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[11]);
-        $this->assertEquals("bsLabelWarning", $res[11]->getName());
-        $this->assertEquals([$obj, "bootstrapLabelWarningFunction"], $res[11]->getCallable());
-        $this->assertEquals(["html"], $res[11]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapLabelWarning", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelWarningFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsLabelWarning", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapLabelWarningFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

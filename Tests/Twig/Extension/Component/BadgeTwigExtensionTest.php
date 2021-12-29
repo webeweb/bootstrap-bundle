@@ -213,15 +213,17 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFilters();
         $this->assertCount(2, $res);
 
-        $this->assertInstanceOf(TwigFilter::class, $res[0]);
-        $this->assertEquals("bootstrapBadgeLink", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeLinkFilter"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFilter::class, $res[1]);
-        $this->assertEquals("bsBadgeLink", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeLinkFilter"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeLink", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeLinkFilter"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("bsBadgeLink", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeLinkFilter"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**
@@ -236,85 +238,87 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(16, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapBadgeDanger", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeDangerFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bsBadgeDanger", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeDangerFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeDanger", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeDangerFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapBadgeDark", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeDarkFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgeDanger", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeDangerFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("bsBadgeDark", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeDarkFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeDark", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeDarkFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[4]);
-        $this->assertEquals("bootstrapBadgeInfo", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeInfoFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgeDark", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeDarkFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[5]);
-        $this->assertEquals("bsBadgeInfo", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeInfoFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeInfo", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeInfoFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[6]);
-        $this->assertEquals("bootstrapBadgeLight", $res[6]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeLightFunction"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgeInfo", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeInfoFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[7]);
-        $this->assertEquals("bsBadgeLight", $res[7]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeLightFunction"], $res[7]->getCallable());
-        $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeLight", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeLightFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[8]);
-        $this->assertEquals("bootstrapBadgePrimary", $res[8]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgePrimaryFunction"], $res[8]->getCallable());
-        $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgeLight", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeLightFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[9]);
-        $this->assertEquals("bsBadgePrimary", $res[9]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgePrimaryFunction"], $res[9]->getCallable());
-        $this->assertEquals(["html"], $res[9]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgePrimary", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgePrimaryFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[10]);
-        $this->assertEquals("bootstrapBadgeSecondary", $res[10]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeSecondaryFunction"], $res[10]->getCallable());
-        $this->assertEquals(["html"], $res[10]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgePrimary", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgePrimaryFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[11]);
-        $this->assertEquals("bsBadgeSecondary", $res[11]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeSecondaryFunction"], $res[11]->getCallable());
-        $this->assertEquals(["html"], $res[11]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeSecondary", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeSecondaryFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[12]);
-        $this->assertEquals("bootstrapBadgeSuccess", $res[12]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeSuccessFunction"], $res[12]->getCallable());
-        $this->assertEquals(["html"], $res[12]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgeSecondary", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeSecondaryFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[13]);
-        $this->assertEquals("bsBadgeSuccess", $res[13]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeSuccessFunction"], $res[13]->getCallable());
-        $this->assertEquals(["html"], $res[13]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeSuccess", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeSuccessFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[14]);
-        $this->assertEquals("bootstrapBadgeWarning", $res[14]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeWarningFunction"], $res[14]->getCallable());
-        $this->assertEquals(["html"], $res[14]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgeSuccess", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeSuccessFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[15]);
-        $this->assertEquals("bsBadgeWarning", $res[15]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeWarningFunction"], $res[15]->getCallable());
-        $this->assertEquals(["html"], $res[15]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadgeWarning", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeWarningFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadgeWarning", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeWarningFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**
@@ -330,15 +334,17 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(2, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapBadge", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bsBadge", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapBadge", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsBadge", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapBadgeFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

@@ -130,35 +130,37 @@ class NavTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(6, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapNavsJustified", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsJustifiedFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bsNavsJustified", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsJustifiedFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapNavsJustified", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsJustifiedFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapNavsPills", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsNavsJustified", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsJustifiedFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("bsNavsPills", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapNavsPills", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[4]);
-        $this->assertEquals("bootstrapNavsTabs", $res[4]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsNavsPills", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsPillsFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[5]);
-        $this->assertEquals("bsNavsTabs", $res[5]->getName());
-        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapNavsTabs", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsNavsTabs", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapNavsTabsFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

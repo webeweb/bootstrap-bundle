@@ -101,20 +101,22 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(3, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapFormButtonCancel", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapFormButtonCancelFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bootstrapFormButtonDefault", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapFormButtonDefaultFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapFormButtonCancel", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonCancelFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapFormButtonSubmit", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapFormButtonSubmitFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapFormButtonDefault", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonDefaultFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapFormButtonSubmit", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapFormButtonSubmitFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

@@ -102,20 +102,22 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(3, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapRowButtonDefault", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapRowButtonDefaultFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bootstrapRowButtonDelete", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapRowButtonDeleteFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapRowButtonDefault", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapRowButtonDefaultFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapRowButtonEdit", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapRowButtonEditFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapRowButtonDelete", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapRowButtonDeleteFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapRowButtonEdit", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapRowButtonEditFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

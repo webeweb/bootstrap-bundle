@@ -110,25 +110,27 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(4, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapButtonGroupBasic", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonGroupBasicFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bsButtonGroupBasic", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonGroupBasicFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapButtonGroupBasic", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupBasicFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("bootstrapButtonGroupToolbar", $res[2]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsButtonGroupBasic", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupBasicFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("bsButtonGroupToolbar", $res[3]->getName());
-        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapButtonGroupToolbar", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsButtonGroupToolbar", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapButtonGroupToolbarFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

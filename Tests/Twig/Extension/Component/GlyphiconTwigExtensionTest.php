@@ -80,15 +80,17 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(2, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("bootstrapGlyphicon", $res[0]->getName());
-        $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("bsGlyphicon", $res[1]->getName());
-        $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapGlyphicon", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsGlyphicon", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapGlyphiconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**
