@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.26.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.26.0) (2021-12-29)
+
+- Add Form button Twig functions aliases
+
 ### [3.25.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.25.0) (2021-12-29)
 
 - Add Role label Twig function alias
