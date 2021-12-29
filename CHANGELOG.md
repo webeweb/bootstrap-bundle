@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.25.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.25.0) (2021-12-29)
+
+- Add Role label Twig function alias
+
 ### [3.24.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.24.0) (2021-12-29)
 
 - Add Grip Twig functions aliases
