@@ -29,7 +29,7 @@
         "symfony/serializer": "^3.4|^4.0",
         "symfony/translation": "^3.4|^4.0",
         "twig/twig": "^1.0||^2.0",
-        "webeweb/core-bundle": "^2.20",
+        "webeweb/core-bundle": "^2.34",
         "webeweb/core-library": "^8.0"
     },
     "conflict": {
