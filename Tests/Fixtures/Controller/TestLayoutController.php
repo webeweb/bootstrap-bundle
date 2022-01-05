@@ -23,15 +23,6 @@ use WBW\Bundle\BootstrapBundle\Controller\AbstractController;
 class TestLayoutController extends AbstractController {
 
     /**
-     * Displays a blank page.
-     *
-     * @return Response Returns the response.
-     */
-    public function blankAction(): Response {
-        return $this->render("@WBWBootstrap/layout/blank.html.twig");
-    }
-
-    /**
      * Displays a flashbag page.
      *
      * @return Response Returns the response.
@@ -43,7 +34,7 @@ class TestLayoutController extends AbstractController {
         $this->notifySuccess("Success");
         $this->notifyWarning("Warning");
 
-        return $this->render("@WBWBootstrap/layout/flashbag.html.twig");
+        return $this->render("@WBWBootstrap/layout/_flashbag.html.twig");
     }
 
     /**
@@ -61,6 +52,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function workInProgressAction(): Response {
-        return $this->render("@WBWBootstrap/layout/work-in-progress.html.twig");
+        return $this->render("@WBWBootstrap/layout/_work_in_progress.html.twig");
     }
 }
