@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class AlertTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setAlertTwigExtension() method.
+     * Tests setAlertTwigExtension()
      *
      * @return void
      */

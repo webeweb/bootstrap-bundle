@@ -40,7 +40,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the notifyDanger() method.
+     * Tests notifyDanger()
      *
      * @return void
      */
@@ -60,7 +60,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the notifyInfo() method.
+     * Tests notifyInfo()
      *
      * @return void
      */
@@ -80,7 +80,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the notifySuccess() method.
+     * Tests notifySuccess()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the notifyWarning() method.
+     * Tests notifyWarning()
      *
      * @return void
      */

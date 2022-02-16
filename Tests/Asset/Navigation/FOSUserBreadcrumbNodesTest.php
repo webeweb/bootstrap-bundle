@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
 
     /**
-     * Tests the getGlyphiconBreadcrumbNodes() method.
+     * Tests getGlyphiconBreadcrumbNodes()
      *
      * @return void
      */

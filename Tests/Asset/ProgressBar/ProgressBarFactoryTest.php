@@ -53,7 +53,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newBasicProgressBar() method.
+     * Tests newBasicProgressBar()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDangerProgressBar() method.
+     * Tests newDangerProgressBar()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfoProgressBar() method.
+     * Tests newInfoProgressBar()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSuccessProgressBar() method.
+     * Tests newSuccessProgressBar()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newWarningProgressBar() method.
+     * Tests newWarningProgressBar()
      *
      * @return void
      */
@@ -113,7 +113,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseBasicProgressBar() method.
+     * Tests parseBasicProgressBar()
      *
      * @return void
      */
@@ -133,7 +133,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDangerProgressBar() method.
+     * Tests parseDangerProgressBar()
      *
      * @return void
      */
@@ -153,7 +153,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfoProgressBar() method.
+     * Tests parseInfoProgressBar()
      *
      * @return void
      */
@@ -173,7 +173,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSuccessProgressBar() method.
+     * Tests parseSuccessProgressBar()
      *
      * @return void
      */
@@ -193,7 +193,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseWarningProgressBar() method.
+     * Tests parseWarningProgressBar()
      *
      * @return void
      */

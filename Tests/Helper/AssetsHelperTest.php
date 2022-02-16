@@ -42,7 +42,7 @@ class AssetsHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the listAssets() method.
+     * Tests listAssets()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.

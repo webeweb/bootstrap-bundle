@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
 class AlertTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapAlertDangerFunction() method.
+     * Tests bootstrapAlertDangerFunction()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertDangerFunction() method.
+     * Tests bootstrapAlertDangerFunction()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertDarkFunction() method.
+     * Tests bootstrapAlertDarkFunction()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertDarkFunction() method.
+     * Tests bootstrapAlertDarkFunction()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertInfoFunction() method.
+     * Tests bootstrapAlertInfoFunction()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertInfoFunction() method.
+     * Tests bootstrapAlertInfoFunction()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertLightFunction() method.
+     * Tests bootstrapAlertLightFunction()
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertLightFunction() method.
+     * Tests bootstrapAlertLightFunction()
      *
      * @return void
      */
@@ -145,7 +145,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertLinkFunction() method.
+     * Tests bootstrapAlertLinkFunction()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertLinkFunction() method.
+     * Tests bootstrapAlertLinkFunction()
      *
      * @return void
      */
@@ -175,7 +175,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertLinkFunction() method.
+     * Tests bootstrapAlertLinkFunction()
      *
      * @return void
      */
@@ -190,7 +190,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertLinkFunction() method.
+     * Tests bootstrapAlertLinkFunction()
      *
      * @return void
      */
@@ -205,7 +205,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertSecondaryFunction() method.
+     * Tests bootstrapAlertSecondaryFunction()
      *
      * @return void
      */
@@ -220,7 +220,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertSecondaryFunction() method.
+     * Tests bootstrapAlertSecondaryFunction()
      *
      * @return void
      */
@@ -235,7 +235,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertSuccessFunction() method.
+     * Tests bootstrapAlertSuccessFunction()
      *
      * @return void
      */
@@ -250,7 +250,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertSuccessFunction() method.
+     * Tests bootstrapAlertSuccessFunction()
      *
      * @return void
      */
@@ -265,7 +265,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertWarningFunction() method.
+     * Tests bootstrapAlertWarningFunction()
      *
      * @return void
      */
@@ -280,7 +280,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapAlertWarningFunction() method.
+     * Tests bootstrapAlertWarningFunction()
      *
      * @return void
      */
@@ -295,7 +295,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -308,7 +308,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -403,7 +403,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -459,7 +459,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

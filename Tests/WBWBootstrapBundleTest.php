@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 class WBWBootstrapBundleTest extends AbstractTestCase {
 
     /**
-     * Tests the getAssetsRelativeDirectory() method.
+     * Tests getAssetsRelativeDirectory()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getContainerExtension() method.
+     * Tests getContainerExtension()
      *
      * @return void
      */

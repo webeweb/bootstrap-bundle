@@ -52,7 +52,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDangerAlert() method.
+     * Tests newDangerAlert()
      *
      * @return void
      */
@@ -64,7 +64,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDarkAlert() method.
+     * Tests newDarkAlert()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfoAlert() method.
+     * Tests newInfoAlert()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLightAlert() method.
+     * Tests newLightAlert()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newPrimaryAlert() method.
+     * Tests newPrimaryAlert()
      *
      * @return void
      */
@@ -112,7 +112,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSecondaryAlert() method.
+     * Tests newSecondaryAlert()
      *
      * @return void
      */
@@ -124,7 +124,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSuccessAlert() method.
+     * Tests newSuccessAlert()
      *
      * @return void
      */
@@ -136,7 +136,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newWarningAlert() method.
+     * Tests newWarningAlert()
      *
      * @return void
      */
@@ -148,7 +148,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDangerAlert() method.
+     * Tests parseDangerAlert()
      *
      * @return void
      */
@@ -165,7 +165,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDarkAlert() method.
+     * Tests parseDarkAlert()
      *
      * @return void
      */
@@ -182,7 +182,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfoAlert() method.
+     * Tests parseInfoAlert()
      *
      * @return void
      */
@@ -199,7 +199,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseLightAlert() method.
+     * Tests parseLightAlert()
      *
      * @return void
      */
@@ -216,7 +216,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parsePrimaryAlert() method.
+     * Tests parsePrimaryAlert()
      *
      * @return void
      */
@@ -233,7 +233,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSecondaryAlert() method.
+     * Tests parseSecondaryAlert()
      *
      * @return void
      */
@@ -250,7 +250,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSuccessAlert() method.
+     * Tests parseSuccessAlert()
      *
      * @return void
      */
@@ -267,7 +267,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseWarningAlert() method.
+     * Tests parseWarningAlert()
      *
      * @return void
      */

@@ -59,7 +59,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDangerButton() method.
+     * Tests newDangerButton()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDarkButton() method.
+     * Tests newDarkButton()
      *
      * @return void
      */
@@ -83,7 +83,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDefaultButton() method.
+     * Tests newDefaultButton()
      *
      * @return void
      */
@@ -95,7 +95,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfoButton() method.
+     * Tests newInfoButton()
      *
      * @return void
      */
@@ -107,7 +107,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLightButton() method.
+     * Tests newLightButton()
      *
      * @return void
      */
@@ -119,7 +119,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLinkButton() method.
+     * Tests newLinkButton()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newPrimaryButton() method.
+     * Tests newPrimaryButton()
      *
      * @return void
      */
@@ -143,7 +143,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSecondaryButton() method.
+     * Tests newSecondaryButton()
      *
      * @return void
      */
@@ -155,7 +155,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSuccessButton() method.
+     * Tests newSuccessButton()
      *
      * @return void
      */
@@ -167,7 +167,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newWarningButton() method.
+     * Tests newWarningButton()
      *
      * @return void
      */
@@ -179,7 +179,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDangerButton() method.
+     * Tests parseDangerButton()
      *
      * @return void
      */
@@ -200,7 +200,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDarkButton() method.
+     * Tests parseDarkButton()
      *
      * @return void
      */
@@ -221,7 +221,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDefaultButton() method.
+     * Tests parseDefaultButton()
      *
      * @return void
      */
@@ -242,7 +242,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfoButton() method.
+     * Tests parseInfoButton()
      *
      * @return void
      */
@@ -263,7 +263,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseLightButton() method.
+     * Tests parseLightButton()
      *
      * @return void
      */
@@ -284,7 +284,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseLinkButton() method.
+     * Tests parseLinkButton()
      *
      * @return void
      */
@@ -305,7 +305,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parsePrimaryButton() method.
+     * Tests parsePrimaryButton()
      *
      * @return void
      */
@@ -326,7 +326,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSecondaryButton() method.
+     * Tests parseSecondaryButton()
      *
      * @return void
      */
@@ -347,7 +347,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSuccessButton() method.
+     * Tests parseSuccessButton()
      *
      * @return void
      */
@@ -368,7 +368,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseWarningButton() method.
+     * Tests parseWarningButton()
      *
      * @return void
      */

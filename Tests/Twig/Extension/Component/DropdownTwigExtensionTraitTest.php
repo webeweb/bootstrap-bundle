@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class DropdownTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setDropdownTwigExtension() method.
+     * Tests setDropdownTwigExtension()
      *
      * @return void
      */

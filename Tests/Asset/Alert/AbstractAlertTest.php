@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Alert\TestAlert;
 class AbstractAlertTest extends AbstractTestCase {
 
     /**
-     * Tests the setContent() method.
+     * Tests setContent()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class AbstractAlertTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setDismissible() method.
+     * Tests setDismissible()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class AbstractAlertTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

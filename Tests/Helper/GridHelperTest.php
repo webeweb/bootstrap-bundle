@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 class GridHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -33,7 +33,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -98,7 +98,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -109,7 +109,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */
@@ -120,7 +120,7 @@ class GridHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCSSClassname() method.
+     * Tests getCSSClassname()
      *
      * @return void
      */

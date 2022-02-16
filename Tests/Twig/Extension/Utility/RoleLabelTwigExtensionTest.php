@@ -75,7 +75,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapRoleLabelFunction() method.
+     * Tests bootstrapRoleLabelFunction()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapRoleLabelFunction() method.
+     * Tests bootstrapRoleLabelFunction()
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -128,7 +128,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

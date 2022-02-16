@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension;
 class CodeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapBasicBlockFunction() method.
+     * Tests bootstrapBasicBlockFunction()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBasicBlockFunction() method.
+     * Tests bootstrapBasicBlockFunction()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapInlineFunction() method.
+     * Tests bootstrapInlineFunction()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapInlineFunction() method.
+     * Tests bootstrapInlineFunction()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapSampleOutputFunction() method.
+     * Tests bootstrapSampleOutputFunction()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapSampleOutputFunction() method.
+     * Tests bootstrapSampleOutputFunction()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapUserInputFunction() method.
+     * Tests bootstrapUserInputFunction()
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapUserInputFunction() method.
+     * Tests bootstrapUserInputFunction()
      *
      * @return void
      */
@@ -145,7 +145,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapVariableFunction() method.
+     * Tests bootstrapVariableFunction()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapVariableFunction() method.
+     * Tests bootstrapVariableFunction()
      *
      * @return void
      */
@@ -175,7 +175,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -240,7 +240,7 @@ class CodeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

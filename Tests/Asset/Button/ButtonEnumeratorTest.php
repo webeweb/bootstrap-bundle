@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 class ButtonEnumeratorTest extends AbstractTestCase {
 
     /**
-     * Tests the enumSizes() method.
+     * Tests enumSizes()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class ButtonEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumTypes() method.
+     * Tests enumTypes()
      *
      * @return void
      */

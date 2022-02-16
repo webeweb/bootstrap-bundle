@@ -43,7 +43,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapRowButtonDefaultFunction() method.
+     * Tests bootstrapRowButtonDefaultFunction()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapRowButtonDeleteFunction() method.
+     * Tests bootstrapRowButtonDeleteFunction()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapRowButtonEditFunction() method.
+     * Tests bootstrapRowButtonEditFunction()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -121,7 +121,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

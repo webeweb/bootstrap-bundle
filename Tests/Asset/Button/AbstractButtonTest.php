@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Button\TestButton;
 class AbstractButtonTest extends AbstractTestCase {
 
     /**
-     * Tests the setActive() method.
+     * Tests setActive()
      *
      * @return void
      */
@@ -37,7 +37,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setBlock() method.
+     * Tests setBlock()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setContent() method.
+     * Tests setContent()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setDisabled() method.
+     * Tests setDisabled()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setOutline() method.
+     * Tests setOutline()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSize() method.
+     * Tests setSize()
      *
      * @return void
      */
@@ -102,7 +102,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setTitle() method.
+     * Tests setTitle()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

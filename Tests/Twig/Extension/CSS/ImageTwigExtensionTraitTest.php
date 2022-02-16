@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ImageTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setImageTwigExtension() method.
+     * Tests setImageTwigExtension()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ProgressBarTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setProgressBarTwigExtension() method.
+     * Tests setProgressBarTwigExtension()
      *
      * @return void
      */

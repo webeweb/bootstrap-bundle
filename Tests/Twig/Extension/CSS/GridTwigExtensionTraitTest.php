@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class GridTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setGridTwigExtension() method.
+     * Tests setGridTwigExtension()
      *
      * @return void
      */

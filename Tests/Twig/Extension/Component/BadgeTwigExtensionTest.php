@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension;
 class BadgeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapBadgeDangerFunction() method.
+     * Tests bootstrapBadgeDangerFunction()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeDarkFunction() method.
+     * Tests bootstrapBadgeDarkFunction()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeFunction() method.
+     * Tests bootstrapBadgeFunction()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeFunction() method.
+     * Tests bootstrapBadgeFunction()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeInfoFunction() method.
+     * Tests bootstrapBadgeInfoFunction()
      *
      * @return void
      */
@@ -106,7 +106,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeLightFunction() method.
+     * Tests bootstrapBadgeLightFunction()
      *
      * @return void
      */
@@ -122,7 +122,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeLinkFilter() method.
+     * Tests bootstrapBadgeLinkFilter()
      *
      * @return void
      */
@@ -138,7 +138,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgePrimaryFunction() method.
+     * Tests bootstrapBadgePrimaryFunction()
      *
      * @return void
      */
@@ -154,7 +154,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeSecondaryFunction() method.
+     * Tests bootstrapBadgeSecondaryFunction()
      *
      * @return void
      */
@@ -170,7 +170,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeSuccessFunction() method.
+     * Tests bootstrapBadgeSuccessFunction()
      *
      * @return void
      */
@@ -186,7 +186,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBadgeWarningFunction() method.
+     * Tests bootstrapBadgeWarningFunction()
      *
      * @return void
      */
@@ -202,7 +202,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -227,7 +227,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -322,7 +322,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -348,7 +348,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

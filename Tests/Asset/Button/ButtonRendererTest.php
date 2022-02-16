@@ -50,7 +50,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderActive() method.
+     * Tests renderActive()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderBlock() method.
+     * Tests renderBlock()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderContent() method.
+     * Tests renderContent()
      *
      * @return void
      */
@@ -83,7 +83,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderDataPlacement() method.
+     * Tests renderDataPlacement()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderDataToggle() method.
+     * Tests renderDataToggle()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderDisabled() method.
+     * Tests renderDisabled()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderSize() method.
+     * Tests renderSize()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderTitle() method.
+     * Tests renderTitle()
      *
      * @return void
      */
@@ -138,7 +138,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderType() method.
+     * Tests renderType()
      *
      * @return void
      */

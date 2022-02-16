@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 class NavigationNodeUsesrTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

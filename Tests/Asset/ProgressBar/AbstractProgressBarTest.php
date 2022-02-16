@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\ProgressBar\TestProgressBar;
 class AbstractProgressBarTest extends AbstractTestCase {
 
     /**
-     * Tests the setAnimated() method.
+     * Tests setAnimated()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setContent() method.
+     * Tests setContent()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setHeight() method.
+     * Tests setHeight()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setMax() method.
+     * Tests setMax()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setMin() method.
+     * Tests setMin()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setStriped() method.
+     * Tests setStriped()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setValue() method.
+     * Tests setValue()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -46,7 +46,7 @@ class AlertRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderContent() method.
+     * Tests renderContent()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class AlertRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderDismissible() method.
+     * Tests renderDismissible()
      *
      * @return void
      */
@@ -68,7 +68,7 @@ class AlertRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderType() method.
+     * Tests renderType()
      *
      * @return void
      */

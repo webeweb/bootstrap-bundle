@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Badge\TestBadge;
 class AbstractBadgeTest extends AbstractTestCase {
 
     /**
-     * Tests the setContent() method.
+     * Tests setContent()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class AbstractBadgeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPill() method.
+     * Tests setPill()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class AbstractBadgeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FormButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setFormButtonTwigExtension() method.
+     * Tests setFormButtonTwigExtension()
      *
      * @return void
      */

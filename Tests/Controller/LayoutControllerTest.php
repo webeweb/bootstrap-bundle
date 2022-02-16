@@ -32,7 +32,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the flashbagAction() method.
+     * Tests flashbagAction()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the layoutAction() method.
+     * Tests layoutAction()
      *
      * @return void
      */
@@ -68,7 +68,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the workInProgressAction() method.
+     * Tests workInProgressAction()
      *
      * @return void
      */

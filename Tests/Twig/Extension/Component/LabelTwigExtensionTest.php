@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 class LabelTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapLabelDangerFunction() method.
+     * Tests bootstrapLabelDangerFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
 
     /**
      * /**
-     * Tests the bootstrapLabelDangerFunction() method.
+     * Tests bootstrapLabelDangerFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelDefaultFunction() method.
+     * Tests bootstrapLabelDefaultFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelDefaultFunction() method.
+     * Tests bootstrapLabelDefaultFunction()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelInfoFunction() method.
+     * Tests bootstrapLabelInfoFunction()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelInfoFunction() method.
+     * Tests bootstrapLabelInfoFunction()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelPrimaryFunction() method.
+     * Tests bootstrapLabelPrimaryFunction()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelPrimaryFunction() method.
+     * Tests bootstrapLabelPrimaryFunction()
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelSuccessFunction() method.
+     * Tests bootstrapLabelSuccessFunction()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelSuccessFunction() method.
+     * Tests bootstrapLabelSuccessFunction()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelWarningFunction() method.
+     * Tests bootstrapLabelWarningFunction()
      *
      * @return void
      */
@@ -191,7 +191,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapLabelWarningFunction() method.
+     * Tests bootstrapLabelWarningFunction()
      *
      * @return void
      */
@@ -206,7 +206,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -219,7 +219,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -232,7 +232,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -308,7 +308,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

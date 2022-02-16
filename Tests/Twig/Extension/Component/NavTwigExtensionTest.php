@@ -46,7 +46,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapNavsJustifiedFunction() method.
+     * Tests bootstrapNavsJustifiedFunction()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapNavsPillsFunction() method.
+     * Tests bootstrapNavsPillsFunction()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapNavsPillsFunction() method.
+     * Tests bootstrapNavsPillsFunction()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapNavsTabsFunction() method.
+     * Tests bootstrapNavsTabsFunction()
      *
      * @return void
      */
@@ -106,7 +106,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -119,7 +119,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -164,7 +164,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

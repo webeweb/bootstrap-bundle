@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 class BadgeEnumeratorTest extends AbstractTestCase {
 
     /**
-     * Tests the enumTypes() method.
+     * Tests enumTypes()
      *
      * @return void
      */

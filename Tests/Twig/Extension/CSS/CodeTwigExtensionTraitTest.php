@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class CodeTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setCodeTwigExtension() method.
+     * Tests setCodeTwigExtension()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
 class RendererTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setUser() method.
+     * Tests setUser()
      *
      * @return void
      */

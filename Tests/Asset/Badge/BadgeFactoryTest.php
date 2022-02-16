@@ -53,7 +53,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDangerBadge() method.
+     * Tests newDangerBadge()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDarkBadge() method.
+     * Tests newDarkBadge()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDefaultBadge() method.
+     * Tests newDefaultBadge()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfoBadge() method.
+     * Tests newInfoBadge()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLightBadge() method.
+     * Tests newLightBadge()
      *
      * @return void
      */
@@ -113,7 +113,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newPrimaryBadge() method.
+     * Tests newPrimaryBadge()
      *
      * @return void
      */
@@ -125,7 +125,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSecondaryBadge() method.
+     * Tests newSecondaryBadge()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSuccessBadge() method.
+     * Tests newSuccessBadge()
      *
      * @return void
      */
@@ -149,7 +149,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newWarningBadge() method.
+     * Tests newWarningBadge()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDangerBadge() method.
+     * Tests parseDangerBadge()
      *
      * @return void
      */
@@ -178,7 +178,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDarkBadge() method.
+     * Tests parseDarkBadge()
      *
      * @return void
      */
@@ -195,7 +195,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDefaultBadge() method.
+     * Tests parseDefaultBadge()
      *
      * @return void
      */
@@ -212,7 +212,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseInfoBadge() method.
+     * Tests parseInfoBadge()
      *
      * @return void
      */
@@ -229,7 +229,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseLightBadge() method.
+     * Tests parseLightBadge()
      *
      * @return void
      */
@@ -246,7 +246,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parsePrimaryBadge() method.
+     * Tests parsePrimaryBadge()
      *
      * @return void
      */
@@ -263,7 +263,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSecondaryBadge() method.
+     * Tests parseSecondaryBadge()
      *
      * @return void
      */
@@ -280,7 +280,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSuccessBadge() method.
+     * Tests parseSuccessBadge()
      *
      * @return void
      */
@@ -297,7 +297,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseWarningBadge() method.
+     * Tests parseWarningBadge()
      *
      * @return void
      */

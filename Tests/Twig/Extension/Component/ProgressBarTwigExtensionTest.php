@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
 class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapMultipleBars() method.
+     * Tests bootstrapMultipleBars()
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarBasicFunction() method.
+     * Tests bootstrapProgressBarBasicFunction()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarBasicFunction() method.
+     * Tests bootstrapProgressBarBasicFunction()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarDangerFunction() method.
+     * Tests bootstrapProgressBarDangerFunction()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarDangerFunction() method.
+     * Tests bootstrapProgressBarDangerFunction()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarDangerFunction() method.
+     * Tests bootstrapProgressBarDangerFunction()
      *
      * @return void
      */
@@ -120,7 +120,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarInfoFunction() method.
+     * Tests bootstrapProgressBarInfoFunction()
      *
      * @return void
      */
@@ -135,7 +135,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarInfoFunction() method.
+     * Tests bootstrapProgressBarInfoFunction()
      *
      * @return void
      */
@@ -151,7 +151,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarInfoFunction() method.
+     * Tests bootstrapProgressBarInfoFunction()
      *
      * @return void
      */
@@ -166,7 +166,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarSuccessFunction() method.
+     * Tests bootstrapProgressBarSuccessFunction()
      *
      * @return void
      */
@@ -181,7 +181,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarSuccessFunction() method.
+     * Tests bootstrapProgressBarSuccessFunction()
      *
      * @return void
      */
@@ -197,7 +197,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarSuccessFunction() method.
+     * Tests bootstrapProgressBarSuccessFunction()
      *
      * @return void
      */
@@ -212,7 +212,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarWarningFunction() method.
+     * Tests bootstrapProgressBarWarningFunction()
      *
      * @return void
      */
@@ -227,7 +227,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarWarningFunction() method.
+     * Tests bootstrapProgressBarWarningFunction()
      *
      * @return void
      */
@@ -243,7 +243,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapProgressBarWarningFunction() method.
+     * Tests bootstrapProgressBarWarningFunction()
      *
      * @return void
      */
@@ -258,7 +258,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -283,7 +283,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -358,7 +358,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

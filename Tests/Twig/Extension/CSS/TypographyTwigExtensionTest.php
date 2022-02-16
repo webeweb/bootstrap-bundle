@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 class TypographyTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapBoldFunction() method.
+     * Tests bootstrapBoldFunction()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapBoldFunction() method.
+     * Tests bootstrapBoldFunction()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapDeletedFunction() method.
+     * Tests bootstrapDeletedFunction()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapDeletedFunction() method.
+     * Tests bootstrapDeletedFunction()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapItalicFunction() method.
+     * Tests bootstrapItalicFunction()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapItalicFunction() method.
+     * Tests bootstrapItalicFunction()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading1Function() method.
+     * Tests bootstrapHeading1Function()
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading1Function() method.
+     * Tests bootstrapHeading1Function()
      *
      * @return void
      */
@@ -145,7 +145,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading1Function() method.
+     * Tests bootstrapHeading1Function()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading1Function() method.
+     * Tests bootstrapHeading1Function()
      *
      * @return void
      */
@@ -175,7 +175,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading1Function() method.
+     * Tests bootstrapHeading1Function()
      *
      * @return void
      */
@@ -190,7 +190,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading2Function() method.
+     * Tests bootstrapHeading2Function()
      *
      * @return void
      */
@@ -205,7 +205,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading2Function() method.
+     * Tests bootstrapHeading2Function()
      *
      * @return void
      */
@@ -220,7 +220,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading2Function() method.
+     * Tests bootstrapHeading2Function()
      *
      * @return void
      */
@@ -235,7 +235,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading2Function() method.
+     * Tests bootstrapHeading2Function()
      *
      * @return void
      */
@@ -250,7 +250,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading2Function() method.
+     * Tests bootstrapHeading2Function()
      *
      * @return void
      */
@@ -265,7 +265,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading3Function() method.
+     * Tests bootstrapHeading3Function()
      *
      * @return void
      */
@@ -280,7 +280,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading3Function() method.
+     * Tests bootstrapHeading3Function()
      *
      * @return void
      */
@@ -295,7 +295,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading3Function() method.
+     * Tests bootstrapHeading3Function()
      *
      * @return void
      */
@@ -310,7 +310,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading3Function() method.
+     * Tests bootstrapHeading3Function()
      *
      * @return void
      */
@@ -325,7 +325,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading3Function() method.
+     * Tests bootstrapHeading3Function()
      *
      * @return void
      */
@@ -340,7 +340,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading4Function() method.
+     * Tests bootstrapHeading4Function()
      *
      * @return void
      */
@@ -355,7 +355,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading4Function() method.
+     * Tests bootstrapHeading4Function()
      *
      * @return void
      */
@@ -370,7 +370,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading4Function() method.
+     * Tests bootstrapHeading4Function()
      *
      * @return void
      */
@@ -385,7 +385,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading4Function() method.
+     * Tests bootstrapHeading4Function()
      *
      * @return void
      */
@@ -400,7 +400,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading4Function() method.
+     * Tests bootstrapHeading4Function()
      *
      * @return void
      */
@@ -415,7 +415,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading5Function() method.
+     * Tests bootstrapHeading5Function()
      *
      * @return void
      */
@@ -430,7 +430,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading5Function() method.
+     * Tests bootstrapHeading5Function()
      *
      * @return void
      */
@@ -445,7 +445,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading5Function() method.
+     * Tests bootstrapHeading5Function()
      *
      * @return void
      */
@@ -460,7 +460,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading5Function() method.
+     * Tests bootstrapHeading5Function()
      *
      * @return void
      */
@@ -475,7 +475,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading5Function() method.
+     * Tests bootstrapHeading5Function()
      *
      * @return void
      */
@@ -490,7 +490,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading6Function() method.
+     * Tests bootstrapHeading6Function()
      *
      * @return void
      */
@@ -505,7 +505,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading6Function() method.
+     * Tests bootstrapHeading6Function()
      *
      * @return void
      */
@@ -520,7 +520,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading6Function() method.
+     * Tests bootstrapHeading6Function()
      *
      * @return void
      */
@@ -535,7 +535,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading6Function() method.
+     * Tests bootstrapHeading6Function()
      *
      * @return void
      */
@@ -550,7 +550,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapHeading6Function() method.
+     * Tests bootstrapHeading6Function()
      *
      * @return void
      */
@@ -565,7 +565,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapInsertedFunction() method.
+     * Tests bootstrapInsertedFunction()
      *
      * @return void
      */
@@ -580,7 +580,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapInsertedFunction() method.
+     * Tests bootstrapInsertedFunction()
      *
      * @return void
      */
@@ -595,7 +595,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapMarkedFunction() method.
+     * Tests bootstrapMarkedFunction()
      *
      * @return void
      */
@@ -610,7 +610,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapMarkedFunction() method.
+     * Tests bootstrapMarkedFunction()
      *
      * @return void
      */
@@ -625,7 +625,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapSmallFunction() method.
+     * Tests bootstrapSmallFunction()
      *
      * @return void
      */
@@ -640,7 +640,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapSmallFunction() method.
+     * Tests bootstrapSmallFunction()
      *
      * @return void
      */
@@ -655,7 +655,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapStrikethroughFunction() method.
+     * Tests bootstrapStrikethroughFunction()
      *
      * @return void
      */
@@ -670,7 +670,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapStrikethroughFunction() method.
+     * Tests bootstrapStrikethroughFunction()
      *
      * @return void
      */
@@ -685,7 +685,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapUnderlinedFunction() method.
+     * Tests bootstrapUnderlinedFunction()
      *
      * @return void
      */
@@ -700,7 +700,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapUnderlinedFunction() method.
+     * Tests bootstrapUnderlinedFunction()
      *
      * @return void
      */
@@ -715,7 +715,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -870,7 +870,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

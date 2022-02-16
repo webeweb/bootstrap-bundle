@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class BreadcrumbTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setBreadcrumbTwigExtension() method.
+     * Tests setBreadcrumbTwigExtension()
      *
      * @return void
      */

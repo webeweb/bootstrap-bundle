@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
 class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setRoleLabelTwigExtension() method.
+     * Tests setRoleLabelTwigExtension()
      *
      * @return void
      */

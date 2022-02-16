@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 class ButtonTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapButtonDangerFunction() method.
+     * Tests bootstrapButtonDangerFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonDangerFunction() method.
+     * Tests bootstrapButtonDangerFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonDarkFunction() method.
+     * Tests bootstrapButtonDarkFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonDarkFunction() method.
+     * Tests bootstrapButtonDarkFunction()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonDefaultFunction() method.
+     * Tests bootstrapButtonDefaultFunction()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonDefaultFunction() method.
+     * Tests bootstrapButtonDefaultFunction()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonInfoFunction() method.
+     * Tests bootstrapButtonInfoFunction()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonInfoFunction() method.
+     * Tests bootstrapButtonInfoFunction()
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonLightFunction() method.
+     * Tests bootstrapButtonLightFunction()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonLightFunction() method.
+     * Tests bootstrapButtonLightFunction()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonLinkFilter() method.
+     * Tests bootstrapButtonLinkFilter()
      *
      * @return void
      */
@@ -191,7 +191,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonLinkFilter() method.
+     * Tests bootstrapButtonLinkFilter()
      *
      * @return void
      */
@@ -206,7 +206,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonLinkFunction() method.
+     * Tests bootstrapButtonLinkFunction()
      *
      * @return void
      */
@@ -221,7 +221,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonPrimaryFunction() method.
+     * Tests bootstrapButtonPrimaryFunction()
      *
      * @return void
      */
@@ -236,7 +236,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonPrimaryFunction() method.
+     * Tests bootstrapButtonPrimaryFunction()
      *
      * @return void
      */
@@ -251,7 +251,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonSecondaryFunction() method.
+     * Tests bootstrapButtonSecondaryFunction()
      *
      * @return void
      */
@@ -266,7 +266,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonSecondaryFunction() method.
+     * Tests bootstrapButtonSecondaryFunction()
      *
      * @return void
      */
@@ -281,7 +281,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonSubmitFilter() method.
+     * Tests bootstrapButtonSubmitFilter()
      *
      * @return void
      */
@@ -296,7 +296,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonSuccessFunction() method.
+     * Tests bootstrapButtonSuccessFunction()
      *
      * @return void
      */
@@ -311,7 +311,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonSuccessFunction() method.
+     * Tests bootstrapButtonSuccessFunction()
      *
      * @return void
      */
@@ -326,7 +326,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonWarningFunction() method.
+     * Tests bootstrapButtonWarningFunction()
      *
      * @return void
      */
@@ -341,7 +341,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapButtonWarningFunction() method.
+     * Tests bootstrapButtonWarningFunction()
      *
      * @return void
      */
@@ -356,7 +356,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -391,7 +391,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -496,7 +496,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -582,7 +582,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
 class ImageTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapImageBase64Function() method.
+     * Tests bootstrapImageBase64Function()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -53,7 +53,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapImageBase64Function() method.
+     * Tests bootstrapImageBase64Function()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -69,7 +69,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class ImageTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
