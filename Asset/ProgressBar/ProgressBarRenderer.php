@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Asset\ProgressBar;
 /**
  * Progress bar renderer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
  */
 class ProgressBarRenderer {

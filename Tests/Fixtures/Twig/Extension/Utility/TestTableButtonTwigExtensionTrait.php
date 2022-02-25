@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtensionTr
 /**
  * Test table button Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Twig\Extension\Utility
  */
 class TestTableButtonTwigExtensionTrait {

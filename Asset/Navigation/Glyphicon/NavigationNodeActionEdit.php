@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 /**
  * Navigation node action "edit".
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Navigation\Glyphicon
  */
 class NavigationNodeActionEdit extends NavigationNode {

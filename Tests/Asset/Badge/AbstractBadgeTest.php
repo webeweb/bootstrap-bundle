@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Badge\TestBadge;
 /**
  * Abstract badge test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
  */
 class AbstractBadgeTest extends AbstractTestCase {

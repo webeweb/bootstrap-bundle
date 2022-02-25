@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 /**
  * Progress bar Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  */
 trait ProgressBarTwigExtensionTrait {

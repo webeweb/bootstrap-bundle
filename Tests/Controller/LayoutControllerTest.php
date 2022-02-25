@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 /**
  * Layout controller test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Controller
  */
 class LayoutControllerTest extends AbstractWebTestCase {

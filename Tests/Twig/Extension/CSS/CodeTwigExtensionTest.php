@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension;
 /**
  * Code Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  */
 class CodeTwigExtensionTest extends AbstractTestCase {

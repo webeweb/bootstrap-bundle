@@ -16,7 +16,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Alert factory.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Alert
  */
 class AlertFactory {

@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle;
 /**
  * Bootstrap interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  */
 interface WBWBootstrapInterface {
 

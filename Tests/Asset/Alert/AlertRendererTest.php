@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 /**
  * Alert renderer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
 class AlertRendererTest extends AbstractTestCase {

@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension;
 /**
  * Dropdown component Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  */
 class DropdownTwigExtensionTest extends AbstractTestCase {

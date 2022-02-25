@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 /**
  * Bootstrap bundle.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle
  */
 class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {

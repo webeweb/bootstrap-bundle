@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 /**
  * ProgressBar interface test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar
  */
 class ProgressBarInterfaceTest extends AbstractTestCase {

@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Button\TestButton;
 /**
  * Abstract button test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Button
  */
 class AbstractButtonTest extends AbstractTestCase {

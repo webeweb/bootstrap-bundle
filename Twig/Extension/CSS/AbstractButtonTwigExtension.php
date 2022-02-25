@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
 /**
  * Abstract button Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @abstract
  */

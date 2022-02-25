@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ButtonGroupTwigExtension
 /**
  * Test button group Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Twig\Extension\Component
  */
 class TestButtonGroupTwigExtensionTrait {

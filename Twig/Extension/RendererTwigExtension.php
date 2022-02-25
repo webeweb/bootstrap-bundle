@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension as BaseTwigExtens
 /**
  * Renderer Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension
  */
 class RendererTwigExtension extends BaseTwigExtension {

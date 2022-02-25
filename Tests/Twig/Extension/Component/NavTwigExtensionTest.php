@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavTwigExtension;
 /**
  * Nav Twig extension text.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component
  */
 class NavTwigExtensionTest extends AbstractTestCase {

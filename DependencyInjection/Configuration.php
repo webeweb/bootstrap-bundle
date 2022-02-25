@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 /**
  * Configuration.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\DependencyInjection
  */
 class Configuration implements ConfigurationInterface {

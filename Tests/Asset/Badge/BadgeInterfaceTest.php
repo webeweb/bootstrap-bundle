@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 /**
  * Badge interface test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
  */
 class BadgeInterfaceTest extends AbstractTestCase {

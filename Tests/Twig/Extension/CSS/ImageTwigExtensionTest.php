@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
 /**
  * Image Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  */
 class ImageTwigExtensionTest extends AbstractTestCase {

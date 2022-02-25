@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Asset\Badge\AbstractBadge;
 /**
  * Test badge.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Badge
  */
 class TestBadge extends AbstractBadge {

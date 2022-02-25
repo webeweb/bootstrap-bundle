@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 /**
  * Primary button test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Button
  */
 class PrimaryButtonTest extends AbstractTestCase {

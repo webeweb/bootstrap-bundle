@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Asset\Button;
 /**
  * Dark button.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Button
  */
 class DarkButton extends AbstractButton {

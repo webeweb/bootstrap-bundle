@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Asset\Alert;
 /**
  * Alert enumerator.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Alert
  */
 class AlertEnumerator {

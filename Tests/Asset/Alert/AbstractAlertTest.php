@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Alert\TestAlert;
 /**
  * Abstract alert test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
 class AbstractAlertTest extends AbstractTestCase {

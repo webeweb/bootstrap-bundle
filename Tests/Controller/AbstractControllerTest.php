@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\WBWCoreEvents;
 /**
  * Abstract controller test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Controller
  */
 class AbstractControllerTest extends AbstractTestCase {

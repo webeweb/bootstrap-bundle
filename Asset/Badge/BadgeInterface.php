@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 /**
  * Badge interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Badge
  */
 interface BadgeInterface {

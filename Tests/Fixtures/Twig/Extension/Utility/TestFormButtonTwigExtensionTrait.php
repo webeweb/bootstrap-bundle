@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtensionTra
 /**
  * Test form button Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Twig\Extension\Utility
  */
 class TestFormButtonTwigExtensionTrait {

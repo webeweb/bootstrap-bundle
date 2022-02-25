@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultSearchThemeProvider as BaseSearchThemePro
 /**
  * Default search theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
 class DefaultSearchThemeProvider extends BaseSearchThemeProvider {

@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Asset\Badge;
 /**
  * Warning badge.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Badge
  */
 class WarningBadge extends AbstractBadge {

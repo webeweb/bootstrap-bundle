@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider as BaseTasksDr
 /**
  * Default tasks drop down theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
 class DefaultTasksDropDownThemeProvider extends BaseTasksDropDownThemeProvider {

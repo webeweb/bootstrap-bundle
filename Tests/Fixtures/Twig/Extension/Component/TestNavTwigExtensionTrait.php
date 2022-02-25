@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\NavTwigExtensionTrait;
 /**
  * Test nav Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Twig\Extension\Component
  */
 class TestNavTwigExtensionTrait {

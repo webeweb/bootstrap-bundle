@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 /**
  * Navigation node "Users groups" test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation\Glyphicon
  */
 class NavigationNodeUsersGroupsTest extends AbstractTestCase {

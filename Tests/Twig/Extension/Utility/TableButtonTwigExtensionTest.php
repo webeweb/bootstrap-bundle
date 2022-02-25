@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
 /**
  * Table button utility Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
  */
 class TableButtonTwigExtensionTest extends AbstractTestCase {

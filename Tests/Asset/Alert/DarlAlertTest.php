@@ -18,7 +18,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 /**
  * Dark alert test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Alert
  */
 class DarkAlertTest extends AbstractTestCase {

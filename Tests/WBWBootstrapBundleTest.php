@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 /**
  * Bootstrap bundle test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests
  */
 class WBWBootstrapBundleTest extends AbstractTestCase {

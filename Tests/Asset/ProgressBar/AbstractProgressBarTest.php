@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\ProgressBar\TestProgressBar;
 /**
  * Abstract progress bar test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar
  */
 class AbstractProgressBarTest extends AbstractTestCase {

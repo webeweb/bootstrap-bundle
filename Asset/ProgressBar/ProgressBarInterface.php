@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 /**
  * Progress bar interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
  */
 interface ProgressBarInterface {

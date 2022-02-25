@@ -16,7 +16,7 @@ use Twig\TwigFunction;
 /**
  * Button group Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @link https://getbootstrap.com/docs/3.3/components/#btn-groups
  */

@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\Asset\Button\AbstractButton;
 /**
  * Test button.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Button
  */
 class TestButton extends AbstractButton {

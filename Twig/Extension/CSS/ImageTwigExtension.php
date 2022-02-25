@@ -19,7 +19,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Image Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\CSS
  * @link https://getbootstrap.com/docs/3.3/css/#images
  */

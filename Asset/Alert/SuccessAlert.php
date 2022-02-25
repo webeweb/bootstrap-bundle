@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Asset\Alert;
 /**
  * Success alert.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Alert
  */
 class SuccessAlert extends AbstractAlert {

@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 /**
  * Breadcrumb node action "New users group" test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation\Glyphicon
  */
 class BreadcrumbNodeActionNewUsersGroupTest extends AbstractTestCase {

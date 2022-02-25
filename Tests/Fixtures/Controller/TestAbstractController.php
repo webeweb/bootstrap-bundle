@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 /**
  * Test abstract controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller
  */
 class TestAbstractController extends AbstractController {

@@ -16,7 +16,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 /**
  * Bootstrap interface test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests
  */
 class WBWBootstrapInterfaceTest extends AbstractTestCase {

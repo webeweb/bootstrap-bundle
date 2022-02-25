@@ -17,7 +17,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
 /**
  * Renderer Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension
  */
 class RendererTwigExtensionTest extends AbstractTestCase {

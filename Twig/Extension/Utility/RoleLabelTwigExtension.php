@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 /**
  * Role label Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Utility
  */
 class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {

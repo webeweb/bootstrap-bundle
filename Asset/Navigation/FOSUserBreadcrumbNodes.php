@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 /**
  * FOSUser breadcrumb nodes.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Navigation
  */
 class FOSUserBreadcrumbNodes {

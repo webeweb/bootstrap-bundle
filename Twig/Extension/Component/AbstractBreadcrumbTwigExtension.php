@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 /**
  * Abstract breadcrumb Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension\Component
  * @abstract
  */

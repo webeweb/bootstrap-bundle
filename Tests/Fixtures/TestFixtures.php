@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Asset\Navigation\NavigationTree;
 /**
  * Test fixtures.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\App
  */
 class TestFixtures {

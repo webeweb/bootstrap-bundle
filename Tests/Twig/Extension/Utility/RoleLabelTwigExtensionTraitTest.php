@@ -19,7 +19,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
 /**
  * Role label Twig extension trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
  */
 class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase as TestCase;
 /**
  * Abstract test case.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests
  * @abstract
  */

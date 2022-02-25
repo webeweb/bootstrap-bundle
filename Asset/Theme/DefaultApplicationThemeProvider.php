@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider as BaseApplicati
 /**
  * Default application theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Asset\Theme
  */
 class DefaultApplicationThemeProvider extends BaseApplicationThemeProvider {
