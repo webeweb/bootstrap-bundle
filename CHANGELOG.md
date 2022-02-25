@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [3.27.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.27.0) (2022-01-05)
 
 - Improve views organization
