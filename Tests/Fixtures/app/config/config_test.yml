@@ -9,6 +9,7 @@ parameters:
 framework:
     assets:         true
     default_locale: "%locale%"
+    form:           true
     router:
         resource:            "%kernel.project_dir%/config/routing_test.yml"
         strict_requirements: true
