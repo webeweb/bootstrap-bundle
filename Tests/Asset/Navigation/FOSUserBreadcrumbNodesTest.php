@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation;
 
 use WBW\Bundle\BootstrapBundle\Asset\Navigation\FOSUserBreadcrumbNodes;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
+use WBW\Bundle\CoreBundle\Asset\Navigation\BreadcrumbNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
 
 /**
  * FOSUser breadcrumbNodesTest.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider as BaseNotificationsDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNotificationsDropDownThemeProvider as BaseNotificationsDropDownThemeProvider;
 
 /**
  * Default notifications drop down theme provider.

@@ -14,10 +14,10 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Navigation\AbstractNavigationNode;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
-use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Asset\Navigation\AbstractNavigationNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTreeHelper;
+use WBW\Bundle\CoreBundle\Component\Translation\TranslatorTrait;
 
 /**
  * Abstract breadcrumb Twig extension.

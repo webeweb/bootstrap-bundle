@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider as BaseApplicationThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultApplicationThemeProvider as BaseApplicationThemeProvider;
 
 /**
  * Default application theme provider.

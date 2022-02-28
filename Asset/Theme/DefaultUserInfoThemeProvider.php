@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultUserInfoThemeProvider as BaseUserInfoThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultUserInfoThemeProvider as BaseUserInfoThemeProvider;
 
 /**
  * Default user info theme provider.

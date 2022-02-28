@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\HttpFoundation\Request;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTreeHelper;
 
 /**
  * Breadcrumb Twig Extension.

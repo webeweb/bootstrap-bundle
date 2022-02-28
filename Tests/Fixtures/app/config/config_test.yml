@@ -7,16 +7,14 @@ parameters:
     locale: "en"
 
 framework:
+    assets: true
     default_locale: "%locale%"
-    form:           true
     router:
         resource:            "%kernel.root_dir%/config/routing_test.yml"
         strict_requirements: true
     secret:         "ThisTokenIsNotSoSecretChangeIt"
     session:
         storage_id: "session.storage.mock_file"
-    templating:
-        engines: [ "twig" ]
     test:           ~
     translator: { fallbacks: [ "%locale%" ] }
     validation:

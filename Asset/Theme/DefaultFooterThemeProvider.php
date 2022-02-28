@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultFooterThemeProvider as BaseFooterThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultFooterThemeProvider as BaseFooterThemeProvider;
 
 /**
  * Default footer theme provider.

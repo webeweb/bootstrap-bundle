@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Navigation\Glyphicon;
 
-use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 
 /**
  * Navigation node action "import".

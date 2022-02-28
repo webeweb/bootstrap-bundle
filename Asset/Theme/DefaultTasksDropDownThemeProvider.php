@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider as BaseTasksDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultTasksDropDownThemeProvider as BaseTasksDropDownThemeProvider;
 
 /**
  * Default tasks drop down theme provider.

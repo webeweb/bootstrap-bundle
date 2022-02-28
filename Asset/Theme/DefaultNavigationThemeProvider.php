@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider as BaseNavigationThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNavigationThemeProvider as BaseNavigationThemeProvider;
 
 /**
  * Default navigation theme provider.

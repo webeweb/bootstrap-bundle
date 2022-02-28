@@ -14,8 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
-use WBW\Bundle\CoreBundle\WBWCoreEvents;
+use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 
 /**
  * Abstract controller test.
@@ -53,7 +52,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertNotNull($res);
 
         $this->assertInstanceOf(NotificationEvent::class, $res);
-        $this->assertEquals(WBWCoreEvents::NOTIFICATION_DANGER, $res->getEventName());
+        $this->assertEquals(NotificationEvent::DANGER, $res->getEventName());
 
         $this->assertEquals("danger", $res->getNotification()->getContent());
         $this->assertEquals(NotificationInterface::NOTIFICATION_DANGER, $res->getNotification()->getType());
@@ -73,7 +72,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertNotNull($res);
 
         $this->assertInstanceOf(NotificationEvent::class, $res);
-        $this->assertEquals(WBWCoreEvents::NOTIFICATION_INFO, $res->getEventName());
+        $this->assertEquals(NotificationEvent::INFO, $res->getEventName());
 
         $this->assertEquals("info", $res->getNotification()->getContent());
         $this->assertEquals(NotificationInterface::NOTIFICATION_INFO, $res->getNotification()->getType());
@@ -93,7 +92,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertNotNull($res);
 
         $this->assertInstanceOf(NotificationEvent::class, $res);
-        $this->assertEquals(WBWCoreEvents::NOTIFICATION_SUCCESS, $res->getEventName());
+        $this->assertEquals(NotificationEvent::SUCCESS, $res->getEventName());
 
         $this->assertEquals("success", $res->getNotification()->getContent());
         $this->assertEquals(NotificationInterface::NOTIFICATION_SUCCESS, $res->getNotification()->getType());
@@ -113,7 +112,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertNotNull($res);
 
         $this->assertInstanceOf(NotificationEvent::class, $res);
-        $this->assertEquals(WBWCoreEvents::NOTIFICATION_WARNING, $res->getEventName());
+        $this->assertEquals(NotificationEvent::WARNING, $res->getEventName());
 
         $this->assertEquals("warning", $res->getNotification()->getContent());
         $this->assertEquals(NotificationInterface::NOTIFICATION_WARNING, $res->getNotification()->getType());

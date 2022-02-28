@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation\Glyphicon;
 
 use WBW\Bundle\BootstrapBundle\Asset\Navigation\Glyphicon\NavigationNodeUsersGroups;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
 
 /**
  * Navigation node "Users groups" test.

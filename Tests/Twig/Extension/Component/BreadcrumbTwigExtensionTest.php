@@ -16,7 +16,7 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
 /**

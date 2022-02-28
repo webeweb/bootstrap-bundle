@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider as BaseBreadcrumbsThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultBreadcrumbsThemeProvider as BaseBreadcrumbsThemeProvider;
 
 /**
  * Default breadcrumbs theme provider.

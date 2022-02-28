@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Navigation\Glyphicon;
 
-use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\BreadcrumbNode;
 
 /**
  * Breadcrumb node action "export".
