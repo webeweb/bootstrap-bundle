@@ -7,10 +7,10 @@ parameters:
     locale: "en"
 
 framework:
-    assets: true
+    assets:         true
     default_locale: "%locale%"
     router:
-        resource:            "%kernel.root_dir%/config/routing_test.yml"
+        resource:            "%kernel.project_dir%/config/routing_test.yml"
         strict_requirements: true
     secret:         "ThisTokenIsNotSoSecretChangeIt"
     session:
@@ -24,7 +24,7 @@ framework:
 doctrine:
     dbal:
         driver: "pdo_sqlite"
-        path:   "%kernel.root_dir%/var/test.sqlite"
+        path:   "%kernel.project_dir%/var/test.sqlite"
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:                true
