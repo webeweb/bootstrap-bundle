@@ -54,9 +54,9 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
         $attributes = true === $node->getActive() && true === $last ? ["class" => "active"] : [];
 
         $content   = $this->getTranslator()->trans($node->getLabel());
-        $innerHTML = true === $last ? $content : static::coreHTMLElement("a", $content, ["href" => $node->getUri()]);
+        $innerHTML = true === $last ? $content : static::coreHtmlElement("a", $content, ["href" => $node->getUri()]);
 
-        return static::coreHTMLElement("li", $innerHTML, $attributes);
+        return static::coreHtmlElement("li", $innerHTML, $attributes);
     }
 
     /**
@@ -82,6 +82,6 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
             $innerHTML[] = $this->bootstrapBreadcrumb($nodes[$i], $count === $i + 1);
         }
 
-        return static::coreHTMLElement("ol", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
+        return static::coreHtmlElement("ol", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
 }

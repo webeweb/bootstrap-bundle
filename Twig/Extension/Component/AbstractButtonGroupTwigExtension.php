@@ -39,6 +39,6 @@ abstract class AbstractButtonGroupTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = "\n" . implode("\n", $buttons) . "\n";
 
-        return static::coreHTMLElement("div", $innerHTML, $attributes);
+        return static::coreHtmlElement("div", $innerHTML, $attributes);
     }
 }

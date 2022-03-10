@@ -42,6 +42,6 @@ abstract class AbstractBadgeTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = BadgeRenderer::renderContent($badge);
 
-        return static::coreHTMLElement("span", $innerHTML, $attributes);
+        return static::coreHtmlElement("span", $innerHTML, $attributes);
     }
 }

@@ -52,7 +52,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = (null !== $content ? $content : "") . '<span class="caret"></span>';
 
-        return static::coreHTMLElement("button", $innerHTML, $attributes);
+        return static::coreHtmlElement("button", $innerHTML, $attributes);
     }
 
     /**
@@ -67,7 +67,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
             "role"  => "separator",
         ];
 
-        return static::coreHTMLElement("li", null, $attributes);
+        return static::coreHtmlElement("li", null, $attributes);
     }
 
     /**
@@ -82,6 +82,6 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
             "class" => "dropdown-header",
         ];
 
-        return static::coreHTMLElement("li", $content, $attributes);
+        return static::coreHtmlElement("li", $content, $attributes);
     }
 }

@@ -29,7 +29,7 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
      * @return string Returns the Bootstrap nav item.
      */
     private function bootstrapNav(?string $item): string {
-        return static::coreHTMLElement("li", $item, ["role" => "presentation"]);
+        return static::coreHtmlElement("li", $item, ["role" => "presentation"]);
     }
 
     /**
@@ -55,6 +55,6 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
             $innerHTML[] = $this->bootstrapNav($current);
         }
 
-        return static::coreHTMLElement("ul", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
+        return static::coreHtmlElement("ul", "\n" . implode("\n", $innerHTML) . "\n", $attributes);
     }
 }

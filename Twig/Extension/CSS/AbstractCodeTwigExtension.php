@@ -29,7 +29,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
      * @return string  Returns the Bootstrap basic block.
      */
     protected function bootstrapBasicBlock(?string $content): string {
-        return static::coreHTMLElement("pre", $content);
+        return static::coreHtmlElement("pre", $content);
     }
 
     /**
@@ -39,7 +39,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
      * @return string  Returns the Bootstrap inline.
      */
     protected function bootstrapInline(?string $content): string {
-        return static::coreHTMLElement("code", $content);
+        return static::coreHtmlElement("code", $content);
     }
 
     /**
@@ -49,7 +49,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
      * @return string  Returns the Bootstrap sample output.
      */
     protected function bootstrapSampleOutput(?string $content): string {
-        return static::coreHTMLElement("samp", $content);
+        return static::coreHtmlElement("samp", $content);
     }
 
     /**
@@ -59,7 +59,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
      * @return string  Returns the Bootstrap user input.
      */
     protected function bootstrapUserInput(?string $content): string {
-        return static::coreHTMLElement("kbd", $content);
+        return static::coreHtmlElement("kbd", $content);
     }
 
     /**
@@ -69,6 +69,6 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
      * @return string  Returns the Bootstrap variable.
      */
     protected function bootstrapVariable(?string $content): string {
-        return static::coreHTMLElement("var", $content);
+        return static::coreHtmlElement("var", $content);
     }
 }

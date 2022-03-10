@@ -86,7 +86,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
 
         $innerHTML = ArrayHelper::get($args, "content");
 
-        return static::coreHTMLElement("a", $innerHTML, $attributes);
+        return static::coreHtmlElement("a", $innerHTML, $attributes);
     }
 
     /**

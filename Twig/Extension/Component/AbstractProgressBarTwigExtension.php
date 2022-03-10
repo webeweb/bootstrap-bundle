@@ -32,7 +32,7 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
      */
     protected function bootstrapProgressBar(ProgressBarInterface $progressBar): string {
 
-        $span = static::coreHTMLElement("span", $progressBar->getValue() . "%", ["class" => "sr-only"]);
+        $span = static::coreHtmlElement("span", $progressBar->getValue() . "%", ["class" => "sr-only"]);
 
         $type = ProgressBarRenderer::renderType($progressBar);
         if (3 !== $this->getVersion()) {
@@ -55,8 +55,8 @@ abstract class AbstractProgressBarTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = ProgressBarRenderer::renderContent($progressBar, $span);
 
-        $div = static::coreHTMLElement("div", $innerHTML, $attributes);
+        $div = static::coreHtmlElement("div", $innerHTML, $attributes);
 
-        return static::coreHTMLElement("div", $div, ["class" => "progress"]);
+        return static::coreHtmlElement("div", $div, ["class" => "progress"]);
     }
 }

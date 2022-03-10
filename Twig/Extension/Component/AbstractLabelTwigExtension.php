@@ -38,6 +38,6 @@ abstract class AbstractLabelTwigExtension extends AbstractTwigExtension {
             ],
         ];
 
-        return static::coreHTMLElement("span", $content, $attributes);
+        return static::coreHtmlElement("span", $content, $attributes);
     }
 }
