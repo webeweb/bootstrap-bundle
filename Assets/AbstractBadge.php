@@ -39,6 +39,24 @@ abstract class AbstractBadge extends BaseBadge implements BadgeInterface {
     }
 
     /**
+     * Enumerates the types.
+     *
+     * @return string[] Returns the types enumeration.
+     */
+    public static function enumTypes(): array {
+        return [
+            self::BADGE_TYPE_DANGER,
+            self::BADGE_TYPE_DARK,
+            self::BADGE_TYPE_INFO,
+            self::BADGE_TYPE_LIGHT,
+            self::BADGE_TYPE_PRIMARY,
+            self::BADGE_TYPE_SECONDARY,
+            self::BADGE_TYPE_SUCCESS,
+            self::BADGE_TYPE_WARNING,
+        ];
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getPill(): ?bool {

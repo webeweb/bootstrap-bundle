@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
+use WBW\Bundle\BootstrapBundle\Assets\AbstractBadge;
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestBadge;
@@ -22,6 +23,26 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestBadge;
  * @package WBW\Bundle\BootstrapBundle\Tests\Assets
  */
 class AbstractBadgeTest extends AbstractTestCase {
+
+    /**
+     * Tests enumTypes()
+     *
+     * @return void
+     */
+    public function testEnumTypes(): void {
+
+        $res = [
+            BadgeInterface::BADGE_TYPE_DANGER,
+            BadgeInterface::BADGE_TYPE_DARK,
+            BadgeInterface::BADGE_TYPE_INFO,
+            BadgeInterface::BADGE_TYPE_LIGHT,
+            BadgeInterface::BADGE_TYPE_PRIMARY,
+            BadgeInterface::BADGE_TYPE_SECONDARY,
+            BadgeInterface::BADGE_TYPE_SUCCESS,
+            BadgeInterface::BADGE_TYPE_WARNING,
+        ];
+        $this->assertEquals($res, AbstractBadge::enumTypes());
+    }
 
     /**
      * Tests setPill()
