@@ -1,38 +1,8 @@
 # Resources/config/services.yml
 services:
 
-    wbw.bootstrap.twig.extension.css.button:
-        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
-        arguments: [ "@twig" ]
-        calls:
-            - [ "setVersion", [ "%wbw_bootstrap.version%" ] ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
-    wbw.bootstrap.twig.extension.css.code:
-        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension
-        arguments: [ "@twig" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
-    wbw.bootstrap.twig.extension.css.grid:
-        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension
-        arguments: [ "@twig" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
-    wbw.bootstrap.twig.extension.css.image:
-        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension
-        arguments: [ "@twig" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
-    wbw.bootstrap.twig.extension.css.typography:
-        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension
+    wbw.bootstrap.twig.extension.assets:
+        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension
         arguments: [ "@twig" ]
         public: true
         tags:
@@ -111,8 +81,39 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    wbw.bootstrap.twig.extension.renderer:
-        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension
+
+    wbw.bootstrap.twig.extension.css.button:
+        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension
+        arguments: [ "@twig" ]
+        calls:
+            - [ "setVersion", [ "%wbw_bootstrap.version%" ] ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.code:
+        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension
+        arguments: [ "@twig" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.grid:
+        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension
+        arguments: [ "@twig" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.image:
+        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension
+        arguments: [ "@twig" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
+    wbw.bootstrap.twig.extension.css.typography:
+        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension
         arguments: [ "@twig" ]
         public: true
         tags:
