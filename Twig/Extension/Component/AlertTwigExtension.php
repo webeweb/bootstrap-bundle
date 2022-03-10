@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig\TwigFunction;
-use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertFactory;
+use WBW\Bundle\BootstrapBundle\Factory\AlertFactory;
 use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
