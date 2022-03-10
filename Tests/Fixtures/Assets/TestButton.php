@@ -24,9 +24,9 @@ class TestButton extends AbstractButton {
     /**
      * Constructor.
      *
-     * @param string $type The type.
+     * @param string|null $type The type.
      */
-    public function __construct(string $type) {
+    public function __construct(?string $type) {
         parent::__construct($type);
     }
 }
