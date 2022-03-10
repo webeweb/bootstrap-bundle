@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\CoreBundle\Helper\NavigationNodeHelper;
+use WBW\Bundle\CoreBundle\Helper\Assets\NavigationNodeHelper;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Library\Symfony\Assets\AbstractNavigationNode;

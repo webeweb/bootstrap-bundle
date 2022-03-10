@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\HttpFoundation\Request;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Helper\NavigationNodeHelper;
+use WBW\Bundle\CoreBundle\Helper\Assets\NavigationNodeHelper;
 use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
