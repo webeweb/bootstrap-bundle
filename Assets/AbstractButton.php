@@ -12,6 +12,10 @@
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
 use WBW\Library\Symfony\Assets\AbstractButton as BaseButton;
+use WBW\Library\Traits\Booleans\BooleanActiveTrait;
+use WBW\Library\Traits\Strings\StringSizeTrait;
+use WBW\Library\Traits\Strings\StringTitleTrait;
+
 /**
  * Abstract button.
  *
@@ -21,12 +25,9 @@ use WBW\Library\Symfony\Assets\AbstractButton as BaseButton;
  */
 abstract class AbstractButton extends BaseButton implements ButtonInterface {
 
-    /**
-     * Active
-     *
-     * @var bool|null
-     */
-    private $active;
+    use BooleanActiveTrait;
+    use StringSizeTrait;
+    use StringTitleTrait;
 
     /**
      * Block.
@@ -34,7 +35,6 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      * @var bool|null
      */
     private $block;
-
 
     /**
      * Disabled.
@@ -51,33 +51,12 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     private $outline;
 
     /**
-     * Size.
-     *
-     * @var string|null
-     */
-    private $size;
-
-    /**
-     * Title.
-     *
-     * @var string|null
-     */
-    private $title;
-
-    /**
      * Constructor.
      *
      * @param string|null $type The type.
      */
     protected function __construct(?string $type) {
         parent::__construct($type);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getActive(): ?bool {
-        return $this->active;
     }
 
     /**
@@ -111,28 +90,6 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     /**
      * {@inheritDoc}
      */
-    public function getSize(): ?string {
-        return $this->size;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getTitle(): ?string {
-        return $this->title;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setActive(?bool $active): ButtonInterface {
-        $this->active = $active;
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setBlock(?bool $block): ButtonInterface {
         $this->block = $block;
         return $this;
@@ -151,22 +108,6 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      */
     public function setOutline(?bool $outline): ButtonInterface {
         $this->outline = $outline;
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setSize(?string $size): ButtonInterface {
-        $this->size = $size;
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setTitle(?string $title): ButtonInterface {
-        $this->title = $title;
         return $this;
     }
 }

@@ -12,7 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
 use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
-
 use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
@@ -21,7 +20,7 @@ use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Assets
  */
-interface ButtonInterface extends BaseButtonInterface{
+interface ButtonInterface extends BaseButtonInterface {
 
     /**
      * Button size "lg".
@@ -141,7 +140,7 @@ interface ButtonInterface extends BaseButtonInterface{
      * @param bool|null $active The active.
      * @return ButtonInterface Returns this button.
      */
-    public function setActive(?bool $active): ButtonInterface;
+    public function setActive(?bool $active);
 
     /**
      * Set the block.
@@ -173,7 +172,7 @@ interface ButtonInterface extends BaseButtonInterface{
      * @param string|null $size The size.
      * @return ButtonInterface Returns this button.
      */
-    public function setSize(?string $size): ButtonInterface;
+    public function setSize(?string $size);
 
     /**
      * Set the title.
@@ -181,5 +180,5 @@ interface ButtonInterface extends BaseButtonInterface{
      * @param string|null $title The title.
      * @return ButtonInterface Returns this button.
      */
-    public function setTitle(?string $title): ButtonInterface;
+    public function setTitle(?string $title);
 }
