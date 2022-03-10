@@ -9,29 +9,29 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation;
+namespace WBW\Bundle\BootstrapBundle\Tests\Factory;
 
-use WBW\Bundle\BootstrapBundle\Asset\Navigation\FOSUserBreadcrumbNodes;
+use WBW\Bundle\BootstrapBundle\Factory\FOSUserNavigationFactory;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
- * FOSUser breadcrumbNodesTest.
+ * FOS user navigation factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation
+ * @package WBW\Bundle\BootstrapBundle\Tests\Factory
  */
-class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
+class FOSUserNavigationFactoryTest extends AbstractTestCase {
 
     /**
-     * Tests getGlyphiconBreadcrumbNodes()
+     * Tests newGlyphiconBreadcrumbNodes()
      *
      * @return void
      */
-    public function testGetGlyphiconBreadcrumbNodes(): void {
+    public function testNewGlyphiconBreadcrumbNodes(): void {
 
-        $res = FOSUserBreadcrumbNodes::getGlyphiconBreadcrumbNodes();
+        $res = FOSUserNavigationFactory::newGlyphiconBreadcrumbNodes();
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(BreadcrumbNode::class, $res[0]);

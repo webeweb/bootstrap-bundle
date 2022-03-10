@@ -9,25 +9,25 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\Navigation;
+namespace WBW\Bundle\BootstrapBundle\Factory;
 
 use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
- * FOSUser breadcrumb nodes.
+ * FOS user navigation factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\Navigation
+ * @package WBW\Bundle\BootstrapBundle\Factory
  */
-class FOSUserBreadcrumbNodes {
+class FOSUserNavigationFactory {
 
     /**
-     * Get the FOSUser breadcrumb nodes with Glyphicon icons.
+     * Creates the FOSUser breadcrumb nodes with Glyphicon icons.
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
-    public static function getGlyphiconBreadcrumbNodes(): array {
+    public static function newGlyphiconBreadcrumbNodes(): array {
         return [
             new BreadcrumbNode("label.edit_profile", "g:user", "fos_user_profile_edit", NavigationNodeInterface::MATCHER_ROUTER),
             new BreadcrumbNode("label.show_profile", "g:user", "fos_user_profile_show", NavigationNodeInterface::MATCHER_ROUTER),
