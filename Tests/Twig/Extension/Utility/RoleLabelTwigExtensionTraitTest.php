@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
+namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility;
 
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Twig\Extension\Utility\TestRoleLabelTwigExtensionTrait;
@@ -20,7 +20,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
  * Role label Twig extension trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS
+ * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility
  */
 class RoleLabelTwigExtensionTraitTest extends AbstractTestCase {
 

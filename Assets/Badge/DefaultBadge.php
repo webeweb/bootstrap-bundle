@@ -12,7 +12,6 @@
 namespace WBW\Bundle\BootstrapBundle\Assets\Badge;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractBadge;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
  * Default badge.

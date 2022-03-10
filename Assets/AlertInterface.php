@@ -65,14 +65,6 @@ interface AlertInterface extends BaseAlertInterface {
     public function getPrefix(): ?string;
 
     /**
-     * Set the content.
-     *
-     * @param string|null $content The content.
-     * @return AlertInterface Returns this alert.
-     */
-    public function setContent(?string $content);
-
-    /**
      * Set the dismissible.
      *
      * @param bool|null $dismissible The dismissible.

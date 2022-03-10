@@ -17,7 +17,7 @@ use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtensionTrait;
-use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 
 /**
  * Role label Twig extension.

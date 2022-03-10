@@ -24,9 +24,9 @@ class TestAlert extends AbstractAlert {
     /**
      * Constructor.
      *
-     * @param string|null $type The type.
+     * @param string $type The type.
      */
-    public function __construct(?string $type) {
+    public function __construct(string $type) {
         parent::__construct($type);
     }
 }

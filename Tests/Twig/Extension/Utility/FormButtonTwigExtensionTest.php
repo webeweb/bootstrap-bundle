@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
+namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility;
 
 use Twig\Node\Node;
 use Twig\TwigFunction;

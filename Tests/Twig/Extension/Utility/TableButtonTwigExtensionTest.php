@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form;
+namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility;
 
 use Twig\Node\Node;
 use Twig\TwigFunction;
@@ -21,7 +21,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\TableButtonTwigExtension;
  * Table button utility Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Form
+ * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility
  */
 class TableButtonTwigExtensionTest extends AbstractTestCase {
 
