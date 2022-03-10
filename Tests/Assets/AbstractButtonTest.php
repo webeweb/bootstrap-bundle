@@ -24,19 +24,6 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestButton;
 class AbstractButtonTest extends AbstractTestCase {
 
     /**
-     * Tests setActive()
-     *
-     * @return void
-     */
-    public function testSetActive(): void {
-
-        $obj = new TestButton("danger");
-
-        $obj->setActive(true);
-        $this->assertTrue($obj->getActive());
-    }
-
-    /**
      * Tests setBlock()
      *
      * @return void
@@ -76,32 +63,6 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSize()
-     *
-     * @return void
-     */
-    public function testSetSize(): void {
-
-        $obj = new TestButton("danger");
-
-        $obj->setSize(ButtonInterface::BUTTON_SIZE_LG);
-        $this->assertEquals(ButtonInterface::BUTTON_SIZE_LG, $obj->getSize());
-    }
-
-    /**
-     * Tests setTitle()
-     *
-     * @return void
-     */
-    public function testSetTitle(): void {
-
-        $obj = new TestButton("danger");
-
-        $obj->setTitle("title");
-        $this->assertEquals("title", $obj->getTitle());
-    }
-
-    /**
      * Tests __construct()
      *
      * @return void
@@ -110,15 +71,17 @@ class AbstractButtonTest extends AbstractTestCase {
 
         $obj = new TestButton("danger");
 
-        $this->assertNull($obj->getContent());
-        $this->assertEquals("danger", $obj->getType());
+        $this->assertInstanceOf(ButtonInterface::class, $obj);
 
         $this->assertNull($obj->getActive());
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getSize());
+        $this->assertNull($obj->getTitle());
+        $this->assertEquals("danger", $obj->getType());
+
         $this->assertNull($obj->getBlock());
         $this->assertNull($obj->getDisabled());
         $this->assertNull($obj->getOutline());
         $this->assertEquals("btn-", $obj->getPrefix());
-        $this->assertNull($obj->getSize());
-        $this->assertNull($obj->getTitle());
     }
 }

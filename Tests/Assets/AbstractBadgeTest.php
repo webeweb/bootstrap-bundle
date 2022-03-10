@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestBadge;
 
@@ -21,19 +22,6 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestBadge;
  * @package WBW\Bundle\BootstrapBundle\Tests\Assets
  */
 class AbstractBadgeTest extends AbstractTestCase {
-
-    /**
-     * Tests setContent()
-     *
-     * @return void
-     */
-    public function testSetContent(): void {
-
-        $obj = new TestBadge("danger");
-
-        $obj->setContent("content");
-        $this->assertEquals("content", $obj->getContent());
-    }
 
     /**
      * Tests setPill()
@@ -57,10 +45,13 @@ class AbstractBadgeTest extends AbstractTestCase {
 
         $obj = new TestBadge("danger");
 
+        $this->assertInstanceOf(BadgeInterface::class, $obj);
+
         $this->assertNull($obj->getContent());
+        $this->assertEquals("danger", $obj->getType());
+
         $this->assertNull($obj->getPill());
         $this->assertEquals("badge-", $obj->getPrefix());
-        $this->assertEquals("danger", $obj->getType());
     }
 
 }

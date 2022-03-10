@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestProgressBar;
 
@@ -34,6 +35,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
         $obj->setAnimated(true);
         $this->assertTrue($obj->getAnimated());
     }
+
     /**
      * Tests setStriped()
      *
@@ -55,6 +57,8 @@ class AbstractProgressBarTest extends AbstractTestCase {
     public function test__construct(): void {
 
         $obj = new TestProgressBar("type");
+
+        $this->assertInstanceOf(ProgressBarInterface::class, $obj);
 
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getHeight());

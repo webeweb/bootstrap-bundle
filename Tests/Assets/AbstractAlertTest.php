@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
+use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestAlert;
 
@@ -44,10 +45,13 @@ class AbstractAlertTest extends AbstractTestCase {
 
         $obj = new TestAlert("danger");
 
+        $this->assertInstanceOf(AlertInterface::class, $obj);
+
         $this->assertNull($obj->getContent());
+        $this->assertEquals("danger", $obj->getType());
+
         $this->assertNull($obj->getDismissible());
         $this->assertEquals("alert-", $obj->getPrefix());
-        $this->assertEquals("danger", $obj->getType());
     }
 
 }
