@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Symfony\Component\HttpFoundation\Request;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTreeHelper;
+use WBW\Bundle\CoreBundle\Helper\NavigationNodeHelper;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Breadcrumb Twig Extension.
@@ -35,13 +35,12 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
     /**
      * Displays a Bootstrap breadcrumbs.
      *
-     * @param array $args The arguments.
      * @param NavigationTree $tree The tree.
      * @param Request $request The request.
      * @return string Returns the Bootstrap breadcrumbs.
      */
-    public function bootstrapBreadcrumbsFunction(array $args = [], NavigationTree $tree, Request $request): string {
-        NavigationTreeHelper::activeTree($tree, $request);
+    public function bootstrapBreadcrumbsFunction(NavigationTree $tree, Request $request): string {
+        NavigationNodeHelper::activeTree($tree, $request);
         return $this->bootstrapBreadcrumbs($tree);
     }
 

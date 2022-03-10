@@ -200,7 +200,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<a class="btn btn-danger" href="javascript:void(0);"></a>';
+        $res = '<a class="btn btn-danger" href="javascript: void(0);"></a>';
 
         $this->assertEquals($res, $obj->bootstrapButtonLinkFilter($obj->bootstrapButtonDangerFunction($arg)));
     }

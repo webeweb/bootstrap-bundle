@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation\Glyphicon;
 
 use WBW\Bundle\BootstrapBundle\Asset\Navigation\Glyphicon\BreadcrumbNodeActionNewUsersGroup;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Breadcrumb node action "New users group" test.
@@ -34,7 +34,7 @@ class BreadcrumbNodeActionNewUsersGroupTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.action.new", $obj->getLabel());
         $this->assertEquals("g:plus", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

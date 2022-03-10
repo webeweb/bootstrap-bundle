@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
+use WBW\Library\Symfony\Assets\NotificationInterface;
 
 /**
  * Abstract controller test.

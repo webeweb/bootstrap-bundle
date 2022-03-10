@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Navigation\Glyphicon;
 
-use WBW\Bundle\CoreBundle\Asset\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 
 /**
  * Breadcrumb node action "edit".
@@ -27,7 +27,7 @@ class BreadcrumbNodeActionEdit extends BreadcrumbNode {
      * @param string|null $route The route.
      * @param string $matcher The matcher.
      */
-    public function __construct(string $route = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
+    public function __construct(string $route = null, string $matcher = self::MATCHER_URL) {
         parent::__construct("navigation.node.action.edit", "g:pencil", $route, $matcher);
     }
 }

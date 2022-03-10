@@ -13,8 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Navigation;
 
 use WBW\Bundle\BootstrapBundle\Asset\Navigation\FOSUserBreadcrumbNodes;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Asset\Navigation\BreadcrumbNode;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * FOSUser breadcrumbNodesTest.
@@ -38,18 +38,18 @@ class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
         $this->assertEquals("label.edit_profile", $res[0]->getLabel());
         $this->assertEquals("g:user", $res[0]->getIcon());
         $this->assertEquals("fos_user_profile_edit", $res[0]->getUri());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_ROUTER, $res[0]->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_ROUTER, $res[0]->getMatcher());
 
         $this->assertInstanceOf(BreadcrumbNode::class, $res[1]);
         $this->assertEquals("label.show_profile", $res[1]->getLabel());
         $this->assertEquals("g:user", $res[1]->getIcon());
         $this->assertEquals("fos_user_profile_show", $res[1]->getUri());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_ROUTER, $res[1]->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_ROUTER, $res[1]->getMatcher());
 
         $this->assertInstanceOf(BreadcrumbNode::class, $res[2]);
         $this->assertEquals("label.change_password", $res[2]->getLabel());
         $this->assertEquals("g:lock", $res[2]->getIcon());
         $this->assertEquals("fos_user_change_password", $res[2]->getUri());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_ROUTER, $res[2]->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_ROUTER, $res[2]->getMatcher());
     }
 }

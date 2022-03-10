@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension as BaseTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension as BaseTwigExtension;
 
 /**
  * Renderer Twig extension.
@@ -34,11 +34,11 @@ class RendererTwigExtension extends BaseTwigExtension {
      * Render an icon.
      *
      * @param Environment $twigEnvironment The twig environment.
-     * @param string $name The icon name.
+     * @param string|null $name The icon name.
      * @param string|null $style The icon style.
      * @return string Returns a rendered icon.
      */
-    public static function renderIcon(Environment $twigEnvironment, string $name, ?string $style = null): string {
+    public static function renderIcon(Environment $twigEnvironment, ?string $name, string $style = null): ?string {
 
         // Determines the handler.
         $handler = explode(":", $name);
@@ -46,10 +46,9 @@ class RendererTwigExtension extends BaseTwigExtension {
             array_unshift($handler, "g");
         }
         if (2 !== count($handler)) {
-            return "";
+            return null;
         }
 
-        // Swith into handler.
         switch ($handler[0]) {
 
             case "b": // Bootstrap

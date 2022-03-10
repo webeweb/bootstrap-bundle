@@ -13,11 +13,11 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Asset\Navigation\AbstractNavigationNode;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTreeHelper;
-use WBW\Bundle\CoreBundle\Component\Translation\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Helper\NavigationNodeHelper;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
+use WBW\Library\Symfony\Assets\AbstractNavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Abstract breadcrumb Twig extension.
@@ -75,7 +75,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = [];
 
-        $nodes = NavigationTreeHelper::getBreadcrumbs($tree);
+        $nodes = NavigationNodeHelper::getBreadcrumbs($tree);
         $count = count($nodes);
 
         for ($i = 0; $i < $count; ++$i) {

@@ -16,8 +16,8 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BreadcrumbTwigExtension;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Breadcrumb Twig extension test.
@@ -54,7 +54,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
 
         $res = file_get_contents(__DIR__ . "/BreadcrumbTwigExtensionTest.testBootstrapBreadcrumbsFunction.html.txt");
-        $this->assertEquals($res, $obj->bootstrapBreadcrumbsFunction([], $this->tree, Request::create("https://github.com/webeweb/bootstrap-bundle")) . "\n");
+        $this->assertEquals($res, $obj->bootstrapBreadcrumbsFunction($this->tree, Request::create("https://github.com/webeweb/bootstrap-bundle")) . "\n");
     }
 
     /**

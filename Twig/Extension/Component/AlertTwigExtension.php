@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Asset\Alert\AlertFactory;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
@@ -81,7 +81,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
     public function bootstrapAlertLinkFunction(array $args = []): string {
 
         $attributes = [
-            "href" => ArrayHelper::get($args, "href", NavigationInterface::NAVIGATION_HREF_DEFAULT),
+            "href" => ArrayHelper::get($args, "href", NavigationNodeInterface::DEFAULT_HREF),
         ];
 
         $innerHTML = ArrayHelper::get($args, "content");

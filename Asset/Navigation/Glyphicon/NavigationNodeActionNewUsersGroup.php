@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Asset\Navigation\Glyphicon;
 
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
 
 /**
  * Navigation node action "new users group".
@@ -27,7 +27,7 @@ class NavigationNodeActionNewUsersGroup extends NavigationNode {
      * @param string|null $route The route.
      * @param string $matcher The matcher.
      */
-    public function __construct(string $route = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
+    public function __construct(string $route = null, string $matcher = self::MATCHER_URL) {
         parent::__construct("navigation.node.action.new", "g:plus", $route, $matcher);
     }
 }

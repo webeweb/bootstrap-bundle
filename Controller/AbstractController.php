@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 
 use WBW\Bundle\CoreBundle\Controller\AbstractController as BaseController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Asset\Notification\NotificationFactory;
+use WBW\Library\Symfony\Factory\NotificationFactory;
 
 /**
  * Abstract controller.

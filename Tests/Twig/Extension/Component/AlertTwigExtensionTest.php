@@ -169,7 +169,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
         $arg = ["content" => "content"];
-        $res = '<a href="javascript:void(0);">content</a>';
+        $res = '<a href="javascript: void(0);">content</a>';
 
         $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
     }
@@ -199,7 +199,7 @@ class AlertTwigExtensionTest extends AbstractTestCase {
         $obj = new AlertTwigExtension($this->twigEnvironment);
 
         $arg = [];
-        $res = '<a href="javascript:void(0);"></a>';
+        $res = '<a href="javascript: void(0);"></a>';
 
         $this->assertEquals($res, $obj->bootstrapAlertLinkFunction($arg));
     }
