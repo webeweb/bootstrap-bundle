@@ -25,11 +25,10 @@
         "symfony/form": "^4.4|^5.0",
         "symfony/framework-bundle": "^4.4|^5.0",
         "symfony/security-core": "^4.4|^5.0",
-        "symfony/serializer": "^4.4|^5.0",
         "symfony/translation": "^4.4|^5.0",
         "twig/twig": "^2.10|3.0",
         "webeweb/core-bundle": "^3.0@dev",
-        "webeweb/core-library": "^8.0"
+        "webeweb/core-library": "^8.32"
     },
     "conflict": {
         "webeweb/jquery-datatables-bundle": "<3.12"
@@ -49,7 +48,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.x-dev"
+            "dev-master": "4.x-dev"
         }
     },
     "autoload": {
