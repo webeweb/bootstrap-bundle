@@ -55,7 +55,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertEquals(NotificationEvent::DANGER, $res->getEventName());
 
         $this->assertEquals("danger", $res->getNotification()->getContent());
-        $this->assertEquals(NotificationInterface::NOTIFICATION_DANGER, $res->getNotification()->getType());
+        $this->assertEquals(NotificationInterface::NOTIFICATION_TYPE_DANGER, $res->getNotification()->getType());
     }
 
     /**
@@ -75,7 +75,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertEquals(NotificationEvent::INFO, $res->getEventName());
 
         $this->assertEquals("info", $res->getNotification()->getContent());
-        $this->assertEquals(NotificationInterface::NOTIFICATION_INFO, $res->getNotification()->getType());
+        $this->assertEquals(NotificationInterface::NOTIFICATION_TYPE_INFO, $res->getNotification()->getType());
     }
 
     /**
@@ -95,7 +95,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertEquals(NotificationEvent::SUCCESS, $res->getEventName());
 
         $this->assertEquals("success", $res->getNotification()->getContent());
-        $this->assertEquals(NotificationInterface::NOTIFICATION_SUCCESS, $res->getNotification()->getType());
+        $this->assertEquals(NotificationInterface::NOTIFICATION_TYPE_SUCCESS, $res->getNotification()->getType());
     }
 
     /**
@@ -115,6 +115,6 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertEquals(NotificationEvent::WARNING, $res->getEventName());
 
         $this->assertEquals("warning", $res->getNotification()->getContent());
-        $this->assertEquals(NotificationInterface::NOTIFICATION_WARNING, $res->getNotification()->getType());
+        $this->assertEquals(NotificationInterface::NOTIFICATION_TYPE_WARNING, $res->getNotification()->getType());
     }
 }

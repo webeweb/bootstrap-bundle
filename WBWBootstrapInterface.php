@@ -19,60 +19,67 @@ namespace WBW\Bundle\BootstrapBundle;
 interface WBWBootstrapInterface {
 
     /**
-     * Bootstrap "danger".
+     * Bootstrap type "danger".
      *
      * @var string
      */
-    const BOOTSTRAP_DANGER = "danger";
+    const BOOTSTRAP_TYPE_DANGER = "danger";
 
     /**
-     * Bootstrap "dark".
+     * Bootstrap type "dark".
      *
      * @var string
      */
-    const BOOTSTRAP_DARK = "dark";
+    const BOOTSTRAP_TYPE_DARK = "dark";
 
     /**
-     * Bootstrap "default".
+     * Bootstrap type "default".
      *
      * @var string
      */
-    const BOOTSTRAP_DEFAULT = "default";
+    const BOOTSTRAP_TYPE_DEFAULT = "default";
 
     /**
-     * Bootstrap "info".
+     * Bootstrap type "info".
      *
      * @var string
      */
-    const BOOTSTRAP_INFO = "info";
+    const BOOTSTRAP_TYPE_INFO = "info";
 
     /**
-     * Bootstrap "light".
+     * Bootstrap type "light".
      *
      * @var string
      */
-    const BOOTSTRAP_LIGHT = "light";
+    const BOOTSTRAP_TYPE_LIGHT = "light";
 
     /**
-     * Bootstrap "primary".
+     * Bootstrap type "primary".
      *
      * @var string
      */
-    const BOOTSTRAP_PRIMARY = "primary";
+    const BOOTSTRAP_TYPE_PRIMARY = "primary";
 
     /**
-     * Bootstrap "secondary".
+     * Bootstrap type "secondary".
      *
      * @var string
      */
-    const BOOTSTRAP_SECONDARY = "secondary";
+    const BOOTSTRAP_TYPE_SECONDARY = "secondary";
 
     /**
-     * Bootstrap "success".
+     * Bootstrap type "success".
      *
      * @var string
      */
-    const BOOTSTRAP_SUCCESS = "success";
+    const BOOTSTRAP_TYPE_SUCCESS = "success";
+
+    /**
+     * Bootstrap type "warning".
+     *
+     * @var string
+     */
+    const BOOTSTRAP_TYPE_WARNING = "warning";
 
     /**
      * Bootstrap version 3.
@@ -94,11 +101,4 @@ interface WBWBootstrapInterface {
      * @var string
      */
     const BOOTSTRAP_VERSION_5 = "5.1.3";
-
-    /**
-     * Bootstrap "warning".
-     *
-     * @var string
-     */
-    const BOOTSTRAP_WARNING = "warning";
 }

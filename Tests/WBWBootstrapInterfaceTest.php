@@ -28,18 +28,18 @@ class WBWBootstrapInterfaceTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("danger", WBWBootstrapInterface::BOOTSTRAP_TYPE_DANGER);
+        $this->assertEquals("dark", WBWBootstrapInterface::BOOTSTRAP_TYPE_DARK);
+        $this->assertEquals("default", WBWBootstrapInterface::BOOTSTRAP_TYPE_DEFAULT);
+        $this->assertEquals("info", WBWBootstrapInterface::BOOTSTRAP_TYPE_INFO);
+        $this->assertEquals("light", WBWBootstrapInterface::BOOTSTRAP_TYPE_LIGHT);
+        $this->assertEquals("primary", WBWBootstrapInterface::BOOTSTRAP_TYPE_PRIMARY);
+        $this->assertEquals("secondary", WBWBootstrapInterface::BOOTSTRAP_TYPE_SECONDARY);
+        $this->assertEquals("success", WBWBootstrapInterface::BOOTSTRAP_TYPE_SUCCESS);
+        $this->assertEquals("warning", WBWBootstrapInterface::BOOTSTRAP_TYPE_WARNING);
+
         $this->assertEquals("3.4.1", WBWBootstrapInterface::BOOTSTRAP_VERSION_3);
         $this->assertEquals("4.6.1", WBWBootstrapInterface::BOOTSTRAP_VERSION_4);
         $this->assertEquals("5.1.3", WBWBootstrapInterface::BOOTSTRAP_VERSION_5);
-
-        $this->assertEquals("danger", WBWBootstrapInterface::BOOTSTRAP_DANGER);
-        $this->assertEquals("dark", WBWBootstrapInterface::BOOTSTRAP_DARK);
-        $this->assertEquals("default", WBWBootstrapInterface::BOOTSTRAP_DEFAULT);
-        $this->assertEquals("info", WBWBootstrapInterface::BOOTSTRAP_INFO);
-        $this->assertEquals("light", WBWBootstrapInterface::BOOTSTRAP_LIGHT);
-        $this->assertEquals("primary", WBWBootstrapInterface::BOOTSTRAP_PRIMARY);
-        $this->assertEquals("secondary", WBWBootstrapInterface::BOOTSTRAP_SECONDARY);
-        $this->assertEquals("success", WBWBootstrapInterface::BOOTSTRAP_SUCCESS);
-        $this->assertEquals("warning", WBWBootstrapInterface::BOOTSTRAP_WARNING);
     }
 }
