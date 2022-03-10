@@ -3,7 +3,24 @@ CHANGELOG
 
 ### master
 
+> IMPORTANT NOTICE: The following Symfony versions are now not supported
+> - Symfony 3.4
+> - Symfony 4.0
+> - Symfony 4.1
+> - Symfony 4.2
+> - Symfony 4.3
+
+> IMPORTANT NOTICE: The following packages has been moved
+> - WBW\Bundle\BootstrapBundle\Asset\Alert
+> - WBW\Bundle\BootstrapBundle\Asset\Badge
+> - WBW\Bundle\BootstrapBundle\Asset\Button
+> - WBW\Bundle\BootstrapBundle\Asset\Navigation
+> - WBW\Bundle\BootstrapBundle\Asset\ProgressBar
+
+- Add PHP 8.x support
+- Add Symfony 5.x support
 - Improve PHPDoc
+- Update dependencies
 
 ### [3.27.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.27.0) (2022-01-05)
 
