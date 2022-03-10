@@ -9,24 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets;
 
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\AbstractProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\AbstractProgressBar;
 
 /**
  * Test progress bar.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets
  */
 class TestProgressBar extends AbstractProgressBar {
 
     /**
      * Constructor.
      *
-     * @param string|null $type The type
+     * @param string $type The type.
      */
-    public function __construct(?string $type) {
+    public function __construct(string $type) {
         parent::__construct($type);
     }
 }

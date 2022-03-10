@@ -9,13 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Renderer\Assets;
+
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
 
 /**
  * Progress bar renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Renderer\Assets
  */
 class ProgressBarRenderer {
 

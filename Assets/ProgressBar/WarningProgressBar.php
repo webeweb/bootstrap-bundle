@@ -9,20 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Assets\ProgressBar;
+
+use WBW\Bundle\BootstrapBundle\Assets\AbstractProgressBar;
 
 /**
- * Basic progress bar.
+ * Warning progress bar.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Assets\ProgressBar
  */
-class BasicProgressBar extends AbstractProgressBar {
+class WarningProgressBar extends AbstractProgressBar {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(null);
+        parent::__construct(self::PROGRESS_BAR_TYPE_WARNING);
     }
 }

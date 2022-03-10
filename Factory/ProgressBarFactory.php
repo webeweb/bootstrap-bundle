@@ -9,15 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Factory;
 
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\BasicProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\DangerProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\InfoProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\SuccessProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\WarningProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Progress bar factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Factory
  */
 class ProgressBarFactory {
 

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Tests\Assets\ProgressBar;
 
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\BasicProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\BasicProgressBar;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Basic progress bar test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Tests\Assets\ProgressBar
  */
 class BasicProgressBarTest extends AbstractTestCase {
 

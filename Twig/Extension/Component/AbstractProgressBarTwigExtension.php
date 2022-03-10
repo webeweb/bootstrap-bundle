@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarInterface;
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarRenderer;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\Renderer\Assets\ProgressBarRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 
 /**

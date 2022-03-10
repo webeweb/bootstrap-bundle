@@ -9,22 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Tests\Factory;
 
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\BasicProgressBar;
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\DangerProgressBar;
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\InfoProgressBar;
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarFactory;
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\ProgressBarInterface;
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\SuccessProgressBar;
-use WBW\Bundle\BootstrapBundle\Asset\ProgressBar\WarningProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\BasicProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\DangerProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\InfoProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\SuccessProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\WarningProgressBar;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\Factory\ProgressBarFactory;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Progress bar factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Tests\Factory
  */
 class ProgressBarFactoryTest extends AbstractTestCase {
 

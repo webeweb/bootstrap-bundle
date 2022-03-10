@@ -9,45 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\ProgressBar;
+namespace WBW\Bundle\BootstrapBundle\Assets;
 
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Library\Symfony\Assets\ProgressBarInterface as BaseProgressBarInterface;
 
 /**
  * Progress bar interface.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\ProgressBar
+ * @package WBW\Bundle\BootstrapBundle\Assets
  */
-interface ProgressBarInterface {
-
-    /**
-     * Progress bar type "danger".
-     *
-     * @var string
-     */
-    const PROGRESS_BAR_TYPE_DANGER = WBWBootstrapInterface::BOOTSTRAP_DANGER;
-
-    /**
-     * Progress bar type "info".
-     *
-     * @var string
-     */
-    const PROGRESS_BAR_TYPE_INFO = WBWBootstrapInterface::BOOTSTRAP_INFO;
-
-    /**
-     * Progress bar type "success".
-     *
-     * @var string
-     */
-    const PROGRESS_BAR_TYPE_SUCCESS = WBWBootstrapInterface::BOOTSTRAP_SUCCESS;
-
-    /**
-     * Progress bar type "warning".
-     *
-     * @var string
-     */
-    const PROGRESS_BAR_TYPE_WARNING = WBWBootstrapInterface::BOOTSTRAP_WARNING;
+interface ProgressBarInterface extends BaseProgressBarInterface {
 
     /**
      * Get the animated.
@@ -55,13 +27,6 @@ interface ProgressBarInterface {
      * @return bool|null Returns the animated.
      */
     public function getAnimated(): ?bool;
-
-    /**
-     * Get the content.
-     *
-     * @return string|null Returns the content.
-     */
-    public function getContent(): ?string;
 
     /**
      * Get the height.
@@ -99,13 +64,6 @@ interface ProgressBarInterface {
     public function getStriped(): ?bool;
 
     /**
-     * Get the type.
-     *
-     * @return string|null Returns the type.
-     */
-    public function getType(): ?string;
-
-    /**
      * Get the value.
      *
      * @return int|null Returns the value.
@@ -121,20 +79,12 @@ interface ProgressBarInterface {
     public function setAnimated(?bool $animated): ProgressBarInterface;
 
     /**
-     * Set the content.
-     *
-     * @param string|null $content The content.
-     * @return ProgressBarInterface Returns this progress bar.
-     */
-    public function setContent(?string $content): ProgressBarInterface;
-
-    /**
      * Set the height.
      *
      * @param int|null $height The height.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setHeight(?int $height): ProgressBarInterface;
+    public function setHeight(?int $height);
 
     /**
      * Set the max.
@@ -142,7 +92,7 @@ interface ProgressBarInterface {
      * @param int|null $max The max.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setMax(?int $max): ProgressBarInterface;
+    public function setMax(?int $max);
 
     /**
      * Set the min.
@@ -150,7 +100,7 @@ interface ProgressBarInterface {
      * @param int|null $min The min.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setMin(?int $min): ProgressBarInterface;
+    public function setMin(?int $min);
 
     /**
      * Set the striped.
@@ -161,18 +111,10 @@ interface ProgressBarInterface {
     public function setStriped(?bool $striped): ProgressBarInterface;
 
     /**
-     * Set the type.
-     *
-     * @param string|null $type The type.
-     * @return ProgressBarInterface Returns this progress bar.
-     */
-    public function setType(?string $type): ProgressBarInterface;
-
-    /**
      * Set the value.
      *
      * @param int|null $value The value.
      * @return ProgressBarInterface Returns this progress bar.
      */
-    public function setValue(?int $value): ProgressBarInterface;
+    public function setValue(?int $value);
 }
