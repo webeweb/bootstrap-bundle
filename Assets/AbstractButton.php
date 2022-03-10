@@ -60,6 +60,39 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     }
 
     /**
+     * Enumerates the sizes.
+     *
+     * @return string[] Returns the sizes enumeration.
+     */
+    public static function enumSizes(): array {
+        return [
+            self::BUTTON_SIZE_LG,
+            self::BUTTON_SIZE_SM,
+            self::BUTTON_SIZE_XS,
+        ];
+    }
+
+    /**
+     * Enumerates the types.
+     *
+     * @return string[] Returns the types enumeration.
+     */
+    public static function enumTypes(): array {
+        return [
+            self::BUTTON_TYPE_DANGER,
+            self::BUTTON_TYPE_DARK,
+            self::BUTTON_TYPE_DEFAULT,
+            self::BUTTON_TYPE_INFO,
+            self::BUTTON_TYPE_LIGHT,
+            self::BUTTON_TYPE_LINK,
+            self::BUTTON_TYPE_PRIMARY,
+            self::BUTTON_TYPE_SECONDARY,
+            self::BUTTON_TYPE_SUCCESS,
+            self::BUTTON_TYPE_WARNING,
+        ];
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getBlock(): ?bool {

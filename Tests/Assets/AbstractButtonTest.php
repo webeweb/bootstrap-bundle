@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
+use WBW\Bundle\BootstrapBundle\Assets\AbstractButton;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestButton;
@@ -22,6 +23,43 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestButton;
  * @package WBW\Bundle\BootstrapBundle\Tests\Assets
  */
 class AbstractButtonTest extends AbstractTestCase {
+
+    /**
+     * Tests enumSizes()
+     *
+     * @return void
+     */
+    public function testEnumSizes(): void {
+
+        $res = [
+            ButtonInterface::BUTTON_SIZE_LG,
+            ButtonInterface::BUTTON_SIZE_SM,
+            ButtonInterface::BUTTON_SIZE_XS,
+        ];
+        $this->assertEquals($res, AbstractButton::enumSizes());
+    }
+
+    /**
+     * Tests enumTypes()
+     *
+     * @return void
+     */
+    public function testEnumTypes(): void {
+
+        $res = [
+            ButtonInterface::BUTTON_TYPE_DANGER,
+            ButtonInterface::BUTTON_TYPE_DARK,
+            ButtonInterface::BUTTON_TYPE_DEFAULT,
+            ButtonInterface::BUTTON_TYPE_INFO,
+            ButtonInterface::BUTTON_TYPE_LIGHT,
+            ButtonInterface::BUTTON_TYPE_LINK,
+            ButtonInterface::BUTTON_TYPE_PRIMARY,
+            ButtonInterface::BUTTON_TYPE_SECONDARY,
+            ButtonInterface::BUTTON_TYPE_SUCCESS,
+            ButtonInterface::BUTTON_TYPE_WARNING,
+        ];
+        $this->assertEquals($res, AbstractButton::enumTypes());
+    }
 
     /**
      * Tests setBlock()
