@@ -1,6 +1,2 @@
 # Resources/config/services.yml
 services:
-
-    logger:
-        alias:  "monolog.logger"
-        public: true
