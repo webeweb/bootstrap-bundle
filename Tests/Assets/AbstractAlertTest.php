@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
+use WBW\Bundle\BootstrapBundle\Assets\AbstractAlert;
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestAlert;
@@ -22,6 +23,26 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestAlert;
  * @package WBW\Bundle\BootstrapBundle\Tests\Assets
  */
 class AbstractAlertTest extends AbstractTestCase {
+
+    /**
+     * Tests enumTypes()
+     *
+     * @return void
+     */
+    public function testEnumTypes(): void {
+
+        $res = [
+            AlertInterface::ALERT_TYPE_DANGER,
+            AlertInterface::ALERT_TYPE_DARK,
+            AlertInterface::ALERT_TYPE_INFO,
+            AlertInterface::ALERT_TYPE_LIGHT,
+            AlertInterface::ALERT_TYPE_PRIMARY,
+            AlertInterface::ALERT_TYPE_SECONDARY,
+            AlertInterface::ALERT_TYPE_SUCCESS,
+            AlertInterface::ALERT_TYPE_WARNING,
+        ];
+        $this->assertEquals($res, AbstractAlert::enumTypes());
+    }
 
     /**
      * Tests setDismissible()

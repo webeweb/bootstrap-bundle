@@ -39,6 +39,24 @@ abstract class AbstractAlert extends BaseAlert implements AlertInterface {
     }
 
     /**
+     * Enumerates the types.
+     *
+     * @return string[] Returns the types enumeration.
+     */
+    public static function enumTypes(): array {
+        return [
+            self::ALERT_TYPE_DANGER,
+            self::ALERT_TYPE_DARK,
+            self::ALERT_TYPE_INFO,
+            self::ALERT_TYPE_LIGHT,
+            self::ALERT_TYPE_PRIMARY,
+            self::ALERT_TYPE_SECONDARY,
+            self::ALERT_TYPE_SUCCESS,
+            self::ALERT_TYPE_WARNING,
+        ];
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getDismissible(): ?bool {
