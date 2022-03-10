@@ -16,19 +16,19 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension as BaseTwigExtension;
 
 /**
- * Renderer Twig extension.
+ * Assets Twig extension.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Twig\Extension
  */
-class RendererTwigExtension extends BaseTwigExtension {
+class AssetsTwigExtension extends BaseTwigExtension {
 
     /**
      * Service name.
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.bootstrap.twig.extension.renderer";
+    const SERVICE_NAME = "wbw.bootstrap.twig.extension.assets";
 
     /**
      * Render an icon.

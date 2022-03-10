@@ -11,17 +11,17 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Twig\Extension;
 
-use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtensionTrait;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtensionTrait;
 
 /**
- * Test renderer Twig extension trait.
+ * Test assets Twig extension trait.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Twig\Extension
  */
-class TestRendererTwigExtensionTrait {
+class TestAssetsTwigExtensionTrait {
 
-    use RendererTwigExtensionTrait {
-        setRendererTwigExtension as public;
+    use AssetsTwigExtensionTrait {
+        setAssetsTwigExtension as public;
     }
 }

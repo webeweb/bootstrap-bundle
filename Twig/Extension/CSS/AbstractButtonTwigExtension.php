@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\CSS;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Renderer\Assets\ButtonRenderer;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension;
 
 /**
  * Abstract button Twig extension.
@@ -49,7 +49,7 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
             "disabled"       => ButtonRenderer::renderDisabled($button),
         ];
 
-        $glyphicon = null !== $icon ? RendererTwigExtension::renderIcon($this->getTwigEnvironment(), $icon) : "";
+        $glyphicon = null !== $icon ? AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $icon) : "";
         $innerHTML = ButtonRenderer::renderContent($button);
 
         return static::coreHtmlElement("button", implode(" ", [$glyphicon, $innerHTML]), $attributes);
