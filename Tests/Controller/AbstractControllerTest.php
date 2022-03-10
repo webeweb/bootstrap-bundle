@@ -14,7 +14,9 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Library\Symfony\Assets\NotificationInterface;
+use WBW\Library\Symfony\Assets\ToastInterface;
 
 /**
  * Abstract controller test.
@@ -116,5 +118,85 @@ class AbstractControllerTest extends AbstractTestCase {
 
         $this->assertEquals("warning", $res->getNotification()->getContent());
         $this->assertEquals(NotificationInterface::NOTIFICATION_TYPE_WARNING, $res->getNotification()->getType());
+    }
+
+    /**
+     * Tests toastDanger()
+     *
+     * @return void
+     */
+    public function testToastDanger(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->toastDanger("danger");
+        $this->assertNotNull($res);
+
+        $this->assertInstanceOf(ToastEvent::class, $res);
+        $this->assertEquals(ToastEvent::DANGER, $res->getEventName());
+
+        $this->assertEquals("danger", $res->getToast()->getContent());
+        $this->assertEquals(ToastInterface::TOAST_TYPE_DANGER, $res->getToast()->getType());
+    }
+
+    /**
+     * Tests toastInfo()
+     *
+     * @return void
+     */
+    public function testToastInfo(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->toastInfo("info");
+        $this->assertNotNull($res);
+
+        $this->assertInstanceOf(ToastEvent::class, $res);
+        $this->assertEquals(ToastEvent::INFO, $res->getEventName());
+
+        $this->assertEquals("info", $res->getToast()->getContent());
+        $this->assertEquals(ToastInterface::TOAST_TYPE_INFO, $res->getToast()->getType());
+    }
+
+    /**
+     * Tests toastSuccess()
+     *
+     * @return void
+     */
+    public function testToastSuccess(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->toastSuccess("success");
+        $this->assertNotNull($res);
+
+        $this->assertInstanceOf(ToastEvent::class, $res);
+        $this->assertEquals(ToastEvent::SUCCESS, $res->getEventName());
+
+        $this->assertEquals("success", $res->getToast()->getContent());
+        $this->assertEquals(ToastInterface::TOAST_TYPE_SUCCESS, $res->getToast()->getType());
+    }
+
+    /**
+     * Tests toastWarning()
+     *
+     * @return void
+     */
+    public function testToastWarning(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->toastWarning("warning");
+        $this->assertNotNull($res);
+
+        $this->assertInstanceOf(ToastEvent::class, $res);
+        $this->assertEquals(ToastEvent::WARNING, $res->getEventName());
+
+        $this->assertEquals("warning", $res->getToast()->getContent());
+        $this->assertEquals(ToastInterface::TOAST_TYPE_WARNING, $res->getToast()->getType());
     }
 }

@@ -13,7 +13,9 @@ namespace WBW\Bundle\BootstrapBundle\Controller;
 
 use WBW\Bundle\CoreBundle\Controller\AbstractController as BaseController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Library\Symfony\Factory\NotificationFactory;
+use WBW\Library\Symfony\Factory\ToastFactory;
 
 /**
  * Abstract controller.
@@ -66,5 +68,49 @@ abstract class AbstractController extends BaseController {
     protected function notifyWarning(string $content): NotificationEvent {
         $notification = NotificationFactory::newWarningNotification($content);
         return $this->notify(NotificationEvent::WARNING, $notification);
+    }
+
+    /**
+     * Toast "danger".
+     *
+     * @param string $content The content.
+     * @return ToastEvent Returns the event.
+     */
+    protected function toastDanger(string $content): ToastEvent {
+        $toast = ToastFactory::newDangerToast($content);
+        return $this->toast(ToastEvent::DANGER, $toast);
+    }
+
+    /**
+     * Toast "info".
+     *
+     * @param string $content The content.
+     * @return ToastEvent Returns the event.
+     */
+    protected function toastInfo(string $content): ToastEvent {
+        $toast = ToastFactory::newInfoToast($content);
+        return $this->toast(ToastEvent::INFO, $toast);
+    }
+
+    /**
+     * Toast "success".
+     *
+     * @param string $content The content.
+     * @return ToastEvent Returns the event.
+     */
+    protected function toastSuccess(string $content): ToastEvent {
+        $toast = ToastFactory::newSuccessToast($content);
+        return $this->toast(ToastEvent::SUCCESS, $toast);
+    }
+
+    /**
+     * Toast "warning".
+     *
+     * @param string $content The content.
+     * @return ToastEvent Returns the event.
+     */
+    protected function toastWarning(string $content): ToastEvent {
+        $toast = ToastFactory::newWarningToast($content);
+        return $this->toast(ToastEvent::WARNING, $toast);
     }
 }
