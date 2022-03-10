@@ -9,26 +9,26 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Factory;
 
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeFactory;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\DangerBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\DarkBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\DefaultBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\InfoBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\LightBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\PrimaryBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\SecondaryBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\SuccessBadge;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\WarningBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\DangerBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\DarkBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\DefaultBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\InfoBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\LightBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\PrimaryBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\SecondaryBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\SuccessBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\WarningBadge;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Factory\BadgeFactory;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Badge factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Factory
  */
 class BadgeFactoryTest extends AbstractTestCase {
 

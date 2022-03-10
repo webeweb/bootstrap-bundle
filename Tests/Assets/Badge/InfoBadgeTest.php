@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Badge;
 
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\InfoBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\InfoBadge;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Info badge test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Assets\Badge
  */
 class InfoBadgeTest extends AbstractTestCase {
 

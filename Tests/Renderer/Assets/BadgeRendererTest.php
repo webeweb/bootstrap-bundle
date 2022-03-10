@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Renderer\Assets;
 
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeFactory;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeRenderer;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Factory\BadgeFactory;
+use WBW\Bundle\BootstrapBundle\Renderer\Assets\BadgeRenderer;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
  * Badge renderer test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Renderer\Assets
  */
 class BadgeRendererTest extends AbstractTestCase {
 

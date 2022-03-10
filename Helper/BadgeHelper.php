@@ -9,15 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Helper;
+
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 
 /**
- * Badge enumerator.
+ * Badge helper.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Helper
  */
-class BadgeEnumerator {
+class BadgeHelper {
 
     /**
      * Enumerates the types.

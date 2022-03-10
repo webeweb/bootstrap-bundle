@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
 
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeEnumerator;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Helper\BadgeHelper;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Badge enumerator test.
+ * Badge helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Helper
  */
-class BadgeEnumeratorTest extends AbstractTestCase {
+class BadgeHelperTest extends AbstractTestCase {
 
     /**
      * Tests enumTypes()
@@ -40,7 +40,7 @@ class BadgeEnumeratorTest extends AbstractTestCase {
             BadgeInterface::BADGE_TYPE_SUCCESS,
             BadgeInterface::BADGE_TYPE_WARNING,
         ];
-        $this->assertEquals($res, BadgeEnumerator::enumTypes());
+        $this->assertEquals($res, BadgeHelper::enumTypes());
     }
 
 }

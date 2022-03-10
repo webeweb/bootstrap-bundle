@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeFactory;
+use WBW\Bundle\BootstrapBundle\Factory\BadgeFactory;
 use WBW\Library\Types\Helper\StringHelper;
 
 /**

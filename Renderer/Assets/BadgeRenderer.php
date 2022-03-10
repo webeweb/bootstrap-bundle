@@ -9,13 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Renderer\Assets;
+
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 
 /**
  * Badge renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Renderer\Assets
  */
 class BadgeRenderer {
 

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Badge\TestBadge;
+use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestBadge;
 
 /**
  * Abstract badge test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Assets
  */
 class AbstractBadgeTest extends AbstractTestCase {
 

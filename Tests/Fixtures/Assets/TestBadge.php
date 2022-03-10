@@ -9,24 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets;
 
-use WBW\Bundle\BootstrapBundle\Asset\Badge\AbstractBadge;
+use WBW\Bundle\BootstrapBundle\Assets\AbstractBadge;
 
 /**
  * Test badge.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets
  */
 class TestBadge extends AbstractBadge {
 
     /**
      * Constructor.
      *
-     * @param string|null $type The type.
+     * @param string $type The type.
      */
-    public function __construct(?string $type) {
+    public function __construct(string $type) {
         parent::__construct($type);
     }
 }

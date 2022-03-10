@@ -9,20 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Assets\Badge;
+
+use WBW\Bundle\BootstrapBundle\Assets\AbstractBadge;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
 /**
- * Success badge.
+ * Default badge.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Assets\Badge
  */
-class SuccessBadge extends AbstractBadge {
+class DefaultBadge extends AbstractBadge {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::BADGE_TYPE_SUCCESS);
+        // NOTHING TO DO
     }
 }

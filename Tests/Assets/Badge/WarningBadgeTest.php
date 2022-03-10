@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Badge;
 
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\DangerBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\WarningBadge;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Danger badge test.
+ * Warning badge test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Assets\Badge
  */
-class DangerBadgeTest extends AbstractTestCase {
+class WarningBadgeTest extends AbstractTestCase {
 
     /**
      * Tests __construct()
@@ -30,8 +30,8 @@ class DangerBadgeTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DangerBadge();
+        $obj = new WarningBadge();
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BadgeInterface::BADGE_TYPE_WARNING, $obj->getType());
     }
 }

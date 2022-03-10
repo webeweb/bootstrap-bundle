@@ -9,15 +9,25 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Factory;
 
+use WBW\Bundle\BootstrapBundle\Assets\Badge\DangerBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\DarkBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\DefaultBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\InfoBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\LightBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\PrimaryBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\SecondaryBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\SuccessBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\WarningBadge;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Badge factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Factory
  */
 class BadgeFactory {
 

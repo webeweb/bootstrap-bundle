@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Asset\Badge;
+namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Badge;
 
-use WBW\Bundle\BootstrapBundle\Asset\Badge\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\Asset\Badge\LightBadge;
+use WBW\Bundle\BootstrapBundle\Assets\Badge\PrimaryBadge;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 
 /**
- * Light badge test.
+ * Primary badge test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\BootstrapBundle\Tests\Asset\Badge
+ * @package WBW\Bundle\BootstrapBundle\Tests\Assets\Badge
  */
-class LightBadgeTest extends AbstractTestCase {
+class PrimaryBadgeTest extends AbstractTestCase {
 
     /**
      * Tests __construct()
@@ -30,8 +30,8 @@ class LightBadgeTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new LightBadge();
+        $obj = new PrimaryBadge();
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_LIGHT, $obj->getType());
+        $this->assertEquals(BadgeInterface::BADGE_TYPE_PRIMARY, $obj->getType());
     }
 }
