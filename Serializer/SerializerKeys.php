@@ -22,11 +22,25 @@ use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 interface SerializerKeys extends BaseSerializerKeys {
 
     /**
+     * Serializer key "block".
+     *
+     * @var string
+     */
+    const BLOCK = "block";
+
+    /**
      * Serializer key "dismissible".
      *
      * @var string
      */
     const DISMISSIBLE = "dismissible";
+
+    /**
+     * Serializer key "outline".
+     *
+     * @var string
+     */
+    const OUTLINE = "outline";
 
     /**
      * Serializer key "pill".
