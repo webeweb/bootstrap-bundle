@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Serializer;
 
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 
 /**
  * JSON serializer.
@@ -33,6 +34,21 @@ class JsonSerializer {
             SerializerKeys::DISMISSIBLE => $model->getDismissible(),
             SerializerKeys::PREFIX      => $model->getPrefix(),
             SerializerKeys::TYPE        => $model->getType(),
+        ];
+    }
+
+    /**
+     * Serializes a badge.
+     *
+     * @param BadgeInterface $model The model.
+     * @return array Returns the serialized model.
+     */
+    public static function serializeBadge(BadgeInterface $model): array {
+        return [
+            SerializerKeys::CONTENT => $model->getContent(),
+            SerializerKeys::PILL    => $model->getPill(),
+            SerializerKeys::PREFIX  => $model->getPrefix(),
+            SerializerKeys::TYPE    => $model->getType(),
         ];
     }
 }

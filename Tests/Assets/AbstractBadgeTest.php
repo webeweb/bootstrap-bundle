@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractBadge;
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestBadge;
 
@@ -42,6 +43,27 @@ class AbstractBadgeTest extends AbstractTestCase {
             BadgeInterface::BADGE_TYPE_WARNING,
         ];
         $this->assertEquals($res, AbstractBadge::enumTypes());
+    }
+
+    /**
+     * Tests jsonSerialize()
+     *
+     * @return void
+     */
+    public function testJsonSerialize(): void {
+
+        // Set the expected data.
+        $data = file_get_contents(__DIR__ . "/AbstractBadgeTest.testJsonSerialize.json");
+        $json = json_decode($data, true);
+
+        $obj = new TestBadge("test");
+        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setPill(true);
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(4, $res);
+
+        $this->assertEquals($json, $res);
     }
 
     /**

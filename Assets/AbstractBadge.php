@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
+use WBW\Bundle\BootstrapBundle\Serializer\JsonSerializer;
 use WBW\Library\Symfony\Assets\AbstractBadge as BaseBadge;
 
 /**
@@ -68,6 +69,13 @@ abstract class AbstractBadge extends BaseBadge implements BadgeInterface {
      */
     public function getPrefix(): ?string {
         return "badge-";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize(): array {
+        return JsonSerializer::serializeBadge($this);
     }
 
     /**
