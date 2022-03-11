@@ -30,6 +30,7 @@ class SerializerKeysTest extends AbstractTestCase {
     public function test__construct(): void {
 
         $this->assertEquals("dismissible", SerializerKeys::DISMISSIBLE);
+        $this->assertEquals("pill", SerializerKeys::PILL);
         $this->assertEquals("prefix", SerializerKeys::PREFIX);
     }
 }

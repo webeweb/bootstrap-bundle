@@ -27,6 +27,14 @@ interface SerializerKeys extends BaseSerializerKeys {
      * @var string
      */
     const DISMISSIBLE = "dismissible";
+
+    /**
+     * Serializer key "pill".
+     *
+     * @var string
+     */
+    const PILL = "pill";
+
     /**
      * Serializer key "prefix".
      *
