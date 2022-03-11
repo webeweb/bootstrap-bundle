@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
+use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestProgressBar;
 
@@ -22,6 +23,32 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestProgressBar;
  * @package WBW\Bundle\BootstrapBundle\Tests\Asset\ProgressBar
  */
 class AbstractProgressBarTest extends AbstractTestCase {
+
+    /**
+     * Tests jsonSerialize()
+     *
+     * @return void
+     */
+    public function testJsonSerialize(): void {
+
+        // Set the expected data.
+        $data = file_get_contents(__DIR__ . "/AbstractProgressBarTest.testJsonSerialize.json");
+        $json = json_decode($data, true);
+
+        $obj = new TestProgressBar("test");
+        $obj->setAnimated(true);
+        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setHeight(16);
+        $obj->setMin(0);
+        $obj->setMax(100);
+        $obj->setStriped(true);
+        $obj->setValue(50);
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(9, $res);
+
+        $this->assertEquals($json, $res);
+    }
 
     /**
      * Tests setAnimated()

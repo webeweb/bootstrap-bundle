@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
+use WBW\Bundle\BootstrapBundle\Serializer\JsonSerializer;
 use WBW\Library\Symfony\Assets\AbstractProgressBar as BaseProgressBar;
 use WBW\Library\Traits\Integers\IntegerHeightTrait;
 use WBW\Library\Traits\Integers\IntegerMaxTrait;
@@ -80,6 +81,13 @@ abstract class AbstractProgressBar extends BaseProgressBar implements ProgressBa
      */
     public function getType(): ?string {
         return $this->type;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize(): array {
+        return JsonSerializer::serializeProgressBar($this);
     }
 
     /**

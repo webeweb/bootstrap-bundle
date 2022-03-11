@@ -14,6 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Serializer;
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
 
 /**
  * JSON serializer.
@@ -70,6 +71,26 @@ class JsonSerializer {
             SerializerKeys::SIZE     => $model->getSize(),
             SerializerKeys::TITLE    => $model->getTitle(),
             SerializerKeys::TYPE     => $model->getType(),
+        ];
+    }
+
+    /**
+     * Serializes a progress bar.
+     *
+     * @param ProgressBarInterface $model The model.
+     * @return array Returns the serialized model.
+     */
+    public static function serializeProgressBar(ProgressBarInterface $model): array {
+        return [
+            SerializerKeys::ANIMATED => $model->getAnimated(),
+            SerializerKeys::CONTENT  => $model->getContent(),
+            SerializerKeys::HEIGHT   => $model->getHeight(),
+            SerializerKeys::MAX      => $model->getMax(),
+            SerializerKeys::MIN      => $model->getMin(),
+            SerializerKeys::PREFIX   => $model->getPrefix(),
+            SerializerKeys::STRIPED  => $model->getStriped(),
+            SerializerKeys::TYPE     => $model->getType(),
+            SerializerKeys::VALUE    => $model->getValue(),
         ];
     }
 }
