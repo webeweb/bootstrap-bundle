@@ -22,6 +22,13 @@ use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 interface SerializerKeys extends BaseSerializerKeys {
 
     /**
+     * Serializer key "animated".
+     *
+     * @var string
+     */
+    const ANIMATED = "animated";
+
+    /**
      * Serializer key "block".
      *
      * @var string
@@ -55,4 +62,11 @@ interface SerializerKeys extends BaseSerializerKeys {
      * @var string
      */
     const PREFIX = "prefix";
+
+    /**
+     * Serializer key "striped".
+     *
+     * @var string
+     */
+    const STRIPED = "striped";
 }
