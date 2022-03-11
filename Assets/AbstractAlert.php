@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
+use WBW\Bundle\BootstrapBundle\Serializer\JsonSerializer;
 use WBW\Library\Symfony\Assets\AbstractAlert as BaseAlert;
 
 /**
@@ -68,6 +69,13 @@ abstract class AbstractAlert extends BaseAlert implements AlertInterface {
      */
     public function getPrefix(): ?string {
         return "alert-";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize(): array {
+        return JsonSerializer::serializeAlert($this);
     }
 
     /**

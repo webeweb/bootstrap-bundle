@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractAlert;
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
+use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestAlert;
 
@@ -42,6 +43,27 @@ class AbstractAlertTest extends AbstractTestCase {
             AlertInterface::ALERT_TYPE_WARNING,
         ];
         $this->assertEquals($res, AbstractAlert::enumTypes());
+    }
+
+    /**
+     * Tests jsonSerialize()
+     *
+     * @return void
+     */
+    public function testJsonSerialize(): void {
+
+        // Set the expected data.
+        $data = file_get_contents(__DIR__ . "/AbstractAlertTest.testJsonSerialize.json");
+        $json = json_decode($data, true);
+
+        $obj = new TestAlert("test");
+        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setDismissible(true);
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(4, $res);
+
+        $this->assertEquals($json, $res);
     }
 
     /**
