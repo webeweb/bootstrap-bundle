@@ -1,0 +1,11 @@
+{
+    "active": true,
+    "block": true,
+    "content": "content",
+    "disabled": true,
+    "outline": true,
+    "prefix": "btn-",
+    "size": "size",
+    "title": "title",
+    "type": "test"
+}

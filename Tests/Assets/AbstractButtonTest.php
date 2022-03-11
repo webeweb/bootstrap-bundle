@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractButton;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
+use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestButton;
 
@@ -59,6 +60,32 @@ class AbstractButtonTest extends AbstractTestCase {
             ButtonInterface::BUTTON_TYPE_WARNING,
         ];
         $this->assertEquals($res, AbstractButton::enumTypes());
+    }
+
+    /**
+     * Tests jsonSerialize()
+     *
+     * @return void
+     */
+    public function testJsonSerialize(): void {
+
+        // Set the expected data.
+        $data = file_get_contents(__DIR__ . "/AbstractButtonTest.testJsonSerialize.json");
+        $json = json_decode($data, true);
+
+        $obj = new TestButton("test");
+        $obj->setActive(true);
+        $obj->setBlock(true);
+        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setDisabled(true);
+        $obj->setOutline(true);
+        $obj->setSize(SerializerKeys::SIZE);
+        $obj->setTitle(SerializerKeys::TITLE);
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(9, $res);
+
+        $this->assertEquals($json, $res);
     }
 
     /**

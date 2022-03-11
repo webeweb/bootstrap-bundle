@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
+use WBW\Bundle\BootstrapBundle\Serializer\JsonSerializer;
 use WBW\Library\Symfony\Assets\AbstractButton as BaseButton;
 use WBW\Library\Traits\Booleans\BooleanActiveTrait;
 use WBW\Library\Traits\Strings\StringSizeTrait;
@@ -118,6 +119,13 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      */
     public function getPrefix(): ?string {
         return "btn-";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize(): array {
+        return JsonSerializer::serializeButton($this);
     }
 
     /**

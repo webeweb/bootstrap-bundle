@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Serializer;
 
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
+use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 
 /**
  * JSON serializer.
@@ -49,6 +50,26 @@ class JsonSerializer {
             SerializerKeys::PILL    => $model->getPill(),
             SerializerKeys::PREFIX  => $model->getPrefix(),
             SerializerKeys::TYPE    => $model->getType(),
+        ];
+    }
+
+    /**
+     * Serializes a button.
+     *
+     * @param ButtonInterface $model The model.
+     * @return array Returns the serialized model.
+     */
+    public static function serializeButton(ButtonInterface $model): array {
+        return [
+            SerializerKeys::ACTIVE   => $model->getActive(),
+            SerializerKeys::BLOCK    => $model->getBlock(),
+            SerializerKeys::DISABLED => $model->getDisabled(),
+            SerializerKeys::CONTENT  => $model->getContent(),
+            SerializerKeys::OUTLINE  => $model->getOutline(),
+            SerializerKeys::PREFIX   => $model->getPrefix(),
+            SerializerKeys::SIZE     => $model->getSize(),
+            SerializerKeys::TITLE    => $model->getTitle(),
+            SerializerKeys::TYPE     => $model->getType(),
         ];
     }
 }
