@@ -119,7 +119,6 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(ButtonTwigExtension::class, $this->containerBuilder->get(ButtonTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(CodeTwigExtension::class, $this->containerBuilder->get(CodeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(GridTwigExtension::class, $this->containerBuilder->get(GridTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(ImageTwigExtension::class, $this->containerBuilder->get(ImageTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(TypographyTwigExtension::class, $this->containerBuilder->get(TypographyTwigExtension::SERVICE_NAME));
 
         // Utility Twig extensions

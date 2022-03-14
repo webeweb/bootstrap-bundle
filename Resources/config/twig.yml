@@ -105,13 +105,6 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    wbw.bootstrap.twig.extension.css.image:
-        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension
-        arguments: [ "@twig" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
     wbw.bootstrap.twig.extension.css.typography:
         class:  WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension
         arguments: [ "@twig" ]
