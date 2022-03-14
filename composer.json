@@ -1,7 +1,7 @@
 {
     "name": "webeweb/bootstrap-bundle",
     "type": "symfony-bundle",
-    "description": "Intregate Bootstrap theme with Symfony 4 and more",
+    "description": "Intregate Bootstrap theme with Symfony 2 and more",
     "keywords": [
         "bootstrap",
         "bundle",
@@ -27,8 +27,8 @@
         "symfony/security-core": "^4.4|^5.0",
         "symfony/translation": "^4.4|^5.0",
         "twig/twig": "^2.10|3.0",
-        "webeweb/core-bundle": "^3.0@dev",
-        "webeweb/core-library": "^8.32"
+        "webeweb/core-bundle": "^3.0",
+        "webeweb/core-library": "^8.33"
     },
     "conflict": {
         "webeweb/jquery-datatables-bundle": "<3.12"
