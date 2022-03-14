@@ -58,7 +58,9 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
      */
     public function testListAssets(): void {
 
-        $res = AssetsHelper::listAssets(__DIR__ . "/../Resources/assets");
+        $assets = realpath(__DIR__ . "/../Resources/assets");
+
+        $res = AssetsHelper::listAssets($assets);
         $this->assertCount(21, $res);
 
         $i = -1;
