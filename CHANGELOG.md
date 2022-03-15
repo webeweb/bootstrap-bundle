@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### [3.28.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.28.0) (2022-03-15)
+### [4.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.0.0) (2022-03-15)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
 > - Symfony 3.4
