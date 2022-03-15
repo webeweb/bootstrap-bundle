@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.28.0](https://github.com/webeweb/bootstrap-bundle/tree/v3.28.0) (2022-03-15)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
 > - Symfony 3.4
@@ -19,6 +19,13 @@ CHANGELOG
 
 - Add PHP 8.x support
 - Add Symfony 5.x support
+- Add center-aligned text renderer trait
+- Add justified-aligned text renderer trait
+- Add left-aligned text renderer trait
+- Add no-wrap text renderer trait
+- Add right-aligned text renderer trait
+- Add center-aligned renderer trait
+- Add right-aligned renderer trait
 - Improve PHPDoc
 - Update dependencies
 
