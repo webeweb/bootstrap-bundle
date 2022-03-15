@@ -31,12 +31,7 @@ class AssetsTwigExtension extends BaseTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.assets";
 
     /**
-     * Render an icon.
-     *
-     * @param Environment $twigEnvironment The twig environment.
-     * @param string|null $name The icon name.
-     * @param string|null $style The icon style.
-     * @return string Returns a rendered icon.
+     * {@inheritDoc}
      */
     public static function renderIcon(Environment $twigEnvironment, ?string $name, string $style = null): ?string {
 
