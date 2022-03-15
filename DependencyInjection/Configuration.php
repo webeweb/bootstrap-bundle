@@ -127,7 +127,7 @@ class Configuration implements ConfigurationInterface {
     /**
      * {@inheritDoc}
      */
-    public function getConfigTreeBuilder() {
+    public function getConfigTreeBuilder(): TreeBuilder {
 
         $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         $plugins = $assets["assets"]["wbw.bootstrap.asset.bootstrap"]["plugins"];
