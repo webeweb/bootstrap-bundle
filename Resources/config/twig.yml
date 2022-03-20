@@ -56,6 +56,13 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    wbw.bootstrap.twig.extension.component.icon:
+        class:  WBW\Bundle\BootstrapBundle\Twig\Extension\Component\IconTwigExtension
+        arguments: [ "@twig" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
     wbw.bootstrap.twig.extension.component.label:
         class:  WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension
         arguments: [ "@twig" ]
