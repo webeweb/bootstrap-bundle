@@ -13,6 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension;
 
 use Twig\Environment;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
+use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\IconTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension as BaseTwigExtension;
 
 /**
@@ -47,6 +48,10 @@ class AssetsTwigExtension extends BaseTwigExtension {
         switch ($handler[0]) {
 
             case "b": // Bootstrap
+            case "bi": // Bootstrap icons
+                $output = (new IconTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
+                break;
+
             case "g": // Glyphicon
                 $output = (new GlyphiconTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
                 break;

@@ -52,6 +52,18 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
+    public function testRenderIconWithIcon(): void {
+
+        $res = '<i class="bi bi-house"></i>';
+
+        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "bi:house"));
+    }
+
+    /**
+     * Tests renderIcon()
+     *
+     * @return void
+     */
     public function testRenderIconWithOther(): void {
 
         $res = '<i class="fa fa-home"></i>';
