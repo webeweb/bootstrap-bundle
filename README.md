@@ -26,7 +26,7 @@ Includes:
 - [Bootstrap Colorpicker 2.5.3](https://itsjavi.com/bootstrap-colorpicker) (Bootstrap plug-in)
 - [Bootstrap Datepicker 1.9.0](https://uxsolutions.github.io/bootstrap-datepicker) (Bootstrap plug-in)
 - [Bootstrap Daterangepicker 2.1.27](http://www.daterangepicker.com) (Bootstrap plug-in)
-- [Bootstrap Icons 1.8.1](https://icons.getbootstrap.com) (Bootstrap plug-in)
+- [Bootstrap Icons 1.8.1](https://icons.getbootstrap.com)
 - [Bootstrap Markdown 2.10.0](http://www.codingdrama.com/bootstrap-markdown) (Bootstrap plug-in)
 - [Bootstrap Notify 3.1.3](http://bootstrap-notify.remabledesigns.com) (Bootstrap plug-in)
 - [Bootstrap Select 1.12.4](https://silviomoreto.github.io/bootstrap-select) (Bootstrap plug-in)
