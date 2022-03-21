@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.2.2](https://github.com/webeweb/bootstrap-bundle/tree/v4.2.2) (2022-03-21)
+
+- Fix Bootstrap Select assets
+
 ### [4.2.1](https://github.com/webeweb/bootstrap-bundle/tree/v4.2.1) (2022-03-21)
 
 - Revert Bootstrap Select to 1.12.4
