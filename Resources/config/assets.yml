@@ -5,14 +5,14 @@ assets:
         versions: { "3": "3.4.1", "4": "4.6.1", "5": "5.1.3" }
         plugins:
             bootstrap_colorpicker:
-                version:     "2.5.1"
+                version:     "2.5.3"
                 description: "Bootstrap Colorpicker"
                 stylesheets:
                     - "/bootstrap-colorpicker-{{ version }}/css/bootstrap-colorpicker.min.css"
                 javascripts:
                     - "/bootstrap-colorpicker-{{ version }}/js/bootstrap-colorpicker.min.js"
             bootstrap_datepicker:
-                version:     "1.7.1"
+                version:     "1.9.0"
                 description: "Bootstrap Datepicker"
                 stylesheets:
                     - "/bootstrap-datepicker-{{ version }}/css/bootstrap-datepicker.min.css"
@@ -109,7 +109,7 @@ assets:
                     - "/moment-2.20.1/moment-with-locales.min.js"
                     - "/bootstrap-daterangepicker-{{ version }}/daterangepicker.js"
             bootstrap_icons:
-                version:     "1.7.0"
+                version:     "1.8.1"
                 description: "Bootstrap Icons"
                 stylesheets:
                     - "/bootstrap-icons-{{ version }}/bootstrap-icons.css"
@@ -148,7 +148,7 @@ assets:
                 javascripts:
                     - "/bootstrap-notify-{{ version }}/bootstrap-notify.min.js"
             bootstrap_select:
-                version:     "1.12.4"
+                version:     "1.13.14"
                 description: "Bootstrap Select"
                 stylesheets:
                     - "/bootstrap-select-{{ version }}/css/bootstrap-select.min.css"
@@ -260,7 +260,7 @@ assets:
                     - "zh-CN"
                     - "zh-TW"
             summernote:
-                version:     "0.8.12"
+                version:     "0.8.20"
                 description: "Summernote"
                 bootstrap: { "3": "", "4": "-bs4" }
                 stylesheets:
