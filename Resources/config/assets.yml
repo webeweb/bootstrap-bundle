@@ -148,7 +148,7 @@ assets:
                 javascripts:
                     - "/bootstrap-notify-{{ version }}/bootstrap-notify.min.js"
             bootstrap_select:
-                version:     "1.13.14"
+                version:     "1.12.4"
                 description: "Bootstrap Select"
                 stylesheets:
                     - "/bootstrap-select-{{ version }}/css/bootstrap-select.min.css"
