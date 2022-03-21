@@ -4,6 +4,11 @@ CHANGELOG
 ### [4.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.1.0) (2022-03-21)
 
 - Add Icon Twig extension
+- Update Bootstrap Colorpicker to 2.5.3
+- Update Bootstrap Datepicker to 1.9.0
+- Update Bootstrap Icons to 1.8.1
+- Update Bootstrap Select to 1.13.14
+- Update Summernote to 0.8.20
 
 ### [4.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.0.0) (2022-03-15)
 
