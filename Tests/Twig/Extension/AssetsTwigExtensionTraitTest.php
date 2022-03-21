@@ -24,11 +24,11 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension;
 class AssetsTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setUser()
+     * Tests setAssetsTwigExtension()
      *
      * @return void
      */
-    public function testSetUser(): void {
+    public function testSetAssetsTwigExtension(): void {
 
         // Set a Assets Twig extension mock.
         $assetsTwigExtension = new AssetsTwigExtension($this->twigEnvironment);
