@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.1.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.1.0) (2022-03-21)
+
+- Add Icon Twig extension
+
 ### [4.0.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.0.0) (2022-03-15)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
