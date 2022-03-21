@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.2.1](https://github.com/webeweb/bootstrap-bundle/tree/v4.2.1) (2022-03-21)
+
+- Revert Bootstrap Select to 1.12.4
+
 ### [4.2.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.2.0) (2022-03-21)
 
 - Update Bootstrap Colorpicker to 2.5.3
