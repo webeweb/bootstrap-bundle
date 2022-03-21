@@ -36,22 +36,21 @@ class AssetsTwigExtension extends BaseTwigExtension {
      */
     public static function renderIcon(Environment $twigEnvironment, ?string $name, string $style = null): ?string {
 
-        // Determines the handler.
         $handler = explode(":", $name);
         if (1 === count($handler)) {
             array_unshift($handler, "g");
         }
-        if (2 !== count($handler)) {
+        if (2 !== count($handler) || null === $name) {
             return null;
         }
 
         switch ($handler[0]) {
 
-            case "b": // Bootstrap
             case "bi": // Bootstrap icons
                 $output = (new IconTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
                 break;
 
+            case "b": // Bootstrap
             case "g": // Glyphicon
                 $output = (new GlyphiconTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
                 break;
