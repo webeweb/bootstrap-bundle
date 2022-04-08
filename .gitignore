@@ -3,7 +3,6 @@
 /composer.lock
 
 /Resources/public/*
-!/Resources/public/.gitkeep
+!/Resources/public/.gitignore
 
 /Tests/Fixtures/app/var/*
-!/Tests/Fixtures/app/var/.gitkeep
