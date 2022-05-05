@@ -56,42 +56,42 @@ abstract class AbstractProgressBar extends BaseProgressBar implements ProgressBa
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getAnimated(): ?bool {
         return $this->animated;
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getPrefix(): ?string {
         return "progress-bar-";
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getStriped(): ?bool {
         return $this->striped;
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getType(): ?string {
         return $this->type;
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeProgressBar($this);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function setAnimated(?bool $animated): ProgressBarInterface {
         $this->animated = $animated;
@@ -99,7 +99,7 @@ abstract class AbstractProgressBar extends BaseProgressBar implements ProgressBa
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function setStriped(?bool $striped): ProgressBarInterface {
         $this->striped = $striped;

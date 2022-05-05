@@ -33,7 +33,7 @@ class TableButtonTwigExtensionTest extends AbstractTestCase {
     private $buttonTwigExtension;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

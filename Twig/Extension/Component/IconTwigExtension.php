@@ -53,7 +53,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function renderIcon(?string $name, ?string $style): string {
         return $this->bootstrapIconFunction(["name" => $name, "style" => $style]);

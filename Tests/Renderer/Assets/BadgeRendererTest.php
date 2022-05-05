@@ -32,7 +32,7 @@ class BadgeRendererTest extends AbstractTestCase {
     private $badge;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

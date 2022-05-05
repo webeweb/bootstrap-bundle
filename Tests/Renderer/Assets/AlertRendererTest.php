@@ -32,7 +32,7 @@ class AlertRendererTest extends AbstractTestCase {
     private $alert;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

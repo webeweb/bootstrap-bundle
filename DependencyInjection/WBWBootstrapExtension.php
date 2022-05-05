@@ -34,7 +34,7 @@ class WBWBootstrapExtension extends Extension {
     const EXTENSION_ALIAS = "wbw_bootstrap";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function load(array $configs, ContainerBuilder $container): void {
 

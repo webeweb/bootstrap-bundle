@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory(): string {
         return self::ASSETS_RELATIVE_DIRECTORY;

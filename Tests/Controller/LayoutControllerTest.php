@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();
