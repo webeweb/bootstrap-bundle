@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.3.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.3.0) (2022-05-16)
+
+- Update Bootstrap Icons to 1.8.2
+
 ### [4.2.2](https://github.com/webeweb/bootstrap-bundle/tree/v4.2.2) (2022-03-21)
 
 - Fix Bootstrap Select assets
