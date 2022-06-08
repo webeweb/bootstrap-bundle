@@ -91,6 +91,18 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
+    public function testRenderIconWithBootstrapIcon(): void {
+
+        $res = '<i class="bi bi-house"></i>';
+
+        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "bi:house"));
+    }
+
+    /**
+     * Tests renderIcon()
+     *
+     * @return void
+     */
     public function testRenderIconWithDefault(): void {
 
         $res = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
@@ -109,18 +121,6 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "b:home"));
         $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "g:home"));
-    }
-
-    /**
-     * Tests renderIcon()
-     *
-     * @return void
-     */
-    public function testRenderIconWithIcon(): void {
-
-        $res = '<i class="bi bi-house"></i>';
-
-        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "bi:house"));
     }
 
     /**

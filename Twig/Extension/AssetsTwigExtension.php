@@ -60,8 +60,8 @@ class AssetsTwigExtension extends BaseTwigExtension {
      */
     public function getFunctions(): array {
         return [
-            new TwigFunction("bootstrapRenderIcon", [$this, "coreRenderIconFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("bsRenderIcon", [$this, "coreRenderIconFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bootstrapRenderIcon", [$this, "bootstrapRenderIconFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("bsRenderIcon", [$this, "bootstrapRenderIconFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
