@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension;
 
+use Twig\Node\Node;
+use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension;
 
@@ -21,6 +23,57 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension;
  * @package WBW\Bundle\BootstrapBundle\Tests\Twig\Extension
  */
 class AssetsTwigExtensionTest extends AbstractTestCase {
+
+    /**
+     * Tests bootstrapRenderIconFunction()
+     *
+     * @return void
+     */
+    public function testBootstrapRenderIconRender(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->bootstrapRenderIconFunction(null));
+        $this->assertNull($obj->bootstrapRenderIconFunction("::"));
+    }
+
+    /**
+     * Tests getFilters()
+     *
+     * @return void
+     */
+    public function testGetFilters(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFilters();
+        $this->assertCount(0, $res);
+    }
+
+    /**
+     * Tests getFunctions()
+     *
+     * @return void
+     */
+    public function testGetFunctions(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFunctions();
+        $this->assertCount(2, $res);
+
+        $i = -1;
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bootstrapRenderIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapRenderIconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("bsRenderIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "bootstrapRenderIconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+    }
 
     /**
      * Tests renderIcon()
