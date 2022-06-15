@@ -28,7 +28,7 @@ jobs:
             -   name: "Application"
                 run:  |
                       mkdir -p build/logs
-                      wget -c -nc --retry-connrefused --tries=0 https://github.com/phpmetrics/PhpMetrics/releases/download/v2.7.3/phpmetrics.phar -O phpmetrics.phar
+                      wget -c -nc --retry-connrefused --tries=0 https://github.com/phpmetrics/PhpMetrics/releases/download/v2.8.1/phpmetrics.phar -O phpmetrics.phar
                       chmod +x phpmetrics.phar
                       php phpmetrics.phar --version
 

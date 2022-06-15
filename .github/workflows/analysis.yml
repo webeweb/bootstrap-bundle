@@ -28,7 +28,7 @@ jobs:
             -   name: "Application"
                 run:  |
                       mkdir -p build/logs
-                      wget -c -nc --retry-connrefused --tries=0 https://github.com/phpstan/phpstan/releases/download/0.12.71/phpstan.phar -O phpstan.phar
+                      wget -c -nc --retry-connrefused --tries=0 https://github.com/phpstan/phpstan/releases/download/0.12.99/phpstan.phar -O phpstan.phar
                       chmod +x phpstan.phar
                       php phpstan.phar --version
                       echo -e "parameters:\n    level: 0\n    excludePaths:\n        -   \"Resources/*\"\n        -   \"Tests/*\"\n        -   \"vendor/*\"" > phpstan.neon
