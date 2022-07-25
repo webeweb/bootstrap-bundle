@@ -22,7 +22,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
  */
 abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
 
-
     /**
      * Displays a Bootstrap icon.
      *
@@ -33,11 +32,11 @@ abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
     protected function bootstrapIcon(?string $name, ?string $style): string {
 
         $attributes = [
-            "class"       => [
+            "class" => [
                 "bi",
                 null !== $name ? "bi-" . $name : null,
                 null !== $style ? $style : null,
-            ]
+            ],
         ];
 
         return static::coreHtmlElement("i", null, $attributes);

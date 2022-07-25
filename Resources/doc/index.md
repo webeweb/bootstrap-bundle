@@ -43,7 +43,7 @@ The different parameters (optionals) are explained below:
 | summernote           | string   | The Summernote plug-in locale (by default: "en-US")         |
 | plugins              | string[] | The plugins list                                            |
 
-Available parameters (locales and plug-ins lists) can be found into [assets.yml](../config/assets.yml) 
+Available parameters (locales and plug-ins lists) can be found into [assets.yml](../config/assets.yml)
 
 ### Template
 
