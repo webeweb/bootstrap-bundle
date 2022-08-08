@@ -93,12 +93,12 @@ interface WBWBootstrapInterface {
      *
      * @var string
      */
-    const BOOTSTRAP_VERSION_4 = "4.6.1";
+    const BOOTSTRAP_VERSION_4 = "4.6.2";
 
     /**
      * Bootstrap version 5.
      *
      * @var string
      */
-    const BOOTSTRAP_VERSION_5 = "5.1.3";
+    const BOOTSTRAP_VERSION_5 = "5.2.0";
 }
