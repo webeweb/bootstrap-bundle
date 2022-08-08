@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### [4.5.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.5.0) (2022-08-08)
+
+- Update Bootstrap to 4.6.2
+- Update Bootstrap to 5.2.0
+- Update Bootstrap Icons to 1.9.1
+- Improve code quality
+
 ### [4.4.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.4.0) (2022-06-08)
 
 - Add boostrapRenderIcon() Twig function
