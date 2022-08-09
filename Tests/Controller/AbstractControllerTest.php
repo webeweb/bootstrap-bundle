@@ -32,7 +32,7 @@ class AbstractControllerTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set a dispatch function.
+        // Set a dispatch() callback.
         $dispatchFunction = static::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
