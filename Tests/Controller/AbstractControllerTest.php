@@ -33,11 +33,11 @@ class AbstractControllerTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a dispatch() callback.
-        $dispatchFunction = static::getEventDispatcherDispatchFunction();
+        $dispatchCallback = static::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchCallback);
     }
 
     /**
