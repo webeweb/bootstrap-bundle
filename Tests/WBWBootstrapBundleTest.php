@@ -64,26 +64,26 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
         $this->assertCount(21, $res);
 
         $i = -1;
-        $this->assertRegExp("/bootstrap\-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_4, ".") . "\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_5, ".") . "\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-colorpicker\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-datepicker\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-daterangepicker\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-icons\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-markdown\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-notify\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-select\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-slider\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-social\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-tagsinput\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-timepicker\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap\-wysiwyg\-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_4, ".") . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_5, ".") . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-colorpicker-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-datepicker-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-daterangepicker-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-icons-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-markdown-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-notify-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-select-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-slider-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-social-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-tagsinput-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-timepicker-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-wysiwyg-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/favicons\.zip$/", $res[++$i]);
-        $this->assertRegExp("/handlebars\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/moment\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/popper\.js\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/summernote\-.*\.zip$/", $res[++$i]);
-        $this->assertRegExp("/wysihtml\-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/handlebars-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/moment-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/popper\.js-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/summernote-.*\.zip$/", $res[++$i]);
+        $this->assertRegExp("/wysihtml-.*\.zip$/", $res[++$i]);
     }
 }
