@@ -74,7 +74,7 @@ class AbstractBadgeTest extends AbstractTestCase {
      */
     public function testSetPill(): void {
 
-        $obj = new TestBadge("danger");
+        $obj = new TestBadge("test");
 
         $obj->setPill(true);
         $this->assertTrue($obj->getPill());
@@ -87,12 +87,12 @@ class AbstractBadgeTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new TestBadge("danger");
+        $obj = new TestBadge("test");
 
         $this->assertInstanceOf(BadgeInterface::class, $obj);
 
         $this->assertNull($obj->getContent());
-        $this->assertEquals("danger", $obj->getType());
+        $this->assertEquals("test", $obj->getType());
 
         $this->assertNull($obj->getPill());
         $this->assertEquals("badge-", $obj->getPrefix());

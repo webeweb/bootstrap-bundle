@@ -74,7 +74,7 @@ class AbstractAlertTest extends AbstractTestCase {
      */
     public function testSetDismissible(): void {
 
-        $obj = new TestAlert("danger");
+        $obj = new TestAlert("test");
 
         $obj->setDismissible(true);
         $this->assertTrue($obj->getDismissible());
@@ -87,12 +87,12 @@ class AbstractAlertTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new TestAlert("danger");
+        $obj = new TestAlert("test");
 
         $this->assertInstanceOf(AlertInterface::class, $obj);
 
         $this->assertNull($obj->getContent());
-        $this->assertEquals("danger", $obj->getType());
+        $this->assertEquals("test", $obj->getType());
 
         $this->assertNull($obj->getDismissible());
         $this->assertEquals("alert-", $obj->getPrefix());
