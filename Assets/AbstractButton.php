@@ -38,6 +38,13 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     private $block;
 
     /**
+     * Data.
+     *
+     * @var array
+     */
+    private $data;
+
+    /**
      * Disabled.
      *
      * @var bool|null
@@ -58,12 +65,13 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      */
     protected function __construct(?string $type) {
         parent::__construct($type);
+        $this->setData([]);
     }
 
     /**
      * Enumerates the sizes.
      *
-     * @return string[] Returns the sizes enumeration.
+     * @return string[] Returns the sizes.
      */
     public static function enumSizes(): array {
         return [
@@ -76,7 +84,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     /**
      * Enumerates the types.
      *
-     * @return string[] Returns the types enumeration.
+     * @return string[] Returns the types.
      */
     public static function enumTypes(): array {
         return [
@@ -98,6 +106,13 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      */
     public function getBlock(): ?bool {
         return $this->block;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getData(): array {
+        return $this->data;
     }
 
     /**
@@ -133,6 +148,14 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      */
     public function setBlock(?bool $block): ButtonInterface {
         $this->block = $block;
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setData(array $data): ButtonInterface {
+        $this->data = $data;
         return $this;
     }
 

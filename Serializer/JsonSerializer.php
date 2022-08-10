@@ -65,6 +65,7 @@ class JsonSerializer {
         return [
             BaseSerializerKeys::ACTIVE   => $model->getActive(),
             SerializerKeys::BLOCK        => $model->getBlock(),
+            BaseSerializerKeys::DATA     => $model->getData(),
             BaseSerializerKeys::DISABLED => $model->getDisabled(),
             BaseSerializerKeys::CONTENT  => $model->getContent(),
             SerializerKeys::OUTLINE      => $model->getOutline(),

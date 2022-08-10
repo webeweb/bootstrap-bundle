@@ -2,6 +2,7 @@
     "active": true,
     "block": true,
     "content": "content",
+    "data": [],
     "disabled": true,
     "outline": true,
     "prefix": "btn-",

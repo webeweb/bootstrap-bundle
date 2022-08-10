@@ -100,6 +100,13 @@ interface ButtonInterface extends BaseButtonInterface {
     public function getBlock(): ?bool;
 
     /**
+     * Get the data.
+     *
+     * @return array Returns the data.
+     */
+    public function getData(): array;
+
+    /**
      * Get the disabled.
      *
      * @return bool|null Returns the disabled.
@@ -149,6 +156,14 @@ interface ButtonInterface extends BaseButtonInterface {
      * @return ButtonInterface Returns this button.
      */
     public function setBlock(?bool $block): ButtonInterface;
+
+    /**
+     * Set the data.
+     *
+     * @param array $data The data.
+     * @return ButtonInterface Returns this button.
+     */
+    public function setData(array $data): ButtonInterface;
 
     /**
      * Set the disabled.

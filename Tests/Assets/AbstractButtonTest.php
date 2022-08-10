@@ -84,7 +84,7 @@ class AbstractButtonTest extends AbstractTestCase {
         $obj->setTitle(BaseSerializerKeys::TITLE);
 
         $res = $obj->jsonSerialize();
-        $this->assertCount(9, $res);
+        $this->assertCount(10, $res);
 
         $this->assertEquals($json, $res);
     }
@@ -96,10 +96,23 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetBlock(): void {
 
-        $obj = new TestButton("danger");
+        $obj = new TestButton("test");
 
         $obj->setBlock(true);
         $this->assertTrue($obj->getBlock());
+    }
+
+    /**
+     * Tests setData()
+     *
+     * @return void
+     */
+    public function testSetData(): void {
+
+        $obj = new TestButton("test");
+
+        $obj->setData(["id" => 1]);
+        $this->assertEquals(["id" => 1], $obj->getData());
     }
 
     /**
@@ -109,7 +122,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetDisabled(): void {
 
-        $obj = new TestButton("danger");
+        $obj = new TestButton("test");
 
         $obj->setDisabled(true);
         $this->assertTrue($obj->getDisabled());
@@ -122,7 +135,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function testSetOutline(): void {
 
-        $obj = new TestButton("danger");
+        $obj = new TestButton("test");
 
         $obj->setOutline(true);
         $this->assertTrue($obj->getOutline());
@@ -135,7 +148,7 @@ class AbstractButtonTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new TestButton("danger");
+        $obj = new TestButton("test");
 
         $this->assertInstanceOf(ButtonInterface::class, $obj);
 
@@ -143,9 +156,10 @@ class AbstractButtonTest extends AbstractTestCase {
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getSize());
         $this->assertNull($obj->getTitle());
-        $this->assertEquals("danger", $obj->getType());
+        $this->assertEquals("test", $obj->getType());
 
         $this->assertNull($obj->getBlock());
+        $this->assertEquals([], $obj->getData());
         $this->assertNull($obj->getDisabled());
         $this->assertNull($obj->getOutline());
         $this->assertEquals("btn-", $obj->getPrefix());
