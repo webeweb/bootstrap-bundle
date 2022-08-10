@@ -56,6 +56,9 @@ class ButtonFactoryTest extends AbstractTestCase {
             "active"   => true,
             "disabled" => true,
             "outline"  => true,
+            "data"     => [
+                "id" => 1,
+            ],
         ];
     }
 
@@ -193,6 +196,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -214,6 +218,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -235,6 +240,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -256,6 +262,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -277,6 +284,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -298,6 +306,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -319,6 +328,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -340,6 +350,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -361,6 +372,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
@@ -382,6 +394,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["active"], $obj->getActive());
         $this->assertEquals($this->args["block"], $obj->getBlock());
         $this->assertEquals($this->args["content"], $obj->getContent());
+        $this->assertEquals($this->args["data"], $obj->getData());
         $this->assertEquals($this->args["disabled"], $obj->getDisabled());
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());

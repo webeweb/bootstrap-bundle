@@ -134,6 +134,7 @@ class ButtonFactory {
         $button->setActive(ArrayHelper::get($args, "active", false));
         $button->setBlock(ArrayHelper::get($args, "block", false));
         $button->setContent(ArrayHelper::get($args, "content"));
+        $button->setData(ArrayHelper::get($args, "data", []));
         $button->setDisabled(ArrayHelper::get($args, "disabled", false));
         $button->setOutline(ArrayHelper::get($args, "outline", false));
         $button->setSize(ArrayHelper::get($args, "size"));
