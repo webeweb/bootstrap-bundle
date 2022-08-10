@@ -42,7 +42,7 @@ abstract class AbstractBadge extends BaseBadge implements BadgeInterface {
     /**
      * Enumerates the types.
      *
-     * @return string[] Returns the types enumeration.
+     * @return string[] Returns the types.
      */
     public static function enumTypes(): array {
         return [

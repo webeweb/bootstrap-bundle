@@ -27,7 +27,7 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the Bootstrap Datepicker locales.
      *
-     * @param ArrayNodeDefinition $node The locales node.
+     * @param ArrayNodeDefinition $node The node.
      * @param array $plugins The plugins.
      * @return void
      */
@@ -47,7 +47,7 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the Bootstrap Markdown locales.
      *
-     * @param ArrayNodeDefinition $node The locales node.
+     * @param ArrayNodeDefinition $node The node.
      * @param array $plugins The plugins.
      * @return void
      */
@@ -67,7 +67,7 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the Bootstrap Select locales.
      *
-     * @param ArrayNodeDefinition $node The locales node.
+     * @param ArrayNodeDefinition $node The node.
      * @param array $plugins The plugins.
      * @return void
      */
@@ -87,11 +87,11 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the Bootstrap WYSIWYG locales.
      *
-     * @param ArrayNodeDefinition $node The locales node.
+     * @param ArrayNodeDefinition $node The node.
      * @param array $plugins The plugins.
      * @return void
      */
-    private function addBootstrapWysiwigLocales(ArrayNodeDefinition $node, array $plugins): void {
+    private function addBootstrapWysiwygLocales(ArrayNodeDefinition $node, array $plugins): void {
 
         $node
             ->children()
@@ -107,7 +107,7 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the Summernote locales.
      *
-     * @param ArrayNodeDefinition $node The locales node.
+     * @param ArrayNodeDefinition $node The node.
      * @param array $plugins The plugins.
      * @return void
      */
@@ -153,7 +153,7 @@ class Configuration implements ConfigurationInterface {
         $this->addBootstrapDatepickerLocales($localesNode, $plugins);
         $this->addBootstrapMarkdownLocales($localesNode, $plugins);
         $this->addBootstrapSelectLocales($localesNode, $plugins);
-        $this->addBootstrapWysiwigLocales($localesNode, $plugins);
+        $this->addBootstrapWysiwygLocales($localesNode, $plugins);
         $this->addSummernoteLocales($localesNode, $plugins);
 
         return $treeBuilder;

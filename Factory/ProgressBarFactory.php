@@ -93,7 +93,7 @@ class ProgressBarFactory {
     }
 
     /**
-     * Parse a info progress bar.
+     * Parse an info progress bar.
      *
      * @param array $args The arguments.
      * @return ProgressBarInterface Returns the info progress bar.

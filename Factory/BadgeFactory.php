@@ -158,7 +158,7 @@ class BadgeFactory {
     }
 
     /**
-     * Parse a info badge.
+     * Parse an info badge.
      *
      * @param array $args The arguments.
      * @return BadgeInterface Returns the info badge.

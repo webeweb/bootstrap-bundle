@@ -138,7 +138,7 @@ class AlertFactory {
     }
 
     /**
-     * Parse a info alert.
+     * Parse an info alert.
      *
      * @param array $args The arguments.
      * @return AlertInterface Returns the info alert.

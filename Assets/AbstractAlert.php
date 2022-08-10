@@ -42,7 +42,7 @@ abstract class AbstractAlert extends BaseAlert implements AlertInterface {
     /**
      * Enumerates the types.
      *
-     * @return string[] Returns the types enumeration.
+     * @return string[] Returns the types.
      */
     public static function enumTypes(): array {
         return [
