@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Button;
 
 use WBW\Bundle\BootstrapBundle\Assets\Button\DangerButton;
-use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
  * Danger button test.
@@ -32,6 +32,6 @@ class DangerButtonTest extends AbstractTestCase {
 
         $obj = new DangerButton();
 
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
     }
 }

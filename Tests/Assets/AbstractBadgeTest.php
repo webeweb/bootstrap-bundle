@@ -13,9 +13,10 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractBadge;
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
-use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestBadge;
+use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
+use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 
 /**
  * Abstract badge test.
@@ -33,14 +34,14 @@ class AbstractBadgeTest extends AbstractTestCase {
     public function testEnumTypes(): void {
 
         $res = [
-            BadgeInterface::BADGE_TYPE_DANGER,
+            BaseBadgeInterface::BADGE_TYPE_DANGER,
             BadgeInterface::BADGE_TYPE_DARK,
-            BadgeInterface::BADGE_TYPE_INFO,
+            BaseBadgeInterface::BADGE_TYPE_INFO,
             BadgeInterface::BADGE_TYPE_LIGHT,
             BadgeInterface::BADGE_TYPE_PRIMARY,
             BadgeInterface::BADGE_TYPE_SECONDARY,
-            BadgeInterface::BADGE_TYPE_SUCCESS,
-            BadgeInterface::BADGE_TYPE_WARNING,
+            BaseBadgeInterface::BADGE_TYPE_SUCCESS,
+            BaseBadgeInterface::BADGE_TYPE_WARNING,
         ];
         $this->assertEquals($res, AbstractBadge::enumTypes());
     }
@@ -57,7 +58,7 @@ class AbstractBadgeTest extends AbstractTestCase {
         $json = json_decode($data, true);
 
         $obj = new TestBadge("test");
-        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setContent(BaseSerializerKeys::CONTENT);
         $obj->setPill(true);
 
         $res = $obj->jsonSerialize();

@@ -22,6 +22,7 @@ use WBW\Bundle\BootstrapBundle\Assets\Alert\WarningAlert;
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Factory\AlertFactory;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 
 /**
  * Alert factory test.
@@ -161,7 +162,7 @@ class AlertFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["dismissible"], $obj->getDismissible());
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_DANGER, $obj->getType());
     }
 
     /**
@@ -195,7 +196,7 @@ class AlertFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["dismissible"], $obj->getDismissible());
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_INFO, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_INFO, $obj->getType());
     }
 
     /**
@@ -263,7 +264,7 @@ class AlertFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["dismissible"], $obj->getDismissible());
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_SUCCESS, $obj->getType());
     }
 
     /**
@@ -280,6 +281,6 @@ class AlertFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["dismissible"], $obj->getDismissible());
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_WARNING, $obj->getType());
     }
 }

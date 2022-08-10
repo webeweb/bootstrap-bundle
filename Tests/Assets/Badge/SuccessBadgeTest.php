@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Badge;
 
 use WBW\Bundle\BootstrapBundle\Assets\Badge\SuccessBadge;
-use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 
 /**
  * Success badge test.
@@ -32,6 +32,6 @@ class SuccessBadgeTest extends AbstractTestCase {
 
         $obj = new SuccessBadge();
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseBadgeInterface::BADGE_TYPE_SUCCESS, $obj->getType());
     }
 }

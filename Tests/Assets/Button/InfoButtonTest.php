@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Button;
 
 use WBW\Bundle\BootstrapBundle\Assets\Button\InfoButton;
-use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
  * Info button test.
@@ -32,6 +32,6 @@ class InfoButtonTest extends AbstractTestCase {
 
         $obj = new InfoButton();
 
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
     }
 }

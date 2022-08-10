@@ -12,9 +12,9 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
-use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestProgressBar;
+use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 
 /**
  * Abstract progress bar test.
@@ -37,7 +37,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
 
         $obj = new TestProgressBar("test");
         $obj->setAnimated(true);
-        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setContent(BaseSerializerKeys::CONTENT);
         $obj->setHeight(16);
         $obj->setMin(0);
         $obj->setMax(100);

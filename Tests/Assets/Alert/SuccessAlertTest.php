@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Alert;
 
 use WBW\Bundle\BootstrapBundle\Assets\Alert\SuccessAlert;
-use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 
 /**
  * Success alert test.
@@ -32,6 +32,6 @@ class SuccessAlertTest extends AbstractTestCase {
 
         $obj = new SuccessAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_SUCCESS, $obj->getType());
     }
 }

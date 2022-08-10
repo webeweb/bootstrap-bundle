@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\ProgressBar;
 
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\WarningProgressBar;
-use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ProgressBarInterface as BaseProgressBarInterface;
 
 /**
  * Warning progress bar test.
@@ -32,6 +32,6 @@ class WarningProgressBarTest extends AbstractTestCase {
 
         $obj = new WarningProgressBar();
 
-        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(BaseProgressBarInterface::PROGRESS_BAR_TYPE_WARNING, $obj->getType());
     }
 }

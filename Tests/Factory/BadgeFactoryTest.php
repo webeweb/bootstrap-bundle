@@ -23,6 +23,7 @@ use WBW\Bundle\BootstrapBundle\Assets\Badge\WarningBadge;
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Factory\BadgeFactory;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 
 /**
  * Badge factory test.
@@ -174,7 +175,7 @@ class BadgeFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["pill"], $obj->getPill());
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BaseBadgeInterface::BADGE_TYPE_DANGER, $obj->getType());
     }
 
     /**
@@ -225,7 +226,7 @@ class BadgeFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["pill"], $obj->getPill());
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_INFO, $obj->getType());
+        $this->assertEquals(BaseBadgeInterface::BADGE_TYPE_INFO, $obj->getType());
     }
 
     /**
@@ -293,7 +294,7 @@ class BadgeFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["pill"], $obj->getPill());
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseBadgeInterface::BADGE_TYPE_SUCCESS, $obj->getType());
     }
 
     /**
@@ -310,6 +311,6 @@ class BadgeFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["content"], $obj->getContent());
         $this->assertEquals($this->args["pill"], $obj->getPill());
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(BaseBadgeInterface::BADGE_TYPE_WARNING, $obj->getType());
     }
 }

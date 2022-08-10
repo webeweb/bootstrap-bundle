@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Button;
 
 use WBW\Bundle\BootstrapBundle\Assets\Button\WarningButton;
-use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
  * Warning button test.
@@ -32,6 +32,6 @@ class WarningButtonTest extends AbstractTestCase {
 
         $obj = new WarningButton();
 
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
     }
 }

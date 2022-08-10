@@ -13,9 +13,10 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractAlert;
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
-use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestAlert;
+use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
+use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 
 /**
  * Abstract alert test.
@@ -33,14 +34,14 @@ class AbstractAlertTest extends AbstractTestCase {
     public function testEnumTypes(): void {
 
         $res = [
-            AlertInterface::ALERT_TYPE_DANGER,
+            BaseAlertInterface::ALERT_TYPE_DANGER,
             AlertInterface::ALERT_TYPE_DARK,
-            AlertInterface::ALERT_TYPE_INFO,
+            BaseAlertInterface::ALERT_TYPE_INFO,
             AlertInterface::ALERT_TYPE_LIGHT,
             AlertInterface::ALERT_TYPE_PRIMARY,
             AlertInterface::ALERT_TYPE_SECONDARY,
-            AlertInterface::ALERT_TYPE_SUCCESS,
-            AlertInterface::ALERT_TYPE_WARNING,
+            BaseAlertInterface::ALERT_TYPE_SUCCESS,
+            BaseAlertInterface::ALERT_TYPE_WARNING,
         ];
         $this->assertEquals($res, AbstractAlert::enumTypes());
     }
@@ -57,7 +58,7 @@ class AbstractAlertTest extends AbstractTestCase {
         $json = json_decode($data, true);
 
         $obj = new TestAlert("test");
-        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setContent(BaseSerializerKeys::CONTENT);
         $obj->setDismissible(true);
 
         $res = $obj->jsonSerialize();

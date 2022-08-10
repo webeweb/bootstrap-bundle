@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Button;
 
 use WBW\Bundle\BootstrapBundle\Assets\Button\SuccessButton;
-use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
  * Success button test.
@@ -32,6 +32,6 @@ class SuccessButtonTest extends AbstractTestCase {
 
         $obj = new SuccessButton();
 
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
     }
 }

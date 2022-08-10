@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Alert;
 
 use WBW\Bundle\BootstrapBundle\Assets\Alert\DangerAlert;
-use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 
 /**
  * Danger alert test.
@@ -32,6 +32,6 @@ class DangerAlertTest extends AbstractTestCase {
 
         $obj = new DangerAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_DANGER, $obj->getType());
     }
 }

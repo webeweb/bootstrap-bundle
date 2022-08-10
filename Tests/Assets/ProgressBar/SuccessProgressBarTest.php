@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\ProgressBar;
 
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\SuccessProgressBar;
-use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ProgressBarInterface as BaseProgressBarInterface;
 
 /**
  * Success progress bar test.
@@ -32,6 +32,6 @@ class SuccessProgressBarTest extends AbstractTestCase {
 
         $obj = new SuccessProgressBar();
 
-        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseProgressBarInterface::PROGRESS_BAR_TYPE_SUCCESS, $obj->getType());
     }
 }

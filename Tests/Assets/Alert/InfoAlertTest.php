@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Alert;
 
 use WBW\Bundle\BootstrapBundle\Assets\Alert\InfoAlert;
-use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 
 /**
  * Info alert test.
@@ -32,6 +32,6 @@ class InfoAlertTest extends AbstractTestCase {
 
         $obj = new InfoAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_INFO, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_INFO, $obj->getType());
     }
 }

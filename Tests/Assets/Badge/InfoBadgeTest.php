@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Badge;
 
 use WBW\Bundle\BootstrapBundle\Assets\Badge\InfoBadge;
-use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 
 /**
  * Info badge test.
@@ -32,6 +32,6 @@ class InfoBadgeTest extends AbstractTestCase {
 
         $obj = new InfoBadge();
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_INFO, $obj->getType());
+        $this->assertEquals(BaseBadgeInterface::BADGE_TYPE_INFO, $obj->getType());
     }
 }

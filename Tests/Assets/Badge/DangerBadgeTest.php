@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Badge;
 
 use WBW\Bundle\BootstrapBundle\Assets\Badge\DangerBadge;
-use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 
 /**
  * Danger badge test.
@@ -32,6 +32,6 @@ class DangerBadgeTest extends AbstractTestCase {
 
         $obj = new DangerBadge();
 
-        $this->assertEquals(BadgeInterface::BADGE_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BaseBadgeInterface::BADGE_TYPE_DANGER, $obj->getType());
     }
 }

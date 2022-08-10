@@ -13,9 +13,10 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\AbstractButton;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
-use WBW\Bundle\BootstrapBundle\Serializer\SerializerKeys;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Assets\TestButton;
+use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
+use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
  * Abstract button test.
@@ -48,16 +49,16 @@ class AbstractButtonTest extends AbstractTestCase {
     public function testEnumTypes(): void {
 
         $res = [
-            ButtonInterface::BUTTON_TYPE_DANGER,
+            BaseButtonInterface::BUTTON_TYPE_DANGER,
             ButtonInterface::BUTTON_TYPE_DARK,
             ButtonInterface::BUTTON_TYPE_DEFAULT,
-            ButtonInterface::BUTTON_TYPE_INFO,
+            BaseButtonInterface::BUTTON_TYPE_INFO,
             ButtonInterface::BUTTON_TYPE_LIGHT,
             ButtonInterface::BUTTON_TYPE_LINK,
             ButtonInterface::BUTTON_TYPE_PRIMARY,
             ButtonInterface::BUTTON_TYPE_SECONDARY,
-            ButtonInterface::BUTTON_TYPE_SUCCESS,
-            ButtonInterface::BUTTON_TYPE_WARNING,
+            BaseButtonInterface::BUTTON_TYPE_SUCCESS,
+            BaseButtonInterface::BUTTON_TYPE_WARNING,
         ];
         $this->assertEquals($res, AbstractButton::enumTypes());
     }
@@ -76,11 +77,11 @@ class AbstractButtonTest extends AbstractTestCase {
         $obj = new TestButton("test");
         $obj->setActive(true);
         $obj->setBlock(true);
-        $obj->setContent(SerializerKeys::CONTENT);
+        $obj->setContent(BaseSerializerKeys::CONTENT);
         $obj->setDisabled(true);
         $obj->setOutline(true);
-        $obj->setSize(SerializerKeys::SIZE);
-        $obj->setTitle(SerializerKeys::TITLE);
+        $obj->setSize(BaseSerializerKeys::SIZE);
+        $obj->setTitle(BaseSerializerKeys::TITLE);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(9, $res);

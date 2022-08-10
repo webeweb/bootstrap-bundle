@@ -12,8 +12,8 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets\Alert;
 
 use WBW\Bundle\BootstrapBundle\Assets\Alert\WarningAlert;
-use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 
 /**
  * Warning alert test.
@@ -32,6 +32,6 @@ class WarningAlertTest extends AbstractTestCase {
 
         $obj = new WarningAlert();
 
-        $this->assertEquals(AlertInterface::ALERT_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(BaseAlertInterface::ALERT_TYPE_WARNING, $obj->getType());
     }
 }

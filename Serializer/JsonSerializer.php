@@ -15,6 +15,7 @@ use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
+use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 
 /**
  * JSON serializer.
@@ -32,10 +33,10 @@ class JsonSerializer {
      */
     public static function serializeAlert(AlertInterface $model): array {
         return [
-            SerializerKeys::CONTENT     => $model->getContent(),
+            BaseSerializerKeys::CONTENT => $model->getContent(),
             SerializerKeys::DISMISSIBLE => $model->getDismissible(),
             SerializerKeys::PREFIX      => $model->getPrefix(),
-            SerializerKeys::TYPE        => $model->getType(),
+            BaseSerializerKeys::TYPE    => $model->getType(),
         ];
     }
 
@@ -47,10 +48,10 @@ class JsonSerializer {
      */
     public static function serializeBadge(BadgeInterface $model): array {
         return [
-            SerializerKeys::CONTENT => $model->getContent(),
-            SerializerKeys::PILL    => $model->getPill(),
-            SerializerKeys::PREFIX  => $model->getPrefix(),
-            SerializerKeys::TYPE    => $model->getType(),
+            BaseSerializerKeys::CONTENT => $model->getContent(),
+            SerializerKeys::PILL        => $model->getPill(),
+            SerializerKeys::PREFIX      => $model->getPrefix(),
+            BaseSerializerKeys::TYPE    => $model->getType(),
         ];
     }
 
@@ -62,15 +63,15 @@ class JsonSerializer {
      */
     public static function serializeButton(ButtonInterface $model): array {
         return [
-            SerializerKeys::ACTIVE   => $model->getActive(),
-            SerializerKeys::BLOCK    => $model->getBlock(),
-            SerializerKeys::DISABLED => $model->getDisabled(),
-            SerializerKeys::CONTENT  => $model->getContent(),
-            SerializerKeys::OUTLINE  => $model->getOutline(),
-            SerializerKeys::PREFIX   => $model->getPrefix(),
-            SerializerKeys::SIZE     => $model->getSize(),
-            SerializerKeys::TITLE    => $model->getTitle(),
-            SerializerKeys::TYPE     => $model->getType(),
+            BaseSerializerKeys::ACTIVE   => $model->getActive(),
+            SerializerKeys::BLOCK        => $model->getBlock(),
+            BaseSerializerKeys::DISABLED => $model->getDisabled(),
+            BaseSerializerKeys::CONTENT  => $model->getContent(),
+            SerializerKeys::OUTLINE      => $model->getOutline(),
+            SerializerKeys::PREFIX       => $model->getPrefix(),
+            BaseSerializerKeys::SIZE     => $model->getSize(),
+            BaseSerializerKeys::TITLE    => $model->getTitle(),
+            BaseSerializerKeys::TYPE     => $model->getType(),
         ];
     }
 
@@ -82,15 +83,15 @@ class JsonSerializer {
      */
     public static function serializeProgressBar(ProgressBarInterface $model): array {
         return [
-            SerializerKeys::ANIMATED => $model->getAnimated(),
-            SerializerKeys::CONTENT  => $model->getContent(),
-            SerializerKeys::HEIGHT   => $model->getHeight(),
-            SerializerKeys::MAX      => $model->getMax(),
-            SerializerKeys::MIN      => $model->getMin(),
-            SerializerKeys::PREFIX   => $model->getPrefix(),
-            SerializerKeys::STRIPED  => $model->getStriped(),
-            SerializerKeys::TYPE     => $model->getType(),
-            SerializerKeys::VALUE    => $model->getValue(),
+            SerializerKeys::ANIMATED    => $model->getAnimated(),
+            BaseSerializerKeys::CONTENT => $model->getContent(),
+            BaseSerializerKeys::HEIGHT  => $model->getHeight(),
+            BaseSerializerKeys::MAX     => $model->getMax(),
+            BaseSerializerKeys::MIN     => $model->getMin(),
+            SerializerKeys::PREFIX      => $model->getPrefix(),
+            SerializerKeys::STRIPED     => $model->getStriped(),
+            BaseSerializerKeys::TYPE    => $model->getType(),
+            BaseSerializerKeys::VALUE   => $model->getValue(),
         ];
     }
 }

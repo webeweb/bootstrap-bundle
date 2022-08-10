@@ -16,9 +16,9 @@ use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\DangerProgressBar;
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\InfoProgressBar;
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\SuccessProgressBar;
 use WBW\Bundle\BootstrapBundle\Assets\ProgressBar\WarningProgressBar;
-use WBW\Bundle\BootstrapBundle\Assets\ProgressBarInterface;
 use WBW\Bundle\BootstrapBundle\Factory\ProgressBarFactory;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ProgressBarInterface as BaseProgressBarInterface;
 
 /**
  * Progress bar factory test.
@@ -149,7 +149,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["min"], $obj->getMin());
         $this->assertEquals($this->args["striped"], $obj->getStriped());
         $this->assertEquals($this->args["value"], $obj->getValue());
-        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BaseProgressBarInterface::PROGRESS_BAR_TYPE_DANGER, $obj->getType());
     }
 
     /**
@@ -169,7 +169,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["min"], $obj->getMin());
         $this->assertEquals($this->args["striped"], $obj->getStriped());
         $this->assertEquals($this->args["value"], $obj->getValue());
-        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_INFO, $obj->getType());
+        $this->assertEquals(BaseProgressBarInterface::PROGRESS_BAR_TYPE_INFO, $obj->getType());
     }
 
     /**
@@ -189,7 +189,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["min"], $obj->getMin());
         $this->assertEquals($this->args["striped"], $obj->getStriped());
         $this->assertEquals($this->args["value"], $obj->getValue());
-        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseProgressBarInterface::PROGRESS_BAR_TYPE_SUCCESS, $obj->getType());
     }
 
     /**
@@ -209,6 +209,6 @@ class ProgressBarFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["min"], $obj->getMin());
         $this->assertEquals($this->args["striped"], $obj->getStriped());
         $this->assertEquals($this->args["value"], $obj->getValue());
-        $this->assertEquals(ProgressBarInterface::PROGRESS_BAR_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(BaseProgressBarInterface::PROGRESS_BAR_TYPE_WARNING, $obj->getType());
     }
 }

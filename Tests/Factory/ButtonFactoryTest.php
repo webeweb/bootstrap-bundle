@@ -24,6 +24,7 @@ use WBW\Bundle\BootstrapBundle\Assets\Button\WarningButton;
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
 use WBW\Bundle\BootstrapBundle\Factory\ButtonFactory;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
  * Button factory test.
@@ -196,7 +197,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_DANGER, $obj->getType());
     }
 
     /**
@@ -259,7 +260,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_INFO, $obj->getType());
     }
 
     /**
@@ -364,7 +365,7 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_SUCCESS, $obj->getType());
     }
 
     /**
@@ -385,6 +386,6 @@ class ButtonFactoryTest extends AbstractTestCase {
         $this->assertEquals($this->args["outline"], $obj->getOutline());
         $this->assertEquals($this->args["size"], $obj->getSize());
         $this->assertEquals($this->args["title"], $obj->getTitle());
-        $this->assertEquals(ButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
+        $this->assertEquals(BaseButtonInterface::BUTTON_TYPE_WARNING, $obj->getType());
     }
 }
