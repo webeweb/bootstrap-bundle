@@ -33,11 +33,13 @@
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", () => {
 
-            $("div#twig-title").css("cursor", "pointer");
-            $("div#twig-title").on("click", function () {
+            const $title = $("div#twig-title");
 
-                var $element = $("div#twig-context");
-                var display  = "none";
+            $title.css("cursor", "pointer");
+            $title.on("click", function () {
+
+                const $element = $("div#twig-context");
+                let display    = "none";
 
                 if ("none" === $element.css("display")) {
                     display = "block";
