@@ -30,7 +30,6 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\CodeTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
-use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ImageTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\FormButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Utility\RoleLabelTwigExtension;
