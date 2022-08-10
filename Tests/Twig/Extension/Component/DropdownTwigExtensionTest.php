@@ -123,10 +123,9 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
 
-        $arg = [];
         $res = '<li class="divider" role="separator"></li>';
 
-        $this->assertEquals($res, $obj->bootstrapDropdownDividerFunction($arg));
+        $this->assertEquals($res, $obj->bootstrapDropdownDividerFunction());
     }
 
     /**
