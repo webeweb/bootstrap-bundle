@@ -45,9 +45,13 @@ abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
             "title"          => ButtonRenderer::renderTitle($button),
             "type"           => "button",
             "data-toggle"    => ButtonRenderer::renderDataToggle($button),
-            "data-placement" => ButtonRenderer::renderDataPLacement($button),
+            "data-placement" => ButtonRenderer::renderDataPlacement($button),
             "disabled"       => ButtonRenderer::renderDisabled($button),
         ];
+
+        foreach ($button->getData() as $k => $v) {
+            $attributes["data-$k"] = $v;
+        }
 
         $glyphicon = null !== $icon ? AssetsTwigExtension::renderIcon($this->getTwigEnvironment(), $icon) : "";
         $innerHTML = ButtonRenderer::renderContent($button);

@@ -34,8 +34,8 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ButtonTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "content", "title" => "title", "size" => "lg", "block" => true, "active" => true, "disabled" => true, "icon" => "fa:home"];
-        $res = '<button class="btn btn-danger btn-block btn-lg active" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled"><i class="fa fa-home"></i> content</button>';
+        $arg = ["content" => "content", "title" => "title", "size" => "lg", "block" => true, "active" => true, "disabled" => true, "icon" => "fa:home", "data" => ["id" => 1]];
+        $res = '<button class="btn btn-danger btn-block btn-lg active" title="title" type="button" data-toggle="tooltip" data-placement="top" disabled="disabled" data-id="1"><i class="fa fa-home"></i> content</button>';
 
         $this->assertEquals($res, $obj->bootstrapButtonDangerFunction($arg));
     }
