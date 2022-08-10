@@ -21,7 +21,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Assets\Navigation\Glyphicon
  */
-class NavigationNodeActionUsersTest extends AbstractTestCase {
+class NavigationNodeUsersTest extends AbstractTestCase {
 
     /**
      * Tests __construct()
