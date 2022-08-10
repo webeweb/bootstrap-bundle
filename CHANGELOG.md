@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [4.6.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.6.0) (2022-08-10)
+
+- Add data attributes support into Button Twig extension
+- Improve code quality
+- Improve PHPDoc
+
 ### [4.5.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.5.0) (2022-08-08)
 
 - Update Bootstrap to 4.6.2
