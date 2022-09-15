@@ -12,9 +12,9 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\ButtonInterface;
-use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
  * Button interface test.
