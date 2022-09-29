@@ -46,6 +46,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("bootstrapIcon", [$this, "bootstrapIconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsIcon", [$this, "bootstrapIconFunction"], ["is_safe" => ["html"]]),

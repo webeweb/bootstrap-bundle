@@ -32,6 +32,7 @@ class JsonSerializer {
      * @return array Returns the serialized model.
      */
     public static function serializeAlert(AlertInterface $model): array {
+
         return [
             BaseSerializerKeys::CONTENT => $model->getContent(),
             SerializerKeys::DISMISSIBLE => $model->getDismissible(),
@@ -47,6 +48,7 @@ class JsonSerializer {
      * @return array Returns the serialized model.
      */
     public static function serializeBadge(BadgeInterface $model): array {
+
         return [
             BaseSerializerKeys::CONTENT => $model->getContent(),
             SerializerKeys::PILL        => $model->getPill(),
@@ -62,6 +64,7 @@ class JsonSerializer {
      * @return array Returns the serialized model.
      */
     public static function serializeButton(ButtonInterface $model): array {
+
         return [
             BaseSerializerKeys::ACTIVE   => $model->getActive(),
             SerializerKeys::BLOCK        => $model->getBlock(),
@@ -83,6 +86,7 @@ class JsonSerializer {
      * @return array Returns the serialized model.
      */
     public static function serializeProgressBar(ProgressBarInterface $model): array {
+
         return [
             SerializerKeys::ANIMATED    => $model->getAnimated(),
             BaseSerializerKeys::CONTENT => $model->getContent(),

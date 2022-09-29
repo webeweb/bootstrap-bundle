@@ -45,6 +45,7 @@ abstract class AbstractAlert extends BaseAlert implements AlertInterface {
      * @return string[] Returns the types.
      */
     public static function enumTypes(): array {
+
         return [
             self::ALERT_TYPE_DANGER,
             self::ALERT_TYPE_DARK,

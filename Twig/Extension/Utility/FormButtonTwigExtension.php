@@ -104,6 +104,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("bootstrapFormButtonCancel", [$this, "bootstrapFormButtonCancelFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsFormButtonCancel", [$this, "bootstrapFormButtonCancelFunction"], ["is_safe" => ["html"]]),

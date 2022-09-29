@@ -144,6 +144,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters(): array {
+
         return [
             new TwigFilter("bootstrapBadgeLink", [$this, "bootstrapBadgeLinkFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("bsBadgeLink", [$this, "bootstrapBadgeLinkFilter"], ["is_safe" => ["html"]]),
@@ -168,6 +169,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions3(): array {
+
         return [
             new TwigFunction("bootstrapBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBadge", [$this, "bootstrapBadgeFunction"], ["is_safe" => ["html"]]),
@@ -180,6 +182,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions4(): array {
+
         return [
             new TwigFunction("bootstrapBadgeDanger", [$this, "bootstrapBadgeDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBadgeDanger", [$this, "bootstrapBadgeDangerFunction"], ["is_safe" => ["html"]]),

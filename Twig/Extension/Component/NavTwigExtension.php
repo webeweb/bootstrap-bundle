@@ -66,6 +66,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("bootstrapNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsNavsJustified", [$this, "bootstrapNavsJustifiedFunction"], ["is_safe" => ["html"]]),

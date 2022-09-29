@@ -45,6 +45,7 @@ abstract class AbstractBadge extends BaseBadge implements BadgeInterface {
      * @return string[] Returns the types.
      */
     public static function enumTypes(): array {
+
         return [
             self::BADGE_TYPE_DANGER,
             self::BADGE_TYPE_DARK,

@@ -94,6 +94,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("bootstrapGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsGrid", [$this, "bootstrapGridFunction"], ["is_safe" => ["html"]]),

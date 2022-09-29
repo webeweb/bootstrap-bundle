@@ -173,6 +173,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters(): array {
+
         return [
             new TwigFilter("bootstrapButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("bsButtonLink", [$this, "bootstrapButtonLinkFilter"], ["is_safe" => ["html"]]),
@@ -245,6 +246,7 @@ class ButtonTwigExtension extends AbstractButtonTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     protected function getFunctions4(): array {
+
         return [
             new TwigFunction("bootstrapButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsButtonDark", [$this, "bootstrapButtonDarkFunction"], ["is_safe" => ["html"]]),

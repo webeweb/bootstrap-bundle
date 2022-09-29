@@ -74,6 +74,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      * @return string[] Returns the sizes.
      */
     public static function enumSizes(): array {
+
         return [
             self::BUTTON_SIZE_LG,
             self::BUTTON_SIZE_SM,
@@ -87,6 +88,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
      * @return string[] Returns the types.
      */
     public static function enumTypes(): array {
+
         return [
             self::BUTTON_TYPE_DANGER,
             self::BUTTON_TYPE_DARK,

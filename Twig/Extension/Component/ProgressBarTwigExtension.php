@@ -98,6 +98,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters(): array {
+
         return [
             new TwigFilter("bootstrapMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
             new TwigFilter("bsMultipleBars", [$this, "bootstrapMultipleBars"], ["is_safe" => ["html"]]),
@@ -110,6 +111,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("bootstrapProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsProgressBarBasic", [$this, "bootstrapProgressBarBasicFunction"], ["is_safe" => ["html"]]),

@@ -86,6 +86,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("bootstrapBasicBlock", [$this, "bootstrapBasicBlockFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBasicBlock", [$this, "bootstrapBasicBlockFunction"], ["is_safe" => ["html"]]),

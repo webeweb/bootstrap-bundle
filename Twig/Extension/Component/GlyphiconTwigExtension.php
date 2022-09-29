@@ -47,9 +47,11 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         if (3 === $this->getVersion()) {
             return $this->getFunctions3();
         }
+
         return [];
     }
 
@@ -59,6 +61,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
      * @return TwigFunction[] Returns the Twig functions.
      */
     protected function getFunctions3(): array {
+
         return [
             new TwigFunction("bootstrapGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsGlyphicon", [$this, "bootstrapGlyphiconFunction"], ["is_safe" => ["html"]]),

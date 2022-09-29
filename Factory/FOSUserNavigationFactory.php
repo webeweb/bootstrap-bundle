@@ -28,6 +28,7 @@ class FOSUserNavigationFactory {
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
     public static function newGlyphiconBreadcrumbNodes(): array {
+
         return [
             new BreadcrumbNode("label.edit_profile", "g:user", "fos_user_profile_edit", NavigationNodeInterface::MATCHER_ROUTER),
             new BreadcrumbNode("label.show_profile", "g:user", "fos_user_profile_show", NavigationNodeInterface::MATCHER_ROUTER),

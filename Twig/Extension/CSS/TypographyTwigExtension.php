@@ -176,6 +176,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("bootstrapBold", [$this, "bootstrapBoldFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsBold", [$this, "bootstrapBoldFunction"], ["is_safe" => ["html"]]),

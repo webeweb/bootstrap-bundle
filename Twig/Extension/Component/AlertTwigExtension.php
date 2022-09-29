@@ -142,6 +142,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     protected function getFunctions3(): array {
+
         return [
             new TwigFunction("bootstrapAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertDanger", [$this, "bootstrapAlertDangerFunction"], ["is_safe" => ["html"]]),
@@ -163,6 +164,7 @@ class AlertTwigExtension extends AbstractAlertTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     protected function getFunctions4(): array {
+
         return [
             new TwigFunction("bootstrapAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("bsAlertDark", [$this, "bootstrapAlertDarkFunction"], ["is_safe" => ["html"]]),
