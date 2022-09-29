@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve code quality
+
 ### [4.7.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.7.0) (2022-09-15)
 
 - Update Bootstrap to 5.2.0
