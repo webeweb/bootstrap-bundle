@@ -2,15 +2,8 @@
 <!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
-         backupGlobals="false"
-         backupStaticAttributes="false"
          bootstrap="Tests/bootstrap.php"
-         colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         processIsolation="false"
-         stopOnFailure="false">
+         colors="true">
     <filter>
         <whitelist>
             <directory>./</directory>
@@ -23,7 +16,7 @@
     </filter>
     <testsuites>
         <testsuite name="webeweb/bootstrap-bundle">
-            <directory suffix="Test.php">./Tests</directory>
+            <directory>./Tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
