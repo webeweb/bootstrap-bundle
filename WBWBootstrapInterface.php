@@ -100,5 +100,5 @@ interface WBWBootstrapInterface {
      *
      * @var string
      */
-    const BOOTSTRAP_VERSION_5 = "5.2.1";
+    const BOOTSTRAP_VERSION_5 = "5.2.2";
 }
