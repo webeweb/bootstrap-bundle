@@ -24,4 +24,14 @@ class WBWBootstrapTooltip {
     static tooltip($el) {
         $el.tooltip();
     }
+
+    /**
+     * Displays the tooltips inside an element.
+     *
+     * @param {jQuery} $el The element.
+     * @return {undefined}
+     */
+    static tooltips($el) {
+        WBWBootstrapTooltip.tooltip($el.find('[data-toggle="tooltip"]'));
+    }
 }
