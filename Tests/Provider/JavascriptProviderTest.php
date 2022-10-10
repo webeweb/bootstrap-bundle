@@ -30,7 +30,10 @@ class JavascriptProviderTest extends AbstractTestCase {
     public function testGetJavascript(): void {
 
         $exp = [
-            "wbwBootstrapNotify" => "@WBWBootstrap/assets/wbwBootstrapNotify.js.twig",
+            "wbwBootstrapNotify"    => "@WBWBootstrap/assets/wbwBootstrapNotify.js.twig",
+            "wbwBootstrapSelect"    => "@WBWBootstrap/assets/wbwBootstrapSelect.js.twig",
+            "wbwBootstrapTooltip"   => "@WBWBootstrap/assets/wbwBootstrapTooltip.js.twig",
+            "wbwBootstrapWysihtml5" => "@WBWBootstrap/assets/wbwBootstrapWysihtml5.js.twig",
         ];
 
         $obj = new JavascriptProvider();

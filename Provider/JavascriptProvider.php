@@ -34,7 +34,10 @@ class JavascriptProvider implements JavascriptProviderInterface {
     public function getJavascripts(): array {
 
         return [
-            "wbwBootstrapNotify" => "@WBWBootstrap/assets/wbwBootstrapNotify.js.twig",
+            "wbwBootstrapNotify"    => "@WBWBootstrap/assets/wbwBootstrapNotify.js.twig",
+            "wbwBootstrapSelect"    => "@WBWBootstrap/assets/wbwBootstrapSelect.js.twig",
+            "wbwBootstrapTooltip"   => "@WBWBootstrap/assets/wbwBootstrapTooltip.js.twig",
+            "wbwBootstrapWysihtml5" => "@WBWBootstrap/assets/wbwBootstrapWysihtml5.js.twig",
         ];
     }
 }

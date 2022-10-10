@@ -1,0 +1,43 @@
+{# Resources/assets/wbwBootstrapSummernote.js.twig #}
+/**
+ * Bootstrap WYSIHTML 5.
+ */
+class WBWBootstrapSummernote {
+
+    /**
+     * Get the options by default.
+     *
+     * @return {Object} Returns the options
+     */
+    static getOptionsDefault() {
+
+        return {
+            height : 256,
+            lang   : "{{ getContainerParameter("wbw_bootstrap.locales").summernote|default("en-US") }}",
+            toolbar: [
+                ["style", ["style"]],
+                ["font", ["bold", "underline", "clear"]],
+                ["fontname", ["fontname"]],
+                ["color", ["color"]],
+                ["para", ["ul", "ol", "paragraph"]],
+                ["table", ["table"]],
+                /* ["insert", ["link", "picture", "video"]], */
+                ["view", ["fullscreen", "codeview", "help"]],
+            ],
+        };
+    }
+
+    /**
+     * Displays a Summernote.
+     *
+     * @param {jQuery} $el The element.
+     * @param {Object} options The options.
+     * @return {undefined}
+     */
+    static summernote($el, options = null) {
+
+        options = null !== options ? options : WBWBootstrapSummernote.getOptionsDefault();
+
+        $el.summernote(options);
+    }
+}

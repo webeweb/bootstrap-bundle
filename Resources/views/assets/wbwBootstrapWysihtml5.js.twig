@@ -1,0 +1,36 @@
+{# Resources/assets/wbwBootstrapWysihtml5.js.twig #}
+/**
+ * Bootstrap WYSIHTML 5.
+ */
+class WBWBootstrapWysihtml5 {
+
+    /**
+     * Get the options by default.
+     *
+     * @return {Object} Returns the options
+     */
+    static getOptionsDefault() {
+
+        return {
+            toolbar: {
+                image: false,
+                link : false,
+            },
+            locale : "{{ getContainerParameter("wbw_bootstrap.locales").bootstrap_wysiwyg|default("en-US") }}",
+        };
+    }
+
+    /**
+     * Displays a WYSIHTML5.
+     *
+     * @param {jQuery} $el The element.
+     * @param {Object} options The options.
+     * @return {Editor} Returns the WYSIHTML 5
+     */
+    static wysihtml5($el, options = null) {
+
+        options = null !== options ? options : WBWBootstrapWysihtml5.getOptionsDefault();
+
+        return $el.wysihtml5(options);
+    }
+}

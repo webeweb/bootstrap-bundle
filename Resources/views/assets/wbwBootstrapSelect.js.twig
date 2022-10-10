@@ -1,0 +1,55 @@
+{# Resources/assets/wbwBootstrapSelect.js.twig #}
+/**
+ * Bootstrap select.
+ */
+class WBWBootstrapSelect {
+
+    /**
+     * Refresh a select picker.
+     *
+     * @param {jQuery} $el The element.
+     * @return {undefined}
+     */
+    static refresh($el) {
+        $el.selectpicker("refresh");
+    }
+
+    /**
+     * Displays a select picker.
+     *
+     * @param {jQuery} $el The element.
+     * @return {undefined}
+     */
+    static selectPicker($el) {
+
+        $el.selectpicker({
+            container: "body", // https://developer.snapappointments.com/bootstrap-select/examples/#container
+        });
+    }
+
+    /**
+     * Update a select picker.
+     * @param {jQuery} $el The element.
+     * @param {Object} data The data.
+     * @return {undefined}
+     */
+    static update($el, data) {
+
+        const displays = ["none", "list-item"];
+
+        const $select = $el;
+        const $option = $select.find("option:selected");
+
+        $select.find('option[value!=""]').css("display", displays[0]).prop("selected", false);
+
+        data.forEach((item) => {
+            $select.find('option[value="' + item.id + '"]').css("display", displays[1]);
+        });
+
+        if (displays[1] === $option.css("display")) {
+            $option.prop("selected", true);
+        } else {
+            $select.find("option:visible").first().prop("selected", true);
+        }
+    }
+}
