@@ -15,6 +15,7 @@ use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\Configuration;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
+use WBW\Bundle\BootstrapBundle\Provider\JavascriptProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\AlertTwigExtension;
@@ -101,6 +102,9 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
 
         $obj->load($this->configs, $this->containerBuilder);
 
+        // Providers
+        $this->assertInstanceOf(JavascriptProvider::class, $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME));
+
         // Twig extensions
         $this->assertInstanceOf(AssetsTwigExtension::class, $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME));
 
@@ -126,6 +130,30 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(FormButtonTwigExtension::class, $this->containerBuilder->get(FormButtonTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RoleLabelTwigExtension::class, $this->containerBuilder->get(RoleLabelTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(TableButtonTwigExtension::class, $this->containerBuilder->get(TableButtonTwigExtension::SERVICE_NAME));
+    }
+
+    /**
+     * Tests load()
+     *
+     * @return void
+     */
+    public function testLoadWithoutProviders(): void {
+
+        // Set the configs mock.
+        $this->configs[WBWBootstrapExtension::EXTENSION_ALIAS]["providers"] = false;
+
+        $obj = new WBWBootstrapExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+            $this->assertStringContainsString(JavascriptProvider::SERVICE_NAME, $ex->getMessage());
+        }
     }
 
     /**

@@ -48,10 +48,15 @@ class WBWBootstrapExtension extends Extension {
 
         $config = $this->processConfiguration($configuration, $configs);
 
+        if (true === $config["providers"]) {
+            $serviceLoader->load("providers.yml");
+        }
+
         if (true === $config["twig"]) {
             $serviceLoader->load("twig.yml");
         }
 
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "providers");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "version");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "plugins");

@@ -1,0 +1,8 @@
+# Resources/config/providers.yml
+services:
+
+    wbw.bootstrap.provider.javascript:
+        class:  WBW\Bundle\BootstrapBundle\Provider\JavascriptProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.javascript" }
