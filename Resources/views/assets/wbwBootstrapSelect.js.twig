@@ -5,6 +5,16 @@
 class WBWBootstrapSelect {
 
     /**
+     * Destroy a select picker.
+     *
+     * @param {jQuery} $el The element.
+     * @return {undefined}
+     */
+    static destroy($el) {
+        $el.selectpicker("destroy");
+    }
+
+    /**
      * Refresh a select picker.
      *
      * @param {jQuery} $el The element.
@@ -29,6 +39,7 @@ class WBWBootstrapSelect {
 
     /**
      * Update a select picker.
+     *
      * @param {jQuery} $el The element.
      * @param {Object} data The data.
      * @return {undefined}
