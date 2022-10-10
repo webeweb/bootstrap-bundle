@@ -5,22 +5,22 @@
 class WBWBootstrapNotify {
 
     /**
-     * Notify.
+     * Displays a notification.
      *
      * @param {String} message The message.
      * @param {String} icon The icon.
      * @param {String} type The type.
      * @param {Boolean} dismissible Dismissible ?
-     * @param {jQuery} $element The element.
-     * @returns {undefined}
+     * @param {jQuery} $el The element.
+     * @return {Notify} Returns the notification.
      */
-    static notify(message, icon, type, dismissible, $element = null) {
+    static notify(message, icon, type, dismissible, $el = null) {
 
         $.notify({
             message: message,
             icon   : icon,
         }, {
-            element      : null !== $element ? $element : "body",
+            element      : null !== $el ? $el : "body",
             type         : type,
             allow_dismiss: dismissible,
             newest_on_top: true,
@@ -38,46 +38,46 @@ class WBWBootstrapNotify {
     }
 
     /**
-     * Notify an error.
+     * Displays a notification "error".
      *
      * @param {String} message The message.
      * @param {jQuery} $el The element.
-     * @return {undefined}
+     * @return {Notify} Returns the notification.
      */
     static notifyError(message, $el = null) {
-        WBWBootstrapNotify.notify(message, "glyphicon glyphicon-remove-circle m-r-10", "alert-danger", true, $el);
+        return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-remove-circle m-r-10", "alert-danger", true, $el);
     }
 
     /**
-     * Notify an info.
+     * Displays a notification "info".
      *
      * @param {String} message The message.
      * @param {jQuery} $el The element.
-     * @return {undefined}
+     * @return {Notify} Returns the notification.
      */
     static notifyInfo(message, $el = null) {
-        WBWBootstrapNotify.notify(message, "glyphicon glyphicon-info-sign m-r-10", "alert-info", true, $el);
+        return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-info-sign m-r-10", "alert-info", true, $el);
     }
 
     /**
-     * Notify a success.
+     * Displays a notification "success".
      *
      * @param {String} message The message.
      * @param {jQuery} $el The element.
-     * @return {undefined}
+     * @return {Notify} Returns the notification.
      */
     static notifySuccess(message, $el = null) {
-        WBWBootstrapNotify.notify(message, "glyphicon glyphicon-ok-circle m-r-10", "alert-success", true, $el);
+        return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-ok-circle m-r-10", "alert-success", true, $el);
     }
 
     /**
-     * Notify a warning.
+     * Displays a notification "warning".
      *
      * @param {String} message The message.
      * @param {jQuery} $el The element.
-     * @return {undefined}
+     * @return {Notify} Returns the notification.
      */
     static notifyWarning(message, $el = null) {
-        WBWBootstrapNotify.notify(message, "glyphicon glyphicon-exclamation-sign m-r-10", "alert-warning", true, $el);
+        return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-exclamation-sign m-r-10", "alert-warning", true, $el);
     }
 }
