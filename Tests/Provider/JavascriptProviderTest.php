@@ -13,6 +13,8 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Provider;
 
 use WBW\Bundle\BootstrapBundle\Provider\JavascriptProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
+use WBW\Library\Symfony\Provider\ProviderInterface;
 
 /**
  * Javascript provider test.
@@ -49,5 +51,10 @@ class JavascriptProviderTest extends AbstractTestCase {
     public function test__construct(): void {
 
         $this->assertEquals("wbw.bootstrap.provider.javascript", JavascriptProvider::SERVICE_NAME);
+
+        $obj = new JavascriptProvider();
+
+        $this->assertInstanceOf(ProviderInterface::class, $obj);
+        $this->assertInstanceOf(JavascriptProviderInterface::class, $obj);
     }
 }
