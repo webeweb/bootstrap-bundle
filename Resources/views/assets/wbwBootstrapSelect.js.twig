@@ -1,4 +1,4 @@
-{# Resources/assets/wbwBootstrapSelect.js.twig #}
+{# Resources/views/assets/wbwBootstrapSelect.js.twig #}
 /*
  * This file is part of the bootstrap-bundle package.
  *
@@ -52,10 +52,10 @@ class WBWBootstrapSelect {
      * Update a select picker.
      *
      * @param {jQuery} $el The element.
-     * @param {Object} data The data.
+     * @param {Object} options The options.
      * @return {undefined}
      */
-    static update($el, data) {
+    static update($el, options) {
 
         const displays = ["none", "list-item"];
 
@@ -64,8 +64,8 @@ class WBWBootstrapSelect {
 
         $select.find('option[value!=""]').css("display", displays[0]).prop("selected", false);
 
-        data.forEach((item) => {
-            $select.find('option[value="' + item.id + '"]').css("display", displays[1]);
+        options.forEach((option) => {
+            $select.find('option[value="' + option.value + '"]').css("display", displays[1]);
         });
 
         if (displays[1] === $option.css("display")) {
@@ -73,5 +73,7 @@ class WBWBootstrapSelect {
         } else {
             $select.find("option:visible").first().prop("selected", true);
         }
+
+        WBWBootstrapSelect.refresh($select);
     }
 }
