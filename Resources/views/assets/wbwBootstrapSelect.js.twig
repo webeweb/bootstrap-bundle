@@ -8,31 +8,39 @@ class WBWBootstrapSelect {
      * Destroy a select picker.
      *
      * @param {jQuery} $el The element.
-     * @return {undefined}
+     * @return {jQuery} Returns the element.
      */
     static destroy($el) {
-        $el.selectpicker("destroy");
+
+        console.log({$el});
+
+        return $el.selectpicker("destroy");
     }
 
     /**
      * Refresh a select picker.
      *
      * @param {jQuery} $el The element.
-     * @return {undefined}
+     * @return {jQuery} Returns the element.
      */
     static refresh($el) {
-        $el.selectpicker("refresh");
+
+        console.log({$el});
+
+        return $el.selectpicker("refresh");
     }
 
     /**
      * Displays a select picker.
      *
      * @param {jQuery} $el The element.
-     * @return {undefined}
+     * @return {jQuery} Returns the element.
      */
     static selectPicker($el) {
 
-        $el.selectpicker({
+        console.log({$el});
+
+        return $el.selectpicker({
             container: "body", // https://developer.snapappointments.com/bootstrap-select/examples/#container
         });
     }
@@ -42,9 +50,11 @@ class WBWBootstrapSelect {
      *
      * @param {jQuery} $el The element.
      * @param {Object} options The options.
-     * @return {undefined}
+     * @return {jQuery} Returns the element.
      */
     static update($el, options) {
+
+        console.log({$el, options});
 
         const displays = ["none", "list-item"];
 
@@ -63,6 +73,6 @@ class WBWBootstrapSelect {
             $select.find("option:visible").first().prop("selected", true);
         }
 
-        WBWBootstrapSelect.refresh($select);
+        return WBWBootstrapSelect.refresh($select);
     }
 }

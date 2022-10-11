@@ -11,6 +11,9 @@ class WBWBootstrapTooltip {
      * @return {undefined}
      */
     static refresh($el) {
+
+        console.log({$el});
+
         $el.tooltip("destroy");
         $el.tooltip();
     }
@@ -22,6 +25,9 @@ class WBWBootstrapTooltip {
      * @return {undefined}
      */
     static tooltip($el) {
+
+        console.log({$el});
+
         $el.tooltip();
     }
 
@@ -32,6 +38,9 @@ class WBWBootstrapTooltip {
      * @return {undefined}
      */
     static tooltips($el) {
+
+        console.log({$el});
+
         WBWBootstrapTooltip.tooltip($el.find('[data-toggle="tooltip"]'));
     }
 }

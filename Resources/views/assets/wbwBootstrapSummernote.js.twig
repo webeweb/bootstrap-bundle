@@ -36,6 +36,8 @@ class WBWBootstrapSummernote {
      */
     static summernote($el, options = null) {
 
+        console.log({$el, options});
+
         options = null !== options ? options : WBWBootstrapSummernote.getOptionsDefault();
 
         $el.summernote(options);

@@ -29,6 +29,8 @@ class WBWBootstrapWysihtml5 {
      */
     static wysihtml5($el, options = null) {
 
+        console.log({$el, options});
+
         options = null !== options ? options : WBWBootstrapWysihtml5.getOptionsDefault();
 
         return $el.wysihtml5(options);
