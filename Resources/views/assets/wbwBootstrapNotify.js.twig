@@ -47,9 +47,6 @@ class WBWBootstrapNotify {
      * @return {Notify} Returns the notification.
      */
     static notifyError(message, $el = null) {
-
-        console.log({message, $el});
-
         return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-remove-circle m-r-10", "alert-danger", true, $el);
     }
 
@@ -61,9 +58,6 @@ class WBWBootstrapNotify {
      * @return {Notify} Returns the notification.
      */
     static notifyInfo(message, $el = null) {
-
-        console.log({message, $el});
-
         return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-info-sign m-r-10", "alert-info", true, $el);
     }
 
@@ -75,9 +69,6 @@ class WBWBootstrapNotify {
      * @return {Notify} Returns the notification.
      */
     static notifySuccess(message, $el = null) {
-
-        console.log({message, $el});
-
         return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-ok-circle m-r-10", "alert-success", true, $el);
     }
 
@@ -89,9 +80,6 @@ class WBWBootstrapNotify {
      * @return {Notify} Returns the notification.
      */
     static notifyWarning(message, $el = null) {
-
-        console.log({message, $el});
-
         return WBWBootstrapNotify.notify(message, "glyphicon glyphicon-exclamation-sign m-r-10", "alert-warning", true, $el);
     }
 }

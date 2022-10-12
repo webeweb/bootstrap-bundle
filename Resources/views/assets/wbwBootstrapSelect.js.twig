@@ -11,9 +11,6 @@ class WBWBootstrapSelect {
      * @return {jQuery} Returns the element.
      */
     static destroy($el) {
-
-        console.log({$el});
-
         return $el.selectpicker("destroy");
     }
 
@@ -24,9 +21,6 @@ class WBWBootstrapSelect {
      * @return {jQuery} Returns the element.
      */
     static refresh($el) {
-
-        console.log({$el});
-
         return $el.selectpicker("refresh");
     }
 
@@ -37,8 +31,6 @@ class WBWBootstrapSelect {
      * @return {jQuery} Returns the element.
      */
     static selectPicker($el) {
-
-        console.log({$el});
 
         return $el.selectpicker({
             container: "body", // https://developer.snapappointments.com/bootstrap-select/examples/#container
