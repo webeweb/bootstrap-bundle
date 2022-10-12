@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+### [4.9.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.9.0) (2022-10-12)
+
+- Add javascript Bootstrap notify
+- Add javascript Bootstrap select
+- Add javascript Bootstrap tooltip
+- Add javascript Bootstrap WYSIHTML 5
+- Add javascript Summernote
+- Update dependencies
+
 ### [4.8.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.8.0) (2022-10-04)
 
 - Improve code quality
