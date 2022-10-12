@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.9.3](https://github.com/webeweb/bootstrap-bundle/tree/v4.9.3) (2022-10-12)
+
+- Replace console.log() by console.debug()
+
 ### [4.9.2](https://github.com/webeweb/bootstrap-bundle/tree/v4.9.2) (2022-10-12)
 
 - Improve javascript
