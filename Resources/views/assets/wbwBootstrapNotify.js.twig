@@ -16,7 +16,7 @@ class WBWBootstrapNotify {
      */
     static notify(message, icon, type, dismissible, $el = null) {
 
-        console.log({message, icon, type, dismissible, $el});
+        console.debug({message, icon, type, dismissible, $el});
 
         $.notify({
             message: message,
