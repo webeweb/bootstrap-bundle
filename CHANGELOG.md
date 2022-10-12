@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.9.2](https://github.com/webeweb/bootstrap-bundle/tree/v4.9.2) (2022-10-12)
+
+- Improve javascript
+
 ### [4.9.1](https://github.com/webeweb/bootstrap-bundle/tree/v4.9.1) (2022-10-12)
 
 - Improve javascript
