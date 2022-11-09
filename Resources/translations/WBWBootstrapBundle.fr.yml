@@ -5,6 +5,7 @@ label:
     close:             "Fermer"
     delete:            "Supprimer"
     edit:              "Editer"
+    no_data_display:   "Aucune donnée à afficher"
     submit:            "Valider"
     support:           "Support"
     toggle_navigation: "Basculer la navigation"

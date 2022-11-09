@@ -68,6 +68,20 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
+     * Tests noDataDisplayAction()
+     *
+     * @return void
+     */
+    public function testNoDataDisplayAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/no-data-display");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
      * Tests workInProgressAction()
      *
      * @return void
