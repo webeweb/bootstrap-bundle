@@ -1,17 +1,17 @@
 # Resources/translations/WBWBootstrapBundle.en.yml
 label:
-    account_settings:  "Profil utilisateur"
-    cancel:            "Annuler"
-    close:             "Fermer"
-    delete:            "Supprimer"
-    edit:              "Editer"
-    no_data_display:   "Aucune donnée à afficher"
-    submit:            "Valider"
-    support:           "Support"
-    toggle_navigation: "Basculer la navigation"
-    unsubscribe:       "Se désinscrire"
-    with_best_regards: "Cordialement"
-    work_in_progress:  "En cours de développement !"
+    account_settings:   "Profil utilisateur"
+    cancel:             "Annuler"
+    close:              "Fermer"
+    delete:             "Supprimer"
+    edit:               "Editer"
+    no_data_to_display: "Aucune donnée à afficher"
+    submit:             "Valider"
+    support:            "Support"
+    toggle_navigation:  "Basculer la navigation"
+    unsubscribe:        "Se désinscrire"
+    with_best_regards:  "Cordialement"
+    work_in_progress:   "En cours de développement !"
 
 navigation:
     node:

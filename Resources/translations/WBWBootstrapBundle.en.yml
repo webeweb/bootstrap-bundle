@@ -1,17 +1,17 @@
 # Resources/translations/WBWBootstrapBundle.en.yml
 label:
-    account_settings:  "Account settings"
-    cancel:            "Cancel"
-    close:             "Close"
-    delete:            "Delete"
-    edit:              "Edit"
-    no_data_display:   "No data to display"
-    submit:            "Submit"
-    support:           "Support"
-    toggle_navigation: "Toggle navigation"
-    unsubscribe:       "Unsubscribe"
-    with_best_regards: "With best regards"
-    work_in_progress:  "Work in progress !"
+    account_settings:   "Account settings"
+    cancel:             "Cancel"
+    close:              "Close"
+    delete:             "Delete"
+    edit:               "Edit"
+    no_data_to_display: "No data to display"
+    submit:             "Submit"
+    support:            "Support"
+    toggle_navigation:  "Toggle navigation"
+    unsubscribe:        "Unsubscribe"
+    with_best_regards:  "With best regards"
+    work_in_progress:   "Work in progress !"
 
 navigation:
     node:

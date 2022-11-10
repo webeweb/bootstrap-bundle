@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Controller\AbstractController;
 class TestLayoutController extends AbstractController {
 
     /**
-     * Displays a flashbag page.
+     * Displays a flash bag template.
      *
      * @return Response Returns the response.
      */
@@ -47,16 +47,16 @@ class TestLayoutController extends AbstractController {
     }
 
     /**
-     * Displays a no data to display page.
+     * Displays a no data to display template.
      *
      * @return Response Returns the response.
      */
-    public function noDataDisplayAction(): Response {
-        return $this->render("@WBWBootstrap/layout/_no_data_display.html.twig");
+    public function noDataToDisplayAction(): Response {
+        return $this->render("@WBWBootstrap/layout/_no_data_to_display.html.twig");
     }
 
     /**
-     * Displays a work in progress page.
+     * Displays a work in progress template.
      *
      * @return Response Returns the response.
      */

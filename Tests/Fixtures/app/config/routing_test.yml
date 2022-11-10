@@ -9,9 +9,9 @@ wbw_bootstrap_flashbag:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
     methods: [ "GET" ]
 
-wbw_bootstrap_no-data-display:
-    path: "/no-data-display"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::noDataDisplayAction" }
+wbw_bootstrap_no_data_to_display:
+    path: "/no-data-to-display"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::noDataToDisplayAction" }
     methods: [ "GET" ]
 
 wbw_bootstrap_work_in_progress:
