@@ -27,14 +27,14 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function flashbagAction(): Response {
+    public function flashBagAction(): Response {
 
         $this->notifyDanger("Danger");
         $this->notifyInfo("Info");
         $this->notifySuccess("Success");
         $this->notifyWarning("Warning");
 
-        return $this->render("@WBWBootstrap/layout/_flashbag.html.twig");
+        return $this->render("@WBWBootstrap/layout/_flash_bag.html.twig");
     }
 
     /**

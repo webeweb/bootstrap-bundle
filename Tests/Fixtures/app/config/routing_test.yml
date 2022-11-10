@@ -4,9 +4,9 @@ wbw_bootstrap_layout:
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layoutAction" }
     methods: [ "GET" ]
 
-wbw_bootstrap_flashbag:
-    path: "/flashbag"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashbagAction" }
+wbw_bootstrap_flash_bag:
+    path: "/flash-bag"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashBagAction" }
     methods: [ "GET" ]
 
 wbw_bootstrap_no_data_to_display:

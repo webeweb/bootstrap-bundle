@@ -32,20 +32,20 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests flashbagAction()
+     * Tests flashBagAction()
      *
      * @return void
      */
-    public function testFlashbagAction(): void {
+    public function testFlashBagAction(): void {
 
         $client = $this->client;
 
-        $client->request("GET", "/flashbag");
+        $client->request("GET", "/flash-bag");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the response.
-        $res = file_get_contents(__DIR__ . "/LayoutControllerTest.testFlashbagAction.html.txt") . "    ";
+        $res = file_get_contents(__DIR__ . "/LayoutControllerTest.testFlashBagAction.html.txt") . "    ";
         $this->assertEquals($res, $client->getResponse()->getContent());
     }
 

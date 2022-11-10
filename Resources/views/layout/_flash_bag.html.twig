@@ -1,5 +1,5 @@
-{# Resources/views/layout/_flashbag.html.twig #}
-{% for key, messages in app.session.flashbag.all() %}
+{# Resources/views/layout/_flash_bag.html.twig #}
+{% for key, messages in app.session.flashBag.all() %}
     {% for message in messages %}
         <div class="alert alert-{{ key }} alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="{{ "label.close"|trans([], "WBWBootstrapBundle") }}"><span aria-hidden="true">&times;</span></button>
