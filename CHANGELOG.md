@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.11.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.11.0) (2022-11-10)
+
+- Improve Flash bag template
+
 ### [4.10.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.10.0) (2022-11-10)
 
 - Add no data to display template
