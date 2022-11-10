@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [4.10.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.10.0) (2022-11-10)
+
+- Add no data to display template
+- Improve work in progress template
+
 ### [4.9.3](https://github.com/webeweb/bootstrap-bundle/tree/v4.9.3) (2022-10-12)
 
 - Replace console.log() by console.debug()
