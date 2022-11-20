@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.12.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.12.0) (2022-11-20)
+
+- Update Bootstrap Icons to 1.10.2
+
 ### [4.11.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.11.0) (2022-11-10)
 
 - Improve Flash bag template
