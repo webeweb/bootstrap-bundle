@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.13.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.13.0) (2022-11-30)
+
+- Update Bootstrap to 5.2.3
+
 ### [4.12.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.12.0) (2022-11-20)
 
 - Update Bootstrap Icons to 1.10.2
