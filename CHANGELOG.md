@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.14.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.14.0) (2022-12-06)
+
+- Improve javascript provider
+
 ### [4.13.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.13.0) (2022-11-30)
 
 - Update Bootstrap to 5.2.3
