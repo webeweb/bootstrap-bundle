@@ -34,10 +34,10 @@ class JavascriptProvider implements JavascriptProviderInterface {
     public function getJavascripts(): array {
 
         return [
-            "wbwBootstrapNotify"    => "@WBWBootstrap/assets/wbwBootstrapNotify.js.twig",
-            "wbwBootstrapSelect"    => "@WBWBootstrap/assets/wbwBootstrapSelect.js.twig",
-            "wbwBootstrapTooltip"   => "@WBWBootstrap/assets/wbwBootstrapTooltip.js.twig",
-            "wbwBootstrapWysihtml5" => "@WBWBootstrap/assets/wbwBootstrapWysihtml5.js.twig",
+            "WBWBootstrapNotify"    => "@WBWBootstrap/assets/WBWBootstrapNotify.js.twig",
+            "WBWBootstrapSelect"    => "@WBWBootstrap/assets/WBWBootstrapSelect.js.twig",
+            "WBWBootstrapTooltip"   => "@WBWBootstrap/assets/WBWBootstrapTooltip.js.twig",
+            "WBWBootstrapWysihtml5" => "@WBWBootstrap/assets/WBWBootstrapWysihtml5.js.twig",
         ];
     }
 }
