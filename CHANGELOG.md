@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### [4.14.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.14.0) (2022-12-06)
 
 - Improve javascript provider
