@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
@@ -226,6 +227,8 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.bootstrap.twig.extension.component.dropdown", DropdownTwigExtension::SERVICE_NAME);
 
         $obj = new DropdownTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

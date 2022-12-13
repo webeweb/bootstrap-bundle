@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\CSS;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
@@ -1208,6 +1209,8 @@ class GridTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.bootstrap.twig.extension.css.grid", GridTwigExtension::SERVICE_NAME);
 
         $obj = new GridTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

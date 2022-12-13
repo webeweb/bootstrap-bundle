@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Utility;
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
@@ -137,6 +138,8 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.bootstrap.twig.extension.utility.role_label", RoleLabelTwigExtension::SERVICE_NAME);
 
         $obj = new RoleLabelTwigExtension($this->twigEnvironment, $this->translator, $this->labelTwigExtension);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->translator, $obj->getTranslator());

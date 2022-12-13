@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Twig\Extension\Component;
 
 use Symfony\Component\HttpFoundation\Request;
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
@@ -105,6 +106,8 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.bootstrap.twig.extension.component.breadcrumb", BreadcrumbTwigExtension::SERVICE_NAME);
 
         $obj = new BreadcrumbTwigExtension($this->twigEnvironment, $this->translator);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->translator, $obj->getTranslator());
