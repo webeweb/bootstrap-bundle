@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [4.15.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.15.0) (2022-12-20)
 
+- Add PHP 8.2 support
 - Improve unit tests
 
 ### [4.14.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.14.0) (2022-12-06)
