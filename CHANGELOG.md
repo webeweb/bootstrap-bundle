@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Improve code quality
 - Improve functional tests
 
 ### [4.15.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.15.0) (2022-12-20)
