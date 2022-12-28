@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
+use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\BootstrapBundle\Provider\JavascriptProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
@@ -41,11 +42,15 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         $client = $this->client;
 
-        $provider = new JavascriptProvider();
+        /** @var RouterInterface $router */
+        $router = static::$kernel->getContainer()->get("router");
 
+        $provider = new JavascriptProvider();
         foreach ($provider->getJavascripts() as $k => $v) {
 
-            $client->request("GET", "/twig/resource/js/$k");
+            $uri = $router->generate("wbw_core_twig_resource", ["name" => $k, "type" => "js"]);
+
+            $client->request("GET", $uri);
             $this->assertEquals(200, $client->getResponse()->getStatusCode(), $v);
             $this->assertEquals("application/javascript", $client->getResponse()->headers->get("Content-Type"), $v);
         }
