@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 
+use WBW\Bundle\BootstrapBundle\Provider\JavascriptProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
 use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 
@@ -29,6 +30,25 @@ class LayoutControllerTest extends AbstractWebTestCase {
         parent::setUpBeforeClass();
 
         static::$kernel->getContainer()->set("swiftmailer.mailer", null);
+    }
+
+    /**
+     * Tests assets
+     *
+     * @return void
+     */
+    public function testAssets(): void {
+
+        $client = $this->client;
+
+        $provider = new JavascriptProvider();
+
+        foreach ($provider->getJavascripts() as $k => $v) {
+
+            $client->request("GET", "/twig/resource/js/$k");
+            $this->assertEquals(200, $client->getResponse()->getStatusCode(), $v);
+            $this->assertEquals("application/javascript", $client->getResponse()->headers->get("Content-Type"), $v);
+        }
     }
 
     /**

@@ -1,4 +1,8 @@
 # Tests/Fixtures/app/config/routing_test.yml
+wbw_core_twig:
+    prefix:   "/twig"
+    resource: "@WBWCoreBundle/Resources/config/routing/twig.yml"
+
 wbw_bootstrap_layout:
     path: "/layout"
     defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layoutAction" }
