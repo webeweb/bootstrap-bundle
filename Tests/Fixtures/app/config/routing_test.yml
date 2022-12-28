@@ -3,22 +3,32 @@ wbw_core_twig:
     prefix:   "/twig"
     resource: "@WBWCoreBundle/Resources/config/routing/twig.yml"
 
+wbw_bootstrap_assets_javascripts:
+    path: "/assets/javascripts"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestViewsController::assetsJavascriptsAction" }
+    methods: [ "GET" ]
+
+wbw_bootstrap_assets_stylesheets:
+    path: "/assets/stylesheets"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestViewsController::assetsStylesheetsAction" }
+    methods: [ "GET" ]
+
 wbw_bootstrap_layout:
     path: "/layout"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::layoutAction" }
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestViewsController::layoutAction" }
     methods: [ "GET" ]
 
-wbw_bootstrap_flash_bag:
-    path: "/flash-bag"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::flashBagAction" }
+wbw_bootstrap_layout_flash_bag:
+    path: "/layout/flash-bag"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestViewsController::layoutFlashBagAction" }
     methods: [ "GET" ]
 
-wbw_bootstrap_no_data_to_display:
-    path: "/no-data-to-display"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::noDataToDisplayAction" }
+wbw_bootstrap_layout_no_data_to_display:
+    path: "/layout/no-data-to-display"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestViewsController::layoutNoDataToDisplayAction" }
     methods: [ "GET" ]
 
-wbw_bootstrap_work_in_progress:
-    path: "/work-in-progress"
-    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::workInProgressAction" }
+wbw_bootstrap_layout_work_in_progress:
+    path: "/layout/work-in-progress"
+    defaults: { _controller: "WBW\\Bundle\\BootstrapBundle\\Tests\\Fixtures\\Controller\\TestViewsController::layoutWorkInProgressAction" }
     methods: [ "GET" ]

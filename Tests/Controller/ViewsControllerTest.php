@@ -22,7 +22,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\BootstrapBundle\Tests\Controller
  */
-class LayoutControllerTest extends AbstractWebTestCase {
+class ViewsControllerTest extends AbstractWebTestCase {
 
     /**
      * {@inheritdoc}
@@ -34,13 +34,17 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests assets.
+     * Tests assetsJavascriptsAction()
      *
      * @return void
      */
-    public function testAssets(): void {
+    public function testAssetsJavascriptsAction(): void {
 
         $client = $this->client;
+
+        $client->request("GET", "/assets/javascripts");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         /** @var RouterInterface $router */
         $router = static::$kernel->getContainer()->get("router");
@@ -57,21 +61,17 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests flashBagAction()
+     * Tests assetsStylesheetsAction()
      *
      * @return void
      */
-    public function testFlashBagAction(): void {
+    public function testAssetsStylesheetsAction(): void {
 
         $client = $this->client;
 
-        $client->request("GET", "/flash-bag");
+        $client->request("GET", "/assets/stylesheets");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the response.
-        $res = file_get_contents(__DIR__ . "/LayoutControllerTest.testFlashBagAction.html.txt") . "    ";
-        $this->assertEquals($res, $client->getResponse()->getContent());
     }
 
     /**
@@ -93,29 +93,47 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests noDataDisplayAction()
+     * Tests layoutFlashBagAction()
      *
      * @return void
      */
-    public function testNoDataDisplayAction(): void {
+    public function testLayoutFlashBagAction(): void {
 
         $client = $this->client;
 
-        $client->request("GET", "/no-data-to-display");
+        $client->request("GET", "/layout/flash-bag");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+
+        // Check the response.
+        $res = file_get_contents(__DIR__ . "/ViewsControllerTest.testLayoutFlashBagAction.html.txt") . "    ";
+        $this->assertEquals($res, $client->getResponse()->getContent());
+    }
+
+    /**
+     * Tests layoutNoDataDisplayAction()
+     *
+     * @return void
+     */
+    public function testLayoutNoDataDisplayAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/layout/no-data-to-display");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }
 
     /**
-     * Tests workInProgressAction()
+     * Tests layoutWorkInProgressAction()
      *
      * @return void
      */
-    public function testWorkInProgressAction(): void {
+    public function testLayoutWorkInProgressAction(): void {
 
         $client = $this->client;
 
-        $client->request("GET", "/work-in-progress");
+        $client->request("GET", "/layout/work-in-progress");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }
