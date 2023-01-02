@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests;
 
-use Exception;
+use Throwable;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
@@ -54,7 +54,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
      * Tests listAssets()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testListAssets(): void {
 

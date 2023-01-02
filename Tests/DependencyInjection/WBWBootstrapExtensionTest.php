@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
-use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use Throwable;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\Configuration;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 use WBW\Bundle\BootstrapBundle\Provider\JavascriptProvider;
@@ -94,7 +94,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
      * Tests load()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testLoad(): void {
 
@@ -149,7 +149,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(JavascriptProvider::SERVICE_NAME, $ex->getMessage());
@@ -173,7 +173,7 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(AssetsTwigExtension::SERVICE_NAME, $ex->getMessage());
