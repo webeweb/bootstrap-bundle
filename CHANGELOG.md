@@ -1,10 +1,12 @@
 CHANGELOG
 =========
 
-### master
+### [4.16.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.16.0) (2023-01-02)
 
 - Improve code quality
 - Improve functional tests
+- Improve PHPDoc
+- Update LICENSE
 
 ### [4.15.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.15.0) (2022-12-20)
 
