@@ -35,7 +35,7 @@ Includes:
 - [Bootstrap Timepicker 0.5.2](https://github.com/jdewit/bootstrap-timepicker) (Bootstrap plug-in)
 - [Bootstrap WYSIWYG 0.3.3](https://github.com/Waxolunist/bootstrap3-wysihtml5-bower) (Bootstrap plug-in)
 - [Handlebars 1.3.0](https://github.com/handlebars-lang/handlebars.js) (Bootstrap WYSIWYG dependency)
-- [Moment.js 2.20.1](https://github.com/moment/moment/) (Bootstrap Daterangepicker dependency)
+- [Moment.js 2.20.1](https://github.com/moment/moment) (Bootstrap Daterangepicker dependency)
 - [Popper.js 1.15.0](https://github.com/popperjs/popper-core) (Bootstrap dependency)
 - [Summernote 0.8.20](https://github.com/summernote/summernote) (Bootstrap plug-in)
 - [WYSIHTML 0.4.15](https://github.com/Voog/wysihtml) (Bootstrap WYSIWYG dependency)
