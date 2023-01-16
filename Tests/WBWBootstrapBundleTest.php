@@ -14,7 +14,6 @@ namespace WBW\Bundle\BootstrapBundle\Tests;
 use Throwable;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
 use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 use WBW\Library\Symfony\Helper\AssetsHelper;
 
@@ -51,6 +50,16 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
     }
 
     /**
+     * Tests getTranslationDomain()
+     *
+     * @return void
+     */
+    public function testGetTranslationDomain(): void {
+
+        $this->assertEquals(WBWBootstrapBundle::TRANSLATION_DOMAIN, WBWBootstrapBundle::getTranslationDomain());
+    }
+
+    /**
      * Tests listAssets()
      *
      * @return void
@@ -64,9 +73,9 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
         $this->assertCount(21, $res);
 
         $i = -1;
-        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_4, ".") . "\.zip$/", $res[++$i]);
-        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapInterface::BOOTSTRAP_VERSION_5, ".") . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapBundle::BOOTSTRAP_VERSION_3, ".") . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapBundle::BOOTSTRAP_VERSION_4, ".") . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/bootstrap-" . preg_quote(WBWBootstrapBundle::BOOTSTRAP_VERSION_5, ".") . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap-colorpicker-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap-datepicker-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/bootstrap-daterangepicker-.*\.zip$/", $res[++$i]);
@@ -85,5 +94,29 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
         $this->assertRegExp("/popper\.js-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/summernote-.*\.zip$/", $res[++$i]);
         $this->assertRegExp("/wysihtml-.*\.zip$/", $res[++$i]);
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct(): void {
+
+        $this->assertEquals("danger", WBWBootstrapBundle::BOOTSTRAP_TYPE_DANGER);
+        $this->assertEquals("dark", WBWBootstrapBundle::BOOTSTRAP_TYPE_DARK);
+        $this->assertEquals("default", WBWBootstrapBundle::BOOTSTRAP_TYPE_DEFAULT);
+        $this->assertEquals("info", WBWBootstrapBundle::BOOTSTRAP_TYPE_INFO);
+        $this->assertEquals("light", WBWBootstrapBundle::BOOTSTRAP_TYPE_LIGHT);
+        $this->assertEquals("primary", WBWBootstrapBundle::BOOTSTRAP_TYPE_PRIMARY);
+        $this->assertEquals("secondary", WBWBootstrapBundle::BOOTSTRAP_TYPE_SECONDARY);
+        $this->assertEquals("success", WBWBootstrapBundle::BOOTSTRAP_TYPE_SUCCESS);
+        $this->assertEquals("warning", WBWBootstrapBundle::BOOTSTRAP_TYPE_WARNING);
+
+        $this->assertEquals("3.4.1", WBWBootstrapBundle::BOOTSTRAP_VERSION_3);
+        $this->assertEquals("4.6.2", WBWBootstrapBundle::BOOTSTRAP_VERSION_4);
+        $this->assertEquals("5.2.3", WBWBootstrapBundle::BOOTSTRAP_VERSION_5);
+
+        $this->assertEquals("WBWBootstrapBundle", WBWBootstrapBundle::TRANSLATION_DOMAIN);
     }
 }

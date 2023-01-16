@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\AlertInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 
 /**
  * Alert interface test.
@@ -30,9 +30,9 @@ class AlertInterfaceTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_DARK, AlertInterface::ALERT_TYPE_DARK);
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_LIGHT, AlertInterface::ALERT_TYPE_LIGHT);
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_PRIMARY, AlertInterface::ALERT_TYPE_PRIMARY);
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_SECONDARY, AlertInterface::ALERT_TYPE_SECONDARY);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_DARK, AlertInterface::ALERT_TYPE_DARK);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_LIGHT, AlertInterface::ALERT_TYPE_LIGHT);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_PRIMARY, AlertInterface::ALERT_TYPE_PRIMARY);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_SECONDARY, AlertInterface::ALERT_TYPE_SECONDARY);
     }
 }

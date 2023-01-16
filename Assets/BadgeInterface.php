@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 
 /**
@@ -27,28 +27,28 @@ interface BadgeInterface extends BaseBadgeInterface {
      *
      * @var string
      */
-    const BADGE_TYPE_DARK = WBWBootstrapInterface::BOOTSTRAP_TYPE_DARK;
+    const BADGE_TYPE_DARK = WBWBootstrapBundle::BOOTSTRAP_TYPE_DARK;
 
     /**
      * Badge type "light".
      *
      * @var string
      */
-    const BADGE_TYPE_LIGHT = WBWBootstrapInterface::BOOTSTRAP_TYPE_LIGHT;
+    const BADGE_TYPE_LIGHT = WBWBootstrapBundle::BOOTSTRAP_TYPE_LIGHT;
 
     /**
      * Badge type "primary".
      *
      * @var string
      */
-    const BADGE_TYPE_PRIMARY = WBWBootstrapInterface::BOOTSTRAP_TYPE_PRIMARY;
+    const BADGE_TYPE_PRIMARY = WBWBootstrapBundle::BOOTSTRAP_TYPE_PRIMARY;
 
     /**
      * Badge type "secondary".
      *
      * @var string
      */
-    const BADGE_TYPE_SECONDARY = WBWBootstrapInterface::BOOTSTRAP_TYPE_SECONDARY;
+    const BADGE_TYPE_SECONDARY = WBWBootstrapBundle::BOOTSTRAP_TYPE_SECONDARY;
 
     /**
      * Get the pill.

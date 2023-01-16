@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 
 /**
@@ -27,28 +27,28 @@ interface AlertInterface extends BaseAlertInterface {
      *
      * @var string
      */
-    const ALERT_TYPE_DARK = WBWBootstrapInterface::BOOTSTRAP_TYPE_DARK;
+    const ALERT_TYPE_DARK = WBWBootstrapBundle::BOOTSTRAP_TYPE_DARK;
 
     /**
      * Alert type "light".
      *
      * @var string
      */
-    const ALERT_TYPE_LIGHT = WBWBootstrapInterface::BOOTSTRAP_TYPE_LIGHT;
+    const ALERT_TYPE_LIGHT = WBWBootstrapBundle::BOOTSTRAP_TYPE_LIGHT;
 
     /**
      * Alert type "primary".
      *
      * @var string
      */
-    const ALERT_TYPE_PRIMARY = WBWBootstrapInterface::BOOTSTRAP_TYPE_PRIMARY;
+    const ALERT_TYPE_PRIMARY = WBWBootstrapBundle::BOOTSTRAP_TYPE_PRIMARY;
 
     /**
      * Alert type "secondary".
      *
      * @var string
      */
-    const ALERT_TYPE_SECONDARY = WBWBootstrapInterface::BOOTSTRAP_TYPE_SECONDARY;
+    const ALERT_TYPE_SECONDARY = WBWBootstrapBundle::BOOTSTRAP_TYPE_SECONDARY;
 
     /**
      * Get the dismissible.

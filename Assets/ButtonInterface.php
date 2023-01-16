@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Assets;
 
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 
 /**
@@ -48,21 +48,21 @@ interface ButtonInterface extends BaseButtonInterface {
      *
      * @var string
      */
-    const BUTTON_TYPE_DARK = WBWBootstrapInterface::BOOTSTRAP_TYPE_DARK;
+    const BUTTON_TYPE_DARK = WBWBootstrapBundle::BOOTSTRAP_TYPE_DARK;
 
     /**
      * Button type "default".
      *
      * @var string
      */
-    const BUTTON_TYPE_DEFAULT = WBWBootstrapInterface::BOOTSTRAP_TYPE_DEFAULT;
+    const BUTTON_TYPE_DEFAULT = WBWBootstrapBundle::BOOTSTRAP_TYPE_DEFAULT;
 
     /**
      * Button type "light".
      *
      * @var string
      */
-    const BUTTON_TYPE_LIGHT = WBWBootstrapInterface::BOOTSTRAP_TYPE_LIGHT;
+    const BUTTON_TYPE_LIGHT = WBWBootstrapBundle::BOOTSTRAP_TYPE_LIGHT;
 
     /**
      * Button type "link".
@@ -76,14 +76,14 @@ interface ButtonInterface extends BaseButtonInterface {
      *
      * @var string
      */
-    const BUTTON_TYPE_PRIMARY = WBWBootstrapInterface::BOOTSTRAP_TYPE_PRIMARY;
+    const BUTTON_TYPE_PRIMARY = WBWBootstrapBundle::BOOTSTRAP_TYPE_PRIMARY;
 
     /**
      * Button type "secondary".
      *
      * @var string
      */
-    const BUTTON_TYPE_SECONDARY = WBWBootstrapInterface::BOOTSTRAP_TYPE_SECONDARY;
+    const BUTTON_TYPE_SECONDARY = WBWBootstrapBundle::BOOTSTRAP_TYPE_SECONDARY;
 
     /**
      * Get the active.

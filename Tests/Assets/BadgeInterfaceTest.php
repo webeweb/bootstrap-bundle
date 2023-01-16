@@ -13,7 +13,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Assets;
 
 use WBW\Bundle\BootstrapBundle\Assets\BadgeInterface;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 
 /**
  * Badge interface test.
@@ -30,9 +30,9 @@ class BadgeInterfaceTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_DARK, BadgeInterface::BADGE_TYPE_DARK);
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_LIGHT, BadgeInterface::BADGE_TYPE_LIGHT);
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_PRIMARY, BadgeInterface::BADGE_TYPE_PRIMARY);
-        $this->assertEquals(WBWBootstrapInterface::BOOTSTRAP_TYPE_SECONDARY, BadgeInterface::BADGE_TYPE_SECONDARY);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_DARK, BadgeInterface::BADGE_TYPE_DARK);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_LIGHT, BadgeInterface::BADGE_TYPE_LIGHT);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_PRIMARY, BadgeInterface::BADGE_TYPE_PRIMARY);
+        $this->assertEquals(WBWBootstrapBundle::BOOTSTRAP_TYPE_SECONDARY, BadgeInterface::BADGE_TYPE_SECONDARY);
     }
 }

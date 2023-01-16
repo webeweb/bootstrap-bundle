@@ -12,7 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Component;
 
 use Twig\TwigFunction;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
@@ -38,7 +38,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @return string Returns the Bootstrap label "danger".
      */
     public function bootstrapLabelDangerFunction(array $args = []): string {
-        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_TYPE_DANGER);
+        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapBundle::BOOTSTRAP_TYPE_DANGER);
     }
 
     /**
@@ -48,7 +48,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @return string Returns the Bootstrap label "default".
      */
     public function bootstrapLabelDefaultFunction(array $args = []): string {
-        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_TYPE_DEFAULT);
+        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapBundle::BOOTSTRAP_TYPE_DEFAULT);
     }
 
     /**
@@ -58,7 +58,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @return string Returns the Bootstrap label "info".
      */
     public function bootstrapLabelInfoFunction(array $args = []): string {
-        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_TYPE_INFO);
+        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapBundle::BOOTSTRAP_TYPE_INFO);
     }
 
     /**
@@ -68,7 +68,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @return string Returns the Bootstrap label "primary".
      */
     public function bootstrapLabelPrimaryFunction(array $args = []): string {
-        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_TYPE_PRIMARY);
+        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapBundle::BOOTSTRAP_TYPE_PRIMARY);
     }
 
     /**
@@ -78,7 +78,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @return string Returns the Bootstrap label "success".
      */
     public function bootstrapLabelSuccessFunction(array $args = []): string {
-        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_TYPE_SUCCESS);
+        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapBundle::BOOTSTRAP_TYPE_SUCCESS);
     }
 
     /**
@@ -88,7 +88,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
      * @return string Returns the Bootstrap label "warning".
      */
     public function bootstrapLabelWarningFunction(array $args = []): string {
-        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapInterface::BOOTSTRAP_TYPE_WARNING);
+        return $this->bootstrapLabel(ArrayHelper::get($args, "content"), "label-" . WBWBootstrapBundle::BOOTSTRAP_TYPE_WARNING);
     }
 
     /**

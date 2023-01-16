@@ -15,6 +15,7 @@ use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtensionTrait;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
@@ -70,7 +71,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function bootstrapRowButtonDeleteFunction(array $args = []): string {
 
-        $txt = $this->getTranslator()->trans("label.delete", [], "WBWBootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.delete", [], WBWBootstrapBundle::getTranslationDomain());
         $but = $this->getButtonTwigExtension()->bootstrapButtonDangerFunction([
             "title" => $txt,
             "icon"  => "g:trash",
@@ -87,7 +88,7 @@ class TableButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function bootstrapRowButtonEditFunction(array $args = []): string {
 
-        $txt = $this->getTranslator()->trans("label.edit", [], "WBWBootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.edit", [], WBWBootstrapBundle::getTranslationDomain());
         $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction([
             "title" => $txt,
             "icon"  => "g:pencil",

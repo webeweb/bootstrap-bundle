@@ -15,6 +15,7 @@ use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtensionTrait;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
@@ -56,7 +57,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function bootstrapFormButtonCancelFunction(array $args = []): string {
 
-        $txt = $this->getTranslator()->trans("label.cancel", [], "WBWBootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.cancel", [], WBWBootstrapBundle::getTranslationDomain());
         $but = $this->getButtonTwigExtension()->bootstrapButtonDefaultFunction([
             "content" => $txt,
             "title"   => $txt,
@@ -88,7 +89,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
      */
     public function bootstrapFormButtonSubmitFunction(): string {
 
-        $txt = $this->getTranslator()->trans("label.submit", [], "WBWBootstrapBundle");
+        $txt = $this->getTranslator()->trans("label.submit", [], WBWBootstrapBundle::getTranslationDomain());
         $but = $this->getButtonTwigExtension()->bootstrapButtonPrimaryFunction([
             "content" => $txt,
             "title"   => $txt,

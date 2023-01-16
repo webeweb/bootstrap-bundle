@@ -14,7 +14,7 @@ namespace WBW\Bundle\BootstrapBundle\Tests\Controller;
 use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\BootstrapBundle\Provider\JavascriptProvider;
 use WBW\Bundle\BootstrapBundle\Tests\AbstractWebTestCase;
-use WBW\Bundle\BootstrapBundle\WBWBootstrapInterface;
+use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 
 /**
  * Views controller test.
@@ -88,8 +88,8 @@ class ViewsControllerTest extends AbstractWebTestCase {
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
         // Check the Bootstrap version.
-        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
-        $this->assertStringContainsString(WBWBootstrapInterface::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
+        $this->assertStringContainsString(WBWBootstrapBundle::BOOTSTRAP_VERSION_4 . "/css", $client->getResponse()->getContent());
+        $this->assertStringContainsString(WBWBootstrapBundle::BOOTSTRAP_VERSION_4 . "/js", $client->getResponse()->getContent());
     }
 
     /**
