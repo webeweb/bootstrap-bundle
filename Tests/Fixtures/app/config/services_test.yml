@@ -2,10 +2,10 @@
 services:
 
     WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestViewsController:
-        alias: "wbw.bootstrap.tests.fixtures.controller.test_views"
+        alias:  "wbw.bootstrap.tests.fixtures.controller.test_views"
         public: true
 
     wbw.bootstrap.tests.fixtures.controller.test_views:
-        class:  WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestViewsController
+        class: WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestViewsController
         calls:
             - [ "setContainer", [ "@service_container" ] ]
