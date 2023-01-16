@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [4.17.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.17.0) (2023-01-16)
+
+- Add TRANSLATION_DOMAIN constant
+- Add getTranslationDomain()
+- Merge Boostrap interface into Bootstrap bundle class
+
 ### [4.16.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.16.0) (2023-01-02)
 
 - Improve code quality
