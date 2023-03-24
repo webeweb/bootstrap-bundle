@@ -8,7 +8,7 @@ bootstrap-bundle
 [![License](https://img.shields.io/packagist/l/webeweb/bootstrap-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/bootstrap-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/bootstrap-bundle)
 
-Integrate Bootstrap theme with Symfony 2 and more.
+Integrate Bootstrap theme with Symfony 4 and more.
 
 `bootstrap-bundle` eases the use of Bootstrap to display components in your
 Symfony application by providing Twig extensions and PHP objects to do the heavy
