@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\BootstrapBundle\Controller;
 
+use Throwable;
 use WBW\Bundle\CoreBundle\Controller\AbstractController as BaseController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
@@ -31,9 +32,12 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function notifyDanger(string $content): NotificationEvent {
+
         $notification = NotificationFactory::newDangerNotification($content);
+
         return $this->notify(NotificationEvent::DANGER, $notification);
     }
 
@@ -42,9 +46,12 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function notifyInfo(string $content): NotificationEvent {
+
         $notification = NotificationFactory::newInfoNotification($content);
+
         return $this->notify(NotificationEvent::INFO, $notification);
     }
 
@@ -53,9 +60,12 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function notifySuccess(string $content): NotificationEvent {
+
         $notification = NotificationFactory::newSuccessNotification($content);
+
         return $this->notify(NotificationEvent::SUCCESS, $notification);
     }
 
@@ -64,9 +74,12 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return NotificationEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function notifyWarning(string $content): NotificationEvent {
+
         $notification = NotificationFactory::newWarningNotification($content);
+
         return $this->notify(NotificationEvent::WARNING, $notification);
     }
 
@@ -75,9 +88,12 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return ToastEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function toastDanger(string $content): ToastEvent {
+
         $toast = ToastFactory::newDangerToast($content);
+
         return $this->toast(ToastEvent::DANGER, $toast);
     }
 
@@ -86,9 +102,12 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return ToastEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function toastInfo(string $content): ToastEvent {
+
         $toast = ToastFactory::newInfoToast($content);
+
         return $this->toast(ToastEvent::INFO, $toast);
     }
 
@@ -97,9 +116,12 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return ToastEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function toastSuccess(string $content): ToastEvent {
+
         $toast = ToastFactory::newSuccessToast($content);
+
         return $this->toast(ToastEvent::SUCCESS, $toast);
     }
 
@@ -108,9 +130,13 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $content The content.
      * @return ToastEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function toastWarning(string $content): ToastEvent {
+
         $toast = ToastFactory::newWarningToast($content);
+
         return $this->toast(ToastEvent::WARNING, $toast);
+
     }
 }
