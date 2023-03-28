@@ -1,4 +1,4 @@
-# Tests/Fixtures/app/config/security_test.yml
+# Tests/Fixtures/app/config/security_test.old.yml
 security:
 
     firewalls:
@@ -6,7 +6,7 @@ security:
             pattern:  "^/(_(profiler|wdt)|css|images|js)/"
             security: false
         main:
-            lazy: ~
+            anonymous: ~
 
     providers:
         in_memory:

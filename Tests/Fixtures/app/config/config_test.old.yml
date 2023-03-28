@@ -1,0 +1,119 @@
+# Tests/Fixtures/app/config/config_test.old.yml
+imports:
+    - { resource: "security_test.old.yml" }
+    - { resource: "services_test.yml" }
+
+parameters:
+    locale: "en"
+
+framework:
+    assets:         true
+    default_locale: "%locale%"
+    form:           true
+    router:
+        resource:            "%kernel.project_dir%/config/routing_test.yml"
+        strict_requirements: true
+    secret:         "ThisTokenIsNotSoSecretChangeIt"
+    session:
+        storage_id: "session.storage.mock_file"
+    test:           true
+    translator: { fallbacks: [ "%locale%" ] }
+    validation:
+        enabled: false
+
+# Doctrine configuration
+doctrine:
+    dbal:
+        driver: "pdo_sqlite"
+        path:   "%kernel.project_dir%/var/test.sqlite"
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping:                true
+        naming_strategy:             "doctrine.orm.naming_strategy.underscore"
+        mappings:
+            WBWCoreBundle:
+                type:   "xml"
+                dir:    "Tests/Fixtures/app/config/doctrine"
+                prefix: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Model"
+
+# Monolog configuration
+monolog:
+    handlers:
+        main:
+            level: "debug"
+            path:  "%kernel.logs_dir%/test.log"
+            type:  "stream"
+
+# Twig configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+# Core configuration
+wbw_core:
+    commands:        true
+    event_listeners: true
+    providers:       true
+    security:        true
+    twig:            true
+    quote:
+        worlds_wisdom: true
+    plugins:
+        - "animate_css"
+        - "chart_js"
+        - "clippy_js"
+        - "font_awesome"
+        - "full_calendar"
+        - "jquery"
+        - "jquery_context_menu"
+        - "jquery_easy_autocomplete"
+        - "jquery_fancy_box"
+        - "jquery_input_mask"
+        - "jquery_select2"
+        - "leaflet"
+        - "leaflet_color_markers"
+        - "leaflet_marker_cluster"
+        - "light_gallery"
+        - "material_design_color_palette"
+        - "material_design_hierarchical_display"
+        - "material_design_iconic_font"
+        - "meteocons"
+        - "simplemde_markdown_editor"
+        - "sweet_alert"
+        - "sweet_alert2"
+        - "syntax_highlighter"
+        - "twemoji"
+        - "typed_js"
+        - "wait_me"
+    locales:
+        full_calendar:  "fr"
+        jquery_select2: "fr"
+    themes:
+        syntax_highlighter: "Default"
+    brushes:
+        syntax_highlighter:
+            - "AppleScript"
+            - "AS3"
+            - "Bash"
+            - "ColdFusion"
+            - "Cpp"
+            - "CSharp"
+            - "Css"
+            - "Delphi"
+            - "Diff"
+            - "Erlang"
+            - "Groovy"
+            - "Java"
+            - "JavaFX"
+            - "JScript"
+            - "Perl"
+            - "Php"
+            - "Plain"
+            - "PowerShell"
+            - "Python"
+            - "Ruby"
+            - "Sass"
+            - "Scala"
+            - "Sql"
+            - "Vb"
+            - "Xml"

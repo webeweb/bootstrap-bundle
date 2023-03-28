@@ -15,8 +15,11 @@ framework:
         strict_requirements: true
     secret:         "ThisTokenIsNotSoSecretChangeIt"
     session:
-        storage_id: "session.storage.mock_file"
-    test:           ~
+        handler_id:         null
+        cookie_secure:      "auto"
+        cookie_samesite:    "lax"
+        storage_factory_id: "session.storage.factory.mock_file"
+    test:           true
     translator: { fallbacks: [ "%locale%" ] }
     validation:
         enabled: false

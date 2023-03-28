@@ -8,4 +8,6 @@ services:
     wbw.bootstrap.tests.fixtures.controller.test_views:
         class: WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller\TestViewsController
         calls:
-            - [ "setContainer", [ "@service_container" ] ]
+            - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
+        tags:
+            - { name: "container.service_subscriber" }
