@@ -137,6 +137,5 @@ abstract class AbstractController extends BaseController {
         $toast = ToastFactory::newWarningToast($content);
 
         return $this->toast(ToastEvent::WARNING, $toast);
-
     }
 }
