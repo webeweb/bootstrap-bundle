@@ -12,6 +12,7 @@
 namespace WBW\Bundle\BootstrapBundle\Tests\Fixtures\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
+use Throwable;
 use WBW\Bundle\BootstrapBundle\Controller\AbstractController;
 
 /**
@@ -53,6 +54,7 @@ class TestViewsController extends AbstractController {
      * Render layout/_flash_bag.html.twig
      *
      * @return Response Returns the response.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function layoutFlashBagAction(): Response {
 
