@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Symfony 6.x support
+- Improve code quality
+- Update dependencies
+
 ### [4.17.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.17.0) (2023-01-16)
 
 - Add TRANSLATION_DOMAIN constant
