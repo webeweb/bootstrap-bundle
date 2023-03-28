@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [4.18.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.18.0) (2023-03-28)
 
 - Add Symfony 6.x support
 - Improve code quality
