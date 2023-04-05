@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\BootstrapBundle\Tests\DependencyInjection;
 
-use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use Throwable;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\Configuration;
 use WBW\Bundle\BootstrapBundle\DependencyInjection\WBWBootstrapExtension;
@@ -60,7 +59,6 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         // Set a configs array mock.
         $this->configs = [
             WBWBootstrapExtension::EXTENSION_ALIAS => [
-                "twig"    => true,
                 "version" => 4,
             ],
         ];
@@ -130,54 +128,6 @@ class WBWBootstrapExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(FormButtonTwigExtension::class, $this->containerBuilder->get(FormButtonTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RoleLabelTwigExtension::class, $this->containerBuilder->get(RoleLabelTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(TableButtonTwigExtension::class, $this->containerBuilder->get(TableButtonTwigExtension::SERVICE_NAME));
-    }
-
-    /**
-     * Tests load()
-     *
-     * @return void
-     */
-    public function testLoadWithoutProviders(): void {
-
-        // Set the configs mock.
-        $this->configs[WBWBootstrapExtension::EXTENSION_ALIAS]["providers"] = false;
-
-        $obj = new WBWBootstrapExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        try {
-
-            $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME);
-        } catch (Throwable $ex) {
-
-            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(JavascriptProvider::SERVICE_NAME, $ex->getMessage());
-        }
-    }
-
-    /**
-     * Tests load()
-     *
-     * @return void
-     */
-    public function testLoadWithoutTwig(): void {
-
-        // Set the configs mock.
-        $this->configs[WBWBootstrapExtension::EXTENSION_ALIAS]["twig"] = false;
-
-        $obj = new WBWBootstrapExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        try {
-
-            $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME);
-        } catch (Throwable $ex) {
-
-            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(AssetsTwigExtension::SERVICE_NAME, $ex->getMessage());
-        }
     }
 
     /**
