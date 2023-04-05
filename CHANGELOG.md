@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [4.19.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.19.0) (2023-04-05)
+
+- Remove unneeded configuration parameters
+- Set Twig extensions as private
+
 ### [4.18.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.18.0) (2023-03-28)
 
 - Add Symfony 6.x support
