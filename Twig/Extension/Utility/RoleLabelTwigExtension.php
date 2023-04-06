@@ -13,11 +13,11 @@ namespace WBW\Bundle\BootstrapBundle\Twig\Extension\Utility;
 
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtensionTrait;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 
 /**
  * Role label Twig extension.
@@ -40,10 +40,10 @@ class RoleLabelTwigExtension extends AbstractUtilityTwigExtension {
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param BaseTranslatorInterface $translator The translator.
+     * @param TranslatorInterface $translator The translator.
      * @param LabelTwigExtension $extension The label component Twig extension.
      */
-    public function __construct(Environment $twigEnvironment, $translator, LabelTwigExtension $extension) {
+    public function __construct(Environment $twigEnvironment, TranslatorInterface $translator, LabelTwigExtension $extension) {
         parent::__construct($twigEnvironment, $translator);
 
         $this->setLabelTwigExtension($extension);
