@@ -49,71 +49,24 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
-# Core configuration
-wbw_core:
-    commands:        true
-    event_listeners: true
-    providers:       true
-    security:        true
-    twig:            true
-    quote:
-        worlds_wisdom: true
-    plugins:
-        - "animate_css"
-        - "chart_js"
-        - "clippy_js"
-        - "font_awesome"
-        - "full_calendar"
-        - "jquery"
-        - "jquery_context_menu"
-        - "jquery_easy_autocomplete"
-        - "jquery_fancy_box"
-        - "jquery_input_mask"
-        - "jquery_select2"
-        - "leaflet"
-        - "leaflet_color_markers"
-        - "leaflet_marker_cluster"
-        - "light_gallery"
-        - "material_design_color_palette"
-        - "material_design_hierarchical_display"
-        - "material_design_iconic_font"
-        - "meteocons"
-        - "simplemde_markdown_editor"
-        - "sweet_alert"
-        - "sweet_alert2"
-        - "syntax_highlighter"
-        - "twemoji"
-        - "typed_js"
-        - "wait_me"
+# Bootstrap configuration
+wbw_bootstrap:
     locales:
-        full_calendar:  "fr"
-        jquery_select2: "fr"
-    themes:
-        syntax_highlighter: "Default"
-    brushes:
-        syntax_highlighter:
-            - "AppleScript"
-            - "AS3"
-            - "Bash"
-            - "ColdFusion"
-            - "Cpp"
-            - "CSharp"
-            - "Css"
-            - "Delphi"
-            - "Diff"
-            - "Erlang"
-            - "Groovy"
-            - "Java"
-            - "JavaFX"
-            - "JScript"
-            - "Perl"
-            - "Php"
-            - "Plain"
-            - "PowerShell"
-            - "Python"
-            - "Ruby"
-            - "Sass"
-            - "Scala"
-            - "Sql"
-            - "Vb"
-            - "Xml"
+        bootstrap_datepicker: "fr"
+        bootstrap_markdown:   "fr"
+        bootstrap_select:     "fr_FR"
+        bootstrap_wysiwyg:    "fr-FR"
+        summernote:           "fr-FR"
+    plugins:
+        - "bootstrap_colorpicker"
+        - "bootstrap_datepicker"
+        - "bootstrap_daterangepicker"
+        - "bootstrap_markdown"
+        - "bootstrap_notify"
+        - "bootstrap_select"
+        - "bootstrap_slider"
+        - "bootstrap_social"
+        - "bootstrap_tagsinput"
+        - "bootstrap_timepicker"
+        - "bootstrap_wysiwyg"
+        - "summernote"
