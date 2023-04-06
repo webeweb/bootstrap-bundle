@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.19.1](https://github.com/webeweb/bootstrap-bundle/tree/v4.19.1) (2023-04-06)
+
+- Replace Base translator interface
+
 ### [4.19.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.19.0) (2023-04-05)
 
 - Remove unneeded configuration parameters
