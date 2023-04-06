@@ -30,11 +30,6 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:                true
         naming_strategy:             "doctrine.orm.naming_strategy.underscore"
-        mappings:
-            WBWCoreBundle:
-                type:   "xml"
-                dir:    "Tests/Fixtures/app/config/doctrine"
-                prefix: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Model"
 
 # Monolog configuration
 monolog:
