@@ -41,6 +41,7 @@ class TestKernel extends AbstractKernel {
      */
     public function registerContainerConfiguration(LoaderInterface $loader): void {
 
+        // TODO: Remove when dropping support for Symfony 5
         if (6 <= Kernel::MAJOR_VERSION) {
             parent::registerContainerConfiguration($loader);
             return;
