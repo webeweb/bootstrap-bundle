@@ -38,13 +38,10 @@ jobs:
             -   name: "Calculates"
                 run:  php phpmetrics.phar --git --junit=build/logs/junit.xml --report-html=build/logs/ . --exclude-dirs=Tests/
 
-            -   name: "Compress artifact"
-                run:  |
-                      cd build/logs
-                      zip -r ../report.zip * -x junit.xml
-
             -   name: "Upload artifact"
                 uses: actions/upload-artifact@v3
                 with:
                     name: "metrics"
-                    path: build/report.zip
+                    path: |
+                          build/logs
+                          !build/logs/junit.xml
