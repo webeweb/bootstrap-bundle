@@ -1,7 +1,7 @@
 {
     "name": "webeweb/bootstrap-bundle",
     "type": "symfony-bundle",
-    "description": "Integrate Bootstrap theme with Symfony 4 and more",
+    "description": "Integrate Bootstrap theme with Symfony 2 and more",
     "keywords": [
         "bootstrap",
         "bundle",
