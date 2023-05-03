@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 class PrimaryAlertTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

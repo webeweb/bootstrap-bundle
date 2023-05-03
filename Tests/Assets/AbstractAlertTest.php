@@ -27,7 +27,7 @@ use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 class AbstractAlertTest extends AbstractTestCase {
 
     /**
-     * Tests enumTypes()
+     * Test enumTypes()
      *
      * @return void
      */
@@ -47,7 +47,7 @@ class AbstractAlertTest extends AbstractTestCase {
     }
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -68,7 +68,7 @@ class AbstractAlertTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setDismissible()
+     * Test setDismissible()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class AbstractAlertTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

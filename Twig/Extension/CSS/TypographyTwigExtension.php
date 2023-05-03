@@ -31,7 +31,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.css.typography";
 
     /**
-     * Displays a Bootstrap bold text.
+     * Display a Bootstrap bold text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap bold text.
@@ -41,7 +41,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap deleted text.
+     * Display a Bootstrap deleted text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap deleted text.
@@ -51,7 +51,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Boostrap heading 1.
+     * Display a Boostrap heading 1.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 1.
@@ -61,7 +61,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap heading 2.
+     * Display a Bootstrap heading 2.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 2.
@@ -71,7 +71,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap heading 3.
+     * Display a Bootstrap heading 3.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 3.
@@ -81,7 +81,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap heading 4.
+     * Display a Bootstrap heading 4.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 4.
@@ -91,7 +91,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a  heading 5.
+     * Display a  heading 5.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 5.
@@ -101,7 +101,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap heading 6.
+     * Display a Bootstrap heading 6.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap heading 6.
@@ -111,7 +111,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap inserted text.
+     * Display a Bootstrap inserted text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap inserted text.
@@ -121,7 +121,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap italic text.
+     * Display a Bootstrap italic text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap italic text.
@@ -131,7 +131,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap marked text.
+     * Display a Bootstrap marked text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap marked text.
@@ -141,7 +141,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap small text.
+     * Display a Bootstrap small text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap small text.
@@ -151,7 +151,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap strike through text.
+     * Display a Bootstrap strike through text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap strike through text.
@@ -161,7 +161,7 @@ class TypographyTwigExtension extends AbstractTypographyTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap underlined text.
+     * Display a Bootstrap underlined text.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap underlined text.

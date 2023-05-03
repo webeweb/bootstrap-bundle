@@ -46,7 +46,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBreadcrumbsFunction()
+     * Test bootstrapBreadcrumbsFunction()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -97,7 +97,7 @@ class BreadcrumbTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

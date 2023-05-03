@@ -49,7 +49,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderAnimated()
+     * Test renderAnimated()
      *
      * @return void
      */
@@ -60,7 +60,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderContent()
+     * Test renderContent()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderStriped()
+     * Test renderStriped()
      *
      * @return void
      */
@@ -82,7 +82,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderStyle()
+     * Test renderStyle()
      *
      * @return void
      */
@@ -93,7 +93,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderType()
+     * Test renderType()
      *
      * @return void
      */

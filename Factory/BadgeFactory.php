@@ -32,7 +32,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class BadgeFactory {
 
     /**
-     * Creates a new danger badge.
+     * Create a new danger badge.
      *
      * @return BadgeInterface Returns the danger badge.
      */
@@ -41,7 +41,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new dark badge.
+     * Create a new dark badge.
      *
      * @return BadgeInterface Returns the dark badge.
      */
@@ -50,7 +50,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new default badge.
+     * Create a new default badge.
      *
      * @return BadgeInterface Returns the default badge.
      */
@@ -59,7 +59,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new info badge.
+     * Create a new info badge.
      *
      * @return BadgeInterface Returns the info badge.
      */
@@ -68,7 +68,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new light badge.
+     * Create a new light badge.
      *
      * @return BadgeInterface Returns the light badge.
      */
@@ -77,7 +77,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new primary badge.
+     * Create a new primary badge.
      *
      * @return BadgeInterface Returns the primary badge.
      */
@@ -86,7 +86,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new secondary badge.
+     * Create a new secondary badge.
      *
      * @return BadgeInterface Returns the secondary badge.
      */
@@ -95,7 +95,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new success badge.
+     * Create a new success badge.
      *
      * @return BadgeInterface Returns the success badge.
      */
@@ -104,7 +104,7 @@ class BadgeFactory {
     }
 
     /**
-     * Creates a new warning badge.
+     * Create a new warning badge.
      *
      * @return BadgeInterface Returns the warning badge.
      */
@@ -113,7 +113,7 @@ class BadgeFactory {
     }
 
     /**
-     * Parses a badge.
+     * Parse a badge.
      *
      * @param BadgeInterface $badge The badge.
      * @param array $args The arguments.

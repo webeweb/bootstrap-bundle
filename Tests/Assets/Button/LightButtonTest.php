@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 class LightButtonTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

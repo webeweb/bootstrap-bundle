@@ -26,7 +26,7 @@ use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 class JsonSerializer {
 
     /**
-     * Serializes an alert.
+     * Serialize an alert.
      *
      * @param AlertInterface $model The model.
      * @return array Returns the serialized model.
@@ -42,7 +42,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a badge.
+     * Serialize a badge.
      *
      * @param BadgeInterface $model The model.
      * @return array Returns the serialized model.
@@ -58,7 +58,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a button.
+     * Serialize a button.
      *
      * @param ButtonInterface $model The model.
      * @return array Returns the serialized model.
@@ -80,7 +80,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a progress bar.
+     * Serialize a progress bar.
      *
      * @param ProgressBarInterface $model The model.
      * @return array Returns the serialized model.

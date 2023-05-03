@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class TableButtonTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setTableButtonTwigExtension()
+     * Test setTableButtonTwigExtension()
      *
      * @return void
      */

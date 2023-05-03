@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class GlyphiconTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setGlyphiconTwigExtension()
+     * Test setGlyphiconTwigExtension()
      *
      * @return void
      */

@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap nav item.
+     * Display a Bootstrap nav item.
      *
      * @param string|null $item The item.
      * @return string Returns the Bootstrap nav item.
@@ -33,7 +33,7 @@ abstract class AbstractNavTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap navs.
+     * Display a Bootstrap navs.
      *
      * @param array $items The items.
      * @param string|null $class The class.

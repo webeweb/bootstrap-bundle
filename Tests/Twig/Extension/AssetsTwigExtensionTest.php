@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension;
 class AssetsTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapRenderIconFunction()
+     * Test bootstrapRenderIconFunction()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -52,7 +52,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -112,7 +112,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -125,7 +125,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

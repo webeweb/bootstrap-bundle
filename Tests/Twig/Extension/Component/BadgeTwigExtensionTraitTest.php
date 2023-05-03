@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class BadgeTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setBadgeTwigExtension()
+     * Test setBadgeTwigExtension()
      *
      * @return void
      */

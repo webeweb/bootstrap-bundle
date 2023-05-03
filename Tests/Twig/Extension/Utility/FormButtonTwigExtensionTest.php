@@ -44,7 +44,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapFormButtonCancelFunction()
+     * Test bootstrapFormButtonCancelFunction()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapFormButtonDefaultFunction()
+     * Test bootstrapFormButtonDefaultFunction()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapFormButtonSubmitFunction()
+     * Test bootstrapFormButtonSubmitFunction()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -136,7 +136,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

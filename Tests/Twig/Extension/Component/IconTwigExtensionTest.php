@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\IconTwigExtension;
 class IconTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapIconFunction()
+     * Test bootstrapIconFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapIconFunction()
+     * Test bootstrapIconFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -69,7 +69,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class IconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

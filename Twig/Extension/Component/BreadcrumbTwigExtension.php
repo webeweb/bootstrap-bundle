@@ -33,7 +33,7 @@ class BreadcrumbTwigExtension extends AbstractBreadcrumbTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.breadcrumb";
 
     /**
-     * Displays a Bootstrap breadcrumbs.
+     * Display a Bootstrap breadcrumbs.
      *
      * @param NavigationTree $tree The tree.
      * @param Request $request The request.

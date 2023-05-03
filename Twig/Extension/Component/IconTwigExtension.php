@@ -31,7 +31,7 @@ class IconTwigExtension extends AbstractIconTwigExtension implements IconRendere
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.icon";
 
     /**
-     * Displays a Bootstrap icon.
+     * Display a Bootstrap icon.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap icon.

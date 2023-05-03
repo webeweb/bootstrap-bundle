@@ -27,7 +27,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\BadgeTwigExtension;
 class BadgeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapBadgeDangerFunction()
+     * Test bootstrapBadgeDangerFunction()
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeDarkFunction()
+     * Test bootstrapBadgeDarkFunction()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeFunction()
+     * Test bootstrapBadgeFunction()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeFunction()
+     * Test bootstrapBadgeFunction()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeInfoFunction()
+     * Test bootstrapBadgeInfoFunction()
      *
      * @return void
      */
@@ -107,7 +107,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeLightFunction()
+     * Test bootstrapBadgeLightFunction()
      *
      * @return void
      */
@@ -123,7 +123,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeLinkFilter()
+     * Test bootstrapBadgeLinkFilter()
      *
      * @return void
      */
@@ -139,7 +139,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgePrimaryFunction()
+     * Test bootstrapBadgePrimaryFunction()
      *
      * @return void
      */
@@ -155,7 +155,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeSecondaryFunction()
+     * Test bootstrapBadgeSecondaryFunction()
      *
      * @return void
      */
@@ -171,7 +171,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeSuccessFunction()
+     * Test bootstrapBadgeSuccessFunction()
      *
      * @return void
      */
@@ -187,7 +187,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBadgeWarningFunction()
+     * Test bootstrapBadgeWarningFunction()
      *
      * @return void
      */
@@ -203,7 +203,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -228,7 +228,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -323,7 +323,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -349,7 +349,7 @@ class BadgeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

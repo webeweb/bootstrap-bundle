@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap bold text.
+     * Display a Bootstrap bold text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap bold text.
@@ -33,7 +33,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap deleted text.
+     * Display a Bootstrap deleted text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap deleted text.
@@ -43,7 +43,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap heading.
+     * Display a Bootstrap heading.
      *
      * @param int|null $size The size.
      * @param string|null $content The content.
@@ -69,7 +69,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap inserted text.
+     * Display a Bootstrap inserted text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap inserted text.
@@ -79,7 +79,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap italic text.
+     * Display a Bootstrap italic text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap italic text.
@@ -89,7 +89,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap marked text.
+     * Display a Bootstrap marked text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap marked text.
@@ -99,7 +99,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap small text.
+     * Display a Bootstrap small text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap small text.
@@ -109,7 +109,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap strike through text.
+     * Display a Bootstrap strike through text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap strike through text.
@@ -119,7 +119,7 @@ abstract class AbstractTypographyTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap underlined text.
+     * Display a Bootstrap underlined text.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap underlined text.

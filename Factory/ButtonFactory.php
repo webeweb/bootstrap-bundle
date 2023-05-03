@@ -33,7 +33,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class ButtonFactory {
 
     /**
-     * Creates a new danger button.
+     * Create a new danger button.
      *
      * @return ButtonInterface Returns the danger button.
      */
@@ -42,7 +42,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new dark button.
+     * Create a new dark button.
      *
      * @return ButtonInterface Returns the dark button.
      */
@@ -51,7 +51,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new default button.
+     * Create a new default button.
      *
      * @return ButtonInterface Returns the default button.
      */
@@ -60,7 +60,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new info button.
+     * Create a new info button.
      *
      * @return ButtonInterface Returns the info button.
      */
@@ -69,7 +69,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new light button.
+     * Create a new light button.
      *
      * @return ButtonInterface Returns the light button.
      */
@@ -78,7 +78,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new link button.
+     * Create a new link button.
      *
      * @return ButtonInterface Returns the link button.
      */
@@ -87,7 +87,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new primary button.
+     * Create a new primary button.
      *
      * @return ButtonInterface Returns the primary button.
      */
@@ -96,7 +96,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new secondary button.
+     * Create a new secondary button.
      *
      * @return ButtonInterface Returns the secondary button.
      */
@@ -105,7 +105,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new success button.
+     * Create a new success button.
      *
      * @return ButtonInterface Returns the success button.
      */
@@ -114,7 +114,7 @@ class ButtonFactory {
     }
 
     /**
-     * Creates a new warning button.
+     * Create a new warning button.
      *
      * @return ButtonInterface Returns the warning button.
      */
@@ -123,7 +123,7 @@ class ButtonFactory {
     }
 
     /**
-     * Parses a button.
+     * Parse a button.
      *
      * @param ButtonInterface $button The button.
      * @param array $args The arguments.

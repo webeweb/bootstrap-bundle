@@ -27,7 +27,7 @@ use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 class AbstractBadgeTest extends AbstractTestCase {
 
     /**
-     * Tests enumTypes()
+     * Test enumTypes()
      *
      * @return void
      */
@@ -47,7 +47,7 @@ class AbstractBadgeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -68,7 +68,7 @@ class AbstractBadgeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPill()
+     * Test setPill()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class AbstractBadgeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

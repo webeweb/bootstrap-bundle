@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\ProgressBarInterface as BaseProgressBarInterface;
 class ProgressBarInterfaceTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

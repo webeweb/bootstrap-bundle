@@ -40,7 +40,7 @@ abstract class AbstractAlert extends BaseAlert implements AlertInterface {
     }
 
     /**
-     * Enumerates the types.
+     * Enumerate the types.
      *
      * @return string[] Returns the types.
      */

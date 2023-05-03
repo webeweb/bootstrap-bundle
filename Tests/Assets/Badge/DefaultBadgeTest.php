@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\AbstractTestCase;
 class DefaultBadgeTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

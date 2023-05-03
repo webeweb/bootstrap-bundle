@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class NavigationNodeSettingsTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

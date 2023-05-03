@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap basic block.
+     * Display a Bootstrap basic block.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap basic block.
@@ -33,7 +33,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap inline.
+     * Display a Bootstrap inline.
      *
      * @param string|null $content The inline content.
      * @return string  Returns the Bootstrap inline.
@@ -43,7 +43,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap sample output.
+     * Display a Bootstrap sample output.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap sample output.
@@ -53,7 +53,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap user input.
+     * Display a Bootstrap user input.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap user input.
@@ -63,7 +63,7 @@ abstract class AbstractCodeTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap variable.
+     * Display a Bootstrap variable.
      *
      * @param string|null $content The content.
      * @return string  Returns the Bootstrap variable.

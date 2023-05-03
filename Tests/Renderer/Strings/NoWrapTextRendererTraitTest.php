@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Renderer\Strings\TestNoWrapTextRen
 class NoWrapTextRendererTraitTest extends AbstractTestCase {
 
     /**
-     * Tests renderNoWrapText()
+     * Test renderNoWrapText()
      *
      * @return void
      */

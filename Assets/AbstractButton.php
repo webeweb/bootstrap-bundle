@@ -69,7 +69,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     }
 
     /**
-     * Enumerates the sizes.
+     * Enumerate the sizes.
      *
      * @return string[] Returns the sizes.
      */
@@ -83,7 +83,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     }
 
     /**
-     * Enumerates the types.
+     * Enumerate the types.
      *
      * @return string[] Returns the types.
      */

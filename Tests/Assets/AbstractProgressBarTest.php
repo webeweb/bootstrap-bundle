@@ -25,7 +25,7 @@ use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 class AbstractProgressBarTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setAnimated()
+     * Test setAnimated()
      *
      * @return void
      */
@@ -64,7 +64,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setStriped()
+     * Test setStriped()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class AbstractProgressBarTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

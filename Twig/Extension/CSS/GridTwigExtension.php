@@ -31,7 +31,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.css.grid";
 
     /**
-     * Displays a Bootstrap grid.
+     * Display a Bootstrap grid.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid.
@@ -49,7 +49,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap grid with offset.
+     * Display a Bootstrap grid with offset.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with offset.
@@ -59,7 +59,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap grid with pull.
+     * Display a Bootstrap grid with pull.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with pull.
@@ -69,7 +69,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap grid with push.
+     * Display a Bootstrap grid with push.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with push.
@@ -79,7 +79,7 @@ class GridTwigExtension extends AbstractGridTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap grid with stacked-to-horizontal.
+     * Display a Bootstrap grid with stacked-to-horizontal.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap grid with stacked-to-horizontal.

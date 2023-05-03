@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class TypographyTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setTypographyTwigExtension()
+     * Test setTypographyTwigExtension()
      *
      * @return void
      */

@@ -50,7 +50,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap form button "cancel".
+     * Display a Bootstrap form button "cancel".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap form button "cancel".
@@ -68,7 +68,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap form buttons "default".
+     * Display a Bootstrap form buttons "default".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap form button "default".
@@ -83,7 +83,7 @@ class FormButtonTwigExtension extends AbstractUtilityTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap form button "submit".
+     * Display a Bootstrap form button "submit".
      *
      * @return string Returns the Bootstrap form button "sSubmit".
      */

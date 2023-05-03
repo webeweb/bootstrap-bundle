@@ -25,7 +25,7 @@ use WBW\Library\Symfony\Provider\ProviderInterface;
 class JavascriptProviderTest extends AbstractTestCase {
 
     /**
-     * Tests getJavascripts()
+     * Test getJavascripts()
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class JavascriptProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

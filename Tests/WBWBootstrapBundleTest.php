@@ -26,7 +26,7 @@ use WBW\Library\Symfony\Helper\AssetsHelper;
 class WBWBootstrapBundleTest extends AbstractTestCase {
 
     /**
-     * Tests getAssetsRelativeDirectory()
+     * Test getAssetsRelativeDirectory()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getContainerExtension()
+     * Test getContainerExtension()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getTranslationDomain()
+     * Test getTranslationDomain()
      *
      * @return void
      */
@@ -60,7 +60,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests listAssets()
+     * Test listAssets()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -97,7 +97,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

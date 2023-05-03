@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\BadgeInterface as BaseBadgeInterface;
 class InfoBadgeTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

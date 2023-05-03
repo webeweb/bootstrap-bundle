@@ -23,7 +23,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class FOSUserNavigationFactory {
 
     /**
-     * Creates the FOSUser breadcrumb nodes with Glyphicon icons.
+     * Create the FOSUser breadcrumb nodes with Glyphicon icons.
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */

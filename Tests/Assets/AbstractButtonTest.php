@@ -27,7 +27,7 @@ use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 class AbstractButtonTest extends AbstractTestCase {
 
     /**
-     * Tests enumSizes()
+     * Test enumSizes()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumTypes()
+     * Test enumTypes()
      *
      * @return void
      */
@@ -64,7 +64,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setBlock()
+     * Test setBlock()
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setData()
+     * Test setData()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setDisabled()
+     * Test setDisabled()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setOutline()
+     * Test setOutline()
      *
      * @return void
      */
@@ -142,7 +142,7 @@ class AbstractButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -57,7 +57,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonGroupBasicFunction()
+     * Test bootstrapButtonGroupBasicFunction()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonGroupToolbarFunction()
+     * Test bootstrapButtonGroupToolbarFunction()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -135,7 +135,7 @@ class ButtonGroupTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

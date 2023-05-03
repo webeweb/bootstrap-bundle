@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractGlyphiconTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap glyphicon.
+     * Display a Bootstrap glyphicon.
      *
      * @param string|null $name The name.
      * @param string|null $style The style.

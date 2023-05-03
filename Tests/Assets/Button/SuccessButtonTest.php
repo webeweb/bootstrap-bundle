@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\ButtonInterface as BaseButtonInterface;
 class SuccessButtonTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

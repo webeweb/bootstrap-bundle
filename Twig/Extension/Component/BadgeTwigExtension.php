@@ -33,7 +33,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.badge";
 
     /**
-     * Displays a Bootstrap badge "danger".
+     * Display a Bootstrap badge "danger".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "danger".
@@ -43,7 +43,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge "dark".
+     * Display a Bootstrap badge "dark".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "dark".
@@ -53,7 +53,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge.
+     * Display a Bootstrap badge.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge.
@@ -63,7 +63,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge "info".
+     * Display a Bootstrap badge "info".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "info".
@@ -73,7 +73,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge "light".
+     * Display a Bootstrap badge "light".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "light".
@@ -83,7 +83,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Transforms a Bootstrap badge into an anchor.
+     * Transform a Bootstrap badge into an anchor.
      *
      * @param string $button The button.
      * @param string $href The href attribute.
@@ -99,7 +99,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge "primary".
+     * Display a Bootstrap badge "primary".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "primary".
@@ -109,7 +109,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge "secondary".
+     * Display a Bootstrap badge "secondary".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "secondary".
@@ -119,7 +119,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge "success".
+     * Display a Bootstrap badge "success".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "success".
@@ -129,7 +129,7 @@ class BadgeTwigExtension extends AbstractBadgeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap badge "warning".
+     * Display a Bootstrap badge "warning".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap badge "warning".

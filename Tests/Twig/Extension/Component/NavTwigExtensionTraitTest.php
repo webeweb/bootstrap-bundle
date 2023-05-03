@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class NavTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setNavTwigExtension()
+     * Test setNavTwigExtension()
      *
      * @return void
      */

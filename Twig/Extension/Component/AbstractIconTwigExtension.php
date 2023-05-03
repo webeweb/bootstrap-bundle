@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractIconTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap icon.
+     * Display a Bootstrap icon.
      *
      * @param string|null $name The name.
      * @param string|null $style The style.

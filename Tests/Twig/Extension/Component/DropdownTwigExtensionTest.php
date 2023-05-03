@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\DropdownTwigExtension;
 class DropdownTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapDropdownButtonFunction()
+     * Test bootstrapDropdownButtonFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownButtonFunction()
+     * Test bootstrapDropdownButtonFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownButtonFunction()
+     * Test bootstrapDropdownButtonFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownButtonFunction()
+     * Test bootstrapDropdownButtonFunction()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownButtonFunction()
+     * Test bootstrapDropdownButtonFunction()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownButtonFunction()
+     * Test bootstrapDropdownButtonFunction()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownDividerFunction()
+     * Test bootstrapDropdownDividerFunction()
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownHeaderFunction()
+     * Test bootstrapDropdownHeaderFunction()
      *
      * @return void
      */
@@ -145,7 +145,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDropdownHeaderFunction()
+     * Test bootstrapDropdownHeaderFunction()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -173,7 +173,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -218,7 +218,7 @@ class DropdownTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

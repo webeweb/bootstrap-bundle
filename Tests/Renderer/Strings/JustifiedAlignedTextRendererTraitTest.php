@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Renderer\Strings\TestJustifiedAlig
 class JustifiedAlignedTextRendererTraitTest extends AbstractTestCase {
 
     /**
-     * Tests renderJustifiedAlignedText()
+     * Test renderJustifiedAlignedText()
      *
      * @return void
      */

@@ -32,7 +32,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.progress_bar";
 
     /**
-     * Displays a Bootstrap multiple bars.
+     * Display a Bootstrap multiple bars.
      *
      * @param string[] $progressBars The progress bars.
      * @return string Returns the Bootstrap multiple bars.
@@ -43,7 +43,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap progress bar "basic".
+     * Display a Bootstrap progress bar "basic".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "basic".
@@ -53,7 +53,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap progress bar "danger".
+     * Display a Bootstrap progress bar "danger".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "danger".
@@ -63,7 +63,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap progress bar "info".
+     * Display a Bootstrap progress bar "info".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "info".
@@ -73,7 +73,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap progress bar "success".
+     * Display a Bootstrap progress bar "success".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "success".
@@ -83,7 +83,7 @@ class ProgressBarTwigExtension extends AbstractProgressBarTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap progress bar "warning".
+     * Display a Bootstrap progress bar "warning".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap progress bar "warning".

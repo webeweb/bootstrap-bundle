@@ -34,7 +34,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/assets/_javascripts.html.twig
+     * Test Resources/views/assets/_javascripts.html.twig
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/assets/_stylesheets.html.twig
+     * Test Resources/views/assets/_stylesheets.html.twig
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/layout.html.twig
+     * Test Resources/views/layout.html.twig
      *
      * @return void
      */
@@ -93,7 +93,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/layout/_flash_bag.html.twig
+     * Test Resources/views/layout/_flash_bag.html.twig
      *
      * @return void
      */
@@ -111,7 +111,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/layout/_no_data_to_display.html.twig
+     * Test Resources/views/layout/_no_data_to_display.html.twig
      *
      * @return void
      */
@@ -125,7 +125,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/layout/_work_in_progress.html.twig
+     * Test Resources/views/layout/_work_in_progress.html.twig
      *
      * @return void
      */

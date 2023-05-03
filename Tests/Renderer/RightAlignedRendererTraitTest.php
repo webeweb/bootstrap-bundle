@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Renderer\TestRightAlignedRendererT
 class RightAlignedRendererTraitTest extends AbstractTestCase {
 
     /**
-     * Tests renderRightAligned()
+     * Test renderRightAligned()
      *
      * @return void
      */

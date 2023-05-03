@@ -63,7 +63,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDangerButton()
+     * Test newDangerButton()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDarkButton()
+     * Test newDarkButton()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDefaultButton()
+     * Test newDefaultButton()
      *
      * @return void
      */
@@ -99,7 +99,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newInfoButton()
+     * Test newInfoButton()
      *
      * @return void
      */
@@ -111,7 +111,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newLightButton()
+     * Test newLightButton()
      *
      * @return void
      */
@@ -123,7 +123,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newLinkButton()
+     * Test newLinkButton()
      *
      * @return void
      */
@@ -135,7 +135,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newPrimaryButton()
+     * Test newPrimaryButton()
      *
      * @return void
      */
@@ -147,7 +147,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newSecondaryButton()
+     * Test newSecondaryButton()
      *
      * @return void
      */
@@ -159,7 +159,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newSuccessButton()
+     * Test newSuccessButton()
      *
      * @return void
      */
@@ -171,7 +171,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newWarningButton()
+     * Test newWarningButton()
      *
      * @return void
      */
@@ -183,7 +183,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDangerButton()
+     * Test parseDangerButton()
      *
      * @return void
      */
@@ -205,7 +205,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDarkButton()
+     * Test parseDarkButton()
      *
      * @return void
      */
@@ -227,7 +227,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDefaultButton()
+     * Test parseDefaultButton()
      *
      * @return void
      */
@@ -249,7 +249,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseInfoButton()
+     * Test parseInfoButton()
      *
      * @return void
      */
@@ -271,7 +271,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseLightButton()
+     * Test parseLightButton()
      *
      * @return void
      */
@@ -293,7 +293,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseLinkButton()
+     * Test parseLinkButton()
      *
      * @return void
      */
@@ -315,7 +315,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parsePrimaryButton()
+     * Test parsePrimaryButton()
      *
      * @return void
      */
@@ -337,7 +337,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseSecondaryButton()
+     * Test parseSecondaryButton()
      *
      * @return void
      */
@@ -359,7 +359,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseSuccessButton()
+     * Test parseSuccessButton()
      *
      * @return void
      */
@@ -381,7 +381,7 @@ class ButtonFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseWarningButton()
+     * Test parseWarningButton()
      *
      * @return void
      */

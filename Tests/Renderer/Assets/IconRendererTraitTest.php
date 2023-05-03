@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Renderer\Assets\TestIconRendererTr
 class IconRendererTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the renderIcon() methods.
+     * Test the renderIcon() methods.
      *
      * @return void
      */

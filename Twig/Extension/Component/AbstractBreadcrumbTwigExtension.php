@@ -43,7 +43,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap breadcrumb.
+     * Display a Bootstrap breadcrumb.
      *
      * @param AbstractNavigationNode $node The node.
      * @param bool|null $last Last node ?.
@@ -60,7 +60,7 @@ abstract class AbstractBreadcrumbTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap breadcrumbs.
+     * Display a Bootstrap breadcrumbs.
      *
      * @param NavigationTree $tree The tree.
      * @return string Returns the Bootstrap breadcrumbs.

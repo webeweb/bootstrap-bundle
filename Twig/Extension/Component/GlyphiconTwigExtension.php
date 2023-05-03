@@ -32,7 +32,7 @@ class GlyphiconTwigExtension extends AbstractGlyphiconTwigExtension implements I
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.glyphicon";
 
     /**
-     * Displays a Bootstrap glyphicon.
+     * Display a Bootstrap glyphicon.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap glyphicon.

@@ -31,7 +31,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.nav";
 
     /**
-     * Displays a Bootstrap navs "justified".
+     * Display a Bootstrap navs "justified".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "justified".
@@ -41,7 +41,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap navs "pills".
+     * Display a Bootstrap navs "pills".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "pills".
@@ -51,7 +51,7 @@ class NavTwigExtension extends AbstractNavTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap navs "tabs".
+     * Display a Bootstrap navs "tabs".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap nav "tabs".

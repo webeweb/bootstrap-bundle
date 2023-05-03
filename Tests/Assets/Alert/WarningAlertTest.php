@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\AlertInterface as BaseAlertInterface;
 class WarningAlertTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

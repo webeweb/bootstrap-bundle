@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\GridTwigExtension;
 class GridTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the bootstrapGridFunction().
+     * Test the bootstrapGridFunction().
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridFunction().
+     * Test the bootstrapGridFunction().
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -145,7 +145,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -175,7 +175,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -190,7 +190,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -205,7 +205,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -220,7 +220,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -235,7 +235,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -250,7 +250,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -265,7 +265,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -280,7 +280,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -295,7 +295,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -310,7 +310,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridOffsetFunction().
+     * Test the bootstrapGridOffsetFunction().
      *
      * @return void
      */
@@ -325,7 +325,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -340,7 +340,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -355,7 +355,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -370,7 +370,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -385,7 +385,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -400,7 +400,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -415,7 +415,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -430,7 +430,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -445,7 +445,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -460,7 +460,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -475,7 +475,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -490,7 +490,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -505,7 +505,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -520,7 +520,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -535,7 +535,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -550,7 +550,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -565,7 +565,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -580,7 +580,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPullFunction().
+     * Test the bootstrapGridPullFunction().
      *
      * @return void
      */
@@ -595,7 +595,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -610,7 +610,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -625,7 +625,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -640,7 +640,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -655,7 +655,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -670,7 +670,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -685,7 +685,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -700,7 +700,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -715,7 +715,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -730,7 +730,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -745,7 +745,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -760,7 +760,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -775,7 +775,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -790,7 +790,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -805,7 +805,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -820,7 +820,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -835,7 +835,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -850,7 +850,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridPushFunction().
+     * Test the bootstrapGridPushFunction().
      *
      * @return void
      */
@@ -865,7 +865,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -880,7 +880,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -895,7 +895,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -910,7 +910,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -925,7 +925,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -940,7 +940,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -955,7 +955,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -970,7 +970,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -985,7 +985,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1000,7 +1000,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1015,7 +1015,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1030,7 +1030,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1045,7 +1045,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1060,7 +1060,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1075,7 +1075,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1090,7 +1090,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1105,7 +1105,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1120,7 +1120,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the bootstrapGridStackedFunction().
+     * Test the bootstrapGridStackedFunction().
      *
      * @return void
      */
@@ -1135,7 +1135,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -1200,7 +1200,7 @@ class GridTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

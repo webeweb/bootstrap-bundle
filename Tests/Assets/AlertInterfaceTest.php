@@ -24,7 +24,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 class AlertInterfaceTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

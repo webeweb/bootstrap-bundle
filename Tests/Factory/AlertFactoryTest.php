@@ -53,7 +53,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDangerAlert()
+     * Test newDangerAlert()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDarkAlert()
+     * Test newDarkAlert()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newInfoAlert()
+     * Test newInfoAlert()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newLightAlert()
+     * Test newLightAlert()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newPrimaryAlert()
+     * Test newPrimaryAlert()
      *
      * @return void
      */
@@ -113,7 +113,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newSecondaryAlert()
+     * Test newSecondaryAlert()
      *
      * @return void
      */
@@ -125,7 +125,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newSuccessAlert()
+     * Test newSuccessAlert()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newWarningAlert()
+     * Test newWarningAlert()
      *
      * @return void
      */
@@ -149,7 +149,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDangerAlert()
+     * Test parseDangerAlert()
      *
      * @return void
      */
@@ -166,7 +166,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDarkAlert()
+     * Test parseDarkAlert()
      *
      * @return void
      */
@@ -183,7 +183,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseInfoAlert()
+     * Test parseInfoAlert()
      *
      * @return void
      */
@@ -200,7 +200,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseLightAlert()
+     * Test parseLightAlert()
      *
      * @return void
      */
@@ -217,7 +217,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parsePrimaryAlert()
+     * Test parsePrimaryAlert()
      *
      * @return void
      */
@@ -234,7 +234,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseSecondaryAlert()
+     * Test parseSecondaryAlert()
      *
      * @return void
      */
@@ -251,7 +251,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseSuccessAlert()
+     * Test parseSuccessAlert()
      *
      * @return void
      */
@@ -268,7 +268,7 @@ class AlertFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseWarningAlert()
+     * Test parseWarningAlert()
      *
      * @return void
      */

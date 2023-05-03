@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class LabelTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setLabelTwigExtension()
+     * Test setLabelTwigExtension()
      *
      * @return void
      */

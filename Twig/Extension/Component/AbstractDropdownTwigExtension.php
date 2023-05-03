@@ -25,7 +25,7 @@ use WBW\Library\Types\Helper\StringHelper;
 abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap dropdown "button".
+     * Display a Bootstrap dropdown "button".
      *
      * @param string|null $content The content.
      * @param string|null $id The id.
@@ -56,7 +56,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap dropdown "divider".
+     * Display a Bootstrap dropdown "divider".
      *
      * @return string Returns the Bootstrap dropdown "divider".
      */
@@ -71,7 +71,7 @@ abstract class AbstractDropdownTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap dropdown "header".
+     * Display a Bootstrap dropdown "header".
      *
      * @param string|null $content The content.
      * @return string Returns the Bootstrap dropdown "header".

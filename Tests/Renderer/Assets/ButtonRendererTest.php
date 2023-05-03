@@ -50,7 +50,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderActive()
+     * Test renderActive()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderBlock()
+     * Test renderBlock()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderContent()
+     * Test renderContent()
      *
      * @return void
      */
@@ -83,7 +83,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderDataPlacement()
+     * Test renderDataPlacement()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderDataToggle()
+     * Test renderDataToggle()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderDisabled()
+     * Test renderDisabled()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderSize()
+     * Test renderSize()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderTitle()
+     * Test renderTitle()
      *
      * @return void
      */
@@ -138,7 +138,7 @@ class ButtonRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderType()
+     * Test renderType()
      *
      * @return void
      */

@@ -27,7 +27,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\ButtonTwigExtension;
 class ButtonTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapButtonDangerFunction()
+     * Test bootstrapButtonDangerFunction()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonDangerFunction()
+     * Test bootstrapButtonDangerFunction()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonDarkFunction()
+     * Test bootstrapButtonDarkFunction()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonDarkFunction()
+     * Test bootstrapButtonDarkFunction()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonDefaultFunction()
+     * Test bootstrapButtonDefaultFunction()
      *
      * @return void
      */
@@ -102,7 +102,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonDefaultFunction()
+     * Test bootstrapButtonDefaultFunction()
      *
      * @return void
      */
@@ -117,7 +117,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonInfoFunction()
+     * Test bootstrapButtonInfoFunction()
      *
      * @return void
      */
@@ -132,7 +132,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonInfoFunction()
+     * Test bootstrapButtonInfoFunction()
      *
      * @return void
      */
@@ -147,7 +147,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonLightFunction()
+     * Test bootstrapButtonLightFunction()
      *
      * @return void
      */
@@ -162,7 +162,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonLightFunction()
+     * Test bootstrapButtonLightFunction()
      *
      * @return void
      */
@@ -177,7 +177,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonLinkFilter()
+     * Test bootstrapButtonLinkFilter()
      *
      * @return void
      */
@@ -192,7 +192,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonLinkFilter()
+     * Test bootstrapButtonLinkFilter()
      *
      * @return void
      */
@@ -207,7 +207,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonLinkFunction()
+     * Test bootstrapButtonLinkFunction()
      *
      * @return void
      */
@@ -222,7 +222,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonPrimaryFunction()
+     * Test bootstrapButtonPrimaryFunction()
      *
      * @return void
      */
@@ -237,7 +237,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonPrimaryFunction()
+     * Test bootstrapButtonPrimaryFunction()
      *
      * @return void
      */
@@ -252,7 +252,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonSecondaryFunction()
+     * Test bootstrapButtonSecondaryFunction()
      *
      * @return void
      */
@@ -267,7 +267,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonSecondaryFunction()
+     * Test bootstrapButtonSecondaryFunction()
      *
      * @return void
      */
@@ -282,7 +282,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonSubmitFilter()
+     * Test bootstrapButtonSubmitFilter()
      *
      * @return void
      */
@@ -297,7 +297,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonSuccessFunction()
+     * Test bootstrapButtonSuccessFunction()
      *
      * @return void
      */
@@ -312,7 +312,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonSuccessFunction()
+     * Test bootstrapButtonSuccessFunction()
      *
      * @return void
      */
@@ -327,7 +327,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonWarningFunction()
+     * Test bootstrapButtonWarningFunction()
      *
      * @return void
      */
@@ -342,7 +342,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapButtonWarningFunction()
+     * Test bootstrapButtonWarningFunction()
      *
      * @return void
      */
@@ -357,7 +357,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -392,7 +392,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -497,7 +497,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -583,7 +583,7 @@ class ButtonTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

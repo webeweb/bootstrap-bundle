@@ -25,7 +25,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class FOSUserNavigationFactoryTest extends AbstractTestCase {
 
     /**
-     * Tests newGlyphiconBreadcrumbNodes()
+     * Test newGlyphiconBreadcrumbNodes()
      *
      * @return void
      */

@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\CSS\TypographyTwigExtension;
 class TypographyTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapBoldFunction()
+     * Test bootstrapBoldFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapBoldFunction()
+     * Test bootstrapBoldFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDeletedFunction()
+     * Test bootstrapDeletedFunction()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapDeletedFunction()
+     * Test bootstrapDeletedFunction()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapItalicFunction()
+     * Test bootstrapItalicFunction()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapItalicFunction()
+     * Test bootstrapItalicFunction()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading1Function()
+     * Test bootstrapHeading1Function()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading1Function()
+     * Test bootstrapHeading1Function()
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading1Function()
+     * Test bootstrapHeading1Function()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading1Function()
+     * Test bootstrapHeading1Function()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading1Function()
+     * Test bootstrapHeading1Function()
      *
      * @return void
      */
@@ -191,7 +191,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading2Function()
+     * Test bootstrapHeading2Function()
      *
      * @return void
      */
@@ -206,7 +206,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading2Function()
+     * Test bootstrapHeading2Function()
      *
      * @return void
      */
@@ -221,7 +221,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading2Function()
+     * Test bootstrapHeading2Function()
      *
      * @return void
      */
@@ -236,7 +236,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading2Function()
+     * Test bootstrapHeading2Function()
      *
      * @return void
      */
@@ -251,7 +251,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading2Function()
+     * Test bootstrapHeading2Function()
      *
      * @return void
      */
@@ -266,7 +266,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading3Function()
+     * Test bootstrapHeading3Function()
      *
      * @return void
      */
@@ -281,7 +281,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading3Function()
+     * Test bootstrapHeading3Function()
      *
      * @return void
      */
@@ -296,7 +296,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading3Function()
+     * Test bootstrapHeading3Function()
      *
      * @return void
      */
@@ -311,7 +311,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading3Function()
+     * Test bootstrapHeading3Function()
      *
      * @return void
      */
@@ -326,7 +326,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading3Function()
+     * Test bootstrapHeading3Function()
      *
      * @return void
      */
@@ -341,7 +341,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading4Function()
+     * Test bootstrapHeading4Function()
      *
      * @return void
      */
@@ -356,7 +356,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading4Function()
+     * Test bootstrapHeading4Function()
      *
      * @return void
      */
@@ -371,7 +371,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading4Function()
+     * Test bootstrapHeading4Function()
      *
      * @return void
      */
@@ -386,7 +386,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading4Function()
+     * Test bootstrapHeading4Function()
      *
      * @return void
      */
@@ -401,7 +401,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading4Function()
+     * Test bootstrapHeading4Function()
      *
      * @return void
      */
@@ -416,7 +416,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading5Function()
+     * Test bootstrapHeading5Function()
      *
      * @return void
      */
@@ -431,7 +431,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading5Function()
+     * Test bootstrapHeading5Function()
      *
      * @return void
      */
@@ -446,7 +446,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading5Function()
+     * Test bootstrapHeading5Function()
      *
      * @return void
      */
@@ -461,7 +461,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading5Function()
+     * Test bootstrapHeading5Function()
      *
      * @return void
      */
@@ -476,7 +476,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading5Function()
+     * Test bootstrapHeading5Function()
      *
      * @return void
      */
@@ -491,7 +491,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading6Function()
+     * Test bootstrapHeading6Function()
      *
      * @return void
      */
@@ -506,7 +506,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading6Function()
+     * Test bootstrapHeading6Function()
      *
      * @return void
      */
@@ -521,7 +521,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading6Function()
+     * Test bootstrapHeading6Function()
      *
      * @return void
      */
@@ -536,7 +536,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading6Function()
+     * Test bootstrapHeading6Function()
      *
      * @return void
      */
@@ -551,7 +551,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapHeading6Function()
+     * Test bootstrapHeading6Function()
      *
      * @return void
      */
@@ -566,7 +566,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapInsertedFunction()
+     * Test bootstrapInsertedFunction()
      *
      * @return void
      */
@@ -581,7 +581,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapInsertedFunction()
+     * Test bootstrapInsertedFunction()
      *
      * @return void
      */
@@ -596,7 +596,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapMarkedFunction()
+     * Test bootstrapMarkedFunction()
      *
      * @return void
      */
@@ -611,7 +611,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapMarkedFunction()
+     * Test bootstrapMarkedFunction()
      *
      * @return void
      */
@@ -626,7 +626,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapSmallFunction()
+     * Test bootstrapSmallFunction()
      *
      * @return void
      */
@@ -641,7 +641,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapSmallFunction()
+     * Test bootstrapSmallFunction()
      *
      * @return void
      */
@@ -656,7 +656,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapStrikethroughFunction()
+     * Test bootstrapStrikethroughFunction()
      *
      * @return void
      */
@@ -671,7 +671,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapStrikethroughFunction()
+     * Test bootstrapStrikethroughFunction()
      *
      * @return void
      */
@@ -686,7 +686,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapUnderlinedFunction()
+     * Test bootstrapUnderlinedFunction()
      *
      * @return void
      */
@@ -701,7 +701,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapUnderlinedFunction()
+     * Test bootstrapUnderlinedFunction()
      *
      * @return void
      */
@@ -716,7 +716,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -871,7 +871,7 @@ class TypographyTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

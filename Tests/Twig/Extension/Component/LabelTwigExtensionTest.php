@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\LabelTwigExtension;
 class LabelTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapLabelDangerFunction()
+     * Test bootstrapLabelDangerFunction()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
 
     /**
      * /**
-     * Tests bootstrapLabelDangerFunction()
+     * Test bootstrapLabelDangerFunction()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelDefaultFunction()
+     * Test bootstrapLabelDefaultFunction()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelDefaultFunction()
+     * Test bootstrapLabelDefaultFunction()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelInfoFunction()
+     * Test bootstrapLabelInfoFunction()
      *
      * @return void
      */
@@ -102,7 +102,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelInfoFunction()
+     * Test bootstrapLabelInfoFunction()
      *
      * @return void
      */
@@ -117,7 +117,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelPrimaryFunction()
+     * Test bootstrapLabelPrimaryFunction()
      *
      * @return void
      */
@@ -132,7 +132,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelPrimaryFunction()
+     * Test bootstrapLabelPrimaryFunction()
      *
      * @return void
      */
@@ -147,7 +147,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelSuccessFunction()
+     * Test bootstrapLabelSuccessFunction()
      *
      * @return void
      */
@@ -162,7 +162,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelSuccessFunction()
+     * Test bootstrapLabelSuccessFunction()
      *
      * @return void
      */
@@ -177,7 +177,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelWarningFunction()
+     * Test bootstrapLabelWarningFunction()
      *
      * @return void
      */
@@ -192,7 +192,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapLabelWarningFunction()
+     * Test bootstrapLabelWarningFunction()
      *
      * @return void
      */
@@ -207,7 +207,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -220,7 +220,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -233,7 +233,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -309,7 +309,7 @@ class LabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

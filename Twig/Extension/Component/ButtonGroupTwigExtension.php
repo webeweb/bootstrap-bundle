@@ -30,7 +30,7 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.button_group";
 
     /**
-     * Displays a Bootstrap button group "basic".
+     * Display a Bootstrap button group "basic".
      *
      * @param array $args The arguments.
      * @param array $buttons The buttons.
@@ -41,7 +41,7 @@ class ButtonGroupTwigExtension extends AbstractButtonGroupTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap button group "toolbar".
+     * Display a Bootstrap button group "toolbar".
      *
      * @param array $args The arguments.
      * @param array $buttons The buttons.

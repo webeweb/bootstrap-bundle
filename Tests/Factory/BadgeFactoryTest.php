@@ -54,7 +54,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDangerBadge()
+     * Test newDangerBadge()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDarkBadge()
+     * Test newDarkBadge()
      *
      * @return void
      */
@@ -78,7 +78,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDefaultBadge()
+     * Test newDefaultBadge()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newInfoBadge()
+     * Test newInfoBadge()
      *
      * @return void
      */
@@ -102,7 +102,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newLightBadge()
+     * Test newLightBadge()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newPrimaryBadge()
+     * Test newPrimaryBadge()
      *
      * @return void
      */
@@ -126,7 +126,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newSecondaryBadge()
+     * Test newSecondaryBadge()
      *
      * @return void
      */
@@ -138,7 +138,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newSuccessBadge()
+     * Test newSuccessBadge()
      *
      * @return void
      */
@@ -150,7 +150,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newWarningBadge()
+     * Test newWarningBadge()
      *
      * @return void
      */
@@ -162,7 +162,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDangerBadge()
+     * Test parseDangerBadge()
      *
      * @return void
      */
@@ -179,7 +179,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDarkBadge()
+     * Test parseDarkBadge()
      *
      * @return void
      */
@@ -196,7 +196,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDefaultBadge()
+     * Test parseDefaultBadge()
      *
      * @return void
      */
@@ -213,7 +213,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseInfoBadge()
+     * Test parseInfoBadge()
      *
      * @return void
      */
@@ -230,7 +230,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseLightBadge()
+     * Test parseLightBadge()
      *
      * @return void
      */
@@ -247,7 +247,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parsePrimaryBadge()
+     * Test parsePrimaryBadge()
      *
      * @return void
      */
@@ -264,7 +264,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseSecondaryBadge()
+     * Test parseSecondaryBadge()
      *
      * @return void
      */
@@ -281,7 +281,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseSuccessBadge()
+     * Test parseSuccessBadge()
      *
      * @return void
      */
@@ -298,7 +298,7 @@ class BadgeFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseWarningBadge()
+     * Test parseWarningBadge()
      *
      * @return void
      */

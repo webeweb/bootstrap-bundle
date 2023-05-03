@@ -27,7 +27,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\ProgressBarTwigExtension
 class ProgressBarTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapMultipleBars()
+     * Test bootstrapMultipleBars()
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarBasicFunction()
+     * Test bootstrapProgressBarBasicFunction()
      *
      * @return void
      */
@@ -60,7 +60,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarBasicFunction()
+     * Test bootstrapProgressBarBasicFunction()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarDangerFunction()
+     * Test bootstrapProgressBarDangerFunction()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarDangerFunction()
+     * Test bootstrapProgressBarDangerFunction()
      *
      * @return void
      */
@@ -106,7 +106,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarDangerFunction()
+     * Test bootstrapProgressBarDangerFunction()
      *
      * @return void
      */
@@ -121,7 +121,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarInfoFunction()
+     * Test bootstrapProgressBarInfoFunction()
      *
      * @return void
      */
@@ -136,7 +136,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarInfoFunction()
+     * Test bootstrapProgressBarInfoFunction()
      *
      * @return void
      */
@@ -152,7 +152,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarInfoFunction()
+     * Test bootstrapProgressBarInfoFunction()
      *
      * @return void
      */
@@ -167,7 +167,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarSuccessFunction()
+     * Test bootstrapProgressBarSuccessFunction()
      *
      * @return void
      */
@@ -182,7 +182,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarSuccessFunction()
+     * Test bootstrapProgressBarSuccessFunction()
      *
      * @return void
      */
@@ -198,7 +198,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarSuccessFunction()
+     * Test bootstrapProgressBarSuccessFunction()
      *
      * @return void
      */
@@ -213,7 +213,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarWarningFunction()
+     * Test bootstrapProgressBarWarningFunction()
      *
      * @return void
      */
@@ -228,7 +228,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarWarningFunction()
+     * Test bootstrapProgressBarWarningFunction()
      *
      * @return void
      */
@@ -244,7 +244,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapProgressBarWarningFunction()
+     * Test bootstrapProgressBarWarningFunction()
      *
      * @return void
      */
@@ -259,7 +259,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -284,7 +284,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -359,7 +359,7 @@ class ProgressBarTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

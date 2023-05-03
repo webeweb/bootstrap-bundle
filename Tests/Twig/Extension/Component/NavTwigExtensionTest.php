@@ -47,7 +47,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapNavsJustifiedFunction()
+     * Test bootstrapNavsJustifiedFunction()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapNavsPillsFunction()
+     * Test bootstrapNavsPillsFunction()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapNavsPillsFunction()
+     * Test bootstrapNavsPillsFunction()
      *
      * @return void
      */
@@ -92,7 +92,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapNavsTabsFunction()
+     * Test bootstrapNavsTabsFunction()
      *
      * @return void
      */
@@ -107,7 +107,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -120,7 +120,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -165,7 +165,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

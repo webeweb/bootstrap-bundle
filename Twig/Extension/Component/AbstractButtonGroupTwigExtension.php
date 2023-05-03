@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractButtonGroupTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap button group.
+     * Display a Bootstrap button group.
      *
      * @param string|null $class The class.
      * @param string|null $role The role.

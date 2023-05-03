@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class BreadcrumbNodeActionNewUserTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

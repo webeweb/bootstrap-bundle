@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class NavigationNodeActionImportTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

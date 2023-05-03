@@ -31,7 +31,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.dropdown";
 
     /**
-     * Displays a Bootstrap dropdown "button".
+     * Display a Bootstrap dropdown "button".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap dropdown "button".
@@ -41,7 +41,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap dropdown "divider".
+     * Display a Bootstrap dropdown "divider".
      *
      * @return string Returns the Bootstrap dropdown "divider".
      */
@@ -50,7 +50,7 @@ class DropdownTwigExtension extends AbstractDropdownTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap dropdown "header".
+     * Display a Bootstrap dropdown "header".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap dropdown "header".

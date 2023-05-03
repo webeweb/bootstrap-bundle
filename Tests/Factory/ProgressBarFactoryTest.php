@@ -53,7 +53,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newBasicProgressBar()
+     * Test newBasicProgressBar()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDangerProgressBar()
+     * Test newDangerProgressBar()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newInfoProgressBar()
+     * Test newInfoProgressBar()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newSuccessProgressBar()
+     * Test newSuccessProgressBar()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newWarningProgressBar()
+     * Test newWarningProgressBar()
      *
      * @return void
      */
@@ -113,7 +113,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseBasicProgressBar()
+     * Test parseBasicProgressBar()
      *
      * @return void
      */
@@ -133,7 +133,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseDangerProgressBar()
+     * Test parseDangerProgressBar()
      *
      * @return void
      */
@@ -153,7 +153,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseInfoProgressBar()
+     * Test parseInfoProgressBar()
      *
      * @return void
      */
@@ -173,7 +173,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseSuccessProgressBar()
+     * Test parseSuccessProgressBar()
      *
      * @return void
      */
@@ -193,7 +193,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseWarningProgressBar()
+     * Test parseWarningProgressBar()
      *
      * @return void
      */

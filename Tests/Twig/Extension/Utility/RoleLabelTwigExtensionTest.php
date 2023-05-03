@@ -42,7 +42,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     private $labelTwigExtension;
 
     /**
-     * Trans choices.
+     * Tran choices.
      *
      * @var array
      */
@@ -76,7 +76,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapRoleLabelFunction()
+     * Test bootstrapRoleLabelFunction()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapRoleLabelFunction()
+     * Test bootstrapRoleLabelFunction()
      *
      * @return void
      */
@@ -104,7 +104,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

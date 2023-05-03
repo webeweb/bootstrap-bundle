@@ -31,7 +31,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.css.code";
 
     /**
-     * Displays a Bootstrap basic block.
+     * Display a Bootstrap basic block.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap basic block.
@@ -41,7 +41,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap inline.
+     * Display a Bootstrap inline.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap inline.
@@ -51,7 +51,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap sample output.
+     * Display a Bootstrap sample output.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap smaple output.
@@ -61,7 +61,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap user input.
+     * Display a Bootstrap user input.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap user input.
@@ -71,7 +71,7 @@ class CodeTwigExtension extends AbstractCodeTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap variable.
+     * Display a Bootstrap variable.
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap variable.

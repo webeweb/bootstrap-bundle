@@ -40,7 +40,7 @@ abstract class AbstractBadge extends BaseBadge implements BadgeInterface {
     }
 
     /**
-     * Enumerates the types.
+     * Enumerate the types.
      *
      * @return string[] Returns the types.
      */

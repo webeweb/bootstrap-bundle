@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\Component\GlyphiconTwigExtension;
 class GlyphiconTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests bootstrapGlyphiconFunction()
+     * Test bootstrapGlyphiconFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests bootstrapGlyphiconFunction()
+     * Test bootstrapGlyphiconFunction()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -69,7 +69,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -95,7 +95,7 @@ class GlyphiconTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

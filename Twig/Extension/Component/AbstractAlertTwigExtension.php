@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractAlertTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap alert.
+     * Display a Bootstrap alert.
      *
      * @param AlertInterface $alert The alert.
      * @return string Returns the Bootstrap alert.

@@ -32,7 +32,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.component.label";
 
     /**
-     * Displays a Bootstrap label "danger".
+     * Display a Bootstrap label "danger".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "danger".
@@ -42,7 +42,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap label "default".
+     * Display a Bootstrap label "default".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "default".
@@ -52,7 +52,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap label "info".
+     * Display a Bootstrap label "info".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "info".
@@ -62,7 +62,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap label "primary".
+     * Display a Bootstrap label "primary".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "primary".
@@ -72,7 +72,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap label "success".
+     * Display a Bootstrap label "success".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "success".
@@ -82,7 +82,7 @@ class LabelTwigExtension extends AbstractLabelTwigExtension {
     }
 
     /**
-     * Displays a Bootstrap label "warning".
+     * Display a Bootstrap label "warning".
      *
      * @param array $args The arguments.
      * @return string Returns the Bootstrap label "warning".

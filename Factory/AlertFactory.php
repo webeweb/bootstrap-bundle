@@ -31,7 +31,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class AlertFactory {
 
     /**
-     * Creates a new danger alert.
+     * Create a new danger alert.
      *
      * @return AlertInterface Returns the danger alert.
      */
@@ -40,7 +40,7 @@ class AlertFactory {
     }
 
     /**
-     * Creates a new default alert.
+     * Create a new default alert.
      *
      * @return AlertInterface Returns the default alert.
      */
@@ -49,7 +49,7 @@ class AlertFactory {
     }
 
     /**
-     * Creates a new info alert.
+     * Create a new info alert.
      *
      * @return AlertInterface Returns the info alert.
      */
@@ -58,7 +58,7 @@ class AlertFactory {
     }
 
     /**
-     * Creates a new light alert.
+     * Create a new light alert.
      *
      * @return AlertInterface Returns the light alert.
      */
@@ -67,7 +67,7 @@ class AlertFactory {
     }
 
     /**
-     * Creates a new primary alert.
+     * Create a new primary alert.
      *
      * @return AlertInterface Returns the primary alert.
      */
@@ -76,7 +76,7 @@ class AlertFactory {
     }
 
     /**
-     * Creates a new secondary alert.
+     * Create a new secondary alert.
      *
      * @return AlertInterface Returns the secondary alert.
      */
@@ -85,7 +85,7 @@ class AlertFactory {
     }
 
     /**
-     * Creates a new success alert.
+     * Create a new success alert.
      *
      * @return AlertInterface Returns the success alert.
      */
@@ -94,7 +94,7 @@ class AlertFactory {
     }
 
     /**
-     * Creates a new warning alert.
+     * Create a new warning alert.
      *
      * @return AlertInterface Returns the warning alert.
      */
@@ -103,7 +103,7 @@ class AlertFactory {
     }
 
     /**
-     * Parses an alert.
+     * Parse an alert.
      *
      * @param AlertInterface $alert The alert.
      * @param array $args The arguments.

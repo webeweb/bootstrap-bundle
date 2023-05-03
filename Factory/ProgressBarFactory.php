@@ -28,7 +28,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class ProgressBarFactory {
 
     /**
-     * Creates a new basic progress bar.
+     * Create a new basic progress bar.
      *
      * @return ProgressBarInterface Returns the success progress bar.
      */
@@ -37,7 +37,7 @@ class ProgressBarFactory {
     }
 
     /**
-     * Creates a new danger progress bar.
+     * Create a new danger progress bar.
      *
      * @return ProgressBarInterface Returns the danger progress bar.
      */
@@ -46,7 +46,7 @@ class ProgressBarFactory {
     }
 
     /**
-     * Creates a new info progress bar.
+     * Create a new info progress bar.
      *
      * @return ProgressBarInterface Returns the info progress bar.
      */
@@ -55,7 +55,7 @@ class ProgressBarFactory {
     }
 
     /**
-     * Creates a new success progress bar.
+     * Create a new success progress bar.
      *
      * @return ProgressBarInterface Returns the success progress bar.
      */
@@ -64,7 +64,7 @@ class ProgressBarFactory {
     }
 
     /**
-     * Creates a new warning progress bar.
+     * Create a new warning progress bar.
      *
      * @return ProgressBarInterface Returns the warning progress bar.
      */
@@ -103,7 +103,7 @@ class ProgressBarFactory {
     }
 
     /**
-     * Parses a progress bar.
+     * Parse a progress bar.
      *
      * @param ProgressBarInterface $progressBar The progress bar.
      * @param array $args The arguments.

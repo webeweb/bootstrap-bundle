@@ -34,7 +34,7 @@ class AssetsTwigExtension extends BaseTwigExtension {
     const SERVICE_NAME = "wbw.bootstrap.twig.extension.assets";
 
     /**
-     * Displays an icon.
+     * Display an icon.
      *
      * @param string|null $name The name.
      * @param string|null $style The style.

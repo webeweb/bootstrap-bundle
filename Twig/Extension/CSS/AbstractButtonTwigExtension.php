@@ -26,7 +26,7 @@ use WBW\Bundle\BootstrapBundle\Twig\Extension\AssetsTwigExtension;
 abstract class AbstractButtonTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Bootstrap button.
+     * Display a Bootstrap button.
      *
      * @param ButtonInterface $button The button.
      * @param string|null $icon The icon.

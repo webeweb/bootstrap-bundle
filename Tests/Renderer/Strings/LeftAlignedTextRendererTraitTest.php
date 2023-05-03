@@ -23,7 +23,7 @@ use WBW\Bundle\BootstrapBundle\Tests\Fixtures\Renderer\Strings\TestLeftAlignedTe
 class LeftAlignedTextRendererTraitTest extends AbstractTestCase {
 
     /**
-     * Tests renderLeftAlignedText()
+     * Test renderLeftAlignedText()
      *
      * @return void
      */

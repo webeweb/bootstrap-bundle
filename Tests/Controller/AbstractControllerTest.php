@@ -41,7 +41,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests notifyDanger()
+     * Test notifyDanger()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests notifyInfo()
+     * Test notifyInfo()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests notifySuccess()
+     * Test notifySuccess()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests notifyWarning()
+     * Test notifyWarning()
      *
      * @return void
      */
@@ -121,7 +121,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests toastDanger()
+     * Test toastDanger()
      *
      * @return void
      */
@@ -141,7 +141,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests toastInfo()
+     * Test toastInfo()
      *
      * @return void
      */
@@ -161,7 +161,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests toastSuccess()
+     * Test toastSuccess()
      *
      * @return void
      */
@@ -181,7 +181,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests toastWarning()
+     * Test toastWarning()
      *
      * @return void
      */
