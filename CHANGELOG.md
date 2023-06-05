@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [4.20.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.20.0) (2023-06-03)
+
+- Improve PHPDoc
+- Update dependencies
+
 ### [4.19.1](https://github.com/webeweb/bootstrap-bundle/tree/v4.19.1) (2023-04-06)
 
 - Fix unit tests
