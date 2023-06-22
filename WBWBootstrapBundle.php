@@ -104,7 +104,7 @@ class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {
      *
      * @var string
      */
-    const BOOTSTRAP_VERSION_5 = "5.2.3";
+    const BOOTSTRAP_VERSION_5 = "5.3.0";
 
     /**
      * Translation domain.
