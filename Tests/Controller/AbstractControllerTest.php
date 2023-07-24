@@ -27,7 +27,7 @@ use WBW\Library\Symfony\Assets\ToastInterface;
 class AbstractControllerTest extends AbstractTestCase {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

@@ -104,49 +104,49 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getBlock(): ?bool {
         return $this->block;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getData(): array {
         return $this->data;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getDisabled(): ?bool {
         return $this->disabled;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getOutline(): ?bool {
         return $this->outline;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix(): ?string {
         return "btn-";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeButton($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setBlock(?bool $block): ButtonInterface {
         $this->block = $block;
@@ -154,7 +154,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setData(array $data): ButtonInterface {
         $this->data = $data;
@@ -162,7 +162,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setDisabled(?bool $disabled): ButtonInterface {
         $this->disabled = $disabled;
@@ -170,7 +170,7 @@ abstract class AbstractButton extends BaseButton implements ButtonInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setOutline(?bool $outline): ButtonInterface {
         $this->outline = $outline;

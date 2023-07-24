@@ -32,7 +32,7 @@ class ProgressBarRendererTest extends AbstractTestCase {
     private $progressBar;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

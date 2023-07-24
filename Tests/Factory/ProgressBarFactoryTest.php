@@ -36,7 +36,7 @@ class ProgressBarFactoryTest extends AbstractTestCase {
     private $args;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

@@ -59,28 +59,28 @@ abstract class AbstractBadge extends BaseBadge implements BadgeInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPill(): ?bool {
         return $this->pill;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix(): ?string {
         return "badge-";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeBadge($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setPill(?bool $pill): BadgeInterface {
         $this->pill = $pill;

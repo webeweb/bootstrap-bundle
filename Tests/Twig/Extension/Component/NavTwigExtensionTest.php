@@ -33,7 +33,7 @@ class NavTwigExtensionTest extends AbstractTestCase {
     private $items;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

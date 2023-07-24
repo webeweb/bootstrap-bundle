@@ -49,7 +49,7 @@ class RoleLabelTwigExtensionTest extends AbstractTestCase {
     private $transChoices;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

@@ -67,7 +67,7 @@ class AssetsTwigExtension extends BaseTwigExtension {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function renderIcon(Environment $twigEnvironment, ?string $name, string $style = null): ?string {
 

@@ -34,7 +34,7 @@ class FormButtonTwigExtensionTest extends AbstractTestCase {
     private $buttonTwigExtension;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

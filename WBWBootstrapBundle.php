@@ -114,7 +114,7 @@ class WBWBootstrapBundle extends Bundle implements AssetsProviderInterface {
     const TRANSLATION_DOMAIN = "WBWBootstrapBundle";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getAssetsRelativeDirectory(): string {
         return self::ASSETS_RELATIVE_DIRECTORY;

@@ -59,28 +59,28 @@ abstract class AbstractAlert extends BaseAlert implements AlertInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getDismissible(): ?bool {
         return $this->dismissible;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPrefix(): ?string {
         return "alert-";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeAlert($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setDismissible(?bool $dismissible): AlertInterface {
         $this->dismissible = $dismissible;

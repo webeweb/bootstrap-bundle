@@ -24,56 +24,56 @@ use WBW\Bundle\CoreBundle\Event\ToastEvent;
 class TestAbstractController extends AbstractController {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifyDanger(string $content): NotificationEvent {
         return parent::notifyDanger($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifyInfo(string $content): NotificationEvent {
         return parent::notifyInfo($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifySuccess(string $content): NotificationEvent {
         return parent::notifySuccess($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notifyWarning(string $content): NotificationEvent {
         return parent::notifyWarning($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function toastDanger(string $content): ToastEvent {
         return parent::toastDanger($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function toastInfo(string $content): ToastEvent {
         return parent::toastInfo($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function toastSuccess(string $content): ToastEvent {
         return parent::toastSuccess($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function toastWarning(string $content): ToastEvent {
         return parent::toastWarning($content);

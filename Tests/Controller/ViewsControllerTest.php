@@ -25,7 +25,7 @@ use WBW\Bundle\BootstrapBundle\WBWBootstrapBundle;
 class ViewsControllerTest extends AbstractWebTestCase {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();
