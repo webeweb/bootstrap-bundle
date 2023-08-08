@@ -115,7 +115,7 @@ class WBWBootstrapBundleTest extends AbstractTestCase {
 
         $this->assertEquals("3.4.1", WBWBootstrapBundle::BOOTSTRAP_VERSION_3);
         $this->assertEquals("4.6.2", WBWBootstrapBundle::BOOTSTRAP_VERSION_4);
-        $this->assertEquals("5.3.0", WBWBootstrapBundle::BOOTSTRAP_VERSION_5);
+        $this->assertEquals("5.3.1", WBWBootstrapBundle::BOOTSTRAP_VERSION_5);
 
         $this->assertEquals("WBWBootstrapBundle", WBWBootstrapBundle::TRANSLATION_DOMAIN);
     }
