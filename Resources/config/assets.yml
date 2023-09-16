@@ -109,7 +109,7 @@ assets:
                     - "/moment-2.20.1/moment-with-locales.min.js"
                     - "/bootstrap-daterangepicker-{{ version }}/daterangepicker.js"
             bootstrap_icons:
-                version:     "1.10.2"
+                version:     "1.11.0"
                 description: "Bootstrap Icons"
                 stylesheets:
                     - "/bootstrap-icons-{{ version }}/bootstrap-icons.css"
