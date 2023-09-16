@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.23.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.23.0) (2023-09-16)
+
+- Update Bootstrap Icons to 1.11.0
+
 ### [4.22.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.22.0) (2023-08-08)
 
 - Improve PHPDoc
