@@ -49,6 +49,9 @@ jobs:
                     -   php-version:     "8.1"
                         symfony-version: "6.3.*"
                         symfony-label:   ": Symfony 6.3.*"
+                    -   php-version:     "8.1"
+                        symfony-version: "6.4.*"
+                        symfony-label:   ": Symfony 6.4.*"
 
         steps:
             -   name: "Checkout"
