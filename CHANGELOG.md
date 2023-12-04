@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [4.25.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.25.0) (2023-12-04)
+
+- Add Symfony 6.4 support
+
 ### [4.24.0](https://github.com/webeweb/bootstrap-bundle/tree/v4.24.0) (2023-09-18)
 
 - Update Bootstrap 5 to 5.3.2
