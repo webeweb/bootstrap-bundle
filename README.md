@@ -10,6 +10,10 @@ bootstrap-bundle
 
 Integrate Bootstrap theme with Symfony 4 and more.
 
+> IMPORTANT NOTICE: This package is no longer maintained and its classes have
+> been migrated into package "[jQuery DataTables bundle](https://github.com/webeweb/jquery-datatables-bundle/)"
+> (available into version up to 5.0 and more)
+
 `bootstrap-bundle` eases the use of Bootstrap to display components in your
 Symfony application by providing Twig extensions and PHP objects to do the heavy
 lifting. The bundle include the excellent framework [Bootstrap](https://getbootstrap.com/)
